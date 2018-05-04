@@ -1,31 +1,23 @@
 ---
 title: Datamining-Projekte | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e01ea2027e95d3bb6e2635e48488df6b471bf238
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-projects"></a>Data Mining-Projekte
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Ein Data Mining-Projekt ist Teil einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung. Während des Entwurfsprozesses sind die Objekte, die Sie in diesem Projekt erstellen, für Tests und Abfragen im Rahmen einer Arbeitsbereichsdatenbank verfügbar. Wenn Benutzer in der Lage sein sollen, die Objekte im Projekt abzufragen oder zu durchsuchen, müssen Sie das Projekt auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen, die im mehrdimensionalen Modus ausgeführt wird.  
+  Ein Data Mining-Projekt ist Teil einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung. Während des Entwurfsprozesses sind die Objekte, die Sie in diesem Projekt erstellen, für Tests und Abfragen im Rahmen einer Arbeitsbereichsdatenbank verfügbar. Wenn Benutzer in der Lage sein sollen, die Objekte im Projekt abzufragen oder zu durchsuchen, müssen Sie das Projekt auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen, die im mehrdimensionalen Modus ausgeführt wird.  
   
  In diesem Abschnitt werden Ihnen die grundlegenden Informationen bereitgestellt, die Sie benötigen, um Data Mining-Projekte verstehen und erstellen zu können.  
   
@@ -198,13 +190,13 @@ Ein Data Mining-Projekt ist Teil einer [!INCLUDE[ssASnoversion](../../includes/s
   
   
 ###  <a name="bkmk_Predict"></a> Create Predictions  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine Abfragesprache der Data Mining-Erweiterungen (Data Mining Extensions, DMX) bereit, die die Grundlage zum Erstellen von Vorhersagen bildet und auf einfache Weise skriptfähig ist. Um Sie bei der Erstellung von DMX-Vorhersageabfragen zu unterstützen, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Abfrage-Generator bereit, der über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar ist. Für den Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]liegt eine Vielzahl von DMX-Vorlagen vor. Wenn Sie mit Vorhersageabfragen noch nicht vertraut sind, empfiehlt es sich, dass Sie den Abfrage-Generator verwenden, der sowohl über den Data Mining-Designer als auch über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]bereitgestellt wird. Weitere Informationen finden Sie unter [Data Mining Tools](../../analysis-services/data-mining/data-mining-tools.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt die Abfragesprache der Data Mining-Erweiterungen (DMX) bereit, die die Grundlage zum Erstellen von Vorhersagen bildet und auf einfache Weise skriptfähig ist. Um Sie bei der Erstellung von DMX-Vorhersageabfragen zu unterstützen, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Abfrage-Generator bereit, der über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar ist. Für den Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]liegt eine Vielzahl von DMX-Vorlagen vor. Wenn Sie mit Vorhersageabfragen noch nicht vertraut sind, empfiehlt es sich, dass Sie den Abfrage-Generator verwenden, der sowohl über den Data Mining-Designer als auch über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]bereitgestellt wird. Weitere Informationen finden Sie unter [Data Mining Tools](../../analysis-services/data-mining/data-mining-tools.md).  
   
  Die Vorhersagen, die Sie entweder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen, werden nicht beibehalten. Wenn die Abfragen komplex sind oder Sie die Ergebnisse reproduzieren müssen, empfiehlt es sich daher, dass Sie die Vorhersageabfragen in DMX-Abfragedateien speichern, Skripts für diese erstellen oder die Abfragen als Teil eines Integration Services-Pakets einbetten.  
   
   
 ##  <a name="bkmk_API"></a> Programmgesteuerter Zugriff auf Data Mining-Objekte  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere Tools bereit, mit denen Sie programmgesteuert mit Data Mining-Projekten und den darin enthaltenen Objekten arbeiten können. Die DMX-Sprache stellt Anweisungen bereit, mit denen Sie Datenquellen und Datenquellensichten erstellen sowie Data Mining-Strukturen und -Modelle erstellen, trainieren und verwenden können. Weitere Informationen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bietet mehrere Tools, mit denen Sie programmgesteuert mit Datamining-Projekte und den darin enthaltenen Objekten arbeiten können. Die DMX-Sprache stellt Anweisungen bereit, mit denen Sie Datenquellen und Datenquellensichten erstellen sowie Data Mining-Strukturen und -Modelle erstellen, trainieren und verwenden können. Weitere Informationen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md).  
   
  Sie können diese Aufgaben auch mit der Analysis Services Scripting Language (ASSL) oder mithilfe von Analysis Management Objects (AMO) ausführen. Weitere Informationen finden Sie unter [Entwickeln mit XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
@@ -215,16 +207,16 @@ Ein Data Mining-Projekt ist Teil einer [!INCLUDE[ssASnoversion](../../includes/s
 |Aufgaben|Thema|  
 |-----------|------------|  
 |Beschreibt, wie mit Miningstrukturspalten gearbeitet wird|[Erstellen Sie eine relationale Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|Stellt weitere Informationen darüber bereit, wie neue Miningmodelle hinzugefügt und wie Strukturen und Modelle verarbeitet werden|[Fügen Sie Miningmodelle hinzu, um eine Struktur &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Stellt weitere Informationen darüber bereit, wie neue Miningmodelle hinzugefügt und wie Strukturen und Modelle verarbeitet werden|[Fügen Sie Miningmodelle hinzu, um eine Struktur & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Stellt Links für Ressourcen bereit, die Sie bei der Anpassung von Algorithmen unterstützen, welche die Miningmodelle erstellen|[Anpassen von Miningmodellen und-Strukturen](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |Stellt Links zu Informationen über jeden der Miningmodell-Viewer bereit|[Datamining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
-|Informationen zum Erstellen eines Prognosegütediagramms, eines Gewinndiagramms oder einer Klassifikationsmatrix oder zum Testen einer Miningstruktur|[Tests und Überprüfung &#40; Datamining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Informationen zum Erstellen eines Prognosegütediagramms, eines Gewinndiagramms oder einer Klassifikationsmatrix oder zum Testen einer Miningstruktur|[Tests und Überprüfung & #40; Datamining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Informationen über das Verarbeiten von Optionen und Berechtigungen|[Verarbeiten von Datamining-Objekten](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |Bietet weitere Informationen über Analysis Services|[Mehrdimensionale Modelldatenbanken ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [Erstellen mehrdimensionaler Modelle mit SQL Server Datatools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Erstellen mehrdimensionaler Modelle mit SQL Server Datatools & #40; SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Arbeitsbereichsdatenbank](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

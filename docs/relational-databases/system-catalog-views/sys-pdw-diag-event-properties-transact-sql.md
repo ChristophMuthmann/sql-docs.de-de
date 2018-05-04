@@ -19,13 +19,12 @@ caps.latest.revision: 7
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d750b3d9ff24bd0a8e98a20e9df212095eafbb51
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b237939dbb93e91282cbab98169fd915d798f187
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syspdwdiageventproperties-transact-sql"></a>Sys.pdw_diag_event_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

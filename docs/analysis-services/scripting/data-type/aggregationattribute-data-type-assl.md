@@ -27,15 +27,15 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92fab692a95d928088fbe62a8006db034651ced8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 09295db73608fa040960a709271f1c72816848b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationattribute-data-type-assl"></a>AggregationAttribute-Datentyp (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen Grunddatentyp, der die Zuordnung zwischen einer [Aggregation](../../../analysis-services/scripting/objects/aggregation-element-assl.md) -Element und einem Attribut.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert den Grunddatentyp, der die Zuordnung zwischen einem [Aggregation](../../../analysis-services/scripting/objects/aggregation-element-assl.md) -Element und einem Attribut darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,24 +49,24 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Basisdatentypen|InclusionThresholdSetting|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Basisdatentypen|Keine|  
+|Abgeleitete Datentypen|Keine|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
-|Untergeordnete Elemente|[AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md), [Anmerkungen](../../../analysis-services/scripting/collections/annotations-element-assl.md)|  
-|Abgeleitete Elemente|[Attribut](../../../analysis-services/scripting/objects/attribute-element-assl.md) ([Attribute](../../../analysis-services/scripting/collections/attributes-element-assl.md) Auflistung von [AggregationDimension](../../../analysis-services/scripting/data-type/aggregationdimension-data-type-assl.md))|  
+|Übergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|[AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md), [Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md)|  
+|Abgeleitete Elemente|[Attribute](../../../analysis-services/scripting/objects/attribute-element-assl.md) ([Attributes](../../../analysis-services/scripting/collections/attributes-element-assl.md) -Auflistung von [AggregationDimension](../../../analysis-services/scripting/data-type/aggregationdimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
  Die entsprechende Klasse im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AggregationAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aggregation-Element &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
- [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Aggregation-Element & #40; ASSL & #41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
+ [Analysis Services Scripting Language-XML-Datentypen & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

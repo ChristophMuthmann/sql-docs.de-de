@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 107a89aeca70d7b28958c475994e3c41f417fa26
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56b3a9757089bae9da3341ba3649d8579f8d663
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-result-set-columns"></a>Binden von Ergebnis Resultsetspalten
 Anwendungen können binden, wie viele oder so wenig Spalten des Resultsets festgelegt werden, da sie auswählen, einschließlich überhaupt keine Spalten binden. Wenn eine Datenzeile abgerufen wird, gibt der Treiber die Daten für die gebundenen Spalten für die Anwendung zurück. Gibt an, ob die Anwendung aller Spalten im Resultset bindet, hängt von der Anwendung ab. Anwendungen, die Berichte in der Regel haben z. B. kein festes Format; solche Anwendungen ein Resultset mit allen der im Bericht verwendeten Spalten erstellen und dann binden und Abrufen der Daten für alle diese Spalten. Anwendungen, die vollständige Datenmenge in einigen Fällen Bildschirme ermöglicht dem Benutzer entscheiden, welche Spalten angezeigt; solche Anwendungen erstellen, ein Resultset mit allen Spalten, die der Benutzer möglicherweise werden soll, aber binden und Abrufen der Daten nur für diejenigen Spalten, die vom Benutzer ausgewählt wurde.  

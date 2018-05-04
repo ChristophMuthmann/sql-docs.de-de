@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], changing
 - editing data sources [ODBC], Visual FoxPro
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ee5ff5f7dd67e5c404471bc4f6a38940f5c48433
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d244b0768cdeeb8580f00d9fc75e2d2d9955843
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Ändern einer Visual FoxPro-Datenquelle
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>So ändern Sie eine Visual FoxPro-Datenquelle  

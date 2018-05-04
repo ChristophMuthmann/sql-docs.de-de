@@ -1,35 +1,31 @@
 ---
 title: TCP/IP-Eigenschaften (Registerkarte "IP-Adressen") | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: 4371bbb3c202087b88bb5b29ce7ea5976cd6bdf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP-Eigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** (Registerkarte IP-Adressen), um die TCP/IP-Protokolloptionen für eine spezielle IP-Adresse zu konfigurieren. Nur die Optionen **Dynamische TCP-Ports** und **TCP-Port** können durch Auswahl von **IPAll**für alle Adressen sofort konfiguriert werden.  
+  Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** (Registerkarte IP-Adressen), um die TCP/IP-Protokolloptionen für eine spezielle IP-Adresse zu konfigurieren. Nur die Optionen **Dynamische TCP-Ports** und **TCP-Port** können durch Auswahl von **IPAll**für alle Adressen sofort konfiguriert werden.  
   
  Die Änderungen werden bei einem Neustart von SQL Server wirksam. Informationen über das Starten und Beenden des SQL Server-Browser-Dienstes finden Sie unter [Starten und Beenden des SQL Server-Browser-Dienstes](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -39,11 +35,11 @@ Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** (Registerkarte IP-Adressen
 ## <a name="dynamic-ports"></a>Dynamische Ports  
  Wenn eine Instanz beim Starten von SQL Server zur Überwachung von dynamischen Ports konfiguriert ist, wird das Betriebssystem auf einen verfügbaren Port überprüft und ein Endpunkt für diesen Port geöffnet. Eingehende Verbindungen müssen diese Portnummer zum Verbinden angeben. Da sich die Portnummer bei jedem Start von SQL Server ändern kann, stellt SQL Server den SQL Server-Browser-Dienst bereit, um an den Ports zu lauschen und eingehende Verbindungen an den aktuellen Port für diese Instanz zu leiten. Das Verwenden von dynamischen Ports macht das Herstellen von Verbindungen mit SQL Server durch eine Firewall schwierig, da die Portnummer sich bei einem Neustart von SQL Server ändern kann. Dies erfordert Änderungen an den Firewalleinstellungen. Konfigurieren Sie SQL Server zum Verwenden eines statischen Ports, um Verbindungsprobleme durch eine Firewall zu vermeiden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Active**  
  Gibt an, dass die IP-Adresse auf dem Computer aktiviert ist. Nicht verfügbar für **IPAll**.  
   
- **Aktiviert**  
+ **Enabled**  
  Wenn die Eigenschaft **Auf Alle lauschen** unter **TCP/IP-Eigenschaften** (Registerkarte Protokoll) auf **Nein**festgelegt ist, gibt diese Eigenschaft an, ob SQL Server auf die IP-Adresse lauscht. Wenn die Eigenschaft **Auf Alle Lauschen** unter **TCP/IP-Eigenschaften** (Registerkarte Protokoll) auf **Ja**festgelegt ist, wird die Eigenschaft ignoriert. Nicht verfügbar für **IPAll**.  
   
  **IP-Adresse**  
@@ -67,9 +63,9 @@ Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** (Registerkarte IP-Adressen
 ## <a name="additional-topics-in-books-online"></a>Weitere Themen in der Onlinedokumentation  
  Suchen Sie in MSDN nach Themen wie **Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports (SQL Server-Konfigurations-Manager)** und **Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Auswählen eines Netzwerkprotokolls](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP / IP-](creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server-Browserdienst](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

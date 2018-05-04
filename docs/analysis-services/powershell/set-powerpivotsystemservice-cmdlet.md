@@ -1,31 +1,23 @@
 ---
 title: Set-PowerPivotSystemService-Cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 00f080d09fd433d22ecf0e5eebeb84e7fc6394d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Set-PowerPivotSystemService-Cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Legt die globalen Eigenschaften des PowerPivotSystemService-Objekts auf Farmebene fest.  
+  Legt die globalen Eigenschaften des PowerPivotSystemService-Objekts auf Farmebene fest.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -54,7 +46,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|true|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-updateassemblyinformation-switch"></a>-UpdateAssemblyInformation \<switch>  
+### <a name="-updateassemblyinformation-switch"></a>' Updateassemblyinformation ' - \<wechseln >  
  Wird nur zu Upgradezwecken verwendet. Wenn sich die in der Farm bereitgestellte Assemblyversion von der Version unterscheidet, die in der SharePoint-Konfigurationsdatenbank gespeichert ist, können Sie dieses Cmdlet ausführen, um die Assemblyinformationen in der Konfigurationsdatenbank zu aktualisieren. Informationen zur Assemblyversion sind in den Dateieigenschaften der Datei Microsoft.AnalysisServices.SharePoint.Integration.dll verfügbar, die in der globalen Assembly gespeichert ist.  
   
 |||  
@@ -91,7 +83,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-confirm-switch"></a>-Confirm \<switch>  
+### <a name="-confirm-switch"></a>-Bestätigen Sie \<wechseln >  
  Fordert eine Bestätigung an, bevor der Befehl ausgeführt wird. Dieser Wert ist standardmäßig aktiviert. Geben Sie Confirm:$false für einen Befehl an, um die Bestätigungsantwort in einem Befehl zu umgehen.  
   
 |||  

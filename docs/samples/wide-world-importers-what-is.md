@@ -2,27 +2,22 @@
 title: Wide World Importers - Beispieldatenbank für SQL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
-ms.component: samples
-ms.technology:
-- samples
+ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
-caps.latest.revision: 3
-author: BarbKess
-ms.author: barbkess
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.workload: On Demand
-ms.openlocfilehash: 01ba6c673078f7c79690e14e4102e5c431a6271a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: be5ed96b049d5fb7b4ecf5e6966b11390a08b04d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Wide World Importers-Beispieldatenbanken für Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

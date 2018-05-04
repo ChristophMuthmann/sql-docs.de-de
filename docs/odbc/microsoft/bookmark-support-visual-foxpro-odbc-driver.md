@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], bookmarks
 - Visual FoxPro ODBC driver [ODBC], bookmarks
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e9d9816240836ee2b8b5c69ae49559a1fe6d625
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8ca2ddf53c2ebbd8078b57a9f6cc22a1b3b1341b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>Lesezeichenunterstützung (Visual FoxPro-ODBC-Treiber)
 Der Visual FoxPro-ODBC-Treiber unterstützt die einfache Lesezeichen. Beim Aufruf [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) mit der SQL_BOOKMARK_PERSISTENCE *Infotyp*, SQL_BP_SCROLL zurückgegeben wird.  

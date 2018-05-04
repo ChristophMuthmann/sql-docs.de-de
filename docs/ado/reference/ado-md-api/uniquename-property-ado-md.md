@@ -26,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 26ab441e30ca580535a8b8fb4c77c0260c16a6d6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: fac001de4587e4f35cf02ef4e0476213d661f3c9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName-Eigenschaft (ADO MD)
 Gibt einen eindeutigen Namen für das aktuelle Objekt an.  

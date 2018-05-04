@@ -25,15 +25,15 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: da9bbbd41c8c36170146b9798830ae63463c894d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3c668111d07d9de311bbda9ead6c91b85c813b5c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensionpermission-data-type-assl"></a>DimensionPermission-Datentyp (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen abgeleiteten Datentyp, der eine Datenbankdimension zugewiesenen Berechtigungen darstellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert einen abgeleiteten Datentyp, der die einer Datenbankdimension zugewiesenen Berechtigungen darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,16 +48,16 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Basisdatentypen|[Berechtigung](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|Keine|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|Keine|  
 |Untergeordnete Elemente|[AttributePermissions](../../../analysis-services/scripting/collections/attributepermissions-element-assl.md), [AllowedRowsExpression](../../../analysis-services/scripting/collections/attributepermissions-element-assl.md)|  
 |Abgeleitete Elemente|[DimensionPermission](../../../analysis-services/scripting/objects/dimensionpermission-element-assl.md)|  
   
@@ -73,6 +73,6 @@ ms.lasthandoff: 01/08/2018
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.DimensionPermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language-XML-Datentypen & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

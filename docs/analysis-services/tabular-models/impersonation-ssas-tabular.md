@@ -1,31 +1,30 @@
 ---
-title: "Identitätswechsel in tabellarischen Modellen von Analysis Services | Microsoft Docs"
-ms.custom: 
+title: Identitätswechsel in tabellarischen Modellen von Analysis Services | Microsoft Docs
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 20728b8ff7ecc4a4124f5fc292366d565781186f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="impersonation"></a>Identitätswechsel 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Dieser Artikel bietet Entwicklern von tabellarischen Modellen einen Überblick über die Anmeldeinformationen von Analysis Services Verwendung beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und Verarbeiten von Daten (aktualisieren).  
+  Dieser Artikel bietet Entwicklern von tabellarischen Modellen einen Überblick über die Anmeldeinformationen von Analysis Services Verwendung beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und Verarbeiten von Daten (aktualisieren).  
 
 ##  <a name="bkmk_conf_imp_info"></a> Konfigurieren des Identitätswechsels  
  Ein Modell vorhanden ist, wo und in welchem Kontext bestimmt, wie die Identitätswechselinformationen konfiguriert ist. Wenn Sie ein neues Modellprojekt erstellen, wird Identitätswechsel beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren von Daten in SQL Server Data Tools (SSDT) konfiguriert. Nachdem ein Modell bereitgestellt wurde, kann Identitätswechsel in Datenbank-Verbindungszeichenfolgeneigenschaft Modell mithilfe von SQL Server Management Studio (SSMS) konfiguriert werden. Für tabellarische Modelle in Azure Analysis Services können Sie SSMS oder die **anzeigen als: Skript** Modus im Designer browserbasierte zum Bearbeiten der Datei Model.bim im JSON-Format.

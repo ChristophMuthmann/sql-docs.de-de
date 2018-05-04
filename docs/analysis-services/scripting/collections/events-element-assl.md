@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 681f1b48f115b6b3c3fcfd092eddc7d85f4bdaca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: efb58f8cce48312aa52a8852594aa9e6bd5b2615
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="events-element-assl"></a>Events-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert die Auflistung von [Ereignis](../../../analysis-services/scripting/objects/event-element-assl.md) Elemente von erfasst werden sollen eine [Ablaufverfolgung](../../../analysis-services/scripting/objects/trace-element-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert die Auflistung der [Event](../../../analysis-services/scripting/objects/event-element-assl.md) -Elemente, die von einem [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md)-Element erfasst werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.TraceEventCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Traces-Element &#40; ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
- [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Traces-Element & #40; ASSL & #41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
+ [Schemaauflistungen & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

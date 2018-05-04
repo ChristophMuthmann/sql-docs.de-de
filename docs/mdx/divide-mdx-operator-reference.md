@@ -23,12 +23,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5cc93d1be3e91fc42fdd5e0d579321106c9375b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1af119ab8f082b8d18672a047276c8f6731df3cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide---mdx-operator-reference"></a>Divide - MDX-Operatorreferenz
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -114,7 +113,7 @@ WHERE
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
 ## <a name="see-also"></a>Siehe auch  
- [IIf &#40; MDX &#41;](../mdx/iif-mdx.md)   
- [MDX-Operatorreferenz &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
+ [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

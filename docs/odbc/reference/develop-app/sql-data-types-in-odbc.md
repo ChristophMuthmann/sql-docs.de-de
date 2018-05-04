@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a833a725-3c27-4d6b-9f6a-8c2e6e3e2920
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a80cf302ab29baf37903e645a83f1d9cbcafdf5e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ec4b4f27d2186989a4886ac78ec6e39eeb51b9f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types-in-odbc"></a>SQL-Datentypen in ODBC
 SQL-Datentypen sind die Typen, die in denen Daten in der Datenquelle gespeichert werden.  

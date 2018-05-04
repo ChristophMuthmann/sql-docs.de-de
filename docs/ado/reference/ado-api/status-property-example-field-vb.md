@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9c931092b6fea724d3be747cf8c6e69dd8517e6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 12a6e80c42b8f560874d3b22802f57c1b7384570
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="status-property-example-field-vb"></a>Beispiel der Status-Eigenschaft (Feld) (VB)
 Das folgende Beispiel öffnet ein Dokument aus einen Ordner mit Lese-/Schreibzugriff der [Publishing Internetanbieter](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) Eigenschaft eine [Feld](../../../ado/reference/ado-api/field-object.md) Objekt des der [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) zuerst festgelegt, um **AdFieldPendingInsert**, und klicken Sie dann auf den aktualisiertwerden**AdFieldOk**.  

@@ -1,39 +1,23 @@
 ---
 title: Erstellen Sie eine DMX-Abfrage in SQL Server Management Studio | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- templates [Analysis Services], queries
-- SQL Server Management Studio [Analysis Services], DMX queries
-- predictions [Analysis Services], DMX prediction queries
-- predictions [DMX]
-- prediction queries [DMX]
-- queries [DMX], prediction queries
-- mining models [Analysis Services], DMX
-ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 939d21c596a3f023afaae6931ba1c53efe0ab85b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Erstellen einer DMX-Abfrage in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Satz von Funktionen bereit, um Sie bei der Erstellung von Vorhersage-, Inhalts- und Datendefinitionsabfragen gegen Miningmodelle und Miningstrukturen zu unterstützen.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet eine Reihe von Features helfen Ihnen beim Erstellen von Vorhersageabfragen, Inhaltsabfragen und Datendefinitionsabfragen gegen Miningmodelle und Miningstrukturen.  
   
 -   Der grafische Generator für Vorhersageabfragen ist sowohl über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar, um den Prozess des Schreibens von Vorhersageabfragen und des Zuordnens von Datasets zu Modellen zu vereinfachen.  
   
@@ -57,7 +41,7 @@ ms.lasthandoff: 02/15/2018
  Sie können auch benutzerdefinierte Vorlagen für jene Abfragen oder Befehle erstellen, die Sie häufig ausführen.  
   
 ## <a name="xmla-query-templates"></a>XMLA-Abfragevorlagen  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt auch Vorlagen für XMLA-Abfragen bereit.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt auch Vorlagen für XMLA-Abfragen bereit.  
   
  Zwischen den Typen der Abfragen, die Sie mit XMLA oder DMX ausführen können, tritt ein gewisses Maß an Überschneidung auf. Sie können z. B. einige Modellinhaltsabfragen erstellen, indem Sie entweder DMX oder die Data Mining-Schemarowsets verwenden. Die Schemarowsets enthalten allerdings gelegentlich Informationen, die in DMX-Inhaltsabfragen nicht verfügbar gemacht werden.  
   
@@ -93,6 +77,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Referenz](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

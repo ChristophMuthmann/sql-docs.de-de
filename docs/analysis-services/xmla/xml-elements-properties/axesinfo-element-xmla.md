@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b259f17f6d4d1190ef6563dda33049ebde05510a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8e83842160be777da5f2fbcc5449d88fea8b12f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axesinfo-element-xmla"></a>AxesInfo-Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält eine Auflistung von [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) stellt die vom übergeordneten Element enthaltenen Elemente [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Enthält eine Auflistung von [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) -Elementen und stellt die im übergeordneten [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) -Element enthaltenen Achsenmetadaten dar.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,11 +54,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -67,10 +67,10 @@ ms.lasthandoff: 01/08/2018
 |Übergeordnete Elemente|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |Untergeordnete Elemente|[AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Das **AxesInfo** -Element enthält ein **AxisInfo** -Element für jede Achse innerhalb des mehrdimensionalen Datensatzes, der von einem **root** -Element mithilfe des **MDDataSet** -Datentyps zurückgegeben wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

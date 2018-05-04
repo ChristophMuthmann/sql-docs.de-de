@@ -1,34 +1,19 @@
 ---
 title: Mit aktiviertem Schreibzugriff Dimensionen | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords:
-- write-enabled dimensions [Analysis Services]
-- dimensions [Analysis Services], write-enabled
-- dimension writeback [Analysis Services]
-- write-enabled cubes [Analysis Services]
-- writeback [Analysis Services], dimensions
-ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: "38"
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8fddc4501d692f4b11ade511f5f56066b81af8c8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="write-enabled-dimensions"></a>Dimensionen mit aktiviertem Schreibzugriff
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +23,7 @@ ms.lasthandoff: 01/08/2018
   
  Die Daten in einer Dimension sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Dimension zu aktivieren. Wenn in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]für eine Dimension der Schreibschutz aktiviert wird, können Anwender der Unternehmenssoftware und Administratoren den Inhalt der Dimension ändern und die unmittelbaren Auswirkungen der Änderungen auf die Hierarchien der Dimension anzeigen. Der Schreibzugriff kann für jede Dimension aktiviert werden, die auf einer einzelnen Tabelle basiert. In einer Dimension mit aktiviertem Schreibzugriff können Benutzer im geschäftlichen Bereich und Administratoren Attributelemente innerhalb der Dimension ändern, verschieben, hinzufügen und löschen. Diese Updates werden zusammenfassend als *Rückschreiben von Dimensionen*bezeichnet.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]unterstützt das Rückschreiben für alle Dimensionsattribute, und jedes Element einer Dimension kann geändert werden. Für einen Cube oder eine Partition mit aktiviertem Schreibzugriff werden die Updates in einer Rückschreibetabelle getrennt von den Quelltabellen des Cubes gespeichert. Allerdings werden die Updates für eine Dimension mit aktiviertem Schreibzugriff direkt in der Tabelle der Dimension gespeichert. Auch wenn die Dimension mit aktiviertem Schreibzugriff in einen Cube mit mehreren Partitionen eingebunden ist und einige oder alle der zugehörigen Datenquellen über Kopien der Dimensionstabelle verfügen, wird während eines Rückschreibevorgangs zudem nur die Originaltabelle aktualisiert.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt das Rückschreiben für alle Dimensionsattribute, und jedes Element einer Dimension kann geändert werden. Für einen Cube oder eine Partition mit aktiviertem Schreibzugriff werden die Updates in einer Rückschreibetabelle getrennt von den Quelltabellen des Cubes gespeichert. Allerdings werden die Updates für eine Dimension mit aktiviertem Schreibzugriff direkt in der Tabelle der Dimension gespeichert. Auch wenn die Dimension mit aktiviertem Schreibzugriff in einen Cube mit mehreren Partitionen eingebunden ist und einige oder alle der zugehörigen Datenquellen über Kopien der Dimensionstabelle verfügen, wird während eines Rückschreibevorgangs zudem nur die Originaltabelle aktualisiert.  
   
  Dimensionen mit aktiviertem Schreibzugriff und Cubes mit aktiviertem Schreibzugriff weisen unterschiedliche, jedoch sich ergänzende Funktionen auf. Durch eine Dimension mit aktiviertem Schreibzugriff erhalten Anwender der Unternehmenssoftware und Administratoren die Möglichkeit, Elemente zu aktualisieren, wohingegen sie durch einen Cube mit aktiviertem Schreibzugriff in die Lage versetzt werden, Zellenwerte zu aktualisieren. Obwohl sich diese zwei Funktionen ergänzen, müssen Sie sie nicht kombiniert verwenden. Eine Dimension muss nicht in einen Cube eingebunden sein, damit das Rückschreiben von Dimensionen verwendet werden kann. So kann eine Dimension mit aktiviertem Schreibzugriff auch in einen Cube eingebunden sein, für den der Schreibzugriff nicht aktiviert wurde. Für die Aktivierung des Schreibzugriffs von Dimensionen und Cubes und für die Verwaltung ihrer Sicherheit verwenden Sie unterschiedliche Verfahren.  
   
@@ -62,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Das Rückschreiben für Dimensionen wird nicht von verknüpften Dimensionen unterstützt.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Nur Anwender der Unternehmenssoftware und Administratoren in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankrollen, denen die Lese-/Schreibberechtigung für die Dimension gewährt wurde, können eine Dimension mit aktiviertem Schreibzugriff aktualisieren. Sie können für jede Rolle steuern, welche Elemente aktualisiert werden können und welche nicht. Damit Anwender der Unternehmenssoftware und Administratoren eine Dimension mit aktiviertem Schreibzugriff aktualisieren können, muss ihre Clientanwendung diese Funktionalität unterstützen. Für solche Benutzer muss die Dimension mit aktiviertem Schreibzugriff in einen Cube eingebunden sein, der nach der letzten Änderung der Dimension verarbeitet wurde. Weitere Informationen finden Sie unter [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Benutzer und Gruppen, die zur Administratorrolle gehören, können die Attributelemente einer Dimension mit aktiviertem Schreibzugriff aktualisieren, selbst wenn die Dimension nicht in einen Cube eingebunden ist.  
@@ -70,6 +55,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften von Datenbankdimensionen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Partitionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensionen & #40; Analysis Services – mehrdimensionale Daten & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

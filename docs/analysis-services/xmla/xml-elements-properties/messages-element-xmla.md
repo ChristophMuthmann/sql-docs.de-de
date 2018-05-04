@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cbd5b1a00e3bfb62bda71b10bd7e68e18f82dfd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7c144687245db3c4ed5869d86c74d5848667e745
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="messages-element-xmla"></a>Messages-Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält eine Auflistung von [Nachricht](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md) Elemente zurückgegeben werden, von einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] durch eine [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) oder [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Aufruf der Methode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Enthält eine Auflistung von [Message](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md) -Elementen, die von einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] durch einen Aufruf der Methoden [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) oder [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) zurückgegeben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -69,6 +69,6 @@ ms.lasthandoff: 01/08/2018
  Dieses Element wird verwendet, wenn ein **Discover** -Methodenaufruf oder ein einzelner XMLA-Befehl innerhalb eines **Execute** -Methodenaufrufs erfolgreich, jedoch mit Fehlern oder Warnungen, abgeschlossen wird. In einem solchen Fall wird nach allen anderen Elementen ein **Messages** -Element zum [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) -Element hinzugefügt, das wiederum ein oder mehrere **Message** -Elemente enthält. Jedes **Message** -Element stellt eine einzelne Nachricht dar, entweder eine Fehler- oder eine Warnungsmeldung, die von der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz zurückgegeben wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c887b78b04f45752a406d618a84078a8e002abba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4ee429b5ef2d9f0a8d06c0c13c17c71f03cccf84
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnid-element-eventcolumn-assl"></a>ColumnID-Element (EventColumn) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält den Bezeichner (ID) der Spalte mit den Informationen für ein Ereignis erfasst werden sollen, als Teil einer [Ablaufverfolgung](../../../analysis-services/scripting/objects/trace-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enthält den Bezeichner (ID) der Spalte mit den Informationen für ein Ereignis erfasst werden sollen, als Teil einer [Ablaufverfolgung](../../../analysis-services/scripting/objects/trace-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,11 +48,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|1-1: Erforderliches Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|String|  
+|Standardwert|Keine|  
+|Kardinalität|1-1: Erforderliches Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 01/08/2018
  Das Element, das das übergeordnete Element des entspricht **ColumnID** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.TraceColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Columns-Element &#40; ASSL &#41;](../../../analysis-services/scripting/collections/columns-element-assl.md)   
- [Event-Element &#40; ASSL &#41;](../../../analysis-services/scripting/objects/event-element-assl.md)   
- [Events-Element &#40; ASSL &#41;](../../../analysis-services/scripting/collections/events-element-assl.md)   
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Columns-Element &#40;ASSL&#41;](../../../analysis-services/scripting/collections/columns-element-assl.md)   
+ [Event-Element &#40;ASSL&#41;](../../../analysis-services/scripting/objects/event-element-assl.md)   
+ [Events-Element &#40;ASSL&#41;](../../../analysis-services/scripting/collections/events-element-assl.md)   
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

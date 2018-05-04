@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea45564e35d9e6bbd3d8cd484f190a4fdd3b88aa
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c3e1f66c7996385eb92117bcb2a32758f44cfcd2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-section"></a>Datenabschnitt
 Der Datenabschnitt definiert die Daten des Schemarowsets zusammen mit allen ausstehenden Updates, einfügungen oder löschungen. Der Datenabschnitt kann NULL oder mehr Zeilen enthalten. Es kann nur Daten aus einem Rowset enthalten, in die Zeile durch das Schema definiert ist. Darüber hinaus können wie bereits erwähnt, Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder ein Unterelement im Datenabschnitt verwendet wird, und das Konstrukt nicht im Schema-Abschnitt definiert wurde, wird es ignoriert.  

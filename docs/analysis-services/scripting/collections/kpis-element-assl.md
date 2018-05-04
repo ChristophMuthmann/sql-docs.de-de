@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: efa6bf989976b36b61f08b192b475f0e4f12dbaf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fcfbfbb53c853737d16815ccd20d0b4c31ad996b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpis-element-assl"></a>Kpis-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Auflistung von Key Performance Indicators ([Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) Elemente) mit dem übergeordneten Element verknüpft sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enthält die Sammlung der Key Performance Indicators ([Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) -Elemente), die mit dem übergeordneten Element verknüpft sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,18 +53,18 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md), [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md)|  
-|Untergeordnete Elemente|Finden Sie in der folgenden Tabelle aus.|  
+|Übergeordnete Elemente|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md), [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md)|  
+|Untergeordnete Elemente|Siehe Tabelle unten.|  
   
 |Vorgänger oder übergeordnetes Element|Untergeordnetes Element|  
 |------------------------|-------------------|  
@@ -75,6 +75,6 @@ ms.lasthandoff: 01/08/2018
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.KpiCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Schemaauflistungen & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

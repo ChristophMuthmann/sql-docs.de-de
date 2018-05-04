@@ -1,15 +1,15 @@
 ---
 title: StorageEngineUsed-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - StorageEngineUsed Element
@@ -19,20 +19,19 @@ apitype: Schema
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbd6a47e68c069ca9eef8c8fe8f414d4025ebeba
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: bbd29ac3caec5f82e34c116125d7b43b4088fc15
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Enthält einen schreibgeschützten Wert, der den aktuellen Datenbanktyp angibt.  
+  Enthält einen schreibgeschützten Wert, der den aktuellen Datenbanktyp angibt.  
   
 ## <a name="syntax"></a>Syntax  
   

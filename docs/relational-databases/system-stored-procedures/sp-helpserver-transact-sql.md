@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90a71416548b92480826c61979f98a3948527b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0b385ddfdb140f38614e4082b45ada8a8140e4f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpserver [ [ @server = ] 'server' ]
  Der Server, zu dem Informationen ausgegeben werden. Wenn *Server* nicht angegeben ist, Informationen zu allen Servern in **master.sys.servers**. *Server* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@optname =** ] **"***Option***"**  
- Die Option, die den Server beschreibt. *Option* ist **Varchar (**35**)**, hat den Standardwert NULL und muss einen der folgenden Werte sein.  
+ Die Option, die den Server beschreibt. *Option* ist **Varchar (** 35 **)**, hat den Standardwert NULL und muss einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -69,7 +68,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**Remotesortierung verwenden**|Verwendet die Sortierung einer Remotespalte anstelle der des lokalen Servers.|  
   
  [  **@show_topology =** ] **"***Show_topology***"**  
- Die Beziehung des angegebenen Servers zu anderen Servern. *Show_topology* ist **Varchar (**1**)**, hat den Standardwert NULL. Wenn *Show_topology* stimmt nicht mit **t** oder ist NULL, **Sp_helpserver** im Abschnitt Resultsets aufgelisteten Spalten zurück. Wenn *Show_topology* gleich **t**, zusätzlich zu den in den Resultsets aufgelisteten Spalten **Sp_helpserver** gibt auch **Topx** und **topy** Informationen.  
+ Die Beziehung des angegebenen Servers zu anderen Servern. *Show_topology* ist **Varchar (** 1 **)**, hat den Standardwert NULL. Wenn *Show_topology* stimmt nicht mit **t** oder ist NULL, **Sp_helpserver** im Abschnitt Resultsets aufgelisteten Spalten zurück. Wenn *Show_topology* gleich **t**, zusätzlich zu den in den Resultsets aufgelisteten Spalten **Sp_helpserver** gibt auch **Topx** und **topy** Informationen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -80,8 +79,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Servername.|  
 |**Netzwerkname**|**sysname**|Netzwerkname des Servers.|  
-|**status**|**Varchar (**70**)**|Serverstatus.|  
-|**id**|**Char (**4**)**|ID des Servers.|  
+|**status**|**Varchar (** 70 **)**|Serverstatus.|  
+|**id**|**Char (** 4 **)**|ID des Servers.|  
 |**collation_name**|**sysname**|Sortierung des Servers.|  
 |**connect_timeout**|**int**|Der Timeoutwert für die Verbindung mit dem Verbindungsserver.|  
 |**query_timeout**|**int**|Timeoutwert für Abfragen auf einem Verbindungsserver.|  

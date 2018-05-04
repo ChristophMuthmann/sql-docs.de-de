@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
 - upgrading applications [ODBC], mapping replacement functions
@@ -25,12 +25,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 400f1fd18788f361b3eada813a414077e62de1e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0283ca10e19e1a75e5a3d497c33ab57866b3b27e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Zuordnungsfunktionen Ersatz für die Abwärtskompatibilität von Anwendungen
 Eine ODBC 3.*.x* Anwendung arbeiten, über die ODBC 3.*.x* -Treiber-Manager funktioniert mit einer ODBC 2. *X* Treiber solange keine neuen Funktionen verwendet werden. Beide Funktionen dupliziert und verhaltensänderungen, allerdings wirken sich die Möglichkeit, die ODBC-3. *x* Anwendung funktioniert, in einer ODBC 2. *X* Treiber. Wenn Sie mit einer ODBC 2. arbeiten zu können. *x* -Treiber verwenden, wird der Treiber-Manager die folgenden ODBC 3. zugeordnet. *X* -Funktionen, die eine oder mehrere ODBC 2. ersetzt haben. *X* -Funktionen in der entsprechenden ODBC 2. *X* Funktionen.  
@@ -53,7 +52,7 @@ Eine ODBC 3.*.x* Anwendung arbeiten, über die ODBC 3.*.x* -Treiber-Manager funk
  [1] andere Aktionen möglicherweise vom jeweiligen Attribut, das angefordert wird auch ausgeführt werden.  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
- Der Treiber-Manager zugeordnet, diese Option, um **SQLAllocEnv**, **SQLAllocConnect**, oder **SQLAllocStmt:**je nach Bedarf. Beim folgenden Aufruf **SQLAllocHandle**:  
+ Der Treiber-Manager zugeordnet, diese Option, um **SQLAllocEnv**, **SQLAllocConnect**, oder **SQLAllocStmt:** je nach Bedarf. Beim folgenden Aufruf **SQLAllocHandle**:  
   
 ```  
 SQLAllocHandle(HandleType, InputHandle, OutputHandlePtr);  
@@ -418,7 +417,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
  Die ODBC 3.*.x* -Treiber-Manager führt die folgenden Zuordnungen, wenn eine ODBC 3. *X* Anwendung arbeiten mit einer ODBC 2. *X* Treiber Lesezeichen Vorgänge ausführt.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Wenn eine ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2. *X* Treiber ruft **SQLBindCol** zum Binden an die Spalte 0 mit *fCType* SQL_C_VARBOOKMARK, die ODBC 3. gleich*.x* -Treiber-Manager überprüft, finden Sie unter ob die *Pufferlänge* Arguments ist kleiner als 4 oder größer als 4 und wenn dies der Fall ist, gibt SQLSTATE HY090 (ungültige Zeichenfolgen- oder Pufferlänge). Wenn die *Pufferlänge* Argument gleich 4 ist, ruft der Treiber-Manager **SQLBindCol** im Treiber nach dem Ersetzen *fCType* mit SQL_C_BOOKMARK.  
+ Wenn eine ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2. *X* Treiber ruft **SQLBindCol** zum Binden an die Spalte 0 mit *fCType* SQL_C_VARBOOKMARK, die ODBC 3. gleich *.x* -Treiber-Manager überprüft, finden Sie unter ob die *Pufferlänge* Arguments ist kleiner als 4 oder größer als 4 und wenn dies der Fall ist, gibt SQLSTATE HY090 (ungültige Zeichenfolgen- oder Pufferlänge). Wenn die *Pufferlänge* Argument gleich 4 ist, ruft der Treiber-Manager **SQLBindCol** im Treiber nach dem Ersetzen *fCType* mit SQL_C_BOOKMARK.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Wenn eine ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2. *X* Treiber ruft **SQLColAttribute** mit der *ColumnNumber* Argument auf 0 festgelegt, der Treiber-Manager gibt den *FieldIdentifier* Werte in der folgenden Tabelle aufgeführt.  

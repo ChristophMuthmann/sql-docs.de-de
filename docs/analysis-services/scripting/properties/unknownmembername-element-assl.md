@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d1d432fcc4692191d70aa2e084bee736a7efe3c6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 66bfcca0b35be927a086aa5eb534576a0782d8d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unknownmembername-element-assl"></a>UnknownMemberName-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Beschriftung in der standardmäßigen Sprache der Dimension, für das unbekannte Element der Dimension an.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enthält die Beschriftung in der standardmäßigen Sprache der Dimension für das unbekannte Element der Dimension.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,18 +50,18 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Zeichenfolge|  
+|Datentyp und -länge|String|  
 |Standardwert|*Unbekannt*|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert des **UnknownMemberName** -Elements stellt die Beschriftung für das unbekannte Element bereit. Die nicht änderbare Element-ID des unbekannten Elements ist *Dimension*.UnknownMember, wenn *Dimension* der eindeutige Name der Dimension ist.  
@@ -69,6 +69,6 @@ ms.lasthandoff: 01/08/2018
  Das Element, das das übergeordnete Element des entspricht **UnknownMemberName** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

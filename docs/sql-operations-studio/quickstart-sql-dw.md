@@ -13,12 +13,11 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5bfa47c53b0810e5ec9002543717fbc4899dfbb5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: eeb496f814546034ac4e7d90cb0f1f734bf5bb47
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwenden [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung herstellen und Abfragen von Daten in Azure SQL Data Warehouse
 

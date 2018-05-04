@@ -25,13 +25,12 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e509e7f550b7c9dc53c4f95e9a8aa767360bed6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 186e0dffb769eb36354601c35c04a89a67fb9a3b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checkconstraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 04/16/2018
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**Nvarchar (**128**)**|Einschränkungsqualifizierer|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar (**128**)**|Name des Schemas, zu dem die Einschränkung gehört.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|Einschränkungsqualifizierer|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, zu dem die Einschränkung gehört.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**CONSTRAINT_NAME**|**sysname**|Einschränkungsname|  
-|**CHECK_CLAUSE**|**Nvarchar (**4000**)**|Tatsächlicher Text der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Definitionsanweisung.|  
+|**CHECK_CLAUSE**|**Nvarchar (** 4000 **)**|Tatsächlicher Text der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Definitionsanweisung.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Systemsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

@@ -15,12 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.workload: On Demand
-ms.openlocfilehash: 7816293d595b5231fe19ea464c4b099495c3d2c6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 0ff01d10ceb460375df9b3b3ce4a06191b5aaba2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Lernprogramm: Verwenden Sie Active Directory-Authentifizierung mit SQL Server on Linux
 

@@ -1,32 +1,19 @@
 ---
 title: Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm | Microsoft Docs
-ms.custom: ''
-ms.date: 03/27/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- deploying [Analysis Services], command prompt
-- command prompt utilities [SQL Server], Microsoft.AnalysisServices.Deployment
-- Microsoft.AnalysisServices.Deployment utility
-- Analysis Services deployments, command prompt
-ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: ''
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 38e91da35dc590b3acbe0f49517e3fad891510fc
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: fbc272eacb7c5bccd3faeab799ffb32b5bad3aaa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translation DLLs [ODBC]
 - functions [ODBC], translation DLL functions
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c64fc572ca27962c461c9340e714e77c0cedc35d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: eb05d9f5e05fc01a1480ef93a74e49336d4b0262
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translation-dll-function-summary"></a>Zusammenfassung der Übersetzung DLL-Funktion
 Die folgende Tabelle beschreibt die Übersetzung von DLL-Funktionen. Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [Übersetzung DLL-Funktionsreferenz](../../../odbc/reference/syntax/translation-dll-api-reference.md).  

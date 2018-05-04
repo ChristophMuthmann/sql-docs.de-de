@@ -14,12 +14,11 @@ ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.workload: Active
-ms.openlocfilehash: a43b6778870a1555b63ebdad55bc64859d0dd5be
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 38b28065a580995fafcb250a277ab9e0b37607a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Verwenden von Visual Studio-Code zum Erstellen und Ausführen von Transact-SQL-Skripts für SQL Server
 

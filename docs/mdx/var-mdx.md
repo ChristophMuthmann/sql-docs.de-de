@@ -22,17 +22,16 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 871720eafb0d0b166789491e576d56dbcc5f33ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 359fb827d4ce4c7e0915fbaf2021f0c754b6ea1d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="var-mdx"></a>Var (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Gibt die Stichprobenvarianz eines numerischen Ausdrucks, ausgewertet über einer Menge mithilfe der unausgewogenen Auffüllungsformel (geteilt durch  *n* ).  
+  Gibt die Stichprobenvarianz eines numerischen Ausdrucks, ausgewertet über einer Menge mithilfe der unausgewogenen Auffüllungsformel (geteilt durch *n*).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,6 +53,6 @@ Var(Set_Expression [ ,Numeric_Expression ] )
  Die **Var** Funktion verwendet die Formel für die ausgewogene Auffüllung, und die [VarP](../mdx/varp-mdx.md) Funktion der Formel für die unausgewogene Auffüllung verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

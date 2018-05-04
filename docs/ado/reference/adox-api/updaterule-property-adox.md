@@ -26,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 415a171e7a640ef85cd8c07ce15c9f25fa73e99a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 74e79d19a9b66cc4457d1df7cf03fca4be09e463
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule-Eigenschaft (ADOX)
 Gibt an, die Aktion ausgeführt, wenn ein primärer [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) wird aktualisiert.  

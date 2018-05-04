@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d9a19189f0f0982cffce894a22e55bd532d9de46
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ab79266c527364c581d78646b9e1347871da26bb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Die Schnittstelle von Microsoft Open Database Connectivity (ODBC) ist ein C#-Sprache Programmierschnittstelle, die Anwendungen auf Daten aus einer Vielzahl von Datenbank-Managementsystemen (DBMS) zugreifen kann. ODBC ist eine Schnittstelle auf niedriger Ebene hohe Leistung, die speziell für relationale Datenspeicher konzipiert ist.  

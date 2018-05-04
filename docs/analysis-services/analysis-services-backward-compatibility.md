@@ -1,15 +1,15 @@
 ---
-title: "Abwärtskompatibilität von SQL Server 2016 Analysis Services | Microsoft Docs"
-ms.custom: 
+title: Abwärtskompatibilität von SQL Server 2016 Analysis Services | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b2937fa0d0f5d096d2d415c22cd6353ad55187a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services, Abwärtskompatibilität (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -83,7 +82,7 @@ Eine *wichtige Änderung* bewirkt, dass ein Datenmodell, Anwendungscode oder Skr
  Analysis Services Management Objects (AMO), ADOMD.NET und tabellarischen Objekts Modell (TOM) Client-Bibliotheken jetzt als Ziel .NET 4.0-Laufzeit verwenden. Dies kann für Anwendungen, die auf .NET 3.5 ausgerichtet sind, eine wichtige Änderung sein. Anwendungen, die neuere Versionen dieser Assemblys verwenden, müssen jetzt auf .NET 4.0 oder höher ausgerichtet sein.  
   
 ### <a name="amo-version-upgrade"></a>AMO-Versionsupgrade  
- Diese Version ist ein Versionsupgrade für [Analysis Services Management Objects &#40; AMO &#41; ](https://msdn.microsoft.com/library/mt436122.aspx) und ist eine wichtige Änderung unter bestimmten Umständen.  Vorhandener Code und Skripts, die AMO aufrufen, werden bei einem Upgrade von einer vorherigen Version wie bisher ausgeführt. Jedoch bei Bedarf *recompile* Ihrer Anwendung, und Sie auf eine SQL Server 2016 Analysis Services-Instanz abzielen, müssen Sie den folgenden Namespace ein, um Ihr Code oder Skript betriebsbereit hinzufügen:  
+ Diese Version ist ein Versionsupgrade für [Analysis Services Management Objects &#40;AMO&#41; ](https://msdn.microsoft.com/library/mt436122.aspx) und ist eine wichtige Änderung unter bestimmten Umständen.  Vorhandener Code und Skripts, die AMO aufrufen, werden bei einem Upgrade von einer vorherigen Version wie bisher ausgeführt. Jedoch bei Bedarf *recompile* Ihrer Anwendung, und Sie auf eine SQL Server 2016 Analysis Services-Instanz abzielen, müssen Sie den folgenden Namespace ein, um Ihr Code oder Skript betriebsbereit hinzufügen:  
   
 ```  
   

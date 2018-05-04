@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 367a265c33f3c4520b4885524627fca4261829a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriveConnect-Funktion
 **Konformität**  
@@ -163,11 +162,11 @@ SQLRETURN SQLDriverConnect(
   
  wobei *Zeichenfolge* wurde NULL oder mehr Zeichen; *Bezeichner* verfügt über eine oder mehrere Zeichen; *Attribut-Schlüsselwort* ist nicht beachtet werden soll; *Attribut / Wert-* möglicherweise Groß-/Kleinschreibung beachtet; und der Wert der **DSN** Schlüsselwort nicht ausschließlich aus Leerzeichen bestehen.  
   
- Aufgrund der Zeichenfolge und Initialisierung Datei Grammatik, Schlüsselwörter und Attribut Verbindungswerte, die die Zeichen enthalten **[] {} (),? \*=! @** eingeschlossen nicht mit Klammern sollte vermieden werden. Der Wert, der die **DSN** -Schlüsselwort darf nicht ausschließlich aus Leerzeichen bestehen und darf keine führende Leerzeichen enthalten. Aufgrund der Grammatik von Systeminformationen, Schlüsselwörter und Namen von Datenquellen können den umgekehrten Schrägstrich enthalten (\\) Zeichen.  
+ Aufgrund der Zeichenfolge und Initialisierung Datei Grammatik, Schlüsselwörter und Attribut Verbindungswerte, die die Zeichen enthalten **[]{}(),? \*=! @** eingeschlossen nicht mit Klammern sollte vermieden werden. Der Wert, der die **DSN** -Schlüsselwort darf nicht ausschließlich aus Leerzeichen bestehen und darf keine führende Leerzeichen enthalten. Aufgrund der Grammatik von Systeminformationen, Schlüsselwörter und Namen von Datenquellen können den umgekehrten Schrägstrich enthalten (\\) Zeichen.  
   
  Clientanwendungen müssen keine geschweiften Klammern, um den Wert des Attributs nach dem Hinzufügen der **Treiber** Schlüsselwort, wenn das Attribut ein Semikolon (;) enthält, in diesem Fall die Klammern sind erforderlich. Wenn der Wert des Attributs, den der Treiber empfängt geschweifte Klammern enthält, der Treiber sollten Sie nicht entfernen, aber Teil der zurückgegebenen Verbindungszeichenfolge sollte sein.  
   
- Ein Zeichenfolgenwert DSN- oder Verbindungszeichenfolge eingeschlossen in geschweifte Klammern ({}), enthält die Zeichen **[] {} (),? \*=! @** wird an den Treiber intakt übergeben. Wenn Sie diese Zeichen in einem Schlüsselwort zu verwenden, der Treiber-Manager einen Fehler zurück, bei der Arbeit mit Datei-DSNs jedoch übergibt die Verbindungszeichenfolge der Treiber für reguläre Verbindungszeichenfolgen. Verwenden Sie eingebettete geschweiften Klammern in einem Schlüsselwort-Wert.  
+ Ein Zeichenfolgenwert DSN- oder Verbindungszeichenfolge in geschweifte Klammern eingeschlossen ({}), enthält die Zeichen **[]{}(),? \*=! @** wird an den Treiber intakt übergeben. Wenn Sie diese Zeichen in einem Schlüsselwort zu verwenden, der Treiber-Manager einen Fehler zurück, bei der Arbeit mit Datei-DSNs jedoch übergibt die Verbindungszeichenfolge der Treiber für reguläre Verbindungszeichenfolgen. Verwenden Sie eingebettete geschweiften Klammern in einem Schlüsselwort-Wert.  
   
  Die Verbindungszeichenfolge kann eine beliebige Anzahl von treiberdefinierten Schlüsselwörter enthalten. Da die **Treiber** Schlüsselwort keine Informationen aus der Systeminformationen verwendet, der Treiber muss genügend Schlüsselwörter definieren, sodass ein Treiber mit einer Datenquelle, die ausschließlich anhand der Informationen in der Verbindungszeichenfolge eine Verbindung herstellen kann. (Weitere Informationen finden Sie unter "Treiber Richtlinien" weiter unten in diesem Abschnitt.) Der Treiber definiert, welche Schlüsselwörter für die Verbindung mit der Datenquelle erforderlich sind.  
   

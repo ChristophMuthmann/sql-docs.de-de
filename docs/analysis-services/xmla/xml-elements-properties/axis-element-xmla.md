@@ -28,15 +28,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bb0538869453af24bd432a1d7f995e0007e79ec7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d04a9d7def676122ea3ae64aa5e170b36b4ae5aa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axis-element-xmla"></a>Axis-Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält eine Menge von Tupeln, die zur Darstellung einer einzelnen Achse in einer enthaltenen mehrdimensionalen Datasets ein [Achsen](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp die [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Enthält eine Menge von Tupeln, die zur Darstellung einer einzelnen Achse in einer enthaltenen mehrdimensionalen Datasets ein [Achsen](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,11 +56,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |Übergeordnete Elemente|[Achsen](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)|  
 |Untergeordnete Elemente|[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) oder [Tupel](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Den Inhalt des der **Achse** Element hängt vom Wert von der **AxisFormat** XMLA-Eigenschaft, die verwendet werden, indem Sie die **Execute** Methode.  
   
 ## <a name="tupleformat"></a>TupleFormat  
@@ -188,7 +188,7 @@ ms.lasthandoff: 01/08/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

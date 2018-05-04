@@ -26,12 +26,11 @@ caps.latest.revision: 56
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b1b631ab035bf4c444aa1c6b449eaa87e3305c91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6adc5668f43a6db002c3622cc65b7ea1f09dee78
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,9 +58,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Gibt den Namen der vorherzusagenden Spalte an. Die Spalte kann entweder Skalar- oder Tabellendaten enthalten.  
   
  *n*  
- Gibt die Anzahl der nächsten vorherzusagenden Schritte an. Wenn kein Wert für angegeben ist  *n* , der Standard ist 1.  
+ Gibt die Anzahl der nächsten vorherzusagenden Schritte an. Wenn kein Wert für angegeben ist *n*, der Standard ist 1.  
   
- *n*0 darf nicht sein. Die Funktion gibt einen Fehler zurück, wenn Sie nicht wenigstens eine Vorhersage machen.  
+ *n* darf nicht 0 sein. Die Funktion gibt einen Fehler zurück, wenn Sie nicht wenigstens eine Vorhersage machen.  
   
  *n-Start, n-end*  
  Gibt einen Bereich von Zeitreihenschritten an.  
@@ -88,7 +87,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="remarks"></a>Hinweise  
  Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus unterstützt keine Vergangenheitsvorhersage, wenn Sie die PREDICTION JOIN-Anweisung zum Hinzufügen neuer Daten verwenden.  
   
- In einer PREDICTION JOIN-Anweisung beginnt die Vorhersage stets mit dem Zeitschritt unmittelbar nach dem Ende der ursprünglichen Trainingsreihe. Dies gilt auch dann, wenn Sie neue Daten hinzufügen. Aus diesem Grund die  *n*  Parameter und *n Boot-* Parameterwerte müssen eine ganze Zahl größer als 0 sein.  
+ In einer PREDICTION JOIN-Anweisung beginnt die Vorhersage stets mit dem Zeitschritt unmittelbar nach dem Ende der ursprünglichen Trainingsreihe. Dies gilt auch dann, wenn Sie neue Daten hinzufügen. Aus diesem Grund die *n* Parameter und *n Boot-* Parameterwerte müssen eine ganze Zahl größer als 0 sein.  
   
 > [!NOTE]  
 >  Die Länge der neuen Daten beeinflusst den Ausgangspunkt für die Vorhersage nicht. Wenn Sie daher neue Daten hinzufügen und außerdem neue Vorhersagen vornehmen möchten, stellen Sie sicher, dass Sie entweder den Ausgangspunkt für die Vorhersage auf einen Wert größer als die Länge der neuen Daten festlegen oder den Endpunkt der Vorhersage um die Länge der neuen Daten erweitern.  
@@ -102,7 +101,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Im dritten Beispiel wird gezeigt, wie Sie mit dem EXTEND_MODEL_CASES-Parameter ein Miningmodell mit neuen Daten aktualisieren.  
   
- Weitere Informationen zum Arbeiten mit zeitreihenmodellen finden Sie unter der Datamining-Lernprogramm [Lektion 2: erstellen eine Forecasting-Szenarios &#40; Data Mining-Lernprogramm für fortgeschrittene &#41;](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) und [DMX-Lernprogramm für Zeitreihenvorhersagen](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Weitere Informationen zum Arbeiten mit zeitreihenmodellen finden Sie unter der Datamining-Lernprogramm [Lektion 2: erstellen eine Forecasting-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) und [Time Series Vorhersage DMX Lernprogramm](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  Ihr Modell liefert ggf. andere Ergebnisse. Die Ergebnisse der nachfolgenden Beispiele dienen lediglich zum Veranschaulichen des Ergebnisformats.  
@@ -136,7 +135,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Beispiel 2: Hinzufügen von neuen Daten und Verwenden von REPLACE_MODEL_CASES  
  Angenommen Sie stellen fest, dass die Daten für eine bestimmte Region falsch waren. Sie möchten aber die Muster im Modell verwenden und die Vorhersagen entsprechend den neuen Daten anpassen. Oder Sie stellen fest, dass eine andere Region zuverlässigere Trends liefert, und möchten das zuverlässigste Modell auf Daten aus einer anderen Region anwenden.  
   
- In solchen Szenarien können Sie den REPLACE_MODEL_CASES-Parameter verwenden und einen neuen Satz Daten angeben, der als Vergangenheitsdaten verwendet werden soll. Auf diese Weise basieren die Projektionen auf den Mustern im angegebenen Modell, werden jedoch nahtlos am Ende der neuen Datenpunkte fortgesetzt. Eine vollständige Exemplarische Vorgehensweise dieses Szenarios finden Sie unter [erweiterte Zeitreihenvorhersagen &#40; Data Mining Lernprogramm für fortgeschrittene &#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ In solchen Szenarien können Sie den REPLACE_MODEL_CASES-Parameter verwenden und einen neuen Satz Daten angeben, der als Vergangenheitsdaten verwendet werden soll. Auf diese Weise basieren die Projektionen auf den Mustern im angegebenen Modell, werden jedoch nahtlos am Ende der neuen Datenpunkte fortgesetzt. Eine vollständige Exemplarische Vorgehensweise dieses Szenarios finden Sie unter [erweiterte Zeitreihenvorhersagen &#40;Mining-Lernprogramm für fortgeschrittene Data&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
   
  Die folgende PREDICTION JOIN-Abfrage veranschaulicht die Syntax zum Ersetzen von Daten und Treffen neuer Vorhersagen. Im Beispiel wird für die Ersetzungsdaten der Wert der Spalten Amount und Quantity abgerufen und jeweils mit zwei multipliziert:  
   
@@ -270,8 +269,8 @@ OR [Model Region] = 'M200 North America'
 >  In diesem Beispiel wurde das FLATTENED-Schlüsselwort verwendet, um die Ergebnisse in der Tabelle übersichtlicher darzustellen. Wenn Ihr Anbieter jedoch hierarchische Rowsets unterstützt, können Sie das FLATTENED-Schlüsselwort auslassen. Bei Auslassung des FLATTENED-Schlüsselworts gibt die Abfrage zwei Spalten zurück. Die erste Spalte enthält den Wert, der die `[Model Region]`-Datenreihen angibt, und die zweite Spalte enthält die geschachtelte Tabelle mit der Statistik.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Time Series Model Query Examples](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Vorhersagen &#40; DMX &#41;](../dmx/predict-dmx.md)  
+ [Vorhersagen & #40; DMX & #41;](../dmx/predict-dmx.md)  
   
   

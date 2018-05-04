@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c136282f7d337791046d009c9729fefee0d27112
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: bfdd4e4bcbe41e1f7e06765a5ef4878e6b5756ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customization-file-logs-section"></a>Anpassung Dateiabschnitt-Protokolle
 Die **Protokolle** Abschnitt enthält einen Protokolleintrag für die Datei, der den Namen einer Datei angibt, die Fehler beim Ausführen des zeichnet die **DataFactory**.  

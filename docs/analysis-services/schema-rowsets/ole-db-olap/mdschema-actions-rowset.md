@@ -23,15 +23,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 214fb372b021e7cee9f11bb82cccdc65575a7929
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 19423a6d4b8ffe345309032559e733f629358594
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemaactions-rowset"></a>MDSCHEMA_ACTIONS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die Aktionen, die an die Clientanwendung verfügbar sein können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Beschreibt die Aktionen, die der Clientanwendung möglicherweise zur Verfügung stehen.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **MDSCHEMA_ACTIONS** Rowset enthält die folgenden Spalten.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |**COORDINATE_TYPE**|**DBTYPE_I4**||Eine Bitmap, die angibt, wie die **KOORDINIEREN** -Einschränkungsspalte interpretiert wird. Die Datei Msmd.h definiert die folgenden Bitwertkonstanten für diese Bitmap:<br /><br /> **MDACTION_COORDINATE_CUBE** (**1**)<br /><br /> **MDACTION_COORDINATE_DIMENSION** (**2**): bezieht sich auf die Dimensionshierarchien.<br /><br /> **MDACTION_COORDINATE_LEVEL** (**3**)<br /><br /> **MDACTION_COORDINATE_MEMBER** (**4**)<br /><br /> **MDACTION_COORDINATE_SET** (**5**)<br /><br /> **MDACTION_COORDINATE_CELL** (**6**)|  
 |**ACTION_CAPTION**|**DBTYPE_WSTR**||Der Aktionsname, wenn in der DDL keine Beschriftung und keine Übersetzungen angegeben wurden.<br /><br /> Wenn eine Beschriftung oder Übersetzungen angegeben wurden, und **CaptionIsMDX** "false" ist eine der folgenden Zeichenfolgen:<br /><br /> -Die Übersetzung für die entsprechende Sprache.<br /><br /> -Die angegebene Beschriftung, wenn keine Übersetzung für die angegebene Sprache gefunden wurde.<br /><br /> – Der Aktionsname, wenn keine Übersetzung gefunden und der Beschriftung wurde nicht im DDL-Code angegeben.<br /><br /> Wenn eine Beschriftung oder Übersetzungen angegeben wurden, und **CaptionIsMDX** ist "true", die aus der Suche nach der entsprechenden Übersetzung für die angegebene Sprache oder die angegebene Verschiebung in der DDL-Beschriftung und das Berechnen der resultierenden Zeichenfolge die Formel zum Erstellen der Zeichenfolge.<br /><br /> Wenn die Aktion im MDX-Skript angegeben wurde, gibt es keine Übersetzungen und die Beschriftung wird stets als MDX-Ausdruck behandelt.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||Eine benutzerfreundliche Beschreibung der Aktion.|  
-|**INHALT**|**DBTYPE_WSTR**||Der Ausdruck oder Inhalt der Aktion, die ausgeführt werden soll.|  
+|**CONTENT**|**DBTYPE_WSTR**||Der Ausdruck oder Inhalt der Aktion, die ausgeführt werden soll.|  
 |**ANWENDUNG**|**DBTYPE_WSTR**||Der Name der Anwendung, die zur Ausführung der Aktion verwendet werden soll.|  
 |**AUFRUF**|**DBTYPE_I4**||Informationen darüber, wie die Aktion aufgerufen werden soll:<br /><br /> **MDACTION_INVOCATION_INTERACTIVE** (**1**) gibt eine reguläre, während normaler Vorgänge verwendete Aktion an. Dies ist der Standardwert für diese Spalte.<br /><br /> **MDACTION_INVOCATION_ON_OPEN** (**2**) gibt an, dass die Aktion ausgeführt werden soll, wenn der Cube erstmalig geöffnet wird.<br /><br /> **MDACTION_INVOCATION_BATCH** (**4**) gibt an, dass die Aktion, als Teil eines Batchvorgangs ausgeführt wird oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Aufgabe.<br /><br /> <br /><br /> Beachten Sie, dass diese Enumerationswerte in der Datei Msmd.h definiert sind.|  
   
@@ -83,9 +83,9 @@ ms.lasthandoff: 01/08/2018
 |----------------------------|----------------------|  
 |**Cube**|**MDACTION_COORDINATE_CUBE**|  
 |**Dimension**|**MDACTION_COORDINATE_DIMENSION**<br /><br /> **MDACTION_COORDINATE_LEVEL**<br /><br /> **MDACTION_COORDINATE_MEMBER**<br /><br /> **MDACTION_COORDINATE_SET**<br /><br /> **MDACTION_COORDINATE_CELL**|  
-|**Hierarchy**|**MDACTION_COORDINATE_DIMENSION**|  
-|**Level**|**MDACTION_COORDINATE_LEVEL**|  
-|**Member**|**MDACTION_COORDINATE_MEMBER**|  
+|**Hierarchie**|**MDACTION_COORDINATE_DIMENSION**|  
+|**Ebene**|**MDACTION_COORDINATE_LEVEL**|  
+|**Datenmember**|**MDACTION_COORDINATE_MEMBER**|  
 |**Festlegen**|**MDACTION_COORDINATE_SET**|  
 |**Zelle**|**MDACTION_COORDINATE_CELL**|  
   

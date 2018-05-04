@@ -1,33 +1,32 @@
 ---
 title: DefaultDetails-Element (CSDLBI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8010e9c0412b50c8d65a67c87c176bff02d1a887
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b4b4611ddb68689ff81b9fe5b68b2f88aa850e46
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails-Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Das DefaultDetails-Element stellt eine Liste mit Eigenschaftsverweisen dar, die zusammen den "Standardfeldsatz" von Spalten in der Tabelle definieren. Jede Eigenschaft kann nur auf ein Measure oder auf eine Spalte verweisen.  
+  Das DefaultDetails-Element stellt eine Liste mit Eigenschaftsverweisen dar, die zusammen den "Standardfeldsatz" von Spalten in der Tabelle definieren. Jede Eigenschaft kann nur auf ein Measure oder auf eine Spalte verweisen.  
   
 ## <a name="elements-and-attributes"></a>Elemente und Attribute  
  In der folgenden Tabelle sind die Elemente und Attribute aufgeführt, die das DefaultDetails-Element definieren.  

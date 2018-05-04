@@ -27,15 +27,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5511e21456f1ba879a153c5eaf2b696618396446
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0758271125e406a5bced7b0cfe5c6357126a034e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measuregroupbinding-data-type-out-of-line-assl"></a>MeasureGroupBinding-Datentyp (Out-of-Line) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen Grunddatentyp, der eine Bindung zu einer Measuregruppe darstellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert einen Grunddatentyp, der eine Bindung mit einer Measuregruppe darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,23 +53,23 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Basisdatentypen|InclusionThresholdSetting|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Basisdatentypen|Keine|  
+|Abgeleitete Datentypen|Keine|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
-|Untergeordnete Elemente|[Dimensionen](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [EstimatedRows](../../../analysis-services/scripting/properties/estimatedrows-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [Measures](../../../analysis-services/scripting/collections/measures-element-assl.md), [Partitionen](../../../analysis-services/scripting/collections/partitions-element-assl.md), [Quelle](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
-|Abgeleitete Elemente|Finden Sie unter [binden](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
+|Übergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|[Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [EstimatedRows](../../../analysis-services/scripting/properties/estimatedrows-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [Measures](../../../analysis-services/scripting/collections/measures-element-assl.md), [Partitions](../../../analysis-services/scripting/collections/partitions-element-assl.md), [Source](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
+|Abgeleitete Elemente|Siehe [Binding](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie im Abschnitt Out of Line-Bindungen [Datenquellen und Bindungen &#40; SSAS – mehrdimensional &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Weitere Informationen finden Sie im Abschnitt Out of Line-Bindungen [Datenquellen und Bindungen & #40; SSAS – mehrdimensional & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language-XML-Datentypen & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

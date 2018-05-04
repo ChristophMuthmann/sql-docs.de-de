@@ -5,11 +5,9 @@ ms.date: 03/28/2018
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: design
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -17,15 +15,14 @@ dev_langs:
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
 caps.latest.revision: 9
 author: hirokib
-ms.author: elbutter;barbkess
+ms.author: elbutter
 manager: jrj
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6096185bec4378bd5d6b2f478796f8a2e34f5e1d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 92eee101d27c4483207ba1be9933b750aabdea3d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>Sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

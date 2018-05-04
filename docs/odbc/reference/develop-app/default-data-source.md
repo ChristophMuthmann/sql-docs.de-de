@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
 - connecting to data source [ODBC], default data source
@@ -28,12 +28,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 256d200ce0cb7b64fd011bdba343ca0aae292232
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3aeb96caca91b681ec7d2a9d34548ba6bac1147f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-data-source"></a>Standard-Datenquelle
 Der Treiber kann wählen Sie eine Datenquelle, die Standarddatenquelle in bestimmten Fällen, in denen die Anwendung keine explizit angeben wird, aufgerufen:  

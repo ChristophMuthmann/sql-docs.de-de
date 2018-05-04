@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dfb9349ff91eae2c4e783f347f5df978d27c95c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2333b980b695fe03331ca7e2281fa60981a6425b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nullkeynotallowed-element-assl"></a>NullKeyNotAllowed-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bestimmt, wie die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Verarbeitungsmodul einen null-Schlüsselfehler während der Verarbeitung auftreten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Bestimmt, wie die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Verarbeitungsmodul einen null-Schlüsselfehler während der Verarbeitung auftreten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,25 +50,25 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
 |Standardwert|*ReportAndContinue*|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  NULL-Schlüsselfehler treten auf, wenn ein NULL-Wert in einer Schlüsselspalte auftritt, in der NULL-Werte nicht zulässig sind, wodurch ein Verwerfen des Datensatzes während der Verarbeitung erzwungen wird. Dieser Fehler tritt jedoch nur, wenn die [NullProcessing](../../../analysis-services/scripting/properties/nullprocessing-element-assl.md) -Element für die **DataItem** Vorgänger des der **ErrorConfiguration** übergeordnetes Element festgelegt ist, um  *Fehler*.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*IgnoreError*|Die Verarbeitung ignoriert den Fehler und setzt die Verarbeitung fort.|  
 |*ReportAndContinue*|Die Verarbeitung meldet den Fehler und setzt die Verarbeitung fort.|  
@@ -77,6 +77,6 @@ ms.lasthandoff: 01/08/2018
  Die Enumeration, die den zulässigen Werten für entspricht **NullKeyNotAllowed** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ErrorOption>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ErrorConfiguration-Element &#40; ASSL &#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)  
+ [ErrorConfiguration-Element &#40;ASSL&#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)  
   
   

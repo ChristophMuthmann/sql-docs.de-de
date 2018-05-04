@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mixed cursors [ODBC]
 - cursors [ODBC], dynamic
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16fd4840718c286adfe711b6b7322154f7f5f9cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27038553bb380c67f66d8137354d7cbec4ff1a33
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mixed-cursors"></a>Gemischte Cursor
 Ein gemischter Cursor ist eine Kombination eines keysetgesteuerten Cursors und einen dynamischen Cursor. Es wird verwendet, wenn das Resultset zu groß für den Schlüssel für das gesamte Resultset vernünftigerweise speichern ist. Gemischten Cursor werden eine Keyset, die kleiner als das gesamte Resultset jedoch größer als das Rowset ist erstellen implementiert.  

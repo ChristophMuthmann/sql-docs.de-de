@@ -23,12 +23,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3486f6e10162286b43ab1eab39042577c8d5fc4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0b6f16edb925b1dfb1b7792d0a33e7ae8da9903b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++-Syntax Index für COM
 Dieser Index ist ein Querverweis auf der Grundlage von Microsoft Visual C++ ADO-Sprachreferenz.  

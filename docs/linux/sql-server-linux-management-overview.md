@@ -14,12 +14,11 @@ ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.workload: On Demand
-ms.openlocfilehash: 0eb4c85753722f868bbbe71aa46173bcde436838
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: e8867df2cc3102b398aaf5a600ab82b0ed152d78
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Wählen Sie das richtige Tool zum Verwalten von SQL Server on Linux
 

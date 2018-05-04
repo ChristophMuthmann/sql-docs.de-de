@@ -1,39 +1,19 @@
 ---
 title: Angeben von Partition und Optionen für die Rollenbereitstellung | Microsoft Docs
-ms.custom: ''
-ms.date: 03/27/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- input files [Analysis Services]
-- partitions [Analysis Services], deployment options
-- Analysis Services deployments, roles
-- Analysis Services deployments, partitions
-- Analysis Services Deployment Wizard, roles
-- Analysis Services Deployment Wizard, partitions
-- deploying [Analysis Services], roles
-- roles [Analysis Services], deployment options
-- deploying [Analysis Services], partitions
-- modifying role deployments
-- modifying partition deployments
-ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
-caps.latest.revision: ''
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 74983fd59a7262f7deb116d50709273e57743f18
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 01cab4f372335ddeb2f3798b635b661c5469b43c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>Bereitstellung Skriptdateien - Partition und Optionen für die Rollenbereitstellung
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

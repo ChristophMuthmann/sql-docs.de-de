@@ -26,12 +26,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ed2d5385806ee439cc67111c83cc08ea786e160
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Mithilfe des OLE DB-Treibers für SQL Server-Header und Bibliotheksdateien
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  Der OLE DB-Treiber für SQL Server-Headerdatei (msoledbsql.h) können OLE DB-Treiber für SQL Server Data Access-Funktionalität hinzufügen, um Ihren benutzerdefinierten Anwendungen verwendet werden. Der OLE DB-Treiber für SQL Server-Headerdatei enthält alle Definitionen, Attribute, Eigenschaften und Schnittstellen, die die neuen Funktionen nutzen, die in eingeführt [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Zusätzlich zu den OLE DB-Treiber für SQL Server-Headerdatei ist auch eine msoledbsql.lib Bibliotheksdatei also die Exportbibliothek für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Bulk Copy Program, BCP)-Funktionen.  
+ Zusätzlich zu den OLE DB-Treiber für SQL Server-Headerdatei ist auch eine msoledbsql.lib Bibliotheksdatei also die Exportbibliothek für [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) Funktionalität.  
   
  Der OLE DB-Treiber für SQL Server-Headerdatei ist abwärtskompatibel mit der sqloledb.h-Header-Datei mit dem Microsoft Data Access Components (MDAC) verwendet, jedoch weder die CLSIDs für SQLOLEDB (den OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in MDAC enthaltenen) oder für Symbole XML-Funktionen (die nicht vom OLE DB-Treiber für SQL Server unterstützt wird).    
   

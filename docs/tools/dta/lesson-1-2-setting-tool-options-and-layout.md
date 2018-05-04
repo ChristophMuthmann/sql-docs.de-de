@@ -2,7 +2,7 @@
 title: Festlegen von Optionen und Layout | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 51f300147cb9df54bb07112309d1488d35a81d36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lektion 1-2: Festlegen von Optionen und Layout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Optionen festlegen, die konfigurieren, welche die grafischen Benutzeroberfläche (GUI) von der Datenbankoptimierungsratgeber beim Starten der Schriftart anzeigt, die verwendet wird, sowie weitere Funktionen, die am besten unterstützen, wie er verwendet werden. Im Folgenden werden die Optionen erläutert, die Sie festlegen können, sowie ihre Verwendung.  
+# <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lektion 1–2: Festlegen von Tooloptionen und Layout
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Sie können Optionen festlegen, über die konfiguriert wird, welche grafische Benutzeroberfläche der Datenbankoptimierungsratgeber beim Starten anzeigt, welche Schriftart verwendet wird sowie weitere Funktionen, die Sie jeweils optimal unterstützen. Im Folgenden werden die Optionen erläutert, die Sie festlegen können, sowie ihre Verwendung.  
   
 ### <a name="set-the-tool-options"></a>Festlegen der Tooloptionen  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/17/2018
     -   Standardmäßig ist **Vor dem Beenden der Sitzungsanalyse fragen** aktiviert, damit nicht eine Optimierungssitzung aus Versehen beendet wird, bevor die Analyse einer Arbeitsauslastung durch den Datenbankoptimierungsratgeber abgeschlossen ist.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lektion 2: Verwenden des Datenbankoptimierungsratgebers](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lesson 2: Using Database Engine Tuning Advisor (Lektion 2: Verwenden des Datenbankoptimierungsratgebers)](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

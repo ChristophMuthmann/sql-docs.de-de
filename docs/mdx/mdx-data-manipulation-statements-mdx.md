@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 91ef03b9b43dba3e76d921abf3a32fdbb456f49b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: da070d23c0a01886cc63632ccd269502d1dc33a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX-Datenbearbeitungsanweisungen (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,15 +37,15 @@ ms.lasthandoff: 01/08/2018
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[CALL-Anweisung &#40; MDX &#41;](../mdx/mdx-data-manipulation-call.md)|Führt eine gespeicherte Prozedur, die "void" zurückgibt, im aktuellen Bereich oder optional für einen angegebenen Cube aus.|  
-|[CLEAR CALCULATIONS-Anweisung &#40; MDX &#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Entfernt alle Berechnungen aus dem Cube und setzt den Cube auf den Berechnungsdurchlauf 0 zurück.|  
-|[DRILLTHROUGH-Anweisung &#40; MDX &#41;](../mdx/mdx-data-manipulation-drillthrough.md)|Ruft die Rowsets ab, die zum Erstellen einer bestimmten Zelle in einem Cube verwendet wurden.|  
-|[SELECT-Anweisung &#40; MDX &#41;](../mdx/mdx-data-manipulation-select.md)|Ruft Daten aus einem angegebenen Cube ab.|  
-|[UPDATE CUBE-Anweisung &#40; MDX &#41;](../mdx/mdx-data-manipulation-update-cube.md)|Aktualisiert den Wert einer angegebenen Blatt- oder Nichtblattzelle in einem Cube. Dabei wird optional der Wert für eine angegebene Nichtblattzelle den abhängigen Blattzellen zugeordnet.|  
+|[CALL-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|Führt eine gespeicherte Prozedur, die "void" zurückgibt, im aktuellen Bereich oder optional für einen angegebenen Cube aus.|  
+|[CLEAR CALCULATIONS-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Entfernt alle Berechnungen aus dem Cube und setzt den Cube auf den Berechnungsdurchlauf 0 zurück.|  
+|[DRILLTHROUGH-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-drillthrough.md)|Ruft die Rowsets ab, die zum Erstellen einer bestimmten Zelle in einem Cube verwendet wurden.|  
+|[SELECT-Anweisung & #40; MDX & #41;](../mdx/mdx-data-manipulation-select.md)|Ruft Daten aus einem angegebenen Cube ab.|  
+|[UPDATE CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-update-cube.md)|Aktualisiert den Wert einer angegebenen Blatt- oder Nichtblattzelle in einem Cube. Dabei wird optional der Wert für eine angegebene Nichtblattzelle den abhängigen Blattzellen zugeordnet.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Anweisungsreferenz &#40; MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
- [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX-Skriptanweisungen &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX-Anweisungsreferenz &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [MDX-Skriptanweisungen & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2a699116279ebbc5711d5aa15ac0c921be8baaa7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 99e0a0eee2636a04d182076bb580b1ccf8069921
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-database-access-architectures"></a>Standard-Datenbank Zugriff Architekturen
 Im Blick auf die Access-Datenbankkomponenten, die im vorherigen Abschnitt beschrieben, wie sich herausstellt, dass zwei von ihnen – Programmierschnittstellen und Daten zu streamen Protokolle – eignen sich gut für die Standardisierung. Die anderen zwei Komponenten – IPC-Mechanismus und Netzwerkprotokolle – sowohl für das Netzwerk und Betriebssystem stark von sind jedoch nicht nur auf Niedrig einer Ebene befinden. Es ist auch eine dritte Ansatz – Gateways – Möglichkeiten für die Standardisierung bereitstellt.  

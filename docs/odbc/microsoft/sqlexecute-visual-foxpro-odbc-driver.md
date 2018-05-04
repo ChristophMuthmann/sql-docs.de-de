@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLExecute function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8da3f7426bfbdd88efcf67f97273b17402b15e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c47db4320e944fecb5e36f4e44fb54763c7667a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlexecute-visual-foxpro-odbc-driver"></a>SQLExecute (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

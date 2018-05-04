@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - forward-only cursors [ODBC]
 - scrollable cursors [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c0c6ae5b9bda276bcd1296fcb475063fea6db204
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e83efd6239d49af2066bd39d244665a50fa7030
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursors"></a>Cursor
 Eine Anwendung ruft die Daten mit einem *Cursor*. Ein Cursor unterscheidet sich von einem Resultset: ein Resultset ist der Satz von Zeilen, die bestimmten Suchkriterien entspricht, während ein Cursors auf die Software ist, die diese Zeilen an die Anwendung wird zurückgegeben. Der Name *Cursor* anwenden auf Datenbanken, sollten Sie wahrscheinlich die blinkender Cursor auf einem Computer terminal stammt. Ebenso wie diesem Cursor gibt an, die aktuelle Position auf dem Bildschirm und, wo die typisierte Wörter weiter angezeigt wird, gibt einen Cursor für ein Resultset der aktuellen Position im Resultset und welche Zeile als Nächstes zurückgegeben werden an.  

@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70100d9009c2751af10d47c011a6eada263419f9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 33bfb936402d92ba1bd8e413f517f96242bd0994
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="status-property-example-recordset-vb"></a>Beispiel der Status-Eigenschaft (Recordset) (VB)
 Dieses Beispiel verwendet die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft, um anzuzeigen, welche Datensätze in einem Batchvorgang geändert wurden, bevor eine Batchaktualisierung aufgetreten ist.  

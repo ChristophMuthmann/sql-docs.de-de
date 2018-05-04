@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cd0236d1c813926d89d9c252ee3e36f36ba6458e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3b5f966675ee1f3a89f9caa5f8d1e51ad29669f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cubename-element-xmla"></a>CubeName-Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält den Namen des Cubes durch das übergeordnete Element dargestellten [Cube](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Enthält den Namen eines durch das übergeordnete [Cube](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md) -Element dargestellten Cubes.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,22 +52,22 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Datentyp und -länge|String|  
+|Standardwert|Keine|  
+|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Cube](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

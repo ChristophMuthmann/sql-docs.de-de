@@ -1,36 +1,38 @@
 ---
-title: "Unterstützung für Scale Out mit SQL Server Integration Services (SSIS) für Hochverfügbarkeit | Microsoft-Dokumentation"
+title: Unterstützung für Scale Out mit SQL Server Integration Services (SSIS) für Hochverfügbarkeit | Microsoft-Dokumentation
 ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ea9f20b9b0eb23d50a6c5aa7809e6a4e027a5b56
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
 In SSIS Scale Out wird die Hochverfügbarkeit auf Workerseite über ausführende Pakete mit mehreren Scale Out-Workern bereitgestellt.
 
-Sie erreichen Hochverfügbarkeit auf Masterseite mithilfe von [Always On für den SSIS-Katalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) und Windows-Failoverclustering. In diesem Beispiel werden mehrere Instanzen des Scale Out-Masters in einem Windows-Failovercluster gehostet. Wenn der Scale Out-Masterdienst oder die SSISDB auf dem Primärknoten ausfallen, akzeptieren der Dienst oder die SSISDB auf dem Sekundärknoten weiterhin Benutzeranforderungen, und beide kommunizieren mit den Scale Out-Workern. 
+Die Hochverfügbarkeit auf Scale Out-Masterseite erfolgt über [Always On for SSIS Catalog (Always On für den SSIS-Katalog)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) und Windows-Failovercluster. In dieser Lösung werden in einem Windows-Failovercluster werden mehrere Instanzen des Scale Out-Masters gehostet. Wenn der Scale Out-Masterdienst oder die SSISDB auf dem Primärknoten ausfallen, akzeptieren der Dienst oder die SSISDB auf dem Sekundärknoten weiterhin Benutzeranforderungen, und beide kommunizieren mit den Scale Out-Workern.
 
-Führen Sie die folgenden Schritte aus, um die Hochverfügbarkeit auf Masterseite einzurichten:
+Alternativ kann die Hochverfügbarkeit auf Scale Out-Masterseite mithilfe einer SQL Server-Failoverclusterinstanz eingerichtet werden. Weitere Informationen finden Sie unter [Scale Out support for high availability via SQL Server failover cluster instance (Scale-Out-Unterstützung für Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz)](scale-out-failover-cluster-instance.md).
+
+Führen Sie die folgenden Schritte aus, um die Hochverfügbarkeit auf der Scale Out-Masterseite mit Always On für den SSIS-Katalog einzurichten:
 
 ## <a name="1-prerequisites"></a>1. Voraussetzungen
 Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012 (Installation des Failoverclusterfeatures und des Tools für Windows Server 2012)](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installieren Sie die Funktion und die Tools auf allen Clusterknoten.

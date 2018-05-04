@@ -1,45 +1,26 @@
 ---
-title: "Anforderungen und Überlegungen für Analysis Services-Bereitstellung | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Anforderungen und Überlegungen für Analysis Services-Bereitstellung | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- memory [Analysis Services]
-- scalability [Analysis Services]
-- space [Analysis Services]
-- Analysis Services deployments, requirements
-- deploying [Analysis Services], requirements
-- disk space [Analysis Services]
-- requirements [Analysis Services]
-- processors [Analysis Services]
-- system requirements [Analysis Services]
-- availability [Analysis Services]
-ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 88b91944e1ffb99d684e53bda09465d995b416f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Anforderungen und Überlegungen für die Bereitstellung von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf das relationale Modul erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
+  Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf das relationale Modul erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
   
 ## <a name="memory-and-processor-requirements"></a>Arbeitsspeicher- und Prozessoranforderungen  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt unter folgenden Umständen zusätzliche Arbeitsspeicher- und Prozessorressourcen:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]benötigt mehr Arbeitsspeicher und Prozessoren in den folgenden Fällen:  
   
 -   Wenn große oder komplexe Cubes verarbeitet werden. Diese benötigen eine größere Menge von Arbeitsspeicher- und Prozessorressourcen als kleine oder einfache Cubes.  
   

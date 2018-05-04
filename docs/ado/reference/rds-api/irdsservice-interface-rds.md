@@ -20,12 +20,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e452cd1282debede2131703ccb8566e3e9dec416
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 597f4fd27effb55a8ef1471f5f4e98ff84313871
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService-Schnittstelle (RDS)
 Macht die [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) -Methode, die verwendet wird, um einen Zeiger auf die angeforderte Schnittstelle auf einer leistungsfähigere Version des Objekts zurückzugeben.  

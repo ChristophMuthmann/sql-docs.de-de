@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9f1e9e78020787bcec4f6b3a04efbdc4ba466023
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Ermöglicht die Planhinweisliste gemäß *Plan_guide_name*. Eine aktivierte Planhinweisliste kann mit einer geeigneten Abfrage abgeglichen werden. Planhinweislisten werden standardmäßig bei ihrer Erstellung aktiviert.  
   
  ENABLE ALL  
- Aktiviert alle Planhinweislisten in der aktuellen Datenbank. **N'***Plan_guide_name***"**kann nicht angegeben werden, wenn ENABLE ALL angegeben ist.  
+ Aktiviert alle Planhinweislisten in der aktuellen Datenbank. **N'***Plan_guide_name***"** kann nicht angegeben werden, wenn ENABLE ALL angegeben ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Das Löschen oder Ändern einer Funktion, einer gespeicherten Prozedur oder eines DML-Triggers, auf die bzw. den in einer Planhinweisliste verwiesen wird, verursacht einen Fehler.  
@@ -86,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Planhinweislisten sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Sie können jedoch ausführen **Sp_control_plan_guide** mit der Drop- oder DROP ALL-Option in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Berechtigungen  
- Auszuführende **Sp_control_plan_guide** auf eine Planhinweisliste des Typs "OBJECT" (erstellt,  **@type = "**Objekt**"** ) erfordert die ALTER-Berechtigung für das Objekt, das wird von der Planhinweisliste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
+ Auszuführende **Sp_control_plan_guide** auf eine Planhinweisliste des Typs "OBJECT" (erstellt,  **@type = "** Objekt **"** ) erfordert die ALTER-Berechtigung für das Objekt, das wird von der Planhinweisliste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
   

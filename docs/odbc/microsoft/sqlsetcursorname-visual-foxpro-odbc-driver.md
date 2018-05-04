@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetCursorName function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e9bea93a47029ca1f1fb6e2a9f3a63ea6a1bb35c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 714e9ee12ae262eac34be684541d6ba0839ddbeb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetcursorname-visual-foxpro-odbc-driver"></a>SQLSetCursorName (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

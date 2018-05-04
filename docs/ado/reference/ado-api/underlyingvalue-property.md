@@ -24,12 +24,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0fa427c2410079d028afb99a839f39fefa003264
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8597bdd4769da4b3bcf5fd2be4f27f6939406e8b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="underlyingvalue-property"></a>OriginalValue-Eigenschaft
 Gibt den aktuellen Wert einer [Feld](../../../ado/reference/ado-api/field-object.md) Objekt in der Datenbank.  

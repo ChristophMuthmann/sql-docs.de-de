@@ -24,12 +24,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1941b22639091d673bb687c3ae8b2d9ea1fdf063
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: a936e28d541749e6575f88e4009875639da2ccaa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF-Eigenschaften (ADO)
 -   **BOF** gibt an, die vor dem ersten Datensatz in die Position des aktuellen Datensatzes ist eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  

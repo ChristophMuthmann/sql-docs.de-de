@@ -1,37 +1,23 @@
 ---
 title: Erstellen Sie eine relationale Miningstruktur | Microsoft Docs
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], data mining
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], creating
-- relational mining models [Analysis Services]
-- OLAP mining models [Analysis Services]
-ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7d5898485017bc2d1be59e1e5db7b147926ea5b3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>Erstellen einer relationalen Miningstruktur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die meisten Data Mining-Modelle basieren auf relationalen Datenquellen. Die Vorteile, ein relationales Data Mining-Modell zu erstellen, bestehen darin, dass Sie Ad-hoc-Daten zusammenstellen sowie ein Modell trainieren und aktualisieren können, ohne dass die Komplexität gegeben ist, die beim Erstellen eines Cubes vorliegt.  
+  Die meisten Data Mining-Modelle basieren auf relationalen Datenquellen. Die Vorteile, ein relationales Data Mining-Modell zu erstellen, bestehen darin, dass Sie Ad-hoc-Daten zusammenstellen sowie ein Modell trainieren und aktualisieren können, ohne dass die Komplexität gegeben ist, die beim Erstellen eines Cubes vorliegt.  
   
  Eine relationale Miningstruktur kann Daten aus ungleichartigen Quellen abrufen. Die Rohdaten können in Tabellen, Dateien oder relationalen Datenbanksystemen gespeichert werden, so lange die Daten als Teil der Datenquellensicht definiert werden können. Sie sollten z. B. eine relationale Miningstruktur verwenden, wenn die Daten in Excel, einem SQL Server Data Warehouse, einer SQL Server-Berichtsdatenbank oder aber in externen Quellen enthalten sind, auf die über die OLE DB- oder ODBC-Anbieter zugegriffen wird.  
   
@@ -133,7 +119,7 @@ Die meisten Data Mining-Modelle basieren auf relationalen Datenquellen. Die Vort
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [Datamining-Assistenten &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Datamining-Assistenten & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Miningmodelleigenschaften](../../analysis-services/data-mining/mining-model-properties.md)   
  [Eigenschaften für Miningstrukturen und Strukturspalten](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

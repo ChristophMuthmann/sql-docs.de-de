@@ -1,33 +1,32 @@
 ---
 title: DISCOVER_TRACES-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b32ae25f17cded9f395b7d48e6ae0f9db4dde7b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovertraces-rowset"></a>DISCOVER_TRACES-Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Stellt Informationen über die derzeit aktiven Ablaufverfolgungen auf dem Server bereit.  
+  Stellt Informationen über die derzeit aktiven Ablaufverfolgungen auf dem Server bereit.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   
@@ -37,7 +36,7 @@ Stellt Informationen über die derzeit aktiven Ablaufverfolgungen auf dem Server
 |Spaltenname|Typindikator|Description|  
 |-----------------|--------------------|-----------------|  
 |**TraceID**|**DBTYPE_WSTR**|Die Ablaufverfolgungs-ID.|  
-|**TraceName**|**DBTYPE_WSTR**|Der Ablaufverfolgungsname.|  
+|**Ablaufverfolgungsname**|**DBTYPE_WSTR**|Der Ablaufverfolgungsname.|  
 |**LogFileName**|**DBTYPE_WSTR**|Der Name der Ablaufverfolgungsprotokolldatei.|  
 |**LogFileSize**|**DBTYPE_I4**|Die Größe der Ablaufverfolgungsprotokolldatei.|  
 |**LogFileRollover**|**DBTYPE_BOOL**|true, um anzugeben, dass die Protokolldatei von neuem beginnen soll, andernfalls false.|  

@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 18e8f6199e82fc6c2854c5336343d5d2c67b3089
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 30d8343c5d497b1d0ee46502c6405a67d422a0c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies-Auflistung (ADO MD)
 Enthält den Satz von [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) Objekte aus einer Dimension.  

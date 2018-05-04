@@ -1,16 +1,16 @@
 ---
-title: "Gewinndiagramm (Analysis Services – Datamining) | Microsoft Docs"
-ms.custom: 
+title: Gewinndiagramm (Analysis Services – Datamining) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
 - revenue, estimating
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - charts [Analysis Services]
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1bfda7f42bdc4423ee1ea1bc0ad2d59abe26347
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 852352be5b6648e4877a4d44ff4a9cbc1566e2fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Gewinndiagramm (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Ein Gewinndiagramm zeigt die geschätzte Gewinnsteigerung an, die sich aus der Verwendung eines Miningmodells ergibt. Beispielsweise kann mit dem Modell vorhergesagt werden, welche Kunden ein Unternehmen in einem bestimmten Geschäftsszenario gezielt ansprechen sollte. In diesem Fall würden Sie dem Gewinndiagramm Informationen hinzufügen, wie hoch die Kosten einer solchen zielgerichteten Mailingkampagne sind. Das fertige Diagramm enthält die geschätzte Gewinnsteigerung, die darauf basiert, dass die Kunden gezielt und nicht nach dem Zufallsprinzip angesprochen werden.  
+  Ein Gewinndiagramm zeigt die geschätzte Gewinnsteigerung an, die sich aus der Verwendung eines Miningmodells ergibt. Beispielsweise kann mit dem Modell vorhergesagt werden, welche Kunden ein Unternehmen in einem bestimmten Geschäftsszenario gezielt ansprechen sollte. In diesem Fall würden Sie dem Gewinndiagramm Informationen hinzufügen, wie hoch die Kosten einer solchen zielgerichteten Mailingkampagne sind. Das fertige Diagramm enthält die geschätzte Gewinnsteigerung, die darauf basiert, dass die Kunden gezielt und nicht nach dem Zufallsprinzip angesprochen werden.  
   
 ## <a name="build-a-profit-chart"></a>Erstellen eines Gewinndiagramms  
  Ein Gewinndiagramm ist mit einem Prognosegütediagramm vergleichbar. Zunächst erstellen Sie ein Prognosegütediagramm und fügen dann die Kosten- und Gewinninformationen hinzu.  
@@ -98,13 +97,13 @@ Ein Gewinndiagramm zeigt die geschätzte Gewinnsteigerung an, die sich aus der V
   
 |Thema|Links|  
 |------------|-----------|  
-|Bietet eine exemplarische Vorgehensweise zum Erstellen eines Prognosegütediagramms für das Targeted Mailing-Modell.|[Lernprogramm zu Datamining-Lernprogramm](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Überprüfen der Genauigkeit mit Prognosegütediagrammen &#40; Lernprogramm zu Datamining-Lernprogramm &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|Erläutert verwandte Diagrammtypen.|[Prognosegütediagramm &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Klassifikationsmatrix &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Beschreibt die Kreuzvalidierung für Miningmodelle und Miningstrukturen.|[Übergreifende Überprüfung &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Beschreibt Schritte zum Erstellen von Prognosegütediagrammen und anderen Genauigkeitsdiagrammen.|[Tests und Überprüfung Tasks und Anweisungen für &#40; Datamining &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Bietet eine exemplarische Vorgehensweise zum Erstellen eines Prognosegütediagramms für das Targeted Mailing-Modell.|[Lernprogramm zu Datamining-Lernprogramm](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Überprüfen der Genauigkeit mit Prognosegütediagrammen & #40; Lernprogramm zu Datamining-Lernprogramm & #41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|Erläutert verwandte Diagrammtypen.|[Prognosegütediagramm & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Klassifikationsmatrix & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Beschreibt die Kreuzvalidierung für Miningmodelle und Miningstrukturen.|[Übergreifende Überprüfung & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Beschreibt Schritte zum Erstellen von Prognosegütediagrammen und anderen Genauigkeitsdiagrammen.|[Tests und Überprüfung Tasks und Anweisungen für & #40; Datamining & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung &#40; Datamining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Überprüfen der Genauigkeit mit Prognosegütediagrammen &#40; Lernprogramm zu Datamining-Lernprogramm &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
+ [Tests und Überprüfung & #40; Datamining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Überprüfen der Genauigkeit mit Prognosegütediagrammen & #40; Lernprogramm zu Datamining-Lernprogramm & #41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   

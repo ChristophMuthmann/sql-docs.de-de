@@ -23,15 +23,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e75e8c17baba84bd690ec51605ffac9f577de35c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c7d06d5e417b97b42791acb3dc16c939a347e2ba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingstructures-rowset"></a>DMSCHEMA_MINING_STRUCTURES-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Listet Informationen über die Miningstrukturen im aktuellen Katalog auf.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Listet Informationen über die Miningstrukturen im aktuellen Katalog auf.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DMSCHEMA_MINING_STRUCTURES** -Rowset enthält die folgenden Spalten.  
@@ -66,6 +66,6 @@ ms.lasthandoff: 01/08/2018
 |**STRUKTURNAME**|**DBTYPE_WSTR**|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

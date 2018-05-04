@@ -1,29 +1,28 @@
 ---
-title: "Definieren und Durchsuchen von Übersetzungen | Microsoft Docs"
-ms.custom: 
+title: Definieren und Durchsuchen von Übersetzungen | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ac86f038e382be591b8974f36cd03fee6a80144d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ddef198d64df3d90ac0e04813d0514ea14e42af5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lektion 9 – 2: definieren und Durchsuchen von Übersetzungen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie Metadatenübersetzungen für 
   
     Im Dialogfeld **Sprache auswählen** wird eine Liste mit Sprachen angezeigt.  
   
-3.  Klicken Sie auf **Spanisch (Spanien)**und anschließend auf **OK**.  
+3.  Klicken Sie auf **Spanisch (Spanien)** und anschließend auf **OK**.  
   
     Es wird eine neue Spalte angezeigt, in der Sie die spanischen Übersetzungen der zu übersetzenden Metadatenobjekte definieren können. In diesem Lernprogramm wird nur eine begrenzte Anzahl von Objekten zur Veranschaulichung des Prozesses übersetzt.  
   
@@ -82,7 +81,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie Metadatenübersetzungen für 
   
     Im Dialogfeld **Sprache auswählen** wird eine Liste mit Sprachen angezeigt.  
   
-3.  Wählen Sie **Spanisch (Spanien)**aus, und klicken Sie anschließend auf **OK**.  
+3.  Wählen Sie **Spanisch (Spanien)** aus, und klicken Sie anschließend auf **OK**.  
   
     Es wird eine neue Spalte angezeigt, in der Sie die spanischen Übersetzungen der zu übersetzenden Metadatenobjekte definieren können. In diesem Lernprogramm wird nur eine begrenzte Anzahl von Objekten zur Veranschaulichung des Prozesses übersetzt.  
   

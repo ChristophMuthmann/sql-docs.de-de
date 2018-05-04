@@ -1,31 +1,23 @@
 ---
-title: "Database Consistency Checker (DBCC) für Analysis Services | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Database Consistency Checker (DBCC) für Analysis Services | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4a25919df6cb26609e008b6910ae6fb67bafba84
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Datenbankkonsistenzprüfung (DBCC) für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-DBCC ermöglicht bei Bedarf Datenbanküberprüfungen für mehrdimensionale und tabellarische Datenbanken auf einer Analysis Services-Instanz. Sie können DBCC in einem MDX- oder XMLA-Abfragefenster in SQL Server Management Studio (SSMS) ausführen und die DBCC-Ausgabe in SQL Server Profiler- oder XEvent-Sitzungen in SSMS verfolgen.  
+  DBCC ermöglicht bei Bedarf Datenbanküberprüfungen für mehrdimensionale und tabellarische Datenbanken auf einer Analysis Services-Instanz. Sie können DBCC in einem MDX- oder XMLA-Abfragefenster in SQL Server Management Studio (SSMS) ausführen und die DBCC-Ausgabe in SQL Server Profiler- oder XEvent-Sitzungen in SSMS verfolgen.  
 Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder ausführliche Fehlerinformationen zurück, wenn das Objekt beschädigt ist.   In diesem Artikel erfahren Sie, wie Sie den Befehl ausführen, die Ergebnisse analysieren und auftretende Probleme behandeln.  
   
  Bei tabellarischen Datenbanken entsprechen die von DBCC ausgeführten Konsistenzprüfungen der integrierten Überprüfung, die automatisch jedes Mal auftritt, wenn Sie eine Datenbank erneut laden, synchronisieren oder wiederherstellen.  Im Gegensatz dazu fallen Konsistenzprüfungen für mehrdimensionale Datenbanken nur an, wenn Sie DBCC bei Bedarf ausführen.  

@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b1f31c1-97de-4fc6-8d23-71d299f7bc28
 caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4a760475dfd439e57883a1bd6c6f2b82a0437dcb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d900de9a2f315ced36ba416f0fbccd62d0e9d75e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetimeoffset-methods"></a>DateTimeOffset-Methoden
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

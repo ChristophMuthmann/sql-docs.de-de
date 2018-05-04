@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ac8dc45-373c-4ac6-92fc-34b8455e5654
 caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68a8f9f5146da9c771ca2769bf0ae700f064ad2f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9b045b670627a75cd61754537d4d4b1fb6f92f5c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="jdbc-specification-compliance"></a>Kompatibilität für JDBC-Spezifikation
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

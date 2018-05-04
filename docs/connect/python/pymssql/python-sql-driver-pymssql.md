@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
 caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 75afb70108e7f409c5a5088941d368f2a674a043
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4136925e2da9207e0be0a25340ab686f4c2b161b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="python-sql-driver---pymssql"></a>Python-SQL-Treiber - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

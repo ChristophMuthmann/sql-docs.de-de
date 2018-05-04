@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL grammar [ODBC], table names
 - table names [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d0fc5b5ce6d033e873deff7e6cb06acd7dac892d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f1b1032ccda48d5a645e9992e2c501c851f51b7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="table-names"></a>Tabellennamen
 Wenn Dateinamenerweiterung dBASE, Microsoft Excel, Paradox, oder Text-Treiber verwendet wird, Tabellennamen, Spaltennamen, die in der FROM-Klausel von SELECT- oder "DELETE", nachdem der INTO-Klausel in INSERT- und UPDATE auftreten CREATE TABLE und DROP TABLE einen gültigen Pfad enthalten kann, Name des primären und Datei .  

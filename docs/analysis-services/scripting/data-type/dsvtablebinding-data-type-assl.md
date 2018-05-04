@@ -27,15 +27,15 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 235a6953404e1d421ea777fe3320fceeeae05f57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b6fa9a8d96e9a73531a76db9f96d19bbd1a98796
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dsvtablebinding-data-type-assl"></a>DSVTableBinding-Datentyp (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen abgeleiteten Datentyp, der die Bindung zwischen einer Tabelle darstellt und einen [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert einen abgeleiteten Datentyp, der die Bindung zwischen einer Tabelle und einem [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) -Element darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,27 +50,27 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Basisdatentypen|[TabularBinding](../../../analysis-services/scripting/data-type/tabularbinding-data-type-assl.md)|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|Keine|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|Keine|  
 |Untergeordnete Elemente|[DataSourceViewID](../../../analysis-services/scripting/properties/datasourceviewid-element-assl.md), [TableID](../../../analysis-services/scripting/properties/tableid-element-assl.md)|  
-|Abgeleitete Elemente|Finden Sie unter [binden](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
+|Abgeleitete Elemente|Siehe [Binding](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen zu den **binden** Typs, einschließlich der Tabellen von Analysis Services Scripting Language (ASSL) von Objekten des der **binden** Typ und der Vererbungshierarchie des  **Binden von** , finden Sie unter [binden](../../../analysis-services/scripting/data-type/binding-data-type-assl.md) Element.  
   
- Einen Überblick über datenbindungen in ASSL finden Sie unter [&#40; Datenquellen und Bindungen SSAS – mehrdimensional &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Einen Überblick über datenbindungen in ASSL finden Sie unter [& #40; Datenquellen und Bindungen SSAS – mehrdimensional & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.DSVTableBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language-XML-Datentypen & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

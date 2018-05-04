@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92d6cdbd458a32ce0280e60551e5eff2f1fda810
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 754fbef75a1cfd1f3948ccc6c89210b15f780293
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  Eine nicht negative ganze Zahl, die die maximale Anzahl der Dezimalstellen angibt, die nach dem Dezimalzeichen gespeichert werden können. Diese Zahl muss kleiner oder gleich der Gesamtzahl der Stellen sein. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  [  **@nulltype =** ] **"***Null_type***"**  
- Gibt an, wie der Aliasdatentyp NULL-Werte behandelt. *Null_type* ist **Varchar (**8**)**, hat den Standardwert NULL und muss in einfache Anführungszeichen ('NULL', 'NOT NULL' oder 'NONULL') eingeschlossen werden. Wenn *Null_type* wird nicht explizit definiert **Sp_addtype**, wird er auf die aktuelle Standard-NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn **@phystype** ist **Bit**, und **@nulltype** nicht angegeben ist, wird der Standardwert ist NULL.  
+ Gibt an, wie der Aliasdatentyp NULL-Werte behandelt. *Null_type* ist **Varchar (** 8 **)**, hat den Standardwert NULL und muss in einfache Anführungszeichen ('NULL', 'NOT NULL' oder 'NONULL') eingeschlossen werden. Wenn *Null_type* wird nicht explizit definiert **Sp_addtype**, wird er auf die aktuelle Standard-NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn **@phystype** ist **Bit**, und **@nulltype** nicht angegeben ist, wird der Standardwert ist NULL.  
   
 > [!NOTE]  
 >  Die *Null_type* -Parameter definiert nur die standardmäßige NULL-Zulässigkeit für diesen Datentyp. Wenn der Aliasdatentyp beim Erstellen der Tabelle verwendet und die NULL-Zulässigkeit explizit definiert wurde, hat diese Vorrang vor der definierten NULL-Zulässigkeit. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) und [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  

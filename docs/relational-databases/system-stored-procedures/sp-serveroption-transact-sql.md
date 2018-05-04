@@ -25,12 +25,11 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 688f63fb4dd2ecbd1594dd0750343d08a594f7b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7bc3948044bbfd37d5ddb5a4dad32f3dc9e09725
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_serveroption [@server = ] 'server'
  Der Name des Servers für den die Option festgelegt werden soll. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
  [  **@optname =** ] **"***Option_name***"**  
- Die Option, die für den angegebenen Server festgelegt werden soll. *Option_name* ist **Varchar (**35**)**, hat keinen Standardwert. *Option_name* kann eines der folgenden Werte sein.  
+ Die Option, die für den angegebenen Server festgelegt werden soll. *Option_name* ist **Varchar (** 35 **)**, hat keinen Standardwert. *Option_name* kann eines der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -73,7 +72,7 @@ sp_serveroption [@server = ] 'server'
 |**Remote Proc Transaction promotion**|Verwenden Sie diese Option, um die Aktionen einer Server-zu-Server-Prozedur durch eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator-Transaktion (MS DTC) zu schützen. Wenn diese Option ist "true" (oder) Aufrufen einer remote gespeicherten Prozedur wird eine verteilte Transaktion gestartet und bei MS DTC eingetragen. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die die remote gespeicherte Prozedur aufruft, wird als Transaktionsurheber bezeichnet und steuert die Beendigung der Transaktion. Wenn im Anschluss eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung für die Verbindung ausgegeben wird, fordert die steuernde Instanz MS DTC auf, die Beendigung der verteilten Transaktion auf den beteiligten Computern zu verwalten.<br /><br /> Nachdem eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion gestartet wurde, können Aufrufe remote gespeicherter Prozeduren für weitere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen erfolgen, die als Verbindungsserver definiert wurden. Alle Verbindungsserver werden in der verteilten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion eingetragen, und MS DTC stellt sicher, dass die Transaktion für jeden Verbindungsserver abgeschlossen wird.<br /><br /> Wenn diese Option auf FALSE (oder OFF) festgelegt ist, wird eine lokale Transaktion beim Aufruf einer remote gespeicherten Prozedur für einen Verbindungsserver nicht zu einer verteilten Transaktion höher gestuft.<br /><br /> Falls die Transaktion vor dem Server-zu-Server-Prozeduraufruf bereits eine verteilte Transaktion ist, hat diese Option keine Auswirkung. Der Prozeduraufruf für einen Verbindungsserver wird unter der gleichen verteilten Transaktion ausgeführt.<br /><br /> Falls vor dem Server-zu-Server-Prozeduraufruf keine Transaktion in der Verbindung aktiv ist, hat diese Option keine Auswirkung. Die Prozedur wird dann für einen Verbindungsserver ohne aktive Transaktionen ausgeführt.<br /><br /> Der Standardwert für diese Option ist TRUE (oder ON).|  
   
  [  **@optvalue =**] **"***Option_value***"**  
- Gibt an, und zwar unabhängig davon, ob die *Option_name* aktiviert werden soll (**"true"** oder **auf**) oder deaktiviert (**"false"** oder **deaktiviert**). *Option_value* ist **Varchar (**10**)**, hat keinen Standardwert.  
+ Gibt an, und zwar unabhängig davon, ob die *Option_name* aktiviert werden soll (**"true"** oder **auf**) oder deaktiviert (**"false"** oder **deaktiviert**). *Option_value* ist **Varchar (** 10 **)**, hat keinen Standardwert.  
   
  *Option_value* möglicherweise eine nicht negative ganze Zahl, für die **Verbindungstimeout** und **Abfragetimeout** Optionen. Für die **Sortierungsname** Option *Option_value* kann ein Sortierungsname oder NULL sein.  
   

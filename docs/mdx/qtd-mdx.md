@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 767da32ea9001be53b4418fae2cfecb26d3cc842
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 880b8a12da960269ff559653880ebf62d01947ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ Qtd( [ Member_Expression ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Wenn ein Member-AusdruckIS nicht angegeben, wird standardmäßig das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs *Quartale* in der ersten Dimension des Typs *Zeit* in der Measuregruppe.  
   
- Die **Qtd** Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate &#40; MDX &#41; ](../mdx/periodstodate-mdx.md) Funktion, deren Ebenenausdruck-Argument auf *Quartal*. Somit ist `Qtd(Member_Expression)` funktionell äquivalent zu `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
+ Die **Qtd** Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate &#40;MDX&#41; ](../mdx/periodstodate-mdx.md) Funktion, deren Ebenenausdruck-Argument auf *Quartal*. Somit ist `Qtd(Member_Expression)` funktionell äquivalent zu `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel gibt die Summe aus der `Measures.[Order Quantity]` Elements, aggregiert über die ersten zwei Monate des dritten Quartals des Kalenderjahres 2003, die in enthaltenen der `Date` Dimension, aus der **Adventure Works** Cube.  
@@ -67,7 +66,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

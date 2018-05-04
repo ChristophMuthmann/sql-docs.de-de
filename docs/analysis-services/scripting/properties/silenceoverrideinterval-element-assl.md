@@ -27,15 +27,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 807afbc1cabae00efacb04f7389d841e26849e27
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8c542f7a3dc601b27d908485044b8423a9ad3d66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="silenceoverrideinterval-element-assl"></a>SilenceOverrideInterval-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert die Zeitspanne, die verstreichen müssen, nach dem Empfang der ersten Benachrichtigung mehrdimensionale OLAP (MOLAP)-Imaging unbedingt beginnt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert, wie viel Zeit nach dem Empfang der ursprünglichen Benachrichtigung vergehen muss, bis das mehrdimensionale OLAP (MOLAP)-Imaging unbedingt beginnt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,18 +50,18 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|duration|  
 |Standardwert|P0s|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert für **SilenceOverrideInterval** überschreibt den Wert für **SilenceInterval** , wenn während des Ruhezeitraums eine Benachrichtigung empfangen wird.  
@@ -69,6 +69,6 @@ ms.lasthandoff: 01/08/2018
  Das Element, das das übergeordnete Element des entspricht **SilenceOverrideInterval** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

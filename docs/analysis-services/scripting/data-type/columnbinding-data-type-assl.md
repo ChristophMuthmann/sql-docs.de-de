@@ -27,15 +27,15 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3905d810270f3de78382d9d4b4aaf8c6e7b7fd73
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 41c20b43cdca7dd42156c91ea8b77f3ae095690f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnbinding-data-type-assl"></a>ColumnBinding-Datentyp (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen abgeleiteten Datentyp, der die Bindung einer Spalte in einer Datenquellensicht steht eine [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert einen abgeleiteten Datentyp, der die Bindung einer Spalte in einer Datenquellensicht steht eine [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,18 +50,18 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Basisdatentypen|[Bindung](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|Keine|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|Keine|  
 |Untergeordnete Elemente|[ColumnID](../../../analysis-services/scripting/properties/columnid-element-eventcolumn-assl.md), [TableID](../../../analysis-services/scripting/properties/tableid-element-assl.md)|  
-|Abgeleitete Elemente|Finden Sie unter [binden](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
+|Abgeleitete Elemente|Siehe [Binding](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  So erstellen gültige Namen für die XML-Elemente, [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] **DataSet** Objekte codieren Tabellennamen, während sie in XML-Schemadefinition (XSD) serialisieren; dem Namen "Order Details" wird z. B. "Order_x0020_Details". Entsprechend der **ColumnID** und **TableID** Elemente, die von der **ColumnBinding** Element- und auch die Verweisobjekte, die in der Datenquellensicht (DSV) codiert werden sollen Namen während der Serialisierung, um sicherzustellen, dass den Text in der DSV direkt mit den Namen übereinstimmen. Analysis Services-Instanz decodiert diese Namen, ebenso wie die **DataSet** Objektmodell.  
@@ -74,13 +74,13 @@ ms.lasthandoff: 01/08/2018
   
  Tabellen- und Spaltennamen schließen keine Trennzeichen (z. B. "[" für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) ein.  
   
- Weitere Informationen zu den **binden** Typs, einschließlich der Tabellen von Analysis Services Scripting Language (ASSL) von Objekten des der **binden** Typ und der Vererbungshierarchie des  **Binden von** , finden Sie unter [Binding-Datentyp &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
+ Weitere Informationen zu den **binden** Typs, einschließlich der Tabellen von Analysis Services Scripting Language (ASSL) von Objekten des der **binden** Typ und der Vererbungshierarchie des  **Binden von** , finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
   
- Einen Überblick über datenbindungen in ASSL finden Sie unter [&#40; Datenquellen und Bindungen SSAS – mehrdimensional &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Einen Überblick über datenbindungen in ASSL finden Sie unter [& #40; Datenquellen und Bindungen SSAS – mehrdimensional & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  Das entsprechende Element im AMO-Objektmodell ist <xref:Microsoft.AnalysisServices.ColumnBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language-XML-Datentypen & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

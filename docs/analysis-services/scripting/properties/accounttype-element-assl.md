@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5225a1f9ee45754c60c46f8cc9c3fea3d2af0ec1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b8755c1d99da654a89b6d4f636ad4a816f10577f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accounttype-element-assl"></a>AccountType-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält den Namen des definierten Kontotyps ein [Datenbank](../../../analysis-services/scripting/objects/database-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enthält den Namen des definierten Kontotyps ein [Datenbank](../../../analysis-services/scripting/objects/database-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,36 +50,36 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Standardwert|Keine|  
+|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Konto](../../../analysis-services/scripting/objects/account-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
-|*Einkommen*|Das Konto ist ein Einnahmenkonto.|  
-|*Ausgaben*|Das Konto ist ein Ausgabenkonto.|  
-|*Datenfluss*|Das Konto ist ein Cashflowkonto.|  
-|*Lastenausgleich*|Das Konto ist ein Bilanzkonto.|  
-|*Anlage*|Das Konto ist ein Bestandskonto.|  
-|*Haftung*|Das Konto ist ein Passivkonto.|  
-|*Statistische*|Das Konto ist ein statistisches Konto.|  
+|*Income*|Das Konto ist ein Einnahmenkonto.|  
+|*Expense*|Das Konto ist ein Ausgabenkonto.|  
+|*Flow*|Das Konto ist ein Cashflowkonto.|  
+|*Balance*|Das Konto ist ein Bilanzkonto.|  
+|*Asset*|Das Konto ist ein Bestandskonto.|  
+|*Liability*|Das Konto ist ein Passivkonto.|  
+|*Statistisch*|Das Konto ist ein statistisches Konto.|  
   
  Die Enumeration, die den zulässigen Werten für die entsprechende **AccountType** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AccountTypes>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Accounts-Element &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Accounts-Element &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

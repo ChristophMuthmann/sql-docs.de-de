@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a5d0b5e496fa224e2ab81a9d3aa0e0d78e85495a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 91bbb93b4c9f977d0314e78935b52b7158691dd3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (Visual C++-Syntax Index mit #import)
 ## <a name="events"></a>Ereignisse  

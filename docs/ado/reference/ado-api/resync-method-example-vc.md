@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 617b832139e11c40212709bfc55f72dfa935226b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: a84755816e923fb615a06aad62a466155922b0cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resync-method-example-vc"></a>Resync-(VC++-Methodenbeispiel)
 Dieses Beispiel veranschaulicht die Verwendung der [Resync](../../../ado/reference/ado-api/resync-method.md) Methode, um Daten in ein statisches Recordset zu aktualisieren.  

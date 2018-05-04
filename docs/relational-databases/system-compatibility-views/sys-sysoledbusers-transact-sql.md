@@ -27,12 +27,11 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d413a9a07af247a62611946bf687c53e6f42d878
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74f62d7f55ac1ad62d7b5fdd1a04f3fb574a3532
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ ms.lasthandoff: 04/16/2018
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|Sicherheits-ID (SID) des Servers.|  
-|**rmtloginame**|**Nvarchar (**128**)**|Name der Remoteanmeldung, **Loginsid** für die verbundene **Rmtservid**.|  
-|**rmtpassword**|**Nvarchar (**128**)**|Gibt NULL zurück.|  
-|**loginsid**|**Varbinary (**85**)**|SID des lokalen Anmeldenamens, der zugeordnet werden soll.|  
+|**rmtloginame**|**Nvarchar (** 128 **)**|Name der Remoteanmeldung, **Loginsid** für die verbundene **Rmtservid**.|  
+|**rmtpassword**|**Nvarchar (** 128 **)**|Gibt NULL zurück.|  
+|**loginsid**|**Varbinary (** 85 **)**|SID des lokalen Anmeldenamens, der zugeordnet werden soll.|  
 |**status**|**smallint**|Wenn 1, sollten die Anmeldeinformationen des Benutzers für die Zuordnung verwendet werden.|  
 |**changedate**|**datetime**|Datum, an dem die Zuordnungsinformationen zuletzt geändert wurden.|  
   

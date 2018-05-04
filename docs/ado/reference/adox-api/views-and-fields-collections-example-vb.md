@@ -22,12 +22,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 80f426969f62fef9df393b9cf6b4139814695a84
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3ccc755c5dd2599e751b625f2b797fb081a5939b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Ansichten und Felder Beispiel für Auflistungen (VB)
 Der folgende Code veranschaulicht, wie die [Befehl](../../../ado/reference/adox-api/command-property-adox.md) Eigenschaft und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, das Abrufen von Feldinformationen für die Sicht.  

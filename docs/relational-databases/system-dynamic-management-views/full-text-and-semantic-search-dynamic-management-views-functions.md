@@ -22,12 +22,11 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 582a4ed3f3b612d4a609b38166dd7ddd4a5d428b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f653063d3f399effe1f5abc3391b58e347f47eb8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Dynamische Verwaltungssichten Volltext- und semantische Suche - Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.lasthandoff: 04/16/2018
  Gibt Informationen zu den einzelnen Volltext-Indizierungsbatches zurück.  
   
  [sys.dm_fts_parser](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)  
- Gibt das endgültige Tokenisierungsergebnis nach Anwendung einer gegebenen Kombination aus Wörtertrennung, Thesaurus und Stoppliste auf eine eingegebene Abfragezeichenfolge an. Diese Ausgabe entspricht der Ausgabe der angegebenen Abfragezeichenfolge an das Volltextmodul.  
+ Gibt das endgültige Tokenisierungsergebnis nach Anwendung einer gegebenen Kombination aus Wörtertrennung, Thesaurus und Stoppliste auf eine eingegebene Abfragezeichenfolge an. Diese Ausgabe entspricht der Ausgabe der angegebenen Abfragezeichenfolge an die Volltext-Engine.  
   
  [sys.dm_fts_population_ranges](../../relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md)  
  Gibt Informationen zu den spezifischen Bereichen im Zusammenhang mit einer zurzeit ausgeführten Volltextindexauffüllung zurück.  

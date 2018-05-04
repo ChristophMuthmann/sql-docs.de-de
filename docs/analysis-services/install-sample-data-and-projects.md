@@ -1,29 +1,28 @@
 ---
 title: Installieren Sie Sample Data and Projects | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: ab7162604cfd201a541f6ea3b053a7ed799e5e87
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
-ms.translationtype: MT
+ms.openlocfilehash: 4de3431a31218f95ac55b50e98a66a774d3c7d01
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Installieren von Beispieldaten und mehrdimensionale Projekte 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
@@ -35,7 +34,7 @@ In den Lektionen dieses Lernprogramms wird vorausgesetzt, dass Sie folgende Soft
   
 -   SQL Server-Datenbankmodul  
   
--   SQL Server Analysis Services  (SSAS) 
+-   SQL Server Analysis Services (SSAS) 
   
     Analysis Services ist nur in der Evaluation, Enterprise, Business Intelligence und Standard Edition verfügbar. Mehrdimensionale Modelle werden in Azure Analysis Services nicht unterstützt.
   

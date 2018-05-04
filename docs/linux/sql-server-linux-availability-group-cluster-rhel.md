@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.workload: Inactive
-ms.openlocfilehash: e073b59b4fd29db9abf8ad602298c0f10301f178
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 2a25f2cfa7ce0afdd1455cecd1ad8c8befce53e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren von Cluster RHEL für SQL Server-Verfügbarkeitsgruppe
 
@@ -127,18 +126,31 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >Deaktivieren von STONITH ist nur für Testzwecke verwenden. Wenn Sie Schrittmacher in einer produktiven Umgebung verwenden möchten, sollten Sie eine Implementierung STONITH je nach Umgebung planen und bewahren Sie ihn der aktiviert. RHEL bietet keine Fencing-Agents für alle Cloud-Umgebungen (einschließlich Azure) oder Hyper-V. Die Cluster-Hersteller bietet Unterstützung für die Ausführung von produktionsclustern in diesen Umgebungen, nicht. Wir arbeiten an einer Lösung für diese Lücke, die in zukünftigen Versionen verfügbar sein wird.
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Festlegen Sie Clustereigenschaft auf "false" Start-Fehler-ist--Schwerwiegender
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Legen Sie Cluster Eigenschaft Cluster-erneut prüfen-Intervall
 
-`start-failure-is-fatal` Gibt an, ob ein Fehler beim Starten einer Ressource auf einem Knoten weiter Start Versuche auf diesem Knoten verhindert. Bei Festlegung auf `false`, der Cluster entscheidet, ob auf demselben Knoten erneut basierend auf der Ressource aktuelle Anzahl und Migration Fehlerschwellenwert starten. Nach dem Failover gruppieren Schrittmacher Wiederholungen starten die Verfügbarkeit Ressource auf dem primären ehemaligen, sobald die SQL-Instanz verfügbar ist. Schrittmacher stuft das sekundäre Replikat, und automatisch wieder verbunden, der verfügbarkeitsgruppe. 
+`cluster-recheck-interval` Gibt an, das Abrufintervall für Änderungen in der Ressourcenparameter, Einschränkungen oder andere Clusteroptionen in dem Cluster abfragt. Wenn ein Replikat ausfällt, versucht der Cluster, das Replikat in einem Intervall neu zu starten, die durch gebunden ist die `failure-timeout` Wert und die `cluster-recheck-interval` Wert. Z. B. wenn `failure-timeout` auf 60 Sekunden festgelegt ist und `cluster-recheck-interval` festgelegt ist auf 120 Sekunden wird versucht, der Neustart in einem Intervall, das größer als 60 Sekunden, aber weniger als 120 Sekunden ist. Es wird empfohlen, dass Sie Fehler-Timeout auf 60 s und Cluster erneut prüfen Wiederherstellungsintervall auf einen Wert, der größer als 60 Sekunden festgelegt. Cluster-erneut prüfen-Intervall auf einen niedrigen Wert festlegen, wird nicht empfohlen.
 
-Aktualisieren Sie den Eigenschaftswert an `false` ausführen:
+Aktualisieren Sie den Eigenschaftswert an `2 minutes` ausführen:
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
->[!WARNING]
->Nach der ein automatisches Failover bei `start-failure-is-fatal = true` der Ressourcen-Manager versucht, die Ressource zu starten. Wenn beim ersten Versuch ein Fehler auftritt, führen Sie manuell `pcs resource cleanup <resourceName>` bereinigen Sie die Anzahl der Ressourcen-Fehler, und setzen Sie die Konfiguration zurück.
+> [!IMPORTANT] 
+> Alle Verteilungen (einschließlich RHEL 7.3 und 7.4), mit denen die neuesten verfügbaren Schrittmacher Paket 1.1.18-11.el7 einführen eine verhaltensänderung für die Start-Fehler-ist--Schwerwiegender clustereinstellung, wenn der Wert "false" ist. Diese Änderung wirkt sich auf den Failover-Workflow. Wenn ein primäres Replikat ein Ausfall auftritt, muss der Cluster Failover auf eines der sekundären Replikate verfügbar. Stattdessen werden Benutzer feststellen, dass der Cluster immer wieder versucht, um das primäre Replikat mit fehlgeschlagenem zu starten. Wenn dieser primären nie (aufgrund einer dauerhaften Ausfall) online geschaltet wird, ein Cluster nie Failover an ein anderes verfügbares sekundäres Replikat. Aufgrund dieser Änderung eine zuvor empfohlene Konfiguration festzulegende Start Fehler-ist-schwerwiegend ist nicht mehr gültig und die Einstellung muss auf den Standardwert zurückgesetzt werden `true`. Darüber hinaus muss die AG-Ressource auf Einbeziehung aktualisiert werden die `failover-timeout` Eigenschaft. 
+
+Aktualisieren Sie den Eigenschaftswert an `true` ausführen:
+
+```bash
+sudo pcs property set start-failure-is-fatal=true
+```
+
+Beim Aktualisieren der `ag1` Ressourceneigenschaft `failure-timeout` auf `60s` ausführen:
+
+```bash
+pcs resource update ag1 meta failure-timeout=60s
+```
+
 
 Informationen zu Schrittmacher Clustereigenschaften finden Sie unter [Schrittmacher Clustern Eigenschaften](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
@@ -151,8 +163,8 @@ Informationen zu Schrittmacher Clustereigenschaften finden Sie unter [Schrittmac
 Verwenden Sie zum Erstellen der verfügbarkeitsgruppenressource `pcs resource create` Befehl, und legen Sie die Ressourceneigenschaften. Der folgende Befehl erstellt eine `ocf:mssql:ag` Master/Slave Typ der Ressource für die verfügbarkeitsgruppe mit dem Namen `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
-```
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

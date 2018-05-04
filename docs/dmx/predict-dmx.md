@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6bd1841fa5f4f64e05a6ba4e82464c83d89596f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +56,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY und INCLUDE_STATISTICS gelten nur für Verweise auf Tabellenspalten, und EXCLUDE_NULL und INCLUDE_NULL gelten nur für Verweise auf skalare Spalten.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Zu den Optionen gehören EXCLUDE_NULL (Standardwert), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (Standardwert), INPUT_ONLY und INCLUDE_STATISTICS.  
   
 > [!NOTE]  
@@ -65,7 +64,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  Der INCLUDE_NODE_ID-Parameter gibt die $NODEID-Spalte im Ergebnis zurück. NODE_ID ist der Inhaltsknoten, für den die Vorhersage in einem bestimmten Fall ausgeführt wird. Dieser Parameter ist optional, bei Verwendung von Vorhersagen für Tabellenspalten.  
   
- Die  *n*  Parameter gilt für Tabellenspalten. Er legt fest, wie viele Zeilen entsprechend dem Typ der Vorhersage zurückgegeben werden sollen. Wenn die zugrunde liegende Spalte Sequenz ist, ruft es die **PredictSequence** Funktion. Wenn die zugrunde liegende Spalte zeitreihenspalte ist, ruft es die **PredictTimeSeries** Funktion. Für assoziative Vorhersagen, ruft er die **PredictAssociation** Funktion.  
+ Die *n* Parameter gilt für Tabellenspalten. Er legt fest, wie viele Zeilen entsprechend dem Typ der Vorhersage zurückgegeben werden sollen. Wenn die zugrunde liegende Spalte Sequenz ist, ruft es die **PredictSequence** Funktion. Wenn die zugrunde liegende Spalte zeitreihenspalte ist, ruft es die **PredictTimeSeries** Funktion. Für assoziative Vorhersagen, ruft er die **PredictAssociation** Funktion.  
   
  Die **Predict** -Funktion unterstützt Polymorphie.  
   
@@ -100,9 +99,9 @@ FROM     [Association]
 |Patchkit|2113|0.142012232004839|0.132389356196586|  
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

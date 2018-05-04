@@ -24,12 +24,11 @@ caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 09c1ccc4ba5b01b434ee4794a058ccfae4ccfa61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Damit eine Planhinweisliste entsprechend einen Batch zugeordnet, die von einer Anwendung übermittelt *Batch_tex*t muss angegeben werden, im gleichen Format, Zeichen für Zeichen, wie beim Übermitteln an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
- [*Schema_name*.] *Object_name* gibt den Namen des eine [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur, Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder [!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger, enthält *Statement_text*. Wenn *Schema_name* nicht angegeben ist, *Schema_name* verwendet das Schema des aktuellen Benutzers. Wenn NULL angegeben wird und @type = 'SQL', den Wert der @module_or_batch festgelegt ist, auf den Wert des @stmt. Wenn @type = "Vorlage**"**, @module_or_batch muss NULL sein.  
+ [*Schema_name*.] *Object_name* gibt den Namen des eine [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur, Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder [!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger, enthält *Statement_text*. Wenn *Schema_name* nicht angegeben ist, *Schema_name* verwendet das Schema des aktuellen Benutzers. Wenn NULL angegeben wird und @type = 'SQL', den Wert der @module_or_batch festgelegt ist, auf den Wert des @stmt. Wenn @type = "Vorlage **"**, @module_or_batch muss NULL sein.  
   
  [ @params =] {N' *@parameter_name Data_type* [,*.. ...n* ] "| NULL}  
  Gibt an, die Definitionen aller Parameter, die in eingebetteten *Statement_text*. @params gilt nur, wenn eines der folgenden Aussagen zutrifft:  
@@ -123,7 +122,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Wenn @type = 'SQL' und @module_or_batch auf NULL gesetzt wird, wird der Wert von @module_or_batch auf den Wert von @stmt festgelegt. Dies bedeutet, dass den Wert für *Statement_text* muss angegeben werden, in genau demselben Format, Zeichen für Zeichen, wie beim Übermitteln an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
   
- Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dem Wert *Statement_text* auf *Batch_text* und  *@parameter_name Data_type* [,*.. ...n* ], oder Wenn @type = **"**Objekt", um den Text der entsprechenden Abfrage in *Object_name*, die folgenden Zeichenfolgenelemente nicht berücksichtigt:  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dem Wert *Statement_text* auf *Batch_text* und  *@parameter_name Data_type* [,*.. ...n* ], oder Wenn @type = **"** Objekt", um den Text der entsprechenden Abfrage in *Object_name*, die folgenden Zeichenfolgenelemente nicht berücksichtigt:  
   
 -   Leerzeichen (Tabstopps, Leerzeichen, Wagenrücklauf oder Zeilenvorschub) innerhalb der Zeichenfolge.  
   

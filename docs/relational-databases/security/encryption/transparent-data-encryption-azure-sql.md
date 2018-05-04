@@ -15,16 +15,17 @@ ms.custom: ''
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 08/07/2017
+ms.date: 04/10/2018
 ms.author: rebeccaz
-ms.openlocfilehash: 45e4c702e2f08ce6e7c39463ac49c98701646f37
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: fd5186e4a069b76108ad0c8cd4e91497e618a195
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Transparente Datenverschlüsselung für SQL-Datenbank und Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Die transparente Datenverschlüsselung unterstützt Maßnahmen zum Schutz von Azure SQL-Datenbank und Azure Data Warehouse vor schädlichen Aktivitäten. Sie führt die Verschlüsselung und Entschlüsselung der Datenbank sowie der ihr zugeordneten Sicherheitskopien und der Transaktionsprotokolle in Ruhephasen in Echtzeit durch, ohne Änderungen an der Anwendung zu erfordern.
 
@@ -44,9 +45,9 @@ Microsoft verschiebt und verwaltet auch die Schlüssel nahtlos, die für die Geo
 > Alle neu erstellten SQL-Datenbanken werden standardmäßig mithilfe der von einem Dienst verwalteten transparenten Datenverschlüsselung verschlüsselt. Datenbanken, die schon vor Mai 2017 vorhanden waren, und Datenbanken, die durch Wiederherstellung, Georeplikation und Datenbankkopie erstellt wurden, werden standardmäßig nicht verschlüsselt.
 >
 
-## <a name="bring-your-own-key-preview"></a>Bring Your Own Key (Vorschau)
+## <a name="bring-your-own-key"></a>Bring Your Own Key
 
-Durch die Bring Your Own Key-Unterstützung (Vorschau) können Sie Ihre Schlüssel für die transparente Datenverschlüsselung verwalten und steuern, wer zu welchem Zeitpunkt auf diese zugreifen kann. Key Vault, das cloudbasierte externe Schlüsselverwaltungssystem von Azure, ist der erste Schlüsselverwaltungsdienst, der in die transparente Datenverschlüsselung mit Bring Your Own Key-Unterstützung integriert ist. Durch die Bring Your Own Key-Unterstützung ist der Verschlüsselungsschlüssel der Datenbank durch einen asymmetrischen Schlüssel geschützt, der in Key Vault gespeichert ist. Der asymmetrische Schlüssel verlässt Key Vault nie. Sobald der Server Berechtigungen für einen Schlüsseltresor besitzt, sendet er grundlegende Anforderungen für Schlüsselvorgänge über Key Vault an den Schlüsseltresor. Der asymmetrische Schlüssel ist auf Serverebene festgelegt und wird von allen Datenbanken unter diesem Server geerbt.
+Durch die Bring Your Own Key-Unterstützung können Sie Ihre Schlüssel für die transparente Datenverschlüsselung verwalten und steuern, wer zu welchem Zeitpunkt auf diese zugreifen kann. Key Vault, das cloudbasierte externe Schlüsselverwaltungssystem von Azure, ist der erste Schlüsselverwaltungsdienst, der in die transparente Datenverschlüsselung mit Bring Your Own Key-Unterstützung integriert ist. Durch die Bring Your Own Key-Unterstützung ist der Verschlüsselungsschlüssel der Datenbank durch einen asymmetrischen Schlüssel geschützt, der in Key Vault gespeichert ist. Der asymmetrische Schlüssel verlässt Key Vault nie. Sobald der Server Berechtigungen für einen Schlüsseltresor besitzt, sendet er grundlegende Anforderungen für Schlüsselvorgänge über Key Vault an den Schlüsseltresor. Der asymmetrische Schlüssel ist auf Serverebene festgelegt und wird von allen Datenbanken unter diesem Server geerbt.
 
 Durch die Bring Your Own Key-Unterstützung können Sie die Aufgaben der Schlüsselverwaltung steuern, z.B. Schlüsselrotationen und Schlüsseltresorberechtigungen. Sie können ebenfalls Schlüssel löschen sowie die Überwachung und Berichterstellung für alle Verschlüsselungsschlüssel aktivieren. Key Vault bietet eine zentrale Schlüsselverwaltung und verwendet stark überwachte Hardwaresicherheitsmodule. Key Vault unterstützt die Trennung der Verwaltung von Schlüsseln und Daten, um gesetzliche Bestimmungen zu erfüllen. Weitere Informationen zu Key Vault finden Sie in der [Dokumentation zu Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 

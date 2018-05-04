@@ -24,12 +24,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d8554902e965fc58ea4bc83a97512944ed146a9e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8cba824d9e6c7ff39b1f0c672d9e93cf06f16d61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="status-property-ado-field"></a>Status-Eigenschaft (ADO-Feld)
 Gibt den Status einer [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  

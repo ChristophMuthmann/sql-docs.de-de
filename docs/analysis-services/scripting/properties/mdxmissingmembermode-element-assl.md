@@ -25,15 +25,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 02ede17b0011ed3eceecf35feaa93fc42c55da3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2452957134b0c1118695e5a34565ca6053010eb8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>MdxMissingMemberMode-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bestimmt, wie fehlende Elemente für Anweisungen (Multidimensional Expressions) behandelt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Legt die Verarbeitung fehlender Elemente in MDX-Anweisungen (Multidimensional Expressions) fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,23 +48,23 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
 |Standardwert|*Standardwert*|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[Dimension](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*Ignorieren*|Fehlende Elemente werden ignoriert.|  
 |*Fehler*|Ein Fehler wird ausgelöst, wenn fehlende Elemente gefunden werden.|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/08/2018
  Das Element, das das übergeordnete Element des entspricht **MdxMissingMemberMode** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionale Ausdrücke &#40; MDX &#41; Referenz](../../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Mehrdimensionale Ausdrücke & #40; MDX & #41; Referenz](../../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

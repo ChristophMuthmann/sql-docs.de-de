@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8b3434c97e9548d5b37326a967f540f5f6d3a073
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 14aba77fcc6832412e6744f567887cc238c156ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync-Befehl Eigenschaft dynamisch (ADO)
 Gibt an, ein Befehl Benutzer bereitgestellte Zeichenfolge, die [Resync](../../../ado/reference/ado-api/resync-method.md) Probleme der Methode zum Aktualisieren der Daten in der Tabelle mit dem Namen der [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) dynamische Eigenschaft.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBrowseConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 34fbd05bcdec421ee9a00474f939d54219f7b321
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect-Funktion
 **Konformität**  
@@ -124,7 +123,7 @@ SQLRETURN SQLBrowseConnect(
  *Attribut / Wert-* :: = *-Zeichenfolge*<br>
  *Treiber-definierten-Attribut-Schlüsselwort* :: = *Bezeichner*<br>
   
- wobei *Zeichenfolge* wurde NULL oder mehr Zeichen; *Bezeichner* verfügt über eine oder mehrere Zeichen; *Attribut-Schlüsselwort* ist nicht beachtet werden soll; *Attribut / Wert-* möglicherweise Groß-/Kleinschreibung beachtet; und der Wert der **DSN** Schlüsselwort nicht ausschließlich aus Leerzeichen bestehen. Aufgrund der Zeichenfolge und Initialisierung Datei Grammatik, Schlüsselwörter und Attribut Verbindungswerte, die die Zeichen enthalten **[] {} (),? \*=! @** sollte vermieden werden. Aufgrund der Grammatik in die Systeminformationen, Schlüsselwörter und Namen von Datenquellen können den umgekehrten Schrägstrich enthalten (\\) Zeichen. Für einen ODBC-2. *x* Treiber, geschweifte Klammern sind erforderlich, um den Attributwert für das DRIVER-Schlüsselwort.  
+ wobei *Zeichenfolge* wurde NULL oder mehr Zeichen; *Bezeichner* verfügt über eine oder mehrere Zeichen; *Attribut-Schlüsselwort* ist nicht beachtet werden soll; *Attribut / Wert-* möglicherweise Groß-/Kleinschreibung beachtet; und der Wert der **DSN** Schlüsselwort nicht ausschließlich aus Leerzeichen bestehen. Aufgrund der Zeichenfolge und Initialisierung Datei Grammatik, Schlüsselwörter und Attribut Verbindungswerte, die die Zeichen enthalten **[]{}(),? \*=! @** sollte vermieden werden. Aufgrund der Grammatik in die Systeminformationen, Schlüsselwörter und Namen von Datenquellen können den umgekehrten Schrägstrich enthalten (\\) Zeichen. Für einen ODBC-2. *x* Treiber, geschweifte Klammern sind erforderlich, um den Attributwert für das DRIVER-Schlüsselwort.  
   
  Wenn keine Schlüsselwörter in der Verbindungszeichenfolge der durchsuchen Anforderung wiederholt werden, verwendet der Treiber den zugeordneten Wert durch das erste Vorkommen des Schlüsselworts. Wenn die **DSN** und **Treiber** Schlüsselwörter in der gleichen Verbindungszeichenfolge für den Durchsuchen-Anforderung enthalten sind, die Treiber-Manager und Treiber verwenden, unabhängig davon, welche Schlüsselwort an erster Stelle steht.  
   
@@ -139,7 +138,7 @@ SQLRETURN SQLBrowseConnect(
  *ODBC-Attribut-Schlüsselwort* = {`UID` &#124; `PWD`} [`:`*lokalisiert Bezeichner*] *-definierten-Attribut-Schlüsselwort Driver* :: = *Bezeichner*[`:`*lokalisiert Bezeichner*] *Attribut / Wert-* :: = `{` *Attribut-Wert-List* `}` &#124; `?` (Die Klammern sind literal; sie werden vom Treiber zurückgegeben.)<br>
  *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
- wobei *Zeichenfolge* und *lokalisierte Zeichenfolge* NULL oder mehr Zeichen lang sein; *Bezeichner* und *lokalisiert Bezeichner* haben Sie ein oder mehrere Zeichen; *Attribut-Schlüsselwort* ist nicht beachtet werden soll; und *Attribut / Wert-* möglicherweise Groß-/Kleinschreibung beachtet werden. Aufgrund der Verbindung Zeichenfolge und die Initialisierung Datei Grammatik, Schlüsselwörter, lokalisierte Bezeichner und Attributwerte zurück, die die Zeichen enthalten **[] {} (),? \*=! @** sollte vermieden werden. Aufgrund der Grammatik in die Systeminformationen, Schlüsselwörter und Namen von Datenquellen können den umgekehrten Schrägstrich enthalten (\\) Zeichen.  
+ wobei *Zeichenfolge* und *lokalisierte Zeichenfolge* NULL oder mehr Zeichen lang sein; *Bezeichner* und *lokalisiert Bezeichner* haben Sie ein oder mehrere Zeichen; *Attribut-Schlüsselwort* ist nicht beachtet werden soll; und *Attribut / Wert-* möglicherweise Groß-/Kleinschreibung beachtet werden. Aufgrund der Verbindung Zeichenfolge und die Initialisierung Datei Grammatik, Schlüsselwörter, lokalisierte Bezeichner und Attributwerte zurück, die die Zeichen enthalten **[]{}(),? \*=! @** sollte vermieden werden. Aufgrund der Grammatik in die Systeminformationen, Schlüsselwörter und Namen von Datenquellen können den umgekehrten Schrägstrich enthalten (\\) Zeichen.  
   
  Die Verbindungszeichenfolgensyntax zum Durchsuchen von Ergebnis wird gemäß den folgenden semantischen Regeln verwendet:  
   
@@ -151,7 +150,7 @@ SQLRETURN SQLBrowseConnect(
   
 -   *Schlüsselwörter für ODBC-Attribut* und *-Treiber-definierte-Attribut-Schlüsselwörter* enthalten eine lokalisierte oder benutzerfreundliche Version des Schlüsselworts. Dies kann von Anwendungen als Bezeichnung in einem Dialogfeld verwendet werden. Allerdings **UID**, **PWD**, oder die *Bezeichner* allein muss verwendet werden, wenn eine Zeichenfolge der durchsuchen-Anforderung an den Treiber übergeben.  
   
--   Der {*Wert Attributliste*} gilt eine Enumeration von tatsächlichen Werten für den entsprechenden *Attribut-Schlüsselwort*. Beachten Sie, dass die geschweiften Klammern ({}) eine Liste mit Auswahlmöglichkeiten nicht angegeben werden. Sie werden vom Treiber zurückgegeben. Es kann z. B. eine Liste von Servernamen oder eine Liste von Datenbanknamen verwendet werden.  
+-   Der {*Wert Attributliste*} gilt eine Enumeration von tatsächlichen Werten für den entsprechenden *Attribut-Schlüsselwort*. Beachten Sie, dass die geschweiften Klammern ({}) nicht angegeben wird, eine Liste mit Auswahlmöglichkeiten; sie werden vom Treiber zurückgegeben. Es kann z. B. eine Liste von Servernamen oder eine Liste von Datenbanknamen verwendet werden.  
   
 -   Wenn die *Attribut / Wert-* ist ein einzelnes Question Mark ("?"), ein einzelnen Wert entspricht der *Attribut-Schlüsselwort*. Z. B. UID = JohnS; PWD = Symbol.  
   

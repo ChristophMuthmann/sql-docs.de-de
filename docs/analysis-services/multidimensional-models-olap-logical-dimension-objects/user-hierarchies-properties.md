@@ -1,37 +1,23 @@
 ---
 title: Eigenschaften der Benutzerhierarchie | Microsoft Docs
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- properties [Analysis Services], multilevel hierarchy
-- hierarchies [Analysis Services], multilevel
-- multilevel hierarchies [Analysis Services]
-ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 156d25ca9a17f2c79de133a32a74c8765b77a77d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 128e328a0f8bb915e742cd05f8f45bf2e47572f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-hierarchies---properties"></a>Benutzerhierarchien - Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In der folgenden Tabelle werden die Eigenschaften einer benutzerdefinierten Hierarchie beschrieben.  
+  In der folgenden Tabelle werden die Eigenschaften einer benutzerdefinierten Hierarchie beschrieben.  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  

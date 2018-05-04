@@ -28,12 +28,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a6f1652861f7b057105a198b36ab7bb0e4d98eb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4fcc0421d855236b27d5babe75424f929c086ab8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sort-property"></a>Sort-Eigenschaft
 Gibt einen oder mehrere Feldnamen, auf denen die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sortiert ist, und gibt an, ob jedes Feld in aufsteigender oder absteigender Reihenfolge sortiert wird.  

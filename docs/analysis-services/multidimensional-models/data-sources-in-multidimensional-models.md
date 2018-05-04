@@ -1,39 +1,23 @@
 ---
 title: Datenquellen in mehrdimensionalen Modellen | Microsoft Docs
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- metadata [Analysis Services]
-- Analysis Services objects, data sources
-- storing data [Analysis Services], data sources
-- data sources [Analysis Services], about data sources
-- security [Analysis Services], data sources
-- data sources [Analysis Services]
-- storage [Analysis Services], data sources
-ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 99bdc630a51bd2bb4f9cbfeb7860d2dffb9392a0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9d438cbd6bdbcd77e6f00cf8baea770fb0e16fad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Datenquellen in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Alle Daten, die Sie importieren oder in ein mehrdimensionales Modell laden, stammen aus einer externen Datenquelle. In der Regel stammen Quelldaten aus einem Data Warehouse, das für Berichtszwecke entworfen wurde, sie können jedoch auch aus einer beliebigen relationalen Datenbank stammen, auf die direkt oder indirekt über einen Mittler zugegriffen wird, z. B. ein [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket.  
+  Alle Daten, die Sie importieren oder in ein mehrdimensionales Modell laden, stammen aus einer externen Datenquelle. In der Regel stammen Quelldaten aus einem Data Warehouse, das für Berichtszwecke entworfen wurde, sie können jedoch auch aus einer beliebigen relationalen Datenbank stammen, auf die direkt oder indirekt über einen Mittler zugegriffen wird, z. B. ein [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket.  
   
  Die direkte Verbindung mit einer externen Datenquelle wird von einem **Datenquellenobjekt** in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] angegeben. Neben dem physischen Speicherort gibt ein Datenquellenobjekt die Verbindungszeichenfolge, den Datenanbieter, die Anmeldeinformationen und weitere Eigenschaften an, die das Verbindungsverhalten steuern.  
   
@@ -62,15 +46,15 @@ Alle Daten, die Sie importieren oder in ein mehrdimensionales Modell laden, stam
 |Thema|Description|  
 |-----------|-----------------|  
 |[Unterstützte Datenquellen &#40;SSAS – Mehrdimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Beschreibt die Datenquellentypen, die in einem tabellarischen Modell verwendet werden können.|  
-|[Erstellen einer Datenquelle &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|Erklärt, wie einem mehrdimensionalen Modell ein Datenquellenobjekt hinzugefügt wird.|  
-|[Löschen einer Datenquelle im Projektmappen-Explorer &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Verwenden Sie diese Vorgehensweise, um ein Datenquellenobjekt aus einem mehrdimensionalen Modell zu löschen.|  
-|[Festlegen von Datenquelleneigenschaften &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|Beschreibt jede Eigenschaft und erläutert deren Festlegung.|  
-|[Festlegen von Identitätswechseloptionen &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|Erklärt, wie die Optionen im Dialogfeld "Identitätswechselinformationen" konfiguriert werden.|  
+|[Erstellen einer Datenquelle & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|Erklärt, wie einem mehrdimensionalen Modell ein Datenquellenobjekt hinzugefügt wird.|  
+|[Löschen einer Datenquelle im Projektmappen-Explorer & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Verwenden Sie diese Vorgehensweise, um ein Datenquellenobjekt aus einem mehrdimensionalen Modell zu löschen.|  
+|[Festlegen von Datenquelleneigenschaften & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|Beschreibt jede Eigenschaft und erläutert deren Festlegung.|  
+|[Festlegen von Identitätswechseloptionen & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|Erklärt, wie die Optionen im Dialogfeld "Identitätswechselinformationen" konfiguriert werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankobjekte &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Logische Architektur &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Datenbankobjekte & #40; Analysis Services – mehrdimensionale Daten & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Logische Architektur & #40; Analysis Services – mehrdimensionale Daten & #41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Datenquellen und Bindungen &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [Datenquellen und Bindungen & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77717667d5be9365a42d0006f47725027b9eb2dd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7c5d117687236ceb932d5d11a63d05b29c2f5cf8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Herstellen einer Verbindung mit einer Quelle oder Treiber
 Eine Anwendung kann auf eine beliebige Anzahl von Treibern und Datenquellen verbunden werden. Dies kann eine Vielzahl von Treibern und Datenquellen, denselben Treiber und eine Vielzahl von Datenquellen oder auch mehrere Verbindungen mit dem denselben Treiber und der Datenquelle.  

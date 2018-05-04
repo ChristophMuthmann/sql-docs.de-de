@@ -1,40 +1,23 @@
 ---
 title: Key Performance Indicators (KPIs) in mehrdimensionalen Modellen | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- viewing Key Performance Indicators
-- Key Performance Indicators [Analysis Services]
-- KPIs [Analysis Services]
-- OLAP objects [Analysis Services], performance indicators
-- weights [Analysis Services]
-- displaying Key Performance Indicators
-- parent KPIs [Analysis Services]
-- child KPIs
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f7c49068db1ee60a6b417b7ef2bc4348693fc500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Leistungskennzahlen (Key Performance Indicators, KPIs) in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt.  
+  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt.  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt ein KPI eine Auflistung von Berechnungen dar, die mit einer Measuregruppe in einem Cube verknüpft sind, die zur Auswertung der Geschäftserfolge verwendet werden. In der Regel sind diese Berechnungen eine Kombination aus MDX-Ausdrücken (Multidimensional Expressions) und berechneten Elementen. KPIs enthalten außerdem Metadaten, aus denen hervorgeht, wie Clientanwendungen die Berechnungsergebnisse des KPIs anzeigen sollen.  
   
@@ -67,7 +50,7 @@ Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine qua
 ## <a name="parent-kpis"></a>Übergeordnete KPIs  
  Ein Unternehmen kann verschiedene Unternehmensmaßsysteme auf unterschiedlichen Ebenen nachverfolgen. So kann z. B. mit nur zwei oder drei KPIs der Geschäftserfolg für das gesamte Unternehmen bestimmt werden, während diese unternehmensweiten KPIs auf drei oder vier anderen KPIs basieren können, die von den Geschäftsbereichen im gesamten Unternehmen nachverfolgt werden. Außerdem können die Geschäftsbereiche in einem Unternehmen unterschiedliche Statistiken zum Berechnen desselben KPI verwenden, dessen Ergebnisse in den unternehmensweiten KPI umgewandelt werden.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lässt Sie eine Über-/Unterordnungsbeziehung zwischen KPIs definieren. Durch diese Über-/Unterordnungsbeziehung können die Ergebnisse des untergeordneten KPI zum Berechnen des übergeordneten KPI verwendet werden. Clientanwendungen können diese Beziehung auch verwenden, um übergeordnete und untergeordnete KPIs entsprechend anzuzeigen.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine über-/ unterordnungsbeziehung zwischen KPIs definieren. Durch diese Über-/Unterordnungsbeziehung können die Ergebnisse des untergeordneten KPI zum Berechnen des übergeordneten KPI verwendet werden. Clientanwendungen können diese Beziehung auch verwenden, um übergeordnete und untergeordnete KPIs entsprechend anzuzeigen.  
   
 ## <a name="weights"></a>Gewichtungen  
  Gewichtungen können außerdem untergeordneten KPIs zugeordnet werden. Gewichtungen ermöglichen es [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , beim Berechnen des Werts des übergeordneten KPI die Ergebnisse des untergeordneten KPI proportional anzupassen.  

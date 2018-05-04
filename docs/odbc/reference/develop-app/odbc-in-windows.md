@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b0d7b3cc171e5a959c9b7ae44f95f91338e454f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4664cd3225b3d271c0adb41b15557bcd479238ce
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-in-windows"></a>ODBC in Windows
 Die folgenden Elemente gelten nur für ODBC, die Betriebssysteme Microsoft® Windows NT, Windows 2000 und Microsoft Windows® 95-und Windows 98 ausgeführt wird.  

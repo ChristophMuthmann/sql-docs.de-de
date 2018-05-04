@@ -2,7 +2,7 @@
 title: Column-Element für Index (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec9be70ff9d3605159bd47c4a4fd77f5bb1c6111
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 97d0ce369cd416adadf85eeeb8cac29aefaededa
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-element-for-index-dta"></a>Column-Element für Index (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt die Spalten, auf denen der Index für eine benutzerspezifische Konfiguration erstellt wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Gibt die Spalten an, für die der Index für eine benutzerspezifische Konfiguration erstellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -85,13 +86,13 @@ ms.lasthandoff: 01/17/2018
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Index-Element &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
-|**Untergeordnete Elemente**|[Name-Element für Spalte &#40; DTA &#41;](../../tools/dta/name-element-for-column-dta.md)|  
+|**Übergeordnetes Element**|[Index-Element &#40;DTA&#41;](../../tools/dta/index-element-dta.md)|  
+|**Untergeordnete Elemente**|[Name-Element für Spalte &#40;DTA&#41;](../../tools/dta/name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

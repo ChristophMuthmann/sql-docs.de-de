@@ -21,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf37a8f168579ed4cebfd155503e25dae52498f0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3350bef3bdce084c16edb8d1251eeb8a7ac2cc8f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-property-example-field-vc"></a>Beispiel für Eigenschaft (Feld) (VC++)
 In diesem Beispiel wird veranschaulicht, die [Typ](../../../ado/reference/ado-api/type-property-ado.md) durch Anzeigen der Namen der Konstanten entspricht, die auf den Wert der Eigenschaft der **Typ** -Eigenschaft aller der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Mitarbeiter*** Tabelle. Die FieldType-Funktion ist erforderlich, damit dieses Verfahren ausführen.  

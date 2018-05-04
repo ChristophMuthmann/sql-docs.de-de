@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - data conversions from SQL to C types [ODBC], year-month intervals
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c54f671d1cb7fbf5ab0f0be6ca5f47ea9281fd0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac154cccb3b9e1fb7f67ef87370cb23b2b9a3dbc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL in Intervallen von "c:" Jahr-Monat
 Der Bezeichner für die Jahr-Monat-Intervall ODBC SQL-Datentypen sind:  

@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 97c4d349cecfc9fb1dd51c1c018110068b5be7dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c6b19fb21acb0c822224e4d7b407d718c94d220a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keyduplicate-element-assl"></a>KeyDuplicate-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bestimmt, wie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] einen während der Verarbeitung aufgetretenen Fehler durch doppelten Schlüssel behandelt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Bestimmt, wie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] einen während der Verarbeitung aufgetretenen Fehler durch doppelten Schlüssel behandelt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
 |Standardwert|*IgnoreError*|  
@@ -61,14 +61,14 @@ ms.lasthandoff: 01/08/2018
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Fehler aufgrund von doppelten Schlüsseln werden nur während der Dimensionsverarbeitung generiert, wenn ein Attributschlüssel mehr als einmal auftaucht. Da Attributschlüssel eindeutig sein müssen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwirft die doppelten Datensätze. Fehler aufgrund von doppelten Schlüsseln deuten normalerweise auf einen Schwachpunkt im Design der Dimension und insbesondere in den Beziehungen zwischen Attributen hin.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*IgnoreError*|Die Verarbeitung sollte den Fehler ignorieren und fortfahren.|  
 |*ReportAndContinue*|Die Verarbeitung sollte den Fehler berichten und fortfahren.|  
@@ -77,6 +77,6 @@ ms.lasthandoff: 01/08/2018
  Die Enumeration, die den zulässigen Werten für entspricht **KeyDuplicate** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ErrorOption>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

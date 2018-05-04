@@ -1,36 +1,23 @@
 ---
-title: "Datamining-Assistenten (Analysis Services – Datamining) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Datamining-Assistenten (Analysis Services – Datamining) | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], data mining
-- OLAP [Analysis Services], mining models
-- Data Mining Wizard
-- relational mining models [Analysis Services]
-ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 653b13b0fa697c1882f164cbdc09210b4ef87f82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Data Mining-Assistent (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Der Data Mining-Assistent in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird immer dann gestartet, wenn Sie einem Data Mining-Projekt eine neue Miningstruktur hinzufügen. Der Assistent hilft Ihnen, eine Datenquelle auszuwählen und eine Datenquellenansicht einzurichten, mit der die für die Analyse verwendeten Daten definiert werden. Anschließend hilft er Ihnen, ein erstes Modell zu erstellen.  
+  Der Data Mining-Assistent in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird immer dann gestartet, wenn Sie einem Data Mining-Projekt eine neue Miningstruktur hinzufügen. Der Assistent hilft Ihnen, eine Datenquelle auszuwählen und eine Datenquellenansicht einzurichten, mit der die für die Analyse verwendeten Daten definiert werden. Anschließend hilft er Ihnen, ein erstes Modell zu erstellen.  
   
  In der abschließenden Phase des Assistenten können Sie die Daten optional in Training und Testsätze unterteilen und Funktionen wie Drillthrough aktivieren.  
   
@@ -77,7 +64,7 @@ Der Data Mining-Assistent in [!INCLUDE[msCoName](../../includes/msconame-md.md)]
 ### <a name="choosing-an-algorithm"></a>Auswählen eines Algorithmus  
  Anschließend müssen Sie sich entscheiden, welcher Algorithmus für die Verarbeitung Ihrer Daten verwendet werden soll. Es kann schwierig sein, eine Entscheidung zu treffen. Jeder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellte Algorithmus verfügt über unterschiedliche Funktionen und führt zu unterschiedlichen Ergebnissen. Sie können experimentieren und verschiedene Modelle ausprobieren, bevor Sie das angemessenste Modell für Ihre Daten und Ihr Geschäftsproblem bestimmen. Im folgenden Thema finden Sie eine Erklärung der Aufgaben, für die jeder Algorithmus am besten geeignet ist.  
   
- [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  Sie können mehrere Modelle mit unterschiedlichen Algorithmen erstellen oder die Parameter der Algorithmen ändern, um verschiedene Modelle zu erstellen. Sie werden in Bezug auf die Auswahl des Algorithmus nicht eingeschränkt, und es ist eine gute Übung, um mehrere unterschiedliche Modelle für die gleichen Daten zu erstellen.  
   
@@ -89,7 +76,7 @@ Der Data Mining-Assistent in [!INCLUDE[msCoName](../../includes/msconame-md.md)]
 ### <a name="additional-features"></a>Zusätzliche Funktionen  
  Vom Data Mining-Assistenten werden diese zusätzlichen Funktionen bereitgestellt, um Ihnen dabei zu helfen, die richtigen Daten auszuwählen und die Datenquellen ordnungsgemäß zu konfigurieren:  
   
--   **Automatische Erkennung von Datentypen:**Der Assistent untersucht die Eindeutigkeit und die Verteilung von Spaltenwerten und empfiehlt anschließend den besten Datentyp sowie einen Verwendungstyp für die Daten. Sie können diese Vorschläge überschreiben, indem Sie Werte aus einer Liste auswählen.  
+-   **Automatische Erkennung von Datentypen:** Der Assistent untersucht die Eindeutigkeit und die Verteilung von Spaltenwerten und empfiehlt anschließend den besten Datentyp sowie einen Verwendungstyp für die Daten. Sie können diese Vorschläge überschreiben, indem Sie Werte aus einer Liste auswählen.  
   
 -   **Vorschläge für Variablen**: Sie können auf ein Dialogfeld klicken und einen Analyzer starten, der Korrelationen zwischen den in einem Modell einbezogenen Spalten berechnet und bestimmt, ob alle Spalten basierend auf der bisherigen Konfiguration des Modells wahrscheinliche Vorhersagen des Ausgabeattributs sind. Sie können diese Vorschläge überschreiben, indem Sie andere Werte eingeben.  
   
@@ -111,15 +98,15 @@ Der Data Mining-Assistent in [!INCLUDE[msCoName](../../includes/msconame-md.md)]
 ## <a name="related-content"></a>Verwandte Inhalte  
  Weitere Informationen über die nötigen Entscheidungen bei der Erstellung eines Data Mining-Modells sind den folgenden Links zu entnehmen:  
   
- [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Content-Arten &#40; Datamining &#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [Content-Arten & #40; Datamining & #41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [Datentypen &#40; Datamining &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Datentypen & #40; Datamining & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [Funktionsauswahl &#40; Datamining &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [Funktionsauswahl & #40; Datamining & #41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [Fehlende Werte &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [Fehlende Werte & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
  [Drillthrough für Miningmodelle](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   

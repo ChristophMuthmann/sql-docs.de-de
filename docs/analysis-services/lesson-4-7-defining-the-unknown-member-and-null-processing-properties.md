@@ -1,29 +1,28 @@
 ---
 title: Definieren von the Unknown Member and Null Processing Eigenschaften | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7fca2e2c4920130ba3387d7881c63fdefa6ed4eb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1a47a551eaa8043499d201c0d5bee054d0883786
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lektion 4-7 – the Unknown Member and Null Processing Eigenschaften definieren
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +76,7 @@ In den Aufgaben in diesem Thema fügen Sie die Produktkategorie- und Produktunte
   
     Das Dialogfeld **Tabellen hinzufügen/entfernen** wird geöffnet.  
   
-2.  Wählen Sie in der **Liste Eingeschlossene Objekte** den Eintrag **DimProduct (dbo)**aus, und klicken Sie anschließend auf **Verknüpfte Tabellen hinzufügen**.  
+2.  Wählen Sie in der **Liste Eingeschlossene Objekte** den Eintrag **DimProduct (dbo)** aus, und klicken Sie anschließend auf **Verknüpfte Tabellen hinzufügen**.  
   
     Sowohl **DimProductSubcategory (dbo)** als auch **FactProductInventory (dbo)** werden hinzugefügt. Entfernen Sie **FactProductInventory (dbo)** , damit der Liste **Eingeschlossene Objekte** nur die **DimProductSubcategory (dbo)** -Tabelle hinzugefügt wird.  
   

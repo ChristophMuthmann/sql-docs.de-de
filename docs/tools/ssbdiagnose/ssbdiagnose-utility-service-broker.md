@@ -1,15 +1,16 @@
 ---
 title: Ssbdiagnose-Hilfsprogramm (Service Broker) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssbdiagnose
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -27,19 +28,20 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: b4cbf56d010afd4d97b6449fc35281baa44819de
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose-Hilfsprogramm (Service Broker)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **Ssbdiagnose** Hilfsprogramm meldet Probleme in [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen oder der Konfiguration der [!INCLUDE[ssSB](../../includes/sssb-md.md)] Dienste. Konfigurationsüberprüfungen können entweder für zwei Dienste oder für einen einzelnen Dienst ausgeführt werden. Probleme werden entweder im Eingabeaufforderungsfenster als für den Benutzer lesbarer Text oder als formatierte XML, die in eine Datei oder ein anderes Programm umgeleitet werden kann, gemeldet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Das Hilfsprogramm **ssbdiagnose** meldet Probleme in [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen oder der Konfiguration von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Diensten. Konfigurationsüberprüfungen können entweder für zwei Dienste oder für einen einzelnen Dienst ausgeführt werden. Probleme werden entweder im Eingabeaufforderungsfenster als für den Benutzer lesbarer Text oder als formatierte XML, die in eine Datei oder ein anderes Programm umgeleitet werden kann, gemeldet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -122,7 +124,7 @@ ssbdiagnose
  **-IGNORE** *Fehler-ID*  
  Gibt an, dass Fehler oder Meldungen mit der angegebenen *Fehler-ID* in Berichten nicht eingeschlossen werden. Sie können **-IGNORE** mehrmals angeben, um mehrere Meldungs-IDs zu unterdrücken.  
   
- **\<baseconnectionoptions>**  
+ **\<Baseconnectionoptions >**  
  Gibt die grundlegenden Verbindungsinformationen an, die von **ssbdiagnose** verwendet werden, wenn eine bestimmte Klausel keine Verbindungsoptionen enthält. Die in einer bestimmten Klausel angegebenen Verbindungsinformationen überschreiben die Informationen von **baseconnectionoption** . Dieser Vorgang wird für jeden Parameter separat ausgeführt. Beispiel: Wenn sowohl **-S** als auch **-d** in **baseconnectionoptions**angegeben sind und nur **-d** in **toconnectionoptions**angegeben ist, verwendet **ssbdiagnose** „-S“ aus **baseconnectionoptions** und „-d“ aus **toconnectionoptions**.  
   
  **CONFIGURATION**  
@@ -131,7 +133,7 @@ ssbdiagnose
  **FROM SERVICE** *Dienstname*  
  Gibt den Dienst an, der Konversationen initiiert.  
   
- **\<fromconnectionoptions>**  
+ **\<Fromconnectionoptions >**  
  Gibt die Informationen an, die erforderlich sind, um eine Verbindung mit der Datenbank herzustellen, die den Initiatordienst enthält. Wenn **fromconnectionoptions** nicht angegeben ist, verwendet **ssbdiagnose** die Verbindungsinformationen aus **baseconnectionoptions** , um eine Verbindung mit der Initiatordatenbank herzustellen. Wenn **fromconnectionoptions** angegeben ist, muss darin die Datenbank angegeben sein, die den Initiatordienst enthält. Wenn **fromconnectionoptions** nicht angegeben wird, muss **baseconnectionoptions** die Initiatordatenbank angeben.  
   
  **TO SERVICE** *Dienstname*[, *Broker-ID* ]  
@@ -147,13 +149,13 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions>**  
+ **\<Toconnectionoptions >**  
  Gibt die Informationen an, die erforderlich sind, um eine Verbindung mit der Datenbank herzustellen, die den Zieldienst enthält. Wenn **toconnectionoptions** nicht angegeben ist, verwendet **ssbdiagnose** die Verbindungsinformationen aus **baseconnectionoptions** , um eine Verbindung mit der Zieldatenbank herzustellen.  
   
  **MIRROR**  
  Gibt an, dass der dazugehörige [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst in einer gespiegelten Datenbank gehostet wird. **ssbdiagnose** überprüft, dass die Route zum Dienst eine gespiegelte Route ist, bei der MIRROR_ADDRESS für CREATE ROUTE angegeben wurde.  
   
- **\<mirrorconnectionoptions>**  
+ **\<Mirrorconnectionoptions >**  
  Gibt die Informationen an, die erforderlich sind, um eine Verbindung mit der Spiegeldatenbank herzustellen. Wenn **mirrorconnectionoptions** nicht angegeben ist, verwendet **ssbdiagnose** die Verbindungsinformationen aus **baseconnectionoptions** , um eine Verbindung mit der Spiegeldatenbank herzustellen.  
   
  **ON CONTRACT** *Vertragsname*  
@@ -208,7 +210,7 @@ WHERE database_id = DB_ID();
  **-TIMEOUT** *Timeoutintervall*  
  Gibt die Anzahl der Sekunden für die Ausführung eines **RUNTIME** -Berichts an. Wenn **-TIMEOUT** nicht angegeben ist, wird der Laufzeitbericht ohne zeitliche Begrenzung ausgeführt. **-TIMEOUT** wird nur für **RUNTIME** -Berichte und nicht für **CONFIGURATION** -Berichte verwendet. Mit STRG+C können Sie **ssbdiagnose** beenden, wenn **-TIMEOUT** nicht angegeben wurde, oder Sie können einen Laufzeitbericht vor Ablauf des Timeoutintervalls beenden.**-** Das*Timeoutintervall* muss eine Zahl zwischen 1 und 2.147.483.647 sein.  
   
- **\<runtimeconnectionoptions>**  
+ **\<Runtimeconnectionoptions >**  
  Gibt die Verbindungsinformationen für die Datenbanken an, in denen die den überwachten Konversationselementen zugeordneten Dienste enthalten sind. Wenn alle Dienste in der gleichen Datenbank enthalten sind, müssen Sie nur eine **CONNECT TO** -Klausel angeben. Wenn sich die Dienste in unterschiedlichen Datenbanken befinden, müssen Sie für jede dieser Datenbanken eine **CONNECT TO** -Klausel angeben. Wenn **runtimeconnectionoptions** nicht angegeben ist, verwendet **ssbdiagnose** die Verbindungsinformationen aus **baseconnectionoptions**.  
   
  **–E**  
@@ -220,7 +222,7 @@ WHERE database_id = DB_ID();
   
  Wird die Option **-E** zusammen mit der Option **-U** oder der Option **-P** verwendet, wird eine Fehlermeldung generiert.  
   
- **-U** *login_id*  
+ **-U** *Anmelde-ID*  
  Öffnen Sie mit der angegebenen Anmelde-ID eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Die Anmeldung muss Mitglied der festen Serverrolle **sysadmin** sein.  
   
  Wenn weder **-E** noch **-U** angegeben ist, verwendet **ssbdiagnose** den Wert aus der Umgebungsvariablen SQLCMDUSER. Wenn SQLCMDUSER auch nicht festgelegt ist, versucht **ssbdiagnose** , eine Verbindung unter Verwendung des Windows-Authentifizierungsmodus herzustellen. Dabei wird das Windows-Konto des Benutzers verwendet, der **ssbdiagnose**ausführt.  
@@ -236,7 +238,7 @@ WHERE database_id = DB_ID();
  Wenn die Option **-P** ohne Kennwort angegeben ist, verwendet **ssbdiagnose** das Standardkennwort (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Weitere Informationen finden Sie unter [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md).  
   
  Die Aufforderung zur Eingabe des Kennworts wird folgendermaßen an der Konsole ausgegeben: `Password:`  
   
@@ -249,7 +251,7 @@ WHERE database_id = DB_ID();
  **-S** *Servername*[\\*Instanzname*]  
  Gibt die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, die die zu analysierenden [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienste enthält.  
   
- Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Geben Sie *Server_name***\\***Instance_name* zur Verbindung mit einer benannten Instanz von der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server. Wenn **-S** nicht angegeben ist, verwendet **ssbdiagnose** den Wert der Umgebungsvariablen SQLCMDSERVER. Wenn SQLCMDSERVER auch nicht festgelegt ist, stellt **ssbdiagnose** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dem lokalen Computer her.  
+ Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Geben Sie *server_name***\\*** instance_name* an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn **-S** nicht angegeben ist, verwendet **ssbdiagnose** den Wert der Umgebungsvariablen SQLCMDSERVER. Wenn SQLCMDSERVER auch nicht festgelegt ist, stellt **ssbdiagnose** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dem lokalen Computer her.  
   
  **-d** *Datenbankname*  
  Gibt die Datenbank an, die die zu analysierenden [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienste enthält. Wenn die Datenbank nicht vorhanden ist, wird eine Fehlermeldung generiert. Wenn **-d** nicht angegeben ist, wird standardmäßig die Datenbank verwendet, die in der Standarddatenbank-Eigenschaft Ihrer Anmeldung angegeben ist.  
@@ -260,7 +262,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Zeigt die Hilfe zur Befehlszeile an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Verwenden Sie **ssbdiagnose** , um folgende Aufgaben auszuführen:  
   
 -   Bestätigen, dass in einer neu konfigurierten [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Anwendung keine Konfigurationsfehler vorhanden sind.  
@@ -451,9 +453,9 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   

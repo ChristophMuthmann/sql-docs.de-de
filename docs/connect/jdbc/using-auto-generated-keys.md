@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b77a2d4dc10c6359fc6d5b27dea1d7c90247c5e3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8e59b212e60d9bdc177ea310aa8a04978f6c72df
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-auto-generated-keys"></a>Verwenden von automatisch generierten Schlüsseln
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

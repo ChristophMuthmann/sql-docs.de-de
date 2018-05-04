@@ -1,35 +1,23 @@
 ---
 title: Definieren von benannten Berechnungen in einer Datenquellensicht (Analysis Services) | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- modifying named calculations
-- data source views [Analysis Services], named calculations
-- named calculations [Analysis Services]
-ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 62d9d96f3d0fc373ba83149789487706fe8354c7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 958cbd16ed777f77b9829eb0b99071a64b65bd06
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definieren von benannten Berechnungen in einer Datenquellensicht (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Eine benannte Berechnung ist ein SQL-Ausdruck, der als berechnete Spalte dargestellt wird. Dieser Ausdruck wird als Spalte in der Tabelle angezeigt und verhält sich auch wie eine Spalte. Mit einer benannten Berechnung können Sie das relationale Schema vorhandener Tabellen oder Sichten in einer Datenquellensicht erweitern, ohne die Tabellen oder Sichten in der zugrunde liegenden Datenquelle zu ändern. Betrachten Sie die folgenden Beispiele:  
+  Eine benannte Berechnung ist ein SQL-Ausdruck, der als berechnete Spalte dargestellt wird. Dieser Ausdruck wird als Spalte in der Tabelle angezeigt und verhält sich auch wie eine Spalte. Mit einer benannten Berechnung können Sie das relationale Schema vorhandener Tabellen oder Sichten in einer Datenquellensicht erweitern, ohne die Tabellen oder Sichten in der zugrunde liegenden Datenquelle zu ändern. Betrachten Sie die folgenden Beispiele:  
   
 -   Erstellen Sie eine einzelne benannte Berechnung, die von mehreren Spalten in einer Faktentabelle abgeleitet wird (erstellen Sie z. B. einen Steuerbetrag, indem ein Steuersatz mit einem Verkaufspreis multipliziert wird).  
   
@@ -91,6 +79,6 @@ FROM
  Wenn Sie versuchen, eine benannte Berechnung zu löschen, wird eine Liste der im Projekt oder in der Datenbank definierten Objekte angezeigt, die durch den Löschvorgang ungültig werden. Überprüfen Sie die Liste sorgfältig vor dem Löschen der Berechnung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Definieren von benannten Abfragen in einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Definieren von benannten Abfragen in einer Datenquellensicht & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

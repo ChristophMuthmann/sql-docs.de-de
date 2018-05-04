@@ -19,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8a7b0f167e67ece14b1ad13e47e2cd59b73387a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3704e5fed5b9ec04622030d697014dd9f7bb552f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>Prozedur-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  

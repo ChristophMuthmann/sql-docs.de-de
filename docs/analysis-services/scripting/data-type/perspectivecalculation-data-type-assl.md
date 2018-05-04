@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 767641d72af98aa02cfa4c1008c0dd31d8c53ca2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5316406047fe6c237c2c326adb77f2c89321534a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>PerspectiveCalculation-Datentyp (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen Grunddatentyp, der die Beziehung zwischen einer Berechnung darstellt und einen [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert den Grunddatentyp, der die Beziehung zwischen einer Berechnung und einem [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) -Element darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Basisdatentypen|InclusionThresholdSetting|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Basisdatentypen|Keine|  
+|Abgeleitete Datentypen|Keine|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
-|Untergeordnete Elemente|[Anmerkungen](../../../analysis-services/scripting/collections/annotations-element-assl.md), [Namen](../../../analysis-services/scripting/properties/name-element-assl.md), [Typ](../../../analysis-services/scripting/properties/type-element-perspectivecalculation-assl.md)|  
-|Abgeleitete Elemente|[Berechnung](../../../analysis-services/scripting/objects/calculation-element-assl.md) ([Berechnungen](../../../analysis-services/scripting/collections/calculations-element-assl.md) Auflistung von [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
+|Übergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [Name](../../../analysis-services/scripting/properties/name-element-assl.md), [Type](../../../analysis-services/scripting/properties/type-element-perspectivecalculation-assl.md)|  
+|Abgeleitete Elemente|[Calculation](../../../analysis-services/scripting/objects/calculation-element-assl.md) ([Calculations](../../../analysis-services/scripting/collections/calculations-element-assl.md) -Auflistung von [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Analysis Services Scripting Language-XML-Datentypen & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

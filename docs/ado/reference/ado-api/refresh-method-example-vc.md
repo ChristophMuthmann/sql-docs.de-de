@@ -21,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: af1178b21aa307a4a9132558410cdd4198e540bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b09f2a3e98d66fbeacae02f0ad20ca5594a0e8ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-method-example-vc"></a>Aktualisieren Sie die (VC++-Methodenbeispiel)
 Dieses Beispiel veranschaulicht die Verwendung der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode zum Aktualisieren der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung für eine gespeicherte Prozedur [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt.  

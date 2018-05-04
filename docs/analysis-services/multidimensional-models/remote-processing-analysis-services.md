@@ -1,31 +1,23 @@
 ---
 title: Remote verarbeiten (Analysis Services) | Microsoft Docs
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e59011361e6dad623fa5f5cab71d262eb5eb8338
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-processing-analysis-services"></a>Remoteverarbeitung (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Sie können die geplante oder unbeaufsichtigte Verarbeitung auf einer Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausführen, wobei die Verarbeitungsanforderung von einem Computer stammt, jedoch auf einem anderen Computer im selben Netzwerk ausgeführt wird.  
+  Sie können die geplante oder unbeaufsichtigte Verarbeitung auf einer Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausführen, wobei die Verarbeitungsanforderung von einem Computer stammt, jedoch auf einem anderen Computer im selben Netzwerk ausgeführt wird.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
   
@@ -38,7 +30,7 @@ Sie können die geplante oder unbeaufsichtigte Verarbeitung auf einer Remoteinst
 -   Beheben Sie alle bestehenden lokalen Verarbeitungsprobleme, bevor Sie eine Remoteverarbeitung anwenden. Stellen Sie sicher, dass bei einer lokalen Verarbeitungsanforderung die Daten erfolgreich aus der externen relationalen Datenquelle abgerufen werden können. Anweisungen zum Angeben der Anmeldeinformationen für das Abrufen der Daten finden Sie unter [Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
 ## <a name="on-demand-remote-processing"></a>Bedarfsgesteuerte Remoteverarbeitung  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] akzeptiert Verarbeitungsanforderungen von Benutzer- oder Anwendungskonten mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratorberechtigungen. Wenn Sie Administrator sind, stellen Sie sicher, dass Sie eine Verbindung zur Remoteinstanz herstellen und die Datenbank manuell über die Remoteverbindung verarbeiten können.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]akzeptiert verarbeitungsanforderungen von Benutzer- oder Anwendungskonten mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administratorberechtigungen. Wenn Sie Administrator sind, stellen Sie sicher, dass Sie eine Verbindung zur Remoteinstanz herstellen und die Datenbank manuell über die Remoteverbindung verarbeiten können.  
   
 1.  Starten Sie auf dem Computer, der zum Planen der Verarbeitung verwendet wird, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung zur Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] her.  
   

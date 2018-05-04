@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fc495e44fd9c2bc49ba54afbb17cc48a5a855ac6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>Datenbearbeitung für MDX - SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +130,7 @@ FROM
   
  Mit der NON VISUAL-Option in der untergeordneten SELECT-Anweisung können Sie Member durch Filtern ausschließen und gleichzeitig die tatsächlichen Gesamtwerte anstelle der gefilterten Gesamtwerte beibehalten. So können Sie die besten zehn Verkaufswerte (Personen/Produkte/Regionen) abfragen und die tatsächliche Summe aller Verkaufswerte für alle abgefragten Member beibehalten und nicht den Gesamtwert der Verkäufe für die zurückgegebenen besten zehn. Weitere Informationen finden Sie unten in den Beispielen.  
   
- Berechnete Elemente können in eingeschlossen werden \<SELECT-abfrageachsenklausel > Wenn die Verbindung geöffnet wurde mit dem Verbindungszeichenfolgenparameter *Unterabfragen = 1*; finden Sie unter [unterstützten XMLA-Eigenschaften &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung von Parametern. Es wird ein Beispiel für berechnete Elemente in untergeordneten SELECT-Anweisungen bereitgestellt.  
+ Berechnete Elemente können in eingeschlossen werden \<SELECT-abfrageachsenklausel > Wenn die Verbindung geöffnet wurde mit dem Verbindungszeichenfolgenparameter *Unterabfragen = 1*; finden Sie unter [XMLA-Eigenschaften unterstützt &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung von Parametern. Es wird ein Beispiel für berechnete Elemente in untergeordneten SELECT-Anweisungen bereitgestellt.  
   
 ## <a name="autoexists"></a>Autoexists  
  Wenn mindestens zwei Attribute der Dimension in einer SELECT-Anweisung verwendet werden, wertet Analysis Services die Ausdrücke der Attribute aus, damit die Elemente dieser Attribute ordnungsgemäß so beschränkt werden, dass sie die Kriterien aller anderen Attribute erfüllen. Angenommen, Sie arbeiten mit Attributen der Geography-Dimension. Wenn Sie einen Ausdruck, die alle Elemente der City-Attribut und ein anderer Ausdruck die Einschränkung Elemente des Country-Attributs auf alle Länder in Europa zurückgibt verwenden, wird dies führen, dass es nur die Orte, die auf Länder in Europa gehören Europas City-Elemente. Diese Eigenschaft von Analysis Services wird als Autoexists bezeichnet und gilt nur für Attribute in der gleichen Dimension. Autoexists gilt nur für Attribute der gleichen Dimension, denn es versucht zu verhindern, dass die in einem Attributausdruck ausgeschlossenen Dimensionsdatensätze von den anderen Attributausdrücken eingeschlossen werden. Autoexists kann auch als resultierende Schnittmenge der unterschiedlichen Attributausdrücke in den Dimensionsdatensätzen bezeichnet werden. Finden Sie unter den folgenden Beispielen unten:  
@@ -354,7 +353,7 @@ FROM
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
   
- Autoexists-Verhalten kann geändert werden, mithilfe der AUTOEXISTS = [1 | 2 | 3]-Parameter in der Verbindungszeichenfolge; finden Sie unter [unterstützten XMLA-Eigenschaften &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung von Parametern.  
+ Autoexists-Verhalten kann geändert werden, mithilfe der AUTOEXISTS = [1 | 2 | 3]-Parameter in der Verbindungszeichenfolge; finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung von Parametern.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt die Summe aus der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003 in der `Date` Dimension, aus der **Adventure Works** Cube.  
@@ -392,7 +391,7 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**Bekleidung**|**Components**|  
+||**All Products**|**Accessories**|**Fahrräder**|**Bekleidung**|**Components**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -478,9 +477,9 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX-Datenbearbeitungsanweisungen &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Beschränken die Abfrage mit Abfrage- und Slicerachsen &#40; MDX &#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Schlüsselkonzepte in MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX-Datenbearbeitungsanweisungen &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Beschränken die Abfrage mit Abfrage- und Slicerachsen & #40; MDX & #41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

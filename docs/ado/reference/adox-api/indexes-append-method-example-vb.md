@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4abb71f0e2f51fa200e3005bd532b91aefaeae79
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b97a26b889859c5f8bb2c84075aadbd78c952acf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexes-append-method-example-vb"></a>Indizes Append-Methode (Beispiel) (VB)
 Der folgende Code veranschaulicht, wie ein neuer Index erstellt wird. Der Index ist auf zwei Spalten in der Tabelle.  

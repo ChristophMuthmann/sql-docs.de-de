@@ -14,15 +14,14 @@ ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
-ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 72b403297be09f8bee1e78b9f545f279936cfa0d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 55213810bdc40bf817b1349715474974d6a72540
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-tabular-model-project"></a>Erstellen Sie ein Projekt für tabellarische Modelle
 

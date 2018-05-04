@@ -24,12 +24,11 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 22068e036009c938cda5f67ad813021a863f8638
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e51f127fa141d151875621209dc4195393670744
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_depends [ @objname = ] '<object>'
  Der Name des Schemas, zu dem das Objekt gehört.  
   
  *object_name*  
- Das Datenbankobjekt, das auf Abhängigkeiten untersucht werden soll. Das Objekt kann eine Tabelle, eine Sicht, eine gespeicherte Prozedur, eine benutzerdefinierte Funktion oder ein Trigger sein. o*bject_name* ist vom Datentyp **nvarchar(776)**und hat keinen Standardwert.  
+ Das Datenbankobjekt, das auf Abhängigkeiten untersucht werden soll. Das Objekt kann eine Tabelle, eine Sicht, eine gespeicherte Prozedur, eine benutzerdefinierte Funktion oder ein Trigger sein. o*bject_name* ist vom Datentyp **nvarchar(776)** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

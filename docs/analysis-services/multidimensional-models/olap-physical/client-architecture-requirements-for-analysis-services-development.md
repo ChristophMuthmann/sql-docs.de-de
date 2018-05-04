@@ -1,36 +1,19 @@
 ---
-title: "Anforderungen an die Clientarchitektur für Analysis Services-Entwicklung | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- local mining models [Analysis Services]
-- Analysis Services, architecture
-- providers [Analysis Services]
-- data pumps [Analysis Services]
-- client architecture [Analysis Services]
-- local cubes [Analysis Services]
-ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 
-author: Minewiskan
+title: Anforderungen an die Clientarchitektur für Analysis Services-Entwicklung | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 63ba4a3a70f7fe763c33e05c30f186efa809d19f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Anforderungen an die Clientarchitektur für die Analysis Services-Entwicklung
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +36,7 @@ ms.lasthandoff: 02/15/2018
 |.NET-Sprachen|ADO MD.NET|  
 |Alle Sprachen, die SOAP unterstützen|XML für Analysis|  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verfügt über eine Webarchitektur mit einer vollständig skalierbaren mittleren Ebene für die Bereitstellung von kleinen und großen Unternehmen ein. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stellt umfassende Unterstützung auf mittlerer Ebene für Webdienste zur Verfügung. ASP-Anwendungen werden von OLE DB für OLAP und ADO MD unterstützt, ASP.NET-Anwendungen werden von ADOMD.NET unterstützt. Die mittlere Ebene ist für viele gleichzeitige Benutzern skalierbar, wie die folgende Abbildung veranschaulicht.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verfügt über eine Webarchitektur mit einer vollständig skalierbaren mittleren Ebene, die sowohl in kleineren als auch in großen Organisationen bereitgestellt werden kann. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stellt umfassende Unterstützung auf mittlerer Ebene für Webdienste zur Verfügung. ASP-Anwendungen werden von OLE DB für OLAP und ADO MD unterstützt, ASP.NET-Anwendungen werden von ADOMD.NET unterstützt. Die mittlere Ebene ist für viele gleichzeitige Benutzern skalierbar, wie die folgende Abbildung veranschaulicht.  
   
  ![Logisches Diagramm für die Architektur der mittleren Ebene](../../../analysis-services/multidimensional-models/olap-physical/media/as-midtierarch9.gif "logisches Diagramm für die Architektur der mittleren Ebene")  
   
@@ -62,7 +45,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Analysis Services im tabellarischen oder SharePoint-Modus  
  In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], der Server gestartet werden, im xVelocity Datenanalyse im Arbeitsspeicher (VertiPaq) Modulmodus für tabellarische Datenbanken und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Arbeitsmappen, die auf einer SharePoint-Website veröffentlicht wurden.  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sind die einzigen Clientumgebungen, die unterstützt werden, zum Erstellen und Abfragen von in-Memory-Datenbanken, die SharePoint- oder tabellarischen Modus verwendet. Der eingebettete [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Datenbank, die Sie erstellen, indem Sie mit Excel und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Tools ist in der Excel-Arbeitsmappe enthalten und wird als Teil der Excel-XLSX-Datei gespeichert.  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sind die einzigen Clientumgebungen, die zum Erstellen und Abfragen von Datenbanken im Arbeitsspeicher unterstützt werden und den SharePoint- bzw. den tabellarischen Modus verwenden. Der eingebettete [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Datenbank, die Sie erstellen, indem Sie mit Excel und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Tools ist in der Excel-Arbeitsmappe enthalten und wird als Teil der Excel-XLSX-Datei gespeichert.  
   
  Eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Arbeitsmappe kann Daten verwenden, die in einem herkömmlichen Cube gespeichert werden, wenn Sie die Cubedaten in die Arbeitsmappe importieren. Sie können auch Daten aus einer anderen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Arbeitsmappe importieren, wenn diese zu einer SharePoint-Website veröffentlicht wurde.  
   

@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 85fe295752bc8e9a3680211a108fb5cb66ac7660
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 00806576cb0d7bd121505ed74031bf49b42a0776
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="state-property-example-vb"></a>Beispiel für die State-Eigenschaft (VB)
 Dieses Beispiel verwendet die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft, um eine Meldung angezeigt, während der asynchronen Verbindungen geöffnet sind und asynchrone Befehle ausgeführt werden.  

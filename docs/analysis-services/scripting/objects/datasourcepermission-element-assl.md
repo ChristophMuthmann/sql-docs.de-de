@@ -25,15 +25,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 91c4639fb55dc757519ca2dddcd6153e0874097b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2736e5f3f2c075e79af0f5522cdfc01bc03c735f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasourcepermission-element-assl"></a>DataSourcePermission-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert die Standardberechtigungen in einem [DataSource](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md) für einen bestimmten Datentyp [Rolle](../../../analysis-services/scripting/objects/role-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert die Standardberechtigungen in einem [DataSource](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md) für einen bestimmten Datentyp [Rolle](../../../analysis-services/scripting/objects/role-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,24 +48,24 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|[Berechtigung](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-n: Optionales Element, das einmal oder mehr als einmal auftreten kann.|  
+|Standardwert|Keine|  
+|Kardinalität|0-n: Optionales Element, das einmal oder mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[DataSourcePermissions](../../../analysis-services/scripting/collections/datasourcepermissions-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  **DataSourcePermission** -Objekte können nur für Rollen vorhanden sein, die im Besitz der Datenbank sind, und nur ein **DataSourcePermission** -Objekt kann für eine Rolle vorhanden sein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Role-Element &#40; ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
- [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Role-Element & #40; ASSL & #41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
+ [Objekte & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

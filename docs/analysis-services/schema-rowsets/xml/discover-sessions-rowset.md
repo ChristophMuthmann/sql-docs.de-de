@@ -20,15 +20,15 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: daa1e2d464283fa3e2cb37733bb2a705454e50dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 25272b0fe9689bfdb76d427fe7a92a44278978a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoversessions-rowset"></a>DISCOVER_SESSIONS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Stellt ressourcenverwendungs- und Aktivitätsinformationen über bereit der zurzeit geöffneten Sitzungen auf dem Server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Stellt Informationen zur Ressourcenverwendung und Aktivität der zurzeit geöffneten Sitzungen auf dem Server bereit.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DISCOVER_SESSIONS** Rowset enthält die folgenden Spalten.  
@@ -76,6 +76,6 @@ ms.lasthandoff: 01/08/2018
 |SESSION_STATUS|DBTYPE_I4|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dd738d665a8dd94758d665828174b244622a3190
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 83fc733e36f6e68674d3f32b47087090499cf7cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,15 +44,15 @@ Wtd( [ Member_Expression ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Wenn ein Elementausdruck nicht angegeben ist, wird die Standardeinstellung ist das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs Wochen, in der ersten Dimension des Typs Zeit (**Time.CurrentMember**) in der Measuregruppe.  
   
  Die **Wtd** Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) Funktion, auf die Ebene festgelegt ist *Wochen*. Somit ist `Wtd(Member_Expression)` äquivalent zu `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [QTD &#40; MDX &#41;](../mdx/qtd-mdx.md)   
- [MTd &#40; MDX &#41;](../mdx/mtd-mdx.md)   
- [YTD &#40; MDX &#41;](../mdx/ytd-mdx.md)   
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [QTD &#40;MDX&#41;](../mdx/qtd-mdx.md)   
+ [MTd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
+ [YTD &#40;MDX&#41;](../mdx/ytd-mdx.md)   
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,33 +1,32 @@
 ---
 title: DISCOVER_TRANSACTIONS-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7ca0b129013f5bdced79d8fb8245893a3db7ff06
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d31bdc0ed56f44e4d14886e366f59207dfc78039
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovertransactions-rowset"></a>DISCOVER_TRANSACTIONS-Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Gibt den aktuellen Satz von ausstehenden Transaktionen auf dem System zurück.  
+  Gibt den aktuellen Satz von ausstehenden Transaktionen auf dem System zurück.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL grammar [ODBC], ALTER TABLE
 - ALTER TABLE [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 770d109f4d8e8b84836fd6469b610dce7911937b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 078fa87389ef6d199ef921c21371b93f4106321a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-statement"></a>ALTER TABLE-Anweisung
 Wenn der Microsoft Access, dBASE oder Paradoxdriver verwendet wird, wird die ALTER TABLE-Anweisung mit Add- und Drop Tabelle Definition Einschränkungsklauseln unterstützt. (Für die Treiber für Microsoft Excel- oder Textdateien sind ALTER TABLE-Anweisungen nicht unterstützt.)  

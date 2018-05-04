@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 613fec1ac05108dd6fe9716554dff9ae5ea67cbb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8fe3daabbecab4c95513e250387a9ad224483e34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resync-method-example-vb"></a>Resync-Methode (Beispiel) (VB)
 Dieses Beispiel veranschaulicht die Verwendung der [Resync](../../../ado/reference/ado-api/resync-method.md) Methode, um Daten in ein statisches Recordset zu aktualisieren.  

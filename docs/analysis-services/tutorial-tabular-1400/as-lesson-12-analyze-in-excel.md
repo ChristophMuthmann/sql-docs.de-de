@@ -14,15 +14,14 @@ ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
-ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 17fee33ed671ba60625a2df7629890c8abbbaed5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6e6c4ed1eb92a629a8916bd1eae455b82914ae0c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analyze-in-excel"></a>In Excel analysieren
 

@@ -25,12 +25,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9495051ca7a4035eb32d1376eb0fe4dae6ad98a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e00b0639e92ed4e80562092ef182f7a88a3fbd26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Auflistungen (Visual C++-Syntax Index mit #import)
 Es ist hilfreich zu wissen, dass Sammlungen bestimmte allgemeine Methoden und Eigenschaften erbt.  

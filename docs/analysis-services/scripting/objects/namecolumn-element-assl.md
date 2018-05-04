@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2440e8e9456121c0da6d57f6498933c6eb6d53cd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1cf80edd8221632cfe56c4b3c9f3b681fc1d2b1a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="namecolumn-element-assl"></a>NameColumn-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifiziert die Spalte, die den Namen des übergeordneten Elements bereitstellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Identifiziert die Spalte, die den Namen des übergeordneten Elements bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,32 +50,32 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)|  
-|Standardwert|Finden Sie in der folgenden Tabelle aus.|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Standardwert|Siehe Tabelle unten.|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 |Vorgänger oder übergeordnetes Element|Standardwert|  
 |------------------------|-------------------|  
 |[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|Variiert (siehe Hinweise)|  
-|[ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|InclusionThresholdSetting|  
+|[ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|Keine|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md) Auflistung von **DimensionAttribute** enthält ein einziges [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) Element, das eine Schlüsselspalte mit einem Zeichenfolgen-Datentyp, der darstellt**DataItem** Werte dienen als Standardwerte für die **NameColumn** Element.  
+ Wenn die [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md) -Auflistung von **DimensionAttribute** ein einzelnes [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) -Element enthält, das eine Schlüsselspalte mit einem Zeichenfolgedatentyp darstellt, werden die gleichen **DataItem** -Werte als Standardwerte für das **NameColumn** -Element verwendet.  
   
- Weitere Informationen zu den **DataItem** Typ, einschließlich einer Tabelle von Analysis Services Scripting Language (ASSL)-Objekten und Eigenschaften der **DataItem** finden Sie unter [DataItem-Datentyp &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+ Weitere Informationen zu den **DataItem** Typ, einschließlich einer Tabelle von Analysis Services Scripting Language (ASSL)-Objekten und Eigenschaften der **DataItem** finden Sie unter [DataItem-Datentyp & #40; ASSL & #41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
   
  Die Elemente, die den übergeordneten Elementen von entsprechen **NameColumn** im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.DimensionAttribute> und <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objekte & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

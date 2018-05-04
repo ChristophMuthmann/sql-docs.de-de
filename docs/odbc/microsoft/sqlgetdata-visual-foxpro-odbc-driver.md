@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbf1b1eb-ecab-43d6-9099-3d627344e0fe
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 587472861896c9ec6f5c0d1ab7329a11a0bc2e3c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5a4110eab93cb16a0470a7ccbed0c0a0aaa9e7d7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdata-visual-foxpro-odbc-driver"></a>SQLGetData (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

@@ -24,13 +24,12 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddfd5a7dd04bcacb2544b6fb38a2cd1bedd6e284
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ sp_columns [ @table_name = ] object
  Wenn der aktuelle Benutzer ein Objekt mit dem angegebenen Namen besitzt, werden die Spalten dieses Objekts zurückgegeben. Wenn *Besitzer* nicht angegeben wird und der aktuelle Benutzer besitzt nicht die ein Objekt mit dem angegebenen *Objekt*, **Sp_columns** sucht nach einem Objekt mit dem angegebenen  *Objekt* gehören dem Datenbankbesitzer. Sofern ein solches Objekt vorhanden ist, werden dessen Spalten zurückgegeben.  
   
  [ **@table_qualifier****=**] *qualifier*  
- Der Name des Objektqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Objekte (*Qualifizierer***.*** Besitzer***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
+ Der Name des Objektqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Objekte (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
   
  [ **@column_name=**] *column*  
  Eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Kataloginformationen benötigt wird. *Spalte* ist **nvarchar(384)**, hat den Standardwert NULL. Wenn *Spalte* ist nicht angegeben ist, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Spalte* dar, den Namen der Spalte in der **"syscolumns"** Tabelle. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-92-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  

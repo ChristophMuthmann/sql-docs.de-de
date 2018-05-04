@@ -1,31 +1,23 @@
 ---
 title: New-PowerPivotServiceApplication-Cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e36e6b170a141c7611c5eb246fd999beee970bf8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>New-PowerPivotServiceApplication-Cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Erstellt eine neue [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung.  
+  Erstellt eine neue [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -45,7 +37,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
   
 ## <a name="parameters"></a>Parameter  
   
-### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<string>  
+### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<Zeichenfolge >  
  Legt den Anzeigenamen der Dienstanwendung fest.  
   
 |||  
@@ -67,7 +59,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-databasename-string"></a>-DatabaseName \<string>  
+### <a name="-databasename-string"></a>DatabaseName - \<Zeichenfolge >  
  Gibt den Namen einer relationalen SQL Server-Datenbank an, in der Anwendungsdaten gespeichert werden. Es ist ratsam, der Anwendung einen aussagekräftigen Namen zu geben, damit ihr Zweck leicht erkennbar ist. Sie können eine neue Datenbank erstellen oder eine vorhandene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungsdatenbank für die neue Anwendung angeben, die Sie erstellen.  
   
 |||  
@@ -78,7 +70,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<switch>  
+### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<wechseln >  
  Erstellt in der Standard-Dienstverbindungsgruppe eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstverbindung. Zuordnungen zwischen Webanwendungen und Dienstanwendungen werden von der Mitgliedschaft in dieser Gruppe bestimmt. Alle Webanwendungen, die die Standard-Dienstverbindungsgruppe abonnieren, können die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung verwenden, die Sie der Gruppe hinzufügen. Obwohl Sie in einer Farm mehrere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungen verwenden können, kann nur eine Dienstanwendung Mitglied der Standard-Dienstverbindungsgruppe sein.  
   
  Wenn Sie bereits eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung verwenden, die Mitglied der Standardproxygruppe ist, müssen Sie für die neu zu erstellende Anwendung AddToDefaultProxyGroup:$false festlegen. Sie müssen die neue Dienstanwendung einer benutzerdefinierten Dienstverbindungsgruppe hinzufügen.  Sie können zu diesem Zweck integrierte SharePoint-Cmdlets verwenden.  Get-SPServiceApplicationProxyGroup gibt die Liste der Dienstverbindungsgruppen zurück, die in der Farm definiert sind.  

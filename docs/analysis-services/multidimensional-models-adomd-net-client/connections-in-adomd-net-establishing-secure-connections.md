@@ -1,32 +1,19 @@
 ---
 title: Aufbauen von sicheren Verbindungen in ADOMD.NET | Microsoft Docs
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- connections [ADOMD.NET]
-- security [ADOMD.NET]
-ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b92b5b1bfdec6e311b93743d22cc990623315a9a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Verbindungen in ADOMD.NET - aufbauen von sicheren Verbindungen
   Wenn Sie eine Verbindung in ADOMD.NET verwenden, hängt die Sicherheitsmethode aus, die für die Verbindung verwendet wird der Wert des der **ProtectionLevel** Eigenschaft der Verbindungszeichenfolge verwendet wird, beim Aufrufen der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> Methode von der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  

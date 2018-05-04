@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
 - SQLBulkOperations function [ODBC], updating rows
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5a561fe33a54f31bcbe554dbf34525812c234e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6b843392d9bf45eedad3a4062d7a1f9590801f21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Aktualisieren von Zeilen durch Lesezeichen mit SQLBulkOperations
 Beim Aktualisieren einer Zeile von Lesezeichen, **SQLBulkOperations** macht die Datenquelle, die eine oder mehrere Zeilen der Tabelle zu aktualisieren. Die Zeilen werden durch das Lesezeichen in einer Lesezeichenspalte gebundenen identifiziert. Die Zeile wird aktualisiert, mit der Daten in die Anwendungspuffer für jede gebundene Spalte (außer wenn der Wert in die Längen-/Indikatorpuffers für eine Spalte SQL_COLUMN_IGNORE ist). Ungebundene Spalten werden nicht aktualisiert werden.  

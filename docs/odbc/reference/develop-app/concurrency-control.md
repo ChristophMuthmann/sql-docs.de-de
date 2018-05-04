@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca6003893c767cf7fe3a5649097d816c96b6f064
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d0a9065248139fe3d2e369062301b76b4839955
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concurrency-control"></a>Parallelitätssteuerung
 *Parallelität* ist die Fähigkeit von zwei Transaktionen gleichzeitig dieselben Daten verwenden und mit erhöhter Transaction Isolation normalerweise reduzierten Parallelität ist. Dies ist, da die Isolation jeder Transaktion wird durch Sperren von Zeilen in der Regel implementiert, und wie weitere Zeilen gesperrt sind, weniger Transaktionen abgeschlossen werden, können ohne durch eine gesperrte Zeile zumindest vorübergehend blockiert. Während reduzierter Parallelität in der Regel als ein Kompromiss für höheren Isolationsstufen von Transaktionen für das Verwalten der Datenbankintegrität erforderlich akzeptiert wird, kann es ein Problem bei der interaktiven Anwendungen mit hoher Lese-/Schreibzugriff-Aktivität, die Cursor verwendet werden.  

@@ -1,31 +1,23 @@
 ---
-title: "Grundlegendes zu Power View für mehrdimensionale Modelle | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Grundlegendes zu Power View für mehrdimensionale Modelle | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 465eadfa66494c7c58b2698d73acea60ee6048f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In diesem Artikel wird Power View für mehrdimensionale Modelle in SQL Server beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
+  In diesem Artikel wird Power View für mehrdimensionale Modelle in SQL Server beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
   
  Mehrdimensionale Modelle bieten branchenführende Modellierungs-, Speicherungs- und Analyselösungen für OLAP-Daten. In Microsoft SQL Server unterstützen mehrdimensionale Modelle das Analysieren, Durchsuchen und Visualisieren von Daten im Ad-hoc-Verfahren unter Verwendung von Microsoft Power View.  
   

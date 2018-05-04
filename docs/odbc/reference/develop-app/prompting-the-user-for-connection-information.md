@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], SqlConnect
 - connecting to driver [ODBC], prompting user for information
@@ -27,12 +27,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796713fb12fe2eb70a0e7630ec558a63d7cfec4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 54d419e83a4a44273b42559e4b1ba300f021f771
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Der Benutzer aufgefordert, Verbindungsinformationen
 Wenn die Anwendung verwendet **SQLConnect** und muss den Benutzer für alle Verbindungsinformationen aufzufordern wie Benutzername und Kennwort muss geschieht dies selbst. Obwohl dadurch die Anwendung die Steuerung des "Erscheinungsbilds" kann die Anwendung, die Treiber-spezifischen Code enthalten Internet Explorer erzwungen. Dies tritt auf, wenn die Anwendung den Benutzer zur treiberspezifische Verbindungsinformationen aufzufordern muss. Dies stellt eine unmöglich Situation für allgemeiner Anwendungen, die darauf ausgelegt sind, funktionieren alle Treiber, einschließlich der Treiber, die nicht vorhanden sind, wenn die Anwendung geschrieben wird.  

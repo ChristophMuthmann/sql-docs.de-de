@@ -1,30 +1,23 @@
 ---
-title: "Starten oder Beenden eines PowerPivot für SharePoint-Server | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Starten oder Beenden eines PowerPivot für SharePoint-Server | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
-caps.latest.revision: "8"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 72fb8e7c0f964fe140082d9aed5748b98440fac3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6c581135e13811e82535fa7735f1116f413d6752
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Starten oder Beenden eines Power Pivot für SharePoint-Servers
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst und ein [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] Instanz arbeiten zusammen auf dem gleichen lokalen Anwendungsserver, die koordinierte Anforderungs- und Datenverarbeitung in einer SharePoint-Farm zu unterstützen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] als Systemdienst unterstützt in Kombination mit einer [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Instanz auf dem gleichen lokalen Anwendungsserver die koordinierte Anforderungs- und Datenverarbeitung in einer SharePoint-Farm.  
   
  Dieses Thema enthält folgende Abschnitte:  
   

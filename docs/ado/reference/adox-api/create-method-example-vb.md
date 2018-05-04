@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a20f49fe8f62afe8558c4614fa9f6e77728ea12
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c12be24960632669ac8ae72379f2ed87d93cc4f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-method-example-vb"></a>Create-Methode-Beispiel (VB)
 Der folgende Code veranschaulicht das Erstellen einer neuen Microsoft Jet-Datenbank mit der [erstellen](../../../ado/reference/adox-api/create-method-adox.md) Methode.  

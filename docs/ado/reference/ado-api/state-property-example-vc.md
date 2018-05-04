@@ -21,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e60354e772096dcd65a19c9f710caff4e8a828a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ec25d492d4c4b4da8fb7fffcba1947a752172798
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="state-property-example-vc"></a>State-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel verwendet die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft, um eine Meldung angezeigt, während der asynchronen Verbindungen geöffnet sind und asynchrone Befehle ausgeführt werden.  

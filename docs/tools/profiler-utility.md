@@ -1,15 +1,16 @@
 ---
 title: Profiler-Hilfsprogramm | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: fc52d2950d0d1567771dd80330812bebdd08c039
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="profiler-utility"></a>Profiler-Hilfsprogramm
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **Profiler** Hilfsprogramm startet die [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Tool. Mit den optionalen Argumenten, die weiter unten in diesem Thema aufgeführt sind, können Sie steuern, wie die Anwendung gestartet wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Mit dem **Profiler** -Hilfsprogramm wird das [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] -Tool gestartet. Mit den optionalen Argumenten, die weiter unten in diesem Thema aufgeführt sind, können Sie steuern, wie die Anwendung gestartet wird.  
   
 > [!NOTE]  
 >  Das **Profiler** -Hilfsprogramm dient nicht zum Erstellen von Skripts für Ablaufverfolgungen. Weitere Informationen finden Sie unter [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
@@ -62,47 +64,47 @@ profiler
  **/?**  
  Zeigt die Syntaxzusammenfassung der **Profiler** -Argumente an.  
   
- **/U** *login_id*  
+ **/U** *Login-ID*  
  Die Benutzeranmelde-ID für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung. Bei Anmelde-IDs wird die Groß- und Kleinschreibung beachtet.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]installiert haben.  
   
- **/P** *password*  
+ **/P** *Kennwort*  
  Gibt ein benutzerdefiniertes Kennwort für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung an.  
   
  **/E**  
  Gibt an, dass die Verbindung mithilfe der Windows-Authentifizierung erfolgt und die Anmeldeinformationen des aktuellen Benutzers verwendet werden.  
   
- **/S**  *sql_server_name*  
+ **/S**  *SQL_Server-Name*  
  Gibt eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz an. Profiler stellt automatisch eine Verbindung mit dem angegebenen Server her und verwendet dabei die Authentifizierungsinformationen, die mit den Schaltern **/U** und **/P** oder mit dem Schalter **/E** angegeben wurden. Um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]herzustellen, verwenden Sie **/S** *SQL_Server-Name*\\*Instanzname*.  
   
- **/A**  *analysis_services_server_name*  
+ **/ A**  *Analysis_Services-Servername*  
  Gibt eine Analysis Services-Instanz an. Profiler stellt automatisch eine Verbindung mit dem angegebenen Server her und verwendet dabei die Authentifizierungsinformationen, die mit den Schaltern **/U** und **/P** oder mit dem Schalter **/E** angegeben wurden. Um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herzustellen, verwenden Sie **/A** *Analysis_Services-Servername*Instanzname.  
   
- **/D** *database*  
+ **/D** *Datenbank*  
  Gibt den Namen der Datenbank an, die zusammen mit dieser Verbindung verwendet werden soll. Mit dieser Option wird die Standarddatenbank für den angegebenen Benutzer ausgewählt, wenn keine Datenbank angegeben wurde.  
   
- **/B "** *trace_table_name* **"**  
+ **/B "** *Ablaufverfolgungstabellen-Name* **"**  
  Gibt eine Ablaufverfolgungstabelle an, die beim Starten von Profiler geladen werden soll. Sie müssen die Datenbank, den Benutzer oder das Schema und die Tabelle angeben.  
   
- **/T"** *template_name* **"**  
- Gibt die Vorlage an, die geladen wird, um die Ablaufverfolgung zu konfigurieren. Der Vorlagenname muss in Anführungszeichen eingeschlossen werden. Die Vorlage muss sich entweder im Systemverzeichnis für Vorlagen oder im Benutzerverzeichnis für Vorlagen befinden. Wenn sich in beiden Verzeichnissen eine Vorlage mit diesem Namen befindet, wird die Vorlage aus dem Systemverzeichnis geladen. Wenn die Verzeichnisse keine Vorlage mit dem angegebenen Namen enthalten, wird die Standardvorlage geladen. Beachten Sie, dass die Dateierweiterung für die Vorlage (TDF) nicht als Teil des *Vorlagennamens*angegeben werden darf. Beispiel:  
+ **/ T "** *Vorlagenname* **"**  
+ Gibt die Vorlage an, die geladen wird, um die Ablaufverfolgung zu konfigurieren. Der Vorlagenname muss in Anführungszeichen eingeschlossen werden. Die Vorlage muss sich entweder im Systemverzeichnis für Vorlagen oder im Benutzerverzeichnis für Vorlagen befinden. Wenn sich in beiden Verzeichnissen eine Vorlage mit diesem Namen befindet, wird die Vorlage aus dem Systemverzeichnis geladen. Wenn die Verzeichnisse keine Vorlage mit dem angegebenen Namen enthalten, wird die Standardvorlage geladen. Beachten Sie, dass die Dateierweiterung für die Vorlage (TDF) nicht als Teil des *Vorlagennamens*angegeben werden darf. Zum Beispiel:  
   
 ```  
 /T "standard"  
 ```  
   
- **/F"** *filename* **"**  
+ **/F "** *Dateiname* **"**  
  Gibt den Pfad und den Dateinamen einer Ablaufverfolgungsdatei an, die beim Starten von Profiler geladen werden soll. Der Pfad und der Dateiname müssen in Anführungszeichen eingeschlossen werden. Diese Option kann nicht zusammen mit **/O**verwendet werden.  
   
- **/O "** *filename*  **"**  
+ **/O "** *Dateiname*  **"**  
  Gibt den Pfad und den Dateinamen einer Datei an, in der die Ergebnisse der Ablaufverfolgung erfasst werden sollen. Der Pfad und der Dateiname müssen in Anführungszeichen eingeschlossen werden. Diese Option kann nicht zusammen mit **/F**verwendet werden.  
   
- **/L** *locale_ID*  
+ **/L** *Gebietsschema-ID*  
  Nicht verfügbar.  
   
- **/M "** *MM-DD-YY hh:mm:ss* **"**  
+ **/M "** *MM-DD-YY hh: mm:* **"**  
  Gibt das Datum und die Uhrzeit für die Beendigung der Ablaufverfolgung an. Der Beendigungszeitpunkt muss in Anführungszeichen eingeschlossen werden. Geben Sie den Beendigungszeitpunkt gemäß den Parametern in der folgenden Tabelle an:  
   
 |Parameter|Definition|  
@@ -120,17 +122,17 @@ profiler
  **/R**  
  Aktiviert das Rollover für Ablaufverfolgungsdateien.  
   
- **/Z**  *file_size*  
+ **/Z**  *Dateigröße*  
  Gibt die Größe der Ablaufverfolgungsdatei in Megabytes (MB) an. Die Standardgröße ist 5 MB. Wenn das Rollover aktiviert ist, wird die Größe aller Rolloverdateien auf den in diesem Argument angegebenen Wert begrenzt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Verwenden Sie die Option **/S** zusammen mit der Option **/T** , um eine Ablaufverfolgung mit einer bestimmten Vorlage zu starten. Wenn Sie beispielsweise eine Ablaufverfolgung mithilfe der Standardvorlage im Verzeichnis MyServer\MyInstance starten möchten, geben Sie an der Eingabeaufforderung Folgendes ein:  
   
 ```  
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

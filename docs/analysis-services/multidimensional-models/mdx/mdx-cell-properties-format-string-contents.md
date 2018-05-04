@@ -1,37 +1,23 @@
 ---
 title: FORMAT_STRING-Inhalt (MDX) | Microsoft Docs
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- formats [Analysis Services], string values
-- VALUE property
-- formats [Analysis Services], numeric values
-- FORMATTED_VALUE property
-- FORMAT_STRING contents
-ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0abbc6911435f77466a647eac13304fda12b22b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX-Cell Properties - FORMAT_STRING-Inhalt
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Die **FORMAT_STRING** -Zelleigenschaft formatiert die **VALUE** -Zelleigenschaft, indem sie den Wert für die **FORMATTED_VALUE** -Zelleigenschaft erstellt. Die **FORMAT_STRING** -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, indem sie einen Formatausdruck auf den Wert anwendet, um einen formatierten Wert für die **FORMATTED_VALUE** -Zelleigenschaft zurückzugeben. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
+  Die **FORMAT_STRING** -Zelleigenschaft formatiert die **VALUE** -Zelleigenschaft, indem sie den Wert für die **FORMATTED_VALUE** -Zelleigenschaft erstellt. Die **FORMAT_STRING** -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, indem sie einen Formatausdruck auf den Wert anwendet, um einen formatierten Wert für die **FORMATTED_VALUE** -Zelleigenschaft zurückzugeben. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
   
 ## <a name="string-values"></a>Zeichenfolgenwerte  
  Ein Formatausdruck für Zeichenfolgen kann aus einem Abschnitt oder aus zwei durch ein Semikolon (;) getrennten Abschnitten bestehen.  
@@ -85,9 +71,9 @@ Die **FORMAT_STRING** -Zelleigenschaft formatiert die **VALUE** -Zelleigenschaft
 |**,**|Entspricht einem Tausendertrennzeichen, das in einer Zahl, die vier oder mehr Stellen links vom Dezimaltrennzeichen hat, die Tausender von den Hundertern trennt.<br /><br /> Die standardmäßige Verwendung des Tausendertrennzeichens wird angegeben, wenn das Format ein Tausendertrennzeichen enthält, das in Ziffernplatzhaltern (**0** oder **#**) eingeschlossen ist.<br /><br /> Zwei benachbarte Tausendertrennzeichen oder ein Tausendertrennzeichen direkt links vom Dezimaltrennzeichen (unabhängig davon, ob ein Dezimaltrennzeichen angegeben ist oder nicht) bedeuten Folgendes: "Die Zahl durch Division durch 1000 skalieren, gegebenenfalls mit Rundung". Sie können z.B. die Formatzeichenfolge „**##0**,,“ verwenden, um 100 Millionen als 100 darzustellen. Zahlen, die kleiner als 1 Million sind, werden als 0 dargestellt. Zwei benachbarte Tausendertrennzeichen in jeder anderen Position als direkt links vom Dezimaltrennzeichen werden so behandelt, als würden sie die Verwendung eines Tausendertrennzeichens angeben.<br /><br /> Welches Zeichen tatsächlich als Tausendertrennzeichen in der formatierten Ausgabe verwendet wird, hängt von dem Zahlenformat ab, das vom Computersystem erkannt wird.<br /><br /> Hinweis: In manchen Gebietsschemas wird der Punkt als Tausendertrennzeichen verwendet.|  
 |**:**|Entspricht einem Zeittrennzeichen, das Stunden, Minuten und Sekunden trennt, wenn Zeitwerte formatiert werden.<br /><br /> Hinweis: In manchen Gebietsschemas werden unter Umständen andere Zeichen als Zeittrennzeichen verwendet.<br /><br /> Welches Zeichen tatsächlich als Zeittrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.|  
 |**/**|Entspricht einem Datumstrennzeichen, das den Tag, den Monat und das Jahr trennt, wenn Datumswerte formatiert werden.<br /><br /> Welches Zeichen tatsächlich als Datumstrennzeichen in der formatierten Ausgabe verwendet wird, hängt von den Systemeinstellungen des Computers ab.<br /><br /> Hinweis: In manchen Gebietsschemas werden unter Umständen andere Zeichen als Datumstrennzeichen verwendet.|  
-|**E- E+ e- e+**|Entspricht dem wissenschaftlichen Format.<br /><br /> Wenn der Formatausdruck mindestens einen Ziffernplatzhalter (**0** oder **#**) rechts von **E-**, **E+**, **e-**oder **e+**enthält, wird der formatierte Wert im wissenschaftlichen Format angezeigt, und E oder e wird zwischen der Zahl und dem Exponenten der Zahl eingefügt. Die Anzahl der Ziffernplatzhalter auf der rechten Seite bestimmt die Anzahl der Ziffern im Exponenten. Verwenden Sie **E-** oder **e-** , um vor negativen Exponenten ein Minuszeichen einzufügen. Verwenden Sie **E+** oder **e+** , um vor negativen Exponenten ein Minuszeichen und vor positiven Exponenten ein Pluszeichen einzufügen.|  
+|**E- E+ e- e+**|Entspricht dem wissenschaftlichen Format.<br /><br /> Wenn der Formatausdruck mindestens einen Ziffernplatzhalter (**0** oder **#**) rechts von **E-**, **E+**, **e-** oder **e+** enthält, wird der formatierte Wert im wissenschaftlichen Format angezeigt, und E oder e wird zwischen der Zahl und dem Exponenten der Zahl eingefügt. Die Anzahl der Ziffernplatzhalter auf der rechten Seite bestimmt die Anzahl der Ziffern im Exponenten. Verwenden Sie **E-** oder **e-** , um vor negativen Exponenten ein Minuszeichen einzufügen. Verwenden Sie **E+** oder **e+** , um vor negativen Exponenten ein Minuszeichen und vor positiven Exponenten ein Pluszeichen einzufügen.|  
 |**- + $ ( )**|Zeigt ein Literalzeichen an.<br /><br /> Wenn Sie keines der hier aufgelisteten Zeichen, sondern ein anderes Zeichen anzeigen möchten, setzen Sie einen umgekehrten Schrägstrich (**\\**) vor das Zeichen oder schließen das Zeichen in doppelte Anführungszeichen (**" "**) ein.|  
-|**\\**|Zeigt das nächste Zeichen in der Formatzeichenfolge an.<br /><br /> Soll ein Zeichen, das eine spezielle Bedeutung hat, als Literalzeichen angezeigt werden, setzen Sie einen umgekehrten Schrägstrich (**\\**) vor das Zeichen. Der umgekehrte Schrägstrich wird nicht angezeigt. Das Verwenden des umgekehrten Schrägstrichs ist gleichbedeutend mit dem Einschließen des nächsten Zeichens in doppelte Anführungszeichen. Um einen umgekehrten Schrägstrich anzuzeigen, verwenden Sie zwei umgekehrte Schrägstriche (**\\\\**). Folgende Zeichen gehören zu den Zeichen, die nicht als Literalzeichen angezeigt werden können:<br /><br /> <br /><br /> Die Zeichen zum Formatieren von Datums- und Zeitangaben:**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/**und **:**<br /><br /> Die Zeichen zum Formatieren von Zahlen:**#**, **0**, **%**, **E**, **e**, **Komma**und **Punkt**<br /><br /> Die Zeichen zum Formatieren von Zeichenfolgen:**@**, **&**, **\<**, **>**und **!**|  
+|**\\**|Zeigt das nächste Zeichen in der Formatzeichenfolge an.<br /><br /> Soll ein Zeichen, das eine spezielle Bedeutung hat, als Literalzeichen angezeigt werden, setzen Sie einen umgekehrten Schrägstrich (**\\**) vor das Zeichen. Der umgekehrte Schrägstrich wird nicht angezeigt. Das Verwenden des umgekehrten Schrägstrichs ist gleichbedeutend mit dem Einschließen des nächsten Zeichens in doppelte Anführungszeichen. Um einen umgekehrten Schrägstrich anzuzeigen, verwenden Sie zwei umgekehrte Schrägstriche (**\\\\**). Folgende Zeichen gehören zu den Zeichen, die nicht als Literalzeichen angezeigt werden können:<br /><br /> <br /><br /> Die Zeichen zum Formatieren von Datums- und Zeitangaben:**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/** und **:**<br /><br /> Die Zeichen zum Formatieren von Zahlen:**#**, **0**, **%**, **E**, **e**, **Komma**und **Punkt**<br /><br /> Die Zeichen zum Formatieren von Zeichenfolgen:**@**, **&**, **\<**, **>** und **!**|  
 |**"ABC"**|Zeigt die Zeichenfolge innerhalb der doppelten Anführungszeichen (**" "**) an.<br /><br /> Um aus Code heraus eine Zeichenfolge in ein Format einzuschließen, schließen Sie den Text mithilfe von Chr(**34**) ein. (Der Zeichencode für ein doppeltes Anführungszeichen ist **34**.)|  
   
 ### <a name="named-numeric-formats"></a>Benannte numerische Formate  
@@ -157,8 +143,8 @@ Die **FORMAT_STRING** -Zelleigenschaft formatiert die **VALUE** -Zelleigenschaft
   
 ## <a name="see-also"></a>Siehe auch  
  [LANGUAGE und FORMAT_STRING für FORMATTED_VALUE](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
- [Verwenden von Zelleigenschaften &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [Erstellen und Verwenden von Eigenschaftswerten &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Grundlegendes zu MDX-Abfrage &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Verwenden von Zelleigenschaften & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Erstellen und Verwenden von Eigenschaftswerten & #40; MDX & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [Grundlegendes zu MDX-Abfrage & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

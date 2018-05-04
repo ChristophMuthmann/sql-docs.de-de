@@ -23,12 +23,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 018b08ba8c45393e77101cf56d098c1dd176ce9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7cb864de089645a137676d7d8607e988e084939e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---scope"></a>MDX-Skripts - Bereich
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -129,6 +128,6 @@ End Scope ;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Skriptanweisungen &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX-Skriptanweisungen & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

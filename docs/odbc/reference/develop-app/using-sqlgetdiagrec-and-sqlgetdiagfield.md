@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
 - SQLGetDiagField function [ODBC], and SQLGetDiagRec
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 895eb4b04b974c66f64e4ded31b84890cf19e076
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d01e70929d8cc4d9465828d208c0e774ba8b5428
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Verwenden von SQLGetDiagRec und SQLGetDiagField
 -Anwendungen rufen **SQLGetDiagRec** oder **SQLGetDiagField** Diagnoseinformationen abgerufen. Diese Funktionen akzeptieren eine Umgebung, Verbindung, Anweisung oder Deskriptor-Handle und Diagnose von der Funktion, die zuletzt dieses Handle zurück. Die Diagnose in einem bestimmten Handle protokolliert werden verworfen, wenn eine neue Funktion mit diesem Handle aufgerufen wird. Wenn die Funktion mehrere DiagnoseDatensätze zurückgegeben wird, ruft die Anwendung diese Funktionen mehrmals; Die Gesamtanzahl der Statusdatensätze wird durch den Aufruf abgerufen **SQLGetDiagField** für den Headerdatensatz (Datensatz 0), mit der Option SQL_DIAG_NUMBER.  

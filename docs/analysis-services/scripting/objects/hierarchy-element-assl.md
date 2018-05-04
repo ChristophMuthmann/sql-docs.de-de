@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c826dcf5fd63e1bdc4af4a98ae7039b5868ba06a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47284727e6ed2a3dc757bd11905fd55fbce70d23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchy-element-assl"></a>Hierarchy-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert eine Hierarchie in einer Dimension an.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert eine Hierarchie in einer Dimension.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,15 +54,15 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Finden Sie in der folgenden Tabelle aus.|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|Siehe Tabelle unten.|  
+|Standardwert|Keine|  
+|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 |Vorgänger oder übergeordnetes Element|Datentyp|  
 |------------------------|---------------|  
-|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|[Hierarchy](../../../analysis-services/scripting/data-type/hierarchy-data-type-assl.md)|  
+|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|[Hierarchie](../../../analysis-services/scripting/data-type/hierarchy-data-type-assl.md)|  
 |[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)|[CubeHierarchy](../../../analysis-services/scripting/data-type/cubehierarchy-data-type-assl.md)|  
 |[PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md)|[PerspectiveHierarchy](../../../analysis-services/scripting/data-type/perspectivehierarchy-data-type-assl.md)|  
 |[RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md)|[MeasureGroupHierarchy](../../../analysis-services/scripting/data-type/measuregrouphierarchy-data-type-assl.md)|  
@@ -72,12 +72,12 @@ ms.lasthandoff: 01/08/2018
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Hierarchien](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Die entsprechenden Elemente im AMO-Objektmodell (Analysis Management Objects) sind <xref:Microsoft.AnalysisServices.Hierarchy>, <xref:Microsoft.AnalysisServices.CubeHierarchy> und <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objekte & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

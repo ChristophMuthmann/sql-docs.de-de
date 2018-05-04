@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e9f82cc25d589d222b312e362252e4447f3bea0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4c20021542bbce7d0b0bc510ea52035a4f801ad9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="named-commands"></a>Benannte Befehle
 [Erstellen und Ausführen einer einfachen Befehl](../../../ado/guide/data/creating-and-executing-a-simple-command.md) zeigt eine Möglichkeit zum Ausführen eines Befehls. Besteht eine weitere Möglichkeit: können Sie es einen benannten Befehl, und rufen Sie diese benannte Befehl direkt auf die **Verbindung** Objekt (zugewiesen der **ActiveConnection** Eigenschaft von der **-Befehl** Objekt). Benennen einen Befehl bedeutet, dass ein Name zugewiesen der **Name** Eigenschaft von einem **Befehl** Objekt. Beispiel:  

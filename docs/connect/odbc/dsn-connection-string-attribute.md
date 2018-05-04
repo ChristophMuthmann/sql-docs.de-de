@@ -10,16 +10,15 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b5494a24e48b1d3e997079aba77682dddae7bda7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5f95ea69ab0acff5cdbbc76d66106ef4119370e6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN und Schlüsselwörter für Verbindungszeichenfolgen und Attribute
 

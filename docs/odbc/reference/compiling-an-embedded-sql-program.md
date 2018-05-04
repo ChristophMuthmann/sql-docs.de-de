@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e1c71b9e9dd0aba9631cfb276baa1f88072a8960
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 92c464cb751bccc4393c219f0312ec8a89691df1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Kompilieren eines eingebetteten SQL-Programms
 Da eine embedded SQL-Programm eine Mischung aus SQL- und Host-sprachanweisungen enthält, kann es direkt an einen Compiler der Hostsprache übermittelt werden. Stattdessen wird er durch den Upgradevorgang kompiliert. Obwohl dabei aus einem Produkt zu einem anderen Produkt im Detail variiert, die Schritte sind ungefähr gleich für alle Produkte.  

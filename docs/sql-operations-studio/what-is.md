@@ -13,12 +13,11 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 730eed76bb4859ddbd1edacb47ab92ab5973d455
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0a488cec7d92113241933a1492283f1c04004119
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>Was ist [!INCLUDE[name-sos](../includes/name-sos.md)]?
 

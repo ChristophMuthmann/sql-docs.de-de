@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 90362587d913e70447157a353b738410122c6c38
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a910facd4ae35c6ac4a0591f2b57bd5e6caf5efa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Rückgabetyp  
  \<Tabellenausdruck >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Der Wert, der durch die \<rank Expression > Argument legt die aufsteigende Rangreihenfolge für die Zeilen, die in bereitgestellt werden die \<Tabellenausdruck > Argument und der Anzahl von untersten Zeilen, die im angegebenen der \<Anzahl > zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
@@ -112,11 +111,11 @@ NATURAL PREDICTION JOIN
   
  **Hinweis** in diesem Beispiel wird nur bereitgestellt, um die Verwendung der BottomCount-Funktion zu veranschaulichen. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)   
- [BottomSum &#40; DMX &#41;](../dmx/bottomsum-dmx.md)   
- [TopCount &#40; DMX &#41;](../dmx/topcount-dmx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
+ [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
+ [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
   
   

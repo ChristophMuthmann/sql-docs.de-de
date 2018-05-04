@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8b1747a490bf34047a22d850d9b4069bbf0314f2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dae3ea558d92623dea1eb3d27dee93f41b4bb6e3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translation-element-assl"></a>Translation-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Stellt eine lokalisierte Übersetzung für das übergeordnete Element der [Übersetzungen](../../../analysis-services/scripting/collections/translations-element-assl.md) Auflistung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Stellt eine lokalisierte Übersetzung für das übergeordnete Element der [Translations](../../../analysis-services/scripting/collections/translations-element-assl.md) -Auflistung bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|[Translation](../../../analysis-services/scripting/data-type/translation-data-type-assl.md), [AttributeTranslation](../../../analysis-services/scripting/data-type/attributetranslation-data-type-assl.md)|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Standardwert|Keine|  
+|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Translations (Übersetzungen)](../../../analysis-services/scripting/collections/translations-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|[Übersetzungen](../../../analysis-services/scripting/collections/translations-element-assl.md)|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objekte & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

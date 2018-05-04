@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translation DLLs [ODBC]
 ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0aaed3a9ef5f4ae81cad3407cdecb0c18b753b6d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 22db3f197d51a55c094ffad6a6c821da250efa89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translation-dlls"></a>Translation-DLLs
 Die Anwendung und die Datenquellensicht speichern Daten häufig in anderen Zeichensätze. ODBC stellt einen generischen Mechanismus dar, der Daten aus einem Zeichensatz in eine andere übersetzt den Treiber ermöglicht. Es besteht aus einer DLL, die die Übersetzung Funktionen implementiert **SQLDriverToDataSource** und **SQLDataSourceToDriver**, die aufgerufen werden, vom Treiber alle Daten, die zwischen der Datenquelle übersetzt. und -Treiber. Diese DLL-Datei geschrieben werden kann, vom Anwendungsentwickler, die Entwickler Treiber oder einem Drittanbieter stammen.  

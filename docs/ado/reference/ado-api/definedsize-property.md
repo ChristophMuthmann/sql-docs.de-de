@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b72bb15c70e419ae94f9d1d96ab12a374375933c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b78fe75314e6e2aacf5c6f0d9c599f5cb6db6292
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definedsize-property"></a>DefinedSize-Eigenschaft
 Gibt die Datenkapazität von einem [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  

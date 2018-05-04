@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56d4da0d330b83baebffbf28a825bf3c5108c6d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b2de08aec6bd4a0bf876775e6d88546e720b6c46
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-data-stream-protocol"></a>Standard-Datenstrom Protokoll
 Eine standardmäßige-Stream-Protokoll ist eine Möglichkeit, den Zugriff auf Daten in heterogenen DBMS. In der Tat Standarddaten Stream Protokolle bereits vorhanden sein: die ANSI/ISO Remote Datenbank Remotedatenzugriff (RDA)-Standard ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) und die IBM Distributed relationale Datenbank Architektur (DRDA) ([ http://www.netstoreusa.com/cbbooks/007/0070351384.shtml ](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). Obwohl beide Systeme Promise anzeigen ist keines von beiden heute umfassend implementiert.

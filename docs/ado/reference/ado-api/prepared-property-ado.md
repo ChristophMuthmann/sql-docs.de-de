@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 452777c142b01b21a258e6f5432c48b243d45a40
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 76290bcfbaa33f5a13aa0459cd8539cd4e459267
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepared-property-ado"></a>Vorbereitete-Eigenschaft (ADO)
 Gibt an, ob eine kompilierte Version des Speichern einer [Befehl](../../../ado/reference/ado-api/command-object-ado.md) vor der Ausführung.  

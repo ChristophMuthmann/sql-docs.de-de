@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4fa2207edb9ea3e732807a3d4ac0783334c361c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d53c0686742f096f49519da93e64ea2b6706d056
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion ist hauptsächlich zur Verwendung mit einer Dimension des Typ Time vorgesehen, kann jedoch auch mit beliebigen anderen Dimensionen verwendet werden.  
   
 -   Wenn ein Ebenenausdruck angegeben wird, die **ClosingPeriod** -Funktion verwendet die Dimension, die die angegebene Ebene enthält, und gibt das letzte gleichgeordnete Element unter den nachfolgenden Werten des Standardelements auf der angegebenen Ebene zurück.  
@@ -93,9 +92,9 @@ SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[20
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [OpeningPeriod &#40; MDX &#41;](../mdx/openingperiod-mdx.md)   
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [LastSibling &#40; MDX &#41;](../mdx/lastsibling-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
   
   

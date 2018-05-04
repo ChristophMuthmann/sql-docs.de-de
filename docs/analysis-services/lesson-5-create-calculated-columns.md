@@ -1,28 +1,28 @@
 ---
 title: 'Lektion 6: Erstellen von berechneten Spalten | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 58d361452f134976b7f90ce983b3bc5b7ba28d46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9a616610978d4b325ba534cd1c22be4d04fd8429
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-create-calculated-columns"></a>Lektion 5: Erstellen von berechneten Spalten
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +33,7 @@ Sie erstellen fünf neue berechnete Spalten in drei verschiedenen Tabellen. Die 
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion, Sie sollten haben die vorherige Lektion abgeschlossen: [Lektion 4: Erstellen von Beziehungen](../analysis-services/lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Erstellen von berechneten Spalten  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], examples
 - SQLGetTypeInfo function [ODBC], examples
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c0960798cf388e3968c4a7f093d8187f85116d88
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 113dfa21be16df908280d896638acd30fcd0d0e5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo Beispielergebnis
 Ruft die Anwendung **SQLGetTypeInfo** um zu bestimmen, welche Datentypen von einer Datenquelle und die Eigenschaften dieser Datentypen unterstützt werden. Die folgenden Tabellen zeigen ein beispielresultset zurückgegebenes **SQLGetTypeInfo** für eine Datenquelle, die SQL_CHAR, SQL_LONGVARCHAR SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR und SQL_INTERVAL_DAY_TO_SECOND unterstützt.  

@@ -25,13 +25,12 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4d4987027ff854dfe9bef7c72420775a40298e15
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f56e7704e68e092b47deb9494dcbd6a600cb767
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tableconstraints-transact-sql"></a>TABLE_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ ms.lasthandoff: 04/16/2018
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**Nvarchar (**128**)**|Einschränkungsqualifizierer|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar (**128**)**|Name des Schemas, das die Einschränkung enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|Einschränkungsqualifizierer|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das die Einschränkung enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**CONSTRAINT_NAME**|**sysname**|Einschränkungsname|  
-|**TABLE_CATALOG**|**Nvarchar (**128**)**|Tabellenqualifizierer|  
-|**TABLE_SCHEMA**|**Nvarchar (**128**)**|Der Name des Schemas, das die Tabelle enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**TABLE_CATALOG**|**Nvarchar (** 128 **)**|Tabellenqualifizierer|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|Der Name des Schemas, das die Tabelle enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**TABLE_NAME**|**sysname**|Tabellenname.|  
-|**CONSTRAINT_TYPE**|**Varchar (**11**)**|Einschränkungstyp:<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
-|**IS_DEFERRABLE**|**Varchar (**2**)**|Gibt an, ob die einschränkungsüberprüfung verzögert werden kann. Es wird immer NO zurückgegeben.|  
-|**INITIALLY_DEFERRED**|**Varchar (**2**)**|Gibt an, ob die Einschränkungsüberprüfung zu Beginn zurückgestellt wird. Es wird immer NO zurückgegeben.|  
+|**CONSTRAINT_TYPE**|**Varchar (** 11 **)**|Einschränkungstyp:<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
+|**IS_DEFERRABLE**|**Varchar (** 2 **)**|Gibt an, ob die einschränkungsüberprüfung verzögert werden kann. Es wird immer NO zurückgegeben.|  
+|**INITIALLY_DEFERRED**|**Varchar (** 2 **)**|Gibt an, ob die Einschränkungsüberprüfung zu Beginn zurückgestellt wird. Es wird immer NO zurückgegeben.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Systemsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

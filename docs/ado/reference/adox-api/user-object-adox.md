@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fb0020f59730f801919989321614507acb523e42
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f261b6b2b4d4fb62f7ac3deee3f555acbce3f992
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-object-adox"></a>User-Objekt (ADOX)
 Stellt ein Benutzerkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.  

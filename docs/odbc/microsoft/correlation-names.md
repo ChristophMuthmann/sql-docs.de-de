@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - correlation names [ODBC]
 - SQL grammar [ODBC], correlation names
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3fd26a5b4601657d4f95ca629bc41666ef27309
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0451d231f6d157c32c001c34e5faa20ea8ec80be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="correlation-names"></a>Abhängige Namen
 Abhängige Namen werden vollständig unterstützt, einschließlich der in der Liste ' Tabelle '. Beispielsweise ist in der folgenden Zeichenfolge E1 der abhängige Name für die Tabelle Emp auf:  

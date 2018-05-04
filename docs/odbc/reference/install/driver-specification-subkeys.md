@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC], driver specification subkeys
 - driver specification subkeys [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 52899dd2d473ac083d2d0effaca5b3b1726322c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a10a3036e049a85e44c59ad8c8fa5a09bff538be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-specification-subkeys"></a>Treiber-Spezifikation Unterschlüssel
 Jeder Treiber in den ODBC-Treiber-Unterschlüssel aufgeführt verfügt über einen Unterschlüssel selbst. Dieser Unterschlüssel verfügt über den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel ODBC-Treiber. Die Werte unter dieser Unterschlüssel auflisten, das die vollständigen Pfade der Treiber und Treiber-Setup-DLLs, die Werte der Treiber Schlüsselwörter zurückgegebenes **SQLDrivers**, und die Verwendungsanzahl der. Die Formate der Werte sind wie in der folgenden Tabelle gezeigt.  

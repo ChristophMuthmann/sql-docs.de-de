@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a49c5def5ef9d7965810e1e407029d61ffeda37
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 774ed0d33d3066f600c6af98ea89b91a2770ed3c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-object-ado"></a>Property-Objekt (ADO)
 Stellt ein dynamisches Merkmal eines ADO-Objekts, das vom Anbieter definiert ist.  

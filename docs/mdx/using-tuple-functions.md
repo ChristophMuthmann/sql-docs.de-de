@@ -20,12 +20,11 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 23af14ed67fb78fc24873528dddf4b67197f4be0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 796494ac0d73b6dfaf955da58ed79b8b51b54638
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-tuple-functions"></a>Verwenden von Tupelfunktionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/08/2018
   
  Tupelfunktionen sind, wie Elementfunktionen und Mengenfunktionen, wesentlich für das Aushandeln mehrdimensionaler Strukturen, die in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zu finden sind.  
   
- Es gibt drei Tupelfunktionen in MDX [aktuelle &#40; MDX &#41; ](../mdx/current-mdx.md), [Element &#40; Tupel &#41; &#40; MDX &#41; ](../mdx/item-tuple-mdx.md) und [StrToTuple &#40; MDX &#41; ](../mdx/strtotuple-mdx.md). Die folgende Beispielabfrage veranschaulicht, wie sie verwendet werden:  
+ Es gibt drei Tupelfunktionen in MDX [aktuelle &#40;MDX&#41;](../mdx/current-mdx.md), [Element &#40;Tupel&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md) und [StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). Die folgende Beispielabfrage veranschaulicht, wie sie verwendet werden:  
   
  `WITH`  
   
@@ -58,8 +57,8 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Funktionen &#40; MDX-Syntax &#41;](../mdx/functions-mdx-syntax.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
  [Verwenden von Elementfunktionen](../mdx/using-member-functions.md)   
  [Using Set Functions (Verwenden von Mengenfunktionen)](../mdx/using-set-functions.md)  
   

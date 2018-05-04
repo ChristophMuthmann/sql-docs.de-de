@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 179a9f3f04db55cffb74f6417c3339ceeb20aa11
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cfb763cc51809b254d12c74a2ebe955db6b4d840
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ IsDescendant(<NodeID>)
  Ein boolescher Typ.  
   
 ## <a name="remarks"></a>Hinweise  
- **IsDescendant** dient lediglich [SELECT FROM &#60; Modell &#62;. Inhalt &#40; DMX &#41; ](../dmx/select-from-model-content-dmx.md) und [SELECT FROM &#60; Modell &#62;. DIMENSION_CONTENT &#40; DMX &#41; ](../dmx/select-from-model-dimension-content-dmx.md) Abfragen.  
+ **IsDescendant** dient lediglich [SELECT FROM &#60;Modell&#62;. Inhalt &#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md) und [SELECT FROM &#60;Modell&#62;. DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md) Abfragen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle Fälle zurückgegeben, die Nachfolger des Knotens sind, der in der IsDescendant-Funktion angegeben ist.  
@@ -56,8 +55,8 @@ WHERE IsDescendant('00000000100')
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

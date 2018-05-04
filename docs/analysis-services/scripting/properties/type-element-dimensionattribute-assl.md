@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9cd0db2e914ffba09e7e2e3831b5815be8288e10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 652e0ca8726ba1e5b6ddfec11225929ea6416675
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type-Element (DimensionAttribute) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält den Typ des Attributs.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enthält den Typ des Attributs.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|*Reguläre*|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Standardwert|*Regulär*|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*Konto*|Das Attribut stellt den Namen eines Kontos dar.|  
 |*AccountNumber*|Das Attribut stellt die Nummer eines Kontos dar.|  
@@ -89,9 +89,9 @@ ms.lasthandoff: 01/08/2018
 |*CaptionAbbreviation*|Das Attribut stellt eine Abkürzung dar.|  
 |*CaptionDescription*|Das Attribut stellt eine Beschreibung dar.|  
 |*Channel*|Das Attribut stellt einen Kanal dar.|  
-|*Ort*|Das Attribut stellt einen Ort dar.|  
+|*City*|Das Attribut stellt einen Ort dar.|  
 |*Unternehmensportal*|Das Attribut stellt eine Firma dar.|  
-|*Kontinent*|Das Attribut stellt einen Kontinent dar.|  
+|*Continent*|Das Attribut stellt einen Kontinent dar.|  
 |*Land*|Das Attribut stellt ein Land oder eine Region dar.|  
 |*Ein Bundesland oder Kanton*|Das Attribut stellt ein Bundesland oder einen Kanton dar.|  
 |*CurrencyDestination*|Das Attribut stellt die Zielwährung einer Währungsumrechnung dar.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/08/2018
 |*CurrencySource*|Das Attribut stellt die Ausgangswährung einer Währungsumrechnung dar.|  
 |*CustomerGroup*|Das Attribut stellt eine Kundengruppe dar.|  
 |*CustomerHousehold*|Das Attribut stellt einen Kundenhaushalt dar.|  
-|*Kunden*|Das Attribut stellt einen Kunden dar.|  
+|*Customers*|Das Attribut stellt einen Kunden dar.|  
 |*Datum*|Das Attribut stellt ein Datum dar.|  
 |*DateCanceled*|Das Attribut stellt ein Abbruchdatum dar.|  
 |*DateDuration*|Das Attribut stellt eine Dauer dar.|  
@@ -108,11 +108,11 @@ ms.lasthandoff: 01/08/2018
 |*DateModified*|Das Attribut stellt ein Änderungsdatum dar.|  
 |*DateStart*|Das Attribut stellt ein Startdatum dar.|  
 |*DayOfHalfYears*|Das Attribut stellt die Ordnungszahl für einen Tag eines Halbjahres dar.|  
-|*DayOfMonth*|Das Attribut stellt die Ordnungszahl für einen Tag eines Monats dar.|  
+|*dayOfMonth*|Das Attribut stellt die Ordnungszahl für einen Tag eines Monats dar.|  
 |*DayOfQuarter*|Das Attribut stellt die Ordnungszahl für einen Tag eines Quartals dar.|  
 |*DayOfTrimester*|Das Attribut stellt die Ordnungszahl für einen Tag eines Trimesters dar.|  
-|*DayOfWeek*|Das Attribut stellt die Ordnungszahl für einen Tag einer Woche dar.|  
-|*DayOfYear*|Das Attribut stellt die Ordnungszahl für einen Tag eines Jahres dar.|  
+|*dayOfWeek*|Das Attribut stellt die Ordnungszahl für einen Tag einer Woche dar.|  
+|*dayOfYear*|Das Attribut stellt die Ordnungszahl für einen Tag eines Jahres dar.|  
 |*Tage*|Das Attribut stellt Tage dar.|  
 |*DaysOfTenDays*|Das Attribut stellt die Ordnungszahl für einen Tag innerhalb eines Zeitraums von 10 Tagen dar.|  
 |*FiscalDay*|Das Attribut stellt Tage in einem Geschäftskalender dar.|  
@@ -160,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 |*HalfYears*|Das Attribut stellt Halbjahre dar.|  
 |*HalfYearsOfYear*|Das Attribut stellt die Ordnungszahl für ein Halbjahr eines Jahres dar.|  
 |*Stunden*|Das Attribut stellt Stunden dar.|  
-|*ID*|Das Attribut stellt einen Bezeichner oder einen Schlüssel dar.|  
+|*Id*|Das Attribut stellt einen Bezeichner oder einen Schlüssel dar.|  
 |*IsHoliday*|Das Attribut gibt an, ob ein Datum ein Feiertag ist.|  
 |*ISO8601DayOfWeek*|Das Attribut stellt die Ordnungszahl für einen Tag einer Woche in einem ISO 8601-Kalender dar.|  
 |*ISO8601DayOfYear*|Das Attribut stellt die Ordnungszahl für einen Tag eines Jahres in einem ISO 8601-Kalender dar.|  
@@ -202,7 +202,7 @@ ms.lasthandoff: 01/08/2018
 |*MonthOfTrimester*|Das Attribut stellt die Ordnungszahl für einen Monat eines Trimesters dar.|  
 |*MonthOfYear*|Das Attribut stellt die Ordnungszahl für einen Monat eines Jahres dar.|  
 |*Monate*|Das Attribut stellt Monate dar.|  
-|*OrganizationalUnit*|Das Attribut stellt eine Organisationseinheit dar.|  
+|*organizationalUnit*|Das Attribut stellt eine Organisationseinheit dar.|  
 |*OrgTitle*|Das Attribut stellt einen Organisationstitel dar.|  
 |*PercentOwnership*|Das Attribut stellt einen Besitzprozentwert dar.|  
 |*PercentVoteRight*|Das Attribut stellt einen Prozentwert für Abstimmungsrechte dar.|  
@@ -221,8 +221,8 @@ ms.lasthandoff: 01/08/2018
 |*PhysicalVolume*|Das Attribut stellt das Volumen dar.|  
 |*PhysicalWeight*|Das Attribut stellt das Gewicht dar.|  
 |*PhysicalWidth*|Das Attribut stellt die Breite dar.|  
-|*Point*|Das Attribut stellt einen Punkt dar.|  
-|*Postleitzahl*|Das Attribut stellt eine Postleitzahl dar.|  
+|*Punkt*|Das Attribut stellt einen Punkt dar.|  
+|*PostalCode*|Das Attribut stellt eine Postleitzahl dar.|  
 |*Product*|Das Attribut stellt ein Produkt dar.|  
 |*ProductBrand*|Das Attribut stellt eine Produktmarke dar.|  
 |*"ProductCategory"*|Das Attribut stellt eine Produktkategorie dar.|  
@@ -243,7 +243,7 @@ ms.lasthandoff: 01/08/2018
 |*Rate*|Das Attribut stellt ein Rate dar.|  
 |*RateType*|Das Attribut stellt ein Ratentyp dar.|  
 |*Region*|Das Attribut stellt eine kundendefinierte Region dar.|  
-|*Reguläre*|Das Attribut stellt ein reguläres Attribut dar.|  
+|*Regulär*|Das Attribut stellt ein reguläres Attribut dar.|  
 |*RelationToParent*|Das Attribut stellt eine Beziehung zu einem übergeordneten Element dar.|  
 |*ReportingDay*|Das Attribut stellt Tage in einem Berichtskalender dar.|  
 |*ReportingDayOfHalfYears*|Das Attribut stellt die Ordnungszahl für einen Tag eines Halbjahres in einem Berichtskalender dar.|  
@@ -305,8 +305,8 @@ ms.lasthandoff: 01/08/2018
  Das Element, das das übergeordnete Element des entspricht **Typ** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attributes-Element &#40; ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension-Element &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Attribute-Element &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Dimension-Element & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

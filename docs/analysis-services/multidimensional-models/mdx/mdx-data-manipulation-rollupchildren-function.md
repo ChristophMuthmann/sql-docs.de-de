@@ -1,36 +1,23 @@
 ---
 title: Arbeiten mit der RollupChildren-Funktion (MDX) | Microsoft Docs
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- queries [MDX], RollupChildren function
-- RollupChildren function
-- custom member properties [MDX]
-- IIf function
-ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7316f209c3653dd81eb6d2052428d0e6306b4c0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Datenbearbeitung für MDX - RollupChildren-Funktion
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Die MDX-Funktion (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) führt einen Rollup der untergeordneten Elemente eines Elements aus, wobei auf jedes untergeordnete Element ein anderer unärer Operator angewendet wird. Der Wert des Rollups wird als Zahl zurückgegeben. Der unäre Operator kann durch eine Elementeigenschaft des untergeordneten Elements bereitgestellt werden, oder der Operator kann ein Zeichenfolgenausdruck sein, der direkt an die Funktion übergeben wird.  
+  Die MDX-Funktion (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) führt einen Rollup der untergeordneten Elemente eines Elements aus, wobei auf jedes untergeordnete Element ein anderer unärer Operator angewendet wird. Der Wert des Rollups wird als Zahl zurückgegeben. Der unäre Operator kann durch eine Elementeigenschaft des untergeordneten Elements bereitgestellt werden, oder der Operator kann ein Zeichenfolgenausdruck sein, der direkt an die Funktion übergeben wird.  
   
 ## <a name="rollupchildren-function-examples"></a>Beispiele zur RollupChildren-Funktion  
  Die Verwendung der **RollupChildren** -Funktion in MDX-Anweisungen (Multidimensional Expressions) ist einfach zu erklären, die Funktion kann jedoch weit reichende Folgen für MDX-Abfragen haben.  
@@ -80,6 +67,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  Die MDX-Anweisung wertet den unären Operator des untergeordneten Elements aus. Wird der unäre Operator zur Subtraktion verwendet (wie dies bei den Elementen der in- und ausländischen Rücknahmen der Fall ist), wird der unäre Tildeoperator (~) durch die **IIf** -Funktion ersetzt. Andernfalls verwendet die **IIf** -Funktion den unären Operator des untergeordneten Elements. Schließlich wird der zurückgegebene Rollupgesamtwert mit 1,1 multipliziert, um die Vorhersage der in- und ausländischen Bruttoumsätze bereitzustellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von Daten &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Bearbeiten von Daten & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

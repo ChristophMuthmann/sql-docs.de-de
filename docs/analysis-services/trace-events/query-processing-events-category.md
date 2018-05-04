@@ -1,31 +1,30 @@
 ---
 title: Abfrageverarbeitung (Ereigniskategorie) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d547a887a05120405f6bf26049a567e1aa8026c8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 433a7260b538622c118e67411807538c6b4391d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-processing-events-category"></a>Abfrageverarbeitung (Ereigniskategorie)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die Query Processing-Ereigniskategorie enthält die in der folgenden Tabelle beschriebenen Ereignisklassen.  
+  Die Query Processing-Ereigniskategorie enthält die in der folgenden Tabelle beschriebenen Ereignisklassen.  
   
 |**Ereignisklasse**|**Ereignis-ID**|**Description**|  
 |---------------------|------------------|---------------------|  

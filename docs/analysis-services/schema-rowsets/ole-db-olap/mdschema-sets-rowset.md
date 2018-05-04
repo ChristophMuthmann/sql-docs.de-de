@@ -23,15 +23,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d861c23e40464535fbde4b666c2e1429f65c772c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 84104e80456129f8afcd1f3457e440cbbb38e220
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt alle Sätze, die derzeit in einer Datenbank, einschließlich Sätzen im Bereich einer Sitzung definiert sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Beschreibt alle Sätze, die zurzeit in einer Datenbank definiert werden, einschließlich Sätzen im Bereich einer Sitzung.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **MDSCHEMA_SETS** Rowset enthält die folgenden Spalten.  
@@ -39,11 +39,11 @@ ms.lasthandoff: 01/08/2018
 |Spaltenname|Typindikator|Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Der Name der Datenbank.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Wird nicht unterstützt.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Nicht unterstützt.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Der Name des Cubes.|  
 |**GRUPPENNAME**|**DBTYPE_WSTR**|Der Name der Menge, gemäß der **CREATE SET** Anweisung.|  
 |**BEREICH**|**DBTYPE_I4**|Der Gültigkeitsbereich des Satzes:<br /><br /> **MDSET_SCOPE_GLOBAL** (**1**)<br /><br /> **MDSET_SCOPE_SESSION** (**2**)|  
-|**DESCRIPTION**|**DBTYPE_WSTR**|Wird nicht unterstützt.|  
+|**DESCRIPTION**|**DBTYPE_WSTR**|Nicht unterstützt.|  
 |**AUSDRUCK**|**DBTYPE_WSTR**|Der Ausdruck für den Satz.|  
 |**DIMENSIONEN**|**DBTYPE_WSTR**|Eine durch Trennzeichen getrennte Liste der in dem Satz enthaltenen Hierarchien.|  
 |**SET_CAPTION**|**DBTYPE_WSTR**|Eine Bezeichnung oder Beschriftung, die dem Satz zugeordnet ist. Die Bezeichnung oder Beschriftung dient hauptsächlich zu Anzeigezwecken.|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Optional.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|Optional.<br /><br /> Hinweis: Nur eine Hierarchie enthalten sein, und nur die benannten Mengen, deren Hierarchien den Einschränkungen exakt zurückgegeben werden.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

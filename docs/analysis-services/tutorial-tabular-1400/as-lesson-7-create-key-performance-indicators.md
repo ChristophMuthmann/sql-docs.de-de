@@ -14,15 +14,14 @@ ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
-ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64159fee697d6437d685743f2a1e3d824fcaeced
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b5baa301f8e9162205b4995e557f3178107a0fcc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-key-performance-indicators"></a>Erstellen von Leistungskennzahlen
 

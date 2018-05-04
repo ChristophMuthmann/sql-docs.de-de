@@ -21,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53d28b87967aaee44dacb432d2a9a7f460ad84b9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e3cda5fd44c35df08eefe8f17037f6cb1f9eb854
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-property-example-vbscript"></a>Verbinden Sie die Eigenschaft-Beispiel (VBScript)
 > [!IMPORTANT]

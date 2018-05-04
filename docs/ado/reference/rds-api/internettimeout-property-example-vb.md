@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e764e47405cad3807166aac2026d372b2442f5df
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: cb5b8149425e82e0040552b2288f1b3c8a88a00c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internettimeout-property-example-vb"></a>Beispiel-InternetTimeout-Eigenschaft (VB)
 > [!IMPORTANT]

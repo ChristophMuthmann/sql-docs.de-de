@@ -19,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6ef1d11ec01c898cc4067a9122344d70adc5ded0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 40210e1dab29142bcdeb5ece3d37f72f7c045f2b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-collection-properties-methods-and-events"></a>Auflistung von Eigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  

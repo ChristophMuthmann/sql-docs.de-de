@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1a2ed3efb39a681e2f3cb4e935e7b7e6d8d41a75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4679437d3c520d8e53fbbe79725e8efd340c42a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_OAMethod objecttoken , methodname
  *Methodenname*  
  Der Name der Methode des OLE-Objekts, das aufgerufen wird.  
   
- *ReturnValue***Ausgabe**   
+ *ReturnValue***Ausgabe**  
  Der Rückgabewert der Methode des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale Variable vom entsprechenden Datentyp handeln.  
   
  Wenn die Methode einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *Returnvalue*, dem die Methode zurückgegeben Wert in der lokalen Variablen zurück, oder geben Sie keine *Returnvalue*, welche gibt die Methode Wert an den Client als einspaltiges, einzeiliges Resultset zurückgeben.  

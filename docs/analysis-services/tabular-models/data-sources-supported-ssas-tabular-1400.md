@@ -3,17 +3,17 @@ title: In SQL Server Analysis Services Tabellenmodelle 1400 unterstützte Datenq
 ms.date: 03/26/2018
 ms.prod: analysis-services
 ms.suite: pro-bi
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c32b715ac73fd69e63bad8487950ff1e4df003c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f2ae9498b0d177234fd75bb0de9ea0b61d15746
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Datenquellen unterstützt in SQL Server Analysis Services-Tabellenmodelle 1400
 

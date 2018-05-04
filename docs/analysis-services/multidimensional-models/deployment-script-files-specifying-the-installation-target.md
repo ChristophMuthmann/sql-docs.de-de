@@ -1,34 +1,19 @@
 ---
 title: Angeben des Installationszieles | Microsoft Docs
-ms.custom: ''
-ms.date: 03/27/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining - "setup-install"
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- input files [Analysis Services]
-- installation targets [Analysis Services]
-- Analysis Services deployments, installation targets
-- Analysis Services Deployment Wizard, installation targets
-- deploying [Analysis Services], installation targets
-- modifying installation targets
-ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
-caps.latest.revision: ''
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9977badf4e1e8e05cb35ed8828d4cc4ae12cfae
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: ef168e39d162aabeb6cb6eb46ce3ab61216af288
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-script-files---specifying-the-installation-target"></a>Bereitstellung Skriptdateien - angeben des Installationszieles
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

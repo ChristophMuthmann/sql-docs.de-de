@@ -1,31 +1,23 @@
 ---
 title: Testen einer Aktion | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cdcf009fa3e72155e2b3d06cf7d0c6f72ecfb1ec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 30db8ccebb92da2c6b9bfbb096d0649a095aafcb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="test-an-action"></a>Testen einer Aktion
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Zum Testen einer Aktion verwenden Sie die Browseransicht im Cube-Designer. Der Zugriff auf den Cube-Designer ist über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]möglich. Nachdem Sie die Aktion erstellt haben, müssen Sie den Cube verarbeiten, bevor die Aktion getestet werden kann. Weitere Informationen finden Sie unter [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+  Zum Testen einer Aktion verwenden Sie die Browseransicht im Cube-Designer. Der Zugriff auf den Cube-Designer ist über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]möglich. Nachdem Sie die Aktion erstellt haben, müssen Sie den Cube verarbeiten, bevor die Aktion getestet werden kann. Weitere Informationen finden Sie unter [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-test-an-action"></a>So testen Sie eine Aktion  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLNumResultCols function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a83d826c-6908-4115-b6e6-4d0615ff1738
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 96f0ae711a09c748ba14b229cc4628e0bda258bf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 498f33c9e6c5b7feea560a099fecbff9a236804a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlnumresultcols-visual-foxpro-odbc-driver"></a>SQLNumResultCols (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.workload: Inactive
-ms.openlocfilehash: 57f8f5d3881262ed96dcf84295b6c2a21dddc35d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: c2d58128d25420e790164f8e5f7059df6b7885fa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Konfigurieren Sie Failoverclusterinstanz – SQL Server für Linux (RHEL)
 

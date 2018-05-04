@@ -1,33 +1,19 @@
 ---
-title: "AMO-Klassen für Datamining | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data mining [AMO]
-- AMO, data mining
-- Analysis Management Objects, data mining
-ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: 
-author: Minewiskan
+title: AMO-Klassen für Datamining | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ac98a1bb199a01cff155157031535722c262ed59
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-data-mining-classes"></a>AMO-Klassen für Data Mining
   Mithilfe von Data Mining-Klassen können Sie Data Mining-Objekte erstellen, ändern, löschen und verarbeiten. Das Arbeiten mit Data Mining-Objekten umfasst die Erstellung von Data Mining-Strukturen, die Erstellung von Data Mining-Modellen und die Verarbeitung der Modelle.  
@@ -46,7 +32,7 @@ ms.lasthandoff: 02/15/2018
   
  ![AMO-Data Mining-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "AMO-Data Mining-Klassen")  
   
-##  <a name="MiningStructure">MiningStructure-Objekte</a>  
+##  <a name="MiningStructure"></a> MiningStructure-Objekte  
  Eine Miningstruktur ist der Container für Miningmodelle. Die Struktur definiert alle möglichen Spalten, die von den Miningmodellen verwendet werden können. Jedes Miningmodell definiert seine eigenen Spalten aus dem Satz der definierten Spalten in der Struktur.  
   
  Ein einfaches <xref:Microsoft.AnalysisServices.MiningStructure>-Objekt besteht aus: grundlegenden Informationen, einer Datenquellensicht, mindestens einer <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, null oder mehr <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> und einer <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
@@ -79,7 +65,7 @@ ms.lasthandoff: 02/15/2018
   
  "Typ" bezeichnet den Datentyp des Werts: LONG, BOOLEAN, TEXT, DOUBLE, DATE.  
   
- "Inhalt" informiert das Modul, wie die Spalte modelliert werden kann. Folgende Werte sind möglich: Discrete, Continuous, Discretized, Ordered, Cyclical, Probability, Variance, StdDev, ProbabilityVariance, ProbabilityStdDev, Support und Key.  
+ "Inhalt" informiert die Engine, wie die Spalte modelliert werden kann. Folgende Werte sind möglich: Discrete, Continuous, Discretized, Ordered, Cyclical, Probability, Variance, StdDev, ProbabilityVariance, ProbabilityStdDev, Support und Key.  
   
  Die Datenbindung verknüpft die Data Mining-Spalte mithilfe des Datenquellensicht-Elements mit dem zugrundeliegenden Datenmodell.  
   
@@ -98,7 +84,7 @@ ms.lasthandoff: 02/15/2018
   
  Um eine <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> zu entfernen, muss sie aus der Auflistung des übergeordneten <xref:Microsoft.AnalysisServices.MiningStructure> entfernt werden, und das übergeordnete <xref:Microsoft.AnalysisServices.MiningStructure>-Objekt muss mithilfe der Update-Methode auf dem Server aktualisiert werden.  
   
-##  <a name="MiningModel">MiningModel-Objekte</a>  
+##  <a name="MiningModel"></a> MiningModel-Objekte  
  Ein <xref:Microsoft.AnalysisServices.MiningModel> ist das Objekt, das Ihnen ermöglicht auszuwählen, welche Spalten aus der Struktur verwendet werden sollen und welcher Algorithmus verwendet werden soll, zudem bietet es optionale spezifische Parameter zur Optimierung des Modells. Beispielsweise können mehrere Miningmodelle in der gleichen Miningstruktur definiert werden, die den gleichen Algorithmus verwendet. Es sollen in einem Modell jedoch einige Spalten aus der Miningstruktur ignoriert und diese als Eingabe in einem anderen Modell und als Eingabe und Vorhersage in einem dritten Modell verwendet werden. Dies kann sinnvoll sein, wenn Sie eine Spalte in einem Miningmodell als kontinuierlich, in einem anderen Modell jedoch als diskretisiert behandeln möchten.  
   
  Ein einfaches <xref:Microsoft.AnalysisServices.MiningModel>-Objekt besteht aus: grundlegenden Informationen, Algorithmusdefinition und Spalten.  
@@ -120,7 +106,7 @@ ms.lasthandoff: 02/15/2018
  [Grundlegende AMO-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [Programmieren AMO-Datamining-Objekte](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)   
  [Einführung in AMO-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [Logische Architektur &#40; Analysis Services – mehrdimensionale Daten &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Datenbankobjekte &#40; Analysis Services – mehrdimensionale Daten &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Logische Architektur & #40; Analysis Services – mehrdimensionale Daten & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Datenbankobjekte & #40; Analysis Services – mehrdimensionale Daten & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

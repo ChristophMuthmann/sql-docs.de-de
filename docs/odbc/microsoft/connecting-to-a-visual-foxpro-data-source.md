@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], Visual FoxPro
 - Visual FoxPro data source [ODBC], connecting
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 282ffa6381daac47bb708b288e47b9b2d94d3b8a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 150a2c434bf0dfa15db2fea1cbd7c42c977bc222
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Herstellen einer Verbindung mit einer der Visual FoxPro-Datenquelle
 Sie können mit einer Visual FoxPro-Datenquelle mithilfe der Microsoft Office-Anwendung oder die SQL-API eine Verbindung herstellen.  

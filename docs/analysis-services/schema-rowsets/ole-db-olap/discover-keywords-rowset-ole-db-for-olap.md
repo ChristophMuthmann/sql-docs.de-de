@@ -23,15 +23,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 896aad63ea49741e91b728b688812cf0c5f22e08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb9e1edd38951aa391fc6ecb11a928d20d6c337d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverkeywords-rowset-ole-db-for-olap"></a>DISCOVER_KEYWORDS-Rowset (OLE DB für OLAP)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Listet die vom Anbieter reservierten Wörtern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Listet eine Liste von vom Anbieter reservierten Wörtern auf.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das DISCOVER_KEYWORDS-Rowset enthält die folgenden Spalten.  

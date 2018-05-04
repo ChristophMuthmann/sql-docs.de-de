@@ -1,35 +1,23 @@
 ---
 title: Herstellen einer Verbindung von Clientanwendungen (Analysis Services) | Microsoft Docs
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-f1_keywords:
-- sql13.swb.connection.login.analysisserver.f1
-- sql13.swb.connecttoas.connectionproperties.f1
-- sql13.swb.connecttoas.login.f1
-ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3aaccfe1f58568bde946c9ddf112b3e83bf8b9e1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 772d01c114f0eb276d063fb96e8bdd2a2fb54a05
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Herstellen einer Verbindung von Clientanwendungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Informationen in diesem Thema, um mithilfe der gängigen Tools und Anwendungen eine Verbindung mit einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herzustellen. In diesem Thema wird auch erläutert, wie Sie zu Testzwecken eine Verbindung unter verschiedenen Benutzeridentitäten herstellen.  
+  Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Informationen in diesem Thema, um mithilfe der gängigen Tools und Anwendungen eine Verbindung mit einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herzustellen. In diesem Thema wird auch erläutert, wie Sie zu Testzwecken eine Verbindung unter verschiedenen Benutzeridentitäten herstellen.  
   
 -   [Herstellen einer Verbindung mithilfe von SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
   
@@ -45,7 +33,7 @@ Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Infor
   
 -   [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorisieren des Zugriffs auf Objekte und Vorgänge & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Herstellen einer Verbindung mithilfe von SQL Server Management Studio (SSMS)  
  Stellen Sie eine Verbindung mit Analysis Services in SSMS her, um Serverinstanzen und Datenbanken interaktiv zu verwalten. Sie können auch XMLA- oder MDX-Abfragen ausführen, um Verwaltungsaufgaben auszuführen oder Daten abzurufen. Im Unterschied zu anderen Tools und Anwendungen, von denen Datenbanken nur beim Senden einer Abfrage geladen werden, lädt SSMS alle Datenbanken, sobald eine Verbindung mit dem Server hergestellt wird. Dies setzt allerdings voraus, dass Sie zur Anzeige der Datenbank berechtigt sind. Wenn Sie also über viele tabellarische Datenbanken auf dem Server verfügen, werden alle Datenbanken in den Systemarbeitsspeicher geladen, sobald Sie über SSMS eine Verbindung herstellen.  
@@ -60,7 +48,7 @@ Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Infor
   
      Bei einer benannten Instanz muss der Servername in folgendem Format angegeben werden: Servername\Instanzname. Ein Beispiel für diese Namenskonvention könnte ADV-SRV062-\Finance für einen Server sein, der den Netzwerknamen ADV-SRV062 hat, wo Analysis Services als benannte Instanz mit der Bezeichnung Finance installiert war.  
   
-     Bei Servern, die in einem Failovercluster bereitgestellt werden, stellen Sie die Verbindung über den Netzwerknamen des SSAS-Clusters her. Dieser Name wird beim SQL Server-Setup als **Name des SQL Server-Netzwerks**angegeben. Wenn Sie SSAS als benannte Instanz auf einem Windows Server-Failovercluster (WSFC) installiert haben, wird der Instanzname der Verbindung niemals hinzugefügt. Diese Vorgehensweise ist charakteristisch für SSAS. Bei einer benannten Instanz eines gruppierten relationalen Datenbankmoduls ist der Instanzname im Gegensatz dazu enthalten. Wenn Sie z. B. sowohl SSAS als auch das Datenbankmodul als benannte Instanz (Contoso-Accounting) mit dem SQL Server-Netzwerknamen "SQL-CLU" installiert haben, würden Sie die Verbindung mit SSAS mit "SQL-CLU" und die Verbindung mit dem Datenbankmodul mit "SQL-CLU\Contoso-Accounting" herstellen. Weitere Informationen und Beispiele finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548) .  
+     Bei Servern, die in einem Failovercluster bereitgestellt werden, stellen Sie die Verbindung über den Netzwerknamen des SSAS-Clusters her. Dieser Name wird beim SQL Server-Setup als **Name des SQL Server-Netzwerks**angegeben. Wenn Sie SSAS als benannte Instanz auf einem Windows Server-Failovercluster (WSFC) installiert haben, wird der Instanzname der Verbindung niemals hinzugefügt. Diese Vorgehensweise ist charakteristisch für SSAS. Bei einer benannten Instanz einer gruppierten relationalen Datenbank-Engine ist der Instanzname im Gegensatz dazu enthalten. Wenn Sie z. B. sowohl SSAS als auch das Datenbankmodul als benannte Instanz (Contoso-Accounting) mit dem SQL Server-Netzwerknamen "SQL-CLU" installiert haben, würden Sie die Verbindung mit SSAS mit "SQL-CLU" und die Verbindung mit dem Datenbankmodul mit "SQL-CLU\Contoso-Accounting" herstellen. Weitere Informationen und Beispiele finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548) .  
   
      Bei Servern, die in einem Cluster mit Netzwerklastenausgleich bereitgestellt werden, stellen Sie mithilfe des virtuellen Netzwerknamens des NLB-Servers eine Verbindung her.  
   
@@ -142,6 +130,6 @@ Wenn Sie noch nicht mit Analysis Services vertraut sind, verwenden Sie die Infor
  [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Von Analysis Services Unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Identitätswechsel](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [Erstellen einer Datenquelle &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Erstellen einer Datenquelle & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

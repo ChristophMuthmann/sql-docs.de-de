@@ -1,34 +1,23 @@
 ---
-title: "Wählen Sie aus, und ordnen Sie Eingabedaten für eine Vorhersageabfrage | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Wählen Sie aus, und ordnen Sie Eingabedaten für eine Vorhersageabfrage | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tables [Analysis Services], prediction queries
-- Mining Model Prediction [Analysis Services], input tables
-ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8c5cc795af2833b297def7728018bba65a7f4927
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Wenn Prognosen aus einem Miningmodell erstellt werden, werden im Allgemeinen neue Daten in das Modell eingegeben. (Eine Ausnahme bilden Zeitreihenmodelle, die nur Prognosen auf Grundlage von historischen Daten treffen können.) Um neue Daten für das Modell bereitstellen zu können, müssen die Daten als Teil einer Datenquellensicht verfügbar sein. Wenn Sie im Voraus wissen, welche Daten Sie für die Prognose verwenden möchten, können Sie sie in die Datenquellensicht einschließen, mit denen Sie das Modell erstellt haben. Andernfalls müssen Sie ggf. eine neue Datenquellensicht erstellen. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+  Wenn Prognosen aus einem Miningmodell erstellt werden, werden im Allgemeinen neue Daten in das Modell eingegeben. (Eine Ausnahme bilden Zeitreihenmodelle, die nur Prognosen auf Grundlage von historischen Daten treffen können.) Um neue Daten für das Modell bereitstellen zu können, müssen die Daten als Teil einer Datenquellensicht verfügbar sein. Wenn Sie im Voraus wissen, welche Daten Sie für die Prognose verwenden möchten, können Sie sie in die Datenquellensicht einschließen, mit denen Sie das Modell erstellt haben. Andernfalls müssen Sie ggf. eine neue Datenquellensicht erstellen. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Gelegentlich sind die benötigten Daten möglicherweise in mehr als einer Tabelle in einem 1:n-Join enthalten. Dies trifft auf Daten zu, die für Zuordnungsmodelle oder Sequenzclustermodelle verwendet werden, für die wiederum eine Falltabelle verwendet wird, die mit einer geschachtelten Tabelle verknüpft ist, die Produkt- oder Transaktionsdetails enthält. Wenn das Modell eine für Fälle geschachtelte Tabellenstruktur verwendet, müssen die Daten, die für die Prognose verwendet werden, auch eine für Fälle geschachtelte Tabellenstruktur besitzen.  
   
@@ -125,6 +114,6 @@ Wenn Prognosen aus einem Miningmodell erstellt werden, werden im Allgemeinen neu
      Falls bereits eine Beziehung besteht, werden die Spalten des Miningmodells automatisch den gleichnamigen Spalten der Eingabetabelle zugeordnet. Die Beziehung zwischen der geschachtelten Tabelle und der Falltabelle können Sie ändern, indem Sie auf **Join ändern**klicken und damit das Dialogfeld **Beziehung erstellen** öffnen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorhersageabfragen &#40; Datamining &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Vorhersageabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

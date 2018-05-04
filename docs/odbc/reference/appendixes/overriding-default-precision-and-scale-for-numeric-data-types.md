@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
 - precision [ODBC], numeric data types
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56b6c9d61c811517ccc089f424622967c81cd123
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67b017d17566fd19d6d4938bf8ef72d49b7c7bc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Überschreiben der Standardwerte für die Genauigkeit und Dezimalstellenanzahl für numerische Datentypen
 Wenn das SQL_DESC_TYPE-Feld in einer ARD auf SQL_C_NUMERIC, durch den Aufruf eines festgelegt ist **SQLBindCol** oder **SQLSetDescField**, Feld SQL_DESC_SCALE in die ARD auf 0 festgelegt ist und das Feld SQL_DESC_PRECISION festgelegt ist Um eine treiberdefinierten standardgenauigkeit. Dies gilt auch, wenn das SQL_DESC_TYPE-Feld in einer APD auf SQL_C_NUMERIC, festgelegt ist, durch den Aufruf eines **SQLBindParameter** oder **SQLSetDescField**. Dies gilt für Eingabe-, Eingabe/Ausgabe oder Output-Parameter.  

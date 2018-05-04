@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], executing
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
@@ -19,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c98df5ef5b7c3d544744931f771bd803b9e8b17a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 79143a6dcbf21064cc6b1077c21500e97e8353b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-a-statement"></a>Ausführen einer Anweisung
 Es gibt vier Möglichkeiten zum Ausführen einer Anweisung abhängig ist, wenn sie kompiliert werden (vorbereitet sind) durch das Datenbankmodul und wer diese definiert:  

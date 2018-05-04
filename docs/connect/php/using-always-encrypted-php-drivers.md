@@ -9,16 +9,15 @@ ms.suite: sql
 ms.custom: ''
 ms.technology:
 - drivers
-ms.topic: article
+ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.workload: Inactive
-ms.openlocfilehash: 2896e0d2d121219fae926bd6304cd4415e0a6214
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cc5ccc20d4a1a4324933ea64b9126f10df66dd26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Mit "immer verschlüsselt" mit der PHP-Treibern für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -27,17 +27,16 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b269d7e574e27de90ff4854cde1233312d444dd9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Erstellt ein neues Miningmodell, das auf einer vorhandenen Miningstruktur basiert.  Bei Verwendung der **ALTER MINING STRUCTURE** -Anweisung zum Erstellen eines neuen Miningmodells, die Struktur muss bereits vorhanden sein. Im Gegensatz dazu werden bei Verwendung die Anweisung [CREATE MINING MODEL &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), erstellen Sie ein Modell und die zugrunde liegende Struktur automatisch zur gleichen Zeit zu generieren.  
+  Erstellt ein neues Miningmodell, das auf einer vorhandenen Miningstruktur basiert.  Bei Verwendung der **ALTER MINING STRUCTURE** -Anweisung zum Erstellen eines neuen Miningmodells, die Struktur muss bereits vorhanden sein. Im Gegensatz dazu werden bei Verwendung die Anweisung [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), erstellen Sie ein Modell und die zugrunde liegende Struktur automatisch zur gleichen Zeit zu generieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -133,7 +132,7 @@ USING <algorithm> [(<parameter list>)]
 |**REGRESSOR**|Zeigt an, dass der Algorithmus die angegebene Spalte in der Regressionsformel von Regressionsalgorithmen verwenden kann.|  
 |**MODEL_EXISTENCE_ONLY**|Gibt an, dass die Werte für die Attributspalte weniger wichtig sind als das Vorhandensein der Attribute.|  
   
- Sie können mehrere Modellierungsflags für eine Spalte definieren. Weitere Informationen zur Verwendung von Modellierungsflags finden Sie unter [Modellierungsflags &#40; DMX &#41;](../dmx/modeling-flags-dmx.md).  
+ Sie können mehrere Modellierungsflags für eine Spalte definieren. Weitere Informationen zur Verwendung von Modellierungsflags finden Sie unter [Modellierungsflags &#40;DMX&#41;](../dmx/modeling-flags-dmx.md).  
   
 ### <a name="prediction-clause"></a>Vorhersageklausel  
  Die Vorhersageklausel beschreibt, wie die Vorhersagespalte verwendet wird. In der folgenden Tabelle sind die möglichen Klauseln aufgelistet.  
@@ -148,7 +147,7 @@ USING <algorithm> [(<parameter list>)]
   
  Filterkriterienausdrücke sind vereinfachte DMX-Prädikate und ähneln einer WHERE-Klausel. Filterausdrücke werden auf Formeln reduziert, die grundlegende mathematische Operatoren, Skalare und Spaltennamen verwenden. Eine Ausnahme bildet der EXISTS-Operator. Seine Auswertung ergibt TRUE, wenn mindestens eine Zeile für die Unterabfrage zurückgegeben wird. Prädikate können mit den allgemeinen logischen Operatoren kombiniert werden: AND, OR und NOT.  
   
- Weitere Informationen zu filtern, die mit Miningmodellen verwendet werden, finden Sie unter [Filter für Miningmodelle &#40; Analysis Services – Datamining &#41; ](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ Weitere Informationen zu filtern, die mit Miningmodellen verwendet werden, finden Sie unter [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Spalten in einem Filter müssen Miningstrukturspalten sein. Sie können keinen Filter für eine Modellspalte oder eine Spalte mit einem Alias erstellen.  
@@ -156,7 +155,7 @@ USING <algorithm> [(<parameter list>)]
  Weitere Informationen zur DMX-Operatoren und Syntax finden Sie unter [Mining Model Columns](../analysis-services/data-mining/mining-model-columns.md).  
   
 ## <a name="parameter-definition-list"></a>Parameterdefinitionsliste (Parameter Definition List)  
- Durch Hinzufügen von Algorithmusparametern zur Parameterliste können Sie die Leistung und die Funktionsweise eines Modells anpassen. Die Parameter, die Sie verwenden können, hängen vom Algorithmus ab, den Sie in der USING-Klausel angeben. Eine Liste der Parameter, die jedem Algorithmus zugeordnet sind, finden Sie unter [Data Mining-Algorithmen &#40; Analysis Services – Datamining &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Durch Hinzufügen von Algorithmusparametern zur Parameterliste können Sie die Leistung und die Funktionsweise eines Modells anpassen. Die Parameter, die Sie verwenden können, hängen vom Algorithmus ab, den Sie in der USING-Klausel angeben. Eine Liste der Parameter, die jedem Algorithmus zugeordnet sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
  Die Syntax der Parameterliste sieht wie folgt aus:  
   
@@ -220,8 +219,8 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

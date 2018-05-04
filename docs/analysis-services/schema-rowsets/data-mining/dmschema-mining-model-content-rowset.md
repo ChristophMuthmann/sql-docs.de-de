@@ -23,25 +23,25 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d1ca8915889fbc7edb9e31c2e0adbb2154980f5f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Ermöglicht es die Clientanwendung, die den Inhalt eines Datamining-Modells zu durchsuchen. Clientanwendungen können spezielle Strukturvorgangseinschränkungen verwenden, die am Ende dieses Themas erläutert werden, um zum Inhalt des Miningmodells zu navigieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Ermöglicht es der Clientanwendung, den Inhalt eines Data Mining-Modells zu durchsuchen. Clientanwendungen können spezielle Strukturvorgangseinschränkungen verwenden, die am Ende dieses Themas erläutert werden, um zum Inhalt des Miningmodells zu navigieren.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DMSCHEMA_MINING_MODEL_CONTENT** Rowset enthält die folgenden Spalten.  
   
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**||Der Katalogname. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] füllt diese Spalte mit dem Namen der Datenbank, von denen das Modell ein Element ist.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**||Der Katalogname. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] füllt diese Spalte mit dem Namen der Datenbank, von der das Modell ein Element ist.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||Der nicht gekennzeichnete Schemaname. Diese Spalte wird nicht von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **VT_NULL**.|  
 |**MODEL_NAME**|**DBTYPE_WSTR**||Der Name des Modells, dem der von dieser Zeile beschriebene Inhalt zugeordnet ist.|  
-|**ATTRIBUTNAME**|**DBTYPE_WSTR**||Die Namen der Attribute, die diesem Knoten entsprechen.|  
+|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Die Namen der Attribute, die diesem Knoten entsprechen.|  
 |**KNOTENNAME**|**DBTYPE_WSTR**||Der Name des Knotens. Derzeit enthält diese Spalte den gleichen Wert wie **NODE_UNIQUE_NAME**, obwohl dies in zukünftigen Versionen ändern kann.|  
 |**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**||Der eindeutige Name des Knotens.|  
 |**NODE_TYPE**|**DBTYPE_I4**||Der Typ des Knotens. Erzeugt einen der folgenden Werte (diese Liste kann durch Data Mining-Algorithmen von Drittanbietern erweitert werden):<br /><br /> **DM_NODE_TYPE_CLASSIFICATION_TREE_ROOT** (**2**)<br /><br /> **DM_NODE_TYPE_TREE_INTERIOR** (**3**)<br /><br /> **DM_NODE_TYPE_TREE_DISTRIBUTION** (**4**)<br /><br /> **DM_NODE_TYPE_CLUSTER** (**5**)<br /><br /> **DM_NODE_TYPE_UNKNOWN** (**6**)<br /><br /> **DM_NODE_TYPE_ITEMSET** (**7**)<br /><br /> **DM_NODE_TYPE_ASSOCIATION_RULE** (**8**)<br /><br /> **DM_NODE_TYPE_NB_PREDICTABLE_ATTRIBUTE** (**9**)<br /><br /> **DM_NODE_TYPE_NB_INPUT_ATTRIBUTE** (**10**)<br /><br /> **DM_NODE_TYPE_NB_INPUT_ATTRIBUTE_STATE** (**11**)<br /><br /> **DM_NODE_TYPE_SEQUENCE** (**13**)<br /><br /> **DM_NODE_TYPE_TRANSITION** (**14**)<br /><br /> **DM_NODE_TYPE_TIME_SERIES** (**15**)<br /><br /> **DM_NODE_TYPE_TS_TREE** (**16**)<br /><br /> **DM_NODE_TYPE_NN_SUBNETWORK** (**17**) neuronale Netzwerke, Subnetzwerke<br /><br /> **DM_NODE_TYPE_NN_INPUT_LAYER** (**18**) neuronale Netzwerke, eingabeebenen (übergeordnete Elemente der Eingabeknoten)<br /><br /> **DM_NODE_TYPE_NN_HIDDEN_LAYER** (**19**) neuronale Netzwerke, verborgene Ebenen (übergeordnete Elemente von verborgenen Knoten)<br /><br /> **DM_NODE_TYPE_NN_OUTPUT_LAYER** (**20**) neuronale Netzwerke, Ausgabeebenen (übergeordnete Elemente der Ausgabeknoten)<br /><br /> **DM_NODE_TYPE_NN_INPUT_NODE** (**21**) neuronale Netzwerke, Eingabeknoten<br /><br /> **DM_NODE_TYPE_NN_HIDDEN_NODE** (**22**) neuronale Netzwerke, verborgene Knoten<br /><br /> **DM_NODE_TYPE_NN_OUTPUT_NODE** (**23**) neuronale Netzwerke, Ausgabeknoten<br /><br /> **DM_NODE_TYPE_NN_MARGINAL_STAT_NODE** (**24**) neuronale Netzwerke, randstatistik<br /><br /> **DM_NODE_TYPE_REGRESSION_TREE_ROOT** (**25**)<br /><br /> **DM_NODE_TYPE_NB_MARGINAL_STAT_NODE** (**26**) neuronale Netzwerke, randstatistik|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |**MODEL_CATALOG**|**DBTYPE_WSTR**|Optional.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**|Optional.|  
 |**MODEL_NAME**|**DBTYPE_WSTR**|Optional.|  
-|**ATTRIBUTNAME**|**DBTYPE_WSTR**|Optional.|  
+|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**|Optional.|  
 |**KNOTENNAME**|**DBTYPE_WSTR**|Optional.|  
 |**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**|Optional.|  
 |**NODE_TYPE**|**DBTYPE_I4**|Optional.|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  Die Einschränkung **TREE_OPERATION**, befindet sich nicht auf eine bestimmte Spalte des der **DMSCHEMA_MINING_MODEL_CONTENT** Rowsets, sondern gibt einen strukturoperator. Der Consumer festlegbaren eine **NODE_UNIQUE_NAME** Einschränkung und den strukturoperator (**VORGÄNGER**, **Kinder**, **gleichgeordnete Elemente**,  **ÜBERGEORDNETE**, **Nachfolger**, **SELF**) auf die angeforderte Menge von Elementen abzurufen. Die **SELF** -Operator fügt die Zeile für den Knoten selbst in der Liste der zurückgegebenen Zeilen. Die folgende Tabelle beschreibt die Konstanten, aus denen die bitmapdefinition für die **TREE_OPERATION** Einschränkung. Kombiniert werden mit dem logischen **oder** Operator.  
   
-|Konstante|value|  
+|Konstante|Wert|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|**0 x 00000020**|  
 |**DMTREEOP_CHILDREN**|**0 x 00000001**|  
@@ -88,6 +88,6 @@ ms.lasthandoff: 01/08/2018
 |**DMTREEOP_DESCENDANTS**|**0 x 00000010**|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

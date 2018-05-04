@@ -1,31 +1,23 @@
 ---
-title: "Konfigurieren von PowerPivot und Bereitstellen von Lösungen (SharePoint 2016) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Konfigurieren von PowerPivot und Bereitstellen von Lösungen (SharePoint 2016) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 384f1fdec5b77dcc980954e72fe5bfa07f617601
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Konfigurieren von Power Pivot und Bereitstellen von Lösungen (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-In diesem Thema wird beschrieben, wie Erweiterungen der mittleren Ebene für die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Funktionen in [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] bereitgestellt und konfiguriert werden, z.B. den [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Katalog, die planmäßige Datenaktualisierung, das Management-Dashboard und Datenanbieter. Führen Sie das **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2016-Konfigurationstool** aus, um folgende Aufgaben auszuführen:  
+  In diesem Thema wird beschrieben, wie Erweiterungen der mittleren Ebene für die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Funktionen in [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] bereitgestellt und konfiguriert werden, z.B. den [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Katalog, die planmäßige Datenaktualisierung, das Management-Dashboard und Datenanbieter. Führen Sie das **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2016-Konfigurationstool** aus, um folgende Aufgaben auszuführen:  
   
 -   Bereitstellen von SharePoint-Lösungsdateien  
   
@@ -116,16 +108,16 @@ In diesem Thema wird beschrieben, wie Erweiterungen der mittleren Ebene für die
   
     -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von -Datenladevorgängen  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von Abfragen  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von -Abfragen  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von Datenentladevorgängen  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Verwendung von -Datenentladevorgängen  
   
 4.  Achten Sie darauf, dass **Integritätsdatenerfassung aktivieren** ausgewählt ist.  
   
 5.  Wählen Sie **OK**.  
   
- Weitere Informationen zur Problembehandlung bei der Datenaktualisierung finden Sie unter [Troubleshooting Power Pivot Data Refresh](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (Problembehandlung bei der PowerPivot-Datenaktualisierung) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Weitere Informationen zu datenaktualisierung, finden Sie unter [Problembehandlung Power Pivot-Datenaktualisierung](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- Weitere Informationen zum Konfigurationstool finden Sie unter [Power Pivot-Konfigurationstools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
+ Weitere Informationen zum Konfigurationstool finden Sie unter [PowerPivot-Konfigurationstools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   

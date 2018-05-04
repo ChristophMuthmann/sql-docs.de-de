@@ -23,17 +23,17 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 07f3e7e80b36f2739bf5d4df23404e5ab396ec72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Listet die Datamining-Modelle im aktuellen Katalog auf. Die **DMSCHEMA_MINING_MODELS** Rowset enthält Informationen wie Modellnamen, Verarbeitungsdatum und die jedes Miningmodell zugeordneten miningalgorithmen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Listet die Data Mining-Modelle im aktuellen Katalog auf. Die **DMSCHEMA_MINING_MODELS** Rowset enthält Informationen wie Modellnamen, Verarbeitungsdatum und die jedes Miningmodell zugeordneten miningalgorithmen.  
   
- zugreifen. Die **DMSCHEMA_MINING_MODELS** Schemarowset ist vergleichbar mit der [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) -Schemarowsets und die gleiche Weise verwendet werden kann.  
+ aus. Die **DMSCHEMA_MINING_MODELS** Schemarowset ist vergleichbar mit der [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) -Schemarowsets und die gleiche Weise verwendet werden kann.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DMSCHEMA_MINING_MODELS** Rowset enthält die folgenden Spalten.  
@@ -77,6 +77,6 @@ ms.lasthandoff: 01/08/2018
  Beispiele zum Abfragen dieses Rowsets, finden Sie unter [Abfragen, die Parameter, die zum Erstellen eines Miningmodells verwendet](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

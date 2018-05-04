@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetPos
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06a7c9e052b30a764579bd775ce5e1ac36287175
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a32c882450a07f4588f46849753835dfe501fc44
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos-Funktion
 **Konformität**  
@@ -66,7 +65,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE AUF SQL_DELETE  
   
 > [!NOTE]  
->  Der SQL_ADD-Wert für die *Vorgang* Argument wurde als veraltet klassifiziert für ODBC 3*.x*. ODBC-3. *x* Treiber müssen SQL_ADD Gründen der Abwärtskompatibilität unterstützt. Diese Funktionalität wurde ersetzt durch einen Aufruf von **SQLBulkOperations** mit einem *Vorgang* von SQL_ADD. Wenn eine ODBC-3. *x* Anwendung arbeitet mit einer ODBC 2. *X* Treiber, der Treiber-Manager ordnet einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD auf **SQLSetPos** mit einer  *Vorgang* von SQL_ADD.  
+>  Der SQL_ADD-Wert für die *Vorgang* Argument wurde als veraltet klassifiziert für ODBC 3.*.x*. ODBC-3. *x* Treiber müssen SQL_ADD Gründen der Abwärtskompatibilität unterstützt. Diese Funktionalität wurde ersetzt durch einen Aufruf von **SQLBulkOperations** mit einem *Vorgang* von SQL_ADD. Wenn eine ODBC-3. *x* Anwendung arbeitet mit einer ODBC 2. *X* Treiber, der Treiber-Manager ordnet einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD auf **SQLSetPos** mit einer  *Vorgang* von SQL_ADD.  
   
  Weitere Informationen finden Sie unter "Kommentare".  
   
@@ -129,7 +128,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>Kommentare  
   
 > [!CAUTION]  
->  Für Informationen zu der Anweisung, die besagt **SQLSetPos** in aufgerufen werden kann und er muss für die Kompatibilität mit ODBC 2. führen*.x* -Anwendungen finden Sie unter [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
+>  Für Informationen zu der Anweisung, die besagt **SQLSetPos** in aufgerufen werden kann und er muss für die Kompatibilität mit ODBC 2. führen *.x* -Anwendungen finden Sie unter [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>RowNumber-Argument  
  Die *RowNumber* -Argument gibt die Nummer der Zeile im Rowset für das Ausführen des Vorgangs gemäß den *Vorgang* Argument. Wenn *RowNumber* gleich 0 ist, der Vorgang gilt für jede Zeile im Rowset. *RowNumber* muss ein Wert zwischen 0 und die Anzahl der Zeilen im Rowset.  

@@ -18,12 +18,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f71f77faff7e457ba3c6283ac504719952f6f2d6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 01723dd2a233e8c5e1d89ff23c9d42d857c33da3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
   
 HRESULT BCPSetBulkMode (  
       int property,  
@@ -92,37 +91,37 @@ HRESULT BCPSetBulkMode (
   
  Im folgenden sind einige Beispiele für Funktionsaufrufe, die zu einem Fehler bei Funktionssequenz führen:  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_IN);  
 BCPSetBulkMode();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPSetBulkMode();  
 BCPReadFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_HINTS, "select …");  
 BCPSetBulkMode();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPSetBulkMode();  
 BCPColFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPReadFmt();  
 BCPColFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetBulkMode();  
@@ -130,13 +129,13 @@ BCPControl(BCP_OPTION_HINTS, "select …");
 BCPReadFmt();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPColumns();  
 ```  
   
-```  
+```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetColFmt();  
@@ -145,9 +144,9 @@ BCPSetColFmt();
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden vier Dateien mit unterschiedlichen Einstellungen von IBCPSession2::BCPSetBulkMode erstellt.  
   
-```  
+```cpp  
   
-// compile with: msoledbsql.lib oleaut32.lib ole32.lib  
+// compile with: oleaut32.lib ole32.lib  
   
 #include <stdio.h>  
 #include "msoledbsql.h"  

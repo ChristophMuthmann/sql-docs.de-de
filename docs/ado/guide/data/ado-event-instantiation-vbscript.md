@@ -19,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3be847cfbf86cd1f53d1fae1078bef87685d7c1a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6cbbb9854d4043cce64c1885cb650942c8e48961
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-event-instantiation-vbscript"></a>ADO-Ereignis-Instanziierung: VBScript
 ADO-Ereignisse werden von Microsoft Visual Basic Scripting Edition nicht unterstützt.

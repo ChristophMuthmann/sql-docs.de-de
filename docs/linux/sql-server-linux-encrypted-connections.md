@@ -16,12 +16,11 @@ ms.technology: database-engine
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.workload: Inactive
-ms.openlocfilehash: b60ded8bde38413ccc2818efd2ca3852d88f235c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 08369d75057220f2e8d845ff8871faa2fa4830c6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Verschlüsseln von Verbindungen zu SQLServer on Linux
 

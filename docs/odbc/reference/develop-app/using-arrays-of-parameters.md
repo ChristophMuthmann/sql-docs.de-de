@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: acdcf9e1c21773240c03204608f73a4d2174fba5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fe2d85bd347477c0acc775a4f071968d6d8b15d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-arrays-of-parameters"></a>Verwenden von Arrays von Parametern
 Verwenden von Arrays von Parametern, die Anwendung ruft **SQLSetStmtAttr** mit einer *Attribut* Argument SQL_ATTR_PARAMSET_SIZE auf die Anzahl von Parametersätzen angeben. Ruft **SQLSetStmtAttr** mit einem *Attribut* Argument SQL_ATTR_PARAMS_PROCESSED_PTR zum Angeben der Adresse einer Variablen, in dem der Treiber kann die Anzahl von Parametersätzen verarbeitet, zurückgeben, Legt fest, einschließlich Fehler. Sie ruft **SQLSetStmtAttr** mit einer *Attribut* Argument des SQL_ATTR_PARAM_STATUS_PTR, zeigen Sie auf ein Array, in dem Statusinformationen für jede Zeile von Parameterwerten zurückgegeben. Der Treiber speichert diese Adressen in der Struktur, die es für die Anweisung enthält.  

@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d6c59b1833e211e43c9429e6bf4aeb265325d76d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 560ed0b86a29cffaa3b9a0969b2ae5f8783e26b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell-Element (MDDataSet) (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält Informationen über eine einzelne Zelle, die von einer übergeordneten enthaltenen [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Enthält Informationen über eine einzelne Zelle, die von einer übergeordneten enthaltenen [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,11 +54,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -69,11 +69,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Attribute  
   
-|attribute|Description|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |CellOrdinal|Erforderliche **UnsignedInt** Attribut. Die Ordnungsposition der Zelle innerhalb des mehrdimensionalen Datasets.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  In der übergeordneten Tabelle **Stamm** Element, das **Achsen** Element ist, gefolgt vom der **CellData** -Element, das eine Auflistung von **Zelle** Elementen mit die Eigenschaftswerte für jede Zelle in dem multidimensionalen Datensatz zurückgegeben. Die **Zelle** Element enthält die **CellOrdinal** -Attribut, das die nullbasierte Ordnungsposition der Zelle innerhalb des mehrdimensionalen Datensatzes, und ein Element für jeden zelleneigenschaftswert angibt. der Zelle zugeordnet ist. Jeder zelleneigenschaftswert in der **Zelle** -Element wird durch ein separates XML-Element definiert. Der Wert der Zelleneigenschaft ist das XML-Element und der Name der Zelleneigenschaft, enthaltenen Daten gemäß der **CellInfo** Element des übergeordneten "Root"-Element entspricht dem Namen des XML-Elements.  
   
  Die folgende Syntax beschreibt einen Zelleneigenschaftswert:  
@@ -145,8 +145,8 @@ ms.lasthandoff: 01/08/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDDataSet-Datentyp &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDDataSet-Datentyp & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

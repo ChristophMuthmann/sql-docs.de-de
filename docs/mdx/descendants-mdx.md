@@ -22,12 +22,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a641da0586093194c2ae64614a7cdf845827001f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 200fd06f596c02056ae5b55a5f20ad55ed4eb9a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +67,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  Ein gültiger Zeichenfolgenausdruck, der ein Beschreibungs-Flag zur Unterscheidung möglicher Mengen von nachfolgenden Werten angibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Wenn eine Ebene angegeben ist, die **Nachfolger** Funktion gibt eine Gruppe mit den nachfolgenden Werten des angegebenen Elements oder die Mitglieder der angegebenen Menge auf einer angegebenen Ebene, optional geändert durch ein Flag, das im angegebenen *Desc_Flag*.  
   
  Wenn *Abstand* angegeben wird, die **Nachfolger** Funktion gibt eine Gruppe, die untergeordneten Elemente des angegebenen Elements oder die Mitglieder der angegebenen Menge, die die angegebene Anzahl von Ebenen in der Hierarchie des angegebenen Elements enthält, optional geändert durch ein Flag, das im angegebenen *Desc_Flag*. Das Distance-Argument dieser Funktion wird in der Regel bei unregelmäßigen Hierarchien verwendet. Wenn der angegebene Abstand null (0) ist, gibt die Funktion eine Menge zurück, die nur das angegebene Element oder die angegebene Menge enthält.  
@@ -175,7 +174,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

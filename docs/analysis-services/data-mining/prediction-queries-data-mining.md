@@ -1,31 +1,30 @@
 ---
 title: Vorhersageabfragen (Datamining) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5546a168891818e61620b6fc80c7a0cd6100fcc8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prediction-queries-data-mining"></a>Vorhersageabfragen (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Das Ziel eines typischen Data Mining-Projekts besteht darin, mithilfe des Miningmodells Vorhersagen zu treffen. Beispiel: Sie möchten die zu erwartenden Ausfallzeiten für einen bestimmten Servercluster vorhersagen oder die Wahrscheinlichkeit ermitteln, mit der bestimmte Kundensegmente auf eine Werbekampagne reagieren. Für all diese Aufgaben können Sie eine Vorhersageabfrage erstellen.  
+  Das Ziel eines typischen Data Mining-Projekts besteht darin, mithilfe des Miningmodells Vorhersagen zu treffen. Beispiel: Sie möchten die zu erwartenden Ausfallzeiten für einen bestimmten Servercluster vorhersagen oder die Wahrscheinlichkeit ermitteln, mit der bestimmte Kundensegmente auf eine Werbekampagne reagieren. Für all diese Aufgaben können Sie eine Vorhersageabfrage erstellen.  
   
  Funktionell gibt es unterschiedliche Typen von Vorhersageabfragen, die in SQL Server unterstützt wurden, abhängig von der Art der Eingabe für die Abfrage:  
   
@@ -155,7 +154,7 @@ FROM
  Wenn Ihr Anbieter keine hierarchischen Rowsets verarbeiten kann, können Sie die Ergebnisse mit dem FLATTEN-Schlüsselwort in der Vorhersageabfrage vereinfachen. Weitere Informationen sowie Beispiele vereinfachter Rowsets finden Sie unter [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Inhalt Abfragen &#40; Datamining &#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [Datendefinitionsabfragen &#40; Datamining &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Inhalt Abfragen & #40; Datamining & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [Datendefinitionsabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

@@ -23,12 +23,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c1ca22f1a9573ba9f3e01a557eb64f2cb5f4f841
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datacontrol-object-rds"></a>RDS (RDS)
 Bindet eine Datenabfrage [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) an eine oder mehrere Steuerelemente (z. B. ein Textfeld, ein Datenraster-Steuerelement oder ein Kombinationsfeld) zum Anzeigen der **Recordset** Daten auf einer Webseite.  

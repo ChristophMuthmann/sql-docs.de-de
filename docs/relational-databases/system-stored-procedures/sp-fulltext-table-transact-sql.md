@@ -24,13 +24,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9bb3305149fac1fd1747341634f06414c76c3be3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a8daa2b463054d8dd33db156f85190223ab7a2e1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -57,10 +56,10 @@ sp_fulltext_table
   
 ## <a name="arguments"></a>Argumente  
  [  **@tabname=**] **"***Qualified_table_name***"**  
- Ein ein- oder zweiteiliger Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. *qualified_table_name* weist den Datentyp **nvarchar(517)**auf und hat keinen Standardwert.  
+ Ein ein- oder zweiteiliger Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. *qualified_table_name* weist den Datentyp **nvarchar(517)** auf und hat keinen Standardwert.  
   
  [ **@action=**] **'***action***'**  
- Die Aktion, die ausgeführt werden soll. *action* ist vom Datentyp **nvarchar(50)**und hat keinen Standardwert. Die folgenden Werte sind möglich:  
+ Die Aktion, die ausgeführt werden soll. *action* ist vom Datentyp **nvarchar(50)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
 |Wert|Description|  
 |-----------|-----------------|  

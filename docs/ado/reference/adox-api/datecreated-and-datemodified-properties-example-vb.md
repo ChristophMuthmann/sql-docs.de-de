@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 980317e2751bfa3619245b40dfb31a7e2b5248f1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: be36a215796be7d7e0b6d65f7bc1823ce3a5b984
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated und DateModified-Eigenschaften-Beispiel (VB)
 Dieses Beispiel zeigt die [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) und [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) Eigenschaften, indem er ein neues [Spalte](../../../ado/reference/adox-api/column-object-adox.md) zu einem vorhandenen [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und Erstellen eines neuen **Tabelle**. Das DateOutput Verfahren ist erforderlich, damit dieses Beispiel ausführen.  

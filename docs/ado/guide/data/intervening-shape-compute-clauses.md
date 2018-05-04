@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b54f38e92f5728e970363674acea7d29e9cf81a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: cd1fdc5654b8d47f5c6bcb0df34491be7eb59ad2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="intervening-shape-compute-clauses"></a>Beteiligte Form COMPUTE-Klauseln
 Es ist zulässig, betten ein oder mehrere COMPUTE-Klauseln zwischen den übergeordneten und untergeordneten in einem parametrisierten Shape-Befehl, wie im folgenden Beispiel:  

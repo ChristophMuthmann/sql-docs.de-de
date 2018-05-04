@@ -1,31 +1,23 @@
 ---
 title: Erstellen und Konfigurieren von PowerPivot-Dienstanwendung in der Zertifizierungsstelle | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5748a659aad37878869135c6a3d8358880979fe7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Erstellen und Konfigurieren von PowerPivot-Dienstanwendung in der Zertifizierungsstelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung ist eine freigegebene Dienstinstanz des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdiensts. Jede Dienstanwendung verfügt über eine eigene Anwendungsidentität, Konfigurationseinstellungen, Eigenschaften und einen internen Datenspeicher.  
+  Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung ist eine freigegebene Dienstinstanz des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdiensts. Jede Dienstanwendung verfügt über eine eigene Anwendungsidentität, Konfigurationseinstellungen, Eigenschaften und einen internen Datenspeicher.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -144,9 +136,9 @@ Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung ist ei
   
 3.  Klicken Sie auf **Dienstverbindungen**.  
   
-4.  Wählen Sie unter **Folgende Zuordnungsgruppe bearbeiten**entweder **default** oder **[custom]**aus.  
+4.  Wählen Sie unter **Folgende Zuordnungsgruppe bearbeiten**entweder **default** oder **[custom]** aus.  
   
-5.  Aktivieren Sie für **[custom]**das Kontrollkästchen neben jeder Dienstanwendungsverbindung, die Sie verwenden möchten. Falls Sie über mehrere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungen verfügen (am Typ **Proxy der PowerPivot-Dienstanwendung**erkennbar), achten Sie darauf, nur eine auszuwählen.  
+5.  Aktivieren Sie für **[custom]** das Kontrollkästchen neben jeder Dienstanwendungsverbindung, die Sie verwenden möchten. Falls Sie über mehrere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungen verfügen (am Typ **Proxy der PowerPivot-Dienstanwendung**erkennbar), achten Sie darauf, nur eine auszuwählen.  
   
 6.  Klicken Sie auf **OK**.  
   

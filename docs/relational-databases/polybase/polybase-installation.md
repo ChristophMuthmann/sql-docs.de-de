@@ -1,16 +1,16 @@
 ---
 title: PolyBase-Installation | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 02/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4aefc608d16245a2cb28245a87beb6b165489fab
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fbb861dda4b837bc3f3003edf357c89efaa4eb88
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="polybase-installation"></a>PolyBase-Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,17 +31,23 @@ ms.lasthandoff: 02/24/2018
   
 ## <a name="prerequisites"></a>Voraussetzungen  
   
--   Eine 64-Bit-Evaluierungs-Edition von SQL Server  
+- Eine 64-Bit-Evaluierungs-Edition von SQL Server  
   
--   Microsoft .NET Framework 4.5.  
+- Microsoft .NET Framework 4.5.  
+
+- Oracle Java SE Runtime Environment (JRE). Version 7 (ab 7.51) und 8 werden unterstützt ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) oder [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm schlägt fehl, wenn JRE nicht vorhanden ist. JRE9 und JRE10 werden nicht unterstützt.
+    
+- Mindestens erforderlicher Arbeitsspeicher: 4 GB  
   
--   Oracle Java SE RunTime Environment (JRE), Version 7.51 oder 8 (64-Bit) (Sowohl [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) als auch [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funktionieren). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm schlägt fehl, wenn JRE nicht vorhanden ist. JRE 9 oder höher funktionieren nicht, es sei denn, Sie verwenden das kumulative Update 4 oder höher von SQL Server 2017. Sie können JRE 8 und PolyBase installieren und dann ein Upgrade auf JRE 9 ausführen. 
+- Mindestfestplattenspeicher: 2 GB  
   
--   Mindestens erforderlicher Arbeitsspeicher: 4 GB  
-  
--   Mindestfestplattenspeicher: 2 GB  
-  
--   TCP/IP muss für Polybase aktiviert sein, damit es ordnungsgemäß funktioniert. TCP/IP ist standardmäßig in allen Editionen von SQL Server aktiviert. Davon ausgenommen sind nur die Editionen Developer und Express SQL Server. Damit Polybase auch in den Developer- und Express-Edition ordnungsgemäß funktionieren kann, müssen Sie die TCP/IP-Konnektivität aktivieren (Informationen dazu finden Sie unter [Enable or Disable a Server Network Protocol (Aktivieren und -Deaktivieren eines Server-Netzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
+- TCP/IP muss für Polybase aktiviert sein, damit es ordnungsgemäß funktioniert. TCP/IP ist standardmäßig in allen Editionen von SQL Server aktiviert. Davon ausgenommen sind nur die Editionen Developer und Express SQL Server. Damit Polybase auch in den Developer- und Express-Edition ordnungsgemäß funktionieren kann, müssen Sie die TCP/IP-Konnektivität aktivieren (Informationen dazu finden Sie unter [Enable or Disable a Server Network Protocol (Aktivieren und -Deaktivieren eines Server-Netzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
+
+- Eine externe Datenquelle, bei der es sich um ein Azure-Blob oder um einen Hadoop-Cluster handelt. Unterstützte Versionen von Hadoop finden Sie unter [Konfigurieren von PolyBase](#supported).  
+
+
+> [!NOTE]
+>   Wenn Sie die Berechnungsfunktionalität Pushdown für Hadoop verwenden möchten, müssen Sie sicherstellen, dass der Hadoop-Zielcluster über Kernkomponenten von HDFS, Yarn/MapReduce mit einem aktivierten Jobhistory-Server verfügt. PolyBase reicht die Pushdown-Abfrage über MapReduce ein und ruft den Status aus dem JobHistory-Server ab. Die Abfrage wird ohne eine der Komponenten fehlschlagen. 
   
  **Hinweise**  
   

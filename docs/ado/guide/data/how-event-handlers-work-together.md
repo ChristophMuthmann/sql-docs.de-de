@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e8c279565b17cf236223c641a13c23727fd4c00
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 813f8856f830cdd01b30faf7f63f31c221aa2642
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-event-handlers-work-together"></a>Zusammenwirken der Ereignishandler
 Es sei denn, Sie in Visual Basic wird für alle Ereignishandler programmieren **Verbindung** und **Recordset** Ereignisse implementiert werden müssen, unabhängig davon, ob Sie tatsächlich alle Ereignisse verarbeiten. Der Arbeitsaufwand, der Implementierung müssen Sie lediglich hängt von der Programmiersprache ab. Weitere Informationen finden Sie unter [ADO Ereignisinstanziierung von Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

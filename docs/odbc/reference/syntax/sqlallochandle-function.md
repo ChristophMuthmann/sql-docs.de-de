@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLAllocHandle
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9a864d1fd8255983ebd0a7d58661ca6afc1bf6b9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7b2b8530e9c3a563bb6cd4dc7aad1210bc2446fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle-Funktion
 **Konformität**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLAllocHandle** reserviert ein Handle Umgebung, Verbindung, Anweisung oder Deskriptor.  
   
 > [!NOTE]  
->  Diese Funktion ist eine generische Funktion für die Zuordnung von Handles, die die ODBC 2.0-Funktionen ersetzt **SQLAllocConnect**, **SQLAllocEnv**, und **SQLAllocStmt:**. Damit Anwendungen Aufrufen **SQLAllocHandle** zum Arbeiten mit ODBC 2. *X* -Treiber, die einen Aufruf von **SQLAllocHandle** zugeordnet ist, in der Treiber-Manager **SQLAllocConnect**, **SQLAllocEnv**, oder  **SQLAllocStmt:**je nach Bedarf. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3. *x* Anwendung arbeitet mit einer ODBC 2. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Diese Funktion ist eine generische Funktion für die Zuordnung von Handles, die die ODBC 2.0-Funktionen ersetzt **SQLAllocConnect**, **SQLAllocEnv**, und **SQLAllocStmt:**. Damit Anwendungen Aufrufen **SQLAllocHandle** zum Arbeiten mit ODBC 2. *X* -Treiber, die einen Aufruf von **SQLAllocHandle** zugeordnet ist, in der Treiber-Manager **SQLAllocConnect**, **SQLAllocEnv**, oder  **SQLAllocStmt:** je nach Bedarf. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3. *x* Anwendung arbeitet mit einer ODBC 2. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   

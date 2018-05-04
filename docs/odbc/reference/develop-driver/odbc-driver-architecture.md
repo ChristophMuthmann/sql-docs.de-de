@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], architecture
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
@@ -19,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 858bb1d468449b76560a25c1928babddb44f1d1c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9c620cbaefa987a722f86ed11bca4e88382ec0ee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-driver-architecture"></a>ODBC-Treiberarchitektur
 Treiber Writer müssen bewusst sein, dass die Architektur der sprachmonitortreiber auswirken kann, ob eine Anwendung die DBMS-spezifische SQL verwenden kann.  

@@ -24,12 +24,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c93dec5dc4f6ed8ed01244cd3c30c8725e91efce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 868d88651994ea31e118569a02236edde712ccad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +62,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Der DBMS-abhängige Datentyp.|  
 |DATA_TYPE|**smallint**|Der Code für den ODBC-Datentyp, dem alle Spalten dieses Datentyps zugeordnet sind.|  
 |PRECISION|**int**|Die maximale Genauigkeit des Datentyps bezüglich der Datenquelle. NULL wird für Datentypen zurückgegeben, auf die die Genauigkeit nicht anwendbar ist. Der Rückgabewert für die PRECISION-Spalte hat die Basis 10.|  
-|LITERAL_PREFIX|**Varchar (**32**)**|Das oder die Zeichen, die einer Konstante vorangestellt werden. Angenommen, ein einfaches Anführungszeichen (**"**) bei Zeichentypen und 0 X bei Binärtypen.|  
-|LITERAL_SUFFIX|**Varchar (**32**)**|Das oder die Zeichen, die eine Konstante beenden. Angenommen, ein einfaches Anführungszeichen (**"**) bei Zeichentypen und keine Anführungszeichen bei Binärtypen.|  
-|CREATE_PARAMS|**Varchar (**32**)**|Die Beschreibung der Erstellungsparameter für diesen Datentyp. Beispielsweise **decimal** ist "Precision, Scale", **"float"** NULL ist, und **Varchar** "max_length".|  
+|LITERAL_PREFIX|**Varchar (** 32 **)**|Das oder die Zeichen, die einer Konstante vorangestellt werden. Angenommen, ein einfaches Anführungszeichen (**"**) bei Zeichentypen und 0 X bei Binärtypen.|  
+|LITERAL_SUFFIX|**Varchar (** 32 **)**|Das oder die Zeichen, die eine Konstante beenden. Angenommen, ein einfaches Anführungszeichen (**"**) bei Zeichentypen und keine Anführungszeichen bei Binärtypen.|  
+|CREATE_PARAMS|**Varchar (** 32 **)**|Die Beschreibung der Erstellungsparameter für diesen Datentyp. Beispielsweise **decimal** ist "Precision, Scale", **"float"** NULL ist, und **Varchar** "max_length".|  
 |NULLABLE|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = Lässt NULL-Werte zu.<br /><br /> 0 = NULL ist nicht zulässig.|  
 |CASE_SENSITIVE|**smallint**|Gibt die Unterscheidung nach Groß-/Kleinschreibung an.<br /><br /> 1 = Bei allen Spalten dieses Typs wird nach Groß-/Kleinschreibung unterschieden (für Sortierungen).<br /><br /> 0 = Bei allen Spalten dieses Typs wird nicht nach Groß-/Kleinschreibung unterschieden.|  
 |SEARCHABLE|**smallint**|Gibt die Suchfunktion des Spaltentyps an:<br /><br /> 1 = Kann nicht durchsucht werden.<br /><br /> 2 = Durchsuchbar mit LIKE<br /><br /> 3 = Durchsuchbar mit WHERE<br /><br /> 4 = Durchsuchbar mit WHERE oder LIKE|  

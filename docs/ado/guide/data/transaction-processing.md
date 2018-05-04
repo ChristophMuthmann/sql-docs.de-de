@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6959e1ee084ce8c4f1d26f8bf5038e4e3a9de6bd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ad30bd1e4c09aaf64db1e774d4f15e9514564d24
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transaction-processing"></a>Transaktionsverarbeitung
 Ein *Transaktion* begrenzt Anfang und Ende einer Reihe von Datenzugriffsvorgänge über eine Verbindung ausgeführt. Unterliegen die Transaktionsfunktionen des Ihre Datenquelle anzuwenden die **Verbindung** Objekt auch bietet die Möglichkeit zum Erstellen und Verwalten von Transaktionen. Beispielsweise können mithilfe von Microsoft OLE DB-Anbieter für SQL Server auf eine Datenbank auf Microsoft SQL Server zugreifen, Sie mehrere geschachtelte Transaktionen für die Befehle erstellen, die Sie ausführen.  

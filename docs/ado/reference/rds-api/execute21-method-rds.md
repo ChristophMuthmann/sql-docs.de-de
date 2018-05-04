@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0eb7764c01ee7ae8cfd5cb27371dd9d5fa390b2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0f3eac913f64762fd0d5af6d36d223c16e2799c8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute21-method-rds"></a>Execute21-Methode (RDS)
 Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO 2.1.  

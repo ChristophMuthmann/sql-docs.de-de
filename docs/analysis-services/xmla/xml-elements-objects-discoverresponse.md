@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75ec613cd716e4d7d0b34c83ca8f9870321d0553
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6a2ebf97cf355ad906f0f90f35924fa1767ed666
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-elements---objects---discoverresponse"></a>XML-Elemente - Objekte - DiscoverResponse
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Enthält die Informationen von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als Antwort auf eine [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) -Methodenaufruf.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Enthält die Informationen von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als Antwort auf eine [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) -Methodenaufruf.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -52,24 +52,24 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|1-1: Erforderliches Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|1-1: Erforderliches Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|Keine|  
 |Untergeordnete Elemente|[Rückgabewert](../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Das **DiscoverResponse** -Element ist das oberste Element innerhalb eines Texts der SOAP-Antwort für die **Discover** -Methode.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [ExecuteResponse-Element &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)   
- [Objekte &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-objects.md)  
+## <a name="see-also"></a>Siehe auch  
+ [ExecuteResponse-Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects-executeresponse.md)   
+ [Objekte &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   
   

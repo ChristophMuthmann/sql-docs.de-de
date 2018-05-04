@@ -1,31 +1,23 @@
 ---
 title: Erstellen Sie einen Power View-Bericht mit einer mehrdimensionalen Datenquelle | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77b32b08e1ffc1765d731e9bc9112f093ef854bd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a34a67b5a963ba7c7adface2137a26e9194709d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Erstellen eines Power View-Berichts mit einer mehrdimensionalen Datenquelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die Erstellung eines Power View-Berichts auf Grundlage eines mehrdimensionalen Modells unterscheidet sich nicht von der Erstellung eines Berichts auf Grundlage einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe oder eines tabellarischen Analysis Services-Modells. Power View-Berichte werden aus einer Berichtsdatenquellen-Verbindungsdatei (RSDS-Datei) heraus in einer SharePoint-Bibliothek erstellt. Weitere Informationen zum Erstellen einer RSDS-Datei finden Sie unter [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
+  Die Erstellung eines Power View-Berichts auf Grundlage eines mehrdimensionalen Modells unterscheidet sich nicht von der Erstellung eines Berichts auf Grundlage einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe oder eines tabellarischen Analysis Services-Modells. Power View-Berichte werden aus einer Berichtsdatenquellen-Verbindungsdatei (RSDS-Datei) heraus in einer SharePoint-Bibliothek erstellt. Weitere Informationen zum Erstellen einer RSDS-Datei finden Sie unter [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
   
  Bevor Sie beginnen, müssen Sie über folgende Informationen verfügen:  
   

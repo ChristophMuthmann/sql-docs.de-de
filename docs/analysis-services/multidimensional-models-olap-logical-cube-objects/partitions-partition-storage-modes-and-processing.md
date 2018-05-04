@@ -1,44 +1,23 @@
 ---
 title: Partition Speichermodi und Verarbeitung | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- hybrid OLAP
-- data storage [Analysis Services]
-- relational OLAP
-- multidimensional OLAP
-- partitions [Analysis Services], storage
-- storing data [Analysis Services], partitions
-- HOLAP
-- MOLAP
-- ROLAP
-ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3792cc06fc1fd679f5b708d5e1eec618038951af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partitionen – Partition Speichermodi und Verarbeitung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Der Speichermodus einer Partition wirkt sich auf die Abfrage- und Verarbeitungsleistung, die Speicheranforderungen und die Speicherorte der Partition, der übergeordneten Measuregruppe und des übergeordneten Cubes aus. Die Entscheidung für einen Speichermodus wirkt sich zudem auf die Verarbeitungsmöglichkeiten aus.  
+  Der Speichermodus einer Partition wirkt sich auf die Abfrage- und Verarbeitungsleistung, die Speicheranforderungen und die Speicherorte der Partition, der übergeordneten Measuregruppe und des übergeordneten Cubes aus. Die Entscheidung für einen Speichermodus wirkt sich zudem auf die Verarbeitungsmöglichkeiten aus.  
   
  Für eine Partition kann einer von drei grundlegenden Speichermodi verwendet werden:  
   
@@ -53,7 +32,7 @@ Der Speichermodus einer Partition wirkt sich auf die Abfrage- und Verarbeitungsl
 ## <a name="molap"></a>MOLAP  
  Der Speichermodus MOLAP bewirkt, dass die Aggregationen der Partition sowie eine Kopie der zugehörigen Quelldaten in einer mehrdimensionalen Struktur in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeichert werden, wenn die Partition verarbeitet wird. Diese MOLAP-Struktur ist stark optimiert, um die Abfrageleistung zu maximieren. Als Speicherort kann der Computer, auf dem die Partition definiert wurde, oder ein anderer Computer mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet werden. Da sich eine Kopie der Quelldaten in der mehrdimensionalen Struktur befindet, können Abfragen aufgelöst werden, ohne auf die Quelldaten der Partition zuzugreifen. Durch das Verwenden von Aggregationen können die Antwortzeiten für Abfragen erheblich verbessert werden. Die Daten in der MOLAP-Struktur der Partition sind nur so aktuell wie am Datum, an dem die letzte Verarbeitung der Partition erfolgte.  
   
- Da sich die Quelldaten ändern, müssen Objekte mit MOLAP-Speicherung regelmäßig verarbeitet werden, um diese Änderungen aufzunehmen und sie den Benutzern zur Verfügung zu stellen. Durch die Verarbeitung werden die Daten in der MOLAP-Struktur entweder vollständig oder inkrementell aktualisiert. Die Zeit zwischen zwei Verarbeitungsvorgängen bewirkt eine Latenzzeit, während derer Daten in OLAP-Objekten möglicherweise nicht mit den Quelldaten übereinstimmen. Sie können Objekte mit MOLAP-Speicherung inkrementell oder vollständig aktualisieren, ohne die Partition oder den Cube offline schalten zu müssen. In bestimmten Situationen kann es jedoch erforderlich sein, einen Cube offline zu schalten, um bestimmte Strukturänderungen an OLAP-Objekten zu verarbeiten. Sie können die zum Aktualisieren der MOLAP-Speicherung erforderliche Ausfallzeit minimieren, indem Sie Cubes auf einem Stagingserver aktualisieren und verarbeiten und die verarbeiteten Objekte mithilfe der Datenbanksynchronisierung auf den Produktionsserver kopieren. Sie können auch die proaktive Zwischenspeicherung verwenden, um die Latenzzeit zu minimieren und die Verfügbarkeit zu optimieren und dabei gleichzeitig die Leistungsvorteile der MOLAP-Speicherung weiter zu nutzen. Weitere Informationen finden Sie unter [proaktives Zwischenspeichern &#40; Partitionen &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [Analysis Services-Datenbanken synchronisieren](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), und [Verarbeiten eines mehrdimensionalen Modells &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Da sich die Quelldaten ändern, müssen Objekte mit MOLAP-Speicherung regelmäßig verarbeitet werden, um diese Änderungen aufzunehmen und sie den Benutzern zur Verfügung zu stellen. Durch die Verarbeitung werden die Daten in der MOLAP-Struktur entweder vollständig oder inkrementell aktualisiert. Die Zeit zwischen zwei Verarbeitungsvorgängen bewirkt eine Latenzzeit, während derer Daten in OLAP-Objekten möglicherweise nicht mit den Quelldaten übereinstimmen. Sie können Objekte mit MOLAP-Speicherung inkrementell oder vollständig aktualisieren, ohne die Partition oder den Cube offline schalten zu müssen. In bestimmten Situationen kann es jedoch erforderlich sein, einen Cube offline zu schalten, um bestimmte Strukturänderungen an OLAP-Objekten zu verarbeiten. Sie können die zum Aktualisieren der MOLAP-Speicherung erforderliche Ausfallzeit minimieren, indem Sie Cubes auf einem Stagingserver aktualisieren und verarbeiten und die verarbeiteten Objekte mithilfe der Datenbanksynchronisierung auf den Produktionsserver kopieren. Sie können auch die proaktive Zwischenspeicherung verwenden, um die Latenzzeit zu minimieren und die Verfügbarkeit zu optimieren und dabei gleichzeitig die Leistungsvorteile der MOLAP-Speicherung weiter zu nutzen. Weitere Informationen finden Sie unter [proaktives Zwischenspeichern &#40;Partitionen&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [Analysis Services-Datenbanken synchronisieren](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), und [Verarbeiten eines mehrdimensionalen Modells &#40; Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="rolap"></a>ROLAP  
  Der Speichermodus ROLAP bewirkt, dass die Aggregationen der Partition in indizierten Sichten in der relationalen Datenbank gespeichert werden, die in den Quelldaten der Partition angegeben wurde. Im Gegensatz zu den MOLAP-Speichermodus ROLAP bewirkt nicht, eine Kopie der Quelldaten in gespeichert werden die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenordner. Wenn Ergebnisse nicht aus dem Abfragecache übernommen werden können, werden Abfragen stattdessen mithilfe der indizierten Sichten in der Datenquelle beantwortet. Beim ROLAP-Speicher erfolgt die Beantwortung von Abfragen i. A. langsamer als bei Verwendung der Speichermodi MOLAP oder HOLAP. Auch die Verarbeitungszeit ist bei ROLAP üblicherweise länger. ROLAP ermöglicht den Benutzern jedoch das Anzeigen von Daten in Echtzeit und kann dazu beitragen, Speicherplatz zu sparen, wenn Sie mit großen Datasets arbeiten, die nur unregelmäßig abgefragt werden, z. B. mit reinen Vergangenheitsdaten.  
@@ -93,8 +72,8 @@ Der Speichermodus einer Partition wirkt sich auf die Abfrage- und Verarbeitungsl
  Partitionen mit HOLAP-Speicherung sind kleiner als die vergleichbaren MOLAP-Partitionen, da sie keine Quelldaten enthalten, und antworten schneller als ROLAP-Partitionen auf Abfragen, die zusammengefasste Daten einbeziehen. Der Speichermodus HOLAP eignet sich i. A. für Partitionen in Cubes, die schnelle Abfrageantworten für Zusammenfassungen erfordern, die auf großen Mengen von Quelldaten basieren. Wenn Benutzer jedoch Abfragen generieren, die auf Daten auf Blattebene zugreifen müssen, wie z. B. beim Berechnen des Medians, eignet sich MOLAP i. A. besser.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Proaktives Zwischenspeichern &#40; Partitionen &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [Proaktives Zwischenspeichern & #40; Partitionen & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Synchronisieren von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Partitionen &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitionen & #40; Analysis Services – mehrdimensionale Daten & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

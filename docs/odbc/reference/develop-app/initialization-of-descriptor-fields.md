@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], allocating and freeing
 - initializing descriptor fields [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f982613a92246c96b4980997026e09d8f30e7cf4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1875f69e3ba26a331b5042ebcdaaa803559f772a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initialization-of-descriptor-fields"></a>Initialisierung des Deskriptorfelder
 Wenn eine Anwendung Zeilendeskriptor belegt wurde, erhalten ihre Felder Anfangswerte gemäß [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Der Anfangswert des Felds SQL_DESC_TYPE ist SQL_DEFAULT. Dies bietet sich für eine standardmäßige Behandlung von Datenbankdaten für die Darstellung der Anwendung. Die Anwendung möglicherweise eine unterschiedliche Behandlung der Daten durch Festlegen von Feldern von Deskriptordatensatz angeben.  

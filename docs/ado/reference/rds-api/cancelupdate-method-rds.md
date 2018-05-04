@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0fcfca6a612abc9462f64e547041a85e0a2a75ae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3bbee6fb17ee5f249cb3e089dc90d3ff8b86e300
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate-Methode (RDS)
 Bricht alle Änderungen an der aktuellen oder neue Zeile ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  

@@ -1,36 +1,23 @@
 ---
 title: Konfigurieren von Dienstkonten (Analysis Services) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services], logon accounts
-- logon accounts [Analysis Services]
-- accounts [Analysis Services]
-- logon accounts [Analysis Services], about logon accounts
-ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b2a6f76cc85c4e595f05d372b6318a862534408a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Konfigurieren von Dienstkonten (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) wird die Kontobereitstellung für das gesamte Produkt beschrieben. Das Thema enthält umfassende Informationen zu Dienstkonten für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste, einschließlich [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dort erfahren Sie alles über gültige Kontotypen, beim Setup zugewiesene Windows-Berechtigungen, Dateisystemberechtigungen, Registrierungsberechtigungen und vieles mehr.  
+  Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) wird die Kontobereitstellung für das gesamte Produkt beschrieben. Das Thema enthält umfassende Informationen zu Dienstkonten für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste, einschließlich [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dort erfahren Sie alles über gültige Kontotypen, beim Setup zugewiesene Windows-Berechtigungen, Dateisystemberechtigungen, Registrierungsberechtigungen und vieles mehr.  
   
  Dieses Thema enthält ergänzende Informationen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], einschließlich erforderlichen zusätzlichen Berechtigungen für tabellarische und gruppierte Installationen. Außerdem werden Berechtigungen behandelt, die zur Unterstützung von Servervorgängen erforderlich sind. Sie können beispielsweise Verarbeitungs- und Abfrageoperationen so konfigurieren, dass sie über das Dienstkonto ausgeführt werden. In diesem Fall müssen Sie zusätzliche Berechtigungen gewähren.  
   
@@ -81,7 +68,7 @@ Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../databas
   
 1.  Führen Sie GPEDIT.msc aus und wählen Sie Richtlinie für "Lokaler Computer" | Computerkonfiguration | Windows-Einstellungen | Sicherheitseinstellungen | Lokale Richtlinien | Zuweisen von Benutzerrechten.  
   
-2.  Prüfen Sie vorhandene Richtlinien, die **SQLServerMSASUser$**enthalten. Hierbei handelt es sich um eine lokale Sicherheitsgruppe auf Computern mit einer Analysis Services-Installation. Diese Sicherheitsgruppe erhält sowohl Windows-Berechtigungen als auch Dateiordnerberechtigungen. Doppelklicken Sie auf die Richtlinie **Anmelden als Dienst** , um anzuzeigen, wie die Sicherheitsgruppe im System angegeben wurde. Der vollständige Name der Sicherheitsgruppe variiert abhängig davon, ob Sie Analysis Services als benannte Instanz installiert haben. Nutzen Sie diese Sicherheitsgruppe, statt des Dienstkontos, wenn Sie Kontoberechtigungen hinzufügen.  
+2.  Prüfen Sie vorhandene Richtlinien, die **SQLServerMSASUser$** enthalten. Hierbei handelt es sich um eine lokale Sicherheitsgruppe auf Computern mit einer Analysis Services-Installation. Diese Sicherheitsgruppe erhält sowohl Windows-Berechtigungen als auch Dateiordnerberechtigungen. Doppelklicken Sie auf die Richtlinie **Anmelden als Dienst** , um anzuzeigen, wie die Sicherheitsgruppe im System angegeben wurde. Der vollständige Name der Sicherheitsgruppe variiert abhängig davon, ob Sie Analysis Services als benannte Instanz installiert haben. Nutzen Sie diese Sicherheitsgruppe, statt des Dienstkontos, wenn Sie Kontoberechtigungen hinzufügen.  
   
 3.  Klicken Sie mit der rechten Maustaste auf **Arbeitssatz eines Prozesses vergrößern** , und wählen Sie **Eigenschaften**aus, um Kontoberechtigungen in GPEDIT hinzuzufügen.  
   
@@ -132,7 +119,7 @@ Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../databas
 3.  Verwenden Sie **Windows-Explorer** | **Programme** | **Microsoft SQL Server** | MSASxx.MSSQLServer | **OLAP** | **bin** , um zu überprüfen, ob der Sicherheitsgruppe in Schritt 2 Ordnersicherheitseigenschaften erteilt wurden.  
   
 > [!NOTE]  
->  SIDs sollten niemals entfernt oder geändert werden. Informationen zum Wiederherstellen einer versehentlich gelöschten Pro-Dienst-SID finden Sie unter [http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201).  
+>  SIDs sollten niemals entfernt oder geändert werden. Um eine pro-Dienst-SID wiederherstellen, die versehentlich gelöscht wurde, finden Sie unter [ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201).  
   
  **Weitere Informationen zu Pro-Dienst-SIDs**  
   
@@ -143,7 +130,7 @@ Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../databas
  Da die SID unveränderlich ist, können während der Installation eines Dienstes erstellte Dateisystem-ACLs beliebig oft verwendet werden, und zwar unabhängig von der Anzahl der Änderungen am Kontonamen. Darüber hinaus bieten ACLs, in denen Berechtigungen per SID angegeben sind, zusätzliche Sicherheit, da sie gewährleisten, dass der Zugriff auf ausführbare Programmdateien und Datenordner ausschließlich über eine einzelne Dienstinstanz erfolgt. Dies gilt selbst dann, wenn weitere Dienste unter demselben Konto ausgeführt werden.  
   
 ##  <a name="bkmk_tasks"></a> Gewähren zusätzlicher Analysis Services-Berechtigungen für spezifische Servervorgänge  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt einige Tasks im Sicherheitskontext des Dienstkontos (oder des Anmeldekontos) aus, das zum Starten von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendet wird; andere Tasks werden im Sicherheitskontext des Benutzers ausgeführt, der den Task anfordert.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]führt einige Tasks im Sicherheitskontext des Dienstkontos (oder Anmeldekontos), die zum Starten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], und führt andere Tasks im Sicherheitskontext des Benutzers, der den Task anfordert.  
   
  In der folgenden Tabelle werden zusätzliche Berechtigungen beschrieben, die zum Ausführen von Tasks über das Dienstkonto erforderlich sind.  
   

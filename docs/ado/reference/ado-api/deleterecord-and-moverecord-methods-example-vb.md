@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: af05e941113e554d0bd5859433292fca15fb74ba
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2ddc6a3868e697560ac036d7e716b836af2a9e1d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord und MoveRecord-Methoden (Beispiel) (VB)
 In diesem Beispiel wird veranschaulicht, wie zu kopieren, verschieben, bearbeiten und löschen Sie den Inhalt einer Textdatei in einem Webordner veröffentlicht wird. Andere verwendeten Eigenschaften und Methoden enthalten [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [Quelle](../../../ado/reference/ado-api/source-property-ado-record.md), und [leeren](../../../ado/reference/ado-api/flush-method-ado.md).  

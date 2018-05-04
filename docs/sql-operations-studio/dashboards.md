@@ -9,16 +9,15 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad7fcbab5a01828cccd855da2d65ba3199e0b41b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 1b457f1794f902de047f68be2d8b3d672cf5c6ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Dashboards in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

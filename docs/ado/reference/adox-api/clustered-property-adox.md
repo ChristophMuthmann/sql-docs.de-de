@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb0e9a6038da22c099434463f707fe71352fd4e9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 17c15e3ad2c08faf4f9ccc55e5ed27d80267d859
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clustered-property-adox"></a>Clustered-Eigenschaft (ADOX)
 Gibt an, ob der Index gruppiert ist.  

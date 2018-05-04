@@ -1,43 +1,23 @@
 ---
 title: Gruppieren von Attributelementen (Diskretisierung) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- NameColumn property
-- discretization [Analysis Services]
-- member groups [Analysis Services]
-- grouping members
-- DiscretizationNumber property
-- sort orders [Analysis Services]
-- DiscretizationMethod property
-- adding members to member group
-- number of member groups
-- members [Analysis Services], groups
-- names [Analysis Services], member groups
-ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb988ce2195f1f61a97db9748f45759185b27f81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Attributeigenschaften - Gruppieren von Attributelementen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können die Elemente eines Attributs in eine Anzahl von Elementgruppen mithilfe des so genannten Diskretisierungsprozesses gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
+  Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können die Elemente eines Attributs in eine Anzahl von Elementgruppen mithilfe des so genannten Diskretisierungsprozesses gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
   
  Die **DiscretizationMethod** -Eigenschaft eines Attributs steuert die Gruppierung der Elemente.  
   

@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 034955aad1d0ad90f78b36704c6d202a23176ad2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 765426f766bbccc92fa1e0558163ed724af4dd0c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,24 +75,24 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Der Name des Qualifizierers für die Tabelle oder Sicht. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer***.*** Besitzer***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte dem Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**TABLE_CAT**|**sysname**|Der Name des Qualifizierers für die Tabelle oder Sicht. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte dem Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
 |**NACH "TABLE_SCHEM"**|**sysname**|Der Name des Besitzers der Tabelle oder Sicht. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Datenbankbenutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Der Name der Tabelle oder Sicht. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Name der Spalte für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  
 |**DATA_TYPE**|**smallint**|Ein Wert für eine ganze Zahl, der den ODBC-Datentypbezeichnern entspricht. Bei einem Datentyp, der keinem ODBC-Datentyp zugeordnet werden kann, wird der Wert NULL zurückgegeben. Den Namen des systemeigenen Datentyps wird zurückgegeben, der **TYPE_NAME** Spalte.|  
-|**TYPE_NAME**|**Varchar (**13**)**|Die Zeichenfolge, die den Datentyp darstellt. Den Datentypnamen stellt das zugrunde liegende DBMS bereit.|  
+|**TYPE_NAME**|**Varchar (** 13 **)**|Die Zeichenfolge, die den Datentyp darstellt. Den Datentypnamen stellt das zugrunde liegende DBMS bereit.|  
 |**COLUMN_SIZE**|**int**|Die Anzahl von signifikanten Stellen. Der Rückgabewert für die **Genauigkeit** Spalte hat die Basis 10.|  
 |**BUFFER_LENGTH**|**int**|Die Übertragungsgröße der Daten.1|  
 |**DECIMAL_DIGITS**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
 |**NUM_PREC_RADIX**|**smallint**|Stellt die Basis für numerische Datentypen.|  
 |**NULL-WERTE ZULÄSST**|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = NULL ist möglich<br /><br /> 0 = NOT NULL|  
-|**"HINWEISE"**|**Varchar (**254**)**|Dieses Feld gibt immer NULL zurück.|  
-|**COLUMN_DEF**|**Varchar (**254**)**|Standardwert der Spalte|  
+|**"HINWEISE"**|**Varchar (** 254 **)**|Dieses Feld gibt immer NULL zurück.|  
+|**COLUMN_DEF**|**Varchar (** 254 **)**|Standardwert der Spalte|  
 |**SQL_DATA_TYPE**|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist identisch mit der **DATA_TYPE** Spalte, mit Ausnahme der **"DateTime"** und SQL-92 **Intervall** Datentypen. Diese Spalte gibt immer einen Wert zurück.|  
 |**SQL_DATETIME_SUB**|**smallint**|Untertypcode für **"DateTime"** und SQL-92 **Intervall** Datentypen. Bei allen anderen Datentypen gibt diese Spalte NULL zurück.|  
 |**CHAR_OCTET_LENGTH**|**int**|Die maximale Länge (in Byte) einer Spalte eines Zeichendatentyps oder eines ganzzahligen Datentyps. Für alle anderen Datentypen gibt diese Spalte NULL zurück.|  
 |**ORDINAL_POSITION**|**int**|Die Position einer Spalte innerhalb der Tabelle. Die erste Spalte in der Tabelle ist "1". Diese Spalte gibt immer einen Wert zurück.|  
-|**IS_NULLABLE**|**Varchar (**254**)**|NULL-Zulässigkeit der Spalte in der Tabelle. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO SQL kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES = Spalte kann NULL-Werte enthalten.<br /><br /> NO = Spalte kann keine NULL-Werte enthalten.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der zurückgegebene Wert für diese Spalte unterscheidet sich von den Rückgabewert für die **NULLABLE** Spalte.|  
+|**IS_NULLABLE**|**Varchar (** 254 **)**|NULL-Zulässigkeit der Spalte in der Tabelle. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO SQL kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES = Spalte kann NULL-Werte enthalten.<br /><br /> NO = Spalte kann keine NULL-Werte enthalten.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der zurückgegebene Wert für diese Spalte unterscheidet sich von den Rückgabewert für die **NULLABLE** Spalte.|  
 |**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, der von erweiterten gespeicherten Prozeduren verwendet wird.|  
   
  Weitere Informationen finden Sie in der Microsoft ODBC-Dokumentation.  

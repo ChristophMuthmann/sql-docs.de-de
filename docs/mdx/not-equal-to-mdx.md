@@ -1,5 +1,5 @@
 ---
-title: '&lt;&gt;(Ungleich) (MDX) | Microsoft Docs'
+title: '&lt;&gt; (Ungleich) (MDX) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f515685f01b1795c361b38f031fa9e8d871dbb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dea54629c9a1e1d5add6659e0eaaca2dc9d91c92
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt;(Ungleich) (MDX)
+# <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt; (Ungleich) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Führt eine Vergleichsoperation aus, die bestimmt, ob der Wert eines MDX-Ausdrucks (Multidimensional Expressions) ungleich dem Wert eines anderen MDX-Ausdrucks ist.  
@@ -56,6 +55,6 @@ MDX_Expression <> MDX_Expression
 -   NULL, wenn mindestens einer der Parameter zu einem NULL-Wert ausgewertet wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Operatorreferenz &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

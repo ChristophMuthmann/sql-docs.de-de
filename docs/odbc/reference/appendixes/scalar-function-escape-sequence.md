@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], scalar function
 - scalar functions [ODBC], escape sequences
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d334249cdbf96d056f78c454ca5f8e84873b16e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 513df8ccd679ec2236822f780400c3cc39e37609
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-function-escape-sequence"></a>Escapesequenz Skalarfunktion
 Verwendung von ODBC Escapesequenzen für Skalarfunktionen. Die Syntax für diese Escapesequenz lautet wie folgt:  

@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ede10e4bdb4053050dbd299c49a40359450737c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 50df01ee77621b52f256ad14b55bc0ec9621d942
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-element-assl"></a>Columns-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Auflistung der Spalten mit dem übergeordneten Element verknüpft sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enthält die Auflistung der Spalten, die mit dem übergeordneten Element verknüpft sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,13 +58,13 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|Finden Sie in der folgenden Tabelle aus.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|Siehe Tabelle unten.|  
   
-|Vorgänger oder übergeordnetes Element|Cardinality|  
+|Vorgänger oder übergeordnetes Element|Kardinalität|  
 |------------------------|-----------------|  
 |[Ereignis](../../../analysis-services/scripting/objects/event-element-assl.md)|1-1: Erforderliches Element, das nur einmal auftritt.|  
 |Alle sonstigen|0-1: Optionales Element, das nur einmal auftreten kann.|  
@@ -73,8 +73,8 @@ ms.lasthandoff: 01/08/2018
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Aktion](../../../analysis-services/scripting/objects/action-element-assl.md) des Typs [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [Ereignis](../../../analysis-services/scripting/objects/event-element-assl.md), [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md), [ MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)|  
-|Untergeordnete Elemente|Finden Sie in der folgenden Tabelle aus.|  
+|Übergeordnete Elemente|[Action](../../../analysis-services/scripting/objects/action-element-assl.md) des Typs [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [Event](../../../analysis-services/scripting/objects/event-element-assl.md), [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)|  
+|Untergeordnete Elemente|Siehe Tabelle unten.|  
   
 |Vorgänger oder übergeordnetes Element|Untergeordnete Elemente|  
 |------------------------|--------------------|  
@@ -91,6 +91,6 @@ ms.lasthandoff: 01/08/2018
  Einige der entsprechenden Elemente im AMO-Objektmodell (Analysis Management Objects) sind <xref:Microsoft.AnalysisServices.TraceColumnCollection>, <xref:Microsoft.AnalysisServices.MiningModelColumnCollection> und <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Schemaauflistungen & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

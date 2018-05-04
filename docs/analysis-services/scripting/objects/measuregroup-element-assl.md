@@ -27,15 +27,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: da971bb3ed38fd5099722d423221e68b9bb17173
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d280b73cf38bae055530b216538d3eb83ca07151
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measuregroup-element-assl"></a>MeasureGroup-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen Satz von Measures auf der gleichen Ebene der Granularität.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Definiert auf der gleichen Ebene wie die Granularität eine Menge von Measures.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -80,15 +80,15 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Finden Sie in der folgenden Tabelle aus.|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|Siehe Tabelle unten.|  
+|Standardwert|Keine|  
+|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 |Vorgänger oder übergeordnetes Element|Datentyp|  
 |------------------------|---------------|  
-|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|InclusionThresholdSetting|  
+|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|Keine|  
 |[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|  
 |[Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[PerspectiveMeasureGroup](../../../analysis-services/scripting/data-type/perspectivemeasuregroup-data-type-assl.md)|  
   
@@ -97,13 +97,13 @@ ms.lasthandoff: 01/08/2018
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[MeasureGroups](../../../analysis-services/scripting/collections/measuregroups-element-assl.md)|  
-|Untergeordnete Elemente|Finden Sie in der folgenden Tabelle aus.|  
+|Untergeordnete Elemente|Siehe Tabelle unten.|  
   
 |Vorgänger oder übergeordnetes Element|Untergeordnete Elemente|  
 |------------------------|--------------------|  
 |[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|[AggregationDesigns](../../../analysis-services/scripting/collections/aggregationdesigns-element-assl.md), [AggregationPrefix](../../../analysis-services/scripting/properties/aggregationprefix-element-assl.md), [Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md), [DataAggregation](../../../analysis-services/scripting/properties/dataaggregation-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md), [EstimatedRows](../../../analysis-services/scripting/properties/estimatedrows-element-assl.md), [EstimatedSize](../../../analysis-services/scripting/properties/estimatedsize-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [IgnoreUnrelatedDimensions](../../../analysis-services/scripting/properties/ignoreunrelateddimensions-element-assl.md), [LastProcessed](../../../analysis-services/scripting/properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md), [MeasureQualification](../../../analysis-services/scripting/properties/measurequalificaton-element-assl.md), [Measures](../../../analysis-services/scripting/collections/measures-element-assl.md), [Name](../../../analysis-services/scripting/properties/name-element-assl.md), [Partitions](../../../analysis-services/scripting/collections/partitions-element-assl.md), [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md), [ProcessingMode](../../../analysis-services/scripting/properties/processingmode-element-assl.md), [ProcessingPriority](../../../analysis-services/scripting/properties/processingpriority-element-assl.md), [Source](../../../analysis-services/scripting/properties/source-element-measure-assl.md), [State](../../../analysis-services/scripting/properties/state-element-assl.md), [StorageLocation](../../../analysis-services/scripting/properties/storagelocation-element-assl.md), [StorageMode](../../../analysis-services/scripting/properties/storagemode-element-assl.md), [Translations](../../../analysis-services/scripting/collections/translations-element-assl.md), [Type](../../../analysis-services/scripting/properties/type-element-measuregroup-assl.md)|  
-|[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|InclusionThresholdSetting|  
-|[Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md)|InclusionThresholdSetting|  
+|[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|Keine|  
+|[Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md)|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Alle Measures einer Measuregruppe müssen aus einer einzigen Tabelle stammen. Eine Measuregruppe kann Standardbindungen definieren, die für jede Partition überschrieben werden können.  
@@ -121,6 +121,6 @@ ms.lasthandoff: 01/08/2018
  Die entsprechenden Elemente im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.MeasureGroup> und <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objekte & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

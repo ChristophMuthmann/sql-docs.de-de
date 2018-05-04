@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], new features in release
 - ODBC drivers [ODBC], backward compatibility
@@ -23,12 +23,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb8ca5b716e4414d39597da9671b7c823461b2ee
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 77620585dffabc97a9e85455236bf51b575d0d3a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-features"></a>Neue Funktionen
 Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2.*.x* Treiber wird nicht in der Lage, diese Funktionalität verwenden. Der ODBC-3. *x* -Treiber-Manager zugeordnet ist diese Funktionen bei der Arbeit mit einer ODBC 2.*.x* Treiber.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], about ODBC drivers
 - drivers [ODBC], about ODBC drivers
@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ad6a442be4b53615738ccf34bf4d6604b8682145
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ff63b74153dcc3734ca821bc4f5a0cb04c6436b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft gelieferten ODBC-Treiber
 *Treiber* sind Bibliotheken, die die Funktionen der ODBC-API zu implementieren. Jeder Treiber bezieht sich auf eine bestimmte Datenbank-Managementsystem (DBMS). In den meisten Fällen Treiber verfügbar machen die Funktionen des zugrunde liegenden DBMS; Sie sind nicht erforderlich, zum Implementieren von Funktionen, die nicht vom DBMS unterstützt. Treiber, führen bestimmte Tasks aus, und können in zwei Kategorien unterteilt werden: Datei und DBMS-basierten. Weitere Informationen zu Treibern und Treiberarchitektur finden Sie unter [Treiber](../../odbc/reference/drivers.md).  

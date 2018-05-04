@@ -1,28 +1,28 @@
 ---
 title: 'Lektion 4: Markieren als Datumstabelle | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e463f148b07d8fbe7061dca0eed66bba1b0fee94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 48157197ad00974b87d8f8709116020296ab179d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-mark-as-date-table"></a>Lektion 3: Markieren Sie als Date-Tabelle
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ Bevor wir die Datumstabelle und Datumsspalte kennzeichnen, muss ein wenig Wartun
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **3 Minuten**  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion, Sie sollten haben die vorherige Lektion abgeschlossen: [Lektion 2: Hinzufügen von Daten](../analysis-services/lesson-2-add-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Umbenennen der FullDateAlternateKey-Spalte

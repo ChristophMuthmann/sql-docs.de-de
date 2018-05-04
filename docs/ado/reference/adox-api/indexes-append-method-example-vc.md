@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1edfe0a3c1ba6613c3aa34d3645691d3dc1bc141
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 91a836f77af18aeed0215f0fa146a5b354a83e1b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexes-append-method-example-vc"></a>Indizes Append-(VC++-Methodenbeispiel)
 Der folgende Code veranschaulicht, wie ein neuer Index erstellt wird. Der Index ist auf zwei Spalten in der Tabelle.  

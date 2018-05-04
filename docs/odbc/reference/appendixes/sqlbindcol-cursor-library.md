@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eeca90b8de3ce65e8da68d6aabac89b2181ed047
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a877b6cade18e59f12abfe807d8efa04363b3dcb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (Cursor Library)
 > [!IMPORTANT]  
@@ -36,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
  Eine Anwendung kann Aufrufen **SQLBindCol** Ergebnis erneut binden Resultsetspalten nach aufgerufen wurde **SQLExtendedFetch**, **SQLFetch**, oder **SQLFetchScroll**, solange die C-Datentyp, die Spaltengröße und die Dezimalstellen der gebundenen Spalte unverändert bleiben. Die Anwendung muss nicht den Cursor zum Binden von Spalten mit verschiedenen Adressen zu schließen.  
   
- Die Cursorbibliothek unterstützt das Festlegen von SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut Bind-Offsets zu verwenden. (**SQLBindCol** muss nicht für diese erneute Bindung erfolgen aufgerufen werden.) Wenn die Cursorbibliothek, mit einer ODBC 3. verwendet wird*.x* Treiber, der Bind-Offset ist nicht verwendet werden, wenn **SQLFetch** aufgerufen wird. Der Offset für die Bindung wird verwendet, wenn **SQLFetch** wird aufgerufen, wenn die Cursorbibliothek, mit einer ODBC 2. verwendet wird. *X* Treiber da **SQLFetch** dann zugeordnet wird **SQLExtendedFetch**.  
+ Die Cursorbibliothek unterstützt das Festlegen von SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut Bind-Offsets zu verwenden. (**SQLBindCol** muss nicht für diese erneute Bindung erfolgen aufgerufen werden.) Wenn die Cursorbibliothek, mit einer ODBC 3. verwendet wird *.x* Treiber, der Bind-Offset ist nicht verwendet werden, wenn **SQLFetch** aufgerufen wird. Der Offset für die Bindung wird verwendet, wenn **SQLFetch** wird aufgerufen, wenn die Cursorbibliothek, mit einer ODBC 2. verwendet wird. *X* Treiber da **SQLFetch** dann zugeordnet wird **SQLExtendedFetch**.  
   
  Die Cursorbibliothek unterstützt Aufrufen **SQLBindCol** die Lesezeichenspalte binden.  
   

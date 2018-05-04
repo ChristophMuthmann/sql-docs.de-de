@@ -1,37 +1,23 @@
 ---
 title: Die grundlegende MDX-Abfrage (MDX) | Microsoft Docs
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- queries [MDX], SELECT statement
-- queries [MDX], about queries
-- cellsets [MDX]
-- SELECT statement [MDX]
-- cubes [Analysis Services], SELECT statement
-ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9abd75f8cbed78630caac64447b8df59cde3ea56
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 188c1069047c050df50d81d2208e978b39a05706
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX-Abfrage - die grundlegende Abfrage
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Die grundlegende MDX-Abfrage (Multidimensional Expressions) besteht aus der SELECT-Anweisung. Dies ist die am häufigsten verwendete Abfrage in MDX. Wenn Sie wissen, wie in einer SELECT-Anweisung von MDX ein Resultset angegeben wird, wie die Syntax der SELECT-Anweisung lautet und wie eine einfache Abfrage mit der SELECT-Anweisung erstellt wird, verfügen Sie über das Basiswissen zum Abfragen mehrdimensionaler Daten mit MDX.  
+  Die grundlegende MDX-Abfrage (Multidimensional Expressions) besteht aus der SELECT-Anweisung. Dies ist die am häufigsten verwendete Abfrage in MDX. Wenn Sie wissen, wie in einer SELECT-Anweisung von MDX ein Resultset angegeben wird, wie die Syntax der SELECT-Anweisung lautet und wie eine einfache Abfrage mit der SELECT-Anweisung erstellt wird, verfügen Sie über das Basiswissen zum Abfragen mehrdimensionaler Daten mit MDX.  
   
 ## <a name="specifying-a-result-set"></a>Angeben eines Resultsets  
  Die SELECT-Anweisung in MDX gibt ein Resultset an, das aus einer Teilmenge mehrdimensionaler Daten besteht, die aus einem Cube zurückgegeben wurde. Zum Angeben eines Resultsets muss die MDX-Abfrage die folgenden Informationen enthalten:  
@@ -116,7 +102,7 @@ WHERE ( [Sales Territory].[Southwest] )
  Ausführlichere Beispiele finden Sie unter [Angeben des Inhalts einer Abfrageachse &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)und [Angeben des Inhalts einer Slicerachse &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [SELECT-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [Schlüsselkonzepte in MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [SELECT-Anweisung & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

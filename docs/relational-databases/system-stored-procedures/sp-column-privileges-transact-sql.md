@@ -24,13 +24,12 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f3791722797f9c735e7801c989bc155fa9aafc0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41f6cc18687e6491295e2843632e0bd6badbc95a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,10 +58,10 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *Table_owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *Table_name*, sp_column nach für eine Tabelle mit dem angegebenen *Table_name* gehören dem Datenbankbesitzer. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
  [ @table_qualifier=] '*Table_qualifier*"  
- Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist *Sysname*, hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer***.*** Besitzer***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist *Sysname*, hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [ @column_name=] '*Spalte*"  
- Eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Kataloginformationen empfangen wird. *Spalte* ist **Nvarchar (**384**)**, hat den Standardwert NULL. Wenn *Spalte* ist nicht angegeben ist, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Spalte* dar, der den Namen der Spalte in der sys.columns-Tabelle aufgeführt. *Spalte* kann mithilfe von Platzhalterzeichen Mustervergleich DBMS-spezifische Platzhalterzeichen enthalten. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
+ Eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Kataloginformationen empfangen wird. *Spalte* ist **Nvarchar (** 384 **)**, hat den Standardwert NULL. Wenn *Spalte* ist nicht angegeben ist, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Spalte* dar, der den Namen der Spalte in der sys.columns-Tabelle aufgeführt. *Spalte* kann mithilfe von Platzhalterzeichen Mustervergleich DBMS-spezifische Platzhalterzeichen enthalten. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
   
 ## <a name="result-sets"></a>Resultsets  
  Sp_column_privileges entspricht SQLColumnPrivileges in ODBC. Die zurückgegebenen Ergebnisse sind nach den Spalten TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME und PRIVILEGE sortiert.  
@@ -75,8 +74,8 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|Der Name der Spalte für jede Spalte des zurückgegebenen TABLE_NAME. Dieses Feld gibt immer einen Wert zurück.|  
 |GRANTOR|**sysname**|Der Datenbank-Benutzername, der dem als GRANTEE aufgeführten Prinzipal Berechtigungen für die mit COLUMN_NAME angegebene Spalte erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Spalte stets mit dem TABLE_OWNER identisch. Dieses Feld gibt immer einen Wert zurück.<br /><br /> Die GRANTOR-Spalte kann entweder der Datenbankbesitzer (TABLE_OWNER) oder ein anderer Benutzer sein, dem die Berechtigungen vom Datenbankbesitzer mithilfe der WITH GRANT OPTION-Klausel in der GRANT-Anweisung erteilt wurden.|  
 |GRANTEE|**sysname**|Der Datenbank-Benutzername, dem der als GRANTOR aufgeführte Prinzipal Berechtigungen für die mit COLUMN_NAME angegebene Spalte erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält diese Spalte immer einen Datenbankbenutzer aus der sysusers-Tabelle. Dieses Feld gibt immer einen Wert zurück.|  
-|PRIVILEGE|**Varchar (**32**)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> SELECT = der Berechtigte (GRANTEE) kann Daten für die Spalten abrufen.<br /><br /> INSERT = der Berechtigte (GRANTEE) kann Daten für diese Spalten bereitstellen, wenn neue Zeilen (von diesem GRANTEE) in die Tabelle eingefügt werden.<br /><br /> UPDATE = der Berechtigte (GRANTEE) kann vorhandene Daten in der Spalte ändern.<br /><br /> REFERENCES = der Berechtigte (GRANTEE) kann bei einer Primär-/Fremdschlüssel-Beziehung auf eine Spalte in einer Fremdschlüsseltabelle verweisen. Primär-/Fremdschlüssel-Beziehungen werden mithilfe von Tabelleneinschränkungen definiert.|  
-|IS_GRANTABLE|**Varchar (**3**)**|Zeigt an, ob der Berechtigte (GRANTEE) anderen Benutzern Berechtigungen erteilen darf (bekannt als "Berechtigung mit Recht zum Erteilen"). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert (oder NULL-Wert) verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
+|PRIVILEGE|**Varchar (** 32 **)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> SELECT = der Berechtigte (GRANTEE) kann Daten für die Spalten abrufen.<br /><br /> INSERT = der Berechtigte (GRANTEE) kann Daten für diese Spalten bereitstellen, wenn neue Zeilen (von diesem GRANTEE) in die Tabelle eingefügt werden.<br /><br /> UPDATE = der Berechtigte (GRANTEE) kann vorhandene Daten in der Spalte ändern.<br /><br /> REFERENCES = der Berechtigte (GRANTEE) kann bei einer Primär-/Fremdschlüssel-Beziehung auf eine Spalte in einer Fremdschlüsseltabelle verweisen. Primär-/Fremdschlüssel-Beziehungen werden mithilfe von Tabelleneinschränkungen definiert.|  
+|IS_GRANTABLE|**Varchar (** 3 **)**|Zeigt an, ob der Berechtigte (GRANTEE) anderen Benutzern Berechtigungen erteilen darf (bekannt als "Berechtigung mit Recht zum Erteilen"). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert (oder NULL-Wert) verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
   
 ## <a name="remarks"></a>Hinweise  
  Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Berechtigungen mit der GRANT-Anweisung erteilt und mit der REVOKE-Anweisung aufgehoben.  

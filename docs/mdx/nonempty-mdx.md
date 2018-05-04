@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a17e8cf51ac2c2a8bac98315b85f53421d7c3c4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d533d6e5e0d62219f144b325b97142039e4eb5bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  Diese Funktion gibt die Tupel in der ersten angegebenen Menge zurück, die nach Auswertung über die Tupel in der zweiten Menge nicht leer sind. Die **NonEmpty** -Funktion berücksichtigt Berechnungen und behält doppelt vorhandene Tupel. Wenn keine zweite Menge bereitgestellt ist, wird der Ausdruck im Kontext der aktuellen Koordinaten der Elemente der Attributhierarchien und der Measures im Cube ausgewertet.  
   
 > [!NOTE]  
->  Verwenden Sie diese Funktion anstelle der veralteten [NonEmptyCrossjoin &#40; MDX &#41; ](../mdx/nonemptycrossjoin-mdx.md) Funktion.  
+>  Verwenden Sie diese Funktion anstelle der veralteten [NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md) Funktion.  
   
 > [!IMPORTANT]  
 >  Nicht leer ist eine Eigenschaft der Zellen, auf die die Tupel verweisen, keine Eigenschaft der Tupel selbst.  
@@ -99,10 +98,10 @@ NONEMPTY(set_expression1 [,set_expression2])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Siehe auch  
- [DefaultMember &#40; MDX &#41;](../mdx/defaultmember-mdx.md)   
- [Filters &#40; MDX &#41;](../mdx/filter-mdx.md)   
- [IsEmpty &#40; MDX &#41;](../mdx/isempty-mdx.md)   
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40; MDX &#41;](../mdx/nonemptycrossjoin-mdx.md)  
+ [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
+ [Filters & #40; MDX & #41;](../mdx/filter-mdx.md)   
+ [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9ef930e3d67de56707fa5583c6ce08b4b565540f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fbd07f5cfb5db689272fc9f966dd93e430d4eaab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitionid-element-xmla"></a>PartitionID-Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Identifiziert eine Partition innerhalb eines übergeordneten Elements, das einen Objektverweis enthält.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Identifiziert eine Partition innerhalb eines übergeordneten Elements, das einen Objektverweis enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,13 +52,13 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|Finden Sie in der folgenden Tabelle aus.|  
+|Datentyp und -länge|String|  
+|Standardwert|Keine|  
+|Kardinalität|Siehe Tabelle unten.|  
   
-|Vorgänger oder übergeordnetes Element|Cardinality|  
+|Vorgänger oder übergeordnetes Element|Kardinalität|  
 |------------------------|-----------------|  
 |[Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md), [Target](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|1-1: Erforderliches Element, das nur einmal auftritt.|  
 |Alle sonstigen|0-1: Optionales Element, das nur einmal auftreten kann.|  
@@ -68,11 +68,11 @@ ms.lasthandoff: 01/08/2018
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Object](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [ParentObject](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md), [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md), [Target](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -25,12 +25,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9430eeb2613b77ce1f34918382cd57e4958ac512
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4d3a333b2a8fdbb89f718d67a849c08142da8f79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comments-mdx-syntax"></a>Kommentare (MDX-Syntax)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,17 +38,17 @@ ms.lasthandoff: 01/08/2018
   
  Für Kommentare in MDX gelten folgende Richtlinien:  
   
--   Im Kommentar können sämtliche alphanumerischen Zeichen oder Symbole verwendet werden. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignoriert alle Zeichen innerhalb eines Kommentars.  
+-   Im Kommentar können sämtliche alphanumerischen Zeichen oder Symbole verwendet werden. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignoriert alle Zeichen innerhalb eines Kommentars.  
   
 -   Es gibt keine Längenbeschränkung für einen Kommentar innerhalb einer Anweisung oder eines Skripts. Ein Kommentar kann aus einer oder mehreren Zeilen bestehen.  
   
  MDX unterstützt drei Arten von Kommentarzeichen:  
   
  // (doppelte Schrägstriche)  
- Diese Kommentarzeichen können in derselben Zeile wie der auszuführende Code oder in einer gesonderten Zeile verwendet werden. Der gesamte Text ab den beiden Schrägstrichen bis zum Ende der Zeile ist Teil des Kommentars. Bei einem Kommentar, der sich über mehrere Zeilen erstreckt, muss jede der Kommentarzeilen mit doppelten Schrägstrichen beginnen. Weitere Informationen finden Sie unter [&#40; Kommentar &#41; &#40; MDX &#41; ](../mdx/comment-mdx-double-slash.md).  
+ Diese Kommentarzeichen können in derselben Zeile wie der auszuführende Code oder in einer gesonderten Zeile verwendet werden. Der gesamte Text ab den beiden Schrägstrichen bis zum Ende der Zeile ist Teil des Kommentars. Bei einem Kommentar, der sich über mehrere Zeilen erstreckt, muss jede der Kommentarzeilen mit doppelten Schrägstrichen beginnen. Weitere Informationen finden Sie unter [ &#40;Kommentar&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md).  
   
  -- (doppelte Bindestriche)  
- Diese Kommentarzeichen können in derselben Zeile wie der auszuführende Code oder in einer gesonderten Zeile verwendet werden. Der gesamte Text zwischen den doppelten Bindestrichen und dem Ende der Zeile ist Teil des Kommentars. Bei einem Kommentar, der sich über mehrere Zeilen erstreckt, muss jede der Kommentarzeilen mit doppelten Bindestrichen beginnen. Weitere Informationen finden Sie unter [--&#40; Kommentar &#41; &#40; MDX &#41; ](../mdx/comment-mdx-operator-reference.md).  
+ Diese Kommentarzeichen können in derselben Zeile wie der auszuführende Code oder in einer gesonderten Zeile verwendet werden. Der gesamte Text zwischen den doppelten Bindestrichen und dem Ende der Zeile ist Teil des Kommentars. Bei einem Kommentar, der sich über mehrere Zeilen erstreckt, muss jede der Kommentarzeilen mit doppelten Bindestrichen beginnen. Weitere Informationen finden Sie unter [-- &#40;Kommentar&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md).  
   
  /* ... \*/ (Schrägstrich/Sternchen-Zeichenpaare)  
  Diese Kommentarzeichen können in derselben Zeile wie Code ausgeführt werden, auf Zeilen selbst oder sogar innerhalb des ausführbaren Codes verwendet werden. Sämtliche Zeichen ab dem öffnenden kommentarzeichenpaar (/\*), zum schließenden kommentarzeichenpaar (\*/) als Teil des Kommentars. Für einen mehrzeiligen Kommentar, die Open Kommentarzeichen (/\*) muss der Kommentar und die schließen Kommentarzeichen beginnen (\*/) Enden des Kommentars. Die Zeilen des Kommentars dürfen keine anderen Kommentarzeichen enthalten. Weitere Informationen finden Sie unter [/ *... \*/ (Comment)](../mdx/comment-mdx.md).  
@@ -80,6 +79,6 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Syntaxelemente &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

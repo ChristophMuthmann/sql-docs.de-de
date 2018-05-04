@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverToDataSource
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1dcb53a08e3e20457a3ad616cd7b3d45fec2962
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 996b2a717933f9e7da1cd16ffd39f8bf40156642
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource-Funktion
 **SQLDriverToDataSource** Übersetzungen für ODBC-Treiber unterstützt. Diese Funktion wird nicht von ODBC-fähigen Anwendungen aufgerufen wird. Anwendungen fordern Übersetzung über **SQLSetConnectAttr**. Die zugeordneten Treibers Untersuchen der *Verbindungshandle* im angegebenen **SQLSetConnectAttr** Ruft die angegebene DLL um Übersetzungen für alle Daten, die aus dem Treiber mit der Datenquelle auszuführen. Eine Standard-Konvertierungs-DLL kann in der ODBC-Initialisierungsdatei angegeben werden.  

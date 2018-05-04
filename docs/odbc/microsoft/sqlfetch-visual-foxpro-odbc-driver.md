@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLFetch function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 6198a006-6f25-4328-8403-2aba29b7041f
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e1283f89f23fbd0a4c4e3958498d666a239a591d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6541b83cc8c3c45843e5166c42e29cb170cc2b7a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetch-visual-foxpro-odbc-driver"></a>SQLFetch (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

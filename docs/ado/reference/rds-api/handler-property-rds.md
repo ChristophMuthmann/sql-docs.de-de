@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cb8259abb53f57fc21b53329b0de0ac94cfbcefc
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 325e8000fb6fa8b0e2f5e6f858c9e42e2bc8b497
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handler-property-rds"></a>Handlereigenschaft (RDS)
 Gibt den Namen eines Programms serverseitige Anpassung (Ereignishandler), die die Funktionalität des erweitert die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), und alle Parameter verwendet, die *Handler*.  

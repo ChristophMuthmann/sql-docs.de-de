@@ -23,15 +23,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a199a80277c56825dad9d5ac00909244b57844d4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemamembers-rowset"></a>MDSCHEMA_MEMBERS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die Elemente innerhalb einer Datenbank an.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Beschreibt die Elemente innerhalb einer Datenbank.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **MDSCHEMA_MEMBERS** Rowset enthält die folgenden Spalten.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |**TREE_OP**|**DBTYPE_I4**|(Optional) Gilt nur für ein einzelnes Element:<br /><br /> **MDTREEOP_ANCESTORS** (**0 x 20**) gibt alle Vorgänger zurück.<br /><br /> **MDTREEOP_CHILDREN** (**0 x 01**) nur die unmittelbar untergeordneten Elemente zurückgegeben.<br /><br /> **MDTREEOP_SIBLINGS** (**0 x 02**) gibt Elemente auf der gleichen Ebene zurück.<br /><br /> **MDTREEOP_PARENT** (**0 x 04**) gibt nur das unmittelbar übergeordnete Element.<br /><br /> **MDTREEOP_SELF** (**0 x 08**) selbst in der Liste der zurückgegebenen Zeilen zurück.<br /><br /> **MDTREEOP_DESCENDANTS** (**0 x 10**) gibt alle Nachfolger zurück.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Optional) Standardeinschränkung besitzt den Wert 1. Eine Bitmap mit einem der folgenden gültigen Werten:<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

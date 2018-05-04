@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34e551dccdd6e8f688fc0a7214e096c67ee3f091
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7bd2ffb544690129e761814b281252a76b89588f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters-Auflistung, Eigenschaft Befehlsbeispiel (VB)
 Der folgende Code veranschaulicht, wie die [Befehl](../../../ado/reference/adox-api/command-property-adox.md) Eigenschaft mit dem [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Parameterinformationen für die Prozedur abzurufenden Objekts.  

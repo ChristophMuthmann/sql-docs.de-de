@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3289a98cf31755e81408be36c8177f64ea17a79
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7f354c2069a1862a1b4d6b69b4db78516a292405
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Gibt die Richtung einer Datensatz Suche innerhalb einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

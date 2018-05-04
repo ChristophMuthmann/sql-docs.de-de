@@ -29,12 +29,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0d1f3a607ed6b39100b5de5c2d166bc428fbae7f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f6b1fc3a00d0b17313a619ad9f46e554aacfb701
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans und RollbackTrans-Methoden (ADO)
 Diese Transaktionsmethoden verwalten transaktionsverarbeitung in einem [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt wie folgt:  

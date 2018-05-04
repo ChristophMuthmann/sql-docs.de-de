@@ -19,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be22029aa9a0bdd7deaeb47f988c4ccd13bc8761
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e934983f54be5644e945e4ecdcf201b793c33ea4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset SourceRecordset-Eigenschaft (RDS)
 Gibt an, die **Recordset** vom ein benutzerdefiniertes Geschäftsobjekt zurückgegebenen Objekts.  

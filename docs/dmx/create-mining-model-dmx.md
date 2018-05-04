@@ -29,12 +29,11 @@ caps.latest.revision: 57
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3c4720b0ecb2dcf3aa17f250a30f106ddd1e941f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6d3d8471754918eaff793bb6787f383b67f33a77
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  Der Name der Miningstruktur ergibt sich, indem "_structure" an den Modellnamen angefügt wird. Dadurch ist sichergestellt, dass sich der Strukturname vom Modellnamen unterscheidet.  
   
- Verwenden Sie zum Erstellen eines Miningmodells für eine vorhandene Miningstruktur die [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md) Anweisung.  
+ Verwenden Sie zum Erstellen eines Miningmodells für eine vorhandene Miningstruktur die [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) Anweisung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -115,15 +114,15 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Spalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen &#40; Datamining &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Datentypen & #40; Datamining & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Content-Arten &#40; Datamining &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Content-Arten & #40; Datamining & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Spaltenverteilungen &#40; Datamining &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Spaltenverteilungen &#40;Datamining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modellieren von Ablaufverfolgungsflags &#40; Datamining &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Modellieren von Ablaufverfolgungsflags & #40; Datamining & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
- Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \<Column Relationship >-Klausel.  
+ Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Verwendung der folgenden \<Column Relationship >-Klausel.  
   
  **IM ZUSAMMENHANG MIT**  
  Diese Form kennzeichnet eine Wertehierarchie. Das Ziel einer RELATED TO-Spalte kann eine Schlüsselspalte einer geschachtelten Tabelle, eine Spalte mit diskreten Werten in der Fallzeile oder eine andere Spalte mit einer RELATED TO-Klausel sein, wodurch eine tiefere Hierarchie gekennzeichnet ist.  
@@ -142,7 +141,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- Eine Liste der Parameter, die jedem Algorithmus zugeordnet sind, finden Sie unter [Data Mining-Algorithmen &#40; Analysis Services – Datamining &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Eine Liste der Parameter, die jedem Algorithmus zugeordnet sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie ein Modell mit einem integrierten Testdataset erstellen möchten, sollten Sie die Anweisung CREATE MINING STRUCTURE gefolgt von ALTER MINING STRUCTURE verwenden. Jedoch unterstützen nicht alle Modelltypen ein zurückgehaltenes Dataset. Weitere Informationen finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
@@ -208,8 +207,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

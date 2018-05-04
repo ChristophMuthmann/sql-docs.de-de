@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53f080b66adf9edbda71cf63b7e649f3e9b2d224
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 55d6d9aad0d8e2b66fd03b05dd10391272514869
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensioncount-property-ado-md"></a>DimensionCount-Eigenschaft (ADO MD)
 Gibt die Anzahl der Dimensionen auf eine [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  

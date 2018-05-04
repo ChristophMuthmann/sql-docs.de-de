@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], static
 - static cursors [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3d6810d2cc6ac0ba3eb4125372944c6c96e3ddb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4c2e6835d818d1e1d5aba7b54497f4a95f0bc150
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-static-cursors"></a>Statische ODBC-Cursor
 Ein statischer Cursor ist in der das Resultset angezeigt wird, um statisch sein. Es kann nicht in der Regel Änderungen erkennen, die an der Mitgliedschaft, Reihenfolge oder Werte des Resultsets nach dem Öffnen des Cursors vorgenommen wurden. Nehmen wir beispielsweise an ein statischer Cursor abruft, eine Zeile und einer anderen Anwendung wird diese Zeile aktualisiert. Wenn der statische Cursor die Zeile refetches, sind die Werte, die er angezeigt wird trotz der von der anderen Anwendung vorgenommenen unverändert.  

@@ -2,27 +2,23 @@
 title: WideWorldImporters OLAP-Datenbank – Verwendung von SQL Server | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
-ms.component: samples
-ms.technology:
-- samples
+ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: BarbKess
-ms.author: barbkess
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.workload: Inactive
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92b842b24bc04117dad93ed1991689a1e781e828
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: ec6d82cef1df31a280b124671a942cdb4f448dd2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW Verwendung von SQL Server-Features und Funktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

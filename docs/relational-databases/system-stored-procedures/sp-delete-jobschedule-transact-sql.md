@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 81cc3f4ce5fcfdaa9ba36828b3ba1133c3825ed4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a571ce63cd2870185109aeeb96ee4dd12548ee3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="remarks"></a>Hinweise  
  Auftragszeitpläne können jetzt unabhängig von Aufträgen verwaltet werden. Verwenden Sie **sp_detach_schedule**, um einen Zeitplan von einem Auftrag zu entfernen. Verwenden Sie **sp_delete_schedule**, um einen Zeitplan zu löschen.  
   
-> **Hinweis:****Sp_delete_jobschedule** unterstützt keine Zeitpläne, die an mehrere Aufträgen angefügt sind.   Wenn ein vorhandenes Skript **sp_delete_jobschedule** aufruft, um einen Zeitplan zu entfernen, der an mehrere Aufträge angefügt ist, gibt die Prozedur einen Fehler zurück.  
+> **Hinweis:****Sp_delete_jobschedule** unterstützt keine Zeitpläne, die an mehrere Aufträgen angefügt sind. Wenn ein vorhandenes Skript **sp_delete_jobschedule** aufruft, um einen Zeitplan zu entfernen, der an mehrere Aufträge angefügt ist, gibt die Prozedur einen Fehler zurück.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  

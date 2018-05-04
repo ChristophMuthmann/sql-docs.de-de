@@ -1,16 +1,16 @@
 ---
 title: Microsoft Decision Trees Algorithm Technical Reference | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: df4ea21c0fb5ace30fb2bf0ef605b0dd3dbef85d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Decision Trees-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Algorithmus, der verschiedene Methoden zum Erstellen einer Struktur integriert und mehrere analytische Tasks, wie Regression, Klassifikation und Zuordnung, unterstützt. Der Microsoft Decision Trees-Algorithmus unterstützt die Modellierung sowohl diskreter als auch fortlaufender Attribute.  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Algorithmus, der verschiedene Methoden zum Erstellen einer Struktur integriert und mehrere analytische Tasks, wie Regression, Klassifikation und Zuordnung, unterstützt. Der Microsoft Decision Trees-Algorithmus unterstützt die Modellierung sowohl diskreter als auch fortlaufender Attribute.  
   
  In diesem Thema wird die Implementierung des Algorithmus erläutert und beschrieben, wie das Verhalten des Algorithmus für verschiedene Aufgaben angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Entscheidungsstrukturmodellen zur Verfügung gestellt.  
   
@@ -106,7 +105,7 @@ Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithm
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterstützt Parameter, die sich auf die Leistung und Genauigkeit des resultierenden Miningmodells auswirken. Sie können außerdem Modellierungsflags für die Miningmodellspalten oder Miningstrukturspalten festlegen, um die Verarbeitung der Daten zu steuern.  
   
 > [!NOTE]  
->  Der Microsoft Decision Trees-Algorithmus ist in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar, einige erweiterte Parameter, mit denen das Verhalten des Microsoft Decision Trees-Algorithmus angepasst werden kann, stehen jedoch nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zur Verfügung. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Der Microsoft Decision Trees-Algorithmus ist in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar, einige erweiterte Parameter, mit denen das Verhalten des Microsoft Decision Trees-Algorithmus angepasst werden kann, stehen jedoch nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zur Verfügung. Eine Liste der Funktionen, die von den Editionen unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
  In der folgenden Tabelle sind die Parameter beschrieben, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwendet werden können.  
@@ -211,6 +210,6 @@ Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithm
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Decision Trees-Abfragebeispiele](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Entscheidungsstrukturmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

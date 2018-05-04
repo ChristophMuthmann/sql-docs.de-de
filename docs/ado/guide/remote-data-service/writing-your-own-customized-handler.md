@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2aebf16b3fea3933b1ef9b565b7f76b17d8c2b71
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 77825744ef9967f030def2942170637a133163d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>Schreiben Sie einen eigene benutzerdefinierten Handler
 Sie möchten einem eigenen Handler zu schreiben, wenn Sie einen IIS-Server-Administrator möchte die Standardeinstellung für die Unterstützung von RDS werden jedoch mehr Kontrolle über die benutzeranforderungen und Zugriffsrechte.  

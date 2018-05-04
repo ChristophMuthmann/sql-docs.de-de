@@ -1,35 +1,23 @@
 ---
-title: "Hinzufügen von Kontointelligenz zu einer Dimension | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Hinzufügen von Kontointelligenz zu einer Dimension | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], account intelligence
-- account intelligence [Analysis Services]
-ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6f8d62ccc2fe1a5ec8983c406f7c47153744eeed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI-Assistent – Hinzufügen von Kontointelligenz zu einer Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die Kontointelligenzerweiterung kann einem Cube oder eine Dimension hinzugefügt werden, um Elementen eines Kontoattributs Standardkontoklassifikationen wie Einnahmen und Ausgaben zuzuweisen. Diese Erweiterung identifiziert auch Kontotypen (wie Asset und Liability) und weist jedem Kontotyp die entsprechende Aggregation zu. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann die Klassifikationen zum Aggregieren von Konten über die Zeit verwenden.  
+  Die Kontointelligenzerweiterung kann einem Cube oder eine Dimension hinzugefügt werden, um Elementen eines Kontoattributs Standardkontoklassifikationen wie Einnahmen und Ausgaben zuzuweisen. Diese Erweiterung identifiziert auch Kontotypen (wie Asset und Liability) und weist jedem Kontotyp die entsprechende Aggregation zu. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann die Klassifikationen zum Aggregieren von Konten über die Zeit verwenden.  
   
 > [!NOTE]  
 >  Kontointelligenz ist nur für Dimensionen verfügbar, die auf vorhandenen Datenquellen basieren. Für Dimensionen, die ohne Datenquelle erstellt wurden, müssen Sie den Schemagenerierungs-Assistenten ausführen, um vor dem Hinzufügen von Kontointelligenz eine Datenquellensicht zu erstellen.  

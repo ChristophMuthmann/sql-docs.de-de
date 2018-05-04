@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd98336d35b5c113abf4c08595d9dbb1ef2316b7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: a1d0c4eac85cc07e9a507d206f76a9cbc2dc418c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Lesen, ReadText, schreiben und WriteText-Methoden-Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, wie der Inhalt eines Textfelds in beide einen Text zu lesen [Stream](../../../ado/reference/ado-api/stream-object-ado.md) und eine binäre **Stream**. Einschließen von anderen Eigenschaften und Methoden gezeigt [Position](../../../ado/reference/ado-api/position-property-ado.md), [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), und [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

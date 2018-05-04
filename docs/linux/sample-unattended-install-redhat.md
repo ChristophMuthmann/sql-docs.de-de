@@ -13,12 +13,11 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: 8273d9b876d4af3fd7c535af78fdd4e60d4db7fd
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 1b8a7e0c7f0a319064370d282f9195bd0163abec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Beispiel: Für die unbeaufsichtigte SQL Server-Installationsskript für Red Hat Enterprise Linux
 

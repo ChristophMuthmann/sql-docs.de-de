@@ -13,12 +13,11 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: 4033289cb388e9ba06260b482af613054e70760c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: d3b1fa90c6112247c88b9e148bc65c0cef7be0b0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Konfigurieren der Failover-Clusterinstanz - iSCSI - SQL Server on Linux
 

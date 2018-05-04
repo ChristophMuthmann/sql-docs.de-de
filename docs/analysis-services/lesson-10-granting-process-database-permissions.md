@@ -1,29 +1,28 @@
 ---
-title: "Erteilen von Verarbeitungsberechtigungen für die Datenbank | Microsoft Docs"
-ms.custom: 
+title: Erteilen von Verarbeitungsberechtigungen für die Datenbank | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7a6e9524efcebab174073290983a20f7f242d81
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 42e6abd08ccd8fe8cb574fa8fc0e3056c04f0801
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-10---granting-process-database-permissions"></a>Lektion 10 – Prozess-Datenbankberechtigungen erteilen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +65,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie die Process Database Objects-
 > Durch Herunterladen und Installieren der Beispiele ist für Lektion 10 ein abgeschlossenes Projekt verfügbar. Weitere Informationen finden Sie unter [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Rollen und Berechtigungen &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+[Rollen und Berechtigungen & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

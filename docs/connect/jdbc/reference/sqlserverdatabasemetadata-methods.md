@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 772de447-c922-4b85-8e10-5f0d9277966c
 caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e518d94aad4246a2d68d6dec0a9fd5979f05e332
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7121cc78074b1426506dc0a60189441e3b252b64
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverdatabasemetadata-methods"></a>SQLServerDatabaseMetaData-Methoden
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

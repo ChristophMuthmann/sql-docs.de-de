@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 756775900c04ff501095f95fda95fa4f184e8833
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 01076f3f9167af8b67153abf9f3458a63bed1bf3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimistic-concurrency"></a>Vollständige Parallelität
 *Vollständige Parallelität* Name abgeleitet wird, aus der optimistischen Annahme, dass Konflikte zwischen Transaktionen selten treten; als ein Konflikt aufgetreten sind wird, wenn eine andere Transaktion aktualisiert oder eine Zeile mit Daten zwischen dem Zeitpunkt löscht, er wird gelesen, nach der aktuellen Transaktion und der Uhrzeit wird aktualisiert oder gelöscht. Dies ist das Gegenteil von *eingeschränkte Parallelität* oder sperren, in dem Entwickler der Anwendung Meinung ist, dass solche Konflikte üblich sind.  

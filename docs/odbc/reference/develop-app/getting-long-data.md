@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - fetches [ODBC], long data
@@ -23,12 +23,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ff0a11691216d03edc80d5be16c18f428664e7b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e681bac1af7f778d0e8c813129a344af6c21dd8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-long-data"></a>Abrufen von Long-Daten
 Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über eine bestimmte Größe, z. B. 255 Zeichen lang sein. Diese Daten möglicherweise klein genug, um in einem einzigen Puffer, z. B. eine Beschreibung für den mehrere Tausend Zeichen gespeichert werden. Allerdings möglicherweise zu lang im Arbeitsspeicher, z. B. lange Dokumente oder Bitmaps gespeichert sein. Da diese Daten in einem einzigen Puffer gespeichert werden können, aus dem Treiber des Webparts mit abgerufen **SQLGetData** nach die anderen Daten in der Zeile abgerufen wurde.  

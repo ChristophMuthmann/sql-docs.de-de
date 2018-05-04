@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], pseudo-type identifiers
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 730203c438568152bb1ce42ef5f152c87bd5f468
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 70964b9d2a438805194f9816473fdf81d0d39f3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-c-data-types"></a>Standard-C-Datentypen
 Wenn eine Anwendung in SQL_C_DEFAULT gibt **SQLBindCol**, **SQLGetData**, oder **SQLBindParameter**, der Treiber wird davon ausgegangen, dass der C-der Ausgabe oder Eingabepuffer Datentyp entspricht dem SQL-Datentyp der Spalte oder des Parameters, der der Puffer gebunden ist.  

@@ -1,28 +1,28 @@
 ---
-title: "Lektion 2: Hinzufügen von Daten | Microsoft Docs"
-ms.custom: 
+title: 'Lektion 2: Hinzufügen von Daten | Microsoft Docs'
+ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 05a93e001f4b5deb7be0aa3367ad74278e90d70a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5976c7113de52fa34611d0809f525ddd74c1a861
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-add-data"></a>Lektion 2: Hinzufügen von Daten
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +33,7 @@ Mit dem Tabellenimport-Assistenten können Sie Daten aus einer Reihe verschieden
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 1: Erstellen eines neuen Tabellenmodellprojekts](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Erstellen einer Verbindung  
@@ -63,7 +63,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
     > [!NOTE]  
     > Die Verwendung eines Windows-Benutzerkontos und -Kennworts stellt die sicherste Methode für das Herstellen einer Verbindung mit einer Datenquelle dar. Weitere Informationen finden Sie unter [Identitätswechsel](../analysis-services/tabular-models/impersonation-ssas-tabular.md).  
   
-7.  Überprüfen Sie auf der Seite **Auswählen, wie die Daten importiert werden sollen** , ob die Option **Aus einer Liste von Tabellen und Sichten auswählen, um die zu importierenden Daten zu bestimmen** ausgewählt ist. Sie möchten in einer Liste von Tabellen und Sichten eine Auswahl treffen. Klicken Sie daher auf **Weiter** , um eine Liste aller Quelltabellen in der Quelldatenbank anzuzeigen.  
+7.  Überprüfen Sie auf der Seite **Auswählen, wie die Daten importiert werden sollen**, ob die Option **Aus einer Liste von Tabellen und Sichten auswählen, um die zu importierenden Daten zu bestimmen** ausgewählt ist. Sie möchten in einer Liste von Tabellen und Sichten eine Auswahl treffen. Klicken Sie daher auf **Weiter** , um eine Liste aller Quelltabellen in der Quelldatenbank anzuzeigen.  
   
 8.  Aktivieren Sie auf der Seite **Tabellen und Sichten auswählen** das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**und **FactInternetSales**.  
   
@@ -93,7 +93,7 @@ Die DimCustomer-Tabelle, die Sie die-Beispieldatenbank importieren enthält eine
     
     **DimDate**
     
-      |Spalte|  
+      |Column|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -103,7 +103,7 @@ Die DimCustomer-Tabelle, die Sie die-Beispieldatenbank importieren enthält eine
   
     **DimGeography**
   
-      |Spalte|  
+      |Column|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -111,7 +111,7 @@ Die DimCustomer-Tabelle, die Sie die-Beispieldatenbank importieren enthält eine
   
     **DimProduct**
   
-      |Spalte|  
+      |Column|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -126,21 +126,21 @@ Die DimCustomer-Tabelle, die Sie die-Beispieldatenbank importieren enthält eine
   
     **DimProductCategory**
   
-      |Spalte|  
+      |Column|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |Spalte|  
+      |Column|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |Spalte|  
+      |Column|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  

@@ -11,17 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fad58a391c4fc0a89d8bc663698d4e77230bf79d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1898eb29b5c2e335fa355b43d8037ba9b4b2c910
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reading-large-data-sample"></a>Beispiel zum Lesen umfangreicher Daten
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

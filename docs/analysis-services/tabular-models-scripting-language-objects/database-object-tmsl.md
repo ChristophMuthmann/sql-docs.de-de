@@ -1,30 +1,30 @@
 ---
 title: Datenbankobjekt (TMSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ae5c046b-8242-4046-ae76-2c070503fd93
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e67dfe62b23e08a675fbb93833c9383091198629
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 65672af9d00dc4b9058c59a656989df7c6a32638
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-object-tmsl"></a>Datenbankobjekt (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definiert eine tabellarische Datenbank mit Kompatibilitätsgrad 1200 oder höher, auf Grundlage eines Modells der gleichen Ebene. In diesem Thema werden die Objektdefinition von einer Datenbank, die Nutzlast für Anforderungen, die erstellen, ändern, löschen und Ausführen von Verwaltungsaufgaben für die Datenbank bereitstellen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Definiert eine tabellarische Datenbank mit Kompatibilitätsgrad 1200 oder höher, auf Grundlage eines Modells der gleichen Ebene. In diesem Thema werden die Objektdefinition von einer Datenbank, die Nutzlast für Anforderungen, die erstellen, ändern, löschen und Ausführen von Verwaltungsaufgaben für die Datenbank bereitstellen.  
   
 > [!NOTE]  
 >  In jedem Skript kann nur eine Datenbank zum Zeitpunkt verwiesen werden. Für jedes Objekt als die Datenbank selbst ist die Datenbankeigenschaft optional, wenn Sie das Modell anzugeben. Es ist 1: 1-Zuordnung zwischen einem Modell und eine Datenbank, die verwendet werden kann, um den Datenbanknamen abzuleiten, wenn diese nicht explizit angegeben wird.   
@@ -42,12 +42,12 @@ ms.lasthandoff: 01/08/2018
                 oder ReadOnlyExclusive. Finden Sie unter [hohe Verfügbarkeit und Skalierbarkeit in Analysis Services](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md) und [Umschalten in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md) für Weitere Informationen, wenn diese Eigenschaft verwendet wird.  
   
 ## <a name="usage"></a>Verwendung  
- **Datenbank** Objekte sind in fast jeder Befehl verwendet. Finden Sie unter [Befehle im tabellarischen Modell Scripting Language &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md) für eine Liste. Ein **Datenbank** Objekt ist ein untergeordnetes Element eines Serverobjekts.  
+ **Datenbank** Objekte sind in fast jeder Befehl verwendet. Finden Sie unter [Befehle in Tabular Model Scripting Language &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md) eine Liste. Ein **Datenbank** Objekt ist ein untergeordnetes Element eines Serverobjekts.  
   
  Beim Erstellen, ersetzen oder ändern ein Datenbankobjekt, geben Sie alle Lese-/ Schreibzugriff Eigenschaften der Objektdefinition. Eine Lese-/ Schreibzugriff-Eigenschaft nicht angegeben, gilt einen Löschvorgang.  
   
 ## <a name="partial-syntax"></a>Teilweise-Syntax  
- Da diese Objektdefinition so umfangreich ist, sind nur direkte Eigenschaften aufgelistet. Die **Modell** -Objekt ermöglicht den Großteil der Datenbankdefinition. Finden Sie unter [Model Object &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md) , wie das Objekt definiert ist.  
+ Da diese Objektdefinition so umfangreich ist, sind nur direkte Eigenschaften aufgelistet. Die **Modell** -Objekt ermöglicht den Großteil der Datenbankdefinition. Finden Sie unter [Modellobjekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md) , wie das Objekt definiert ist.  
   
 ```  
     "database": {  

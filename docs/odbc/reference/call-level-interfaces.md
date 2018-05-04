@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
 - CLI [ODBC], using CLI
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b019e7757f907656b2d1180af9488f9a4e8595f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5df7ff90e8b290f6fb55f1c62b59eee10d83cd8e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="call-level-interfaces"></a>Call-Level-Schnittstellen
 Das letzte Verfahren für das Senden von SQL-Anweisungen an das DBMS erfolgt über eine Call-Level-Interface (CLI). Ein Call-Level-Interface enthält eine Bibliothek von DBMS-Funktionen, die von der Anwendung aufgerufen werden kann. Folglich ähnelt statt SQL mit einer anderen Programmiersprache ausgeblendet, ein Call-Level-Interface routinemäßigen Bibliotheken an, die meisten Programmierer daran gewöhnt sind, zu verwenden, z. B. die Zeichenfolge, die e/a- oder die mathematische Bibliotheken in c-Hinweis Dieser DBMS-Systeme, die eingebettetes SQL unterstützen verfügen Sie bereits eine Call-Level-Interface, die Aufrufe an die von der vorkompilierten generiert werden. Allerdings sind diese Aufrufe nicht dokumentiert und können ohne vorherige Ankündigung geändert werden.  

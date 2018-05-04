@@ -22,12 +22,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a4b3f50c791d7cc53d3fa3161aaf8293abbd8b62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Aktualisieren von einer Anwendung auf OLE DB-Treiber für SQLServer von MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +58,6 @@ ms.lasthandoff: 04/16/2018
 -   OLE DB-Treiber für SQL Server enthält keine XML-Integration. OLE DB-Treiber für SQL Server unterstützt SELECT... FÜR XML-Abfragen, aber andere XML-Funktionen nicht unterstützt. OLE DB-Treiber für SQL Server unterstützt jedoch die **Xml** -Datentyp in eingeführte [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 -   OLE DB-Treiber für SQL Server unterstützt das Konfigurieren von clientseitigen Netzwerkbibliotheken nur Verbindungszeichenfolgen-Attribute verwenden. Wenn Sie eine umfassendere Netzwerkbibliothekskonfiguration benötigen, müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager verwenden.  
-
--   OLE DB-Treiber für SQL Server ist nicht kompatibel mit odbcbcp.dll. Anwendungen müssen neu erstellt werden, um mit msoledbsql.lib verknüpfen, um die OLE DB-Treiber für SQL Server verwenden.    
 
 -   MDAC-Verbindungszeichenfolgen ermöglichen einen booleschen Wert (**"true"**) für die **Trusted_Connection** Schlüsselwort. Verwenden Sie einen OLE DB-Treiber für SQL Server-Verbindungszeichenfolge muss **Ja** oder **keine**.  
 

@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2f2d8598e588f65799df46a3b5e60c2f027f8861
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c9169ef5e9ec9715a280530074708b32e8ae23e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refreshpolicy-element-assl"></a>RefreshPolicy-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bestimmt, wie oft im dynamischen Teil der Gruppe Dimension oder Measuregruppe (gemäß der [Persistenz](../../../analysis-services/scripting/properties/persistence-element-assl.md) Element) wird geprüft, ob Änderungen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Bestimmt, wie oft im dynamischen Teil der Dimension oder Measuregruppe (gemäß der Festlegung im [Persistence](../../../analysis-services/scripting/properties/persistence-element-assl.md) -Element) geprüft wird, ob Änderungen vorliegen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,36 +50,36 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|Finden Sie in der folgenden Tabelle aus.|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Standardwert|Siehe Tabelle unten.|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 |Vorgänger oder übergeordnetes Element|Standardwert|  
 |------------------------|-------------------|  
 |[DimensionBinding](../../../analysis-services/scripting/data-type/dimensionbinding-data-type-assl.md)|*ByQuery*|  
-|[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|InclusionThresholdSetting|  
+|[MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|Keine|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[DimensionBinding](../../../analysis-services/scripting/data-type/dimensionbinding-data-type-assl.md), [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |*ByQuery*|Jede Abfrage überprüft, ob sich die Quelldaten geändert haben.|  
-|*ByInterval*|Quelldaten ist nur für Änderungen an der angegebenen Intervalls aktiviert ["RefreshInterval"](../../../analysis-services/scripting/properties/refreshinterval-element-assl.md).|  
+|*ByInterval*|Quelldaten werden nur beim von [RefreshInterval](../../../analysis-services/scripting/properties/refreshinterval-element-assl.md)angegebenen Intervall auf Änderungen überprüft.|  
   
  Die Enumeration, die den zulässigen Werten für entspricht **RefreshPolicy** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.RefreshPolicy>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Persistence-Element &#40; ASSL &#41;](../../../analysis-services/scripting/properties/persistence-element-assl.md)   
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Persistence-Element & #40; ASSL & #41;](../../../analysis-services/scripting/properties/persistence-element-assl.md)   
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

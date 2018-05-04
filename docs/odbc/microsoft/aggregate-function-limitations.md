@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], aggregate functions
 - ODBC desktop database drivers [ODBC], aggregate functions
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e0c95ebd235b10d535b1aab0bb23fca36fb67100
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6d9b14576ba1ec7e7374a220e88a9687c84f1632
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-function-limitations"></a>Einschränkungen der Aggregate-Funktion
 Eine Aggregatfunktion und einem nicht-Aggregatspalte Verweis können nicht sowohl als Argumente für eine einzelne SQL-Anweisung verwendet werden.

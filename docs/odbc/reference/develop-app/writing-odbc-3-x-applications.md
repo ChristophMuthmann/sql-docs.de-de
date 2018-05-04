@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application upgrades [ODBC], about upgrading
 - ODBC drivers [ODBC], backward compatibility
@@ -25,17 +25,16 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9a713564688e97c4b9b649880e989598a58179f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61809072272ae91c32d4780971735c29c53fe977
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-odbc-3x-applications"></a>Schreiben von ODBC 3.x-Anwendungen
 Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um ODBC 3. *X*, sodass Funktionsweise mit ODBC-2 geschrieben werden soll. *X* und 3. *X* Treiber. Die Anwendung soll bedingten Code aus, um die ODBC 3. voll ausnützen integrieren. *x* Funktionen.  
   
- Das Attribut der SQL_ATTR_ODBC_VERSION-Umgebung sollte auf SQL_OV_ODBC2 festgelegt werden. Dadurch wird sichergestellt, dass der Treiber wie einer ODBC 2. verhält*.x* Treiber in Bezug auf die Änderungen, die im Abschnitt beschriebenen [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md).  
+ Das Attribut der SQL_ATTR_ODBC_VERSION-Umgebung sollte auf SQL_OV_ODBC2 festgelegt werden. Dadurch wird sichergestellt, dass der Treiber wie einer ODBC 2. verhält *.x* Treiber in Bezug auf die Änderungen, die im Abschnitt beschriebenen [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md).  
   
  Wenn keines der Features finden Sie im Abschnitt die Anwendung verwenden [Funktionsumfang](../../../odbc/reference/develop-app/new-features.md), bedingter Code sollte verwendet werden, um festzustellen, ob der Treiber eine ODBC-3 ist. *X* oder ODBC 2.*.x* Treiber. Die Anwendung verwendet **SQLGetDiagField** und **SQLGetDiagRec** zum Abrufen von ODBC 3. *X* SQLSTATEs während der Durchführung der Verarbeitung auf die bedingte Codefragmente Fehler. Die folgenden Punkte bezüglich der neuen Funktionalität sollten berücksichtigt werden:  
   

@@ -23,24 +23,24 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e823aca2ca72fe756fe41cabf49fe61f26cec106
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1e6117a2a17457a919e202a6dfeef411a766e0f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschematables-rowset"></a>DBSCHEMA_TABLES-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt die Measuregruppen und Dimensionen, die in als Tabellen verfügbar gemacht [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Gibt die Measuregruppen und Dimensionen, die in als Tabellen verfügbar gemacht [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DBSCHEMA_TABLES** -Rowset enthält die folgenden Spalten.  
   
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**"TABLE_CATALOG"**|**DBTYPE_WSTR**|255|Der Name des Katalogs, zu dem dieses Objekt gehört.|  
+|**TABLE_CATALOG**|**DBTYPE_WSTR**|255|Der Name des Katalogs, zu dem dieses Objekt gehört.|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**|255|Der Name des Cubes, zu dem dieses Objekt gehört.|  
-|**TABELLENNAME**|**DBTYPE_WSTR**|255|Der Name des Objekts, wenn **TABLE_TYPE** **TABLE**lautet.|  
+|**TABLE_NAME**|**DBTYPE_WSTR**|255|Der Name des Objekts, wenn **TABLE_TYPE** **TABLE**lautet.|  
 |**TABLE_TYPE**|**DBTYPE_WSTR**||Der Typ der Tabelle.<br /><br /> **TABLE** gibt an, dass das Objekt eine Measuregruppe ist.<br /><br /> **SYSTEM TABLE** gibt an, dass das Objekt eine Dimension ist.|  
 |**TABLE_GUID**|**DBTYPE_GUID**||Nicht unterstützt.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||Eine lesbare Beschreibung des Objekts.|  
@@ -56,9 +56,9 @@ ms.lasthandoff: 01/08/2018
   
 |Spaltenname|Typindikator|Einschränkungsstatus|  
 |-----------------|--------------------|-----------------------|  
-|**"TABLE_CATALOG"**|**DBTYPE_WSTR**|Optional|  
+|**TABLE_CATALOG**|**DBTYPE_WSTR**|Optional|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**|Optional|  
-|**TABELLENNAME**|**DBTYPE_WSTR**|Optional|  
+|**TABLE_NAME**|**DBTYPE_WSTR**|Optional|  
 |**TABLE_TYPE**|**DBTYPE_WSTR**|Optional|  
 |**TABLE_OLAP_TYPE**|**DBTYPE_WSTR**|Optional|  
   

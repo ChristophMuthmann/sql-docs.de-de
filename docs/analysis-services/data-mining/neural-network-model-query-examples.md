@@ -1,35 +1,34 @@
 ---
 title: Neuronale Netzwerkmodellabfragen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b900cf7799baf78234127d52ab064e31f3699f86
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="neural-network-model-query-examples"></a>Neuronale Beispiele für Netzwerkmodellabfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage für ein neuronales Netzwerkmodell ruft beispielsweise Modellmetadaten wie die Anzahl der verborgenen Ebenen ab. Alternativ schlägt eine Vorhersageabfrage Klassifikationen basierend auf einer Eingabe vor und stellt wahlweise Wahrscheinlichkeiten für jede Klassifikation zur Verfügung.  
+  Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. Eine Inhaltsabfrage für ein neuronales Netzwerkmodell ruft beispielsweise Modellmetadaten wie die Anzahl der verborgenen Ebenen ab. Alternativ schlägt eine Vorhersageabfrage Klassifikationen basierend auf einer Eingabe vor und stellt wahlweise Wahrscheinlichkeiten für jede Klassifikation zur Verfügung.  
   
  In diesem Abschnitt wird erklärt, wie Abfragen für Modelle erstellt werden, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus basieren.  
   
@@ -218,20 +217,20 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Diagramm für neuronale Netzwerke ist.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
-|["PredictHistogram" &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Diagramm für neuronale Netzwerke ist.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
+|["PredictHistogram" & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz für den vorhergesagten Wert zurück.|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Gibt die Standardabweichung für den vorhergesagten Wert zurück.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Für neuronale Netzwerk- und logistische Regressionsmodelle wird ein einzelner Wert zurückgegeben, der die Größe des Trainingssatzes für das gesamte Modell darstellt.|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Gibt die Standardabweichung für den vorhergesagten Wert zurück.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Für neuronale Netzwerk- und logistische Regressionsmodelle wird ein einzelner Wert zurückgegeben, der die Größe des Trainingssatzes für das gesamte Modell darstellt.|  
   
  Eine Liste der Funktionen, die allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen gemeinsam sind, finden Sie in der [Algorithmusreferenz (Analysis Services – Data Mining)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Technische Referenz zu Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Miningmodellinhalt, neuronale Netzwerkmodelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lektion 5: Erstellen von neuronalen Netzwerk und logistischen Regressionsmodellen &#40; Datamining-Lernprogramm für fortgeschrittene &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [Miningmodellinhalt, neuronale Netzwerkmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Lektion 5: Erstellen von neuronalen Netzwerk und logistischen Regressionsmodellen & #40; Datamining-Lernprogramm für fortgeschrittene & #41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

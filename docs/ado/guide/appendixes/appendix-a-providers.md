@@ -23,12 +23,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ab1ea25e0f2b08956b3462b7b79c8fb28602b3db
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0f367b244755837595fc1357d8a1824e4f7fa30b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten und Dienstanbieter
 In diesem Abschnitt behandelt die drei Arten von Anbietern: Datenanbieter Dienstanbieter und Dienstkomponenten. Anbieter können zwei Kategorien zugeordnet: Bereitstellen von Daten und die Dienste bereitstellen. Ein *Datenanbieter* besitzt seine eigenen Daten und es in tabellarischer Form an Ihre Anwendung verfügbar gemacht. Ein *Dienstanbieter* kapselt einen Dienst durch erzeugen und Nutzen von Daten, die Funktionen in den ADO-Anwendungen zu erweitern. Ein Dienstanbieter kann als auch genauer definiert eine *Dienstkomponente*, die zusammen mit anderen Dienstanbietern oder Komponenten arbeiten müssen.

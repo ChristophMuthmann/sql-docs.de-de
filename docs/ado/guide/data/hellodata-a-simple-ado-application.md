@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7516198dba64e9567b39abecfe31948d38e846e1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6d5ade478a37ed8810934d7c3c9fd08200c7d54b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Eine einfache ADO-Anwendung
 Diese einfache Anwendung schrittweise jeden der vier wichtigsten ADO-Vorgänge: Abrufen, untersuchen, bearbeiten und Aktualisieren von Daten. Diese Vorgänge werden für die Beispieldatenbank Northwind, die Sie mit Microsoft® SQL Server ausgeführt. Im Beispiel für die Fehlerbehandlung ist minimal, auf die Grundlagen von ADO konzentrieren und Code übersichtliche zu verhindern.  

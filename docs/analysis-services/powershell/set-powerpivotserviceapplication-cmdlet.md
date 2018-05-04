@@ -1,31 +1,23 @@
 ---
 title: Set-PowerPivotServiceApplication-Cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39d00b432101560c5cf5075a0e60e445e670a28d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0b25a6f38a4de815ee3d8b39defcc95f0ad065b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-powerpivotserviceapplication-cmdlet"></a>Set-PowerPivotServiceApplication-Cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Legt die Eigenschaften einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung fest.  
+  Legt die Eigenschaften einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung fest.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -67,7 +59,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-allowcustomwindowscredentials-switchparameter"></a>-AllowCustomWindowsCredentials [\<SwitchParameter>]  
+### <a name="-allowcustomwindowscredentials-switchparameter"></a>-AllowCustomWindowsCredentials [\<Switch-Parameter >]  
  Gibt an, ob Zeitplanbesitzer beliebige Windows-Anmeldeinformationen eingeben können, um einen Zeitplan zur Datenaktualisierung auszuführen. Wenn Sie dieses Kontrollkästchen aktivieren, erstellt und verwaltet die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung eine Zielanwendung für jeden Satz gespeicherter Anmeldeinformationen. Die Standardeinstellung ist true. Legen Sie AllowCustomWindowsCredentials:$false fest, um diese Funktion zu deaktivieren.  
   
 |||  
@@ -78,7 +70,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-businesshoursendtime-string"></a>-BusinessHoursEndTime \<string>  
+### <a name="-businesshoursendtime-string"></a>-BusinessHoursEndTime \<Zeichenfolge >  
  Gibt den Endpunkt in einem Bereich von Stunden an, die einen Geschäftstag definieren. Zeitpläne zur Datenaktualisierung können am Ende eines Geschäftstags ausgeführt werden, um die während der regulären Geschäftszeiten generierten Transaktionsdaten zu sammeln. Die Standardeinstellung ist 8:00 p.m. (20:00 Uhr).  Gültige Werte werden in Anführungszeichen mit dem Zusatz AM oder PM angegeben (z. B. "08:00PM"). Der Stundenwert muss zwischen 1 und 12 liegen. Der Minutenwert muss zwischen 1 und 59 liegen.  
   
  Um für einen Geschäftstag den vollständigen Stundenbereich anzugeben, müssen Sie sowohl BusinessHoursStartTime als auch BusinessHoursEndTime festlegen. Mit diesen beiden Parametern wird das Stundenintervall für einen Geschäftstag definiert.  
@@ -91,7 +83,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-businesshoursstarttime-string"></a>-BusinessHoursStartTime \<string>  
+### <a name="-businesshoursstarttime-string"></a>-BusinessHoursStartTime \<Zeichenfolge >  
  Gibt den Startpunkt in einem Bereich von Stunden an, die einen Geschäftstag definieren. Zeitpläne zur Datenaktualisierung können am Ende eines Geschäftstags ausgeführt werden, um die während der regulären Geschäftszeiten generierten Transaktionsdaten zu sammeln. Die Standardeinstellung ist 4:00 a.m.  Gültige Werte werden in Anführungszeichen mit dem Zusatz AM oder PM angegeben (z. B. "04:00AM"). Der Stundenwert muss zwischen 1 und 12 liegen. Der Minutenwert muss zwischen 1 und 59 liegen.  
   
  Um für einen Geschäftstag den vollständigen Stundenbereich anzugeben, müssen Sie sowohl BusinessHoursStartTime als auch BusinessHoursEndTime festlegen. Mit diesen beiden Parametern wird das Stundenintervall für einen Geschäftstag definiert.  
@@ -115,7 +107,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-confirm-switch"></a>-Confirm \<switch>  
+### <a name="-confirm-switch"></a>-Bestätigen Sie \<wechseln >  
  Fordert eine Bestätigung an, bevor der Befehl ausgeführt wird. Dieser Wert ist standardmäßig aktiviert. Geben Sie Confirm:$false für einen Befehl an, um die Bestätigungsantwort in einem Befehl zu umgehen.  
   
 |||  
@@ -126,7 +118,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-connectionpoolsize-int"></a>-ConnectionPoolSize \<int>  
+### <a name="-connectionpoolsize-int"></a>ConnectionPoolSize - \<Int >  
  Gibt die maximale Anzahl von Verbindungen im Leerlauf an, die der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst in einzelnen Verbindungspools für die einzelnen SharePoint-Benutzer, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datasets und Versionskombinationen erstellt. Der Standardwert ist 1.000 Verbindungen im Leerlauf. Gültige Werte sind -1 (unbegrenzt), 0 (deaktiviert das Pooling von Benutzerverbindungen) oder 1 bis 10.000. Durch diese Verbindungspools kann der Dienst fortlaufende Verbindungen mit den gleichen schreibgeschützten Daten, die vom selben Benutzer hergestellt werden, effizienter unterstützen. Wenn Sie das Verbindungspooling deaktivieren, wird jede Verbindung erneut erstellt. Beachten Sie, dass Änderungen am Grenzwert der Verbindungspoolgröße (auch die Festlegung auf 0) nicht dazu führen, dass Verbindungen getrennt werden. Verbindungspools sind vorhanden, um Wartezeiten beim Herstellen einer Datenverbindung zu reduzieren. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst wird nie eine Verbindung aufgrund von Verbindungspooleinstellungen ablehnen.  
   
 |||  
@@ -137,7 +129,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-connectionpooltimeout-int"></a>-ConnectionPoolTimeout \<int>  
+### <a name="-connectionpooltimeout-int"></a>-ConnectionPoolTimeout \<Int >  
  Gibt an, wie viele Minuten eine Datenverbindung im Leerlauf geöffnet bleibt. Der Standardwert ist 1800 Sekunden (oder 30 Minuten). Während dieses Zeitraums wird die Datenverbindung im Leerlauf für schreibgeschützte Anforderungen vom gleichen SharePoint-Benutzer für die gleichen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten von der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung wiederverwendet. Wenn im angegebenen Zeitraum keine weiteren Anforderungen für diese Daten empfangen werden, wird die Verbindung aus dem Pool entfernt. Gültige Werte reichen von 1 bis 3600 Sekunden.  
   
 |||  
@@ -148,7 +140,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-dataloadtimeout-int"></a>-DataLoadTimeout \<int>  
+### <a name="-dataloadtimeout-int"></a>-DataLoadTimeout \<Int >  
  Gibt an, wie lange die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung auf eine Antwort von der SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])-Instanz wartet, an die eine Anforderung zum Laden von Daten weitergeleitet wurde. Da die Übertragung sehr großer Datasets einige Zeit dauern kann, müssen Sie genügend Zeit vorsehen, damit die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstinstanz die Excel-Arbeitsmappe abrufen und die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten zur Abfrageverarbeitung in eine Analysis Services-Instanz verschieben kann. Der Standardwert ist 1800 Sekunden (oder 30 Minuten). Gültige Werte reichen von 1 bis 3600 Sekunden.  
   
 |||  
@@ -205,7 +197,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-loadstoconnectionsratiocollectioninterval-int"></a>-LoadsToConnectionsRatioCollectionInterval \<int>  
+### <a name="-loadstoconnectionsratiocollectioninterval-int"></a>-LoadsToConnectionsRatioCollectionInterval \<Int >  
  Geben Sie das Intervall (in Stunden) an, um Lade- und Verbindungsereignisse zum Berechnen des Lade-/Verbindungsverhältnisses zu zählen. Standardmäßig berechnet das System alle 4 Stunden ein neues Verhältnis. Gültige Werte reichen von 1 bis 24.  
   
 |||  
@@ -216,7 +208,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-loadstoconnectionsratiolimit-int"></a>-LoadsToConnectionsRatioLimit \<int>  
+### <a name="-loadstoconnectionsratiolimit-int"></a>-LoadsToConnectionsRatioLimit \<Int >  
  Gibt das Verhältnis von Ladeereignissen und Verbindungsereignissen an, das als Indikator des Serverzustands verwendet wird. Die Standardeinstellung ist 20 Prozent.  
   
 |||  
@@ -227,7 +219,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-memorydatabaseholdlimit-int"></a>-MemoryDatabaseHoldLimit \<int>  
+### <a name="-memorydatabaseholdlimit-int"></a>MemoryDatabaseHoldLimit - \<Int >  
  Gibt an, wie viele Stunden eine inaktive Datenbank im Arbeitsspeicher bleibt, um neue Anforderungen für diese Daten zu verarbeiten. Eine aktive Datenbank wird immer im Arbeitsspeicher beibehalten, solange Sie sie abfragen. Wenn die Datenbank jedoch nicht mehr aktiv ist, behält das System sie für einen zusätzlichen Zeitraum im Arbeitsspeicher, falls weitere Anforderungen für diese Daten empfangen werden. Der Standardwert beträgt 48 Stunden.  
   
 |||  
@@ -249,7 +241,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-roundrobinallocation-switch"></a>-RoundRobinAllocation \<switch>  
+### <a name="-roundrobinallocation-switch"></a>– RoundRobinAllocation \<wechseln >  
  Gibt den Roundrobin-Zuordnungsalgorithmus an, der Verbindungsanfragen an den nächsten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Server weiterleitet. Dabei werden die Anforderungen unabhängig von der Serverlast gleichmäßig auf die verfügbaren Server aufgeteilt. HealthBasedAllocation und RoundRobinBasedAllocation schließen sich gegenseitig aus. Sie müssen eines dieser Zuordnungsverfahren angeben. Wenn Sie beide Optionen auf false festlegen, wird HealthBasedAllocation verwendet, da dies die Standardeinstellung ist. Wenn Sie beide Optionen auf true festlegen, tritt ein Überprüfungsfehler auf. Als Syntax dieser Parameter können Sie entweder nur den Parameternamen oder parameter:$true bzw. parameter:$false eingeben.  
   
 |||  
@@ -260,7 +252,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-unattendedaccount-string"></a>-UnattendedAccount \<string>  
+### <a name="-unattendedaccount-string"></a>-UnattendedAccount \<Zeichenfolge >  
  Gibt den Zielanwendungsnamen einer Secure Store Service-Anwendung an, unter der ein vordefiniertes Konto zum Ausführen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierungsaufträgen gespeichert wird.  
   
 |||  
@@ -282,7 +274,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-usageexpectedresponseupperlimit-int"></a>-UsageExpectedResponseUpperLimit \<int>  
+### <a name="-usageexpectedresponseupperlimit-int"></a>-UsageExpectedResponseUpperLimit \<Int >  
  Legt eine Obergrenze fest, die die erwartete Dauer für den Austausch einer Anforderung/Antwort definiert. Der Standardwert beträgt 3000 Millisekunden. Jede Anforderung, die innerhalb von 1000 bis 3000 Millisekunden abgeschlossen wird, wird zu Berichtszwecken als erwartete Antwortdauer angesehen.  
   
 |||  
@@ -293,7 +285,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-usagelongresponseupperlimit-int"></a>-UsageLongResponseUpperLimit \<int>  
+### <a name="-usagelongresponseupperlimit-int"></a>-UsageLongResponseUpperLimit \<Int >  
  Legt eine Obergrenze fest, die den Austausch einer Anforderung/Antwort mit langer Laufzeit definiert.  Die Obergrenze beträgt 10.000 Millisekunden. Alle Anforderungen, die diese Obergrenze überschreiten, gehören zur Kategorie Überschritten, die keinen oberen Schwellenwert aufweist.  
   
 |||  
@@ -304,7 +296,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-usagequickresponseupperlimit-int"></a>-UsageQuickResponseUpperLimit \<int>  
+### <a name="-usagequickresponseupperlimit-int"></a>-UsageQuickResponseUpperLimit \<Int >  
  Legt eine Obergrenze fest, die den Austausch einer schnellen Anforderung/Antwort definiert. Der Standardwert beträgt 1.000 Millisekunden. Jede Anforderung, die innerhalb von 500 bis 1000 Millisekunden abgeschlossen wird, wird zu Berichtszwecken als schnelle Antwort angesehen.  
   
 |||  
@@ -315,7 +307,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-usagetrivialresponseupperlimit-int"></a>-UsageTrivialResponseUpperLimit \<int>  
+### <a name="-usagetrivialresponseupperlimit-int"></a>-UsageTrivialResponseUpperLimit \<Int >  
  Gibt eine Kategorie von Antwortzeiten an, die zu niedrig sind, um für Datensammlungszwecke als relevant angesehen zu werden. Die meisten Antworten, die in diese Kategorie fallen, sind der Server-zu-Server-Kommunikation zuzuordnen. Der Standardwert beträgt 500 Millisekunden. Jede Anforderung, die innerhalb von 0 bis 500 Millisekunden abgeschlossen wird, ist eine triviale Anforderung und wird bei der Berichterstellung ignoriert.  
   
 |||  
@@ -326,7 +318,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-usageupdatedaylimit-int"></a>-UsageUpdateDayLimit \<int>  
+### <a name="-usageupdatedaylimit-int"></a>-UsageUpdateDayLimit \<Int >  
  Geben Sie den Schwellenwert (in Tagen) an, bei dem eine Warnung ausgelöst wird, falls die Datendatei, die von Berichten im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard verwendet wird, nicht aktualisiert wird. Standardmäßig aktualisiert das System die Verwendungsdaten täglich. Die Datei „ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard.xlsx“, die als Datenquelle für Administratorberichte dient, wird nach dem gleichen Zeitplan aktualisiert. Wenn die XLSX-Datei über mehrere Tage hinweg nicht aktualisiert wird, wird eine Integritätsregel ausgelöst, die darauf hinweist, dass die Datei veraltet ist. Die Standardeinstellung beträgt 5 Tage. Gültige Werte sind 1 bis 30.  
   
 |||  

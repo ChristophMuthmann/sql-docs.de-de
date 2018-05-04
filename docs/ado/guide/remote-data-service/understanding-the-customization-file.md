@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e80dc4615803b840f285033bd75186561dc21ddf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zu der Anpassungsdatei
 Jede Überschrift des Abschnitts in der Anpassungsdatei besteht aus eckige Klammern (**[]**), die einen Typ und die Parameter enthält. Die vier Abschnittstypen werden durch die Literalzeichenfolgen angegeben **verbinden**, **Sql**, **Userlist**, oder **Protokolle**. Der Parameter ist die Literalzeichenfolge, der Standardwert, eine vom Benutzer angegebenen Bezeichner oder nichts an.  
@@ -61,7 +60,7 @@ identifier
   
  Ein bestimmtes Bereichs wird in den folgenden Situationen verwendet:  
   
--   Ein **verbinden** Abschnitt wird verwendet, wenn der Wertteil des Clients die Schlüsselwort, eine Verbindung herstellen "**Datenquelle = *** Wert*", entspricht einer **verbinden** Abschnitt Bezeichner*.*  
+-   Ein **verbinden** Abschnitt wird verwendet, wenn der Wertteil des Clients die Schlüsselwort, eine Verbindung herstellen "**Datenquelle = *** Wert*", entspricht einer **verbinden** Abschnitt Bezeichner *.*  
   
 -   Ein **Sql** Abschnitt wird verwendet, wenn die Clientbefehlszeichenfolge eine Zeichenfolge enthält, die entspricht einer **Sql** Abschnitt Bezeichner.  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], supported versions
 - installing Visual FoxPro ODBC driver [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a7deef1fe235aa4747d1311c35396efb4afa4c1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 25994cb37badbcbcc59f6a1bbd5cd401c206e1d9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-versions-of-foxpro"></a>Unterstützte Versionen von FoxPro
 Sie können den Microsoft® Visual FoxPro® ODBC Driver für den Datenzugriff in FoxPro Tabellen gespeichert. Die folgenden Versionen von FoxPro-Daten werden unterstützt:  

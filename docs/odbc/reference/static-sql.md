@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - static SQL [ODBC]
 - SQL [ODBC], embedded SQL
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 392cf843734bcc668c88f6408227b20df97d43ae
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 342bf65ac8d3d57175ef0f187f54ee407d120ebf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="static-sql"></a>Statische SQL-Anweisungen
 Embedded SQL in angezeigten [Embedded SQL-Beispiel](../../odbc/reference/embedded-sql-example.md) wird als statische SQL bezeichnet. Es ist statisches SQL aufgerufen wird, da die SQL-Anweisungen in der Anwendung statisch sind. d. h., sie nicht jedes Mal ändern, die das Programm ausgeführt wird. Wie im vorherigen Abschnitt beschrieben wird, werden diese Anweisungen kompiliert, wenn der Rest des Programms kompiliert wird.  

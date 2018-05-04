@@ -19,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 97c118a40e0fb6952f170050bb4b0f3d218363a4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 121b545af92ec007c7466de860804fb8fad64f2d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-recordset-structure"></a>Grundlegendes zur Struktur von Recordsets
 Jede **Recordset** verfügt über eine **Felder** Auflistung bestehend aus einem oder mehreren **Feld** Objekte. Ein **Feld** Objekt stellt normalerweise eine Tabellenspalte. In den folgenden Themen werden erläutert, wie Sie zum Navigieren in der **Felder** Auflistung und erhalten Informationen zu den einzelnen Feldern. Und sie erläutert werden, welche Art von Informationen über verfügbar ist die **Feld** Objekt und seiner Verwendung.  

@@ -5,16 +5,18 @@ manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
-ms.custom: sql-linux,UpdArt.exe
+ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
-ms.component: ''
-ms.date: 02/03/2018
-ms.openlocfilehash: c277f51ddb50dfb9a5ef2bd23af7f6e80d00c25c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
+ms.component: linux
+ms.date: 04/28/2018
+ms.openlocfilehash: adc9b9d4dec86f1b0e8807869aa0f20532837cea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Neue und zuletzt aktualisiert: SQL Server on Linux Docs
 
@@ -28,7 +30,7 @@ Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 
 
 
-- *Datumsbereich des Updates:* &nbsp; **3.12.2017** &nbsp; bis &nbsp; **3.2.2018**
+- *Datumsbereich des Updates:* &nbsp; **2018-02-03** &nbsp; - zu - &nbsp; **2018-04-28**
 - *Bereich für die Themenbereichsdatenbank:* &nbsp; **Microsoft SQL Server on Linux**.
 
 
@@ -41,12 +43,9 @@ Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [Konfigurieren von mehreren Subnetzen AlwaysOn-Verfügbarkeitsgruppen und Failoverclusterinstanzen](sql-server-linux-configure-multiple-subnet.md)
-2. [Erstellen und Konfigurieren einer verfügbarkeitsgruppe für SQL Server on Linux](sql-server-linux-create-availability-group.md)
-3. [Bereitstellen eines Clusters Schrittmacher für SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)
-4. [Häufig gestellte Fragen (FAQS) SQLServer on Linux](sql-server-linux-faq.md)
-5. [Grundlagen der SQL Server-Verfügbarkeit für Linux-Bereitstellungen](sql-server-linux-ha-basics.md)
-6. [Konfigurieren Sie einen SQL Server-Container in Kubernetes für hohe Verfügbarkeit](tutorial-sql-server-containers-kubernetes.md)
+1. [Active Directory-Authentifizierung für SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md)
+2. [Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe unter Windows und Linux (Cross-Platform)](sql-server-linux-availability-group-cross-platform.md)
+3. [Betreiben Sie Always On-Verfügbarkeitsgruppen unter Linux](sql-server-linux-availability-group-operate-ha.md)
 
 
 
@@ -72,8 +71,9 @@ Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und 
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Always On-Verfügbarkeitsgruppen unter Linux](#TitleNum_1)
-2. [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](#TitleNum_2)
+1. [Konfigurieren des Repositorys für die Installation und Upgrade von SQL Server on Linux](#TitleNum_1)
+2. [Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool](#TitleNum_2)
+3. [Versionshinweise für SQL Server-2017 unter Linux](#TitleNum_3)
 
 
 
@@ -84,34 +84,69 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-always-on-availability-groups-on-linuxsql-server-linux-availability-group-overviewmd"></a>1. &nbsp;[Always On-Verfügbarkeitsgruppen unter Linux](sql-server-linux-availability-group-overview.md)
+### <a name="1-nbsp-configure-repositories-for-installing-and-upgrading-sql-server-on-linuxsql-server-linux-change-repomd"></a>1. &nbsp; [Konfigurieren des Repositorys für die Installation und Upgrade von SQL Server on Linux](sql-server-linux-change-repo.md)
 
-*Aktualisiert: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
+*Aktualisiert: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
 
-<!-- Source markdown line 85.  ms.author= mikeray.  -->
+<!-- Source markdown line 72.  ms.author= jroth.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 85685bc8ad3528aa26ca3f2bba7b0112808ad6f9 51aff6e55104c8f775d2b4f4461e44f689a9ee6b  (PR=4768  ,  Filename=sql-server-linux-availability-group-overview.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=d4d880dd9c247d1e7fb7a728d5231bc9ac61c989) -->
+<!-- git diff --ignore-all-space --unified=0 b5ccaa0fcb8895f25c162e4e0494ad4872773de3 29a959be6ee7d58fe0c53e8f91bdd282fb2e6d29  (PR=5676  ,  Filename=sql-server-linux-change-repo.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-Automatisches Failover einer Verfügbarkeitsgruppe ist möglich, wenn die folgenden Bedingungen erfüllt sind:
+- Druckt den Inhalt der Datei.
 
--   Das primäre und das sekundäre Replikat werden auf synchrone datenverschiebung festgelegt.
--   Die sekundäre Datenbank dem Status synchronisiert (nicht synchronisiert), was bedeutet, dass die beiden am selben Datenpunkt sind.
--   Der Typ des Clusters wird auf externen festgelegt. Automatisches Failover ist nicht möglich, mit einem Clustertyp ' None '.
--   Die `sequence_number` des sekundären Replikats zu der primären hat die höchste Sequenznummer – das heißt, des sekundären Replikats des `sequence_number` vom ursprünglichen primären Replikat entspricht.
+```
+   sudo cat /etc/yum.repos.d/mssql-server.repo
+```
 
-Wenn diese Bedingungen erfüllt sind, und der Server, die das primäre Replikat hostet fehlschlägt, wird in die Verfügbarkeitsgruppe auf ein synchrones Replikat Besitz geändert werden. Das Verhalten für synchrone Replikate (von denen es drei kann insgesamt: ein primäres und zwei sekundäre Replikate) können weitere gesteuert werden, indem `required_synchronized_secondaries_to_commit`. Dies funktioniert mit Testreihen unter Windows und Linux jedoch vollständig anders konfiguriert ist. Unter Linux wird der Wert automatisch vom Cluster für die AG-Ressource selbst konfiguriert werden.
+- Die **Namen** Eigenschaft ist für die konfigurierten Repository. Sie können mit der Tabelle im Abschnitt [Repositorys] identifiziert werden.
 
-**Nur Configuration-Replikat und quorum**
+**Entfernen Sie alte Repository (RHEL)**
 
+Entfernen Sie ggf. das alte Repository mit dem folgenden Befehl.
 
-Außerdem ist neu in SQL Server-2017 ab CU1 ein Replikat nur Konfiguration. Da Schrittmacher eines WSFC unterscheidet, besonders bei der Quorum- und erfordern STONITH, funktioniert müssen nur eine Konfiguration mit zwei Knoten nicht bei einer AG. Für eine FCI können die Quorum-Mechanismen von Schrittmacher Ordnung, sein, da alle Vermittlung der FCI-Failover auf den Cluster-Schicht passiert. Für eine AG erfolgt die Vermittlung unter Linux in SQL Server, in dem alle Metadaten gespeichert ist. Hier kommt das Replikat nur Konfiguration ins Spiel.
+```
+sudo rm -rf /etc/yum.repos.d/mssql-server.repo
+```
 
-Ohne etwas anderes wäre eine dritte Knoten und mindestens ein synchronisiertes Replikat erforderlich. Dies funktioniert nicht für SQL Server Standard, da es nur zwei Replikate in einer Verfügbarkeitsgruppe teilnehmen aufweisen kann. Das Replikat nur Konfiguration speichert AG-Ebenenkonfiguration in der master-Datenbank identisch mit den anderen Replikaten in der verfügbarkeitsgruppenkonfiguration an. Das Replikat Konfiguration nur die Benutzerdatenbanken auf Einbeziehung in die AG keinen. Die Konfigurationsdaten werden von der primären synchron gesendet. Konfigurationsdaten werden anschließend während Failover ausgeführt werden, wird, ob sie automatisch oder manuell eingestellt sind.
+Mit diesem Befehl wird davon ausgegangen, dass die Datei identifiziert, die im vorherigen Abschnitt benannt wurde **Mssql-server.repo**.
+
+**Konfigurieren Sie neue Repository (RHEL)**
+
+Konfigurieren Sie das neue Repository für SQL Server-Installationen und Upgrades verwenden. Verwenden Sie einen der folgenden Befehle aus, um das Repository Ihrer Wahl zu konfigurieren.
+
+| Repository | Befehl |
+|---|---|
+| **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+
+**<a id="sles"></a> SLES Repositorys konfigurieren**
+
+Verwenden Sie die folgenden Schritte aus, um auf SLES Repositorys konfigurieren.
+
+**Überprüfen Sie zuvor konfigurierten Repositorys (SLES)**
+
+Überprüfen Sie zunächst, ob Sie bereits ein SQL Server-Repository registriert haben.
+
+- Verwendung **Zypper Info** um Informationen über alle zuvor konfigurierten Repository abzurufen.
+
+```
+   sudo zypper info mssql-server
+```
+
+- Die **Repository** Eigenschaft ist für die konfigurierten Repository. Sie können mit der Tabelle im Abschnitt [Repositorys] identifiziert werden.
+
+**Entfernen Sie alte Repository (SLES)**
+
+Entfernen Sie ggf. das alte Repository. Verwenden Sie die folgenden Befehle, die basierend auf den zuvor konfigurierten Repository-Typ.
+
+| Repository | Befehl zum Entfernen |
+|---|---|
+| **Vorschau** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
 
 
 
@@ -123,46 +158,109 @@ Ohne etwas anderes wäre eine dritte Knoten und mindestens ein synchronisiertes 
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-extract-transform-and-load-data-on-linux-with-ssissql-server-linux-migrate-ssismd"></a>2. &nbsp;[Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](sql-server-linux-migrate-ssis.md)
+### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2. &nbsp; [Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool](sql-server-linux-configure-mssql-conf.md)
 
-*Aktualisiert: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_1))
+*Aktualisiert: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_1) | [Weiter](#TitleNum_3))
 
-<!-- Source markdown line 50.  ms.author= lle.  -->
+<!-- Source markdown line 151.  ms.author= jroth.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9bba002ae3955ebb8376c7c85b7ec1ac8c706073 1533a8e0bfe553e5404de79129119b3f93185ee9  (PR=4768  ,  Filename=sql-server-linux-migrate-ssis.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=d4d880dd9c247d1e7fb7a728d5231bc9ac61c989) -->
+<!-- git diff --ignore-all-space --unified=0 3664c4d64ea4840dcbc718461ed04403cc486f30 89f708af45ce262057e967e9047f1328e19248ba  (PR=5676  ,  Filename=sql-server-linux-configure-mssql-conf.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-    ```
-    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
-    ```
 
-2.  Geben Sie die `/de[crypt]` Option aus, um das Kennwort eingeben, interaktiv, wie im folgenden Beispiel gezeigt:
-
-    ```
-    /opt/ssis/bin/dtexec /f package.dtsx /de
-
-    Enter decryption password:
-    ```
-
-3.  Geben Sie die `/de` Option aus, um das Kennwort in der Befehlszeile angeben, wie im folgenden Beispiel gezeigt. Diese Methode wird nicht empfohlen, da das Kennwort für die Entschlüsselung mit dem Befehl im Befehlsverlauf gespeichert.
-
-    ```
-    opt/ssis/bin/dtexec /f package.dtsx /de test
-
-    Warning: Using /De[crypt] <password> may store decryption password in command history.
-
-    You can use /De[crypt] instead to enter interactive mode,
-    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
-    ```
-
-**Entwerfen von Paketen**
+**<a id="masterdatabasedir"></a> Ändern Sie das Standard-master-Datenbank-Dateiverzeichnis**
 
 
-**Herstellen einer Verbindung mit der ODBC-Datenquellen**. Mit SSIS unter Linux CTP-Version 2.1 aktualisiert und höher können SSIS-Pakete auf Linux ODBC-Verbindungen. Diese Funktion wurde mit SQL Server und die MySQL-ODBC-Treiber getestet, aber auch mit jeder Unicode-ODBC-Treiber arbeiten, die die ODBC-Spezifikation berücksichtigt werden sollen. Zur Entwurfszeit können Sie entweder einen DSN oder eine Verbindungszeichenfolge in die ODBC-Verbindung angeben; Sie können auch Windows-Authentifizierung verwenden. Weitere Informationen finden Sie unter der [Blogbeitrag Ankündigung ODBC-Unterstützung unter Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+Die **filelocation.masterdatafile** und **filelocation.masterlogfile** Einstellung ändert sich den Speicherort, in dem die SQL Server-Datenbankmodul, für die master-Datenbank-Dateien sucht. Dieser Speicherort ist standardmäßig /var/opt/mssql/data.
+
+Um diese Einstellungen zu ändern, verwenden Sie die folgenden Schritte aus:
+
+- Erstellen Sie das Zielverzeichnis für neue Fehlerprotokolldateien. Das folgende Beispiel erstellt ein neues **/Tmp/Masterdatabasedir** Verzeichnis:
+
+```
+   sudo mkdir /tmp/masterdatabasedir
+```
+
+- Ändern Sie den Besitzer und die Gruppe des Verzeichnisses, das die **Mssql** Benutzer:
+
+```
+   sudo chown mssql /tmp/masterdatabasedir
+   sudo chgrp mssql /tmp/masterdatabasedir
+```
+
+- Verwenden der Mssql-Conf so ändern Sie das Standardverzeichnis für die master-Datenbank für die master Daten und Protokolldateien mit den **festgelegt** Befehl:
+
+```
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
+```
+
+- Beenden Sie den SQL Server-Dienst:
+
+```
+   sudo systemctl stop mssql-server
+```
+
+- Verschieben Sie die Dateien master.mdf und masterlog.ldf:
+
+```
+   sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
+```
+
+- Starten Sie den SQL Server-Dienst:
+
+```
+   sudo systemctl start mssql-server
+```
+
+> [!NOTE]
+> Wenn SQL Server im angegebenen Verzeichnis die Dateien master.mdf und mastlog.ldf finden kann, eine Kopie vorlagenbasierte Systemdatenbanken werden automatisch im angegebenen Verzeichnis erstellt, und SQL Server wird erfolgreich gestartet. Metadaten wie etwa von Benutzerdatenbanken, Server-Anmeldungen, Serverzertifikate, Verschlüsselungsschlüssel, SQL Agent-Aufträge oder Kennwort für SA-Anmeldung wird jedoch nicht in die neue master-Datenbank aktualisiert werden. Sie müssen zum Beenden von SQL Server und verschieben Ihre alte Dateien master.mdf und mastlog.ldf an den neuen angegebenen Speicherort aus, und starten Sie SQL Server, um den Vorgang fortzusetzen, verwenden die vorhandene Metadaten.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-release-notes-for-sql-server-2017-on-linuxsql-server-linux-release-notesmd"></a>3. &nbsp; [Versionshinweise für SQL Server-2017 unter Linux](sql-server-linux-release-notes.md)
+
+*Aktualisiert: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_2))
+
+<!-- Source markdown line 64.  ms.author= jroth.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 367d112a9427bbdd18e0e52cc82264dd169c91ae 63a67be08fa39ece778cf9ca0b9746dd28694574  (PR=5676  ,  Filename=sql-server-linux-release-notes.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
+
+
+
+- [Aktivieren Sie SQL Server-Agent]
+
+**<a id="CU6"></a> CU6 (April 2018)**
+
+
+Dies ist der kumulativen Update 6 (CU6)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3025.34. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464).
+
+**Details zum Paket**
+
+
+Für Paketinstallationen der manuellen oder offline-können Sie die RPM und Debian Pakete mit den Informationen in der folgenden Tabelle herunterladen:
+
+| Paket | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat-RPM-Paket | 14.0.3025.34-3 | [Datenbankmodul-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Volltext-Suche RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
+| SLES RPM-Paket | 14.0.3025.34-3 | [MSSQL-Server-Datenbankmodul-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Volltext-Suche RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
+| Ubuntu 16.04 Debian-Paket | 14.0.3025.34-3 | [Modul Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[Volltext-Suche Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 
 
@@ -175,40 +273,36 @@ Ohne etwas anderes wäre eine dritte Knoten und mindestens ein synchronisiertes 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die *über* neue oder kürzlich aktualisierte Artikel verfügen
 
-
-- [Neu und aktualisiert (1+3):&nbsp;Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Analytics Platform System für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
-- [Neu und aktualisiert (0+1):&nbsp;Dokumente zur **Datenbank-Engine für SQL**](../database-engine/new-updated-database-engine.md)
-- [Neu und aktualisiert (12+1): Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
-- [Neu und aktualisiert (6+2):&nbsp;Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
-- [Neu und aktualisiert (15+0): Dokumente zu **PowerShell für SQL**](../powershell/new-updated-powershell.md)
-- [Neu und aktualisiert (2+9):&nbsp;Dokumente zu **relationalen Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Neu und aktualisiert (1+0):&nbsp;Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Neu und aktualisiert (0+1):&nbsp;Dokumente zu **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Neu und aktualisiert (1+2):&nbsp;Dokumente zu **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Neu und aktualisiert (0+2):&nbsp;Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Neue und aktualisierte (11 + 6): &nbsp; &nbsp; **Advanced Analytics für SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Neue und aktualisierte (18 + 0): &nbsp; &nbsp; **Analysis Services für SQL** Docs](../analysis-services/new-updated-analysis-services.md)
+- [Neue und aktualisierte (218 + 14): **Herstellen einer Verbindung mit SQL** Docs](../connect/new-updated-connect.md)
+- [Neue und aktualisierte (14 + 0): &nbsp; &nbsp; **für SQL-Datenbank-Engine** Docs](../database-engine/new-updated-database-engine.md)
+- [Neue und aktualisierte (3 + 2): &nbsp; &nbsp; **Integration Services für SQL** Docs](../integration-services/new-updated-integration-services.md)
+- [Neue und aktualisierte (3 + 3): &nbsp; &nbsp; **Linux für SQL** Docs](../linux/new-updated-linux.md)
+- [Neue und aktualisierte (7 + 10): &nbsp; &nbsp; **relationale Datenbanken für SQL** Docs](../relational-databases/new-updated-relational-databases.md)
+- [Neue und aktualisierte (0 + 2): &nbsp; &nbsp; **Reporting Services für SQL** Docs](../reporting-services/new-updated-reporting-services.md)
+- [Neue und aktualisierte (1 + 3): &nbsp; &nbsp; **SQL Operations Studio** Docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neue und aktualisierte (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
+- [Neue und aktualisierte (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
+- [Neue und aktualisierte (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
+- [Neue und aktualisierte (0 + 2): &nbsp; &nbsp; **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
+- [Neue und aktualisierte (1 + 1): &nbsp; &nbsp; **-Tools für SQL** Docs](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Themenbereiche, die *nicht* über neue oder kürzlich aktualisierte Artikel verfügen
 
-
-- [Neu + Aktualisiert (0+0): Dokumente zu **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
-- [Neue und aktualisierte (0 + 0): **ActiveX Data Objects (ADO) für SQL** Docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [Neue und aktualisierte (0 + 0): **Analyseplattformsystem für SQL** Docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Neue und aktualisierte (0 + 0): **Data Quality Services für SQL** Docs](../data-quality-services/new-updated-data-quality-services.md)
 - [Neue und aktualisierte (0 + 0): **Data Mining Extensions (DMX) für SQL** Docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
 - [Neue und aktualisierte (0 + 0): **MDX (Multidimensional Expressions) für SQL** Docs](../mdx/new-updated-mdx.md)
 - [Neue und aktualisierte (0 + 0): **ODBC (Open Database Connectivity) für SQL** Docs](../odbc/new-updated-odbc.md)
+- [Neue und aktualisierte (0 + 0): **PowerShell für SQL** Docs](../powershell/new-updated-powershell.md)
 - [Neue und aktualisierte (0 + 0): **Samples for SQL** Docs](../samples/new-updated-samples.md)
 - [Neue und aktualisierte (0 + 0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
-- [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
 - [Neue und aktualisierte (0 + 0): **XQuery für SQL** Docs](../xquery/new-updated-xquery.md)
-
 

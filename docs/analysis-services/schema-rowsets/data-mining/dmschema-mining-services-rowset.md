@@ -23,15 +23,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 87fdcfb688d6e6b7305ef3a46b0de7800e6c4668
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 71c95b5f3f1f2f8475659bf75c3f146e1cfdcdb0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>DMSCHEMA_MINING_SERVICES-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält eine Beschreibung der einzelnen Datamining-Algorithmus, der vom Anbieter unterstützt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Stellt eine Beschreibung jedes Data Mining-Algorithmus bereit, den der Anbieter unterstützt.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DMSCHEMA_MINING_SERVICES** Rowset enthält die folgenden Spalten.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 |Spaltenname|Typindikator|Description|  
 |-----------------|--------------------|-----------------|  
 |**DIENSTNAME**|**DBTYPE_WSTR**|Name des Algorithmus Diese Spalte ist anbieterspezifisch.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Diese Spalte enthält eine Bitmap, die den Miningdienst beschreibt. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] füllt diese Spalte mit einem der folgenden Werte:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Diese Spalte enthält eine Bitmap, die den Miningdienst beschreibt. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] füllt diese Spalte mit einem der folgenden Werte an:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
 |**SERVICE_DISPLAY_NAME**|**DBTYPE_WSTR**|Ein lokalisierbarer Anzeigename für den Algorithmus.|  
 |**SERVICE_GUID**|**DBTYPE_GUID**|Der GUID für den Algorithmus.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|Eine benutzerfreundliche Beschreibung des Algorithmus.|  
@@ -74,6 +74,6 @@ ms.lasthandoff: 01/08/2018
 |**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

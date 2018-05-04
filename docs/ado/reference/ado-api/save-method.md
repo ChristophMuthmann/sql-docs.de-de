@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 389fdbe66dc8136e50f244e18af523afefb7c463
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: cffcb7b23487201605ff2ced489cf0078c3c1272
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-method"></a>Save-Methode
 Speichert die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in einer Datei oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  

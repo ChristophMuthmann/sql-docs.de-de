@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72cd4742328a27e732fdd4f49ab9ce06df5fd145
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5834a5926343f708b5707c8d3badf2e2d48ac2e3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="controlling-transactions-ado"></a>Steuern von Transaktionen (ADO)
 ADO unterstützt transaktionsverarbeitung innerhalb einer Verbindungs mit der Hilfe der **BeginTrans**, **CommitTrans**, und **RollbackTrans** Methoden auf eine  **Verbindung** Objekt. Das allgemeine Konzept der Implementierung der transaktionsverarbeitung in ADO wird im folgenden einfachen Codeausschnitt veranschaulicht.  

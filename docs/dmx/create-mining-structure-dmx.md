@@ -25,17 +25,16 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bdba77b79b49011bbd6b48547ffe9cc34aa270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Erstellt in einer Datenbank eine neue Miningstruktur und definiert optional Trainings- und Testpartitionen. Nachdem Sie die Miningstruktur erstellt haben, können Sie mithilfe der [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md) -Anweisung Modelle zur Miningstruktur hinzufügen.  
+  Erstellt in einer Datenbank eine neue Miningstruktur und definiert optional Trainings- und Testpartitionen. Nachdem Sie die Miningstruktur erstellt haben, können Sie mithilfe der [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) -Anweisung Modelle zur Miningstruktur hinzufügen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,7 +77,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Standardwert: REPEATABLE(0)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Sie definieren eine Miningstruktur, indem Sie eine Liste mit Spalten und optional hierarchische Beziehungen zwischen den Spalten angeben und dann wahlweise die Miningstruktur in Trainings- und Testdatasets partitionieren.  
   
  Das optionale SESSION-Schlüsselwort gibt an, dass die Struktur eine temporäre Struktur ist, die Sie nur für die Dauer der aktuellen Sitzung verwenden können. Wenn die Sitzung beendet wird, werden die Struktur und alle Modelle auf Grundlage der Struktur gelöscht. Um temporäre Miningstrukturen und Modelle zu erstellen, müssen Sie zuerst die Datenbankeigenschaft AllowSessionMiningModels festlegen. Weitere Informationen finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
@@ -112,18 +111,18 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Strukturspalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen &#40; Datamining &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Datentypen & #40; Datamining & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Content-Arten &#40; Datamining &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Content-Arten & #40; Datamining & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Spaltenverteilungen &#40; Datamining &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Spaltenverteilungen &#40;Datamining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modellieren von Ablaufverfolgungsflags &#40; Datamining &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Modellieren von Ablaufverfolgungsflags & #40; Datamining & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Sie können mehrere Modellierungsflagwerte für eine Spalte definieren. Für eine Spalte können jedoch nur jeweils ein Inhaltstyp und ein Datentyp gelten.  
   
 ### <a name="column-relationships"></a>Spaltenbeziehungen  
- Sie können jeder Spaltendefinitionsanweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \<spaltenbeziehungs >-Klausel.  
+ Sie können jeder Spaltendefinitionsanweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Verwendung der folgenden \<spaltenbeziehungs >-Klausel.  
   
  **IM ZUSAMMENHANG MIT**  
  Gibt eine Wertehierarchie an. Das Ziel einer RELATED TO-Spalte kann eine Schlüsselspalte einer geschachtelten Tabelle, eine Spalte mit diskreten Werten in der Fallzeile oder eine andere Spalte mit einer RELATED TO-Klausel sein, wodurch eine tiefere Hierarchie gekennzeichnet ist.  
@@ -154,7 +153,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  In den folgenden Beispielen wird veranschaulicht, wie mithilfe von DMX eine Miningstruktur mit Zurückhaltung erstellt wird.  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>Beispiel 1: Hinzufügen einer Struktur ohne Trainingssatz  
- Im folgenden Beispiel wird eine neue Miningstruktur namens `New Mailing` erstellt, ohne dass zugeordnete Miningmodelle erstellt werden und Zurückhaltung verwendet wird. Gewusst wie: Hinzufügen eines Miningmodells zur Struktur finden Sie unter [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md).  
+ Im folgenden Beispiel wird eine neue Miningstruktur namens `New Mailing` erstellt, ohne dass zugeordnete Miningmodelle erstellt werden und Zurückhaltung verwendet wird. Gewusst wie: Hinzufügen eines Miningmodells zur Struktur finden Sie unter [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -194,9 +193,9 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

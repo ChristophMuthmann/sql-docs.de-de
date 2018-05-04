@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1ff5d2351d7641c16c739efeea42b126a0c4e1b2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f58bb4e4324d8932f14f5c1e87c021f373abc006
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Rückgabewert  
  Ein boolescher Wert, der TRUE zurückgibt, wenn eines der Argumente oder beide Argumente zu TRUE ausgewertet werden; anderenfalls FALSE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Beide Argumente werden als boolesche Werte (0 als FALSE, anderenfalls TRUE) behandelt, bevor der Operator die logische Disjunktion ausführt. Wird eines der Argumente oder werden beide Argumente zu TRUE ausgewertet, gibt der Operator TRUE zurück Wenn *Expression1* auf "true" ausgewertet und *Expression2* zu FALSE ausgewertet wird, gibt der Operator "true" zurück.  
   
  Die folgende Tabelle verdeutlicht, wie die logische Disjunktion ausgeführt wird.  
@@ -63,9 +62,9 @@ Expression1 OR Expression2
 |FALSE|TRUE|TRUE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datamining-Erweiterungen &#40; DMX &#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Logische Operatoren &#40; DMX &#41;](../dmx/operators-logical.md)   
- [Operatoren &#40; DMX &#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Logische Operatoren &#40;DMX&#41;](../dmx/operators-logical.md)   
+ [Operatoren &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

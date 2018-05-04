@@ -1,8 +1,8 @@
 ---
-title: 'Lektion 2: Datenbank mithilfe des Datenbankoptimierungsratgebers | Microsoft Docs'
+title: 'Lektion 2: Verwenden des Datenbankoptimierungsratgebers | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3cdd13f27f832bf2370115cd553c2943ed4b4c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 0234da9aad2aa09abc9d455a282888faf7d3ae10
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lektion 2: Verwenden des Datenbankoptimierungsratgebers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Datenbankmodul-Optimierungsratgeber ermöglicht das Optimieren von Datenbanken, Verwalten von optimierungssitzungen und optimierungsempfehlungen anzuzeigen. Benutzer, die erweiterte Kenntnisse in physischen Entwurfsstrukturen haben, können mit diesem Tool eine Analyse der Datenbankoptimierung ausführen. Benutzer, die mit der Datenbankoptimierung noch nicht vertraut sind, können mithilfe dieses Tools die beste Konfiguration physischer Entwurfsstrukturen für die Arbeitsauslastung herausfinden, die sie optimieren. Diese Lektion umfasst grundlegende, praktische Hinweise für Datenbankadministratoren, die mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers noch nicht vertraut sind, sowie für Systemadministratoren, die möglicherweise keine umfassenden Kenntnisse physischer Entwurfsstrukturen haben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Der Datenbankoptimierungsratgeber ermöglicht Ihnen das Optimieren von Datenbanken, Verwalten von Optimierungssitzungen und das Anzeigen von Empfehlungen zur Optimierung. Benutzer, die erweiterte Kenntnisse in physischen Entwurfsstrukturen haben, können mit diesem Tool eine Analyse der Datenbankoptimierung ausführen. Benutzer, die mit der Datenbankoptimierung noch nicht vertraut sind, können mithilfe dieses Tools die beste Konfiguration physischer Entwurfsstrukturen für die Arbeitsauslastung herausfinden, die sie optimieren. Diese Lektion umfasst grundlegende, praktische Hinweise für Datenbankadministratoren, die mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers noch nicht vertraut sind, sowie für Systemadministratoren, die möglicherweise keine umfassenden Kenntnisse physischer Entwurfsstrukturen haben.  
   
 Die Lektion enthält die folgenden Themen:  
   
@@ -39,7 +40,7 @@ Die Lektion enthält die folgenden Themen:
   
 -   Anzeigen von Optimierungsberichten  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md)  
   
   

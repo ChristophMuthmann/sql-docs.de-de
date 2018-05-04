@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4f659af9b6ba2ea785d344311c9d7471dc25a26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**. Wenn die Veröffentlichung angegeben wird, werden alle Konflikte dieser Veröffentlichung zurückgegeben. Z. B. wenn die **MSmerge_conflict_Customers** Tabelle hat Konfliktzeilen für die **WA** und **Zertifizierungsstelle** Veröffentlichungen, übergeben einen Veröffentlichungsnamen **Zertifizierungsstelle**  ruft Konflikte für den **Zertifizierungsstelle** Veröffentlichung.  
   
  [  **@conflict_table=**] **"***Conflict_table***"**  
- Der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat keinen Standardwert. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden Konflikttabellen heißen mithilfe der Formatnamen mit **MSmerge_conflict_*Veröffentlichung*_*Artikel ***, mit einer Tabelle für jede veröffentlichte Artikel.  
+ Der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat keinen Standardwert. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden Konflikttabellen heißen mithilfe der Formatnamen mit **MSmerge_conflict_* Veröffentlichung *_* Artikel ***, mit einer Tabelle für jede veröffentlichte Artikel.  
   
  [ **@publisher=**] **'***publisher***'**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  

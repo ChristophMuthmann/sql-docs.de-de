@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
 - Visual FoxPro ODBC driver [ODBC], time and date functions
@@ -24,30 +24,29 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5ba661df5c57c9611164889126eab9572743c8e4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b47cd46b93878b6b394d302ff4493a6ec5bbd032
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Uhrzeit und Datumsfunktionen (Visual FoxPro-ODBC-Treiber)
 Die folgende Tabelle listet die ODBC-Datum und die Funktionen von der Visual FoxPro-ODBC-Treiber unterstützt; Wenn die Visual FoxPro-Grammatik für dieselbe Funktion aus der ODBC-Syntax unterscheidet, wird der entsprechende Visual FoxPro aufgeführt.  
   
 |ODBC-Grammatik|Visual FoxPro-Grammatik|  
 |------------------|---------------------------|  
-|CURDATE*)*|DATUM*)*|  
-|CURTIME*)*|ZEIT*)*|  
-|DAYNAME*("date_exp")*|CDOW*("date_exp")*|  
-|DAYOFMONTH (*"date_exp")*|TAG*)*|  
-|Stunde*("time_exp")*||  
-|MINUTE*("time_exp")*||  
-|Monat*("time_exp")*||  
-|"MonthName"*("date_exp")*|CMONTH*("date_exp")*|  
-|JETZT*)*|"DATETIME"*)*|  
-|ZWEITE*("time_exp")*|S*("time_exp")*|  
-|Woche*("date_exp")*||  
-|Jahr*("date_exp")*||  
+|CURDATE *)*|DATUM *)*|  
+|CURTIME *)*|ZEIT *)*|  
+|DAYNAME *("date_exp")*|CDOW *("date_exp")*|  
+|DAYOFMONTH (*"date_exp")*|TAG *)*|  
+|Stunde *("time_exp")*||  
+|MINUTE *("time_exp")*||  
+|Monat *("time_exp")*||  
+|"MonthName"*("date_exp")*|CMONTH *("date_exp")*|  
+|JETZT *)*|"DATETIME"*)*|  
+|ZWEITE *("time_exp")*|S *("time_exp")*|  
+|Woche *("date_exp")*||  
+|Jahr *("date_exp")*||  
   
  Die folgenden Funktionen für Datum und Uhrzeit werden nicht unterstützt:  
   

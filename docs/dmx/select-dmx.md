@@ -30,12 +30,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a769e8dc2157140718a4a4c35e45fa9ccdd2e43d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c22aff659dc4de5bd5a16cf927aaf391fa856af4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -113,9 +112,9 @@ WHERE < condition expression >
 ## <a name="predictions"></a>Vorhersagen (Predictions)  
  Für das Erstellen von Vorhersagen gibt es zwei Syntaxformen:  
   
--   [SELECT FROM &#60; Modell &#62; PREDICTION JOIN-Abfrage &#40; DMX &#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+-   [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [SELECT FROM &#60; Modell &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md)  
+-   [SELECT FROM &#60;Modell&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
  Mit der ersten Form für Vorhersagen können Sie komplexe Vorhersagen in Echtzeit oder als Batch erstellen.  
   
@@ -132,26 +131,26 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
 ## <a name="clause-syntax"></a>Klauselsyntax  
  Wegen der Komplexität zusammen mit den **wählen** -Anweisung, ausführliche Syntaxelemente und Argumente Klauseln beschrieben. Weitere Informationen zu den einzelnen Klauseln erhalten Sie, wenn Sie auf ein Thema in der folgenden Liste klicken:  
   
- [SELECT DISTINCT FROM &#60; Modell &#62; &#40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)  
+ [SELECT DISTINCT FROM &#60;Modell &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [SELECT FROM &#60; Modell &#62;. Inhalt &#40; DMX &#41;](../dmx/select-from-model-content-dmx.md)  
+ [SELECT FROM &#60;Modell&#62;. Inhalt &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
- [SELECT FROM &#60; Modell &#62;. Fällen &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)  
+ [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
- [SELECT FROM &#60; Modell &#62;. SAMPLE_CASES &#40; DMX &#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [SELECT FROM &#60;Modell&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [SELECT FROM &#60; Modell &#62;. DIMENSION_CONTENT &#40; DMX &#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+ [SELECT FROM &#60;Modell&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
- [SELECT FROM &#60; Modell &#62; PREDICTION JOIN-Abfrage &#40; DMX &#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+ [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [SELECT FROM &#60; Modell &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md)  
+ [SELECT FROM &#60;Modell&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
- [SELECT FROM &#60; Struktur &#62;. FÄLLE](../dmx/select-from-structure-cases.md)  
+ [SELECT FROM &#60;Struktur&#62;. FÄLLE](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)  
   
   

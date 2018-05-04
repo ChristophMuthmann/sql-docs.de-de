@@ -1,38 +1,23 @@
 ---
 title: Erteilen von Berechtigungen für ein Datenquellenobjekt (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.datasources.f1
-helpviewer_keywords:
-- read/write permissions
-- user access rights [Analysis Services], data sources
-- security [Analysis Services], data sources
-- connection strings [Analysis Services]
-- data sources [Analysis Services], security
-ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
-caps.latest.revision: 38
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7cd02446a61b7ff1c8d9fdaa2803c30ee81a6e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2babe1792bed9932921cc9035e5ab1db8fb215e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Erteilen von Berechtigungen für ein Datenquellenobjekt (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In der Regel die meisten Benutzer von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] keinen Zugriff auf die Datenquellen, die zugrunde liegen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt. Sie fragen die Daten in der Regel nur in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ab. Allerdings muss ein Benutzer im Zusammenhang mit dem Data Mining, z. B. beim Ausführen von Vorhersagen auf der Basis eines Miningmodells, die aus einem Miningmodell abgeleiteten Daten mit den vom Benutzer bereitgestellten Daten verknüpfen. Um eine Verbindung mit der Datenquelle, in der sich die vom Benutzer bereitgestellten Daten befinden, herstellen zu können, verwendet der Benutzer eine DMX-Abfrage (Data Mining-Erweiterungen), die sowohl die [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md)-Klausel als auch die [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md)-Klausel enthält.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Im Normalfall benötigen die meisten Benutzer von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] keinen Zugriff auf die Datenquellen, die einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zugrunde liegen. Sie fragen die Daten in der Regel nur in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ab. Allerdings muss ein Benutzer im Zusammenhang mit dem Data Mining, z. B. beim Ausführen von Vorhersagen auf der Basis eines Miningmodells, die aus einem Miningmodell abgeleiteten Daten mit den vom Benutzer bereitgestellten Daten verknüpfen. Um eine Verbindung mit der Datenquelle, in der sich die vom Benutzer bereitgestellten Daten befinden, herstellen zu können, verwendet der Benutzer eine DMX-Abfrage (Data Mining-Erweiterungen), die sowohl die [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md)-Klausel als auch die [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md)-Klausel enthält.  
   
  Zum Ausführen einer DMX-Abfrage, die eine Verbindung mit einer Datenquelle herstellt, muss der Benutzer Zugriff auf das Datenquellenobjekt innerhalb der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank haben. Standardmäßig haben nur Server- oder Datenbankadministratoren Zugriff auf Datenquellenobjekte. Dies bedeutet, dass ein Benutzer nur dann auf ein Datenquellenobjekt zugreifen kann, wenn er von einem Administrator entsprechende Berechtigungen erhält.  
   
@@ -61,10 +46,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Verbindungszeichenfolgen-Eigenschaften &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
- [Von Analysis Services unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Erteilen von benutzerdefiniertem Zugriff auf die dimension von Daten &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Erteilen von benutzerdefiniertem Zugriff auf Zellendaten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Verbindungszeichenfolgen-Eigenschaften & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
+ [Von Analysis Services Unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Erteilen von benutzerdefiniertem Zugriff auf die dimension von Daten & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Gewähren von Cube oder modellberechtigungen & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [Erteilen von benutzerdefiniertem Zugriff auf die Zelle von Daten & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

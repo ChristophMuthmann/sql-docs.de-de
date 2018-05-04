@@ -1,50 +1,23 @@
 ---
 title: Dimension-Typen | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- quantitative dimensions [Analysis Services]
-- BillOfMaterials dimension [Analysis Services]
-- geography dimensions
-- utility dimensions [Analysis Services]
-- channel dimensions
-- dimensions [Analysis Services], types
-- products dimensions [Analysis Services]
-- account dimensions [Analysis Services]
-- organization dimensions
-- currency dimensions [Analysis Services]
-- rates dimensions
-- promotion dimensions
-- scenario dimensions [Analysis Services]
-- customers dimensions [Analysis Services]
-- Type property
-ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7e870e18ae05b3daddf9e8230079bec87bb29e2d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c36b8c16acb2521c2472b1f4398cb68ea89952d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimension-properties---types"></a>Eigenschaften von Datenbankdimensionen - Typen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die **Typ** Einstellung der Eigenschaft enthält Informationen zum Inhalt einer Dimension für Server- und Clientanwendungen. In einigen Fällen die **Typ** Einstellung nur stellt Hinweis für Clientanwendungen bereit und ist optional. In anderen Fällen z. B. **Konten** oder **Zeit** Dimensionen, die **Typ** eigenschafteneinstellungen für die Dimension und ihre Attribute bestimmen das Verhalten für bestimmte Server basierenden und kann erforderlich sein, um bestimmte Verhalten im Cube zu implementieren. Z. B. die **Typ** -Eigenschaft einer Dimension kann festgelegt werden, um **Konten** , um den Clientanwendungen mitzuteilen, dass die Standarddimension Kontoattribute enthält. Weitere Informationen über die Zeit, Konto und währungsdimensionen finden Sie unter [erstellen eine datumstypdimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [Erstellen eines Finanzkontos des über-und untergeordneten Typs Dimension](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), und [erstellen Sie eine Währung Geben Sie die Dimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+  Die **Typ** Einstellung der Eigenschaft enthält Informationen zum Inhalt einer Dimension für Server- und Clientanwendungen. In einigen Fällen die **Typ** Einstellung nur stellt Hinweis für Clientanwendungen bereit und ist optional. In anderen Fällen z. B. **Konten** oder **Zeit** Dimensionen, die **Typ** eigenschafteneinstellungen für die Dimension und ihre Attribute bestimmen das Verhalten für bestimmte Server basierenden und kann erforderlich sein, um bestimmte Verhalten im Cube zu implementieren. Z. B. die **Typ** -Eigenschaft einer Dimension kann festgelegt werden, um **Konten** , um den Clientanwendungen mitzuteilen, dass die Standarddimension Kontoattribute enthält. Weitere Informationen über die Zeit, Konto und währungsdimensionen finden Sie unter [erstellen eine datumstypdimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [Erstellen eines Finanzkontos des über-und untergeordneten Typs Dimension](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), und [erstellen Sie eine Währung Geben Sie die Dimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  Die Standardeinstellung für den Dimensionstyp ist **reguläre**, womit keine Annahmen zum Inhalt der Dimension gemacht. Dies ist die Standardeinstellung für alle Dimensionen, wenn Sie erstmalig eine Dimension definieren, es sei denn, Sie geben **Zeit** beim Definieren der Dimensions mithilfe des Dimensions-Assistenten. Sie sollten auch lassen **reguläre** den Dimensionstyp aus, wenn der Dimensions-Assistent einen geeigneten Typ für den Dimensionstyp nicht aufgeführt ist.  
   
@@ -71,6 +44,6 @@ Die **Typ** Einstellung der Eigenschaft enthält Informationen zum Inhalt einer 
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen Sie eine Dimension anhand einer vorhandenen Tabelle](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Dimensionen &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensionen & #40; Analysis Services – mehrdimensionale Daten & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

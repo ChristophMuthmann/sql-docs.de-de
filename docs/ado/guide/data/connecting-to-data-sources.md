@@ -19,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc1f10e8ceae959927ab2a7b42db800ef140892f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 706f340ca60799cc9aa8fb745f031e1c68cc34dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-data-sources"></a>Herstellen einer Verbindung mit Datenquellen
 Ein ADO **Verbindung** -Objekt stellt eine eindeutige Sitzung mit einer Datenquelle, z. B. ein DBMS, einen Speicher oder eine durch Trennzeichen getrennte Textdatei dar. Im Fall von einem Client/Server-Datenbanksystem kann die ADO-Verbindung eine tatsächliche Netzwerk-Verbindung mit dem Server sein.  

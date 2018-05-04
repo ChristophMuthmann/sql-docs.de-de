@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 80fddbfb0bcccdf5e5555cd76b3f9fb3c161f6b3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 89b44abd491b4327e20ab02802c4f4c813fcb9db
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-property-example-vb"></a>Beispiel-Eigenschaft (VB)
 Dieses Beispiel zeigt die [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft mit dem [Feld](../../../ado/reference/ado-api/field-object.md) und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte anzeigen und die Eigenschaftswerte für die ***Mitarbeiter*** Tabelle.  

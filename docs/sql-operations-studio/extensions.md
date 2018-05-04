@@ -9,16 +9,15 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9e7fe86ede11699a20417b2d9ae35d120d2286b8
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 40b29dfb7512c0f38f009b635ab610cebce7a07a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Erweitern der Funktionalität von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

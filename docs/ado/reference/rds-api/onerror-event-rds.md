@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cd7781ce561b2900d6ee3a1659c35c0cf48ce75f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 9bbef30b2a5fe0964644f43945935bfab8ee6043
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="onerror-event-rds"></a>OnError-Ereignis (RDS)
 Die **OnError** Ereignis wird aufgerufen, wenn während eines Vorgangs ein Fehler auftritt.  

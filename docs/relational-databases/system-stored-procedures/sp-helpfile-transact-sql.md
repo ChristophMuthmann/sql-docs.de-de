@@ -24,12 +24,11 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c0d246c2ed8ea670f2d8c2fc05bca828ce152ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dc7dde2cbd3ec6b3361785b7d9f02931f812b730
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Logischer Dateiname der Datei.|  
-|**fileid**|**smallint**|Numerischer Bezeichner der Datei. Wird nicht zurückgegeben, wenn *Namen* angegeben*.*|  
+|**fileid**|**smallint**|Numerischer Bezeichner der Datei. Wird nicht zurückgegeben, wenn *Namen* angegeben *.*|  
 |**Dateiname**|**NCHAR(260)**|Physischer Dateiname.|  
 |**filegroup**|**sysname**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Die Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
 |**size**|**nvarchar(15)**|Die Dateigröße in KB.|  

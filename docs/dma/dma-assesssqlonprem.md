@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - sql-dma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
@@ -20,12 +20,11 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe0447cf841eb5b45526d3a8fd1099c84ad4113c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 42cd32f57547f811fba379caa3bef5678dc2b50b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>Führen Sie eine SQL Server-Migrations-Bewertung
 Die folgenden schrittweisen Anweisungen unterstützen Sie Ihre erste Bewertung für die Migration zu einer lokalen SQL Server, SQL Server auf einem virtuellen Azure-Computer oder die Azure SQL-Datenbank ausgeführt wird, mithilfe des Migrations-Assistenten Daten ausführen.

@@ -23,15 +23,15 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aebac1aafd7d49e6b5b5c21343161184ba19da34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e4d3fe5a9a7a0277255b6ceffe4ebdb3ae918095
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemameasuregroups-rowset"></a>MDSCHEMA_MEASUREGROUPS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die Measuregruppen innerhalb einer Datenbank.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Beschreibt die Measuregruppen innerhalb einer Datenbank.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **MDSCHEMA_MEASUREGROUPS** -Rowset enthält die folgenden Spalten.  

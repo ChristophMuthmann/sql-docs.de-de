@@ -1,16 +1,16 @@
 ---
 title: Microsoft Time Series Algorithm Technical Reference | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -29,16 +29,15 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: f6c9d811d35191ba604e54859b7a73efd068a94e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Time Series-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -147,8 +146,8 @@ ms.lasthandoff: 03/20/2018
 |*MAXIMUM_SERIES_VALUE*|Gibt den maximalen Wert an, der für Vorhersagen verwendet werden soll. Dieser Parameter wird zusammen mit *MINIMUM_SERIES_VALUE*verwendet, um die Vorhersagen auf einen bestimmten Bereich einzuschränken. Sie können beispielsweise festlegen, dass die vorhergesagte Verkaufsmenge an einem Tag niemals die Anzahl der Produkte im Lager überschreiten darf.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|  
 |*MINIMUM_SERIES_VALUE*|Gibt den minimalen Wert an, der vorhergesagt werden kann. Dieser Parameter wird zusammen mit *MAXIMUM_SERIES_VALUE*verwendet, um die Vorhersagen auf einen bestimmten Bereich einzuschränken. Zum Beispiel können Sie angeben, dass die vorhergesagte Verkaufsmenge nie eine negative Zahl sein darf.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|  
 |*MINIMUM_SUPPORT*|Gibt die Mindestanzahl von Zeitscheiben an, die erforderlich sind, um eine Teilung in jeder Zeitreihenstruktur zu generieren. Der Standardwert lautet 10.|  
-|*MISSING_VALUE_SUBSTITUTION*|Gibt an, wie Lücken in Vergangenheitsdaten gefüllt werden. Standardmäßig sind Lücken in Daten nicht zulässig. Die folgende Tabelle enthält die möglichen Werte für diesen Parameter:<br /><br /> **Previous:**wiederholt den Wert aus der vorherigen Zeitscheibe<br /><br /> **Mean:**verwendet einen gleitenden Durchschnitt von im Training verwendeten Zeitscheiben<br /><br /> Numeric constant: Verwendet die festgelegte Anzahl, um alle fehlenden Werte zu ersetzen.<br /><br /> **None:**Standard. Ersetzt fehlende Werte mit Werten, die entlang der Kurve des trainierten Modells grafisch dargestellt werden.<br /><br /> <br /><br /> Hinweis: Wenn die Daten mehrere Reihen enthalten, dürfen die Reihen keine unregelmäßigen Ränder haben. Das heißt, alle Reihen sollten die gleichen Anfangs- und Endpunkte haben. <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet ebenfalls den Wert dieses Parameters, um die Lücken in den neuen Daten zu füllen, wenn Sie **PREDICTION JOIN** für ein Zeitreihenmodell ausführen.|  
-|*PERIODICITY_HINT*|Stellt für den Algorithmus einen Periodizitätshinweis der Daten bereit. Beispiel: Wenn die Verkaufszahlen jahresabhängig variieren und als Maßeinheit für die Reihe Monate gewählt wurden, ist die Periodizität 12. Dieser Parameter weist das Format {n [, n]} auf, wobei n eine beliebige positive Zahl ist.<br /><br /> Das n innerhalb der eckigen Klammern [] ist optional und kann so oft wie nötig wiederholt werden. Um beispielsweise mehrere Periodizitätshinweise für monatlich bereitgestellte Daten anzugeben, könnten Sie {12, 3, 1} eingeben, um für das Jahr, Quartal und den Monat Muster zu ermitteln. Die Periodizität hat jedoch starke Auswirkungen auf die Modellqualität. Wenn der von Ihnen gegebene Hinweis von der tatsächlichen Periodizität abweicht, können die Ergebnisse beeinträchtigt werden.<br /><br /> Der Standardwert lautet \{1\}.<br /><br /> Hinweis: Die Klammern sind erforderlich. Dieser Parameter verfügt zudem über einen String-Datentyp. Wenn Sie daher diesen Parameter als Teil einer Data Mining Extensions (DMX)-Anweisung eingeben, müssen Sie die Nummer und Klammern in Anführungszeichen einschließen.|  
+|*MISSING_VALUE_SUBSTITUTION*|Gibt an, wie Lücken in Vergangenheitsdaten gefüllt werden. Standardmäßig sind Lücken in Daten nicht zulässig. Die folgende Tabelle enthält die möglichen Werte für diesen Parameter:<br /><br /> **Previous:** wiederholt den Wert aus der vorherigen Zeitscheibe<br /><br /> **Mean:** verwendet einen gleitenden Durchschnitt von im Training verwendeten Zeitscheiben<br /><br /> Numeric constant: Verwendet die festgelegte Anzahl, um alle fehlenden Werte zu ersetzen.<br /><br /> **None:** Standard. Ersetzt fehlende Werte mit Werten, die entlang der Kurve des trainierten Modells grafisch dargestellt werden.<br /><br /> <br /><br /> Hinweis: Wenn die Daten mehrere Reihen enthalten, dürfen die Reihen keine unregelmäßigen Ränder haben. Das heißt, alle Reihen sollten die gleichen Anfangs- und Endpunkte haben. <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet ebenfalls den Wert dieses Parameters, um die Lücken in den neuen Daten zu füllen, wenn Sie **PREDICTION JOIN** für ein Zeitreihenmodell ausführen.|  
+|*PERIODICITY_HINT*|Stellt für den Algorithmus einen Periodizitätshinweis der Daten bereit. Beispiel: Wenn die Verkaufszahlen jahresabhängig variieren und als Maßeinheit für die Reihe Monate gewählt wurden, ist die Periodizität 12. Dieser Parameter weist das Format {n [, n]} auf, wobei n eine beliebige positive Zahl ist.<br /><br /> Das n innerhalb der eckigen Klammern [] ist optional und kann so oft wie nötig wiederholt werden. Um beispielsweise mehrere Periodizitätshinweise für monatlich bereitgestellte Daten anzugeben, könnten Sie {12, 3, 1} eingeben, um für das Jahr, Quartal und den Monat Muster zu ermitteln. Die Periodizität hat jedoch starke Auswirkungen auf die Modellqualität. Wenn der von Ihnen gegebene Hinweis von der tatsächlichen Periodizität abweicht, können die Ergebnisse beeinträchtigt werden.<br /><br /> Der Standardwert ist {1}.<br /><br /> Hinweis: Die Klammern sind erforderlich. Dieser Parameter verfügt zudem über einen String-Datentyp. Wenn Sie daher diesen Parameter als Teil einer Data Mining Extensions (DMX)-Anweisung eingeben, müssen Sie die Nummer und Klammern in Anführungszeichen einschließen.|  
 |*PREDICTION_SMOOTHING*|Gibt an, wie das Modell kombiniert werden sollte, um die Vorhersage zu optimieren. Sie können einen beliebigen Wert zwischen [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] und 1 eingeben oder die folgenden Werte verwenden:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]:<br />                          Gibt an, dass diese Vorhersage nur ARTXP verwendet. Das Forecasting ist für weniger Vorhersagen optimiert.<br /><br /> 1: Gibt an, dass diese Vorhersage nur ARIMA verwendet. Das Forecasting ist für viele Vorhersagen optimiert.<br /><br /> 0,5: Standard Gibt an, dass für die Vorhersage beide Algorithmen verwendet und die Ergebnisse gemischt werden sollen.<br /><br /> <br /><br /> Verwenden Sie bei der Vorhersageglättung den *FORECAST_METHOD* -Parameter, um das Training zu steuern.   Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|  
   
 ### <a name="modeling-flags"></a>Modellierungsflags  
@@ -176,6 +175,6 @@ ms.lasthandoff: 03/20/2018
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Time Series-Algorithmus](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Miningmodellinhalt von Zeitreihenmodellen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Zeitreihenmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

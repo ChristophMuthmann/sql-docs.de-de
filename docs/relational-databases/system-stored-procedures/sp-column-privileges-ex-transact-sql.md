@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c31ae66112acc5cf1831573e436995c68c5d7ff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 574f0e4e829bfbe92761992e51fd3c3ffd5ef852
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,14 +69,14 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Tabelle der Name des Prozedurqualifizierers. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer***.*** Besitzer***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**TABLE_CAT**|**sysname**|Tabelle der Name des Prozedurqualifizierers. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
 |**NACH "TABLE_SCHEM"**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, der Name des Datenbankbenutzers, der die Tabelle erstellt. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Name der Spalte für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  
 |**GRANTOR**|**sysname**|Datenbank-Benutzername, der für diese Berechtigungen erteilt hat **COLUMN_NAME** aufgeführten **Empfänger**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte entspricht immer der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück.<br /><br /> Die **GRANTOR** Spalte kann entweder der Datenbankbesitzer (**TABLE_OWNER**) oder ein Benutzer, denen der Datenbankbesitzer die Berechtigungen mithilfe der WITH GRANT OPTION-Klausel in der GRANT-Anweisung erteilt.|  
 |**EMPFÄNGER**|**sysname**|Datenbank-Benutzername, die gewährten Berechtigungen für dieses **COLUMN_NAME** aufgeführte **GRANTOR**. Dieses Feld gibt immer einen Wert zurück.|  
-|**BERECHTIGUNG**|**Varchar (**32**)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> Wählen Sie = **Empfänger** kann Daten für die Spalten abrufen.<br /><br /> INSERT = **Empfänger** können Daten für diese Spalten bereitstellen, wenn neue Zeilen eingefügt werden (durch die **Empfänger**) in der Tabelle.<br /><br /> UPDATE = **Empfänger** kann vorhandene Daten in der Spalte ändern.<br /><br /> REFERENCES = **Empfänger** können auf eine Spalte in einer Fremdschlüsseltabelle in einem Primärschlüssel/Fremdschlüssel-Beziehung verweisen. Primär-/Fremdschlüssel-Beziehungen werden über Tabelleneinschränkungen definiert.|  
-|**IS_GRANTABLE**|**Varchar (**3**)**|Gibt an, ob die **Empfänger** Erteilen von Berechtigungen für andere Benutzer (häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet) zulässig ist. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist darauf, dass für die entsprechende Datenquelle die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
+|**BERECHTIGUNG**|**Varchar (** 32 **)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> Wählen Sie = **Empfänger** kann Daten für die Spalten abrufen.<br /><br /> INSERT = **Empfänger** können Daten für diese Spalten bereitstellen, wenn neue Zeilen eingefügt werden (durch die **Empfänger**) in der Tabelle.<br /><br /> UPDATE = **Empfänger** kann vorhandene Daten in der Spalte ändern.<br /><br /> REFERENCES = **Empfänger** können auf eine Spalte in einer Fremdschlüsseltabelle in einem Primärschlüssel/Fremdschlüssel-Beziehung verweisen. Primär-/Fremdschlüssel-Beziehungen werden über Tabelleneinschränkungen definiert.|  
+|**IS_GRANTABLE**|**Varchar (** 3 **)**|Gibt an, ob die **Empfänger** Erteilen von Berechtigungen für andere Benutzer (häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet) zulässig ist. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist darauf, dass für die entsprechende Datenquelle die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  

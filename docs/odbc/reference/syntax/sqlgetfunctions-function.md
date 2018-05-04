@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetFunctions
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 698e78ca1cbb0d6396c6319ef8618d813191c67e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions-Funktion
 **Konformität**  
@@ -55,7 +54,7 @@ SQLRETURN SQLGetFunctions(
  [Eingabe] Verbindungshandle.  
   
  *FunctionId*  
- [Eingabe] Ein **#define** Wert ab, die ODBC-Funktion von Interesse; identifiziert. **SQL_API_ODBC3_ALL_FUNCTIONS OrSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** werden von einer ODBC 3.*.x* Anwendung Unterstützung für ODBC 3. bestimmen*.x* und früheren Funktionen. **SQL_API_ALL_FUNCTIONS** wird von einer ODBC 2. verwendet*.x* Anwendung Unterstützung für ODBC 2. bestimmen*.x* und früheren Funktionen.  
+ [Eingabe] Ein **#define** Wert ab, die ODBC-Funktion von Interesse; identifiziert. **SQL_API_ODBC3_ALL_FUNCTIONS OrSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** werden von einer ODBC 3.*.x* Anwendung Unterstützung für ODBC 3. bestimmen *.x* und früheren Funktionen. **SQL_API_ALL_FUNCTIONS** wird von einer ODBC 2. verwendet *.x* Anwendung Unterstützung für ODBC 2. bestimmen *.x* und früheren Funktionen.  
   
  Eine Liste der **#define** Werte, die ODBC-Funktionen finden Sie unter den Tabellen in "Kommentare".  
   
@@ -64,7 +63,7 @@ SQLRETURN SQLGetFunctions(
   
  Wenn *FunctionId* ist SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* verweist auf ein SQLSMALLINT-Array mit einer Anzahl von Elementen SQL_API_ODBC3_ALL_FUNCTIONS_SIZE gleich. Dieses Array wird vom Treiber-Manager behandelt, als 4.000-Bit-Bitmap, die verwendet werden kann, um festzustellen, ob ein ODBC 3.*.x* oder earlier-Funktion unterstützt wird. Das Makro SQL_FUNC_EXISTS wird aufgerufen, um die funktionsunterstützung zu bestimmen. (Siehe "Kommentare".) Eine ODBC 3.*.x* Anwendung aufrufen kann **SQLGetFunctions** mit SQL_API_ODBC3_ALL_FUNCTIONS für eine ODBC-3.*.x* oder ODBC 2.*.x* Treiber.  
   
- Wenn *FunctionId* ist SQL_API_ALL_FUNCTIONS, *SupportedPtr* verweist auf ein Array SQLUSMALLINT von 100 Elementen. Das Array wird durch indiziert **#define** vom verwendeten Werten *FunctionId* identifizieren jede ODBC-Funktion; einige Elemente des Arrays sind, nicht verwendeter und für zukünftige Verwendung reserviert. Ein Element ist SQL_TRUE, wenn sie einer ODBC 2. identifiziert*.x* oder earlier-Funktion vom Treiber unterstützt werden. Es ist SQL_FALSE, wenn es eine ODBC-Funktion, die vom Treiber nicht unterstützt identifiziert oder eine ODBC-Funktion gibt nicht an.  
+ Wenn *FunctionId* ist SQL_API_ALL_FUNCTIONS, *SupportedPtr* verweist auf ein Array SQLUSMALLINT von 100 Elementen. Das Array wird durch indiziert **#define** vom verwendeten Werten *FunctionId* identifizieren jede ODBC-Funktion; einige Elemente des Arrays sind, nicht verwendeter und für zukünftige Verwendung reserviert. Ein Element ist SQL_TRUE, wenn sie einer ODBC 2. identifiziert *.x* oder earlier-Funktion vom Treiber unterstützt werden. Es ist SQL_FALSE, wenn es eine ODBC-Funktion, die vom Treiber nicht unterstützt identifiziert oder eine ODBC-Funktion gibt nicht an.  
   
  Die Arrays, die **SupportedPtr* nullbasierte Indizierung verwendet.  
   

@@ -1,35 +1,23 @@
 ---
-title: "Unäre Operatoren in über-und untergeordneten Dimensionen | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Unäre Operatoren in über-und untergeordneten Dimensionen | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- UnaryOperatorColumn property
-- attributes [Analysis Services], unary operators
-- unary operators
-ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4646fd5e9a58ba275c10549aa5a9ae0600c41070
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>Über-und untergeordneten Dimensionsattribute - unäre Operatoren
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In einer Dimension, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Über-/Unterordnungsbeziehung enthält, geben Sie eine unäre Operatorspalte (oder eine benutzerdefinierte Rollup-Operatorspalte) an, die den benutzerdefinierten Rollup für alle nicht berechneten Elemente des übergeordneten Attributs bestimmt. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden. Die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut (**Usage**=Parent) gibt die Spalte einer Tabelle in der Datenquellensicht an, die unäre Operatoren enthält. Werte für die benutzerdefinierten Rollup-Operatoren, die in dieser Spalte gespeichert sind, werden auf die einzelnen Elemente des Attributs angewendet.  
+  In einer Dimension, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Über-/Unterordnungsbeziehung enthält, geben Sie eine unäre Operatorspalte (oder eine benutzerdefinierte Rollup-Operatorspalte) an, die den benutzerdefinierten Rollup für alle nicht berechneten Elemente des übergeordneten Attributs bestimmt. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden. Die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut (**Usage**=Parent) gibt die Spalte einer Tabelle in der Datenquellensicht an, die unäre Operatoren enthält. Werte für die benutzerdefinierten Rollup-Operatoren, die in dieser Spalte gespeichert sind, werden auf die einzelnen Elemente des Attributs angewendet.  
   
  Sie können eine benannte Berechnung für eine Dimensionstabelle in der Datenquellensicht als unäre Operatorspalte erstellen und angeben. Der einfachste Ausdruck, z. B. '+', gibt denselben Operator für alle Elemente zurück. Aber Sie können jeden beliebigen Ausdruck verwenden, solange er einen Operator für jedes Element zurückgibt.  
   

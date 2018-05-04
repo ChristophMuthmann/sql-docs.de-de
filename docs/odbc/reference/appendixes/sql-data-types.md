@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types"></a>SQL-Datentypen
 Jede DBMS definiert eine eigene SQL-Typen. Jede ODBC-Treiber stellt nur die SQL-Datentypen, die die zugeordneten DBMS definiert. Informationen wie ein Treiber ordnet DBMS SQL-Typen zu den SQL ODBC-definierten Typ-IDs und wie ein Treiber DBMS-SQL-Typen einen eigenen Treiber-spezifische SQL-Typ-IDs zugeordnet wird zurückgegeben, durch einen Aufruf von **SQLGetTypeInfo**. Ein Treiber gibt auch die SQL-Datentypen beim Beschreiben der Datentypen der Spalten und Parametern über Aufrufe von **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, und **SQLSpecialColumns**.  

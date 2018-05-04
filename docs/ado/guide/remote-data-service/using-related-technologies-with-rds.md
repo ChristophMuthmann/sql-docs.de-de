@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6dcfb2375daefdfd55c1e5ec4beb5d4879e7eb8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 61f33bbbbd0b946122dd9a1f9e189f095de80fe4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-related-technologies-with-rds"></a>Verwenden von verwandten Technologien mit RDS
 Dieser Abschnitt enthält die folgenden Themen.  

@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35efef1459e2a44d19602ce77adeacb6b01ff81b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 47908910561d4f25ed7b958b9b100f86d5465748
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-streams"></a>Befehl Streams
 ADO unterstützt immer Eingabe des Befehls im Zeichenfolgenformat angegeben werden, indem Sie die **CommandText** Eigenschaft. Als Alternative können mit ADO 2.7 oder höher, Sie können auch einen Datenstrom von Informationen für die Eingabe des Befehls durch Zuweisen des Streams, der **CommandStream** Eigenschaft. Sie können eine ADO zuweisen **Stream** Objekt oder ein beliebiges Objekt aus, die COM unterstützt **IStream** Schnittstelle.  

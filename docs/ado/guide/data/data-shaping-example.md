@@ -19,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0685e0c593a77f5369513fa9b39fe61f89498ff4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 991ea5c55a99aa8dbe043dd99b9703acd73172e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-shaping-example"></a>Daten strukturiert werden, Beispiel
 Die folgenden Daten strukturieren Befehl veranschaulicht, wie eine hierarchische erstellen **Recordset** aus der **Kunden** und **Aufträge** Tabellen in der Northwind-Datenbank.  

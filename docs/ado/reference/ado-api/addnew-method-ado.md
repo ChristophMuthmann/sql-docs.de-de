@@ -23,12 +23,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cee18a3fe0997243308dbb3bf71620ba5920adb6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 694a6dad8d329bdf1a50a741e4630c66eec6e749
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
 Erstellt einen neuen Datensatz für ein aktualisierbares [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  

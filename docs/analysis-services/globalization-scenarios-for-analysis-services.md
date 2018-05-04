@@ -1,15 +1,15 @@
 ---
-title: "Globalisierungsszenarien für Analysis Services | Microsoft Docs"
-ms.custom: 
+title: Globalisierungsszenarien für Analysis Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - SQL Server Analysis Services, international considerations
 - Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f577134d61829f5c491462901c96f69f0f1e9973
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
-ms.translationtype: MT
+ms.openlocfilehash: 6fc2a2c16bf80a5f35cc27dec3192aa87f0a5d83
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Globalisierungsszenarien für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -78,7 +77,7 @@ ms.lasthandoff: 01/22/2018
 ## <a name="see-also"></a>Siehe auch  
  [Unterstützung für Übersetzungen in Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Internationalisierung für Windows-Anwendungen](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Go Global Developer Center](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Go Global-Entwicklercenter](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [Schreiben von Windows Store-apps mit gebietsschemabasiertem adaptiven design](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Entwicklung von universellen Windows-Apps mit c# und XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

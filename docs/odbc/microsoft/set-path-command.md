@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 695325b486b485aabc8c28ec439d74cfdaf16fff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f4d831d397df3ec0a5ca914b0bfdd530729823f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-path-command"></a>Befehl "SET"
 Gibt einen Pfad für die Datei sucht. Treiberspezifische Informationen finden Sie unter den Hinweisen.  

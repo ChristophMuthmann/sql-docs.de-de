@@ -1,31 +1,31 @@
 ---
 title: Refresh-Befehl (TMSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77bef111f20a6ccc72347b8e02bd967ef2d316b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d413d9619f83673adc795348a0656b387566e942
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-command-tmsl"></a>Refresh-Befehl (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Verarbeitet Objekte in der aktuellen Datenbank.   
-**Aktualisieren Sie** immer parallel ausgeführt werden, es sei denn, Sie ihn mit Drosselung [Sequence-Befehl &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Verarbeitet Objekte in der aktuellen Datenbank.   
+**Aktualisieren Sie** immer parallel ausgeführt werden, es sei denn, Sie ihn mit Drosselung [Sequenz Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
   
  Sie können einige Eigenschaften einiger Objekte während eines Datenaktualisierungsvorgangs überschreiben:  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  Sie können die folgenden Objekte aktualisieren:  
   
- [Datenbankobjekt &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) Verarbeiten eine Datenbank.  
+ [Datenbankobjekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) eine Datenbank zu verarbeiten.  
   
 ```  
 {  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables-Objekt &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Verarbeiten eine einzelne Tabelle.  
+ [Tables-Objekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) verarbeiten eine einzelne Tabelle.  
   
 ```  
 {  
@@ -108,7 +108,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Partitionen Object &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) Innerhalb einer Tabelle eine einzelne Partition zu verarbeiten.  
+ [Partitionen Objekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) innerhalb einer Tabelle eine einzelne Partition zu verarbeiten.  
   
 ```  
 {  
@@ -222,7 +222,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>Nutzung (Endpunkte)  
- Diese Command-Element wird in einer Anweisung verwendet die [Execute-Methode &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) Aufruf über einen XMLA-Endpunkt verfügbar gemacht werden auf folgende Weise:  
+ Diese Command-Element wird in einer Anweisung verwendet die [Execute-Methode &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) Aufruf über einen XMLA-Endpunkt verfügbar gemacht werden auf folgende Weise:  
   
 -   Als ein XMLA-Fenster in SQL Server Management Studio (SSMS)  
   
@@ -232,10 +232,10 @@ ms.lasthandoff: 01/08/2018
   
  Sie können ein vorgefertigtes Skript für diesen Befehl aus SSMS generieren.  Sie können z. B. Klicken die **Skript** in einem Dialogfeld für die Verarbeitung.  
   
- Die [ \[MS-SSAS-T\]: SQL Server Analysis Services-Tabellendatenbank (SQL Server Technische Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) Dokuments Abschnitt 3.1.5.2.2, die die Struktur der Befehle für JSON-tabellarischen Metadaten und Objekte beschreibt. Aktuell enthält dieses Dokument Befehle und Funktionen, die noch nicht im TMSL-Skript implementiert. Finden Sie unter ([Tabular Model Scripting Language &#40; TMSL &#41; Verweisen auf](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) für Informationen zu den was unterstützt wird.  
+ Die [ \[MS-SSAS-T\]: SQL Server Analysis Services-Tabellendatenbank (SQL Server Technische Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) Dokuments Abschnitt 3.1.5.2.2, die die Struktur der Befehle für JSON-tabellarischen Metadaten und Objekte beschreibt. Aktuell enthält dieses Dokument Befehle und Funktionen, die noch nicht im TMSL-Skript implementiert. Finden Sie unter ([Tabular Model Scripting Language &#40;TMSL&#41; Verweis](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) für Informationen zu den was unterstützt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Verarbeiten von Optionen und Einstellungen &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
+ [Verarbeitungsoptionen und-Einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
   
   

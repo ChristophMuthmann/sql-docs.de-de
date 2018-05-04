@@ -1,16 +1,16 @@
 ---
 title: CREATE SPATIAL INDEX (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SPATIAL INDEX
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 
+caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: 05e551350da60132741be91d1a9bc22cc0dd7748
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -365,7 +365,7 @@ Definiert die Dichte des Rasters auf jeder Ebene eines Mosaikschemas. Wenn GEOME
 > Bei Angabe einer ungültigen Dichte wird ein Fehler ausgelöst.  
   
 CELLS_PER_OBJECT =*n*  
-Gibt die Anzahl von Zellen pro Objekt für das Mosaik an, die vom Mosaikprozess für ein einzelnes räumliches Objekt im Index verwendet werden können. *n* kann jede ganze Zahl von 1 bis 8192 sein. Wenn bei einem bestimmten Mosaik eine ungültige Anzahl übergeben wird oder die Anzahl die maximal zulässige Anzahl von Zellen überschreitet, wird ein Fehler ausgelöst.  
+Gibt die Anzahl von Zellen pro Objekt für das Mosaik an, die vom Mosaikprozess für ein einzelnes räumliches Objekt im Index verwendet werden können. *m* kann jeder ganzen Zahl von 1 bis 8192 entsprechen. Wenn bei einem bestimmten Mosaik eine ungültige Anzahl übergeben wird oder die Anzahl die maximal zulässige Anzahl von Zellen überschreitet, wird ein Fehler ausgelöst.  
   
  CELLS_PER_OBJECT hat die folgenden Standardwerte:  
   
@@ -388,7 +388,7 @@ PAD_INDEX = { ON | **OFF** }
  ON  
  Gibt an, dass der Prozentsatz des mit *fillfactor* angegebenen freien Speicherplatzes für die Zwischenebenenseiten des Indexes verwendet wird.  
   
- OFF oder *fillfactor* ist nicht angegeben.  
+ OFF oder *fillfactor* ist nicht angegeben  
  Gibt an, dass die Zwischenebenenseiten nahezu vollständig aufgefüllt sind. Allerdings ist ausreichend Speicherplatz vorhanden, um mindestens eine Zeile in der maximal für den Index möglichen Größe aufzunehmen, wenn der Schlüsselsatz auf den Zwischenseiten berücksichtigt wird.  
   
  Die Option PAD_INDEX ist nur dann hilfreich, wenn FILLFACTOR angegeben ist, da PAD_INDEX den durch FILLFACTOR angegebenen Prozentsatz verwendet. Wenn der für FILLFACTOR angegebene Prozentsatz nicht groß genug ist, um eine Zeile aufzunehmen, überschreibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] diesen Prozentsatz intern, um das Minimum zuzulassen. Auf jeder Zwischenindexseite befinden sich unabhängig vom angegebenen *fillfactor*-Wert nie weniger als zwei Zeilen.  
@@ -419,7 +419,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
  OFF  
  Die Zwischenergebnisse der Sortierung werden in derselben Datenbank gespeichert wie der Index.  
   
- Zusätzlich zu dem Speicherplatz, der in der Benutzerdatenbank zum Erstellen des Indexes erforderlich ist, muss tempdb ungefähr die gleiche Menge an zusätzlichem Speicherplatz aufweisen, um die Zwischenergebnisse des Sortierens zu speichern. Weitere Informationen finden Sie unter [SORT_IN_TEMPDB-Optionen für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
+ Zusätzlich zu dem Speicherplatz, der in der Benutzerdatenbank zum Erstellen des Indexes erforderlich ist, muss tempdb ungefähr die gleiche Menge an zusätzlichem Speicherplatz aufweisen, um die Zwischenergebnisse des Sortierens zu speichern. Weitere Informationen finden Sie unter [SORT_IN_TEMPDB-Option für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
 IGNORE_DUP_KEY =**OFF**  
 Hat keine Auswirkungen für räumliche Indizes, da der Indextyp nie eindeutig ist. Legen Sie diese Option nicht auf ON fest, oder es wird ein Fehler ausgelöst.  
@@ -489,7 +489,7 @@ MAXDOP =*max_degree_of_parallelism*
 > [!IMPORTANT]  
 > Obwohl die MAXDOP-Option syntaktisch unterstützt wird, verwendet CREATE SPATIAL INDEX derzeit immer nur einen einzelnen Prozessor.  
   
- *max_degree_of_parallelism* kann folgende Werte enthalten:  
+ *max_degree_of_parallelism* kann folgende Werte haben:  
   
  1  
  Unterdrückt das Generieren paralleler Pläne.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], retrieving or setting field values
 ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6fd244638193748260567d11aca130ce41ab283d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a19c27347d7566517002a05ed18e921c1b2594ca
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>Abrufen und Festlegen von Deskriptorfelder
 Dieser Abschnitt beschreibt die Methoden, die eine Anwendung zum Abrufen oder Festlegen der Werte in deskriptorfelder verwenden kann.  

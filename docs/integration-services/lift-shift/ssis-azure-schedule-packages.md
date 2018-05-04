@@ -1,30 +1,31 @@
 ---
-title: "Planen der Ausführung von SSIS-Paketen in Azure | Microsoft-Dokumentation"
-ms.date: 01/16/2018
+title: Planen der Ausführung von SSIS-Paketen in Azure | Microsoft-Dokumentation
+ms.date: 04/17/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: c946055e7579478d65de31f737b1c265b2a38eba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planen der Ausführung von SSIS-Paketen in Azure
 Sie können die Ausführung von Paketen, die in der SSIS-Katalogdatenbank auf einem Azure SQL-Datenbankserver gespeichert sind, mithilfe einer der folgenden Planungsoptionen planen:
 -   [SQL Server-Agent](#agent)
 -   [SQL-Datenbank für elastische Aufträge](#elastic)
--   [Die Azure Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren](#sproc)
+-   [Die Aktivität „SSIS-Paket ausführen“ von Azure Data Factory](#activities)
+-   [Die Azure Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren](#activities)
 
 ## <a name="agent"></a> Planen eines Pakets mit SQL Server-Agent
 
@@ -142,13 +143,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> Planen eines Pakets mithilfe der Azure Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren
+## <a name="activities"></a> Planen eines Pakets mit Azure Data Factory
 
-Informationen zum Planen eines SSIS-Pakets mithilfe der Azure Data Factory-Aktivität „Gespeicherte Prozedur“ finden Sie in den folgenden Artikeln:
+Weitere Informationen zum Planen eines SSIS-Pakets mithilfe von Azure Data Factory-Aktivitäten finden Sie in den folgenden Artikeln:
 
--   Für Data Factory Version 2: [Invoke an SSIS package using stored procedure activity in Azure Data Factory (Aufrufen eines SSIS-Pakets mithilfe der Aktivität „Gespeicherte Prozedur“ in Azure Data Factory)](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Für Version 2 von Data Factory: [Run an SSIS package using SSIS activity in Azure Data Factory (Ausführen eines SSIS-Pakets mithilfe einer SSIS-Aktivität in Azure Data Factory)](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
--   Für Data Factory Version 1: [Invoke an SSIS package using stored procedure activity in Azure Data Factory (Aufrufen eines SSIS-Pakets mithilfe der Aktivität „gespeicherte Prozedur“ in Azure Data Factory)](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Für Version 2 von Data Factory: [Run an SSIS package using stored procedure activity in Azure Data Factory (Ausführen eines SSIS-Pakets mithilfe von Aktivitäten gespeicherter Prozeduren in Azure Data Factory)](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   Für Version 1 von Data Factory: [Run an SSIS package using stored procedure activity in Azure Data Factory (Ausführen eines SSIS-Pakets mithilfe von Aktivitäten gespeicherter Prozeduren in Azure Data Factory)](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen zu SQL Server-Agent finden Sie unter [SQL Server Agent Jobs for Packages (Aufträge für SQL Server-Agent für Pakete)](../packages/sql-server-agent-jobs-for-packages.md).

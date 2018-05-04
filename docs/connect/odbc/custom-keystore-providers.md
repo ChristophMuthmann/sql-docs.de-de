@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.workload: Inactive
-ms.openlocfilehash: 5bde3f699c1db9156e9e4fdfc96d2098d15413d4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ea1e976d4759951c229aa528c18436dbddcfa889
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-keystore-providers"></a>Benutzerdefinierte-Schlüsselspeicher-Anbieter
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

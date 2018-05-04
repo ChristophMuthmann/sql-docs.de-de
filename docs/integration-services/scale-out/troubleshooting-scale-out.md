@@ -1,28 +1,28 @@
 ---
 title: Problembehandlung in Scale Out mit SQL Server Integration Services (SSIS) | Microsoft-Dokumentation
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a86f7e738b6e80ef81beda22a0c1f74349093ae7
-ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.openlocfilehash: e3d2408a91ed36358ab3683163dae47ff09b0f1c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Problembehandlung in Scale Out
 
@@ -142,6 +142,8 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     Werttyp: **REG_DWORD** 
 
     Wertdaten: **0 (FALSE)**
+
+4.  Wenn es nicht möglich ist, alle nicht selbst signierten Zertifikate in Schritt 2 zu bereinigen, legen Sie den Wert des Registrierungsschlüssels in Schritt 3 auf „2“ fest.
 
 ## <a name="http-request-error"></a>Fehler bei der HTTP-Anforderung
 

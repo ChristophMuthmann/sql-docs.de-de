@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da6823bb218311000b8e3ca58d28cc412e8d51fd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 19217f5812fc52a714de8c24ec389dc2a731e7b0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>JScript-Codebeispiel wird ein Recordset zurückgeben
 ## <a name="jscript-code-rsjs"></a>JScript-Code (rs.js)  

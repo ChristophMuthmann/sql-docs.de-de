@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 83be87a8c4c0dc86867e624e1f31a00994a37971
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2f280217d00753ffc3179d8149b1ec4c6957ef92
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection-Methode schließen, Table Type-Eigenschaft (VC++-Beispiel)
 Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft **nichts** sollte den Katalog "Schließen". Zugeordnete Sammlungen werden leer sein. Alle Objekte, die von Schemaobjekten im Katalog erstellt wurden, werden verwaist. Alle Eigenschaften auf jene Objekte, die zwischengespeichert wurden, bleiben verfügbar, aber beim Lesen der Eigenschaften, die einen Aufruf an den Anbieter erfordern, schlägt fehl.  

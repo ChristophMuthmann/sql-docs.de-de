@@ -23,15 +23,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bbfd30d94a7f6ad129eee3ee82e9bb7fb951c19f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>DMSCHEMA_MINING_STRUCTURE_COLUMNS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die einzelnen Spalten aller Miningstrukturen, die auf einen Server mit bereitgestellten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Beschreibt die einzelnen Spalten aller Miningstrukturen, die auf einen Server mit bereitgestellten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DMSCHEMA_MINING_STRUCTURE_COLUMNS** Rowset enthält die folgenden Spalten.  
@@ -39,11 +39,11 @@ ms.lasthandoff: 01/08/2018
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||Der Katalogname.|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||Der nicht gekennzeichnete Schemaname. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]unterstützt keine Schemas, daher ist diese Spalte stets **NULL**.|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||Der nicht gekennzeichnete Schemaname. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt keine Schemas, daher ist diese Spalte stets **NULL**.|  
 |**STRUKTURNAME**|**DBTYPE_WSTR**||Der Name der Struktur. Diese Spalte darf keine enthalten eine **NULL**.|  
-|**SPALTENNAME**|**DBTYPE_WSTR**||Name der Spalte. Eindeutigkeit wird nur für Spalten garantiert, die das gleiche Muster besitzen. Beispielsweise können zwei geschachtelte Spalten den gleichen Namen besitzen, wenn sie zu zwei unterschiedlichen geschachtelten Tabellen innerhalb der gleichen Struktur gehören.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**||Name der Spalte. Eindeutigkeit wird nur für Spalten garantiert, die das gleiche Muster besitzen. Beispielsweise können zwei geschachtelte Spalten den gleichen Namen besitzen, wenn sie zu zwei unterschiedlichen geschachtelten Tabellen innerhalb der gleichen Struktur gehören.|  
 |**COLUMN_GUID**|**DBTYPE_GUID**||Der Spalten-GUID Anbieter, die keine GUIDs zur Identifizierung von Spalten verwenden, sollten zurückgeben **NULL** in dieser Spalte.|  
-|**COLUMN_PROPID**|**DBTYPE_UI4**||Die Spalteneigenschaften-ID. Anbieter, die Spalten keine Eigenschaften-IDs zuordnen sollten zurückgeben **NULL** in dieser Spalte. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gibt **NULL** für diese Spalte.|  
+|**COLUMN_PROPID**|**DBTYPE_UI4**||Die Spalteneigenschaften-ID. Anbieter, die Spalten keine Eigenschaften-IDs zuordnen sollten zurückgeben **NULL** in dieser Spalte. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Gibt **NULL** für diese Spalte.|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**||Die Ordnungszahl der Spalte. Spalten werden beginnend mit 1 nummeriert. **NULL** Wenn kein stabiler Ordinalwert für die Spalte vorhanden ist.|  
 |**COLUMN_HASDEFAULT**|**DBTYPE_BOOL**||Ein boolescher Wert, der angibt, ob diese Spalte einen Standardwert besitzt.<br /><br /> **"True"** , wenn die Spalte einen Standardwert besitzt.<br /><br /> **"False"** , wenn die Spalte nicht über einen Standardwert besitzt oder wenn nicht bekannt ist, ob die Spalte einen Standardwert besitzt.|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||Der Standardwert der Spalte. Ein Anbieter kann ausgesetzt **DBCOLUMN_DEFAULTVALUE** , aber nicht **DBCOLUMN_HASDEFAULT** (für ISO-Tabellen) in das zurückgegebene Rowset **IColumnsRowset:: GetColumnsRowset**.<br /><br /> Wenn der Standardwert ist **NULL**, **COLUMN_HASDEFAULT** ist **"true"** und **COLUMN_DEFAULT** Spalte ist eine **NULL** Wert.|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |**SORTIERUNGSNAME**|**DBTYPE_WSTR**||Der Sortierungsname. **NULL** , wenn der Anbieter keine unterschiedliche Sortierungen unterstützt.|  
 |**DOMAIN_CATALOG**|**DBTYPE_WSTR**||Der Name des Katalogs, in dem die Domäne definiert ist. **NULL** , wenn der Anbieter keine Kataloge oder Domänen unterstützt.|  
 |**DOMAIN_SCHEMA**|**DBTYPE_WSTR**||Nicht gekennzeichneter Name des Schemas, in dem das Objekt definiert ist. **NULL** , wenn der Anbieter keine Schemas oder Domänen unterstützt.|  
-|**DOMÄNENNAME**|**DBTYPE_WSTR**||der Domänenname. **NULL** , wenn der Anbieter keine Domänen unterstützt.|  
+|**DOMÄNENNAME**|**DBTYPE_WSTR**||Der Domänenname. **NULL** , wenn der Anbieter keine Domänen unterstützt.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||Eine lesbare Beschreibung der Spalte. **NULL** , wenn es keine Beschreibung der Spalte zugeordnet ist.|  
 |**DISTRIBUTION_FLAG**|**DBTYPE_WSTR**||Die Verteilung der Miningstrukturspalte:<br /><br /> "**NORMAL**"<br /><br /> "**LOG_NORM**AL"<br /><br /> "**UNIFORM**"|  
 |**INHALTSTYP**|**DBTYPE_WSTR**||Der Inhaltstyp der Miningstrukturspalte:<br /><br /> "**SCHLÜSSEL**"<br /><br /> "**DISKRETE**"<br /><br /> "**FORTLAUFEND**"<br /><br /> "**DISCRETIZED (**[Argumente]**)**"<br /><br /> "**ORDERED**"<br /><br /> "**SEQUENCE_TIME**"<br /><br /> "**ZYKLISCH**"<br /><br /> "**WAHRSCHEINLICHKEIT**"<br /><br /> "**VARIANZ**"<br /><br /> "**STDEV**"<br /><br /> "**UNTERSTÜTZUNG**"<br /><br /> "**PROBABILITY_VARIANCE**"<br /><br /> "**PROBABILITY_STDEV**"|  
@@ -82,9 +82,9 @@ ms.lasthandoff: 01/08/2018
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Optional.|  
 |**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Optional.|  
 |**STRUKTURNAME**|**DBTYPE_WSTR**|Optional.|  
-|**SPALTENNAME**|**DBTYPE_WSTR**|Optional.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

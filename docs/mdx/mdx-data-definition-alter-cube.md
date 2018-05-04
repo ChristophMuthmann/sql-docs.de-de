@@ -27,12 +27,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1db5a0a41669c97728cdb12107d18b0467481a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX - Datendefinition: ALTER CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -132,11 +131,11 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen oder Elementschlüssel bereitstellt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
  Wenn die WITH DESCENDANTS-Klausel nicht verwendet wird, werden aus den untergeordneten Elementen eines gelöschten Elements untergeordnete Elemente des diesem übergeordneten Elements. Wenn die WITH DESCENDANTS-Klausel verwendet wird, werden alle nachfolgenden Werte einschließlich ihrer Zeilen in der Dimensionstabelle ebenfalls gelöscht.  
   
 > [!NOTE]  
->  Informationen zum Löschen von berechneten Elementen, benannten Mengen, Aktionen und zellenberechnungen finden Sie unter [DROP MEMBER-Anweisung &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-member.md), [DROP SET-Anweisung &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-Anweisung &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-action.md), und [DROP CELL CALCULATION-Anweisung &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Informationen zum Löschen von berechneten Elementen, benannten Mengen, Aktionen und zellenberechnungen finden Sie unter [DROP MEMBER-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [SET-Anweisung DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), und [DROP CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Aktualisieren des Standardelements einer Dimension  
  Diese Klausel aktualisiert das Standardelement eines Cubes und wird im MDX-Berechnungsskript zum Definieren eines Standardelements verwendet. Das Standardelement kann für die Datenbankdimension, eine Cubedimension oder einen Anmeldenamen angegeben werden. Das Standardelement kann auch während einer Sitzung geändert werden.  
@@ -148,7 +147,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Ein gültiger MDX-Ausdruck, der ein einzelnes Element zurückgibt.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Hinweise  
  Der angegebene MDX-Ausdruck kann statisch oder dynamisch sein.  
   
 ## <a name="moving-a-dimension-member"></a>Verschieben eines Dimensionselements  
@@ -180,9 +179,9 @@ CELL CALCULATION Calculation_Name
  Ein gültiger MDX-Skalarausdruck, der den Wert der Eigenschaft eines berechneten Elements definiert.  
   
 ## <a name="creating-a-cell-calculation"></a>Erstellen einer Zellenberechnung  
- Weitere Informationen zum Erstellen einer Zellenberechnung mithilfe der ALTER CUBE-Anweisung finden Sie unter [DROP CELL CALCULATION-Anweisung &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Weitere Informationen zum Erstellen einer Zellenberechnung mithilfe der ALTER CUBE-Anweisung finden Sie unter [DROP CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -23,15 +23,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bea7c78fddb8aa56f1ccae47b9a3964d81e1d115
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: caf9cc5b0c178c70889be608d4622b4469f798c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt die vom Datenanbieter unterstützten (Basis-) Datentypen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Gibt die von dem Datenanbieter unterstützten (Basis-)Datentypen an.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DBSCHEMA_PROVIDER_TYPES** -Rowset enthält die folgenden Spalten.  

@@ -1,16 +1,14 @@
 ---
-title: Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler | Microsoft Docs
-ms.custom: 
+title: Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: profiler
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
 - SQL Server Profiler, viewing traces
@@ -21,24 +19,24 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b15547e2d5d49a9709d118f69ea8d4590e5ff1c0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 27a824b14839fd82284f151ffbcf92658c2fef78
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] aufgezeichneten Ereignisdaten in einer Ablaufverfolgung anzeigen. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt Daten je nach definierten Ablaufverfolgungseigenschaften an. Eine Möglichkeit, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten zu analysieren, besteht darin, die Daten in ein anderes Programm wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Optimierungsratgeber von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu kopieren. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Wenn bei der Ablaufverfolgung die **Text** -Datenspalte einbezogen wird, kann der Optimierungsratgeber eine Ablaufverfolgungsdatei mit SQL-Batch- und RPC-Ereignissen verwenden. Verwenden Sie die im Lieferumfang von [!INCLUDE[ssDE](../../includes/ssde-md.md)] enthaltene vordefinierte Optimierungsvorlage, um sicherzustellen, dass für den Optimierungsratgeber von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]die richtigen Ereignisse und Spalten aufgezeichnet werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um aufgezeichnete Ereignisdaten in einer Ablaufverfolgung anzuzeigen. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt Daten je nach definierten Ablaufverfolgungseigenschaften an. Eine Möglichkeit, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten zu analysieren, besteht darin, die Daten in ein anderes Programm wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Optimierungsratgeber von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu kopieren. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Wenn bei der Ablaufverfolgung die **Text** -Datenspalte einbezogen wird, kann der Optimierungsratgeber eine Ablaufverfolgungsdatei mit SQL-Batch- und RPC-Ereignissen verwenden. Verwenden Sie die im Lieferumfang von [!INCLUDE[ssDE](../../includes/ssde-md.md)] enthaltene vordefinierte Optimierungsvorlage, um sicherzustellen, dass für den Optimierungsratgeber von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]die richtigen Ereignisse und Spalten aufgezeichnet werden.  
   
  Wenn Sie mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]eine Ablaufverfolgung aufrufen und die Ablaufverfolgungsdatei durch gespeicherte Systemprozeduren von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder der SQL-Ablaufverfolgung erstellt wurde, muss diese Datei nicht die Dateierweiterung TRC tragen.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]kann auch Protokolldateien SQL-Ablaufverfolgung sowie allgemeine SQL-Skriptdateien lesen. Wenn Sie eine Protokolldatei der SQL-Ablaufverfolgung öffnen, die nicht die Dateierweiterung LOG aufweist (z.B. „trace.txt“), legen Sie als Dateiformat **SQLTrace_Log** fest.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] kann auch Protokolldateien der SQL-Ablaufverfolgung sowie allgemeine SQL-Skriptdateien lesen. Wenn Sie eine Protokolldatei der SQL-Ablaufverfolgung öffnen, die nicht die Dateierweiterung LOG aufweist (z.B. „trace.txt“), legen Sie als Dateiformat **SQLTrace_Log** fest.  
   
  Um die Ablaufverfolgungsanalyse zu erleichtern, können Sie das Anzeigeformat für Datum und Uhrzeit in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] konfigurieren.  
   
@@ -87,12 +85,12 @@ AND     CPU < (Duration * 1000)
   
  Diese Methode kann auch verwendet werden, um nach anderen gruppierten Ereignissen zu suchen. Sobald Sie die gesuchten Ereignisse gefunden haben, gruppieren Sie diese nach der Ereignisklasse **ClientProcessID**, **ApplicationName**oder einer anderen Ereignisklasse, um zugehörige Aktivitäten in chronologischer Reihenfolge anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anzeigen einer gespeicherten Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [Anzeigen von Filterinformationen &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
- [Anzeigen von Filterinformationen &#40; Transact-SQL &#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
- [Öffnen einer Ablaufverfolgungsdatei &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [Anzeigen von Filterinformationen &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [Anzeigen von Filterinformationen &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
+ [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   

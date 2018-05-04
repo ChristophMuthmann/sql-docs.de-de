@@ -1,27 +1,26 @@
 ---
-title: "Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS) | Microsoft Docs"
-ms.custom: 
+title: Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 4f7e75c9a5f31d37b32bade54dd9bd108de21e9a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -168,7 +167,7 @@ ms.lasthandoff: 02/23/2018
  
  Wenn Sie Reporting Services verwenden, variiert die Verfügbarkeit der Berichtsfunktion je nach Edition und Servermodus. Aus diesem Grund kann sich der zu erstellende Berichtstyp auf den zu installierenden Servermodus auswirken.  
   
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], ein neues Reporting Services-Erstellungstool, das in SharePoint ausgeführt wird, ist auf einem Berichtsserver verfügbar, der in einer SharePoint 2010-Farm bereitgestellt wird. Der einzige Datenquellentyp, der mit diesem Bericht verwendet werden kann, ist eine tabellarische Analysis Services-Modelldatenbank oder eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe. Dies bedeutet, dass Sie über einen Server im tabellarischen Modus oder einen [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] für SharePoint-Server verfügen müssen, damit die von diesem Berichtstyp verwendete Datenquelle gehostet wird. Sie können kein mehrdimensionales Modell als Datenquelle für einen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Bericht verwenden. Sie müssen eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] BI-Semantikmodellverbindung oder eine freigegebene Reporting Services-Datenquelle erstellen, die als Datenquelle für einen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Bericht verwendet wird.  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], ein neues Reporting Services-Erstellungstool, das in SharePoint ausgeführt wird, ist auf einem Berichtsserver verfügbar, der in einer SharePoint 2010-Farm bereitgestellt wird. Der einzige Datenquellentyp, der mit diesem Bericht verwendet werden kann, ist eine tabellarische Analysis Services-Modelldatenbank oder eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe. Dies bedeutet, dass Sie über einen Server im tabellarischen Modus oder einen [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] für SharePoint-Server verfügen müssen, damit die von diesem Berichtstyp verwendete Datenquelle gehostet wird. Sie können kein mehrdimensionales Modell als Datenquelle für einen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Bericht verwenden. Sie müssen eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] BI-Semantikmodellverbindung oder eine freigegebene Reporting Services-Datenquelle erstellen, die als Datenquelle für einen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Bericht verwendet wird.  
   
  Beliebige Analysis Services-Datenbanken können vom Berichts-Generator und Berichts-Designer verwendet werden, einschließlich [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappen, die in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] für SharePoint gehostet werden.  
   

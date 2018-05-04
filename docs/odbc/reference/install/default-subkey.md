@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default subkey [ODBC]
 - registry entries for data sources [ODBC], default subkey
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8ddd5b9a390e5e258ecf3f7d30a2ec71437add6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b0cdb5bcedc1eae7de98e6d7833b7fae17c2b22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-subkey"></a>Standard-Unterschlüssel
 Die Registrierung möglicherweise eine Standard-Datenquelle mit den Standard-Unterschlüssel angeben. Dieser Unterschlüssel ist ein Sonderfall des Data Source-Spezifikation Unterschlüssel und die gleichen Werte wie alle anderen Data Source-Spezifikation Unterschlüssel verfügt. Der einzige Unterschied ist, dass er nicht als einen Wert unter dem ODBC-Datenquellen-Unterschlüssel aufgeführt ist.

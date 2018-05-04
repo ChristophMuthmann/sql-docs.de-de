@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a158bbcdd77e4a7e1e026db793b46e306d8c6fbe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-mdx"></a>Ausdrücke (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
  Eine Skalarfunktion gibt einen einzelnen Wert im Kontext einer Auswertung in MDX zurück. Zum Verständnis, wie Skalarfunktionen von MDX ausgewertet werden, muss der Unterschied zu den anderen MDX-Ausdrücken klar sein, denn die meisten MDX-Ausdrücke, -Anweisungen und -Skripts werden nicht für ein einzelnes Datenelement, sondern iterativ für eine Gruppe von Datenelementen (z. B. Zellen oder Elemente) ausgewertet. Zu dem Zeitpunkt, zu dem eine Skalarfunktion ausgewertet wird, ermittelt die Funktion üblicherweise nur den Wert für ein einzelnes Datenelement.  
   
  Objektbezeichner  
- MDX ist wegen der Beschaffenheit der mehrdimensionalen Daten objektorientiert. Objektbezeichner werden in MDX als einfache Ausdrücke angesehen. Weitere Informationen zu Bezeichnern finden Sie unter [-IDs &#40; MDX &#41; ](../mdx/identifiers-mdx.md).  
+ MDX ist wegen der Beschaffenheit der mehrdimensionalen Daten objektorientiert. Objektbezeichner werden in MDX als einfache Ausdrücke angesehen. Weitere Informationen zu Bezeichnern finden Sie unter [Bezeichner &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
   
  Ein komplexer Ausdruck kann aus Kombinationen dieser Entitäten erstellt werden, die durch Operatoren verknüpft sind.  
   
@@ -99,8 +98,8 @@ WHERE [Product].[Category].[Bikes]
 |[Using Scalar Expressions (Verwenden von Skalarausdrücken)](../mdx/using-scalar-expressions.md)|Definiert skalare Ausdrücke.|  
 |[Working with Empty Values (Arbeiten mit leeren Werten)](../mdx/working-with-empty-values.md)|Beschreibt, was ein leerer Wert ist und wie leere Werte gehandhabt werden.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [Grundlegendes zu MDX-Abfrage &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDX-Sprachreferenz & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [Grundlegendes zu MDX-Abfrage & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

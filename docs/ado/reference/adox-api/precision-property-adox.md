@@ -26,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 790f4dafda40218e40c9fd88826838814177e72b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 73ea0021a6cb74fb7e3e98009be3566270d783e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="precision-property-adox"></a>Precision-Eigenschaft (ADOX)
 Gibt die maximale Genauigkeit von Datenwerten in den [Spalte](../../../ado/reference/adox-api/column-object-adox.md).  

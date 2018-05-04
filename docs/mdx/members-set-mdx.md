@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f600fa5163131d797c8ea0146c1a4e02e172381d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f643eeb5d864b37e9d18e82178ec1cf0eb179584
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-set-mdx"></a>Members (Menge) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,8 +51,8 @@ Level_Expression.Members
  *Level_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
-## <a name="remarks"></a>Remarks  
- Wenn ein Hierarchieausdruck angegeben wird, die **Members (Menge)** -Funktion die Menge aller Elemente innerhalb der angegebenen Hierarchie, außer von berechneten Elementen zurück. Die Menge aller Elemente, berechnete abrufen oder verwenden Sie andernfalls in einer Hierarchie die [AllMembers &#40; MDX &#41; ](../mdx/allmembers-mdx.md) Funktion  
+## <a name="remarks"></a>Hinweise  
+ Wenn ein Hierarchieausdruck angegeben wird, die **Members (Menge)** -Funktion die Menge aller Elemente innerhalb der angegebenen Hierarchie, außer von berechneten Elementen zurück. Die Menge aller Elemente, berechnete abrufen oder verwenden Sie andernfalls in einer Hierarchie die [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) Funktion  
   
  Wenn ein Ebenenausdruck angegeben wird, die **Members (Menge)** -Funktion die Menge aller Elemente innerhalb der angegebenen Ebene zurück.  
   
@@ -83,8 +82,8 @@ WHERE
    {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

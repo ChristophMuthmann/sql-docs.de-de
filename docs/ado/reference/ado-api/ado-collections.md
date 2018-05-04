@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1961879e04a022f9cb7e6c38e379de918aeb64d4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c236683b50638851e97893aab038d4c1adb0bc6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-collections"></a>ADO-Auflistungen
 Werden die Beziehungen zwischen diesen Auflistungen und ADO-Objekten dargestellt, der [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md).  

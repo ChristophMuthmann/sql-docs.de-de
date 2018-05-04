@@ -1,31 +1,23 @@
 ---
-title: "Untergeordnete SELECT-Ausdrücke in Abfragen | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Untergeordnete SELECT-Ausdrücke in Abfragen | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 66511a7fb1306f5168bb3476a58017c16e9762ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subselects-in-queries"></a>Unterauswahlen in Abfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Unterauswahlausdrücke werden SELECT-Ausdrücke geschachtelt, die verwendet werden, um das Leerzeichen des Cubes einzuschränken, von wo der äußere externe SELECT ausgewertet wird. Unterauswahlen ermöglichen es Ihnen, ein neues Leerzeichen zu definieren, über dem alle Berechnungen ausgewertet werden.  
+  Unterauswahlausdrücke werden SELECT-Ausdrücke geschachtelt, die verwendet werden, um das Leerzeichen des Cubes einzuschränken, von wo der äußere externe SELECT ausgewertet wird. Unterauswahlen ermöglichen es Ihnen, ein neues Leerzeichen zu definieren, über dem alle Berechnungen ausgewertet werden.  
   
 ## <a name="subselects-by-example"></a>Unterauswahlen zum Beispiel  
  Beginnen wir mit einem Beispiel, wie Unterauswahlen helfen können, die Ergebnisse zu erzeugen, die wir anzeigen möchten. Angenommen, Sie werden gebeten, eine Tabelle zu erzeugen, in der das Verkaufsverhalten für ein Jahr für die obersten 10 Produkte angezeigt wird.  
@@ -356,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Die HAVING-Klausel wird nicht in einer Achsenklausel zugelassen; verwenden Sie stattdessen einen [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md)-Funktionsausdruck.  
   
--   Standardmäßig sind berechnete Elemente in untergeordneten SELECT-Ausdrücken nicht zulässig; allerdings diese Einschränkung kann geändert werden, in einer sitzungsbasis durch Zuweisen eines Werts, der **Unterabfragen** Verbindungszeichenfolgeneigenschaft in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder **DBPROP_MSMD_SUBQUERIES** Eigenschaft im [ Unterstützte XMLA-Eigenschaften &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Eine genaue Erklärung des Verhaltens berechneter Elemente, abhängig von den Werten von [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) oder **DBPROP_MSMD_SUBQUERIES** , finden Sie unter **Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes**.  
+-   Standardmäßig sind berechnete Elemente in untergeordneten SELECT-Ausdrücken nicht zulässig; allerdings diese Einschränkung kann geändert werden, in einer sitzungsbasis durch Zuweisen eines Werts, der **Unterabfragen** Verbindungszeichenfolgeneigenschaft in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder **DBPROP_MSMD_SUBQUERIES** Eigenschaft im [ Unterstützt die XMLA-Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Eine genaue Erklärung des Verhaltens berechneter Elemente, abhängig von den Werten von [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) oder **DBPROP_MSMD_SUBQUERIES** , finden Sie unter **Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes**.  
   
   

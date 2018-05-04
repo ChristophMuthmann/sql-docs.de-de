@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - data buffers [ODBC], character data
@@ -27,12 +27,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef94062373af41fe662194b707dbdde1d85b438d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d8bdba6134e53a7e3913c0255fe709a8a891eeae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="character-data-and-c-strings"></a>Zeichendaten und C-Zeichenfolgen
 Eingabeparameter, die Zeichendaten mit variabler Länge (z. B. Spaltennamen, dynamische Parameter und zeichenfolgenattributwerten) verweisen, haben einen zugeordnete Length-Parameter. Wenn Sie Zeichenfolgen mit Null-Zeichen, wie in C, wird von die Anwendung beendet wird, stellt er entweder die Länge in Bytes der Zeichenfolge (nicht einschließlich der Null-Terminator) oder SQL_NTS (Null-Terminated String) als Argument bereit. Ein nicht negativer Längenargument gibt die tatsächliche Länge der Zeichenfolge zugeordnet. Der Length-Argument möglicherweise 0 an eine Zeichenfolge der Länge 0 (null), die von einer NULL-Wert unterscheidet. Der negative Wert SQL_NTS weist den Treiber auf die Länge der Zeichenfolge zu bestimmen, indem die Suche nach Null-Abschlusszeichen.  

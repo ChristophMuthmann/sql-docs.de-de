@@ -27,17 +27,16 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0494f1586f71d3dc475284e90721f2cc5fc8e502
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c080381584a2e66634ff50517a13d54f59ffc673
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt das endgültige tokenisierungsergebnis nach Anwendung einer gegebenen [wörtertrennung](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [Thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), und [Stoppliste](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) Kombination um eine eingegebene Abfragezeichenfolge. Das Tokenisierungsergebnis entspricht der Ausgabe des Volltextmoduls für die angegebene Abfragezeichenfolge.  
+  Gibt das endgültige tokenisierungsergebnis nach Anwendung einer gegebenen [wörtertrennung](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [Thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), und [Stoppliste](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) Kombination um eine eingegebene Abfragezeichenfolge. Das Tokenisierungsergebnis entspricht der Ausgabe der Volltext-Engine für die angegebene Abfragezeichenfolge.  
   
  sys.dm_fts_parser ist eine dynamische Verwaltungsfunktion.  
   

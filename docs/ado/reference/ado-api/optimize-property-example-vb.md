@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f51f4b06cc81464a90c30cfe42737cc971d23a2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: d433c5e7a7e5d67b2f4d5a1592491c0cad6f0ec5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimize-property-example-vb"></a>Optimieren Sie die Beispiel-Eigenschaft (VB)
 Dieses Beispiel zeigt die [Feld](../../../ado/reference/ado-api/field-object.md) des Objekts dynamische **optimieren** Eigenschaft. Die ***Zip*** Feld der ***Autoren*** -Tabelle in der ***Pubs*** Datenbank ist nicht indiziert. Festlegen der [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft **"true"** auf die ***Zip*** Feld autorisiert ADO zum Erstellen eines Indexes, die die Leistung verbessert die [Suchen](../../../ado/reference/ado-api/find-method-ado.md)Methode.  

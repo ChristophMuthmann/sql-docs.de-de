@@ -1,16 +1,16 @@
 ---
-title: "Filter für Miningmodelle (Analysis Services – Datamining) | Microsoft Docs"
-ms.custom: 
+title: Filter für Miningmodelle (Analysis Services – Datamining) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 27451144f102bba571cd0034ca8e002ff6096671
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen, die Teilmengen der Daten einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  
+  Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen, die Teilmengen der Daten einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  
   
  Zum Beispiel definieren Sie die Datenquellensicht für die Tabelle "Kunden" und verknüpfte Tabellen. Anschließend definieren Sie eine einzelne Miningstruktur, die alle Felder enthält, die Sie benötigen. Schließlich erstellen Sie ein Modell, das nach einem bestimmten Kundenattribut gefiltert wird, z. B. "Region". Sie können einfach eine Kopie dieses Modells erstellen und nur die Filterbedingungen ändern, um ein neues Modell auf der Grundlage einer anderen Region zu erzeugen.  
   
@@ -57,7 +56,7 @@ Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen,
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Erstellen von Modellfiltern unter Verwendung des Data Mining-Designers  
  Sie filtern ein Modell im Data Mining-Designer, indem Sie die **Filter** -Eigenschaft des Miningmodells ändern. Sie können einen Filterausdruck entweder direkt im Bereich **Eigenschaften** eingeben, oder Sie öffnen ein Filterdialogfeld, um Bedingungen zu erstellen.  
   
- Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. Mithilfe der Operatoren **AND**/**OR** können Sie mehrere Bedingungen verknüpfen. Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Zum Beispiel können Sie mit fortlaufenden Werten die Operatoren **greater than** und **less than** verwenden. Für diskrete Werte können Sie allerdings nur die Operatoren **= (gleich)**, **!= (ungleich)**und **ist NULL** verwenden.  
+ Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. Mithilfe der Operatoren **AND**/**OR** können Sie mehrere Bedingungen verknüpfen. Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Zum Beispiel können Sie mit fortlaufenden Werten die Operatoren **greater than** und **less than** verwenden. Für diskrete Werte können Sie allerdings nur die Operatoren **= (gleich)**, **!= (ungleich)** und **ist NULL** verwenden.  
   
 > [!NOTE]  
 >  Das Schlüsselwort **LIKE** wird nicht unterstützt. Wenn Sie mehrere diskrete Attribute einfügen möchten, müssen Sie einzelne Bedingungen erstellen und diese mithilfe des Operators **OR** verknüpfen.  
@@ -129,6 +128,6 @@ Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen,
   
 ## <a name="see-also"></a>Siehe auch  
  [Modellfiltersyntax und Beispiele &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Tests und Überprüfung &#40; Datamining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung & #40; Datamining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

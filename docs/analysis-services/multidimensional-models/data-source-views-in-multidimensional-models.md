@@ -1,39 +1,23 @@
 ---
 title: Datenquellensichten in mehrdimensionalen Modellen | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data source views [Analysis Services]
-- data source views [Analysis Services], about data source views
-- SQL Server Analysis Services, data source views
-- data source views [Analysis Services], multiple
-- Analysis Services, data source views
-- multiple data source views
-- SSAS, data source views
-ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6c65164c136e55ea7149427cce4c69606e6f5d75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Datenquellensichten in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Eine Datenquellensicht (DSV) ist eine Abstraktion einer relationalen Datenquelle, die die Basis für die in einem mehrdimensionalen Projekt erstellten Cubes und Dimensionen bildet. Der Zweck eines DSVs besteht darin, Ihnen die Kontrolle über die im Projekt verwendeten Datenstrukturen zu verleihen und von den zugrundeliegenden Datenquellen (z. B., die Fähigkeit, Spalten umzubenennen, ohne die ursprüngliche Datenquelle direkt zu ändern oder zu verketten) unabhängig zu arbeiten.  
+  Eine Datenquellensicht (DSV) ist eine Abstraktion einer relationalen Datenquelle, die die Basis für die in einem mehrdimensionalen Projekt erstellten Cubes und Dimensionen bildet. Der Zweck eines DSVs besteht darin, Ihnen die Kontrolle über die im Projekt verwendeten Datenstrukturen zu verleihen und von den zugrundeliegenden Datenquellen (z. B., die Fähigkeit, Spalten umzubenennen, ohne die ursprüngliche Datenquelle direkt zu ändern oder zu verketten) unabhängig zu arbeiten.  
   
  Sie können mehrere Datenquellensichten in einem Projekt oder einer Datenbank von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf der Grundlage einer oder mehrerer Datenquellen erstellen und die einzelnen Datenquellensichten so erstellen, dass sie die Anforderungen einer jeweils anderen Projektmappe erfüllen.  
   

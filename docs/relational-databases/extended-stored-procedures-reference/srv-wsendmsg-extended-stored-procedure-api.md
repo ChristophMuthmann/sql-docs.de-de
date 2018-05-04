@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae12ec3fc5c3b9977ecb48fbb966a164e54bd77c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 728d4e69531e05608db80d9ca64e435efe162f5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvwsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ msglen
 ## <a name="returns"></a>Rückgabewert  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Verwenden Sie diese Funktion, um Meldungen in Unicode zu senden. Sie ähnelt **srv_sendmsg**, jedoch handelt es sich bei der gesendeten Meldung um eine WCHAR-Zeichenfolge und nicht um eine Zeichenfolge des Typs DBCHAR. Beachten Sie, dass die Länge der Meldung in Zeichen und nicht in Byte angegeben wird und dass *msglen* niemals SRV_NULLTERM entspricht.  
   
  In folgenden Fällen gibt die Funktion FAIL zurück:  
@@ -91,7 +90,7 @@ msglen
 > [!IMPORTANT]  
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [srv_sendmsg (API für die erweiterte gespeicherte Prozedur)](../../relational-databases/extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md)  
   
   

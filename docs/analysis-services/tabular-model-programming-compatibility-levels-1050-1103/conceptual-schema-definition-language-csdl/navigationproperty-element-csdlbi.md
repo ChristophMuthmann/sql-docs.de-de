@@ -1,33 +1,32 @@
 ---
 title: NavigationProperty-Element (CSDLBI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: a36b4d3b-6a6c-489b-8a46-2e6b925b568f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b004e611448db0100186a9f6d7fa9812d3de9c15
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 385a0859a8b0f668ed5d2c93c775a3072f9e37fa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="navigationproperty-element-csdlbi"></a>NavigationProperty-Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Das NavigationProperty-Element ist ein komplexer Typ, der den CSDL-Elementtyp erweitert, um die Navigation in Business Intelligence-Datenmodellen zu unterstützen.  
+  Das NavigationProperty-Element ist ein komplexer Typ, der den CSDL-Elementtyp erweitert, um die Navigation in Business Intelligence-Datenmodellen zu unterstützen.  
   
 > [!WARNING]  
 >  Dieses Element dient der Berichterstellung und kann nicht geändert oder bearbeitet werden.  

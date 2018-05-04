@@ -22,12 +22,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: b24e57d8f682e21a6d561a4e3a426da85f5ceb17
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: be11ebe09b2aeff73264708c83d820eeaffd009e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Innerhalb des Bereichs der angegebenen Ebene der **PeriodsToDate** -Funktion die Menge der Zeiträume auf derselben Ebene wie die angegebenen Member auf, angefangen mit der ersten Periode und endend mit angegebenen Element zurück.  
   
 -   Wenn eine Ebene angegeben ist, wird das aktuelle Element der Hierarchie abgeleitet *Hierarchie*. **CurrentMember**, wobei *Hierarchie*ist die Hierarchie der angegebenen Ebene.  
@@ -98,8 +97,8 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [TopCount &#40; MDX &#41;](../mdx/topcount-mdx.md)   
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

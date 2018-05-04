@@ -25,15 +25,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5af7a359a987e15583b82a856539d6a6ba76916
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f150f4a6b3551728573bfcf6d255704f872c5e76
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mimetype-element-assl"></a>MimeType-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Den Multipurpose Internet Mail Extensions (MIME)-Typ enthält, sofern zutreffend, der die vom dargestellten Daten der [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Den Multipurpose Internet Mail Extensions (MIME)-Typ enthält, sofern zutreffend, der die vom dargestellten Daten der [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,22 +48,22 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|String|  
+|Standardwert|Keine|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Siehe auch  
- [DataItem-Datentyp &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)  
+ [DataItem-Datentyp & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)  
   
   

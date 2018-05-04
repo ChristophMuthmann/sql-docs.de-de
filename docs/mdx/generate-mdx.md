@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b352fe818402cbad25af99a4ca336704b331a4f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,9 +58,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  Ein gültiges Trennzeichen, ausgedrückt als Zeichenfolgenausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine zweite Menge angegeben wird, die **generieren** Funktion gibt einen Satz generiert, indem die Tupel in der zweiten Menge auf jedes Tupel in der ersten Menge angewendet*,* und dann wird das resultierende verknüpft Mengen durch vereinigungsmengenbildung. Wenn **alle** angegeben ist, wird die Funktion behält Duplikate in der sich ergebenden Menge.  
+ Wenn eine zweite Menge angegeben wird, die **generieren** Funktion gibt einen Satz generiert, indem die Tupel in der zweiten Menge auf jedes Tupel in der ersten Menge angewendet *,* und dann wird das resultierende verknüpft Mengen durch vereinigungsmengenbildung. Wenn **alle** angegeben ist, wird die Funktion behält Duplikate in der sich ergebenden Menge.  
   
- Wenn ein Zeichenfolgenausdruck angegeben wird, die **generieren** Funktion gibt eine Zeichenfolge, die durch das Auswerten des angegebenen Zeichenfolgenausdruck für jedes Tupel in der ersten Menge generiert*,* und dann die Ergebnisse verkettet. Optional kann die Zeichenfolge begrenzt werden, sodass die einzelnen Ergebnisse in der verketteten Ergebniszeichenfolge voneinander getrennt sind.  
+ Wenn ein Zeichenfolgenausdruck angegeben wird, die **generieren** Funktion gibt eine Zeichenfolge, die durch das Auswerten des angegebenen Zeichenfolgenausdruck für jedes Tupel in der ersten Menge generiert *,* und dann die Ergebnisse verkettet. Optional kann die Zeichenfolge begrenzt werden, sodass die einzelnen Ergebnisse in der verketteten Ergebniszeichenfolge voneinander getrennt sind.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -118,7 +117,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>Zeichenfolge  
+### <a name="string"></a>String  
  Das folgende Beispiel zeigt die Verwendung von **generieren** gibt eine Zeichenfolge zurück:  
   
 ```  
@@ -138,9 +137,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Diese Form der **generieren** Funktion ist nützlich beim Debuggen von Berechnungen, wie Sie zum Zurückgeben einer Zeichenfolge, die die Namen aller Elemente in einem Satz anzeigen können. Dies ist möglicherweise einfacher, als die strikte MDX-Darstellung einer Gruppe zu lesen, die die [SetToStr &#40; MDX &#41; ](../mdx/settostr-mdx.md) -Funktion zurückgegeben wird.  
+>  Diese Form der **generieren** Funktion ist nützlich beim Debuggen von Berechnungen, wie Sie zum Zurückgeben einer Zeichenfolge, die die Namen aller Elemente in einem Satz anzeigen können. Dies ist möglicherweise einfacher, als die strikte MDX-Darstellung einer Gruppe zu lesen, die die [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) -Funktion zurückgegeben wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

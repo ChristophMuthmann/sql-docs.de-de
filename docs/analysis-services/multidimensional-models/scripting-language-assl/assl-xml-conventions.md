@@ -1,47 +1,23 @@
 ---
 title: ASSL XML-Konventionen | Microsoft Docs
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- whitespace [Analysis Services Scripting Language]
-- trailing whitespace
-- XSD data types [Analysis Services Scripting Language]
-- inheritance [Analysis Services Scripting Language]
-- cardinality [Analysis Services Scripting Language]
-- white space [Analysis Services Scripting Language]
-- ASSL, XML conventions
-- defaults [Analysis Services Scripting Language]
-- leading whitespace
-- Analysis Services Scripting Language, XML conventions
-- XML [Analysis Services Scripting Language]
-- hierarchies [Analysis Services Scripting Language]
-- inherited defaults [Analysis Services Scripting Language]
-ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6646ffae66115e30fe3138f09fa1db2305e4682
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assl-xml-conventions"></a>XML-Konventionen in ASSL
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Die Analysis Services Scripting Language (ASSL) stellt die Hierarchie von Objekten als Satz von Elementtypen dar, die jeweils die untergeordneten Elemente definieren, die sie enthalten können.  
+  Die Analysis Services Scripting Language (ASSL) stellt die Hierarchie von Objekten als Satz von Elementtypen dar, die jeweils die untergeordneten Elemente definieren, die sie enthalten können.  
   
  Für die Darstellung der Objekthierarchie verwendet ASSL folgende XML-Konventionen:  
   

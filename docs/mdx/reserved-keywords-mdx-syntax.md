@@ -22,17 +22,16 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0fed4b46d2ed14a45073d7c25ace252c427fba3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 28b75d9b7bb728eb5794892917a3075095adde15
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Reservierte Schlüsselwörter (MDX-Syntax)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reserviert bestimmte Schlüsselwörter ausschließlich zur eigenen Verwendung. Eine Liste der reservierten Schlüsselwörter finden Sie [MDX reservierte Wörter](../mdx/mdx-reserved-words.md).  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reserviert bestimmte Schlüsselwörter ausschließlich zur eigenen Verwendung an. Eine Liste der reservierten Schlüsselwörter finden Sie [MDX reservierte Wörter](../mdx/mdx-reserved-words.md).  
   
  Für reservierte Schlüsselwörter gelten folgende Richtlinien:  
   
@@ -43,6 +42,6 @@ ms.lasthandoff: 01/08/2018
 -   Sie sollten eine Benennungskonvention verwenden, bei der die Verwendung reservierter Schlüsselwörter vermieden wird. Konsonanten oder Vokale können gelöscht werden, wenn ein Objektname wie ein reserviertes Schlüsselwort aussehen muss.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Syntaxelemente &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

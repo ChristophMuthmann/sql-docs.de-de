@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], environment handles
 - allocating environment handles [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcbfc5e9a8be2bf1fc543e9d458658a918e40b6d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 23851cae822210fd13061b5e4f5de67e0c510e89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allocating-the-environment-handle"></a>Das Umgebungshandle zuordnen
 Die erste Aufgabe für jede ODBC-Anwendung ist der Treiber-Manager zu laden. Diese Vorgehensweise ist abhängig vom Betriebssystem. Z. B. auf einem Computer unter Microsoft® Windows NT® Server-Windows 2000 Server, Windows NT Arbeitsstation/Windows 2000 Professional oder Microsoft Windows® 95-und Windows 98, die Anwendung entweder enthält links zu den Treiber-Manager-Bibliothek oder Aufrufe  **LoadLibrary** zum Laden der DLL-Treiber-Manager.  

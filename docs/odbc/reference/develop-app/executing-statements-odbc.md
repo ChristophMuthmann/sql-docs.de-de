@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ce6c6349a1089ba69f636fbe56b63a2724365c1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6815cfe6becac3f96854dcebd2a263b32266598e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-statements-odbc"></a>Ausführen von ODBC-Anweisungen
 ODBC-Anwendungen werden fast alle Datenbankzugriff durch Ausführen von SQL-Anweisungen ausführen. Die allgemeine Abfolge von Ereignissen wird ein Anweisungshandle zuordnen, Anweisungsattribute festlegt, führen Sie die Anweisung, alle Ergebnisse abrufen und das Anweisungshandle freizugeben.  

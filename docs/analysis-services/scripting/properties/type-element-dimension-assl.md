@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aac5535e8d94cdd602b139bd9046b77a15cbad5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 075ebc645c67f496d7e6946035371244dd229c88
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimension-assl"></a>Type-Element (Dimension) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält Informationen über den Inhalt der Dimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Stellt Informationen über den Inhalt der Dimension bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,33 +50,33 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|*Reguläre*|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Standardwert|*Regulär*|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
  Einige Werte für **Type**, beispielsweise *Accounts*, bestimmen spezifisches Verhalten.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
-|*Reguläre*|Die Dimension ist eine reguläre Dimension.|  
-|*Uhrzeit*|Die Dimension ist eine Zeitdimension.<br /><br /> Hinweis: Dieser Wert gibt an, dass die Dimension für Zeitdimensionen spezifische Funktionalität unterstützt.|  
+|*Regulär*|Die Dimension ist eine reguläre Dimension.|  
+|*Zeit*|Die Dimension ist eine Zeitdimension.<br /><br /> Hinweis: Dieser Wert gibt an, dass die Dimension für Zeitdimensionen spezifische Funktionalität unterstützt.|  
 |*Geography*|Die Dimension enthält geografische Attribute.|  
 |*Organisation*|Die Dimension enthält Organisationsattribute.|  
 |*BillOfMaterials*|Die Dimension enthält Stücklistenattribute.|  
 |*Konten*|Die Dimension enthält kontobezogene Attribute.<br /><br /> Hinweis: Dieser Wert gibt an, dass die Dimension für kontodimensionen spezifische Funktionalität unterstützt.|  
-|*Kunden*|Die Dimension enthält kundenbezogene Attribute.|  
+|*Customers*|Die Dimension enthält kundenbezogene Attribute.|  
 |*Produkte*|Die Dimension enthält produktbezogene Attribute.|  
 |*Szenario*|Die Dimension enthält szenariobezogene Attribute.|  
 |*Quantitative*|Die Dimension enthält quantitative Attribute.|  
@@ -91,6 +91,6 @@ ms.lasthandoff: 01/08/2018
  Das Element, das das übergeordnete Element des entspricht **Typ** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

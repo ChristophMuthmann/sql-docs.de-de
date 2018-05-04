@@ -1,31 +1,19 @@
 ---
 title: Erstellen von Analysis Services-Skripts in Management Studio | Microsoft Docs
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services objects, scripts
-- objects [Analysis Services], scripts
-- scripts [Analysis Services], objects
-ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 97a308c08d01f9fe4774acb6f82e01d7012cb50f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Erstellen von Analysis Services-Skripts in Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -73,6 +61,6 @@ ms.lasthandoff: 02/15/2018
     >  Normalerweise würden Sie **Datei** auswählen, wenn Sie mehrere verschiedene Versionen der Datei erstellen möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [XMLA-Abfrage-Editor &#40; Analysis Services – mehrdimensionale Daten &#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [XMLA-Abfrage-Editor & #40; Analysis Services – mehrdimensionale Daten & #41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

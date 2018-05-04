@@ -1,36 +1,36 @@
 ---
-title: SQL-Volltextfilterdaemon-Startprogramm (Registerkarte Dienst) | Microsoft Docs
-ms.custom: 
+title: Startprogramm für SQL-Volltextfilterdaemon (Registerkarte „Dienst“) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61c90f8579a4656ba3bc5be5e111afd2dabf7487
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: 366a60d753cb31bdc066051e9a3d84a8d8229a60
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Startprogramm für SQL-Volltextfilterdaemon (Registerkarte Dienst)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wird der FDHOST (SQL-Volltextfilterdaemon)-Startprogrammdienst vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltext verwendet. Dieser Dienst muss ausgeführt werden, wenn Sie die Volltextsuche verwenden. Informationen über die Prozesse des Filterdaemonhosts finden Sie unter „Architektur der Volltextsuche“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+  Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]wird der FDHOST (SQL-Volltextfilterdaemon)-Startprogrammdienst vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Volltext verwendet. Dieser Dienst muss ausgeführt werden, wenn Sie die Volltextsuche verwenden. Informationen über die Prozesse des Filterdaemonhosts finden Sie unter „Architektur der Volltextsuche“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
  Verwenden Sie im Startprogramm für SQL-Volltextfilterdaemon die Registerkarte **Dienst**im Dialogfeld **Eigenschaften des SQL Full-text Filter Daemon-Programmstarters** (SQL-Volltextfilterdaemon-LauncherProperties), um die folgenden Optionen anzuzeigen oder anzugeben.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Binärpfad**  
  Führt den Speicherort der Programmdateien auf, die von diesem Dienst verwendet werden.  
   
@@ -50,7 +50,7 @@ Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wird der FDHOST (SQL-Voll
  Zeigt die Prozess-ID von Windows an.  
   
  **SQL-Diensttyp**  
- Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert mehrere Dienste.  
+ Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mehrere Dienste installiert.  
   
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  

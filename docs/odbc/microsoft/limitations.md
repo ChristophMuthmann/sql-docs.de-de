@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], limitations
 - ODBC desktop database drivers [ODBC], limitations
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 65a3ea429a862c15bb9588ddf50b805062205766
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 453ee5bf7d8ce71ba0b151fd36aa446abe660fff
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="limitations"></a>Einschränkungen
 Dieser Abschnitt beschreibt die Einschränkungen von der ODBC-Datenbanktreiber der Desktop in Bezug auf den folgenden Themen:  

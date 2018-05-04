@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - sql-dma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
@@ -20,12 +20,11 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b903d62a78b420ae6a267449b81919bd9db876e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: b2b6bac60d0da180186aacf081b24b904ceb6f57
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Bewährte Methoden für die Ausführung von Data-Migrations-Assistent
 Dieser Artikel enthält die folgenden best Practice-Informationen für die Installation, Bewertungen und Migration.

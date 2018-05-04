@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5cb8065433f823c3d702447b0d75cc76d7ba16d5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5f919d8403baf412478e922c1c8e2ff9f7ec9934
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct-Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie für eine [Achse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Enthält ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie für eine [Achse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,22 +54,22 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
-|Untergeordnete Elemente|[Elemente](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)|  
+|Übergeordnete Elemente|[Achse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Untergeordnete Elemente|[Element](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)|  
   
 ## <a name="attributes"></a>Attribute  
   
-|attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |Größe|Erforderliche **Ganzzahl** Attribut. Gibt die Anzahl von Tupeln in das Kreuzprodukt, dargestellt durch die **CrossProduct** Element.|  
   
@@ -130,6 +130,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

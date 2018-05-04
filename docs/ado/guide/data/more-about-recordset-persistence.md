@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: febf4b165cef77e26ec79de08b14ce97e944526b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 11bceb2bdeeced8ddbe98e7ddc1164e216644264
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="more-about-recordset-persistence"></a>Weitere Informationen zum Recordset Persistenz
 Das ADO-Recordset-Objekt unterstützt das Speichern von einer **Recordset** Objekt in eine Datei mit der [speichern](../../../ado/reference/ado-api/save-method.md) Methode. Möglicherweise existiert die dauerhaft gespeicherte Datei auf einem lokalen Laufwerk, Server, oder als eine URL auf einem Web site. Später, kann die Datei wiederhergestellt werden, entweder mit der [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode der **Recordset** Objekt oder die [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) Methode der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt.  

@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: ''
-ms.workload: Inactive
-ms.openlocfilehash: f47d5695d2c67a0a5d20df9288854d72ad98be97
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: a322df3e5f387f45471a96f2ba4779ebd875d7a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Failoverclusterinstanzen - SQLServer on Linux
 

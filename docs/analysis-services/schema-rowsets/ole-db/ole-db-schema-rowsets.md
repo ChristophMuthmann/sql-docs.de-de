@@ -1,15 +1,15 @@
 ---
 title: OLE DB-Schemarowsets | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: 
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ca56d8c065f45b308b7c22e1ad951b8cfec8583e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB-Schemarowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Die folgenden OLE DB-Schemarowsets werden vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis-Anbieter (XMLA) unterstützt. Verwenden der **DISCOVER_ENUMERATORS** Rowset mit der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) -Methode überprüft, ob ein bestimmter Datenquellenanbieter ein Rowset unterstützt.  
+  Die folgenden OLE DB-Schemarowsets werden vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis-Anbieter (XMLA) unterstützt. Verwenden der **DISCOVER_ENUMERATORS** Rowset mit der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) -Methode überprüft, ob ein bestimmter Datenquellenanbieter ein Rowset unterstützt.  
   
  Weitere Informationen über diese Rowsets finden Sie im Thema "Schema Rowsets" im Abschnitt "OLE DB Programmer's Reference" der MSDN® Library auf der [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Website.  
   

@@ -23,12 +23,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea27e9718ca2fd2814e950e0242625e8c78bb72d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6b3e1c64a384fbf536eb0b3b80c030fb18549d6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-records-in-xml-format"></a>Beibehalten von Datensätzen im XML-Format
 Wie beim ADTG **Recordset** Persistenz im XML-Format ist mit der Microsoft OLE DB-Anbieter für Persistenz implementiert. Dieser Anbieter generiert einen Vorwärtscursor, schreibgeschützte Rowset aus einer gespeicherten XML-Datei oder einem Stream, die die Schemainformationen von ADO generierten enthält. Auf ähnliche Weise kann es dauern, eine ADO **Recordset**, Generieren von XML, und speichern Sie sie in einer Datei oder jedes Objekt, das die COM implementiert **IStream** Schnittstelle. (Eine Datei ist sogar noch ein weiteres Beispiel für ein Objekt, das unterstützt **IStream**.) Für Version 2.5 und höher, ADO basiert auf Microsoft XML Parser (MSXML) beim Laden der XML-Daten in der **Recordset**; daher msxml.dll ist erforderlich.  

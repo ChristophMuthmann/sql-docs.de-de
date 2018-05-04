@@ -24,12 +24,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3b29411e3f1fff9213bdc9bbdfb61c06c78c3e0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4c7504f93093291e2a8863367a5f05b18d9214ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datecreated-property-adox"></a>DateCreated-Eigenschaft (ADOX)
 Gibt das Datum, an das Objekt erstellt wurde.  

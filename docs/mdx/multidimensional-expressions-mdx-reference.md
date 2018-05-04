@@ -26,12 +26,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: f0391b6ddf2e87a8170e4271ab2082b424baff34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: de53db87ba350d839b68bab46ae28c0613e478a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Multidimensional Expressions (MDX) - Referenz
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,12 +40,12 @@ ms.lasthandoff: 01/08/2018
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[MDX-Syntaxelemente &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)|Beschreibt die verschiedenen Syntaxelemente, die in der MDX-Sprache für MDX-Ausdrücke, -Anweisungen und -Skripts verfügbar sind.|  
-|[MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)|Beschreibt die Anweisungen, Operatoren und Funktionen, die die MDX-Sprache definieren.|  
+|[MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|Beschreibt die verschiedenen Syntaxelemente, die in der MDX-Sprache für MDX-Ausdrücke, -Anweisungen und -Skripts verfügbar sind.|  
+|[MDX-Sprachreferenz & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)|Beschreibt die Anweisungen, Operatoren und Funktionen, die die MDX-Sprache definieren.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abfragen von mehrdimensionalen Daten mit MDX](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
- [Analysis Services Scripting Language &#40; ASSL XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Analysis Services Scripting Language &#40;ASSL XMLA&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Abrufen von Daten aus einer analytischen Datenquelle](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [Definieren von Zuweisungen und anderen Skriptbefehlen](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   

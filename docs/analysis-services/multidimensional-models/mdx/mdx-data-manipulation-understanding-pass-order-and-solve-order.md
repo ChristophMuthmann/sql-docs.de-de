@@ -1,39 +1,23 @@
 ---
-title: "Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- evaluation order [MDX]
-- calculation order [MDX]
-- SOLVE_ORDER property
-- queries [MDX], solve orders
-- solve orders [MDX]
-- pass orders [MDX]
-- expressions [MDX], solve orders
-ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 522c76ebc4f76e382f12490872e2e8ba54e5fe94
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX - Datenmanipulation: Grundlegendes zur Übergabe bestellen und Lösungsreihenfolge
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
+  Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
   
  Auf einen Berechnungsdurchlauf kann durch eine Ordnungsposition verwiesen werden, die Berechnungsdurchlaufnummer genannt wird. Die Anzahl an Berechnungsdurchläufen, die für eine vollständige Berechnung aller Zellen eines Cubes erforderlich sind, wird als Berechnungsdurchlauftiefe des Cubes bezeichnet.  
   
@@ -220,9 +204,9 @@ FROM [Adventure Works]
  Die Lösungsreihenfolge kann ein sehr komplexes Problem darstellen, besonders in Cubes mit einer hohen Anzahl von Dimensionen, die berechnete Elemente, benutzerdefinierte Rollupformeln oder berechnete Zellen beinhalten. Wenn [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] eine MDX-Abfrage auswertet, berücksichtigt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die Werte der Lösungsreihenfolge für alle Teile in einem bestimmten Durchlauf, einschließlich der Dimensionen des in der MDX-Abfrage angegebenen Cubes.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CalculationCurrentPass &#40; MDX &#41;](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue &#40; MDX &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [Erstellen Sie MEMBER-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Bearbeiten von Daten &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass & #40; MDX & #41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue & #40; MDX & #41;](../../../mdx/calculationpassvalue-mdx.md)   
+ [Erstellen Sie MEMBER-Anweisung & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Bearbeiten von Daten & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

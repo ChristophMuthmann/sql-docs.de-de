@@ -1,31 +1,23 @@
 ---
 title: Erstellen eine OLAP-Miningstruktur | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9b5ad8add984db3c83cfc6b3af99f430035f56d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>Erstellen einer OLAP-Miningstruktur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die Erstellung eines Data Mining-Modells auf Grundlage eines OLAP-Cubes oder eines anderen mehrdimensionalen Datenspeichers bietet zahlreiche Vorteile. Eine OLAP-Lösung enthält bereits umfangreiche Datenmengen, die gut organisiert, bereinigt und ordnungsgemäß formatiert sind. Die Komplexität der Daten ist jedoch so hoch, dass Benutzer wahrscheinlich kaum sinnvolle Muster mittels Ad-hoc-Untersuchungen erkennen können. Data Mining bietet die Möglichkeit, neue Korrelationen zu ermitteln und wertvolle Einblicke bereitzustellen.  
+  Die Erstellung eines Data Mining-Modells auf Grundlage eines OLAP-Cubes oder eines anderen mehrdimensionalen Datenspeichers bietet zahlreiche Vorteile. Eine OLAP-Lösung enthält bereits umfangreiche Datenmengen, die gut organisiert, bereinigt und ordnungsgemäß formatiert sind. Die Komplexität der Daten ist jedoch so hoch, dass Benutzer wahrscheinlich kaum sinnvolle Muster mittels Ad-hoc-Untersuchungen erkennen können. Data Mining bietet die Möglichkeit, neue Korrelationen zu ermitteln und wertvolle Einblicke bereitzustellen.  
   
  In diesem Thema wird beschrieben, wie Sie eine OLAP-Miningstruktur auf Grundlage einer Dimension und verwandter Measures in einer vorhandenen mehrdimensionalen Lösung erstellen.  
   
@@ -44,7 +36,7 @@ Die Erstellung eines Data Mining-Modells auf Grundlage eines OLAP-Cubes oder ein
 ##  <a name="bkmk_Reqs"></a> Anforderungen für OLAP-Miningstrukturen und -Miningmodelle  
  Wenn Sie ein OLAP-Miningmodell entwerfen, ist die Datenquelle bereits in der Datenbank vorhanden, die zum Erstellen des Cubes verwendet wurde. Sie können keine Verbindung mit einem Remotecube herstellen und Data Mining-Objekte erstellen. Die Cubeobjekte müssen innerhalb der gleichen Lösung wie die Datenbank und die Miningstruktur verfügbar sein, die Sie erstellen.  
   
- Wenn Sie die ursprünglichen Projektdateien nicht haben oder diese nicht ändern möchte, können Sie die Option **Von Server importieren (mehrdimensional und Data Mining)**Visual Studio verwenden, um eine Kopie der Metadaten- und Lösungsobjekte abzurufen. Sie können dann das Bereitstellungsziel ändern, die Datenquellen bearbeiten und mit den Cubeobjekten arbeiten, ohne dass sich dies auf die vorhandenen Objekte auswirkt.  
+ Wenn Sie die ursprünglichen Projektdateien nicht haben oder diese nicht ändern möchte, können Sie die Option **Von Server importieren (mehrdimensional und Data Mining)** Visual Studio verwenden, um eine Kopie der Metadaten- und Lösungsobjekte abzurufen. Sie können dann das Bereitstellungsziel ändern, die Datenquellen bearbeiten und mit den Cubeobjekten arbeiten, ohne dass sich dies auf die vorhandenen Objekte auswirkt.  
   
  Weitere Informationen finden Sie unter [Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
@@ -117,8 +109,8 @@ Die Erstellung eines Data Mining-Modells auf Grundlage eines OLAP-Cubes oder ein
 |----------|---------------------|---------------|  
 |Gruppieren Sie Elemente in Clustern|Segmentieren Sie eine Kundendimension auf Basis der Kundenelementeigenschaften, der Produkte, die die Kunden kaufen, und des Geldbetrags, den die Kunden ausgeben.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus|  
 |Finden Sie interessante oder ungewöhnliche Elemente|Identifizieren Sie interessante oder ungewöhnliche Läden in einer Speicherdimension, basierend auf Nettoumsatz, Gewinn, Ort und Größe des Ladens.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus|  
-|Finden Sie interessante oder ungewöhnliche Zellen|Identifizieren Sie Umsätze in Läden, die nicht den allgemeinen Trends im Verlauf der Zeit entsprechen.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus|  
-|Suchen von Korrelationen|Identifizieren Sie Faktoren im Zusammenhang mit Serverausfallzeiten, einschließlich Bereich, Computertyp, Betriebssystem oder Kaufdatum.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus|  
+|Finden Sie interessante oder ungewöhnliche Zellen|Identifizieren Sie Umsätze in Läden, die nicht den allgemeinen Trends im Verlauf der Zeit entsprechen.|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Time Series-Algorithmus|  
+|Suchen von Korrelationen|Identifizieren Sie Faktoren im Zusammenhang mit Serverausfallzeiten, einschließlich Bereich, Computertyp, Betriebssystem oder Kaufdatum.|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Naive Bayes-Algorithmus|  
   
 ##  <a name="bkmk_Filters"></a>Aufteilen eines Cubes Vs an. Filtern von Modellen  
  Das Aufteilen des Cubes in Slices, während Sie ein Modell erstellen, entspricht dem Erstellen eines Filters für ein relationales Miningmodell. In einem relationalen Modell wird der Filter für die Datenquelle als WHERE-Klausel in einer SQL-Anweisung definiert. In einem Cube verwenden Sie den Editor, um Filteranweisungen mit MDX zu erstellen.  
@@ -166,7 +158,7 @@ Die Erstellung eines Data Mining-Modells auf Grundlage eines OLAP-Cubes oder ein
 >  Die Erstellung von Data Mining-Dimensionen wird nur von den folgenden Modelltypen unterstützt: Modelle auf Grundlage des Microsoft Clustering-Algorithmus, des Microsoft Decision Trees-Algorithmus oder des Microsoft Associations-Algorithmus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)   
  [Miningmodelleigenschaften](../../analysis-services/data-mining/mining-model-properties.md)   

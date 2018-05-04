@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - set ANSI [ODBC]
 - troubleshooting Visual FoxPro ODBC driver [ODBC]
@@ -26,12 +26,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95a7ca8185fba077966caba1715b2359f73c4336
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dd8f7c5a071d13b71a1c61ce6f7b328174cb2a8a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Problembehandlung (Visual FoxPro-ODBC-Treiber)
 In den folgenden Abschnitten wird erläutert, wie auf die Leistung verbessern und Lösung von Problemen, die bei der Verwendung der Visual FoxPro-ODBC-Treiber auftreten können.  

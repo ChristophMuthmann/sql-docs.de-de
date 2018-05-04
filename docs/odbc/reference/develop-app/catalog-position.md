@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], catalog position
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8691e7a8f8e9f015f6c468f3deeb06973d017ab3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e68869d46c9b4470f3eb89500c36af5bfbc5de19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-position"></a>Katalogposition
 Die Position des einen Katalognamen in einen Bezeichner und wie sie vom Rest des Bezeichners getrennt ist, aus der Datenquelle mit Datenquelle variiert. Z. B. in einer Datenquelle Xbase der Name des Katalogs ist ein Verzeichnis und, in Microsoft® Windows® wird getrennt von den Tabellennamen (also einen Dateinamen) durch einen umgekehrten Schrägstrich (\\). Die folgende Abbildung veranschaulicht diese Bedingung.  

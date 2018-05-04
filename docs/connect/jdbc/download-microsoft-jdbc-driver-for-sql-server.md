@@ -11,22 +11,19 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 23a5f6d9989e50f96e69ea2ceb62e63bf558b509
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 48b9885befc2282d0771b13035d24898b5dbcd99
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Herunterladen von Microsoft JDBC Driver for SQLServer
-
-[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>Verwenden den JDBC-Treiber mit Maven Central
 Der JDBC-Treiber können zu einem Maven-Projekt hinzugefügt werden, indem Sie ihn als Abhängigkeit in der Datei POM.xml durch den folgenden Code hinzufügen:

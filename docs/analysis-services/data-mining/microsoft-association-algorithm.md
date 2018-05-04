@@ -1,16 +1,16 @@
 ---
 title: Microsoft Association-Algorithmus | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
 - itemsets [Analysis Services]
@@ -32,20 +32,19 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 
+caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9bd5e517f1d914d925f94d74dc806a9513d81b2f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein Algorithmus, der häufig für Recommendation Engines verwendet wird. Eine Recommendation Engine empfiehlt Kunden Artikel auf der Basis von Produkten, die diese Kunden bereits gekauft oder an denen sie Interesse gezeigt haben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist auch ein nützliches Market Basket Analysis-Instrument.   
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein Algorithmus, der häufig für Recommendation Engines verwendet wird. Eine Recommendation Engine empfiehlt Kunden Artikel auf der Basis von Produkten, die diese Kunden bereits gekauft oder an denen sie Interesse gezeigt haben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist auch ein nützliches Market Basket Analysis-Instrument.   
   
  Association-Modelle basieren auf Datasets, die Bezeichner enthalten, die sich sowohl auf einzelne Fälle als auch auf die Elemente beziehen, die in dem Fall enthalten sind. Eine Gruppe von Elementen in einem Fall wird als *Itemset*bezeichnet. Ein Association-Modell besteht aus einer Reihe von Itemsets und Regeln, die beschreiben, wie diese Elemente in den Fällen gruppiert sind. Mit den Regeln, die der Algorithmus identifiziert, lassen sich wahrscheinliche Kaufentscheidungen von Kunden vorhersagen. Grundlage für diese Prognose sind die Artikel, die sich bereits im Einkaufswagen des Kunden befinden. Die folgende Abbildung zeigt eine Reihe von Regeln in einem Itemset.  
   
@@ -104,9 +103,9 @@ Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus 
 -   Unterstützt die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Miningmodellinhalt von Zuordnungsmodellen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Miningmodellinhalt von Zuordnungsmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Technische Referenz für die Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)  
   

@@ -9,16 +9,15 @@ ms.suite: sql
 ms.custom: ''
 ms.technology:
 - drivers
-ms.topic: article
+ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.workload: Inactive
-ms.openlocfilehash: 4ab3f815063a537b25b776b6b98fd26e74b7d2c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c9a28604fb55c81c4fcca0df542110d6347f3ee5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux und MacOS Installation-Lernprogramm für Microsoft Drivers for PHP for SQL Server
 Die folgenden Anweisungen gehen davon aus einer Umgebung im Grundzustand und zum Installieren von PHP 7.x, Microsoft ODBC Driver Apache und Microsoft Drivers for PHP für SQL Server auf Ubuntu 16.04 und 17.10, RedHat 7, Debian 8 und 9, Suse 12 und MacOS X 10.11 und 10.12 anzeigen. Diese Anweisungen erläutern die Verwendung von PECL Treiber installieren, aber Sie können auch die vorgefertigten Binärdateien aus Herunterladen der [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github Projektseite und installieren Sie sie entsprechend den Anweisungen im [ Laden die Microsoft-Treiber für PHP für SQLServer](../../connect/php/loading-the-php-sql-driver.md). Eine Erläuterung der Erweiterung laden und warum wir keine die Erweiterungen "PHP.ini" hinzugefügt werden, finden Sie im Abschnitt auf [laden die Treiber](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).

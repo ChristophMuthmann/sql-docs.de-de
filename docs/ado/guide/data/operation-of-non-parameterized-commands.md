@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3d09a577f464c5fd2e9725fcc3d475ca0360b2bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 28c8b5f4878f204f2de36568bfcd7d4c7d939ab8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Von nicht parametrisierten Befehlen
 Für nicht parametrisierte Befehle werden alle Anbieterbefehle ausgeführt und die **Recordsets** werden während der Ausführung des Befehls erstellt. Wenn der Befehl synchron ausgeführt wird alle der **Recordsets** vollständig aufgefüllt. Wenn ein asynchrone Auffüllungsmodus ausgewählt wurde, den Auffüllungsstatus der der **Recordsets** hängt von der Auffüllungsmodus und die Größe des der **Recordsets**.  

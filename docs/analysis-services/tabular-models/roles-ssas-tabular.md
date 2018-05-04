@@ -1,31 +1,30 @@
 ---
 title: Rollen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: c23948ae3a3326a6d8139b7e9556164108b9e1d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles"></a>Rollen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Rollenmitglieder können die durch die Rollenberechtigung definierten Aktionen für das Modell ausführen. Rollen, die mit Leseberechtigungen definiert wurden, können zusätzliche Sicherheit auf Zeilenebene bieten, indem Filter auf Zeilenebene verwendet werden. 
+  Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Rollenmitglieder können die durch die Rollenberechtigung definierten Aktionen für das Modell ausführen. Rollen, die mit Leseberechtigungen definiert wurden, können zusätzliche Sicherheit auf Zeilenebene bieten, indem Filter auf Zeilenebene verwendet werden. 
   
  Für SQL Server Analysis Services enthalten Rollen Benutzer Mitglieder von Windows-Benutzernamen oder Windows-Gruppen und Berechtigungen ("Lesen", "Prozess", "Administrator"). Für Azure Analysis Services müssen Benutzer in Ihrem Azure Active Directory und einen Benutzernamen und angegebene Gruppen Organisations-e Mailadresse oder den Benutzerprinzipalnamen werden. 
   
@@ -79,7 +78,7 @@ Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Mode
   
  Im Endeffekt ergeben diese Berechtigungen für die Transactions-Tabelle, dass Mitglieder berechtigt sind, Datenzeilen für Kunden in den USA, die Produktkategorie Bicycles und das Jahr 2008 abzufragen. Benutzer wären nicht in der Lage, Transaktionen außerhalb der USA, Transaktionen, die keine Fahrräder beinhalten, oder Transaktionen in einem anderen Jahr als 2008 abzufragen, es sei denn, sie sind Mitglied einer anderen Rolle, die diese Berechtigungen gewährt.  
   
- Sie können Zugriff auf alle Zeilen für eine ganze Tabelle mithilfe des Filters *=FALSE()*verweigern.  
+ Sie können Zugriff auf alle Zeilen für eine ganze Tabelle mithilfe des Filters *=FALSE()* verweigern.  
   
 ### <a name="dynamic-security"></a>Dynamische Sicherheit  
  Dynamische Sicherheit bietet eine Möglichkeit, Zeilenebenensicherheit basierend auf dem Benutzernamen des aktuell angemeldeten Benutzers oder anhand der CustomData-Eigenschaft zu definieren, die von einer Verbindungszeichenfolge zurückgegeben wurde. Um dynamische Sicherheit zu implementieren, müssen Sie eine Tabelle mit Anmeldewerten (Windows-Benutzername) für Benutzer in das Modell einschließen. Ebenfalls erforderlich ist ein Feld, das verwendet werden kann, um eine bestimmte Berechtigung zu definieren; z. B., eine Tabelle "dimEmployees" mit einer Anmelde-ID (domäne\benutzername) sowie einem Abteilungswert für jeden Mitarbeiter.  

@@ -1,15 +1,15 @@
 ---
 title: XML for Analysis-Schemarowsets | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0bc51b8f70f768cab5415c60023411c6b744ce6a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA-Anbieter (XML for Analysis) schließt Schemarowsets ein, die Metadaten zu Serverstatus, Aktivität und Objekten zurückgeben. Es ist nötig, Metadaten abzurufen, wenn Sie eine Clientanwendung entwickeln, die eine Verbindung mit einem Analysis Services-Modell herstellt, dessen Struktur und Eigenschaften variabel sind.  
+  Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA-Anbieter (XML for Analysis) schließt Schemarowsets ein, die Metadaten zu Serverstatus, Aktivität und Objekten zurückgeben. Es ist nötig, Metadaten abzurufen, wenn Sie eine Clientanwendung entwickeln, die eine Verbindung mit einem Analysis Services-Modell herstellt, dessen Struktur und Eigenschaften variabel sind.  
   
  Schemarowsets gewähren auch Einblicke in interne Prozesse und Vorgänge, die Ihnen helfen können, den Server zu überwachen und Probleme zu beheben. Sie können für die meisten Schemarowsets eine DMV-Abfrage (Dynamic Management View, dynamische Verwaltungssicht) ausführen, um administrative Ad-hoc-Aufgaben besser zu unterstützen. DMV-Abfragen geben Ergebnisse in einem lesbaren, tabellarischen Format zurück, das Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] anzeigen können.  
   
@@ -52,7 +51,7 @@ Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA-Anbieter (XML fo
 |[DISCOVER_DIMENSION_STAT-Rowset](../../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|Gibt Statistiken zur angegebenen Dimension zurück.|  
 |[DISCOVER_ENUMERATORS-Rowset](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|Gibt eine Liste mit Namen, Datentypen und Enumerationswerten von Enumeratoren zurück, die vom XMLA-Anbieter für eine bestimmte Datenquelle unterstützt werden.|  
 |[DISCOVER_JOBS-Rowset](../../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|Stellt Informationen über die aktiven Aufträge bereit, die auf dem Server ausgeführt werden.|  
-|[DISCOVER_KEYWORDS-Rowset &#40; XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Gibt Informationen über vom XMLA-Anbieter reservierte Schlüsselwörter zurück.|  
+|[DISCOVER_KEYWORDS-Rowset & #40; XMLA & #41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Gibt Informationen über vom XMLA-Anbieter reservierte Schlüsselwörter zurück.|  
 |[DISCOVER_LITERALS-Rowset](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|Gibt Informationen zu Literalen zurück, einschließlich Datentypen und Werten, die vom XMLA-Anbieter unterstützt werden.|  
 |[DISCOVER_LOCATIONS-Rowset](../../../analysis-services/schema-rowsets/xml/discover-locations-rowset.md)|Gibt Informationen zum Inhalt einer Sicherungsdatei zurück.|  
 |[DISCOVER_LOCKS-Rowset](../../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|Stellt Informationen über die aktuellen Sperren auf dem Server bereit.|  
@@ -80,7 +79,7 @@ Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA-Anbieter (XML fo
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln mit XMLA in Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Verwenden Sie dynamische Verwaltungssichten &#40; DMVs &#41; zum Überwachen von Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [Verwenden von dynamischen Verwaltungssichten &#40;DMVs&#41; zum Überwachen von Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [Abrufen von Metadaten aus einer analytischen Datenquelle](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

@@ -1,15 +1,15 @@
 ---
 title: Analysis Services Scripting Language-XML-Daten Typhierarchie (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - Analysis Services Scripting Language XML Data Type Hierarchy
@@ -25,20 +25,19 @@ helpviewer_keywords:
 - inheritance [Analysis Services Scripting Language]
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: f143c9f8-225d-495d-ac8e-ac2d2a7b4c07
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0ea49ba2092ac91481615403456dfb33268e2ee6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: edbd20a2d54b17dde0fa2400032410e9907cb534
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-scripting-language-xml-data-type-hierarchy-assl"></a>Analysis Services Scripting Language-XML-Datentypenhierarchie (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In der folgenden Tabelle wird die Vererbungshierarchie von Datentypen in Analysis Services Scripting Language (ASSL) angezeigt.  
+  In der folgenden Tabelle wird die Vererbungshierarchie von Datentypen in Analysis Services Scripting Language (ASSL) angezeigt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -121,8 +120,8 @@ TableMiningStructureColumn
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)   
- [Analysis Services Scripting Language-XML-Element-Hierarchie &#40; ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
- [Analysis Services Scripting Language &#40; ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language-XML-Datentypen & #40; ASSL & #41;](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)   
+ [Analysis Services Scripting Language-XML-Element-Hierarchie & #40; ASSL & #41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
+ [Analysis Services Scripting Language &#40;ASSL XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

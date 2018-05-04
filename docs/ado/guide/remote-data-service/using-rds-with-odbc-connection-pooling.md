@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25baa1ee860ac1f36cdf2f6e1e7541d970976594
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e304952f12102d415a9ba4722b10b654058693aa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Verwenden von RDS mit ODBC-Verbindungs-Pooling
 Wenn Sie eine ODBC-Datenquelle verwenden, können Sie das Verbindungspooling-Option in Internet Information Services (IIS), hohe Leistung Behandlung der Clientbelastung erreicht. Verbindungspooling ist eine Ressourcen-Manager für Verbindungen, verwalten den geöffneten Zustand bei häufig verwendeten Verbindungen.  

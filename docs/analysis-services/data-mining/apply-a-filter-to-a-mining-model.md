@@ -1,36 +1,23 @@
 ---
 title: Anwenden eines Filters auf ein Miningmodell | Microsoft Docs
-ms.custom: 
-ms.date: 03/19/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- model filter [data mining]
-- filters [data mining]
-- filtering input rows [Analysis Services]
-- filtering data [Analysis Services]
-ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 57fedca20966d9ad7520b51ee850738e1e51b0e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a0becff140d0630b85f66345b9f7ac8a7db2730d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Anwenden eines Filters auf ein Miningmodell
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Wenn Ihre Miningstruktur eine geschachtelte Tabelle enthält, können Sie einen Filter auf die Falltabelle und/oder die geschachtelte Tabelle anwenden.  
+  Wenn Ihre Miningstruktur eine geschachtelte Tabelle enthält, können Sie einen Filter auf die Falltabelle und/oder die geschachtelte Tabelle anwenden.  
   
  Die folgende Vorgehensweise veranschaulicht das Erstellen beider Filterarten: Fallfilter und Filter in den Zeilen der geschachtelten Tabelle.  
   
@@ -113,7 +100,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Klicken Sie auf **Wert** , und geben Sie einen Wert ein.  
   
-     Wählen Sie z. B. für **Miningstrukturspalte** **Model**aus. Wählen Sie für **Operator** **<>**aus, und geben Sie den Wert **Water Bottle**ein. Diese Bedingung erstellt den folgenden Filterausdruck:  
+     Wählen Sie z. B. für **Miningstrukturspalte** **Model**aus. Wählen Sie für **Operator** **<>** aus, und geben Sie den Wert **Water Bottle**ein. Diese Bedingung erstellt den folgenden Filterausdruck:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -132,7 +119,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Wenn Sie einen Teil eines Filterausdrucks manuell ändern, wird das Raster deaktiviert. Anschließend müssen Sie mit dem Filterausdruck im Textbearbeitungsmodus arbeiten. Um den Rasterbearbeitungsmodus wiederherzustellen, müssen Sie den Filterausdruck löschen und von Neuem beginnen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Filter für Miningmodelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Filter für Miningmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [Miningmodelltasks und Anweisungen Mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Löschen eines Filters aus einem Miningmodell](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

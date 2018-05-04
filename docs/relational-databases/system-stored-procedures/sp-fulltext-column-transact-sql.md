@@ -24,13 +24,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f50c57b18d249b7f9e988b55e68338ba558aa6b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e5b40c23fb1e5ca20b97431c3f99e45603fe32ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 ## <a name="arguments"></a>Argumente  
  [  **@tabname=** ] **"***Qualified_table_name***"**  
- Ein ein- oder zweiteiliger Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. Die Tabelle muss über einen Volltextindex verfügen. *qualified_table_name* ist vom Datentyp **nvarchar(517)**und hat keinen Standardwert.  
+ Ein ein- oder zweiteiliger Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. Die Tabelle muss über einen Volltextindex verfügen. *qualified_table_name* ist vom Datentyp **nvarchar(517)** und hat keinen Standardwert.  
   
  [  **@colname=** ] **"***Column_name***"**  
  Der Name einer Spalte in *qualified_table_name*. Die Spalte muss eine Zeichen-, eine **varbinary(max)** - oder eine **image** -Spalte sein und darf keine berechnete Spalte sein. *column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
@@ -64,7 +63,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Volltextindizes von Textdaten, die in Spalten vom gespeicherten erstellen **varbinary(max)** oder **Image** -Datentyp. Bilder und Abbildungen werden nicht indiziert.  
   
  [  **@action=** ] **"***Aktion***"**  
- Die Aktion, die ausgeführt werden soll. *action* ist vom Datentyp **varchar(20)**und hat keinen Standardwert. Die folgenden Werte sind möglich:  
+ Die Aktion, die ausgeführt werden soll. *action* ist vom Datentyp **varchar(20)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
 |Wert|Description|  
 |-----------|-----------------|  

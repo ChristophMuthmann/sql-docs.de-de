@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b989e45c8a3779108316358d34df472103a71676
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b5d5be9318a701b23dc0f6ceb67b9056c2455c7d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="index-command"></a>Befehl "INDEX"
 Erstellt eine Indexdatei zum Anzeigen und Zugreifen auf Tabellendatensätze in einer logischen Reihenfolge.  

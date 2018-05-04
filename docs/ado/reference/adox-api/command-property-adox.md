@@ -23,12 +23,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 573a8c9c47f6baf82bc832f5daa1b8dfb40d719d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2179177c49c327a7d6d655dfedcb872b0a786f7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-property-adox"></a>Command-Eigenschaft (ADOX)
 Gibt eine ADO [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, das zum Erstellen oder Ausführen der Prozedur verwendet werden kann.  

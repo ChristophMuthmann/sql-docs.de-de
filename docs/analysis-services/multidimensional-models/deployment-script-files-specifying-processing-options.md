@@ -1,33 +1,19 @@
 ---
 title: Angeben von Verarbeitungsoptionen | Microsoft Docs
-ms.custom: ''
-ms.date: 03/27/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services deployments, processing options
-- input files [Analysis Services]
-- deploying [Analysis Services], processing options
-- modifying processing options
-- Analysis Services Deployment Wizard, processing options
-ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
-caps.latest.revision: ''
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea99b1af6a5c99e4416c84ef0f2253a457b5322c
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: c503ec80be73a144951b6d78fe76a8bcfdc42501
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>Bereitstellung Skriptdateien - angeben von Verarbeitungsoptionen
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

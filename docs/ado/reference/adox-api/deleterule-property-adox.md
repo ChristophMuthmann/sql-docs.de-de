@@ -26,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2b7fac1dae6f96531c4eee52815ee79d96e90af5
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: bb7ae277024f29a6e6f568dcf1ac504a68beca69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule-Eigenschaft (ADOX)
 Gibt an, die Aktion ausgeführt, wenn ein Primärschlüssel gelöscht wird.  

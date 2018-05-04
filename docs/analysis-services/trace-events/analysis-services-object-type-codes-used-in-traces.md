@@ -1,31 +1,30 @@
 ---
 title: Analysis Services-Objekttypcodes in ablaufverfolgungen verwendete | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 78a0ca43a89f728a9db0f7adfcf1e3c7de139d10
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>In Ablaufverfolgungen verwendete Analysis Services-Objekttypcodes
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Diese Seite enthält den Objekttyp (eine Zahl mit sechs Ziffern) der einzelnen Objekte in einem Analysis Services-Datenmodell. Diese Codes werden in Ablaufverfolgungsprotokollen angezeigt und dienen der Identifizierung des Objekttyps, dem eine bestimmte Sperre zugeordnet ist. Angenommen, ein Sperrtimeout in einer Datenbank zeigt den Objekttyp 100002 an, der der Datenbank-Objekttyp ist.  
+  Diese Seite enthält den Objekttyp (eine Zahl mit sechs Ziffern) der einzelnen Objekte in einem Analysis Services-Datenmodell. Diese Codes werden in Ablaufverfolgungsprotokollen angezeigt und dienen der Identifizierung des Objekttyps, dem eine bestimmte Sperre zugeordnet ist. Angenommen, ein Sperrtimeout in einer Datenbank zeigt den Objekttyp 100002 an, der der Datenbank-Objekttyp ist.  
   
 > [!NOTE]  
 >  Unten werden weitere Codes aufgeführt. Im Ablaufverfolgungsprotokoll werden tatsächlich weniger Codes angezeigt. Die folgende umfassende Liste beinhaltet Codetypen für jedes Objekt. Allerdings stellen nur solche Objekte, die eine Sperre annehmen, einen Objekttypcode in einem Ablaufverfolgungsprotokoll dar.  

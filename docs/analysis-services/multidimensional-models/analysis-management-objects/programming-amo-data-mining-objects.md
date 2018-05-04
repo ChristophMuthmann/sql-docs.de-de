@@ -1,34 +1,19 @@
 ---
 title: Programmieren von AMO, Datamining-Objekte | Microsoft Docs
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- data mining [AMO]
-- AMO, data mining
-- Analysis Management Objects, data mining
-ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9ba64d48fe93ea047210c00717d84cde0e4dcae9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmieren von AMO-Data Mining-Objekten
   Das Programmieren von Data Mining-Objekten mithilfe von AMO ist unkompliziert und einfach. Der erste Schritt ist, das Datenstrukturmodell zu erstellen, um das Miningprojekt zu unterstützen. Anschließend erstellen Sie das Data Mining-Modell, das den Miningalgorithmus unterstützt, den Sie für die Vorhersage oder für die Ermittlung der Ihren Daten zugrundeliegenden unsichtbaren Beziehungen verwenden möchten. Nachdem Sie Ihr Miningprojekt erstellt haben (einschließlich Struktur und Algorithmus), können Sie die Miningmodelle verarbeiten, um die trainierten Modelle abzurufen, die Sie später verwenden, wenn Sie Abfragen und Vorhersagen über die Clientanwendung ausführen.  
@@ -41,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [MiningModel-Objekte](#MiningModel)  
   
-##  <a name="MiningStructure">MiningStructure-Objekte</a>  
+##  <a name="MiningStructure"></a> MiningStructure-Objekte  
  Eine Miningstruktur ist die Definition der Datenstruktur, die für die Erstellung aller Miningmodelle verwendet wird. Eine Miningstruktur enthält eine Bindung an eine Datenquellensicht, die in der Datenbank definiert ist, und Definitionen für alle Spalten, die am Miningmodell beteiligt sind. Eine Miningstruktur kann mehr als ein Miningmodell besitzen.  
   
  Erstellen einer <xref:Microsoft.AnalysisServices.MiningStructure> Objekt erfordert die folgenden Schritte aus:  
@@ -94,7 +79,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel">MiningModel-Objekte</a>  
+##  <a name="MiningModel"></a> MiningModel-Objekte  
  Ein Miningmodell ist ein Repository für alle Spalten und Spaltendefinitionen, die in dem Miningalgorithmus verwendet werden.  
   
  Erstellen einer <xref:Microsoft.AnalysisServices.MiningModel> Objekt erfordert die folgenden Schritte aus:  
@@ -149,7 +134,7 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [Grundlegende AMO-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [Einführung in AMO-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO-Klassen für Datamining](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)   
- [Logische Architektur &#40; Analysis Services – mehrdimensionale Daten &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Datenbankobjekte &#40; Analysis Services – mehrdimensionale Daten &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Logische Architektur & #40; Analysis Services – mehrdimensionale Daten & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Datenbankobjekte & #40; Analysis Services – mehrdimensionale Daten & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

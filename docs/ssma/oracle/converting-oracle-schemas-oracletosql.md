@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
@@ -19,12 +18,11 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: On Demand
-ms.openlocfilehash: 61bea3173bcb085e551c35a3c2c746626f5ba0bb
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 9f1bbbb583a29cfb5e3a4b416515a293aa211d98
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Konvertieren von Oracle-Schemas (OracleToSQL)
 Nachdem Sie mit Oracle verbunden haben, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], konvertiert und dann Projekt festlegen und Optionen für die Zuordnung von Daten, Sie können Datenbankobjekte, die Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbankobjekten.  

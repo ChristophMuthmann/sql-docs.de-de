@@ -1,31 +1,30 @@
 ---
-title: "Löschen einer Spalte | Microsoft Docs"
-ms.custom: 
+title: Löschen einer Spalte | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c18504b3e6430807f124938b60d7f022a8050379
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: baa5527f9c7eef1a2c6099dfb423347117a1f41d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-a-column"></a>Löschen einer Spalte 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-In diesem Artikel wird beschrieben, wie eine Spalte aus einer Tabelle eines tabellarische Modells gelöscht wird.  
+  In diesem Artikel wird beschrieben, wie eine Spalte aus einer Tabelle eines tabellarische Modells gelöscht wird.  
   
 ## <a name="delete-a-model-table-column"></a>Löschen von Modelltabellenspalten  
   

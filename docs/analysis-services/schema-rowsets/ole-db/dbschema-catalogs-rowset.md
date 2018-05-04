@@ -23,15 +23,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 493ffd66eb4bcddd0e4aaef7c79c4c771520be92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fe0b9bd6fa59114d95720b4c0b5b631ea88c2748
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemacatalogs-rowset"></a>DBSCHEMA_CATALOGS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifiziert die physischen Attribute zugeordneten Kataloge aus der Datenbank-Managementsystem (DBMS) zugegriffen werden kann.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Gibt die physischen Attribute an, die Katalogen zugeordnet sind, auf die über das Datenbankverwaltungssystem (Database Management System, DBMS) zugegriffen werden kann.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DBSCHEMA_CATALOGS** -Rowset enthält die folgenden Spalten.  

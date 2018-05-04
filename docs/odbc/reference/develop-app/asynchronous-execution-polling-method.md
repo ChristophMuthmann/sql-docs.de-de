@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - asynchronous execution [ODBC]
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
@@ -19,12 +19,11 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f918a1fdcf40d7c772ee432edd58dd24c2c3f1c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41e2be7b293e5d7a7bdcab51ddb4bee31b108bfb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asynchronous-execution-polling-method"></a>Asynchrone Ausführung (Abrufmethode)
 Vor der ODBC 3.8 und Windows 7-SDK wurden asynchrone Vorgänge nur auf Anweisung Funktionen zulässig. Weitere Informationen finden Sie unter der **Anweisung-Vorgänge asynchron ausführen**weiter unten in diesem Thema.  

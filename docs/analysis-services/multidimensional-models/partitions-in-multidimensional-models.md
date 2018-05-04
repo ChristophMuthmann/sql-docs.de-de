@@ -1,31 +1,23 @@
 ---
 title: Partitionen in mehrdimensionalen Modellen | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6984e77d1969db95ac8b8659ba841085ce7ef7c8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af280f01614ae565406a269df348a5913dc1eeb0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partitionen in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt eine *Partition* den physischen Speicher der in eine Measuregruppe geladenen Faktendaten dar. Für jede Measuregruppe wird automatisch eine einzelne Partition erstellt. Es ist jedoch üblich, zusätzliche Partitionen zur weiteren Segmentierung der Daten zu erstellen, um eine effizientere Verarbeitung und eine schnellere Abfrageleistung zu erzielen.  
+  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt eine *Partition* den physischen Speicher der in eine Measuregruppe geladenen Faktendaten dar. Für jede Measuregruppe wird automatisch eine einzelne Partition erstellt. Es ist jedoch üblich, zusätzliche Partitionen zur weiteren Segmentierung der Daten zu erstellen, um eine effizientere Verarbeitung und eine schnellere Abfrageleistung zu erzielen.  
   
  Die Verarbeitung ist effizienter, da Partitionen unabhängig von einander parallel auf einem oder mehreren Servern verarbeitet werden können. Abfragen werden schneller ausgeführt, weil für jede Partition Speichermodi und Aggregationsoptimierungen konfiguriert werden können, die zu kürzeren Antwortzeiten führen. Wenn Sie den MOLAP-Speicher beispielsweise für Partitionen auswählen, die neuere Daten enthalten, erzielen Sie im Normalfall eine höhere Leistung als bei ROLAP. Bei einer Partitionierung nach Datum weisen Partitionen, die neuere Daten enthalten, ebenso mehr Optimierungen auf als Partitionen, die ältere, seltener abgefragte Daten enthalten. Wenn Speicher- und Aggregationsverfahren nach Partition variieren, wirkt sich das negativ auf zukünftige Zusammenführungsvorgänge aus. Überprüfen Sie, ob das Zusammenführen ein wesentlicher Bestandteil Ihrer Partitionsverwaltungsstrategie ist, bevor Sie einzelne Partitionen optimieren.  
   
@@ -53,11 +45,11 @@ In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt eine *Par
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Erstellen Sie und verwalten Sie einer lokalen Partition &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|Enthält Informationen zum Partitionieren von Daten mit Filtern oder unterschiedlichen Faktentabellen, ohne dass Daten dupliziert werden.|  
-|[Festlegen der Partitionsspeicher &#40; Analysis Services – mehrdimensional &#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|Beschreibt die Speicherkonfiguration für Partitionen.|  
-|[Bearbeiten oder Löschen von Partitionen &#40; Analyisis Services – mehrdimensional &#41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|Beschreibt, wie Partitionen angezeigt und bearbeitet werden.|  
-|[Zusammenführen von Partitionen in Analysis Services &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|Enthält Informationen zum Zusammenführen von Partitionen, die unterschiedliche Faktentabellen oder Datenslices aufweisen, ohne dass Daten dupliziert werden.|  
+|[Erstellen Sie und verwalten Sie einer lokalen Partition & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|Enthält Informationen zum Partitionieren von Daten mit Filtern oder unterschiedlichen Faktentabellen, ohne dass Daten dupliziert werden.|  
+|[Festlegen der Partitionsspeicher & #40; Analysis Services – mehrdimensional & #41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|Beschreibt die Speicherkonfiguration für Partitionen.|  
+|[Bearbeiten oder Löschen von Partitionen & #40; Analyisis Services – mehrdimensional & #41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|Beschreibt, wie Partitionen angezeigt und bearbeitet werden.|  
+|[Zusammenführen von Partitionen in Analysis Services & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|Enthält Informationen zum Zusammenführen von Partitionen, die unterschiedliche Faktentabellen oder Datenslices aufweisen, ohne dass Daten dupliziert werden.|  
 |[Festlegen des Rückschreibens von Partitionen](../../analysis-services/multidimensional-models/set-partition-writeback.md)|Enthält Anweisungen zum Aktivieren des Schreibzugriffs für eine Partition.|  
-|[Erstellen Sie und verwalten Sie einer Remotepartition &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|Beschreibt, wie eine Remotepartition erstellt und verwaltet wird.|  
+|[Erstellen Sie und verwalten Sie einer Remotepartition & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|Beschreibt, wie eine Remotepartition erstellt und verwaltet wird.|  
   
   

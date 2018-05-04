@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c61f0177f6f4634c5ab3a68eb7bfbd267f4ee84a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 77449f6077adbad3eabf9ca928b2ce19b47c79b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-64-bit-information"></a>64-Bit-ODBC-Informationen
 Ab Windows Server 2003, haben die 64-Bit-ODBC-Bibliotheken Microsoft-Betriebssystemen unterstützt. Die ODBC-Header und Bibliotheken, die zuerst im Lieferumfang von MDAC 2.7 SDK enthalten Änderungen um Programmierer zum einfachen Schreiben von Code für die neue 64-Bit-Plattformen ermöglichen. Sicherstellen, dass Ihr Code, die verwendet unten aufgeführten ODBC definiert Typen, können Sie sowohl für 64-Bit- und 32-Bit-Plattformen basierend auf demselben Quellcode kompilieren der **_WIN64** oder **WIN32** Makros.  

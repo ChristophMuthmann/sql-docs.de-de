@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a46c7dd2ab095a6bc50dab15cf3a1b9a1cb3024d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 96ae47033b1052801bc00d3b81c4cba9a94f590f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedures-append-method-example-vb"></a>Prozeduren Append-Methode (Beispiel) (VB)
 Der folgende Code veranschaulicht, wie eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und die [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) Methode, um eine neue Prozedur in der zugrunde liegenden Datenquelle zu erstellen.  

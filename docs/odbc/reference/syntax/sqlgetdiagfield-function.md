@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a05aebcf49e5abbaea244010ad8608a18126e4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
 **Konformität**  
@@ -240,7 +239,7 @@ n-Definition *|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
 -   Für alle Datensätze, die an bestimmten Zeilen betreffen, werden die Datensätze durch den Wert im Feld SQL_DIAG_ROW_NUMBER sortiert. Alle Fehler und Warnungen der ersten Zeile betroffen aufgeführt sind, und klicken Sie dann alle Fehler und Warnungen der nächsten Zeile betroffenen usw.  
   
 > [!NOTE]  
->  Die ODBC 3.*.x* Treibermanager sortiert nicht Statusdatensätze in der Diagnose Warteschlange Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2.*.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, die von einer ODBC 3*.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** wird aufgerufen, für einen Cursor, die mit positioniert **SQLExtendedFetch** .  
+>  Die ODBC 3.*.x* Treibermanager sortiert nicht Statusdatensätze in der Diagnose Warteschlange Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2.*.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, die von einer ODBC 3 *.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** wird aufgerufen, für einen Cursor, die mit positioniert **SQLExtendedFetch** .  
   
  Innerhalb jeder Zeile, oder für alle Datensätze, die für die Nummer der Zeile unbekannt ist oder eine Zeile nicht entsprechen, oder für alle diese Datensätze mit einer Zeilennummer SQL_NO_ROW_NUMBER gleich, richtet sich der erste Datensatz aufgeführt werden anhand eines Satzes von Regeln zu sortieren. Nach dem ersten Datensatz ist die Reihenfolge von den anderen Datensätzen, die Auswirkungen auf eine Zeile nicht definiert. Eine Anwendung kann nicht davon ausgehen, dass Fehler nach dem ersten Datensatz Warnungen vorausgehen. Anwendungen sollten die vollständige Diagnosedaten-Struktur, um vollständige Informationen zu einer nicht erfolgreichen Aufruf einer Funktion Abrufen überprüfen.  
   

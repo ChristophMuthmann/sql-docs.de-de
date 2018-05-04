@@ -1,29 +1,28 @@
 ---
 title: 'Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5b3637cc09617b51663ac2bc65dea13c764981c2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e3ae1d05ff2768a35011f93c2dd0dbbe48f202f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ In dieser Aufgabe lernen Sie, die Granularität einer Dimension für eine bestim
   
 ## <a name="see-also"></a>Siehe auch  
 [Analysis Services-Lernprogrammszenario](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Mehrdimensionale Modellierung &#40; Adventure Works-Lernprogramm &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Mehrdimensionale Modellierung & #40; Adventure Works-Lernprogramm & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimensionsbeziehungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

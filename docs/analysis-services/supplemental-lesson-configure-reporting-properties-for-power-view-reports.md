@@ -1,29 +1,28 @@
 ---
-title: "Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte | Microsoft Docs"
-ms.custom: 
+title: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbc725ce1d2f5999486f46f4ab30f6e3fb98f42d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 0f16582fca86487e9a85f1c8f39703e2c5b2b60d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Ergänzende Lektion: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

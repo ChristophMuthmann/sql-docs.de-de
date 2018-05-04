@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e71eb45888921c483b411e7e978d9b7e9996b947
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: dca4eff01ecb6177e839a9175e775af184e40178
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale und Genauigkeit Eigenschaften-Beispiel (VB)
 Dieses Beispiel verwendet die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) und [Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md) anzuzeigenden numerischen Dezimalstellen und die Genauigkeit der Felder in Eigenschaften der ***Rabatte*** Tabelle mit den  ***Pubs*** Datenbank.  

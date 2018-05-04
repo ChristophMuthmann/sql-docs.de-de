@@ -23,15 +23,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73fe1580fb43a090a7df04a43432e5b213e86369
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fafe6ed5d5a81cb73ddc53a68408e4548ac92699
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverschemarowsets-rowset"></a>DISCOVER_SCHEMA_ROWSETS-Rowsets
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt die Namen, Einschränkungen, Beschreibung und andere Informationen für alle Enumerationswerte und zusätzliche anbieterspezifische Enumerationswerte von unterstützt die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA)-Anbieter.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Gibt die Namen, Einschränkungen, Beschreibungen und anderen Informationen für alle Enumerationswerte und zusätzlichen anbieterspezifischen Enumerationswerte zurück, die vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis-Anbieter (XMLA) unterstützt werden.  
   
  Beim Aufrufen der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methode mit der **DISCOVER_SCHEMA_ROWSETS** Enumerationswert in der [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) Element, das **Discover**Methode gibt die **DISCOVER_SCHEMA_ROWSETS** Rowset.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**SchemaName**|**DBTYPE_WSTR**||Der Name des Schemas oder der Anforderung. Diese Anforderung gibt die Werte der *RequestTypes* -Enumeration zurück.|  
+|**schemaName**|**DBTYPE_WSTR**||Der Name des Schemas oder der Anforderung. Diese Anforderung gibt die Werte der *RequestTypes* -Enumeration zurück.|  
 |**SchemaGuid**|**DBTYPE_GUID**||Die GUID des Schemas.|  
 |**Einschränkungen**|**DBTYPE_HCHAPTER**||Ein Array von vom Anbieter unterstützten Einschränkungen.|  
 |**Beschreibung**|**DBTYPE_WSTR**||Eine lokalisierbare Beschreibung des Schemas.|  
@@ -63,9 +63,9 @@ ms.lasthandoff: 01/08/2018
   
 |Spaltenname|Typindikator|Einschränkungsstatus|  
 |-----------------|--------------------|-----------------------|  
-|**SchemaName**|**DBTYPE_WSTR**||  
+|**schemaName**|**DBTYPE_WSTR**||  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

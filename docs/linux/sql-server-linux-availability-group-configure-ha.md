@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: ''
-ms.workload: On Demand
-ms.openlocfilehash: 13d7020ca62a0dc9e81eab8336da86f9e3be7bb7
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 36b287251d91075b210737d869d52521f8f42b1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hohe Verfügbarkeit unter Linux
 

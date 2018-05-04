@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d2dd5af37a3df8ce467d412f79af1cff4e365469
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c2fda0ac0bb495bc65470491f4eb452fde786c21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreeconnect-visual-foxpro-odbc-driver"></a>SQLFreeConnect (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

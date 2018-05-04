@@ -1,38 +1,19 @@
 ---
 title: Mehrdimensionales Modell Assemblys-Verwaltung | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], assemblies
-- calling user-defined functions
-- user impersonation [Analysis Services]
-- impersonation [Analysis Services]
-- Data Mining Extensions [Analysis Services], assemblies
-- MDX [Analysis Services], assemblies
-- user-defined functions [Analysis Services]
-- Analysis Services objects, assemblies
-- assemblies [Analysis Services]
-- application domains [Analysis Services]
-ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 89678cac9febb3adbed049e859876d646b3ddf82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Verwaltung von mehrdimensionalen Modellassemblys
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +72,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Für Assemblys wird die Ausführungsberechtigung mit der **PermissionSet** -Eigenschaft des **Assembly** -Objekts erteilt. Die Berechtigungen, die der verwaltete Code erhält, hängen von der gültigen Sicherheitsrichtlinie ab. In einer nicht von[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gehosteten Umgebung werden drei Richtlinienebenen unterschieden: Unternehmen, Computer und Benutzer. Die gültige Berechtigungsliste, die der Code erhält, hängt von der Schnittmenge der Berechtigungen auf diesen drei Ebenen ab.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt für die gehostete CLR eine Sicherheitsrichtlinie auf Hostebene bereit. Diese Richtlinie stellt eine zusätzliche Richtlinienebene unterhalb der drei Richtlinienebenen dar, die immer gültig sind. Die Richtlinie wird für jede Anwendungsdomäne festgelegt, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wird.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt für die gehostete CLR eine Sicherheitsrichtlinie auf Hostebene bereit; diese Richtlinie stellt eine zusätzliche Richtlinienebene unterhalb der drei Richtlinienebenen dar, die immer gültig sind. Die Richtlinie wird für jede Anwendungsdomäne festgelegt, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wird.  
   
  Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Richtlinie auf Hostebene ist eine Kombination der festen Richtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für Systemassemblys und der benutzerdefinierten Richtlinie für Benutzerassemblys. Der benutzerdefinierte Teil der Hostrichtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basiert darauf, dass der Assemblybesitzer einen von drei Berechtigungsbuckets für jede Assembly angibt:  
   

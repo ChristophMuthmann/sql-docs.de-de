@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], setup DLL
 - Jet-based ODBC drivers [ODBC], setup DLL
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53d0ecd49d466cf561ef2ea1f6177dd1f8db1562
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 611d3bc66670ed884cc7ea6bb5da4d413a7cb712
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-dll"></a>Setup-DLL
 Ruft die Funktion auf dem ODBC-Administrator **ConfigDSN** beim Konfigurieren von Benutzer-Datenquellen.

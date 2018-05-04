@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], column size
 - size of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2178697aef549d86fedfa3d4bb70c8b45ba1f68e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5c0f4111b758421dd03be3489e7da82d78e8f181
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-size"></a>Spaltengröße
 Die Spalte (oder Parameter) Größe des numerischen Datentypen wird als die maximale Anzahl von Ziffern nach dem Datentyp der Spalte oder Parameter oder die Genauigkeit der Daten definiert. Für Zeichentypen entspricht ist dies die Länge in Zeichen der Daten. für binäre Datentypen wird die Spaltengröße als die Länge in Bytes der Daten definiert. Für die Zeit, Timestamp und alle Intervalldatentypen ist dies die Anzahl der Zeichen in die zeichendarstellung dieser Daten. Die Größe der Spalte für jeden präzise SQL-Datentyp definiert ist in der folgenden Tabelle gezeigt.  

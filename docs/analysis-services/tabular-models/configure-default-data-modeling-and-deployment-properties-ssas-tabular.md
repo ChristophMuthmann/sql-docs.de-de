@@ -1,36 +1,35 @@
 ---
 title: Modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
 - sql13.asvs.bidtoolset.deployment.f1
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 95406a20ad71e7ed95d1d83b2a8cda44fbba3a8c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 2d73ea3774c1b9cdc76ded02269d89c97177bb02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties"></a>Modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-In diesem Artikel wird beschrieben, wie so konfigurieren Sie den Standardkompatibilitätsgrad, Bereitstellung und im arbeitsbereichseinstellungen für die Eigenschaften, vorab definiert werden können, für jeden neues tabellarisches Modell Projekt Sie erstellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Auch nachdem ein neues Projekt erstellt wurde, können diese Eigenschaften abhängig von Ihren speziellen Anforderungen geändert werden.  
+  In diesem Artikel wird beschrieben, wie so konfigurieren Sie den Standardkompatibilitätsgrad, Bereitstellung und im arbeitsbereichseinstellungen für die Eigenschaften, vorab definiert werden können, für jeden neues tabellarisches Modell Projekt Sie erstellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Auch nachdem ein neues Projekt erstellt wurde, können diese Eigenschaften abhängig von Ihren speziellen Anforderungen geändert werden.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>So konfigurieren Sie die Einstellung der Eigenschaft "Standardkompatibilitätsgrad" für neue Modellprojekte  
   

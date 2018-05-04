@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - size of data types [ODBC]
 - decimal digits of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ded2bda56c0fee5012e451dbee55a89cfa32e16a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b4aaf614ac165d7ca867b3bf394ea942a992e19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decimal-digits"></a>Dezimalstellen
 Die *Dezimalstellen* decimal und numeric-Daten Typen als die maximale Anzahl der Ziffern rechts vom Dezimaltrennzeichen oder die Skalierung der Daten definiert ist. Für ungefähren Gleitkommazahlen Zahlenspalten oder die Typparameter sind keine Dezimalstellen definiert, da die Anzahl der Ziffern rechts neben dem Dezimalzeichen nicht festgelegt ist. Für "DateTime" oder ein Zeitintervall Daten, die eine Komponente für Sekunden enthält, wird als die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in die Sekundenkomponente der Daten die Dezimalstellen definiert.  

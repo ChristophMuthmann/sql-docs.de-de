@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sql_attr_odbc_version [ODBC]
 - backward compatibility [ODBC], behavioral changes
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2fe50cf12ce72ad3da5f9f2cb1f180d5875ef875
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: aafe3522cee4f857ae4f5437bec219245cbc88d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Verhaltensänderungen und ODBC 3.x-Treiber
 Das Attribut der Umgebung überprüfen, ob SQL_ATTR_ODBC_VERSION an den Treiber ODBC 2. aufweisen muss. *x* Verhalten oder die ODBC 3.*.x* Verhalten. Wie das SQL_ATTR_ODBC_VERSION Umgebung-Attribut festgelegt ist, hängt von der Anwendung ab. ODBC 3.*.x* Anwendungen müssen Aufrufen **SQLSetEnvAttr** dieses Attribut festgelegt, nachdem sie rufen **SQLAllocHandle** ein Umgebungshandle und vor dem Aufruf von  **SQLAllocHandle** ein Verbindungshandle zuordnen. Wenn sie nicht dazu, gibt der Treiber-Manager SQLSTATE HY010 (Funktion Sequenzfehler) beim letzten Aufruf von **SQLAllocHandle**.  
@@ -38,7 +37,7 @@ Das Attribut der Umgebung überprüfen, ob SQL_ATTR_ODBC_VERSION an den Treiber 
   
  Wenn eine mit Standards kompatible Anwendung mit dem Flag "ODBC_STD Kompilierung" Aufrufe kompiliert **SQLAllocEnv** (die möglicherweise auftreten, da **SQLAllocEnv** nicht veraltetes Feature in ISO), wird der Aufruf zugeordnet  **SQLAllocHandleStd** zum Zeitpunkt der Kompilierung. Zur Laufzeit ruft die Anwendung **SQLAllocHandleStd**. Der Treiber-Manager wird das SQL_ATTR_ODBC_VERSION Umgebung-Attribut auf SQL_OV_ODBC3 fest. Ein Aufruf von **SQLAllocHandleStd** ist gleichbedeutend mit einem Aufruf von **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV und einem Aufruf von **SQLSetEnvAttr** SQL_ATTR_ODBC_VERSION auf SQL_OV_ODBC3 festgelegt.  
   
- Bestimmten Treiber-Architekturen ist eine erforderlich für den Treiber als ein ODBC-2 angezeigt werden. *x* Treiber oder ein ODBC 3.*.x* -Treiber verwenden, abhängig von der die Verbindung. Der Treiber in diesem Fall nicht tatsächlich möglicherweise einen Treiber jedoch eine Ebene, die zwischen der Treiber-Manager und ein anderer Treiber befindet. Es kann z. B. einen Treiber, wie ODBC Spy++ imitieren. In einem anderen Beispiel könnte es als Gateway, wie EDA/SQL fungieren. Als ein ODBC 3. angezeigt werden*.x* -Treiber verwenden, ein solchen Treibers muss vorliegen exportieren **SQLAllocHandle**, und als ein ODBC-2 angezeigt werden. *X* -Treiber verwenden, müssen in der Lage, exportieren **SQLAllocConnect**, **SQLAllocEnv**, und **SQLAllocStmt:**. Wenn eine Umgebung, die Verbindung oder die Anweisung ist zugeordnet werden soll, der Treiber-Manager überprüft, um festzustellen, ob dieser Treiber exportiert **SQLAllocHandle**. Da der Treiber der Fall ist, der Treiber-Manager ruft **SQLAllocHandle** im Treiber. Wenn der Treiber mit einer ODBC 2. arbeitet. *x* -Treiber verwenden, muss der Treiber den Aufruf von zuordnen **SQLAllocHandle** auf **SQLAllocConnect**, **SQLAllocEnv**, oder  **SQLAllocStmt:**je nach Bedarf. Sie müssen außerdem nichts mit der **SQLSetEnvAttr** aufgerufen wird, wenn Sie als ein ODBC 2. verhält. *X* Treiber.  
+ Bestimmten Treiber-Architekturen ist eine erforderlich für den Treiber als ein ODBC-2 angezeigt werden. *x* Treiber oder ein ODBC 3.*.x* -Treiber verwenden, abhängig von der die Verbindung. Der Treiber in diesem Fall nicht tatsächlich möglicherweise einen Treiber jedoch eine Ebene, die zwischen der Treiber-Manager und ein anderer Treiber befindet. Es kann z. B. einen Treiber, wie ODBC Spy++ imitieren. In einem anderen Beispiel könnte es als Gateway, wie EDA/SQL fungieren. Als ein ODBC 3. angezeigt werden *.x* -Treiber verwenden, ein solchen Treibers muss vorliegen exportieren **SQLAllocHandle**, und als ein ODBC-2 angezeigt werden. *X* -Treiber verwenden, müssen in der Lage, exportieren **SQLAllocConnect**, **SQLAllocEnv**, und **SQLAllocStmt:**. Wenn eine Umgebung, die Verbindung oder die Anweisung ist zugeordnet werden soll, der Treiber-Manager überprüft, um festzustellen, ob dieser Treiber exportiert **SQLAllocHandle**. Da der Treiber der Fall ist, der Treiber-Manager ruft **SQLAllocHandle** im Treiber. Wenn der Treiber mit einer ODBC 2. arbeitet. *x* -Treiber verwenden, muss der Treiber den Aufruf von zuordnen **SQLAllocHandle** auf **SQLAllocConnect**, **SQLAllocEnv**, oder  **SQLAllocStmt:** je nach Bedarf. Sie müssen außerdem nichts mit der **SQLSetEnvAttr** aufgerufen wird, wenn Sie als ein ODBC 2. verhält. *X* Treiber.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

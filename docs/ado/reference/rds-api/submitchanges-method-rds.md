@@ -19,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a297a6f41fe3a191742ef6e92f84ecbc2e971eae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 79b827d3288af7abcc59f063f80ff5e66e99d392
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges-Methode (RDS)
 Ausstehende Änderungen von der lokal zwischengespeicherten und aktualisierbare übermittelt [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mit der Datenquelle angegeben, der [verbinden](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaft oder die [URL](../../../ado/reference/rds-api/url-property-rds.md) Eigenschaft.  

@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 962d90c76bfbb6022fa7b9fff05d721c03ed8fce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 452e6cc06fe107f6ecd3652f4cf146a9268592a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-1-configure-environment-for-php-development"></a>Schritt 1: Konfigurieren der Umgebung für die PHP-Entwicklung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -30,13 +30,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e9ae52577d2e48adefc033b99ec4ca8be4f98650
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dfd045a681076404cce79d1b7b78c77fdabc6d63
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 04/16/2018
 |**property_int_id**|**int**|Ganzzahl, die die Sucheigenschaft innerhalb des Eigenschaftensatzes identifiziert. **Property_int_id** innerhalb des Eigenschaftensatzes eindeutig ist.|  
 |**property_name**|**nvarchar(64)**|Ein Name, mit dem die Sucheigenschaft in der Sucheigenschaftenliste eindeutig identifiziert werden kann.<br /><br /> Hinweis: Um eine Eigenschaft zu suchen, geben Sie den Eigenschaftsnamen im die [CONTAINS](../../t-sql/queries/contains-transact-sql.md) Prädikat.|  
 |**property_description**|**nvarchar(512)**|Beschreibung der Eigenschaft.|  
-|**property_id**|**int**|Interne Eigenschaften-ID der Sucheigenschaft innerhalb der sucheigenschaftenliste identifizierte der **Property_list_id** Wert.<br /><br /> Wenn einer Sucheigenschaftenliste eine Eigenschaft hinzugefügt wird, registriert das Volltextmodul die Eigenschaft und weist ihr eine interne Eigenschaften-ID zu, die für diese Eigenschaftenliste spezifisch ist. Die interne Eigenschaften-ID stellt eine ganze Zahl dar und ist für eine bestimmte Sucheigenschaftenliste eindeutig. Wenn eine bestimmte Eigenschaft für mehrere Sucheigenschaftenlisten registriert wird, kann für jede Sucheigenschaftenliste eine andere interne Eigenschaften-ID zugewiesen werden.<br /><br /> Hinweis: Die interne Eigenschaften-ID unterscheidet sich von der ganzzahlige Eigenschaftsbezeichner, die angegeben wird, wenn die Eigenschaft der sucheigenschaftenliste hinzugefügt. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> So zeigen Sie allen eigenschaftsbezogenen Inhalte in den Volltextindex an: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
+|**property_id**|**int**|Interne Eigenschaften-ID der Sucheigenschaft innerhalb der sucheigenschaftenliste identifizierte der **Property_list_id** Wert.<br /><br /> Wenn einer Sucheigenschaftenliste eine Eigenschaft hinzugefügt wird, registriert die Volltext-Engine die Eigenschaft und weist ihr eine interne Eigenschaften-ID zu, die für diese Eigenschaftenliste spezifisch ist. Die interne Eigenschaften-ID stellt eine ganze Zahl dar und ist für eine bestimmte Sucheigenschaftenliste eindeutig. Wenn eine bestimmte Eigenschaft für mehrere Sucheigenschaftenlisten registriert wird, kann für jede Sucheigenschaftenliste eine andere interne Eigenschaften-ID zugewiesen werden.<br /><br /> Hinweis: Die interne Eigenschaften-ID unterscheidet sich von der ganzzahlige Eigenschaftsbezeichner, die angegeben wird, wenn die Eigenschaft der sucheigenschaftenliste hinzugefügt. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> So zeigen Sie allen eigenschaftsbezogenen Inhalte in den Volltextindex an: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen zu Sucheigenschaftenlisten finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  

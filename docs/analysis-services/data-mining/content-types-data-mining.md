@@ -1,47 +1,23 @@
 ---
 title: Inhaltstypen (Datamining) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], content types
-- KEY SEQUENCE column
-- content types [data mining]
-- attributes [data mining]
-- DISCRETIZED column
-- CONTINUOUS column
-- CYCLICAL column
-- ORDERED column
-- discretized columns [data mining]
-- discrete columns [Analysis Services]
-- DISCRETE column
-- KEY column
-- KEY TIME column
-- continuous columns
-- coding [Data Mining]
-ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 96e31d399527ffa81cd1a9d47bcb117ac7cfa170
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-types-data-mining"></a>Inhaltstypen (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie den physischen Datentyp für eine Spalte in einer Miningstruktur sowie einen logischen Inhaltstyp für die Spalte bei Verwendung in einem Modell definieren.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie den physischen Datentyp für eine Spalte in einer Miningstruktur sowie einen logischen Inhaltstyp für die Spalte bei Verwendung in einem Modell definieren.  
   
  Der *Datentyp* bestimmt, wie Algorithmen die Daten beim Erstellen von Miningmodellen in diesen Spalten verarbeiten. Durch Definieren des Datentyps einer Spalte erhält der Algorithmus Informationen über die Art und Verarbeitung der Daten in den Spalten. Jeder Datentyp in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt einen oder mehrere Inhaltstypen für Data Mining.  
   
@@ -119,9 +95,9 @@ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
  Neben den oben aufgeführten Inhaltstypen, die für alle Modelle verwendet werden, können Sie klassifizierte Spalten verwenden, um Inhaltstypen für einige Datentypen zu definieren. Weitere Informationen zu klassifizierten Spalten finden Sie unter [Klassifizierte Spalten &#40;Data Mining&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Content-Arten &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
- [Datentypen &#40; Datamining &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Datentypen &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
+ [Content-Arten & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
+ [Datentypen & #40; Datamining & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Datentypen & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
  [Ändern der Eigenschaften einer Miningstruktur](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)  
   

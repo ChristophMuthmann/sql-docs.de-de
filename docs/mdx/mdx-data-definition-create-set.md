@@ -26,12 +26,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c709890d1c9e9ff3b1e6351fc4b62e067e12a864
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0b7c9464085c99ff9d04be0c7c6a27d6f216c22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX-Datendefinition - festgelegten erstellen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,19 +66,19 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## <a name="remarks"></a>Hinweise  
  Eine benannte Menge ist eine Menge von Dimensionselementen (oder ein Ausdruck, der eine Menge definiert), die Sie erstellen, um sie später wieder zu verwenden. Mit einer benannten Menge können Sie beispielsweise eine Menge von Dimensionselementen definieren, die aus den 10 umsatzstärksten Geschäften besteht. Dieser Satz kann statisch oder mithilfe einer Funktion wie definiert werden, wenn [TopCount](../mdx/topcount-mdx.md). Diese benannte Menge kann dann überall verwendet werden, wo die Menge der ersten 10 Geschäfte benötigt wird.  
   
- Die CREATE SET-Anweisung erstellt eine benannte Menge, die während der gesamten Sitzung verfügbar bleibt und somit in mehreren Abfragen innerhalb einer Sitzung verwendet werden kann. Weitere Informationen finden Sie unter [Creating Session-Scoped berechnete Elemente &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ Die CREATE SET-Anweisung erstellt eine benannte Menge, die während der gesamten Sitzung verfügbar bleibt und somit in mehreren Abfragen innerhalb einer Sitzung verwendet werden kann. Weitere Informationen finden Sie unter [Creating Session-Scoped berechnete Elemente &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
- Sie können auch eine benannte Menge zum Verwenden in einer einzelnen Abfrage definieren. Zur Definition einer solchen Menge verwenden Sie die WITH-Klausel in der SELECT-Anweisung. Weitere Informationen zu der WITH-Klausel, finden Sie unter [Creating Query-Scoped benannten Mengen &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ Sie können auch eine benannte Menge zum Verwenden in einer einzelnen Abfrage definieren. Zur Definition einer solchen Menge verwenden Sie die WITH-Klausel in der SELECT-Anweisung. Weitere Informationen zu der WITH-Klausel, finden Sie unter [Creating Query-Scoped benannten Mengen &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  Die *Set_Expression* -Klausel kann jede Funktion, die MDX-Syntax unterstützt enthalten. Mengen, die mit der CREATE SET-Anweisung ohne Angabe der SESSION-Klausel erstellt wurden, haben die Sitzung als Bereich. Verwenden Sie die WITH-Klausel, um eine Menge mit Abfragebereich zu erstellen.  
   
  Die Angabe eines anderen als des aktuell verbundenen Cubes verursacht einen Fehler. Daher sollten Sie den aktuellen Cube mithilfe von CURRENTCUBE statt mit dem Cubenamen angeben.  
   
-## <a name="scope"></a>Bereich  
+## <a name="scope"></a>Scope  
  Eine benutzerdefinierte Menge kann in einem der Bereiche auftreten, die in der folgenden Tabelle aufgeführt sind.  
   
  Bereich einer Abfrage  
- Die Sichtbarkeit und Lebensdauer der Menge ist auf die Abfrage beschränkt. Die Menge ist in einer einzelnen Abfrage definiert. Der Abfragebereich hat Vorrang vor dem Sitzungsbereich. Weitere Informationen finden Sie unter [Creating Query-Scoped benannten Mengen &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ Die Sichtbarkeit und Lebensdauer der Menge ist auf die Abfrage beschränkt. Die Menge ist in einer einzelnen Abfrage definiert. Der Abfragebereich hat Vorrang vor dem Sitzungsbereich. Weitere Informationen finden Sie unter [Creating Query-Scoped benannten Mengen &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  Bereich einer Sitzung  
  Die Sichtbarkeit und Lebensdauer der Menge ist auf die Sitzung beschränkt, in der die Menge erstellt wurde. (Die Lebensdauer ist geringer als die Dauer der Sitzung, wenn eine DROP SET-Anweisung für die Menge ausgeführt wird.) Die CREATE SET-Anweisung erstellt eine Menge im Bereich einer Sitzung. Verwenden Sie die WITH-Klausel, um eine Menge mit Abfragebereich zu erstellen.  
@@ -118,7 +117,7 @@ SELECT [Core Products] ON 0
 |DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen der Menge verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Zu den Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner für eine definierte Menge bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [DROP SET-Anweisung &#40; MDX &#41;](../mdx/mdx-data-definition-drop-set.md)   
- [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP SET-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
+ [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

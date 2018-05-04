@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9f1a53821f6a8e0354b992b8110d300e96633b03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Verwenden von Massenkopieren mit dem JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -873,7 +872,7 @@ public class Program
   
 5.  Wählen Sie **Abfrage zum Angeben der zu übertragenden Daten schreiben** und **Weiter**.  Geben Sie Ihre **SQL-Anweisung** wählen Sie "ProductID", Name, ProductNumber FROM Production.Product und **weiter**  
   
-6.  Überprüfen Sie die Konfiguration: Sie können das Zeilentrennzeichen als {CR}{LF} und das Spaltentrennzeichen als Komma {,} belassen.  Wählen Sie **Zuordnungen bearbeiten**... und überprüfen Sie, ob die Daten **Typ** für jede Spalte (z. B. Integer für ProductID und Unicode-Zeichenfolge für die anderen) richtig ist.  
+6.  Überprüfen Sie die Konfiguration: lassen Sie das Zeilentrennzeichen als {CR} {LF} und das Spaltentrennzeichen als Komma {,}.  Wählen Sie **Zuordnungen bearbeiten**... und überprüfen Sie, ob die Daten **Typ** für jede Spalte (z. B. Integer für ProductID und Unicode-Zeichenfolge für die anderen) richtig ist.  
   
 7.  Fahren Sie mit **Fertig stellen** und führen Sie den Exportvorgang.  
   

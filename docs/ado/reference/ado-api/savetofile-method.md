@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 132917094275866ae650201cbf3f5dc811274b72
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 12a8458f502d775043747eceb40bda2f2401a6e7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="savetofile-method"></a>SaveToFile-Methode
 Speichert den binären Inhalt von einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in eine Datei.  

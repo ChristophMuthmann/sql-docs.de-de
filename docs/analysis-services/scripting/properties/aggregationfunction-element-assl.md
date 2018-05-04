@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9cc86c77bc1f0b33a394cb7151bc29e2fd36ed4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ae6bd946da1ecff32e0c008b86662a51c7e7d9ad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationfunction-element-assl"></a>AggregationFunction-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Aggregationsfunktion, die für den Kontotyp zu verwenden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enthält die Aggregationsfunktion, die für den Kontotyp zu verwenden ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,30 +50,30 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
 |Standardwert|*Sum*|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Konto](../../../analysis-services/scripting/objects/account-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der folgenden Zeichenfolgen beschränkt:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*Sum*|Das Measure wird mit der **Sum** -Funktion aggregiert.|  
-|*Anzahl*|Das Measure wird mit der **Count** -Funktion aggregiert.|  
+|*Count*|Das Measure wird mit der **Count** -Funktion aggregiert.|  
 |*Min*|Das Measure wird mit der **Min** -Funktion aggregiert.|  
 |*Max*|Das Measure wird mit der **Max** -Funktion aggregiert.|  
 |*DistinctCount*|Das Measure wird mit der **DistinctCount** -Funktion aggregiert.|  
-|*Keine*|Das Measure wird nicht aggregiert.|  
+|*InclusionThresholdSetting*|Das Measure wird nicht aggregiert.|  
 |*AverageOfChildren*|Das Measure wird durch Zurückgeben des Durchschnitts der untergeordneten Elemente aggregiert.|  
 |*FirstChild*|Das Measure wird durch Zurückgeben des ersten untergeordneten Elements aggregiert.|  
 |*LastChild*|Das Measure wird durch Zurückgeben des letzten untergeordneten Elements aggregiert.|  
@@ -82,8 +82,8 @@ ms.lasthandoff: 01/08/2018
   
  Die Enumeration, die den zulässigen Werten für entspricht **AggregationFunction** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AggregationFunction>.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Accounts-Element &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Accounts-Element &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

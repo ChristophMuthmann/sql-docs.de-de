@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88b8ea3a21f7b2d0bd5790aad934e784b4ca3e87
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b0e41f775ef6640f4f82aa16cea038becc305bf5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-parameter-values"></a>Festlegen von Parameterwerten
 Um den Wert eines Parameters festlegen, legt die Anwendung einfach den Wert der an den Parameter gebundenen Variablen. Es ist nicht wichtig, wenn dieser Wert festgelegt ist, solange er festgelegt ist, bevor die Anweisung ausgeführt wird. Die Anwendung kann den Wert festlegen, vor oder nach dem die Variable binden, und kann es ändern Sie den Wert so oft wie möglich. Wenn die Anweisung ausgeführt wird, ruft der Treiber einfach den aktuellen Wert der Variablen ab. Dies ist besonders nützlich, wenn mehr als einmal eine vorbereitete Anweisung ausgeführt wird; die Anwendung legt neue Werte für einige oder alle Variablen jedes Mal, wenn die Anweisung ausgeführt wird. Ein Beispiel hierfür finden Sie unter [vorbereitete Ausführung](../../../odbc/reference/develop-app/prepared-execution-odbc.md)weiter oben in diesem Abschnitt.  

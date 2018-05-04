@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - variable-length bookmarks [ODBC]
@@ -22,15 +22,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: df609d905923200f7eda7477fb5bc941f8af12cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a9a8f6fb698e55e2a5de623bfa4252468ba655ee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-types"></a>Bookmark-Typen
-Alle Lesezeichen in ODBC 3.*.x* variabler Länge-Lesezeichen vorliegen. Dadurch wird ein Primärschlüssel oder einen eindeutigen Index einer Tabelle als Lesezeichen verwendet werden zugeordnet. Das Lesezeichen kann auch eine 32-Bit-Wert sein, wie in ODBC 2. verwendet wurde. *x*. Um anzugeben, dass ein Lesezeichen, mit einem Cursor, eine ODBC 3. verwendet wird*.x* Anwendung das Anweisungsattribut SQL_ATTR_USE_BOOKMARK auf SQL_UB_VARIABLE festlegt. Ein Lesezeichen variabler Länge wird automatisch verwendet.  
+Alle Lesezeichen in ODBC 3.*.x* variabler Länge-Lesezeichen vorliegen. Dadurch wird ein Primärschlüssel oder einen eindeutigen Index einer Tabelle als Lesezeichen verwendet werden zugeordnet. Das Lesezeichen kann auch eine 32-Bit-Wert sein, wie in ODBC 2. verwendet wurde. *x*. Um anzugeben, dass ein Lesezeichen, mit einem Cursor, eine ODBC 3. verwendet wird *.x* Anwendung das Anweisungsattribut SQL_ATTR_USE_BOOKMARK auf SQL_UB_VARIABLE festlegt. Ein Lesezeichen variabler Länge wird automatisch verwendet.  
   
  Eine Anwendung kann Aufrufen **SQLColAttribute** mit der *FieldIdentifier* Argument, die auf SQL_DESC_OCTET_LENGTH festgelegt ist, um die Länge des Lesezeichens zu erhalten. Da ein Lesezeichen variabler Länge einer long-Wert sein kann, sollte eine Anwendung nicht Spalte 0 binden, wenn das Lesezeichen für viele der Zeilen im Rowset verwendet werden.  
   

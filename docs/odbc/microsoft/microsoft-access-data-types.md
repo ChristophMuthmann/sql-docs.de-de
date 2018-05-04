@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
 - Jet-based ODBC drivers [ODBC], Access driver
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 8faac619846998c1be7bc0577761b94bf6dc27ba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 925fb787b3cc13ddf905d4cbecb9e90b1eedaf71
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access-Datentypen
 Die folgende Tabelle zeigt die Microsoft Access-Datentypen, die Datentypen, die zum Erstellen von Tabellen verwendet und die ODBC-SQL-Datentypen.  

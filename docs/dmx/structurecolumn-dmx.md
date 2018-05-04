@@ -22,12 +22,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 21bb3a47c11a5377114a1333383669598b633df6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,14 +49,14 @@ StructureColumn('structure column name')
   
  Wenn die referenzierte Miningstrukturspalte eine geschachtelte Tabelle ist, gibt auch die Funktion einen Tabellenwert zurück. Der zurückgegebene Tabellenwert kann in der FROM-Klausel einer untergeordneten SELECT-Anweisung verwendet werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion ist polymorph und kann an beliebiger Stelle in Anweisungen verwendet werden, die Ausdrücke wie z B. die SELECT-Ausdrucksliste, den WHERE-Bedingungsausdruck und den ORDER BY-Ausdruck zulassen.  
   
  Der Name der Spalte in der Miningstruktur ist ein Zeichenfolgenwert und muss daher in einfache Anführungszeichen eingeschlossen werden: z. B. `StructureColumn('` **Spalte 1**`')`. Wenn mehrere Spalten den gleichen Namen haben, wird der Name entsprechend dem Kontext der einschließenden SELECT-Anweisung aufgelöst.  
   
  Die Ergebnisse, die aus einer Abfrage mit zurückgegeben werden die **StructureColumn** Funktion betroffen sind, durch das Vorhandensein von Filtern im Modell. Das heißt, der Modellfilter kontrolliert die Fälle, die im Miningmodell enthalten sind. Daher gibt eine Abfrage auf der Strukturspalte nur die Fälle zurück, die im Miningmodell verwendet wurden. Im Abschnitt "Beispiele" zu diesem Thema finden Sie Codebeispiele, die die Auswirkung von Miningmodellfiltern auf Falltabellen und geschachtelte Tabellen zeigen.  
   
- Weitere Informationen zur Verwendung dieser Funktion in einer DMX SELECT-Anweisung finden Sie unter [SELECT FROM &#60; Modell &#62;. Fällen &#40; DMX &#41; ](../dmx/select-from-model-cases-dmx.md) oder [SELECT FROM &#60; Struktur &#62;. Fällen](../dmx/select-from-structure-cases.md).  
+ Weitere Informationen zur Verwendung dieser Funktion in einer DMX SELECT-Anweisung finden Sie unter [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) oder [SELECT FROM &#60;Struktur&#62;. Fällen](../dmx/select-from-structure-cases.md).  
   
 ## <a name="error-messages"></a>Fehlermeldungen  
  Der folgende Sicherheitsfehler wird ausgegeben, wenn der Benutzer keine Drillthroughberechtigungen für die übergeordnete Miningstruktur hat.  
@@ -149,9 +148,9 @@ FROM MyModel.CASES
 WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

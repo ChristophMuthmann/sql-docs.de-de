@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetInfo
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fca7aaa6278bfc7ab6a21b89c620a28297bf9da3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo-Funktion
 **Konformität**  
@@ -148,7 +147,7 @@ SQLRETURN SQLGetInfo(
  Alle Aufrufe an **SQLGetInfo** offene Verbindung notwendig, außer wenn die *Infotyp* SQL_ODBC_VER, der die Version der Treiber-Manager zurückgegeben wird.  
   
 ## <a name="information-types"></a>Typen von Informationen  
- In diesem Abschnitt listet die Typen von Informationen von unterstützten **SQLGetInfo**. Typen von Informationen sind kategorisch gruppiert und alphabetisch aufgeführt. Typen von Informationen, die hinzugefügt oder ODBC 3. umbenannt wurden*.x* sind ebenfalls aufgeführt.  
+ In diesem Abschnitt listet die Typen von Informationen von unterstützten **SQLGetInfo**. Typen von Informationen sind kategorisch gruppiert und alphabetisch aufgeführt. Typen von Informationen, die hinzugefügt oder ODBC 3. umbenannt wurden *.x* sind ebenfalls aufgeführt.  
   
 ## <a name="driver-information"></a>Treiberinformationen  
  Die folgenden Werte für die *Infotyp* Argument Zurückgeben von Informationen zu den ODBC-Treiber, wie z. B. die Anzahl der aktiven Anweisungen der Datenquellenname und die Kompatibilitätsstufe aus Schnittstelle Standards:  
@@ -308,7 +307,7 @@ SQLRETURN SQLGetInfo(
 |SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
   
 ## <a name="information-types-renamed-for-odbc-3x"></a>Typen von Informationen umbenannt für ODBC 3.x  
- Die folgenden Werte für die *Infotyp* Argument wurde für ODBC 3. umbenannt*.x*.  
+ Die folgenden Werte für die *Infotyp* Argument wurde für ODBC 3. umbenannt *.x*.  
   
  SQL_ACTIVE_CONNECTIONS  
  SQL_MAX_DRIVER_CONNECTIONS  
@@ -1337,7 +1336,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_NUM_ABS (ODBC 1.0) SQL_FN_NUM_ACOS (ODBC 1.0) SQL_FN_NUM_ASIN (ODBC 1.0) SQL_FN_NUM_ATAN (ODBC 1.0) SQL_FN_NUM_ATAN2 (ODBC 1.0) SQL_FN_NUM_CEILING (ODBC 1.0) SQL_FN_NUM_COS (ODBC 1.0) SQL_FN_NUM_COT (ODBC 1.0) SQL_FN_NUM_DEGREES (ODBC 2.0) SQL_ FN_NUM_EXP (ODBC 1.0) SQL_FN_NUM_FLOOR (ODBC 1.0) SQL_FN_NUM_LOG (ODBC 1.0) SQL_FN_NUM_LOG10 (ODBC 2.0) SQL_FN_NUM_MOD (ODBC 1.0) SQL_FN_NUM_PI (ODBC 1.0) SQL_FN_NUM_POWER (ODBC 2.0) SQL_FN_NUM_RADIANS (ODBC 2.0) SQL_FN_NUM_RAND (ODBC 1.0) SQL_FN_ NUM_ROUND (ODBC 2.0) SQL_FN_NUM_SIGN (ODBC 1.0) SQL_FN_NUM_SIN (ODBC 1.0) SQL_FN_NUM_SQRT (ODBC 1.0) SQL_FN_NUM_TAN (ODBC 1.0) SQL_FN_NUM_TRUNCATE (ODBC 2.0)  
   
  SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
- Eine SQLUINTEGER-Wert, der das Maß an die ODBC 3. angibt*.x* Schnittstelle, die der Treiber einhält.  
+ Eine SQLUINTEGER-Wert, der das Maß an die ODBC 3. angibt *.x* Schnittstelle, die der Treiber einhält.  
   
  SQL_OIC_CORE: Mindestberechtigungen, die alle ODBC-Treiber sind erwartet einhalten. Diese Ebene umfasst grundlegende Benutzeroberflächenelemente z. B. Verbindungsfunktionen, Funktionen für das Vorbereiten und Ausführen einer SQL­Anweisung, grundlegende Ergebnis Satz Metadatenfunktionen, grundlegende Katalogfunktionen usw. an.  
   

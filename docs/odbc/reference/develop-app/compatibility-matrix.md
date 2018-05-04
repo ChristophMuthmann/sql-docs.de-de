@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -25,12 +25,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce98e3471f3bf14ada77fcbb67291ba8a4dff166
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-matrix"></a>Kompatibilitätsmatrix
 Die folgende Tabelle beschreibt die Kompatibilität der Typen von Anwendungen und Treiber, die zuvor in diesem Abschnitt definiert.  
@@ -53,7 +52,7 @@ Die folgende Tabelle beschreibt die Kompatibilität der Typen von Anwendungen un
   
  [3] in dieser Konfiguration kann ausfallen arbeiten, da die Funktionen in ODBC 2. vorhanden sind. *x* , die nicht in den Standards, z. B. Lesezeichen sind.  
   
- [4] in dieser Konfiguration kann ausfallen arbeiten, da in ODBC 3. Features stehen*.x* , die nicht in den Standards, z. B. Lesezeichen sind.  
+ [4] in dieser Konfiguration kann ausfallen arbeiten, da in ODBC 3. Features stehen *.x* , die nicht in den Standards, z. B. Lesezeichen sind.  
   
  [5] für diese Konfiguration kann möglicherweise fehlschlagen, da stehen Funktionen in ODBC 3.8, nicht in ODBC 2.x oder 3.x-Treiber, wie z. B. treiberspezifische [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   

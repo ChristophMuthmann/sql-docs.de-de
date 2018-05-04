@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ''
 caps.latest.revision: 1
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
-ms.workload: Inactive
-ms.openlocfilehash: bc357dc09c8357db8c9a5de24d6644029f31dd14
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb8e6d19ef4359ebc16ed1089561c23724d7a34b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fips-mode"></a>FIPS-Modus
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

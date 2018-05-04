@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], buffers
 - data buffers [ODBC], types
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 815fcb78b64930cf911cfbb8c775cd5b13fc0966
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b7f2f6e48c4fd01106b1ccf4a371d4e522587db1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-buffer-type"></a>Buffer-Datentyp
 Die C-Datentyp eines Puffers wird von der Anwendung angegeben. Mit einer einzigen Variablen geschieht dies, wenn die Anwendung die Variable belegt. Mit generischen Arbeitsspeicher – d. h. Speicher verweist Zeiger vom Typ "void" – Dies tritt auf, wenn die Anwendung den Speicher für eine bestimmte Art umgewandelt. Der Treiber ermittelt dieses Typs auf zwei Arten:  

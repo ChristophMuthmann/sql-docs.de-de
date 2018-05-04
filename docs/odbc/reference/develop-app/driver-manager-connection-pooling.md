@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - pooled connections [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69736f00cc4d357da0f6da7d4fbf3886144d1553
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>Treibermanager-Verbindungspooling
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für jede Verwendung neu eingerichtet werden müssen. Sobald eine Verbindung erstellt und in einem Pool platziert wurde, kann eine Anwendung diese Verbindung wiederverwenden, ohne die vollständige Verbindungsprozess auszuführen.  

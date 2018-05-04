@@ -20,15 +20,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d93f7d578defe5aa10aaa8e1a5f7ac94c3cc05ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Stellt Informationen über die aktuellen Sperren auf dem Server bereit.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Stellt Informationen über die aktuellen Sperren auf dem Server bereit.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_LOCKS** -Rowset enthält die folgenden Spalten.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="lock-types"></a>Typen von Sperren  
   
-|Name der Sperre|value|Description|  
+|Name der Sperre|Wert|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|Keine Sperre.|  
 |LOCK_SESSION_LOCK|0x0000001|Inaktive Sitzung, führt nicht zu Einschränkungen von anderen Sperren.|  
@@ -75,6 +75,6 @@ ms.lasthandoff: 01/08/2018
 |LOCK_INVALID|0x0000080|Ungültige Sperre.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e3e466fe12371b18f11e8746f2649d0272e9114
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +54,19 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  Der Name des zu erstellenden Verbindungsservers. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
  [  **@srvproduct=** ] **"***Product_name***"**  
- Der Produktname der OLE DB-Datenquelle, die als Verbindungsserver hinzugefügt werden soll. *Product_name* ist **Nvarchar (**128**)**, hat den Standardwert NULL. Wenn **SQL Server**, *Provider_name*, *Data_source*, *Speicherort*, *Provider_string*, und *Katalog* müssen nicht angegeben werden.  
+ Der Produktname der OLE DB-Datenquelle, die als Verbindungsserver hinzugefügt werden soll. *Product_name* ist **Nvarchar (** 128 **)**, hat den Standardwert NULL. Wenn **SQL Server**, *Provider_name*, *Data_source*, *Speicherort*, *Provider_string*, und *Katalog* müssen nicht angegeben werden.  
   
  [  **@provider=** ] **"***Provider_name***"**  
- Der eindeutige Programmbezeichner (Programmatic Identifier, PROGID) des OLE DB-Anbieters, der dieser Datenquelle entspricht. *Provider_name* muss eindeutig für den angegebenen OLE DB-Anbieter auf dem aktuellen Computer installiert sein. *Provider_name* ist **Nvarchar (**128**)**, hat den Standardwert NULL; allerdings wenn *Provider_name* wird weggelassen, wird SQLNCLI verwendet. (Wenn Sie SQLNCLI verwenden, leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur neuesten Version des OLE DB-Anbieters von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client um.) Es wird vorausgesetzt, dass der OLE DB-Anbieter mit der angegebenen PROGID in der Registrierung registriert ist.  
+ Der eindeutige Programmbezeichner (Programmatic Identifier, PROGID) des OLE DB-Anbieters, der dieser Datenquelle entspricht. *Provider_name* muss eindeutig für den angegebenen OLE DB-Anbieter auf dem aktuellen Computer installiert sein. *Provider_name* ist **Nvarchar (** 128 **)**, hat den Standardwert NULL; allerdings wenn *Provider_name* wird weggelassen, wird SQLNCLI verwendet. (Wenn Sie SQLNCLI verwenden, leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur neuesten Version des OLE DB-Anbieters von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client um.) Es wird vorausgesetzt, dass der OLE DB-Anbieter mit der angegebenen PROGID in der Registrierung registriert ist.  
   
  [  **@datasrc=** ] **"***Data_source***"**  
- Ist der Name der Datenquelle an, wie er vom OLE DB-Anbieter interpretiert. *Data_source* ist **Nvarchar (**4000**)**. *Data_source* wird als DBPROP_INIT_DATASOURCE-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben.  
+ Ist der Name der Datenquelle an, wie er vom OLE DB-Anbieter interpretiert. *Data_source* ist **Nvarchar (** 4000 **)**. *Data_source* wird als DBPROP_INIT_DATASOURCE-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben.  
   
  [  **@location=** ] **"***Speicherort***"**  
- Der Speicherort der Datenbank im vom OLE DB-Anbieter unterstützten Format. *Speicherort* ist **Nvarchar (**4000**)**, hat den Standardwert NULL. *Speicherort* wird als DBPROP_INIT_LOCATION-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben.  
+ Der Speicherort der Datenbank im vom OLE DB-Anbieter unterstützten Format. *Speicherort* ist **Nvarchar (** 4000 **)**, hat den Standardwert NULL. *Speicherort* wird als DBPROP_INIT_LOCATION-Eigenschaft zum Initialisieren des OLE DB-Anbieters übergeben.  
   
  [  **@provstr=** ] **"***Provider_string***"**  
- Die für den OLE DB-Anbieter spezifische Verbindungszeichenfolge, die eine eindeutige Datenquelle identifiziert. *Provider_string* ist **Nvarchar (**4000**)**, hat den Standardwert NULL. *Standard* entweder IDataInitialize übergeben oder als DBPROP_INIT_PROVIDERSTRING-Eigenschaft festgelegt, um den OLE DB-Anbieter zu initialisieren.  
+ Die für den OLE DB-Anbieter spezifische Verbindungszeichenfolge, die eine eindeutige Datenquelle identifiziert. *Provider_string* ist **Nvarchar (** 4000 **)**, hat den Standardwert NULL. *Standard* entweder IDataInitialize übergeben oder als DBPROP_INIT_PROVIDERSTRING-Eigenschaft festgelegt, um den OLE DB-Anbieter zu initialisieren.  
   
  Bei der Erstellung des verknüpften Servers für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter kann die Instanz angegeben werden, mit dem SERVER-Schlüsselwort als SERVER =*Servername*\\*Instancename*an einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Servername* ist der Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, und *Instancename* ist der Name der bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem der Benutzer verbunden sein wird.  
   
@@ -230,7 +229,7 @@ EXEC sp_addlinkedserver @server = N'ExcelDataSource',
 ### <a name="e-using-the-microsoft-ole-db-provider-for-jet-to-access-a-text-file"></a>E. Verwenden des Microsoft OLE DB-Anbieters für Jet für den Zugriff auf eine Textdatei  
  Im folgenden Beispiel wird ein Verbindungsserver für den direkten Zugriff auf Textdateien erstellt, ohne die Dateien als Tabellen in einer MDB-Datei von Microsoft Access zu verknüpfen. Der Anbieter ist `Microsoft.Jet.OLEDB.4.0`, und die Anbieterzeichenfolge lautet `Text`.  
   
- Die Datenquelle ist der vollständige Pfad des Verzeichnisses mit den Textdateien. Eine Datei namens schema.ini, die die Struktur der Textdateien beschreibt, muss im selben Verzeichnis wie die Textdateien vorhanden sein. Weitere Informationen zum Erstellen der Datei Schema.ini finden Sie in der Dokumentation zum Jet-Datenbankmodul.  
+ Die Datenquelle ist der vollständige Pfad des Verzeichnisses mit den Textdateien. Eine Datei namens schema.ini, die die Struktur der Textdateien beschreibt, muss im selben Verzeichnis wie die Textdateien vorhanden sein. Weitere Informationen zum Erstellen der Datei Schema.ini finden Sie in der Dokumentation zur Jet-Datenbank-Engine.  
   
 ```  
 --Create a linked server.  

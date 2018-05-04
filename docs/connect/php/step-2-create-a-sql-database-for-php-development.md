@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 91046e09-837d-4c4a-9f4f-3a10042f1c19
 caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ed2d6fa21d26bb30ab30f833f323e2212e08ae0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6aef34e1e818cc9e96281e99aa4cbcee9cffc503
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-2-create-a-sql-database-for-php-development"></a>Schritt 2: Erstellen einer SQL-Datenbank für die PHP-Entwicklung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

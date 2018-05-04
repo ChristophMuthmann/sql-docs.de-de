@@ -1,33 +1,35 @@
 ---
-title: SQL Server Profiler-Vorlagen und Berechtigungen | Microsoft Docs
-ms.custom: 
+title: Vorlagen und Berechtigungen in SQL Server Profiler | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
 - SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe9d9cbe084c3e721f41ab6f0546c6cf52b9fe1a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: e5ecb04dcca4a3e73f1d2351f569960cfd7fec0c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sql-server-profiler-templates-and-permissions"></a>Vorlagen und Berechtigungen in SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] wird gezeigt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen intern auflöst. Auf diese Weise können Administratoren genau erfassen, welche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen oder MDX-Ausdrücke (Multidimensional Expressions) an den Server übermittelt werden und wie der Server auf die Datenbank oder den Cube zugreift, um Resultsets zurückzugeben.  
+# <a name="sql-server-profiler-templates-and-permissions"></a>Vorlagen und Berechtigungen in SQL Server Profiler
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt an, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen intern auflöst. Auf diese Weise können Administratoren genau erfassen, welche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen oder MDX-Ausdrücke (Multidimensional Expressions) an den Server übermittelt werden und wie der Server auf die Datenbank oder den Cube zugreift, um Resultsets zurückzugeben.  
   
  Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie folgende Aktionen ausführen:  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[SQL Server Profiler-Vorlagen](../../tools/sql-server-profiler/sql-server-profiler-templates.md)|Enthält Informationen zu den vordefinierten Ablaufverfolgungsvorlagen, die im Lieferumfang von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]enthalten sind.|  
 |[Erforderliche Berechtigungen zum Ausführen von SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|Enthält Informationen zu den Berechtigungen, die zum Ausführen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]erforderlich sind.|  
@@ -62,8 +64,8 @@ ms.lasthandoff: 01/17/2018
 |[Filtern von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|Enthält Informationen zum Festlegen von Filtern für Datenspalten zum Filtern von Ablaufverfolgungsausgaben mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Wiedergeben von Ablaufverfolgungen](../../tools/sql-server-profiler/replay-traces.md)|Erklärt, was das Wiedergeben einer Ablaufverfolgung bedeutet und was erforderlich ist, um eine Ablaufverfolgung wiederzugeben.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Starten Sie SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
+ [Starten des SQL Server Profilers](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

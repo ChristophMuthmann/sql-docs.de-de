@@ -1,37 +1,23 @@
 ---
 title: Erteilen Cube- oder modellberechtigungen (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.cubes.f1
-helpviewer_keywords:
-- user access rights [Analysis Services], cubes
-- cubes [Analysis Services], security
-- read/write permissions
-- permissions [Analysis Services], cubes
-ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e15e73da6c4c4a064a6730873dd866b87d5727d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 75b810d559b167e3f6db6ff6bdd22b41e397f6a9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Erteilen von Cube- oder Modellberechtigungen (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein Cube oder tabellarisches Modell ist das primäre Abfrageobjekt in einem Analysis Services-Datenmodell. Wenn sich Benutzer mit mehrdimensionalen oder tabellarischen Daten von Excel aus verbinden, um Daten ad hoc zu untersuchen, beginnen sie in der Regel damit, einen bestimmten Cube oder ein tabellarisches Modell als Datenstruktur hinter dem Pivot-Berichtsobjekt auszuwählen. In diesem Thema wird erklärt, wie die erforderlichen Berechtigungen für den Zugriff auf Cube- oder tabellarische Daten vergeben werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Ein Cube oder tabellarisches Modell ist das primäre Abfrageobjekt in einem Analysis Services-Datenmodell. Wenn sich Benutzer mit mehrdimensionalen oder tabellarischen Daten von Excel aus verbinden, um Daten ad hoc zu untersuchen, beginnen sie in der Regel damit, einen bestimmten Cube oder ein tabellarisches Modell als Datenstruktur hinter dem Pivot-Berichtsobjekt auszuwählen. In diesem Thema wird erklärt, wie die erforderlichen Berechtigungen für den Zugriff auf Cube- oder tabellarische Daten vergeben werden.  
   
  Standardmäßig hat nur der Server- oder Datenbankadministrator die Berechtigung, Cubes in einer Datenbank abzufragen. Der Zugriff auf Cubes durch einen Benutzer, der kein Administrator ist, setzt dessen Mitgliedschaft in einer Rolle voraus, die für die Datenbank, die den Cube enthält, erstellt wurde. Die Mitgliedschaft wird für Windows-Benutzer- oder -Gruppenkonten unterstützt, die entweder in Active Directory oder auf dem lokalen Computer definiert wurden. Bevor Sie beginnen, geben Sie an, welche Konten Mitgliedschaft in den zu erstellenden Rollen erhalten werden.  
   
@@ -108,7 +94,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Von Analysis Services unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Erteilen von Berechtigungen für Datamining-Strukturen und Modelle &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Erteilen von Berechtigungen für ein Datenquellenobjekt &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Erteilen von Berechtigungen für Datamining-Strukturen und Modelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Erteilen von Berechtigungen für ein Datenquellenobjekt & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

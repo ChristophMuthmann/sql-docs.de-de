@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e1611bd3aa314158ae53ec67236e62b4bd19e29c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 83909228902ab9724986e9f8c76304083e720fd0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters-Auflistung, Befehl-Eigenschaft (VC++-Beispiel)
 Der folgende Code veranschaulicht, wie die [Befehl](../../../ado/reference/adox-api/command-property-adox.md) Eigenschaft mit dem [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Parameterinformationen für die Prozedur abzurufenden Objekts.  

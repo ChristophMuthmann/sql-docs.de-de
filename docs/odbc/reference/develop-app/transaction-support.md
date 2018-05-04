@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], degree of support
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87749f1401ebd435e32537bee2d721d013339ad7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7b0e218f23ad720f8626c5b5e963038c194ae389
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transaction-support"></a>Transaktionsunterstützung.
 Der Grad an Unterstützung für Transaktionen wird Treiber definiert. ODBC soll für einen Einzelbenutzer oder desktop-Datenbank implementiert werden, die keine Notwendigkeit, mehrere Updates auf dessen Daten zu verwalten ist. Darüber hinaus sind einige Datenbanken, die Transaktionen unterstützen nur für die Anweisungen (Data Manipulation Language, DML) von SQL Server; Es sind Einschränkungen oder spezielle Transaktionssemantik im Hinblick auf die Verwendung der Windows-Verwaltungsinstrumentation (Data Definition Language, Datendefinitionssprache), wenn eine Transaktion aktiv ist. Möglicherweise gibt es also transaktionsunterstützung für mehrere gleichzeitige Aktualisierungen an Tabellen jedoch nicht für die Anzahl und die Definition von Tabellen während einer Transaktion ändern.  

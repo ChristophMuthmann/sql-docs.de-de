@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdda088594fcad53b1d53093e2ef4a39adb5cf75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f63bbab9dd5b74c23f3f76b2c851e49a7094e9dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-cursors"></a>Blockcursor
 Viele Anwendungen verbringen sehr viel Zeit, die Daten über das Netzwerk eingebunden. Teil dieser Zeit wird aufgewendet, die Daten tatsächlich über das Netzwerk eingebunden und Teil davon ist für die netzwerkbelastung, z. B. des Aufrufs durch den Treiber auf eine Zeile mit Daten anfordern aufgewendet. Das zweite Mal kann reduziert werden, wenn die Anwendung effizient verwendet *Block,* oder *Fat,* *Cursor,* der kann mehr als eine Zeile zurückgeben, zu einem Zeitpunkt.  

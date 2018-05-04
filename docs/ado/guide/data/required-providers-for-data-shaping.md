@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce88a316a1ef31baf083032e31023d36a3e3fff4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c30bf74788ba7fe1bd27edbc814aa0277867ac13
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="required-providers-for-data-shaping"></a>Erforderlichen Anbieter Daten können strukturiert werden.
 Strukturieren von Daten erfordert in der Regel zwei Anbieter. Der Dienstanbieter [-Datenstrukturierungsdiensts für OLE DB-](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), liefert die Daten strukturieren, Funktionalität und einen Datenanbieter, z. B. der OLE DB-Anbieter für SQL Server, liefert Sie Zeilen mit Daten zum Auffüllen des geformten [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -34,7 +33,7 @@ Strukturieren von Daten erfordert in der Regel zwei Anbieter. Der Dienstanbieter
   
  Der Name des Datenanbieters kann angegeben werden, als Wert des der **Datenanbieter** dynamische Eigenschaft, die hinzugefügt wird die **Verbindung** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung nach die-Datenstrukturierungsdiensts für OLE DB oder das-Schlüsselwort der Verbindungszeichenfolge "**Datenanbieter = *** Anbieter*".  
   
- Kein Datenanbieter ist erforderlich, wenn die **Recordset** wird nicht aufgefüllt (z. B. wie eine erstellte **Recordset** , in denen Spalten mit dem NEW-Schlüsselwort erstellt werden). Geben Sie in diesem Fall "**Datenanbieter =**none;".  
+ Kein Datenanbieter ist erforderlich, wenn die **Recordset** wird nicht aufgefüllt (z. B. wie eine erstellte **Recordset** , in denen Spalten mit dem NEW-Schlüsselwort erstellt werden). Geben Sie in diesem Fall "**Datenanbieter =** none;".  
   
 ## <a name="example"></a>Beispiel  
   

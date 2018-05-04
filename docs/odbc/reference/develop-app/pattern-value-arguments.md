@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], pattern value
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 39e6bf4734a63c79b09a78178e567900ff636bd3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69440a593dabb61c2578ec75c2f381c46f70e32e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pattern-value-arguments"></a>Muster Value-Argumenten
 Einige Argumente im Katalog-Funktionen, wie die *TableName* Argument in **SQLTables**, Suchmustern akzeptieren. Diese Argumente akzeptieren Suchmustern Wenn SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_FALSE; festgelegt ist Sie sind Bezeichner Argumente, die einem Suchmuster nicht akzeptieren, wenn dieses Attribut auf SQL_TRUE festgelegt ist.  

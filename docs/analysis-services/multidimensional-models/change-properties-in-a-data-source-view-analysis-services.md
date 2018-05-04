@@ -1,38 +1,23 @@
 ---
-title: "Ändern der Eigenschaften in einer Datenquellensicht (Analysis Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Ändern der Eigenschaften in einer Datenquellensicht (Analysis Services) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- friendly names [Analysis Services]
-- names [Analysis Services], data source views
-- viewing tables
-- displaying tables
-- data source views [Analysis Services], tables
-- tables [Analysis Services], data source views
-ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f17e0880839470e128266ae62993bceeb4457c3e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3db2207ee87933b5cc66307af609dc693bd48032
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Ändern von Eigenschaften in einer Datenquellensicht (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Nachdem Sie eine Datenquellensicht mithilfe des Datenquellensicht-Assistenten definiert und der Datenquellensicht Tabellen, Sichten, benannte Berechnungen und benannte Abfrage hinzugefügt haben, kann es gewünscht sein, Eigenschaften zu ändern, die Folgendes betreffen:  
+  Nachdem Sie eine Datenquellensicht mithilfe des Datenquellensicht-Assistenten definiert und der Datenquellensicht Tabellen, Sichten, benannte Berechnungen und benannte Abfrage hinzugefügt haben, kann es gewünscht sein, Eigenschaften zu ändern, die Folgendes betreffen:  
   
 -   Übereinstimmungskriterien für Datenquellensichten  
   
@@ -88,6 +73,6 @@ Nachdem Sie eine Datenquellensicht mithilfe des Datenquellensicht-Assistenten de
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Arbeiten Sie mit Diagrammen im Datenquellensicht-Designers &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Arbeiten Sie mit Diagrammen im Datenquellensicht-Designers & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

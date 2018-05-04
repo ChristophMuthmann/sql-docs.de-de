@@ -1,15 +1,15 @@
 ---
 title: Fehler und Warnungen-Ereigniskategorie | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Errors and Warnings event category [SQL Server]
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - errors events [Analysis Services]
 - warnings events [Analysis Services]
 ms.assetid: cf7fd5a7-b189-47c3-8e5c-3195897c7eab
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 06a1d7ef68cd2b996165b5940139221897634669
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5e67608193cb46965a2e58a79b8517cccde99d13
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-and-warnings-event-category"></a>Fehler und Warnungen-Ereigniskategorie
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die Fehler und Warnungen-Ereigniskategorie enthält die in der folgenden Tabelle beschriebenen Ereignisklassen.  
+  Die Fehler und Warnungen-Ereigniskategorie enthält die in der folgenden Tabelle beschriebenen Ereignisklassen.  
   
 |Ereignisklasse|Ereignis-ID|Description|  
 |-----------------|--------------|-----------------|  

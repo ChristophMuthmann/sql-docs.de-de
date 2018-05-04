@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da0fee3543f3e684f403f11bad5a613e9f4cac21
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3a7e49e00e63ceb330f0da1779ad810516d6a78b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS-Programmiermodell mit Objekten
 Das Ziel von RDS ist, erhalten Zugriff auf und Aktualisieren von Datenquellen über einen Mittler wie z. B. IIS. Das Programmiermodell gibt die Abfolge von Aktivitäten, die zu diesem Zweck erforderlich. Das Objektmodell gibt die Objekte, deren Methoden und Eigenschaften über das Programmiermodell auswirken.  

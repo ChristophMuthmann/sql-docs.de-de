@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2f02221f02c41c74f56d37b4c8b414103e5238bb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74352c77e64a07b3c41bae784560b946ea620ebb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-function-summary"></a>Zusammenfassung der ODBC-Funktion
 In der folgenden Tabelle listet ODBC-Funktionen, gruppiert nach Typ der Aufgabe, und enthält die Konformität Bezeichnung und eine kurze Beschreibung zum Zweck der einzelnen Funktionen. Weitere Informationen zur Konformität Bezeichnungen finden Sie unter [ODBC und die Standard-CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  

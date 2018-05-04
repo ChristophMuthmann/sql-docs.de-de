@@ -1,34 +1,33 @@
 ---
 title: Modelleigenschaften | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.wspacedbconfig.f1
 - sql13.asvs.bidtoolset.fileprop.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
-caps.latest.revision: 
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a2f2478c92ba44040c8377f6957896d233bf9ce2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 118db3cdf9522d6c21234ee802e1cfb5c21752c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-properties"></a>Modelleigenschaften 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Dieser Artikel beschreibt die Eigenschaften für tabellarische Modelle. Jedes Projekt für tabellarische Modelle verfügt über Modelleigenschaften, die Einfluss darauf haben, wie das jeweilige in SQL Server-Entwicklungstools erstellte Modell gesichert und die Arbeitsbereichsdatenbank gespeichert wird. Die hier beschriebenen Modelleigenschaften gelten nicht für Modelle, die bereits bereitgestellt wurden.  
+  Dieser Artikel beschreibt die Eigenschaften für tabellarische Modelle. Jedes Projekt für tabellarische Modelle verfügt über Modelleigenschaften, die Einfluss darauf haben, wie das jeweilige in SQL Server-Entwicklungstools erstellte Modell gesichert und die Arbeitsbereichsdatenbank gespeichert wird. Die hier beschriebenen Modelleigenschaften gelten nicht für Modelle, die bereits bereitgestellt wurden.  
   
  Abschnitte in diesem Thema:  
   

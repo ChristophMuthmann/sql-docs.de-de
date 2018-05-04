@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 564e0dddd4d1d5c3ea417b9b8a4f1f01404219d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 821c13f6a0d6e695249d873477a5145fc64b1b4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Data Mining-Erweiterungen (DMX) - Syntaxkonventionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 01/08/2018
 |`[ ]` (eckige Klammern)|Enthalten optionale Syntaxelemente. Geben Sie die eckigen Klammern nicht mit ein.|  
 |{ } (geschweifte Klammern)|Enthalten erforderliche Syntaxelemente. Geben Sie die geschweiften Klammern nicht ein.|  
 |, ...|Zeigt an, dass das Element vor dem Komma beliebig oft wiederholt werden kann. Die einzelnen Elemente werden durch Trennzeichen voneinander getrennt.|  
-|\<Bezeichnung >:: =|Der Name eines Syntaxblockes. Diese Konvention dient zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, ist die Bezeichnung in spitzen Klammern, z. B. Analysefehlern \<Bezeichnung >.|  
+|\<label> ::=|Der Name eines Syntaxblockes. Diese Konvention dient zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, ist die Bezeichnung in spitzen Klammern, z. B. Analysefehlern \<Bezeichnung >.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datamining-Erweiterungen &#40; DMX &#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

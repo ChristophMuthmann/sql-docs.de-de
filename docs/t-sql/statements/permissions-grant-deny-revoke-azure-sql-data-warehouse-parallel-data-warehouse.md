@@ -1,30 +1,31 @@
 ---
 title: 'GRANT-, DENY-, REVOKE-Berechtigungen: Azure SQL Data Warehouse und Parallel Data Warehouse | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 45026cd63aa7461db65cb1927738cc1cc71295e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -83,7 +84,7 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \<permission>[ **,**...*n* ]  
+ \<permission>[ **,**...*n*]  
  Mindestens eine Berechtigung, die zu erteilen, verweigern oder widerrufen ist.  
   
  ON [ \<class_type> :: ] *securable* Die **ON**-Klausel beschreibt den sicherungsfähigen Parameter, für den Berechtigungen erteilt, verweigert oder widerrufen werden sollen.  
@@ -93,10 +94,10 @@ REVOKE
  *securable*  
  Der Name für die Anmeldung, die Datenbank, die Tabelle, die Sicht, das Schema, die Prozedur, die Rolle oder den Benutzer, dem Berechtigungen erteilt, verweigert oder widerrufen werden sollen. Der Objektname kann mit den dreiteiligen Benennungsregeln angegeben werden, die unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) beschrieben sind.  
   
- TO *principal* [ **,**...*n* ]  
+ TO *principal* [ **,**...*n*]  
  Mindestens ein Prinzipal, dem Berechtigungen erteilt, verweigert oder widerrufen werden sollen. Ein Prinzipal ist der Anmeldename, der Datenbankbenutzer oder die Datenbankrolle.  
   
- FROM *principal* [ **,**...*n* ]  
+ FROM *principal* [ **,**...*n*]  
  Mindestens ein Prinzipal, für den Berechtigungen widerrufen werden sollen.  Ein Prinzipal ist der Anmeldename, der Datenbankbenutzer oder die Datenbankrolle. **FROM** kann nur mit der Anweisung **REVOKE** verwendet werden. **TO** kann mit **GRANT**, **DENY** oder **REVOKE** verwendet werden.  
   
  WITH GRANT OPTION  

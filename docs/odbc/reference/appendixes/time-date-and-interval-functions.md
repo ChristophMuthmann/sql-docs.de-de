@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], time functions
 - functions [ODBC], date functions
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3d32dc500c2f57919757224d64b3f5c21c6f6423
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 052531afa5ccb08f4041680751a87f7b2201846f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="time-date-and-interval-functions"></a>Uhrzeit-, Datums- und Intervallfunktionen
 Die folgende Tabelle enthält Datum und Uhrzeit-Funktionen, die in der ODBC-Skalarfunktion Menge enthalten sind. Eine Anwendung kann bestimmen, welche Funktionen für Datum und Uhrzeit durch Aufrufen von einem-Treiber unterstützt werden **SQLGetInfo** mit einem *Informationstyp* von SQL_TIMEDATE_FUNCTIONS.  

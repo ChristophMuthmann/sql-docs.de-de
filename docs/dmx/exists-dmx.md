@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f5fb5dccb91af6409c0ed91796ba5119475ccaf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9e741b37b167fcb4568fd38fe069224e669cda0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Unterabfrage*  
+ *subquery*  
  Eine SELECT-Anweisung der Form SELECT * FROM \<Spaltenname > [, in denen \<prädikatliste >].  
   
 ## <a name="result-type"></a>Ergebnistyp  
@@ -70,7 +69,7 @@ WHERE [[Model] = 'Patch kit'
  Eine weitere Möglichkeit zum Anzeigen der gleichen Daten, die von dieser Abfrage zurückgegeben wird, öffnen Sie das Modell im Viewer Zuordnung der rechten Maustaste auf das Itemset ist **Patch Kit = Existing**, wählen die **Drillthrough** aus, und wählen Sie dann **nur Modellfälle**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Modellfiltersyntax und Beispiele für &#40; Analysis Services – Datamining &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Modellfiltersyntax und Beispiele für &#40;Analysis Services – Datamining&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

@@ -24,13 +24,12 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f4eb81259a56e66170a132fa1b1625432544ca64
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6dc02d5e8bc045e5de9e860ceeaa520b13a7e10f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_helpindex [ @objname = ] 'name'
   
 ## <a name="arguments"></a>Argumente  
  [ **@objname=** ] **'***name***'**  
- Der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Tabelle oder Sicht. Anführungszeichen sind nur erforderlich, wenn ein qualifizierter Tabellen- oder Sichtname angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *name* ist vom Datentyp **nvarchar(776)**und hat keinen Standardwert.  
+ Der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Tabelle oder Sicht. Anführungszeichen sind nur erforderlich, wenn ein qualifizierter Tabellen- oder Sichtname angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *name* ist vom Datentyp **nvarchar(776)** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

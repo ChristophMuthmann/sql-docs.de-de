@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef59162739835fa2e6bdd0cba6bb4f4c648901cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e1e75f97ded8f999d5fa945e0aafb04322d51540
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-gateway"></a>Standardgateway
 Ein *Gateway* ist eine Softwarekomponente, die bewirkt, dass ein DBMS an, wie eine andere aussehen. D. h. das Gateway akzeptiert die Programmierschnittstelle, die SQL-Grammatik und Data stream-Protokoll von einem einzelnen DBMS und übersetzt sie in die Programmierschnittstelle, die SQL-Grammatik und Datenströme Protokoll des ausgeblendeten DBMS. Beispielsweise können Anwendungen mithilfe von Microsoft® SQL Server™ geschrieben auch DB2-Daten über das Gateway des Micro Decisionware DB2 zugreifen; Dieses Produkt wird DB2 Aussehen von SQL Server. Wenn Gateways verwendet werden, muss eine andere Gateway für jede Zieldatenbank geschrieben werden.  

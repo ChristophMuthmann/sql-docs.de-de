@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - off-the-shelf applications [ODBC]
 - ODBC architecture [ODBC], applications
@@ -25,12 +25,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 07e445120bc7854131178d217eb05010c946491a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3237c947052b2634ec7f6a6e2c1f9909e3845827
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="applications"></a>Anwendungen
 Ein *Anwendung* ist ein Programm, das die ODBC-API für den Datenzugriff aufruft. Obwohl viele Arten von Anwendungen möglich sind, fallen in drei Kategorien unterteilt, die als Beispiele in diesem Handbuch verwendet werden.  

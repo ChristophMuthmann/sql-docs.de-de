@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf8654f4851f2d0ed93437be884057112c26a968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a38b4c3ce271661373fb7b809fdf8c80e7ff19ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>Zeichenfolgenfunktionen
 Die folgende Tabelle enthält die Funktionen zur Zeichenfolgenmanipulation. Eine Anwendung kann bestimmen, welche Funktionen für Zeichenfolgen durch Aufrufen von einem Treiber unterstützt werden **SQLGetInfo** mit einem *Informationstyp* von SQL_STRING_FUNCTIONS.  
@@ -64,5 +63,5 @@ Die folgende Tabelle enthält die Funktionen zur Zeichenfolgenmanipulation. Eine
 |**RTRIM (** *String_exp* **)** (ODBC 1.0)|Gibt die Zeichen des *String_exp* mit nachfolgenden Leerzeichen entfernt.|  
 |**SOUNDEX (** *String_exp* **)** (ODBC 2.0)|Gibt eine Datenzeichenfolge-Quelle vom Änderungsmanagement angeforderten Zeichen, die die Wörter in den Sound darstellt *String_exp*. SQL Server gibt beispielsweise einen 4 Ziffern SOUNDEX-Code zurück; Oracle gibt eine Phonetische Darstellung eines einzelnen Worts zurück.|  
 |**Speicherplatz (** *Anzahl* **)** (ODBC 2.0)|Gibt eine Zeichenfolge bestehend aus *Anzahl* Leerzeichen.|  
-|**SUBSTRING (** *String_exp*, *starten*, Länge**)** (ODBC 1.0)|Gibt eine Zeichenfolge, die abgeleitet ist *String_exp*, beginnend an der Position des Zeichens, angegeben durch *starten* für *Länge* Zeichen.|  
+|**SUBSTRING (** *String_exp*, *starten*, Länge **)** (ODBC 1.0)|Gibt eine Zeichenfolge, die abgeleitet ist *String_exp*, beginnend an der Position des Zeichens, angegeben durch *starten* für *Länge* Zeichen.|  
 |**UCASE (** *String_exp* **)** (ODBC 1.0)|Gibt eine Zeichenfolge in gleich *String_exp*, mit der alle Kleinbuchstaben in Großbuchstaben konvertiert.|

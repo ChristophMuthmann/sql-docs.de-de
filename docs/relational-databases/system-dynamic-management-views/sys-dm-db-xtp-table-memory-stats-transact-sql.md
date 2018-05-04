@@ -27,18 +27,17 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3cf854d48d05e37a4ca6ff2cbc4418bd56df9b6b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6c0f848eea2057a3794d362879c424d4c05b0d71
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Gibt Speicherauslastungsstatistiken für jede [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabelle (Benutzer und System) in der aktuellen Datenbank zurück. Die Systemtabellen haben negative Objekt-IDs und werden verwendet, um Laufzeitinformationen für das [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Modul zu speichern. Im Gegensatz zu Benutzerobjekten sind Systemtabellen intern und nur im Arbeitsspeicher vorhanden. Daher werden sie in Katalogsichten nicht aufgeführt. Systemtabellen werden verwendet, um Informationen wie Metadaten für alle Daten/Änderungsdateien im Speicher, Zusammenführungsanforderungen, Wasserzeichen für Änderungsdateien und Zeilenfilterung, gelöschte Tabellen und relevante Informationen für Wiederherstellungen und Sicherungen zu speichern. Das [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Modul unterstützt bis zu 8.192 Daten- und Änderungsdateipaare. Bei großen Datenbanken im Arbeitsspeicher ergibt sich damit eine Arbeitsspeicherauslastung durch Systemtabellen von einigen Megabyte.  
+  Gibt Speicherauslastungsstatistiken für jede [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabelle (Benutzer und System) in der aktuellen Datenbank zurück. Die Systemtabellen haben negative Objekt-IDs und werden verwendet, um Laufzeitinformationen für die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine zu speichern. Im Gegensatz zu Benutzerobjekten sind Systemtabellen intern und nur im Arbeitsspeicher vorhanden. Daher werden sie in Katalogsichten nicht aufgeführt. Systemtabellen werden verwendet, um Informationen wie Metadaten für alle Daten/Änderungsdateien im Speicher, Zusammenführungsanforderungen, Wasserzeichen für Änderungsdateien und Zeilenfilterung, gelöschte Tabellen und relevante Informationen für Wiederherstellungen und Sicherungen zu speichern. Die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine unterstützt bis zu 8.192 Daten- und Änderungsdateipaare. Bei großen Datenbanken im Arbeitsspeicher ergibt sich damit eine Arbeitsspeicherauslastung durch Systemtabellen von einigen Megabyte.  
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   

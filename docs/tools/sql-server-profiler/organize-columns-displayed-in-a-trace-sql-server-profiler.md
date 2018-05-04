@@ -1,34 +1,32 @@
 ---
-title: Organisieren von Spalten in einer Ablaufverfolgung (SQL Server Profiler) angezeigte | Microsoft Docs
-ms.custom: 
+title: Organisieren von in einer Ablaufverfolgung angezeigten Spalten (SQL Server Profiler) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: profiler
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 38a7e0a75dc850b5f4ef883d44c6ceb4d426b651
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organisieren von in einer Ablaufverfolgung angezeigten Spalten (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Datenspalten in einer Ablaufverfolgung gruppieren, indem Sie auswählen **Spalten organisieren** in der Ablaufverfolgungstabelle oder **Eigenschaften der Ablaufverfolgungsdatei** (Dialogfeld), oder wenn Sie eine Ablaufverfolgung definieren. Durch das Gruppieren der Datenspalten können Sie die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsausgabe besser analysieren. Weitere Informationen finden Sie unter [Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Sie können Datenspalten in einer Ablaufverfolgung gruppieren, indem Sie in der Ablaufverfolgungstabelle oder im Dialogfeld **Eigenschaften der Ablaufverfolgungsdatei** die Option **Spalten organisieren** auswählen oder wenn Sie eine Ablaufverfolgung definieren. Durch das Gruppieren der Datenspalten können Sie die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsausgabe besser analysieren. Weitere Informationen finden Sie unter [Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
  **Spalten organisieren** ermöglicht Ihnen das Gruppieren der Ablaufverfolgungsereignisse oder das Gruppieren und Aggregieren dieser Ereignisse anhand der von Ihnen ausgewählten Datenspalten.  
   
@@ -88,9 +86,9 @@ ms.lasthandoff: 01/17/2018
   
 7.  Um zu einer normalen Ansicht der Ablaufverfolgungsdaten zurückzukehren, klicken Sie im Menü **Ansicht** auf **Aggregierte Ansicht** , sodass die Auswahl aufgehoben wird. Wenn Sie zur aggregierten Ansicht zurückkehren möchten, klicken Sie im Menü **Ansicht** erneut auf **Aggregierte Ansicht** , um den Befehl wieder auszuwählen. Beachten Sie, dass Sie auch im Menü **Ansicht** auf **Gruppierte Ansicht** klicken können, um die gruppierten Ablaufverfolgungsereignisse anzuzeigen, ohne sie zu reduzieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Ablaufverfolgung &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Öffnen einer Ablaufverfolgungstabelle &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erstellen einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   

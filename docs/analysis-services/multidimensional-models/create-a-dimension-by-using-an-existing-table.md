@@ -1,36 +1,23 @@
 ---
 title: Erstellen Sie eine Dimension anhand einer vorhandenen Tabelle | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- hierarchies [Analysis Services], dimensions
-- main dimension tables
-- dimensions [Analysis Services], standard
-- standard dimensions [Analysis Services]
-ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b748f139d4eed14ea9d00d275aedcc8ef8fc9fec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ebf7fb99def766b3635743a31fa2cfa37fcbc228
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Erstellen einer Dimension anhand einer vorhandenen Tabelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Dimension aus einer vorhandenen Tabelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Vorhandene Tabelle verwenden** aus. Wenn Sie diese Option auswählen, basiert der Assistent die Dimensionsstruktur auf den Dimensionstabellen, ihren Spalten und allen Beziehungen zwischen diesen Spalten in einer vorhandenen Datenquellensicht. Der Assistent prüft die Daten in der Quelltabelle und den verknüpften Tabellen. Er verwendet diese Daten, um Attributspalten zu definieren, die auf den Spalten in den Dimensionstabellen basieren, und um Attributhierarchien (auch *benutzerdefinierte* Hierarchien genannt) zu definieren. Nachdem Sie mit dem Dimensions-Assistenten Ihre eigene Dimension erstellt haben, können Sie den Dimensions-Designer zum Hinzufügen, Entfernen und Konfigurieren von Attributen und Hierarchien in der Dimension verwenden.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mit dem Dimensions-Assistenten von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Dimension aus einer vorhandenen Tabelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Vorhandene Tabelle verwenden** aus. Wenn Sie diese Option auswählen, basiert der Assistent die Dimensionsstruktur auf den Dimensionstabellen, ihren Spalten und allen Beziehungen zwischen diesen Spalten in einer vorhandenen Datenquellensicht. Der Assistent prüft die Daten in der Quelltabelle und den verknüpften Tabellen. Er verwendet diese Daten, um Attributspalten zu definieren, die auf den Spalten in den Dimensionstabellen basieren, und um Attributhierarchien (auch *benutzerdefinierte* Hierarchien genannt) zu definieren. Nachdem Sie mit dem Dimensions-Assistenten Ihre eigene Dimension erstellt haben, können Sie den Dimensions-Designer zum Hinzufügen, Entfernen und Konfigurieren von Attributen und Hierarchien in der Dimension verwenden.  
   
  Wenn Sie eine Dimension anhand einer vorhandenen Tabelle erstellen, führt Sie der Dimensions-Assistent durch die folgenden Schritte:  
   

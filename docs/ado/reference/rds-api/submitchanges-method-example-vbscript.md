@@ -18,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 979b3dea3c58ad4b0b9b3394be52a122ec95ad94
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3f09fba3e8c210bee171a55ddc280f43607365bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges-Methode (Beispiel (VBScript)
 > [!IMPORTANT]

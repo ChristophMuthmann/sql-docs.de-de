@@ -1,41 +1,23 @@
 ---
 title: Measures und Measuregruppen | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- measure groups [Analysis Services]
-- measures [Analysis Services], about measures
-- OLAP objects [Analysis Services], measures
-- aggregate functions [Analysis Services]
-- granularity
-- measure groups [Analysis Services], about measure groups
-- measures [Analysis Services]
-- aggregations [Analysis Services], measures
-- fact tables [Analysis Services]
-ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 171ee494ad3d4b89ab923b4b2f0a769da0d7012c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures-and-measure-groups"></a>Measures und Measuregruppen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Sammlung von Dimensionen, die Kontext für die Auswertung der numerischen Daten eines Measures bereitstellen. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
+  Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Sammlung von Dimensionen, die Kontext für die Auswertung der numerischen Daten eines Measures bereitstellen. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
   
  In diesem Thema werden [Measures](#bkmk_measure) und [Measure Groups](#bkmk_mg)beschrieben. Außerdem enthält es die folgende Tabelle mit Links zu Schritten zum Erstellen und Konfigurieren von Measures und Measuregruppen.  
   

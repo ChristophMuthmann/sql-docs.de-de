@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4ddc10c3c32b6ac2cd411e04afd1775bdd3fc02f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7051e8506384b65987e5281b5d7dcff105522f6d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="and-mdx"></a>AND (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,10 +48,10 @@ Expression1 AND Expression2
  Ein gültiger MDX-Ausdruck, der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der gibt "true", wenn beide Parameter ausgewertet **"true"**ist, andernfalls **"false"**.  
+ Ein boolescher Wert, der gibt "true", wenn beide Parameter ausgewertet **"true"** ist, andernfalls **"false"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **AND** -Operator behandelt beide Ausdrücke als boolesche Werte (null, 0, als **"false"**ist, andernfalls **"true"**), bevor der Operator die logische Konjunktion ausführt. Die folgende Tabelle verdeutlicht, wie die **AND** -Operator führt die logische Konjunktion.  
+ Die **AND** -Operator behandelt beide Ausdrücke als boolesche Werte (null, 0, als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Konjunktion ausführt. Die folgende Tabelle verdeutlicht, wie die **AND** -Operator führt die logische Konjunktion.  
   
 |*Expression1*|*Expression2*|Rückgabewert|  
 |-------------------|-------------------|------------------|  
@@ -82,6 +81,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Operatorreferenz &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

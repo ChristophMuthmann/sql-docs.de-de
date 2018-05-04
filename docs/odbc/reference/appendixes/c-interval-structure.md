@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 359facef0aecb21eabfd931970d41b3ea3f5d9c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72caeafe09b823f2f00be6a93048d659de452994
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-interval-structure"></a>C-Intervall-Struktur
 Jede C-Intervall-Datentypen aufgeführt, der [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt verwendet die gleiche Struktur, um die Intervalldaten enthalten. Wenn **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData** wird aufgerufen, der Treiber gibt Daten zurück, in der Struktur SQL_INTERVAL_STRUCT, verwendet den Wert, der durch angegeben wurde, die Anwendung für die C-Datentypen (im Aufruf **SQLBindCol**, **SQLGetData**, oder **SQLBindParameter**) zum Interpretieren des Inhalts der SQL_INTERVAL_STRUCT , und füllt die *Interval_type* -Feld der Struktur mit den *Enum* -Wert, des C-Typs entspricht. Beachten Sie, dass der Treiber kein Lesevorgang der *Interval_type* zum Bestimmen des Typs des Intervalls Feld; sie den Wert des Felds Deskriptor SQL_DESC_CONCISE_TYPE abrufen. Wenn die Struktur für Parameterdaten verwendet wird, der Treiber verwendet den angegebenen Wert durch die Anwendung in das Feld SQL_DESC_CONCISE_TYPE APD zum Interpretieren des Inhalts der SQL_INTERVAL_STRUCT, auch wenn die Anwendung den Wert für setzt die  *Interval_type* Feld auf einen anderen Wert.  

@@ -29,12 +29,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 13d2ee822aaa50c58f64446dc3c21bf89a0ab824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dd8e7776899331a089fb12157a072e4ade673655
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-action"></a>MDX-Datendefinition - DROP-Aktion
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +56,7 @@ DROP ACTION CURRENTCUBE | Cube_Name
  Ein gültiger Zeichenfolgenausdruck, der den Namen der zu löschenden Aktion bereitstellt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie ACTION-Anweisung &#40; MDX &#41;](../mdx/mdx-data-definition-create-action.md)   
- [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [CREATE ACTION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)   
+ [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

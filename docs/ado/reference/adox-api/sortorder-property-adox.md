@@ -26,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1c0ba681c7bd8e1e29f8b684215263b28aafe58e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 832ee4aa1419740e358eeda3f5fd5ddc68f48567
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sortorder-property-adox"></a>SortOrder-Eigenschaft (ADOX)
 Gibt die Sortierreihenfolge für die Spalte (nur Indexspalten) an.  

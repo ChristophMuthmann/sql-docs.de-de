@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - catalog data [ODBC]
 - functions [ODBC], catalog functions
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e1a42d42f4a6c0be6e9da457efba26f6e69d2a2d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bfcb98b9b155f92c88733443e8ce56005faaf0b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uses-of-catalog-data"></a>Der Katalogdaten verwendet
 Anwendungen verwenden die Katalogdaten in einer Vielzahl von Möglichkeiten. Es folgen einige häufige Verwendungsmöglichkeiten:  

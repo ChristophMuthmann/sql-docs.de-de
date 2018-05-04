@@ -11,19 +11,18 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: Assembly
 ms.assetid: 287d261a-0527-4890-b0d9-49d5645b41ae
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0027a6c12d7b9040a62caff83ce98e061c0247be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d5b22be047496cd3db0b994bc52e1d6b988bf1c0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverclob-constructors"></a>SQLServerClob-Konstruktoren
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

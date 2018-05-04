@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9073c9c1da0797af40395c8ba204342e1ed6d094
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 79624097583b18678f5ef2abd51c3ad03638c809
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Zusätzliche unterstützte ODBC-SQL-Grammatik
 Die ODBC-Treiber unterstützt die minimale ODBC 2.5-Grammatik und die folgenden Klauseln vollständig in der Grammatik Core und erweiterte ODBC 2.5. Zusätzliche Informationen kann angezeigt werden, indem springen zu den [ALTER TABLE-Anweisung](../../odbc/microsoft/alter-table-statement.md), [Korrelationsnamen](../../odbc/microsoft/correlation-names.md), und [Prozeduraufruf](../../odbc/microsoft/procedure-invocation.md) Themen.  

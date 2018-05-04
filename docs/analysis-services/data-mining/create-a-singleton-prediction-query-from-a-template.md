@@ -1,32 +1,23 @@
 ---
 title: Erstellen Sie eine Singleton-Abfrage aus einer Vorlage | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- singleton query predictions [DMX]
-ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 021faf311132e7bd104c66f02340159a9a8b290c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d88b4abff562214ec971410835ec1978232302f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Singleton-Abfrage ist nützlich, wenn Sie ein Modell, die Sie für Vorhersagen verwenden möchten verfügen, aber nicht auf einem externen Eingabedataset zuzuordnen oder Bulk Vorhersagen treffen möchten. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Eine SINGLETON-Abfrage ist für Modelle hilfreich, die Sie für Vorhersagen verwenden möchten, ohne sie jedoch einem externen Eingabedataset zuzuordnen oder sie für Massenvorhersagen zu verwenden. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
   
  Zum Beispiel stellt die folgende DMX-Abfrage eine SINGLETON-Abfrage für das als Ziel verwendete Mailingmodell dar (TM_Decision_Tree).  
   
@@ -94,11 +85,11 @@ AS [t]
   
 10. Suchen Sie im Abfragetextbereich nach einer roten Wellenlinie unter dem Komma und den Auslassungspunkten, die Syntaxfehler anzeigt. Löschen Sie die Auslassungspunkte, und fügen Sie alle weiteren gewünschten Abfragebedingungen hinzu. Wenn Sie keine weiteren Bedingungen hinzufügen, löschen Sie das Komma.  
   
-     In dem Beispielcode am Beginn dieses Themas wurde für die zusätzliche Abfragebedingung **'45' as [Age]**eingegeben.  
+     In dem Beispielcode am Beginn dieses Themas wurde für die zusätzliche Abfragebedingung **'45' as [Age]** eingegeben.  
   
 11. Klicken Sie auf **Ausführen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
+ [Erstellen von Vorhersagen & #40; Lernprogramm zu Datamining-Lernprogramm & #41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   
