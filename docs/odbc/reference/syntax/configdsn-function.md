@@ -3,15 +3,12 @@ title: ConfigDSN Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ConfigDSN
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dec94050079f41415983a63eac0669070145b2fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7a8b75fb1b87a4f6199999e5d5e33d8cd0083bac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdsn-function"></a>ConfigDSN-Funktion
 **Konformität**  
@@ -88,7 +84,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>Kommentare  
  **ConfigDSN** empfängt Verbindungsinformationen vom Installationsprogramm DLL als eine Liste der Attribute in Form von Schlüsselwort-Wert-Paaren. Jedes Paar wird durch ein Nullbyte beendet, und die gesamte Liste wird mit null Byte beendet. (D. h. kennzeichnen zwei null-Bytes am Ende der Liste.) Leerzeichen sind nach dem Gleichheitszeichen im Schlüsselwort-Wert-Paar nicht zulässig. **ConfigDSN** lässt Schlüsselwörter, die keine gültigen Schlüsselwörter für sind **SQLBrowseConnect** und **SQLDriverConnect**. **ConfigDSN** unterstützt allerdings nicht unbedingt alle Schlüsselwörter, die gültigen Schlüsselwörter für **SQLBrowseConnect** und **SQLDriverConnect**. (**ConfigDSN** nimmt nicht an die **Treiber** Schlüsselwort.) Die Schlüsselwörter von verwendet die **ConfigDSN** -Funktion muss die Optionen, die zum Neuerstellen der Datenquelle mithilfe der Funktion für automatische Einrichtung des Installationsprogramms erforderlich unterstützt. Wenn die Verwendungen der der **ConfigDSN** Werte und die Werte der Verbindungszeichenfolgen sind identisch, die gleichen Schlüsselwörter verwendet werden sollte.  
   
- Wie in **SQLBrowseConnect** und **SQLDriverConnect**, Schlüsselwörter und deren Werte dürfen nicht die **[] {} (),? \*=! @** Zeichen und der Wert der **DSN** Schlüsselwort darf nicht ausschließlich aus Leerzeichen bestehen. Aufgrund der Grammatik Registrierung Schlüsselwörter und Namen von Datenquellen können nicht den umgekehrten Schrägstrich enthalten (\\) Zeichen.  
+ Wie in **SQLBrowseConnect** und **SQLDriverConnect**, Schlüsselwörter und deren Werte dürfen nicht die **[]{}(),? \*=! @** Zeichen und der Wert der **DSN** Schlüsselwort darf nicht ausschließlich aus Leerzeichen bestehen. Aufgrund der Grammatik Registrierung Schlüsselwörter und Namen von Datenquellen können nicht den umgekehrten Schrägstrich enthalten (\\) Zeichen.  
   
  **ConfigDSN** sollten Aufrufen **SQLValidDSN** überprüfen die Länge der Namen der Datenquelle und stellen Sie sicher, dass keine ungültigen Zeichen im Namen enthalten sind. Wenn der Name der Datenquelle länger als SQL_MAX_DSN_LENGTH ist oder ungültige Zeichen enthält **SQLValidDSN** gibt einen Fehler zurück und **ConfigDSN** gibt einen Fehler zurück. Die Länge der Namen der Datenquelle wird auch durch überprüft **SQLWriteDSNToIni**.  
   

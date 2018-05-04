@@ -2,7 +2,6 @@
 title: Herstellen einer Verbindung mit SQLServer (DB2eToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,9 +18,9 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b7577b5c44d2c604d7a5769a0e82fb692ddf72aa
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d257c6b2569eec1677577e8fe98a0fe619ab60f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

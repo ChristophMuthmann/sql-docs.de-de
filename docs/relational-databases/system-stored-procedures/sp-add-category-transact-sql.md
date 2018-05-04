@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6ef38dee8ae0a43d9f9064fec11e92718afe2cb4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cc390561febba64b77010ba80feaa151f05f534b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_add_category
 |-----------|-----------------|  
 |LOCAL|Lokale Auftragskategorie|  
 |MIT MEHREREN SERVERN|Multiserver-Auftragskategorie.|  
-|Keine|Eine Kategorie für eine Klasse als JOB**.**|  
+|Keine|Eine Kategorie für eine Klasse als JOB **.**|  
   
  [ **@name =** ] **'***name***'**  
  Der Name der Kategorie, die hinzugefügt werden soll. Der Name muss innerhalb der angegebenen Klasse eindeutig sein. *Namen* ist **Sysname**, hat keinen Standardwert.  

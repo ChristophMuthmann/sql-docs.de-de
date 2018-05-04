@@ -29,15 +29,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c52bc6fd7d4ae414f0c20c7921186115e17d1cea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 025c74f675e8718e31971fafcc0a15fdc8cfe7af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject-Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält den Bezeichner des übergeordneten Objekts, unter denen zum Erstellen der Objekte, die vom übergeordneten Element definiert [erstellen](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Enthält den Bezeichner des übergeordneten Objekts, unter denen zum Erstellen der Objekte, die vom übergeordneten Element definiert [erstellen](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,17 +54,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Erstellen](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
+|Übergeordnete Elemente|[Create](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
 |Untergeordnete Elemente|Benötigt Analysis Services Scripting Language-XML-Elemente (ASSL). Durch das Auflisten der ID-Elemente des Objekts und seiner Vorgänger angegeben (mit Ausnahme der **Server** Objekt.) Beispielsweise die folgenden **ParentObject** Element identifiziert eine Partition:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -194,6 +194,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

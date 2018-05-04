@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,13 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9b420ec48a7bc78a55e50dc549c6e06be7e34cb0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0c755e668f5d7360d9d37f352d1cc32295b3cf5c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Angeben eines Zielnamespaces mit dem 'targetNamespace'-Attribut (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +106,7 @@ ms.lasthandoff: 04/16/2018
   
  Dieses Instanzdokument definiert den Namespace Urn: MyNamespace und ordnet ihm ein Präfix (y0) darauf. Das Präfix gilt nur für die  **\<Kunden >** globale Element. (Das Element ist global, da es als untergeordnetes Element deklariert wird  **\<xsd: Schema >** -Element im Schema.)  
   
- Das Präfix wird nicht auf die lokalen Elemente und Attribute angewendet, da der Wert der **ElementFormDefault** und **AttributeFormDefault** Attribute festgelegt ist, um **"unqualified"**im Schema. Beachten Sie, dass die  **\<Reihenfolge >** Element ist lokal, da seine als untergeordnetes Element von Deklaration der  **\<ComplexType >** Element, definiert die  **\< CustomerType >** Element. Auf ähnliche Weise, die Attribute (**CustomerID**, **OrderID**, und **ContactName**) werden lokal und nicht global.  
+ Das Präfix wird nicht auf die lokalen Elemente und Attribute angewendet, da der Wert der **ElementFormDefault** und **AttributeFormDefault** Attribute festgelegt ist, um **"unqualified"** im Schema. Beachten Sie, dass die  **\<Reihenfolge >** Element ist lokal, da seine als untergeordnetes Element von Deklaration der  **\<ComplexType >** Element, definiert die  **\< CustomerType >** Element. Auf ähnliche Weise, die Attribute (**CustomerID**, **OrderID**, und **ContactName**) werden lokal und nicht global.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>So erstellen Sie ein funktionstüchtiges Beispiel für dieses Schema  
   

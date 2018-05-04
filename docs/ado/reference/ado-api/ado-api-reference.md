@@ -19,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 43cda7d0301c24d45fc92e5273956a10b02e821e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: a1df6a9ebccdc7dc084206cd2d3a5b9a14d8d08d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-api-reference"></a>ADO-API-Referenz
 Dieser Abschnitt der ADO-Dokumentation enthält Themen, die für jede ADO-Objekt, Sammlung, Eigenschaft, dynamische Eigenschaft, Methode, Ereignis und Enumeration. Darüber hinaus enthält es eine Liste von ADO Syntaxindizes, die mit Microsoft Visual C++ und Windows Foundation Classes (WFC) verwendet werden.  

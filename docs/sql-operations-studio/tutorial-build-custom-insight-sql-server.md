@@ -13,12 +13,11 @@ ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 97a5177bf4f0dd9e5ae3ae1b097285bd7a8d42b5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: fc57d6abd04a4672aad1026701489f15dfd69d66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Lernprogramm: Erstellen Sie eine benutzerdefinierte Insight-widget
 

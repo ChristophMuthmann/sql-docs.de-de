@@ -1,31 +1,23 @@
 ---
-title: "Analysis Services für die eingeschränkte Kerberos-Delegierung konfigurieren | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services für die eingeschränkte Kerberos-Delegierung konfigurieren | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 277372a74d58ece125c4d7e7b8a2b59a447031ff
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Wenn Sie Analysis Services für die Kerberos-Authentifizierung konfigurieren, verfolgen Sie damit wahrscheinlich eines oder beide der folgenden Ziele: Analysis Services soll bei der Abfrage von Daten eine Benutzeridentität annehmen, oder eine Benutzeridentität soll von Analysis Services an einen untergeordneten Dienst delegiert werden. Für die Szenarien gelten leicht abweichende Konfigurationsanforderungen. Bei beiden Szenarien muss überprüft werden, ob die Konfiguration ordnungsgemäß ausgeführt wurde.  
+  Wenn Sie Analysis Services für die Kerberos-Authentifizierung konfigurieren, verfolgen Sie damit wahrscheinlich eines oder beide der folgenden Ziele: Analysis Services soll bei der Abfrage von Daten eine Benutzeridentität annehmen, oder eine Benutzeridentität soll von Analysis Services an einen untergeordneten Dienst delegiert werden. Für die Szenarien gelten leicht abweichende Konfigurationsanforderungen. Bei beiden Szenarien muss überprüft werden, ob die Konfiguration ordnungsgemäß ausgeführt wurde.  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos-Konfigurations-Manager für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ist ein Diagnosetool zur Behebung Kerberos-bezogener Verbindungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Microsoft Kerberos-Konfigurations-Manager für SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
@@ -123,6 +115,6 @@ Wenn Sie Analysis Services für die Kerberos-Authentifizierung konfigurieren, ve
  [Gegenseitige Authentifizierung mithilfe von Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Herstellen einer Verbindung mit Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [SPN-Registrierung für Analysis Services-Instanz](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [Verbindungszeichenfolgen-Eigenschaften &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Verbindungszeichenfolgen-Eigenschaften & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

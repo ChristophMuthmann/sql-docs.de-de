@@ -10,7 +10,7 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
@@ -18,15 +18,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3152bfff58d0e5163c3ef3635ebee59a9258bd07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ed7f670a46c49cc31b576b68ae1b2c7a5edd46d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="process-a-mining-model"></a>Verarbeiten eines Miningmodells
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Im Data Mining-Designer in der Registerkarte Miningmodelle [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], verarbeiten Sie ein bestimmtes Miningmodell, das einer Miningstruktur zugeordnet ist, oder Sie können alle Modelle verarbeiten, die der Struktur zugeordnet sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Auf der Registerkarte Miningmodelle im Data Mining-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können Sie ein bestimmtes Miningmodell verarbeiten, das einer Miningstruktur zugeordnet ist. Sie können auch alle Modelle verarbeiten, die der Struktur zugeordnet sind.  
   
  Sie können ein Miningmodell mit den folgenden Tools verarbeiten:  
   
@@ -71,6 +71,6 @@ ms.lasthandoff: 01/08/2018
  Die Miningstruktur und alle zugeordneten Miningmodelle wurden verarbeitet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und -anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Miningmodelltasks und Anweisungen Mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

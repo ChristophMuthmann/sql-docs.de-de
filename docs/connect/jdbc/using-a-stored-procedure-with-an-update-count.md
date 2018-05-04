@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e7af43a7d270319282adcc87f7042bf8178038a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a696f0e92dbdbfe67ad71dac3e476b6bc3f77cf8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Verwenden von gespeicherten Prozeduren mit einer Updatezählung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,31 +1,29 @@
 ---
-title: "Ändern von Tabellen-, Spalten- oder zeilenfilterzuordnungen | Microsoft Docs"
-ms.custom: 
+title: Ändern von Tabellen-, Spalten- oder zeilenfilterzuordnungen | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 361cdea7d72a02c455ccf3f5b6d21255473b937e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 76587faf675131cdf01bc36ad9e27ca29abcd1c8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-table-column-or-row-filter-mappings"></a>Ändern von Tabellen-, Spalten- oder Zeilenfilterzuordnungen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-In diesem Artikel wird beschrieben, wie so ändern Sie Tabellen-, Spalten- oder zeilenfilterzuordnungen mit der **Tabelleneigenschaften bearbeiten** im Dialogfeld [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+  In diesem Artikel wird beschrieben, wie so ändern Sie Tabellen-, Spalten- oder zeilenfilterzuordnungen mit der **Tabelleneigenschaften bearbeiten** im Dialogfeld [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  Die Optionen im Dialogfeld **Tabelleneigenschaften bearbeiten** variieren, je nachdem, ob Daten ursprünglich durch Auswahl von Tabellen aus einer Liste oder mithilfe einer SQL-Abfrage importiert wurden. Wenn die Daten ursprünglich durch Auswahl aus einer Liste importiert wurden, wird das Dialogfeld **Tabelleneigenschaften bearbeiten** im Tabellenvorschaumodus angezeigt. In diesem Modus wird nur eine Teilmenge angezeigt, die auf die ersten 50 Zeilen der Quelltabelle beschränkt ist. Wenn die Daten ursprünglich durch Verwendung einer SQL-Anweisung importiert wurden, wird im Dialogfeld **Tabelleneigenschaften bearbeiten** nur eine SQL-Anweisung angezeigt. Mithilfe einer SQL-Abfrageanweisung können Sie eine Teilmenge der Zeilen abrufen, indem Sie entweder einen Filter entwerfen oder die SQL-Anweisung manuell bearbeiten.  
   

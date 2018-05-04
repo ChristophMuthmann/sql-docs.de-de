@@ -1,29 +1,28 @@
 ---
 title: 'Lektion 7: Definieren von Key Performance Indicators (KPIs) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39ed6ea0106d983c7b70bf2e89e75b57166e7531
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 33c6af9d43864f9a4809ac9d0239263d1659cc1a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lektion 7: Definieren von KPIs (Key Performance Indicator)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ In dieser Aufgabe definieren Sie KPIs in der Formularansicht und wechseln dann z
   
 ## <a name="see-also"></a>Siehe auch  
 [Analysis Services-Lernprogrammszenario](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Mehrdimensionale Modellierung &#40; Adventure Works-Lernprogramm &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Mehrdimensionale Modellierung & #40; Adventure Works-Lernprogramm & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Leistungskennzahlen &#40;Key Performance Indicators, KPIs&#41; in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)  
   
   

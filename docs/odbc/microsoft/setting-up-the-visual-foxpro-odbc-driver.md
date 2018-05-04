@@ -3,15 +3,12 @@ title: Einrichten des Visual FoxPro-ODBC-Treibers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Visual FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], installing
@@ -21,12 +18,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4d8b03fc60c850176b6f83048790601296bd10be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9897ae65c2520d9000dbff2dd287c424b671ed75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Einrichten der Visual FoxPro-ODBC-Treiber
 Informationen zum Herunterladen und Installieren des Visual FoxPro-ODBC-Treibers finden Sie unter [Visual FoxPro-ODBC-Treiber](http://go.microsoft.com/fwlink/?LinkId=121318) auf MSDN heruntergeladen.  

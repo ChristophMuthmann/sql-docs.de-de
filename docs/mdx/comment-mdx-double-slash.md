@@ -23,12 +23,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 35d02bc4e809048f80b90c2b11f0cf278c2f0c71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad8cdbf46838883892ce6e65a14d5bff78ff496b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comment-mdx-double-slash"></a>Kommentar MDX doppelten Schrägstrich
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/08/2018
  *Comment_Text*  
  Die Zeichenfolge, die den Text des Kommentars enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Kommentare können in einer eigenen Zeile, geschachtelt am Ende einer MDX-Skriptzeile (Multidimensional Expressions) oder geschachtelt in einer MDX-Anweisung eingefügt werden. Der Kommentar wird vom Server nicht ausgewertet.  
   
  Verwenden Sie // nur für einzeilige Kommentare. Kommentare, die mit // eingefügt werden, sind durch das Neue-Zeile-Zeichen begrenzt.  
@@ -69,9 +68,9 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Kommentar &#40;MDX&#41;](../mdx/comment-mdx.md)   
- [--&#40; Kommentar &#41; &#40; MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
- [MDX-Operatorreferenz &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Kommentar & #40; MDX & #41;](../mdx/comment-mdx.md)   
+ [--& #40; Kommentar & #41; & #40; MDX & #41;](../mdx/comment-mdx-operator-reference.md)   
+ [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f8938832eb3cd08e55fd0b5d2a5dc639d863fc8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 52efd386f69733f2fb349f753a3324c121a46734
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cellset-example-vb"></a>Cellset-Beispiel (VB)
 Diese Visual Basic-Projekt veranschaulicht die Grundlagen der Verwendung von ADO MD auf Cubedaten zuzugreifen. Member von Beschriftungen für die Spalten- und Zeilenüberschriften angezeigt, und zeigt formatierte Werte für bestimmte Zellen in das Cellset.  

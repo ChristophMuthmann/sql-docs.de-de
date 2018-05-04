@@ -1,11 +1,9 @@
 ---
 title: AbsolutePage "PageCount" und PageSize Eigenschaften (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c3eb6d42045095df6867e67e504262d16780a54
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 57a4221f353295c98dae1dbbd87ef6e3ca4400e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage "PageCount" und PageSize Eigenschaften (VC++-Beispiel)
 Dieses Beispiel verwendet die [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), ["PageCount"](../../../ado/reference/ado-api/pagecount-property-ado.md), und [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) Eigenschaften Anzeigenamen und Einstellungsdaten aus der ***Mitarbeiter*** Tabelle fünf Datensätzen zu einem Zeitpunkt.  

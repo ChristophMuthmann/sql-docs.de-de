@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - streaming data
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
@@ -19,12 +19,11 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c8d4e97c1312f41b13fe529c97245005c157ba9a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e6a43d8918b6adcee3ddc6b4396d30c6498757ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>Datentypen mit Stream-Unterstützung, die den SQLSRV-Treiber nutzen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

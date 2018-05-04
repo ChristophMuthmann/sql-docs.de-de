@@ -3,15 +3,12 @@ title: SELECT-Anweisung Einschränkungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC SQL grammar, SELECT statement limitations
 - SELECT statement limitations [ODBC]
@@ -20,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5b36eae112c385cf5cc336640460c704b0bd205e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 00490256cb4da90fc9384f696435419266a1a3d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-statement-limitations"></a>Einschränkungen der SELECT-Anweisung
 Eine Aggregatfunktion Spalte kann nicht mit einem nicht-Aggregatspalte in einer SELECT-Anweisung kombiniert werden.  

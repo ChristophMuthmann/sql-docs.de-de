@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], defined
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4fc493dc580824113bcbfc01b4451c1e2c6bfa51
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 664124afd649e97248bbe13740f863841c9ef482
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetching-data"></a>Abrufen von Daten
 Der Prozess des Abrufens von Zeilen aus dem Resultset und deren Rückgabe an die Anwendung wird aufgerufen, *abrufen*. In diesem Abschnitt wird beschrieben, wie Daten abgerufen werden.  

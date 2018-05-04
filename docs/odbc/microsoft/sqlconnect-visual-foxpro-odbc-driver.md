@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 49cbfafa-b21e-4e89-b248-9c7098f46b20
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 60cfd910df54640380d14eab86907e833f6bab73
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2cab9162fb1ddc35a7cc5f837f2a03e30a7f2732
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlconnect-visual-foxpro-odbc-driver"></a>SQLConnect (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

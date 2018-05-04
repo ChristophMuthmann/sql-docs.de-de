@@ -1,16 +1,14 @@
 ---
 title: Analysieren von Deadlocks mit SQL Server Profiler | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: profiler
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
 - Profiler [SQL Server Profiler], deadlocks
@@ -21,19 +19,19 @@ helpviewer_keywords:
 - events [SQL Server], deadlocks
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2fc7e2adc786982611e58ca4083c575902e5aca3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 835f8fc1c5c7d86551ffac0616afd42e737083b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analysieren von Deadlocks mit SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwendung [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum Identifizieren der Ursache eines Deadlocks. Ein Deadlock tritt dann auf, wenn eine zyklische Abhängigkeit zwischen mindestens zwei Threads oder Prozessen für eine beliebige Gruppe von Ressourcen in SQL Server besteht. Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie eine Ablaufverfolgung erstellen, die Deadlockereignisse zu Analysezwecken aufzeichnet, wiedergibt und anzeigt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ursache für einen Deadlock zu identifizieren. Ein Deadlock tritt dann auf, wenn eine zyklische Abhängigkeit zwischen mindestens zwei Threads oder Prozessen für eine beliebige Gruppe von Ressourcen in SQL Server besteht. Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie eine Ablaufverfolgung erstellen, die Deadlockereignisse zu Analysezwecken aufzeichnet, wiedergibt und anzeigt.  
   
  Um eine Ablaufverfolgung für Deadlockereignisse auszuführen, fügen Sie die **Deadlock graph** -Ereignisklasse zu einer Ablaufverfolgung hinzu. Diese Ereignisklasse füllt die **TextData** -Datenspalte in der Ablaufverfolgung mit XML-Daten zum Prozess sowie zu vom Deadlock betroffenen Objekten auf. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] kann das XML-Dokument in eine Deadlock-XML-Datei (.xdl) extrahieren, die Sie später in SQL Server Management Studio anzeigen können. Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] so konfigurieren, dass **Deadlock graph** -Ereignisse entweder in eine einzelne Datei mit allen **Deadlock graph** -Ereignissen oder in separate Dateien extrahiert werden. Das Extrahieren kann auf eine der folgenden Arten ausgeführt werden:  
   

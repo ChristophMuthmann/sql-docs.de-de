@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
@@ -19,12 +18,11 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 3f1ef708d84ba980a1239c219da7b0870173cc4f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: e5139c7ab169572385afd5b0edd633f35b83aa2a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Projekteinstellungen (Konvertierung) (OracleToSQL)
 Die Seite "Konvertierung", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA zu Oracle-Syntax konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax.  

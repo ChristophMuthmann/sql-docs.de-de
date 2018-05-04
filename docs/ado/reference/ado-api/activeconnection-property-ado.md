@@ -1,11 +1,9 @@
 ---
 title: ActiveConnection-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 00ca9b4b45deb31f3b0f4d233a452b58e9f8e40f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3b37e3e062bcc8239b2231db66052e9cdaf9e812
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection-Eigenschaft (ADO)
 Gibt an, zu dem [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt das angegebene [Befehl](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), oder [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt derzeit gehört.  

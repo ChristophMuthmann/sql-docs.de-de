@@ -3,13 +3,10 @@ title: Übersicht über die JDBC-Treiber | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
@@ -17,9 +14,9 @@ caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f624285fc5a61f20a535ebcd7323d23a77447a29
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: e8cfef588960a3c46469b9c35b4a5b5442be7262
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

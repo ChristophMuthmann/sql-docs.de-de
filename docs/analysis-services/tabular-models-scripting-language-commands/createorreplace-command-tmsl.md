@@ -1,37 +1,36 @@
 ---
 title: CreateOrReplace-Befehl (TMSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f77a0e04-461a-4fa8-b997-78057e410d56
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d658378bde1e3a58f36b1137328f723ad3d380d5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fac0e43a8c1a8ec8dbdfdc3a255bdee1a74bddae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createorreplace-command-tmsl"></a>CreateOrReplace-Befehl (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Erstellt oder ersetzt das angegebene Objekt und alle untergeordneten Objekte, die angegeben werden. Nicht vorhandene Objekte werden erstellt. Vorhandene Objekte werden mit der neuen Definition ersetzt.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Erstellt oder ersetzt das angegebene Objekt und alle untergeordneten Objekte, die angegeben werden. Nicht vorhandene Objekte werden erstellt. Vorhandene Objekte werden mit der neuen Definition ersetzt.  
   
  Wenn Sie eine Schreib /-Leseeigenschaft angeben, müssen Sie alle diese implizit enthalten. Die Auslassung eines Objekts Lese-/ Schreibzugriff gilt einen Löschvorgang.  
   
 ## <a name="request"></a>Anforderung  
  Die Struktur der Anforderung hängt von dem Objekt ab. Ein Objekt, das ein übergeordnetes Element ist muss alle seine untergeordneten Elemente enthalten, obwohl die vollständige Objektdefinitionen von gleichgeordneten Elementen und Eltern nicht erforderlich sind.  
   
- [Datenbankobjekt &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
+ [Datenbankobjekt &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
   
  Ersetzt eine vorhandene Datenbank mit einer umbenannten, minimale Datenbankdefinition, die den Namen, geänderten Modelleigenschaften und eine Verbindung angibt. Da die Objektdefinition keine Tabellen, Partitionen oder Beziehungen enthalten, werden all diese Objekte gelöscht.  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [DataSources Object &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) Ein Verbindungsname ersetzt.  
+ [DataSources-Objekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) ein Verbindungsname ersetzt.  
   
 ```  
 {  
@@ -93,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables-Objekt &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Überschreibt vorhandenen Tabellen, nur die angegebene Aktivität zu verlassen.  
+ [Tables-Objekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) überschreibt vorhandenen Tabellen, nur die angegebene Aktivität zu verlassen.  
   
 ```  
 {  
@@ -178,7 +177,7 @@ ms.lasthandoff: 01/08/2018
 }   
 ```  
   
- [Partitionen Object &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
+ [Partitionen Objekt &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
   
  Ersetzen Sie einen Partitionsnamen an. Partitionsobjekte verfügen über drei Lese-/ Schreibzugriff-Eigenschaften: name, Quelle und Beschreibung. Wenn Sie eine Schreib /-Leseeigenschaft angeben, müssen Sie alle diese implizit enthalten. Die Auslassung eines Objekts Lese-/ Schreibzugriff gilt einen Löschvorgang.  
   
@@ -212,7 +211,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Rollen Object &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) Ersetzt eine Rollendefinition durch die Elemente enthält.  
+ [Rollenobjekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) ersetzt eine Rollendefinition durch die Elemente enthält.  
   
 ```  
 {  
@@ -511,7 +510,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>Nutzung (Endpunkte)  
- Diese Command-Element wird in einer Anweisung verwendet die [Execute-Methode &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) Aufruf über einen XMLA-Endpunkt verfügbar gemacht werden auf folgende Weise:  
+ Diese Command-Element wird in einer Anweisung verwendet die [Execute-Methode &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) Aufruf über einen XMLA-Endpunkt verfügbar gemacht werden auf folgende Weise:  
   
 -   Als ein XMLA-Fenster in SQL Server Management Studio (SSMS)  
   
@@ -521,7 +520,7 @@ ms.lasthandoff: 01/08/2018
   
  Sie können ein vorgefertigtes Skript für diesen Befehl aus SSMS generieren.  Beispielsweise können Sie eine vorhandene Datenbank auf Rechtsklicken > **Skript** > **Skript für Datenbank als** > **erstellen oder zu ersetzen,**.  
   
- Die [ \[MS-SSAS-T\]: SQL Server Analysis Services-Tabellendatenbank (SQL Server Technische Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) Dokuments Abschnitt 3.1.5.2.2, die die Struktur der Befehle für JSON-tabellarischen Metadaten und Objekte beschreibt. Aktuell enthält dieses Dokument Befehle und Funktionen, die noch nicht im TMSL-Skript implementiert. Finden Sie unter [Tabular Model Scripting Language &#40; TMSL &#41; Verweis](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) für Informationen zu den was unterstützt wird  
+ Die [ \[MS-SSAS-T\]: SQL Server Analysis Services-Tabellendatenbank (SQL Server Technische Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) Dokuments Abschnitt 3.1.5.2.2, die die Struktur der Befehle für JSON-tabellarischen Metadaten und Objekte beschreibt. Aktuell enthält dieses Dokument Befehle und Funktionen, die noch nicht im TMSL-Skript implementiert. Finden Sie unter [Tabular Model Scripting Language &#40;TMSL&#41; Verweis](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) für Informationen zu den was unterstützt wird  
 
 ## <a name="see-also"></a>Siehe auch  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

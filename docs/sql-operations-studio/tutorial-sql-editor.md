@@ -13,12 +13,11 @@ ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 608ae192eacdfec2c657484015d967ae0506e791
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Verwenden von Transact-SQL-Editor zum Erstellen von Datenbankobjekten- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

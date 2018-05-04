@@ -3,15 +3,12 @@ title: Simulieren von positioniert, Update- und Delete-Anweisungen | Microsoft D
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - positioned deletes [ODBC]
 - data updates [ODBC], positioned update or delete
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d89bd5919985a98d7e5ed59ee103be49cc40ab3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1448481938ff0ef8e20ba4e6a85801b65024cbcc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulieren positionierte Update- und Delete-Anweisungen
 Wenn die Datenquelle nicht positioniertes Update unterstützt und-Anweisungen DELETE, kann der Treiber diese simulieren. Beispielsweise wird der ODBC-Cursorbibliothek simuliert positioniertes Update und delete-Anweisungen. Die allgemeine Strategie zum Simulieren positionierte Update- und Delete-Anweisungen ist positionierte Anweisungen gesuchte Vorgängen zu konvertieren. Dies erfolgt durch Ersetzen der **WHERE CURRENT OF** -Klausel mit einer durchsuchten **, in dem** -Klausel, die die aktuelle Zeile identifiziert.  

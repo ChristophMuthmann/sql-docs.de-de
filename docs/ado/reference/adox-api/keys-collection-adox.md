@@ -1,11 +1,9 @@
 ---
 title: Keys-Auflistung (ADOX) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 803c105d0d91a6826a4c8fbf096d059bbf5070d8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2f85bb15e6a8949299f0340530de6ffeb335389f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keys-collection-adox"></a>Die Auflistung der Schlüssel (ADOX)
 Enthält alle [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekte von einem [Tabelle](../../../ado/reference/adox-api/table-object-adox.md).  

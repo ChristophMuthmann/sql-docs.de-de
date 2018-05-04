@@ -2,16 +2,14 @@
 title: Projekteinstellungen (Azure SQL-Datenbank) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -23,12 +21,11 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9034a699a604bfe70ea7c2fb52c7a8b6ee58cc4
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 73703f251d64f69a40d6d60337254eebc033458a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (AccessToSQL)
 Die Einstellungen der SQL Azure-Projekt können Sie konfigurieren das Suffix des SQL Azure-Datenbank auch können taktmechanismus in Verbindung mit SQL Azure implementieren und klicken Sie im Dialogfeld "Verbindung" hinzugefügt werden.  

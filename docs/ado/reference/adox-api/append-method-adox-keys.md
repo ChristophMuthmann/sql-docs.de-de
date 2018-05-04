@@ -1,11 +1,9 @@
 ---
 title: Append-Methode (ADOX-Schlüssel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e8241f1e86a32f8ac768819b43ad0dfece067ce
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3e974721f602c4a361af5f4bd582929b217caa38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="append-method-adox-keys"></a>Append-Methode (ADOX-Schlüssel)
 Fügt ein neues [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) -Objekt an die [Schlüssel](../../../ado/reference/adox-api/keys-collection-adox.md) Auflistung.  

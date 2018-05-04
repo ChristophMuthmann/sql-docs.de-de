@@ -1,11 +1,9 @@
 ---
 title: 'ADO-Ereignis-Instanziierung: Visual C++ | Microsoft Docs'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7416dab9e7fa3df6726e30d172ea307d8024cdb8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9455000386b7bb64073fec6d07fe106b6ad819dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO-Ereignis-Instanziierung: Visual C++
 Dies ist eine schematische Beschreibung zum Instanziieren von ADO-Ereignisse in Microsoft® Visual C++. Finden Sie unter [Modellbeispiel für ADO-Ereignisse (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) für eine vollständige Beschreibung.  

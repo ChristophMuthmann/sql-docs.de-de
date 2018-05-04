@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fb9ddbb55213fa83a746d73a26e88c9c010f9ba6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3efbb8829890dda1895237dde5bb65b5a4b3ab40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="arguments"></a>Argumente  
  [ **@sp_name =** ] **'***name***'**  
- Der Name der Prozedur zur Rückgabe von Kataloginformationen. *name* ist vom Datentyp **nvarchar(390)**und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+ Der Name der Prozedur zur Rückgabe von Kataloginformationen. *name* ist vom Datentyp **nvarchar(390)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
  [  **@sp_owner =** ] **"***Schema***"**  
- Der Name des Schemas, zu dem die Prozedur gehört. *schema* ist vom Datentyp **nvarchar(384)**und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
+ Der Name des Schemas, zu dem die Prozedur gehört. *schema* ist vom Datentyp **nvarchar(384)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
   
  Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Prozedur mit dem angegebenen Namen enthält, wird diese Prozedur zurückgegeben. Wird ein nicht gekennzeichneter Name einer gespeicherten Prozedur angegeben, durchsucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] die folgenden Schemas in der angegebenen Reihenfolge nach der Prozedur:  
   
@@ -64,7 +63,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   Das **dbo** -Schema in der aktuellen Datenbank  
   
  [  **@qualifier =** ] **"***Qualifizierer***"**  
- Der Name des Prozedurqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen in der Form (*Qualifizierer***.*** Schema***.*** Namen*. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Qualifizierer* stellt den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ Der Name des Prozedurqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen in der Form (*Qualifizierer ***.*** Schema ***.*** Namen*. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Qualifizierer* stellt den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [  **@fUsePattern =** ] **"***fUsePattern***"**  
  Legt fest, ob Unterstrich (_), Prozent (%) oder Klammern ([ oder ]) als Platzhalterzeichen interpretiert werden. *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  

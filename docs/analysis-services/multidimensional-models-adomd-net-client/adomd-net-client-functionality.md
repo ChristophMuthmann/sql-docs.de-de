@@ -1,32 +1,19 @@
 ---
-title: "ADOMD.NET-Clientfunktionalität | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- functionality [ADOMD.NET]
-- ADOMD.NET, functionality
-ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
-caps.latest.revision: 
-author: Minewiskan
+title: ADOMD.NET-Clientfunktionalität | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59d5086aaba3fbf1ebe8581031f30f3313a51938
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c754b19a1cce0e3fb68a852c2cfdb3fb98617a65
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET-Clientfunktionalität
   Wie andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Datenanbieter auch dient ADOMD.NET als Verbindung zwischen einer Anwendung und einer Datenquelle. Im Gegensatz zu anderen .NET Framework-Datenanbietern arbeitet ADOMD.NET jedoch mit analytischen Daten. Um das leisten zu können, unterstützt ADOMD.NET eine Funktionalität, die sich von der anderer .NET Framework-Datenanbieter erheblich unterscheidet. ADOMD.NET ermöglicht nicht nur das Abrufen von Daten, sondern auch das Abrufen von Metadaten und Änderungen an der Struktur des analytischen Datenspeichers:  
@@ -44,7 +31,7 @@ ms.lasthandoff: 02/15/2018
  **Ändern die Struktur des analytischen Daten**  
  ADOMD.NET kann auch verwendet werden, um die Struktur des analytischen Datenspeichers zu ändern. Dies erfolgt zwar in der Regel durch das Analysis Management Objects (AMO)-Objektmodell, doch können Sie auch ADOMD.NET verwenden, um Analysis Services Scripting Language (ASSL)-Befehle zum Erstellen, Ändern oder Löschen von Objekten auf dem Server zu senden.  
   
- Weitere Informationen: [ausführen Befehle für eine analytische Datenquelle](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md), [Entwickeln mit Analysis Management Objects &#40; AMO &#41; ](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md), [Analysis Services Scripting Language &#40; ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ Weitere Informationen: [ausführen Befehle für eine analytische Datenquelle](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md), [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md), [Analysis Services Scripting Sprache &#40;ASSL XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  Das Abrufen von Metadaten, das Abrufen von Daten und das Ändern der Datenstruktur erfolgt jeweils an einem bestimmten Punkt im Workflow einer typischen ADOMD.NET-Anwendung.  
   

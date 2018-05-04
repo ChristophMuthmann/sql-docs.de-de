@@ -4,7 +4,6 @@ description: Ein Beispiel für die schnelle, die hilfreich bei beginnen Sie mit 
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: graphs
 ms.reviewer: ''
 ms.suite: sql
@@ -22,9 +21,9 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: c3f0af8ebad134246492aa112c574d1b7ebc2bf8
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: cc1f388b7ec6687fe64a4bad39d8d2c878221505
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

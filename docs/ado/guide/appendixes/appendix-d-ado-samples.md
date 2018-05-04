@@ -1,11 +1,9 @@
 ---
 title: 'Anhang D: ADO-Beispiele | Microsoft Docs'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a267d5b86e9b999a29c465d7e38116271f87bc7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 279e19f7f07144c376946c3155a2767f822c779c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Anhang D: ADO-Beispiele, in das Windows SDK
 Das Windows SDK enthält mehrere Beispielanwendungen, in denen die Verwendung von ADO und RDS-Code veranschaulicht. Diese Beispiele sollen Sie die Informationen zum Verwenden von ADO und RDS unterstützen, aber nicht auf Produktionsservern bereitgestellt werden sollen.

@@ -1,16 +1,16 @@
 ---
 title: Sqlmaint (Hilfsprogramm) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: sqlmaint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
 - sqlmaint utility
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (Hilfsprogramm)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die**Sqlmaint** -Hilfsprogramm führt einen Reihe angegebener Wartungsvorgänge für eine oder mehrere Datenbanken. Verwenden Sie **sqlmaint** , um DBCC-Überprüfungen auszuführen, eine Datenbank und das zugehörige Transaktionsprotokoll zu sichern, Statistiken zu aktualisieren und Indizes neu zu erstellen. Bei allen Datenbankwartungsaktivitäten wird ein Bericht generiert, der an eine festgelegte Textdatei, HTML-Datei oder ein festgelegtes E-Mail-Konto gesendet werden kann. **sqlmaint** führt Datenbankwartungspläne aus, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]erstellt wurden. Verwenden Sie das Hilfsprogramm [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dtexec [, um Wartungspläne von](../integration-services/packages/dtexec-utility.md)über die Eingabeaufforderung auszuführen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Das **sqlmaint**-Hilfsprogramm führt eine Reihe angegebener Wartungsvorgänge für eine oder mehrere Datenbanken aus. Verwenden Sie **sqlmaint** , um DBCC-Überprüfungen auszuführen, eine Datenbank und das zugehörige Transaktionsprotokoll zu sichern, Statistiken zu aktualisieren und Indizes neu zu erstellen. Bei allen Datenbankwartungsaktivitäten wird ein Bericht generiert, der an eine festgelegte Textdatei, HTML-Datei oder ein festgelegtes E-Mail-Konto gesendet werden kann. **sqlmaint** führt Datenbankwartungspläne aus, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]erstellt wurden. Verwenden Sie das Hilfsprogramm [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dtexec [, um Wartungspläne von](../integration-services/packages/dtexec-utility.md)über die Eingabeaufforderung auszuführen.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Verwenden Sie stattdessen die Wartungsplanfunktion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen zu Wartungsplänen finden Sie unter [Wartungspläne](../relational-databases/maintenance-plans/maintenance-plans.md).  
@@ -85,8 +85,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Gibt an, dass das Syntaxdiagramm für **sqlmaint** zurückgegeben werden soll. Dieser Parameter darf nur alleine verwendet werden.  
   
- **-S** *Server_name*[**\\*** Instance_name*]  
- Gibt die Zielinstanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf diesem Server herzustellen. Geben Sie *Server_name***\\***Instance_name* zur Verbindung mit einer benannten Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf diesem Server. Wenn kein Server angegeben wird, stellt **sqlmaint** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem lokalen Computer her.  
+ **-S** *server_name*[ **\\***instance_name*]  
+ Gibt die Zielinstanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *ervername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf diesem Server herzustellen. Geben Sie *server_name***\\*** instance_name* an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn kein Server angegeben wird, stellt **sqlmaint** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem lokalen Computer her.  
   
  **-U** *Anmelde-ID*  
  Gibt die Anmelde-ID an, der beim Verbinden zum Server verwendet werden soll. Wenn dieses Argument nicht angegeben wird, versucht **sqlmaint** , die [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierung zu verwenden. Wenn die *Anmelde-ID* Sonderzeichen enthält, muss das Argument in doppelte Anführungszeichen (") eingeschlossen werden. Andernfalls sind die doppelten Anführungszeichen optional.  
@@ -135,7 +135,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Für *HTML-Datei* ist der vollständige UNC-Dateiname erforderlich, wenn **sqlmaint** auf einen Remoteserver zugreift.  
   
  **-DelHtmlRpt** \<*Zeitraum*>  
- Gibt an, dass jeder HTML-Bericht im Berichtsverzeichnis gelöscht werden, wenn das Zeitintervall nach Erstellen der Berichtsdatei überschreitet \< *Zeitraum*>. **-DelHtmlRpt** sucht nach Dateien, deren Namen dem Muster entsprechen, das aus dem *HTML-Datei*-Parameter generiert wurde. Wenn *HTML-Datei* c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, dann ist **- DelHtmlRpt** bewirkt, dass **Sqlmaint** alle Dateien löscht, deren Namen dem Muster c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint entsprechen\*htm- und, sind älter als der angegebene \< *Zeitraum*>.  
+ Gibt an, dass jeder HTML-Bericht im Berichtsverzeichnis gelöscht werden soll, wenn das Zeitintervall nach Erstellen der Berichtsdatei den Wert \<*Zeitraum*> überschreitet. **-DelHtmlRpt** sucht nach Dateien, deren Namen dem Muster entsprechen, das aus dem *HTML-Datei*-Parameter generiert wurde. Wenn für *html_file* der Wert C:\Programme\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm angegeben wird, bewirkt **-DelHtmlRpt**, dass **sqlmaint** alle Dateien löscht, deren Namen dem Muster C:\Programme\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm entsprechen und die älter als der angegebene Wert für \<*time_period*> sind.  
   
  **-RmUnusedSpace** *Schwellenwert_Prozent_ungenutzt_Prozent*  
  Gibt an, dass nicht verwendeter Speicherplatz aus der mit **-D**angegebenen Datenbank entfernt wird. Diese Option ist nur für Datenbanken nützlich, die für das automatische Wachstum definiert wurden. *Schwellenwert_Prozent* gibt die Größe in Megabytes an, die die Datenbank erreichen muss, bevor **sqlmaint** versucht, nicht verwendeten Datenspeicherplatz zu entfernen. Wenn die Datenbank kleiner als *Schwellenwert_Prozent*ist, wird keine Aktion ausgeführt. *Prozent_frei* gibt an, wie viel nicht verwendeter Speicherplatz in der Datenbank verbleiben muss. Die Angabe erfolgt als Prozentsatz der endgültigen Größe der Datenbank. Wenn eine 200 MB große Datenbank z.B. 100 MB an Daten enthält, bewirkt die Angabe des Werts 10 für *Prozent_frei* , dass die endgültige Größe der Datenbank 110 MB beträgt. Beachten Sie, dass eine Datenbank nicht erweitert wird, wenn sie kleiner als der Wert ist, der sich aus *Prozent_frei* zuzüglich der Menge der Daten in der Datenbank ergibt. Wenn eine 108 MB große Datenbank z.B. 100 MB an Daten enthält, bewirkt die Angabe des Werts 10 für *Prozent_frei* nicht, dass die Datenbank auf 110 MB erweitert wird; die Datenbank bleibt 108 MB groß.  
@@ -205,7 +205,7 @@ dbname_log_yyyymmddhhmm.BAK
  Gibt an, dass das Sicherungsmedium ein Datenträger ist.  
   
  **-DelBkUps**< *Zeitraum* >  
- Bei datenträgersicherungen gibt an, dass jede Sicherungsdatei im Sicherungsverzeichnis gelöscht werden, wenn das Zeitintervall nach der Erstellung der Sicherung überschreitet die \< *Zeitraum*>.  
+ Gibt bei Datenträgersicherungen an, dass jede Sicherungsdatei im Sicherungsverzeichnis gelöscht werden soll, wenn das Zeitintervall nach Erstellen der Sicherungsdatei den Wert für \<*time_period*> überschreitet.  
   
  **-CrBkSubDir**  
  Gibt bei Datenträgersicherungen an, dass ein Unterverzeichnis im Verzeichnis [*Sicherungspfad*] oder im Standardsicherungsverzeichnis erstellt werden soll, wenn **-UseDefDir** ebenfalls angegeben ist. Der Name des Unterverzeichnisses wird anhand des Datenbanknamens generiert, der mit **-D**angegeben wurde. **-CrBkSubDir** bietet ein einfaches Verfahren, um alle Sicherungen für verschiedene Datenbanken in unterschiedlichen Unterverzeichnissen abzulegen, ohne den *Sicherungspfad* -Parameter ändern zu müssen.  
@@ -233,7 +233,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Wird nur *number* angegeben, wird **weeks**als standardmäßiges Datumsteil verwendet.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das Hilfsprogramm **sqlmaint** führt Wartungsvorgänge für eine oder mehrere Datenbanken aus. Wenn **-D** angegeben wird, werden die Vorgänge, die mit den verbleibenden Schaltern angegeben werden, nur für die angegebene Datenbank ausgeführt. Wenn **-PlanName** oder **-PlanID** angegeben wird, ruft **sqlmaint** aus dem angegebenen Wartungsplan nur die Liste der Datenbanken im Plan ab. Alle in den verbleibenden **sqlmaint** -Parametern angegebenen Vorgänge werden für jede Datenbank in der Liste ausgeführt, die aus dem Plan abgerufen wurde. Das Hilfsprogramm **sqlmaint** wendet keine der im Plan selbst definierten Wartungsaktivitäten an.  
   
  Das Hilfsprogramm **sqlmaint** gibt bei erfolgreicher Ausführung 0 und bei Auftreten eines Fehlers 1 zurück. Ein Fehler wird in folgenden Fällen gemeldet:  
@@ -275,7 +275,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)  
   

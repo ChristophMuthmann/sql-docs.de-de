@@ -3,15 +3,12 @@ title: Datenquellen-Spezifikation Unterschlüssel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source specification subkeys [ODBC]
 - registry entries for data sources [ODBC], data source specification subkeys
@@ -21,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5f3080d85b2c01491d94ecb75b956d6c67bc061b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d432b5ede436db3aa334d060e2a4bce152606c75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-source-specification-subkeys"></a>Data Source-Spezifikation Unterschlüssel
 Jede Datenquelle, die in der ODBC-Datenquellen-Unterschlüssel aufgeführt verfügt über einen Unterschlüssel selbst. Dieser Unterschlüssel verfügt über den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel ODBC-Datenquellen. Die Werte unter dieser Unterschlüssel müssen die Treiber-DLL auflisten und listet möglicherweise eine Beschreibung der Datenquelle. Wenn der Treiber Konvertierer unterstützt, kann der Name von einem Standard-Konvertierer, das Standard-Konvertierungs-DLL und die Standardoption für die Übersetzung Werteliste. Die Werteliste möglicherweise auch andere Informationen, die vom Treiber bei der Herstellung einer Verbindung mit der Datenquelle erforderlich sind. Der Treiber möglicherweise z. B. einen Servernamen, Datenbanknamen oder Schemaname.  

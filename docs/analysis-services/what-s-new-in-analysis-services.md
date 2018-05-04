@@ -1,27 +1,26 @@
 ---
 title: Was ist neu in Analysis Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 
+caps.latest.revision: 97
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 75d2f8519d66ca80b90477711fd5b41dbc1f5100
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Was ist neu in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -89,7 +88,7 @@ Eine *berechnete Tabelle* ist eine reine Modellkonstruktion, die auf einem DAX-A
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Parallele Verarbeitung für mehrere Tabellenpartitionen in tabellarischen Modellen    
  Diese Version enthält neue Funktionen für die parallele Verarbeitung für Tabellen mit zwei oder mehr Partitionen, sodass die Verarbeitungsleistung erhöht wird. Es sind keine Konfigurationseinstellungen für diese Funktion vorhanden. Weitere Informationen zum Konfigurieren von Partitionen und Verarbeiten von Tabellen finden Sie unter [tabellarische Modell Partitionen](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Hinzufügen von Computerkonten als Administratoren in SSMS    
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratoren können jetzt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zum Konfigurieren von Computerkonten als Mitglieder der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratorengruppe verwenden. Legen Sie im Dialogfeld **Benutzer oder Gruppen auswählen** die **Speicherorte** für die Computerdomäne fest, und fügen Sie dann den Objekttyp **Computer** hinzu. Weitere Informationen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratoren können jetzt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zum Konfigurieren von Computerkonten als Mitglieder der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratorgruppe verwenden. Legen Sie im Dialogfeld **Benutzer oder Gruppen auswählen** die **Speicherorte** für die Computerdomäne fest, und fügen Sie dann den Objekttyp **Computer** hinzu. Weitere Informationen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC für Analysis Services    
  Database Consistency Checker (DBCC) wird intern ausgeführt, um potenzielle Probleme mit beschädigten Daten beim Laden der Datenbank zu ermitteln. Sie können das Tool aber auch bei Bedarf ausführen, wenn Sie Probleme in Ihren Daten oder Ihrem Modell vermuten. DBCC führt verschiedene Überprüfungen abhängig davon aus, ob das Modell tabellarisch oder mehrdimensional ist. Einzelheiten finden Sie unter [Datenbankkonsistenzprüfung &#40;DBCC&#41; für tabellarische und mehrdimensionale Analysis Services-Datenbanken](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).    
  ### <a name="extended-events-updates"></a>Updates für erweiterte Ereignisse    

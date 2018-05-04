@@ -1,11 +1,9 @@
 ---
 title: Source-Eigenschaft (ADO-Datensatz) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,12 +25,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 76c09225e13e0a17e7b1c3d9e4ba42b5128f6769
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: bff992c2c2406c7ea6df95ca92f67da3bf52e3fc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="source-property-ado-record"></a>Source-Eigenschaft (ADO-Datensatz)
 Gibt an, die Datenquelle oder das Objekt dargestellt wird, indem die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md).  

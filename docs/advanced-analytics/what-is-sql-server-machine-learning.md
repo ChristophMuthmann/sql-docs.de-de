@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Was ist SQL Server-Machine Learning-Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ Der Schlüssel des wertbeitrags von Machine Learning Services ist die Leistungsf
 Es gibt zwei Optionen für die Verwendung von Machine Learning-Funktionen in SQL Server: 
 
 + [**SQL Server Machine Learning-Services (Datenbankintern)** ](r/sql-server-r-services.md) innerhalb der Datenbankmodulinstanz, in dem das Berechnungsmodul vollständig in das Datenbankmodul integriert ist. Die meisten Installationen werden diese Option.
-+ [**SQL Server Machine Learning-Server (eigenständig)** ](r/r-server-standalone.md) ist eine nicht-SQL-Installation. Obwohl Sie SQL Server-Setup verwenden, um den Server zu installieren, wird diese vollständig aus SQL Server entkoppelt. Ist funktionell äquivalent zu nicht-SQL [Microsoft Machine Learning-Server für Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
++ [**SQL Server Machine Learning-Server (eigenständig)** ](r/r-server-standalone.md) wird Machine Learning-Server für Windows, die unabhängig von das Datenbankmodul ausgeführt wird. Obwohl Sie SQL Server-Setup verwenden, um den Server zu installieren, ist die Funktion nicht instanzabhängig. Ist funktionell äquivalent zu nicht-SQL-Server [Microsoft Machine Learning-Server für Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
 ## <a name="r-and-python-packages"></a>R und Python-Pakete
 

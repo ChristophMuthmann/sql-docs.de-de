@@ -1,11 +1,9 @@
 ---
 title: ParentSameAsPrev-Eigenschaft (ADO MD) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8945882c98af6a452c328c00a39af07c98ad7763
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3827d8caf756113406af0bb7ec26613252fde5ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev-Eigenschaft (ADO MD)
 Gibt an, ob das übergeordnete Element von dieser Position [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) ist das übergeordnete Element des unmittelbar vorangehenden Elements entspricht.  

@@ -1,40 +1,23 @@
 ---
-title: "Datenbankobjekte (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], about objects
-- SQL Server Analysis Services, objects
-- Analysis Services objects, about Analysis Services objects
-- SSAS, objects
-- Analysis Services objects
-- objects [Analysis Services]
-ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
-caps.latest.revision: 
-author: Minewiskan
+title: Datenbankobjekte (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f328102326537d201daa4bb627d818a3a58661dc
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 5fc49000a263a2a47b4cd04acd3368dfd0ed2015
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Datenbankobjekte (Analysis Services - Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz enthält Datenbankobjekte und Assemblys für die Verwendung mit online analytical Processing (OLAP) und Datamining.  
+  Ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz enthält Datenbankobjekte und Assemblys für die Verwendung mit online analytical Processing (OLAP) und Datamining.  
   
 -   Datenbanken enthalten OLAP- und Data Mining-Objekte, z.&#160;B. Datenquellen, Datenquellensichten, Cubes, Measures, Measuregruppen, Dimensionen, Attribute, Hierarchien, Miningstrukturen, Miningmodelle und Rollen.  
   
@@ -70,13 +53,13 @@ Ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion
 |[Datenquellen in mehrdimensionalen Modellen](../../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)|Beschreibt eine Datenquelle in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Datenquellsichten in mehrdimensionalen Modellen](../../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)|Beschreibt ein logisches Datenmodell, das basierend auf eine oder mehrere Datenquellen in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Cubes in mehrdimensionalen Modellen](../../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)|Beschreibt Cubes und Cubeobjekte, einschließlich Measures, Measuregruppen, Dimensionsverwendungbeziehungen, Berechnungen, Key Performance Indicators (KPIs), Aktionen, Übersetzungen, Partitionen und Perspektiven.|  
-|[Dimensionen &#40; Analysis Services – mehrdimensionale Daten &#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Beschreibt Dimensionen und Dimensionsobjekte, einschließlich Attribute, Attributbeziehungen, Hierarchien, Ebenen und Elemente.|  
-|[Miningstrukturen &#40; Analysis Services – Datamining &#41;](../../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)|Beschreibt Miningstrukturen und Miningobjekte, einschließlich Miningmodellen.|  
-|[Sicherheitsrollen &#40; Analysis Services – mehrdimensionale Daten &#41;](../../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)|Beschreibt eine Rolle, den Sicherheitsmechanismus, der zum Steuern des Zugriffs auf Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Dimensionen & #40; Analysis Services – mehrdimensionale Daten & #41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Beschreibt Dimensionen und Dimensionsobjekte, einschließlich Attribute, Attributbeziehungen, Hierarchien, Ebenen und Elemente.|  
+|[Miningstrukturen & #40; Analysis Services – Datamining & #41;](../../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)|Beschreibt Miningstrukturen und Miningobjekte, einschließlich Miningmodellen.|  
+|[Sicherheitsrollen & #40; Analysis Services – mehrdimensionale Daten & #41;](../../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)|Beschreibt eine Rolle, den Sicherheitsmechanismus, der zum Steuern des Zugriffs auf Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Mehrdimensionales Modell Assemblys-Verwaltung](../../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)|Beschreibt eine Assembly, eine Auflistung von benutzerdefinierten Funktionen, die zum Erweitern der Sprachen MDX und DMX in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwendet werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unterstützte Datenquellen &#40; SSAS – mehrdimensional &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
+ [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Mehrdimensionale Modelllösungen ](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Datamining-Lösungen](../../../analysis-services/data-mining/data-mining-solutions.md)  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
 - data conversions from SQL to C types [ODBC], about converting
@@ -27,12 +27,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe89608061d82cf54a16394e5ce1a8f901e23523
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72fa649a1c894109557c58f79b1590466020c156
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Konvertieren von Daten von SQL-in C-Datentypen
 Wenn eine Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**, ruft der Treiber die Daten aus der Datenquelle. Wenn erforderlich, in dem der Treiber es an der angegebenen Datentyp abgerufen, die Daten vom Datentyp konvertiert die *TargetType* Argument in **SQLBindCol** oder **SQLGetData.** Schließlich speichert die Daten in den Speicherort, auf die *TargetValuePtr* Argument in **SQLBindCol** oder **SQLGetData** (und das SQL_DESC_DATA_PTR-Feld der ARD).  

@@ -1,37 +1,23 @@
 ---
 title: Datamining-Abfragen | Microsoft Docs
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- queries [DMX], creating
-- prediction queries [DMX]
-- Prediction Query Builder
-- mining models [Analysis Services], querying
-ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: eb1e42ac7f9cf3aeaf58d6e1fb3f913c8c164047
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-queries"></a>Data Mining-Abfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Data Mining-Abfragen eignen sich für viele Zwecke. Folgende Aktionen sind möglich:  
+  Data Mining-Abfragen eignen sich für viele Zwecke. Folgende Aktionen sind möglich:  
   
 -   Anwenden des Modells auf neue Daten, um einzelne oder mehrere Vorhersagen zu treffen. Sie können Eingabewerte als Parameter oder in einem Batch bereitstellen.  
   
@@ -60,7 +46,7 @@ Data Mining-Abfragen eignen sich für viele Zwecke. Folgende Aktionen sind mögl
 ##  <a name="bkmk_Understand"></a> Grundlegendes zu Data Mining-Abfragen  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining unterstützt die folgenden Typen von Abfragen:  
   
--   [Vorhersageabfragen &#40; Datamining &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [Vorhersageabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      Abfragen, mit denen Rückschlüsse anhand von Mustern im Modell und aus Eingabedaten gezogen werden können.  
   
@@ -68,7 +54,7 @@ Data Mining-Abfragen eignen sich für viele Zwecke. Folgende Aktionen sind mögl
   
      Abfragen, die Metadaten, Statistiken und andere Informationen zum Modell selbst zurückgeben.  
   
--   [Drillthroughabfragen &#40; Datamining &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [Drillthroughabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      Abfragen, die die zugrunde liegenden Falldaten für das Modell und sogar Daten, die nicht im Modell verwendet wurden, aus der Struktur abrufen können.  
   
@@ -149,13 +135,13 @@ Data Mining-Abfragen eignen sich für viele Zwecke. Folgende Aktionen sind mögl
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Die Themen in diesem Abschnitt stellen jeden Data Mining-Abfragetyp im Detail vor und enthalten Links zu ausführlichen Beispielen für das Erstellen von Abfragen für Data Mining-Modelle.  
   
- [Vorhersageabfragen &#40; Datamining &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Vorhersageabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [Inhaltsabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [Datendefinitionsabfragen &#40; Datamining &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Datendefinitionsabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
@@ -174,7 +160,7 @@ Data Mining-Abfragen eignen sich für viele Zwecke. Folgende Aktionen sind mögl
 |Verwenden der Data Mining-Komponenten in Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

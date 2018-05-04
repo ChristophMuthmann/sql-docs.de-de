@@ -3,7 +3,6 @@ title: Neuigkeiten in SQL Server 2017 Analysis Services | Microsoft Docs
 ms.date: 10/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -15,9 +14,9 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8336d1ce796bb8e83b39d01f0bf6c2b47cb38daa
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: e6e14fa59fc175b35d67b1bbe1657aeda1e802a3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

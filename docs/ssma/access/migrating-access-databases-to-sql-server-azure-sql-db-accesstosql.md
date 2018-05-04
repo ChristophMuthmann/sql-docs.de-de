@@ -2,7 +2,6 @@
 title: Migrieren von Access-Datenbanken zu SQLServer - Azure SQL-Datenbank | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/15/2017
@@ -25,9 +24,9 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: b61d58098aaf207f19a42437e09ca1785a7c682e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 9b17a4e565c27d501d2e515df195c84fb5116321
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

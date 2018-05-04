@@ -27,12 +27,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5d373c62b61469835ed8a6c41e9231c5eff67fd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 895b90d5bad14747355182a42cdcfd1b937009fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ FROM <existing model>
  Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *expression*  
- Ein Ausdruck, der auf den Trainingsdaten eine gültige Filterbedingung ergibt. Weitere Informationen zu Ausdrücken, die als Filter verwendet werden können, finden Sie unter [Filter für Miningmodelle &#40; Analysis Services – Datamining &#41; ](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ Ein Ausdruck, der auf den Trainingsdaten eine gültige Filterbedingung ergibt. Weitere Informationen zu Ausdrücken, die als Filter verwendet werden können, finden Sie unter [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  *vorhandenes Modell*  
  Der Name des vorhandenen Modells, das kopiert werden soll.  
@@ -93,8 +92,8 @@ FROM [TM Clustering]
 >  Filter, die auf die Falltabelle angewendet werden, können mithilfe der SELECT INTO-Anweisung geändert werden, wie in diesem Beispiel erläutert wird. Wenn das ursprüngliche Modell jedoch einen Filter für eine geschachtelte Tabelle enthält, kann dieser Filter nicht mithilfe dieser Syntax geändert oder entfernt werden, er wird stattdessen unverändert aus dem ursprünglichen Modell kopiert. Um ein Modell mit einem anderen Filter für eine geschachtelte Tabelle zu erstellen, verwenden Sie stattdessen die ALTER STRTUCTURE...ADD MODEL-Syntax.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

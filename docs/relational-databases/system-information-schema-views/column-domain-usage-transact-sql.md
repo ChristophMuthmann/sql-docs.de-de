@@ -25,13 +25,12 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70bd9f0161b84636d4cea081576ca5b54f0bc158
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c6980d71bf921065c0d460fcc9107a8d525dcd60
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ ms.lasthandoff: 04/16/2018
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**Nvarchar (**128**)**|Datenbank, in der der Aliasdatentyp vorhanden ist.|  
-|**DOMAIN_SCHEMA**|**Nvarchar (**128**)**|Name des Schemas, das den Aliasdatentyp enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Datentyps zu bestimmen. Die einzige zuverlässige Möglichkeit zum Finden des Schemas eines Typs besteht darin, die TYPEPROPERTY-Funktion zu verwenden.|  
+|**DOMAIN_CATALOG**|**Nvarchar (** 128 **)**|Datenbank, in der der Aliasdatentyp vorhanden ist.|  
+|**DOMAIN_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das den Aliasdatentyp enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Datentyps zu bestimmen. Die einzige zuverlässige Möglichkeit zum Finden des Schemas eines Typs besteht darin, die TYPEPROPERTY-Funktion zu verwenden.|  
 |**DOMÄNENNAME**|**sysname**|Aliasdatentyp.|  
-|**TABLE_CATALOG**|**Nvarchar (**128**)**|Tabellenqualifizierer|  
-|**TABLE_SCHEMA**|**Nvarchar (**128**)**|Tabellenbesitzer.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**TABLE_CATALOG**|**Nvarchar (** 128 **)**|Tabellenqualifizierer|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|Tabellenbesitzer.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**TABLE_NAME**|**sysname**|Tabelle, in der der Aliasdatentyp verwendet wird.|  
 |**COLUMN_NAME**|**sysname**|Spalte, die den Aliasdatentyp verwendet.|  
   

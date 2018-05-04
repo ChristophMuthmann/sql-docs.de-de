@@ -3,15 +3,12 @@ title: SQLInstallDriverEx Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLInstallDriverEx
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 85c6bcc740743473e8563fc3c3c25e967caff095
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4c4ba55c94f36052d525c79c3c472e7e5c28d6a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx-Funktion
 **Konformität**  
@@ -106,9 +102,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Kommentare  
  Die *LpszDriver* Argument ist eine Liste der Attribute in Form von Schlüsselwort-Wert-Paaren. Jedes Paar wird durch ein Nullbyte beendet, und die gesamte Liste wird mit null Byte beendet. (D. h. kennzeichnen zwei null-Bytes am Ende der Liste.) Das Format dieser Liste wird wie folgt aus:  
   
- *Treiber-"DESC"* **\\**0Driver**=***-Treiber-DLL-Dateiname***\\**0 [Setup **= ***Setup-DLL-Dateiname***\\**0]  
+ *Treiber-"DESC"* **\\** 0Driver**=***-Treiber-DLL-Dateiname***\\** 0 [Setup **= ***Setup-DLL-Dateiname***\\** 0]  
   
- [*-Treiber-Attr-Schlüsselwort1***=***value1 ***\\**0] [*-Treiber-Attr-Schlüsselwort2***=*** Wert2 ***\\**0]... **\\**0  
+ [*-Treiber-Attr-Schlüsselwort1***=*** value1 ***\\** 0] [*-Treiber-Attr-Schlüsselwort2***=*** Wert2 ***\\** 0]... **\\** 0  
   
  \0 ist, in dem ein Nullbyte und *-Treiber-Attr-Keywordn* alle Treiber-Attribut-Schlüsselwort ist. Die Schlüsselwörter müssen in der angegebenen Reihenfolge angezeigt werden. Beispielsweise nehmen wir an, dass ein Treiber für Textdateien formatierte separate Treiber und -Setup-DLLs verwendet, und mit den Erweiterungen ".txt" und CSV verwenden Sie-Dateien. Die *LpszDriver* Argument für diesen Treiber möglicherweise wie folgt:  
   

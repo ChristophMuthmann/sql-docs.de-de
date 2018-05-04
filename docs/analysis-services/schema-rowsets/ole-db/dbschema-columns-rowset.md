@@ -23,25 +23,25 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad15c20b68b3ccc69dee5b39c839f9f8dd0b2fab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Stellt Spalteninformationen für alle Spalten, die den bereitgestellten Einschränkungskriterien entsprechen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Stellt Spalteninformationen für alle Spalten bereit, die den bereitgestellten Einschränkungskriterien entsprechen.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DBSCHEMA_COLUMNS** -Rowset enthält die folgenden Spalten.  
   
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**"TABLE_CATALOG"**|**DBTYPE_WSTR**||Der Name der Datenbank.|  
+|**TABLE_CATALOG**|**DBTYPE_WSTR**||Der Name der Datenbank.|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**||Nicht unterstützt.|  
-|**TABELLENNAME**|**DBTYPE_WSTR**||Der Name des Cubes.|  
-|**SPALTENNAME**|**DBTYPE_WSTR**||Der Name der Attributhierarchie oder des Measures.|  
+|**TABLE_NAME**|**DBTYPE_WSTR**||Der Name des Cubes.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**||Der Name der Attributhierarchie oder des Measures.|  
 |**COLUMN_GUID**|**DBTYPE_GUID**||Nicht unterstützt.|  
 |**COLUMN_PROPID**|**DBTYPE_UI4**||Nicht unterstützt.|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**||Die Position der Spalte, beginnend mit 1.|  
@@ -75,10 +75,10 @@ ms.lasthandoff: 01/08/2018
   
 |Spaltenname|Typindikator|Einschränkungsstatus|  
 |-----------------|--------------------|-----------------------|  
-|**"TABLE_CATALOG"**|**DBTYPE_WSTR**|Optional|  
+|**TABLE_CATALOG**|**DBTYPE_WSTR**|Optional|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**|Optional|  
-|**TABELLENNAME**|**DBTYPE_WSTR**|Optional|  
-|**SPALTENNAME**|**DBTYPE_WSTR**|Optional|  
+|**TABLE_NAME**|**DBTYPE_WSTR**|Optional|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Optional|  
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|Optional|  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - data length [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f6934769c4f78063e24a393877112c2219121740
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ad2d00df90f8edbbfbcc403987ee04de660a11cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Die Länge der Pufferlänge und Abschneiden
 Die *Datenlänge* ist die Bytelänge der Daten, die in der Anwendung Datenpuffers gespeichert werden würde, nicht verwendet werden, wie er in der Datenquelle gespeichert wird. Diese Unterscheidung ist wichtig, da die Daten häufig in unterschiedlichen Typen im Datenpuffer als in der Datenquelle gespeichert werden. Daher ist dies für Daten, die an die Datenquelle gesendet werden, die Bytelänge der Daten vor der Konvertierung in den Typ der Datenquelle. Für Daten aus der Datenquelle abgerufen wird ist dies die Bytelänge der Daten nach der Konvertierung in den Datenpuffer Typ und bevor jedes Abschneiden erfolgt.  

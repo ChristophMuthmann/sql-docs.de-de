@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 20c4b01b2ba88ee4d38954d7f89886cf602d54ea
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f30b087323ddfc26297844209d7293ea40ed5604
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-property-rds"></a>Connect-Eigenschaft (RDS)
 Gibt den Namen der Datenbank, von dem die Abfrage und Update-Vorgänge ausgeführt werden.  

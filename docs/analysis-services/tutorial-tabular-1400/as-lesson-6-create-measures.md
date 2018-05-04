@@ -14,15 +14,14 @@ ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
-ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d37b1c5a307ea7f9c90fa29c83536a4b3d8ef0bf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1d304d20649c4a2ab3c5a91646cc69ff66820f54
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-measures"></a>Erstellen von Measures
 

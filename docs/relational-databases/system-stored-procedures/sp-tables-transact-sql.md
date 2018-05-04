@@ -24,13 +24,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a32e77f966630af880795eb3020335078cd7e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 79367f55de35eb285803a08646677eb3b624e16e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,9 +63,9 @@ sp_tables [ [ @table_name = ] 'name' ]
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Spalten einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Falls der Besitzer nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit dem angegebenen Namen besitzt, wird nach einer Tabelle mit dem angegebenen Namen gesucht, deren Besitzer der Datenbankbesitzer ist. Falls vorhanden, werden die Spalten dieser Tabelle zurückgegeben.  
   
  [  **@table_qualifier=** ] **"***Qualifizierer***"**  
- Der Name des Tabellenqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer***.*** Besitzer***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ Der Name des Tabellenqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
- [ **,** [  **@table_type=** ] **""***Typ***"**, **"**Typ**""** ]  
+ [ **,** [  **@table_type=** ] **""***Typ***"**, **"** Typ **""** ]  
  Eine Liste mit Werten, getrennt durch Kommas, zum Abrufen von Informationen zu allen Tabellen des angegebenen Tabellentyps. Dazu gehören **Tabelle**, **SYSTEMTABLE**, und **Ansicht**. *Typ* ist **varchar(100)**, hat den Standardwert NULL.  
   
 > [!NOTE]  

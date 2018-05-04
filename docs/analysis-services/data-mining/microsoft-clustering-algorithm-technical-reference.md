@@ -1,16 +1,16 @@
 ---
 title: Microsoft Clustering Algorithm Technical Reference | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -25,24 +25,23 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 16d3dae2010f43a15cf11d83891bdf30b5b5b518
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Clustering-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In diesem Abschnitt wird die Implementierung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus einschließlich der Parameter erklärt, mit denen Sie das Verhalten von Clustermodellen steuern können. Außerdem bietet der Abschnitt Anleitungen zur Verbesserung der Leistung beim Erstellen und Verarbeiten von Clustermodellen.  
+  In diesem Abschnitt wird die Implementierung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus einschließlich der Parameter erklärt, mit denen Sie das Verhalten von Clustermodellen steuern können. Außerdem bietet der Abschnitt Anleitungen zur Verbesserung der Leistung beim Erstellen und Verarbeiten von Clustermodellen.  
   
  Weitere Informationen zum Verwenden von Clustermodellen finden Sie in folgenden Themen:  
   
--   [Miningmodellinhalt, für das Clustering-Modelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Miningmodellinhalt, für das Clustering-Modelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
@@ -188,6 +187,6 @@ In diesem Abschnitt wird die Implementierung des [!INCLUDE[msCoName](../../inclu
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [Miningmodellinhalt, für das Clustering-Modelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt, für das Clustering-Modelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

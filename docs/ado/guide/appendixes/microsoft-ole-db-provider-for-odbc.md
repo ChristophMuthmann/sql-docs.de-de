@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB-Anbieter für ODBC | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB-Anbieter für ODBC (Übersicht)
 Ein ADO- oder RDS-Programmierer würde idealerweise möglich in dem jede Datenquelle eine OLE DB-Schnittstelle verfügbar macht, damit ADO direkt in der Datenquelle aufrufen kann. Obwohl Datenbankanbieter zunehmend OLE DB-Schnittstellen implementieren, sind einige Datenquellen noch nicht auf diese Weise bereitgestellt. Allerdings können die meisten DBMS-Systeme heute über ODBC zugegriffen werden.
@@ -71,7 +68,7 @@ MSDASQL
 
  Der Anbieter unterstützt keine bestimmten Verbindungsparameter zusätzlich zu den von ADO definiert. Allerdings wird der Anbieter nicht ADO Verbindungsparameter an dem ODBC-Treiber-Manager übergeben.
 
- Da Sie weglassen, können der **Anbieter** Parameter, machen Sie daher eine ADO-Verbindungszeichenfolge, die mit einer ODBC-Verbindungszeichenfolge für die gleiche Datenquelle identisch ist. Verwenden Sie die gleichen Parameternamen (**Treiber =**, **Datenbank =**, **DSN =**usw.), Werte und Syntax wie würden Sie beim Verfassen einer ODBC-Verbindungszeichenfolge. Sie können mit oder ohne vordefinierte Datenquellenname (DSN) oder FileDSN verbinden.
+ Da Sie weglassen, können der **Anbieter** Parameter, machen Sie daher eine ADO-Verbindungszeichenfolge, die mit einer ODBC-Verbindungszeichenfolge für die gleiche Datenquelle identisch ist. Verwenden Sie die gleichen Parameternamen (**Treiber =**, **Datenbank =**, **DSN =** usw.), Werte und Syntax wie würden Sie beim Verfassen einer ODBC-Verbindungszeichenfolge. Sie können mit oder ohne vordefinierte Datenquellenname (DSN) oder FileDSN verbinden.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Die Syntax mit einem DSN oder FileDSN:
 

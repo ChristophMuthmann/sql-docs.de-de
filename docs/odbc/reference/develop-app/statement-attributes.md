@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], statement attributes
 - statement attributes [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3bfbfb4647d39a06bc3a722cba9a903815429100
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: aa9fda9b525530b1b6449ac09b37aa5aefe09c91
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-attributes"></a>Anweisungsattribute
 Anweisungsattribute sind Eigenschaften der Anweisung. Ob Sie Lesezeichen und welche Art von verwenden Cursor für die Verwendung mit der Anweisung Ergebnis festgelegt sind, z. B. Anweisungsattribute.  

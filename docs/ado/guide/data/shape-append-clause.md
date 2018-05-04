@@ -1,11 +1,9 @@
 ---
 title: APPEND-Klausel Form | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb0275048d5afbe1bb13adc74eb5d2cba14e2a9e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-append-clause"></a>Form "APPEND-Klausel
 Die Form Befehl APPEND-Klausel fügt eine Spalte oder Spalten zu einer **Recordset**. Diese Spalten sind in vielen Fällen Kapitelspalten, die auf ein untergeordnetes Element verweisen **Recordset**.  
@@ -43,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *parent-command*  
  0 (null) oder eines der folgenden (-Eigenschaftenmethode der *übergeordneten Befehl* vollständig):  
   
--   Ein Anbieterbefehl in geschweifte Klammern ("") eingeschlossen, zurückgibt eine **Recordset** Objekt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und die Syntax ist abhängig von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
+-   Ein Anbieterbefehl wird in geschweiften Klammern ("{}") zurückgibt, die eine **Recordset** Objekt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und die Syntax ist abhängig von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
   
 -   Eine andere Form-Befehl, die in Klammern eingebettet sind.  
   
@@ -73,7 +70,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>Hinweise  
  *child-recordset*  
- -   Ein Anbieterbefehl in geschweifte Klammern ("") eingeschlossen, zurückgibt eine **Recordset** Objekt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und die Syntax ist abhängig von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
+ -   Ein Anbieterbefehl wird in geschweiften Klammern ("{}") zurückgibt, die eine **Recordset** Objekt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und die Syntax ist abhängig von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
   
 -   Eine andere Form-Befehl, die in Klammern eingebettet sind.  
   

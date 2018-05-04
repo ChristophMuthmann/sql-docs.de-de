@@ -2,16 +2,14 @@
 title: Beurteilen den Zugriff auf Datenbankobjekte für die Konvertierung (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -29,12 +27,11 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 98d7b1276251e171ce849e04862ac6057a510d4e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: fb353f5906c1ed5cb45d6075f92cf183ba5e276b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Beurteilen den Zugriff auf Datenbankobjekte für die Konvertierung (AccessToSQL)
 Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, Sie sollten bestimmen, wie viel kann die Migration erfolgreich sein, und wie lange die Konvertierung dauern. SSMA kann einen Assessment-Bericht, der den Prozentsatz der Objekte, die in erfolgreich konvertiert wurden erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Syntax und die Uhrzeit für die Migration durchführen schätzt. SSMA können auch die spezifischen Probleme anzeigen, die Konvertierungsfehler verursacht hat.  

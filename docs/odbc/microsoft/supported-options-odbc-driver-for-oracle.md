@@ -3,15 +3,12 @@ title: Unterstützte Optionen (ODBC-Treiber für Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], supported options
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
@@ -19,12 +16,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f426788fc827e932e7468527b9fedf1aa4ef675b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3b3af252f4b0e80c4220cd93aa3e7c4e9e65b6e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>Unterstützte Optionen (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  

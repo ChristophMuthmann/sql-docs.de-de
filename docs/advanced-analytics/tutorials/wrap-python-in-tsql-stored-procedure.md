@@ -7,11 +7,11 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b0c32ba91698345adea542ed5929a494b00059e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3b7ffeac0dfe1e441f188aae67e28004e294fc3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wrap-python-code-in-a-stored-procedure"></a>Python-Code in einer gespeicherten Prozedur umschließen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,10 +31,10 @@ Obwohl es möglich ist, einem Remoteclient einrichten und Ausführen von Python-
 2. Erstellen Sie eine neue Datenbank für dieses Projekt aus, und ändern Sie im Rahmen Ihrer **Abfrage** Fenster, das die neue Datenbank verwendet.
 
     ```sql
-    CREATE DATABASE sqlpy;
-    GO;
-    USE sqlpy;
-    GO;
+    CREATE DATABASE sqlpy
+    GO
+    USE sqlpy
+    GO
     ```
 
     > [!TIP] 

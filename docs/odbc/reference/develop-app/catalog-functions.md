@@ -3,15 +3,12 @@ title: Katalogfunktionen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], about catalog functions
 - data dictionary [ODBC]
@@ -22,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a9ef633c9d5ee19489e8c796e99562ec26ec9d03
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 582b6d0912263d2eba76a7e357787c7c75ba0a75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-functions"></a>Katalogfunktionen
 Alle Datenbanken weisen eine Struktur, die beschreibt, wie Daten in der Datenbank gespeichert werden. Z. B. möglicherweise eine einfachen Auftrag Datenbank die Struktur, die in der folgenden Abbildung, in der die ID-Spalten, zum Verknüpfen der Tabellen verwendet werden angezeigt.  

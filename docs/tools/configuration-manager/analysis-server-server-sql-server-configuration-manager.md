@@ -1,8 +1,8 @@
 ---
-title: Analysis Server-<Server> (SQL Server-Konfigurations-Manager)
+title: Analysis-Server-&lt;Server&gt; (SQL Server-Konfigurations-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f46f2ff004412e245c50da31b2ac758806da07d9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MTE
+ms.openlocfilehash: 5aa74eb084ea96d42d0257c35ae25ca3ec27ba5f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>Analysis Server-<Server> (SQL Server-Konfigurations-Manager)
+# <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>Analysis-Server-&lt;Server&gt; (SQL Server-Konfigurations-Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Dieser Dienst unterstützt Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Um die Diensteigenschaften anzuzeigen, klicken Sie im Detailbereich mit der rechten Maustaste auf den Dienst, und klicken Sie dann auf **Eigenschaften**.  
+  Dieser Dienst unterstützt Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Um die Diensteigenschaften anzuzeigen, klicken Sie im Detailbereich mit der rechten Maustaste auf den Dienst, und klicken Sie dann auf **Eigenschaften**.  
   
  Informationen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]finden Sie in der Onlinedokumentation.  
   

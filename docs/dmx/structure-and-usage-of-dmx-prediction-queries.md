@@ -27,12 +27,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5f25d8ecd230ca4d2e7aa6a694536e71f5dd0f4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 068472c2e03701fffc051741f4a403b4741ed027
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struktur und Verwendung von DMX-Vorhersageabfragen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,18 +82,18 @@ ms.lasthandoff: 01/08/2018
   
  Die **ON** -Element ordnet die Spalten, die im Miningmodell auf Spalten eines externen Datasets definiert sind. Sie müssen dieses Element nicht einfügen, wenn Sie eine leere oder natürliche PREDICTION JOIN-Abfrage erzeugen.  
   
- Sie können die **, in dem** -Klausel, um die Ergebnisse einer Vorhersageabfrage filtern. Sie können eine **oben** oder **ORDER BY** -Klausel, um die wahrscheinlichsten Vorhersagen auszuwählen. Weitere Informationen zum Verwenden dieser Klauseln finden Sie unter [SELECT &#40; DMX &#41;](../dmx/select-dmx.md).  
+ Sie können die **, in dem** -Klausel, um die Ergebnisse einer Vorhersageabfrage filtern. Sie können eine **oben** oder **ORDER BY** -Klausel, um die wahrscheinlichsten Vorhersagen auszuwählen. Weitere Informationen zum Verwenden dieser Klauseln finden Sie unter [wählen &#40;DMX&#41;](../dmx/select-dmx.md).  
   
- Weitere Informationen zur Syntax einer vorhersageanweisung finden Sie unter [SELECT FROM &#60; Modell &#62; PREDICTION JOIN-Abfrage &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md) und [SELECT FROM &#60; Modell &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md).  
+ Weitere Informationen zur Syntax einer vorhersageanweisung finden Sie unter [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md) und [SELECT FROM &#60;Modell&#62; &#40;DMX &#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
   

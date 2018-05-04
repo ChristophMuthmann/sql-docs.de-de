@@ -1,11 +1,9 @@
 ---
 title: 'Senden die Updates: UpdateBatch-Methode | Microsoft Docs'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +15,11 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c19c51655a972b512c4d3b3978a3d176bae25dac
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2f37d46927f2424171c84b723f7541b34f09957d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Senden die Updates: UpdateBatch-Methode
 Im folgende Code wird ein Recordset im Batchmodus durch Festlegen der LockType-Eigenschaft AdLockBatchOptimistic und CursorLocation auf AdUseClient geöffnet. Es fügt zwei neue Datensätze und ändert den Wert eines Felds in einem vorhandenen Datensatz, und speichern die ursprünglichen Werte, und ruft dann UpdateBatch um, dass die Änderungen werden wieder an die Datenquelle zu senden.  

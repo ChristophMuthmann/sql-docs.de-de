@@ -1,11 +1,9 @@
 ---
 title: ADO MD-Codebeispiele in Visual Basic Scripting Edition | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82dd2d7a3754023bc9fea14c8e8c9f676a1aa300
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8af56e1a67775e6caa491d56d1736ac3d5e9c5d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>ADO MD-Codebeispiele in Visual Basic Scripting Edition
 Die folgenden Beispiele erfordern Microsoft Active Server Pages (ASP) für Microsoft Internet Information Server 4.0.  

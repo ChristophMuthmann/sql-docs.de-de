@@ -1,30 +1,28 @@
 ---
-title: "Analysis Services-Dokumentation für Entwickler | Microsoft Docs"
-ms.custom: 
+title: Analysis Services-Dokumentation für Entwickler | Microsoft Docs
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e6feb651ac8a473bf717d86cdeccef6c16bc1a74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Entwicklerhandbuch (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,14 +71,14 @@ Analysis Services bietet viele Methoden zum Anpassen einer Lösung mithilfe von 
 
 [Analysis Services-Schemarowsets](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md) beschreibt die Schemarowsets, die Informationen zu Serverstatus, Servervorgängen und Datenbankobjekten liefern.
 
-[XML for Analysis &#40; XMLA &#41; Verweis](../analysis-services/xmla/xml-for-analysis-xmla-reference.md) beschreibt XMLA-Konzepte, die Ihnen helfen zu verstehen, wie XMLA zu Ihrer benutzerdefinierten Projektmappe beitragen. Darüber hinaus wird der Grad der Kompatibilität mit der XMLA 1.1-Spezifikation beschrieben.
+[XML for Analysis &#40;XMLA&#41; Verweis](../analysis-services/xmla/xml-for-analysis-xmla-reference.md) beschreibt XMLA-Konzepte, die Ihnen helfen zu verstehen, wie XMLA zu Ihrer benutzerdefinierten Projektmappe beitragen. Darüber hinaus wird der Grad der Kompatibilität mit der XMLA 1.1-Spezifikation beschrieben.
 
-[Analysis Services Scripting Language &#40; ASSL XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) Beschreibt die ASSL-Erweiterungen für XMLA. ASSL stellt eine Datendefinitions- und Datenbearbeitungssprache für mehrdimensionale Analysis Services-Modelle bereit und ist eine Ergänzung der XMLA-Spezifikation.
+[Analysis Services Scripting Language &#40;ASSL XMLA&#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) beschreibt die ASSL-Erweiterungen für XMLA. ASSL stellt eine Datendefinitions- und Datenbearbeitungssprache für mehrdimensionale Analysis Services-Modelle bereit und ist eine Ergänzung der XMLA-Spezifikation.
 
-[Tabular Model Scripting Language &#40; TMSL &#41; Verweis](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) TMSL ist ein JSON-Darstellung des tabellarischen Modelle mit Kompatibilitätsgrad 1200 oder höher. Objektdefinitionen basieren auf tabellarischen Metadaten-Konstrukte, wie Tabelle, Spalte und Beziehung anstatt mehrdimensionale Metadaten, die möglicherweise nicht vertraut, wenn Sie im tabellarischen Modus mit Analysis Services-Daten modellieren vertraut sind.
+[Tabular Model Scripting Language &#40;TMSL&#41; Verweis](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) TMSL ist ein JSON-Darstellung des tabellarischen Modelle mit Kompatibilitätsgrad 1200 oder höher. Objektdefinitionen basieren auf tabellarischen Metadaten-Konstrukte, wie Tabelle, Spalte und Beziehung anstatt mehrdimensionale Metadaten, die möglicherweise nicht vertraut, wenn Sie im tabellarischen Modus mit Analysis Services-Daten modellieren vertraut sind.
 
 [Referenz zu Analysis Services PowerShell](../analysis-services/powershell/analysis-services-powershell-reference.md) dokumentiert den-Cmdlets für administrative Funktionen sowie die allgemeine verwendet **Invoke-ASCmd** -Cmdlet, das Skripts oder einer Abfrage als Eingabe akzeptiert.
 
 ## <a name="see-also"></a>Siehe auch
 [Technische Referenz ](../analysis-services/powershell/technical-reference-ssas.md) 
- [Abfrage- und Expression-Sprachreferenz &#40; Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+ [Abfrage- und Ausdruckssprachreferenz &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

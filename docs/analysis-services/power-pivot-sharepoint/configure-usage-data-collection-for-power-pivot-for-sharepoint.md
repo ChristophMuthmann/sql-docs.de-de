@@ -1,31 +1,23 @@
 ---
-title: "Konfigurieren der Sammlung von Verwendungsdaten für (PowerPivot für SharePoint | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Konfigurieren der Sammlung von Verwendungsdaten für (PowerPivot für SharePoint | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a798fdc88ca500d95bf86a7f3fe1ecaad6aebd9c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint verwendet und erweitert dieses System, um Berichte im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard bereitzustellen, die zeigen, wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten und -Dienste verwendet werden. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit die Verwendungsdaten für die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard erstellt werden.  
+  Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint verwendet und erweitert dieses System, um Berichte im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard bereitzustellen, die zeigen, wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten und -Dienste verwendet werden. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit die Verwendungsdaten für die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard erstellt werden.  
   
  Informationen zu den Verwendungsdaten im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard finden Sie unter [PowerPivot-Management-Dashboard und Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   

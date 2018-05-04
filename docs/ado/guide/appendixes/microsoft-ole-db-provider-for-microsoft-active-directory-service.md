@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5fbfe4b445df4375bee52a8bccc4db87d0040798
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst
 Die Active Directory Service Interfaces (ADSI)-Anbieter ermöglicht ADO zur Verbindung mit heterogenen Verzeichnisdienste über ADSI. So erhält ADO-Anwendungen nur-Lese Zugriff auf die Microsoft Windows NT 4.0 oder Microsoft Windows 2000-Verzeichnisdienste, zusätzlich zu den LDAP-kompatibles Verzeichnisdienst und Novell-Verzeichnisdienste. ADSI selbst basiert auf ein Anbietermodell, damit bei einem neuen Anbieter gewähren Zugriff auf ein anderes Verzeichnis wird die ADO-Anwendung darauf nahtlos zugreifen werden. Der ADSI-Anbieter Freethread- und Unicode aktiviert ist.  

@@ -3,15 +3,12 @@ title: Anweisung Übergänge | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -21,12 +18,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5f20ec0efb42e877695c44f4d62c4ffc1ae79806
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>Anweisung Übergänge
 ODBC-Anweisungen werden die folgenden Status haben.  
@@ -231,11 +227,11 @@ ODBC-Anweisungen werden die folgenden Status haben.
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--[2] oder [3] S1 [1]|--' [3] ' S1 [Np] und ([1] oder [2]) S1 [p] und [1] S2 [p] und [2]|--' [3] ' S1 [Np] und ([1] oder [2]) S1 [p] und [1] S3 [p] und [2]|(HY010)|(HY010)|  
   
- [1] der *' CompletionType '* Argument ist SQL_COMMIT und **SQLGetInfo** SQL_CB_DELETE für den Informationstyp SQL_CURSOR_COMMIT_BEHAVIOR zurückgegeben oder *' CompletionType '*Argument ist SQL_ROLLBACK und **SQLGetInfo** SQL_CB_DELETE für den Typ der SQL_CURSOR_ROLLBACK_BEHAVIOR Informationen zurückgegeben.  
+ [1] der *' CompletionType '* Argument ist SQL_COMMIT und **SQLGetInfo** SQL_CB_DELETE für den Informationstyp SQL_CURSOR_COMMIT_BEHAVIOR zurückgegeben oder *' CompletionType '* Argument ist SQL_ROLLBACK und **SQLGetInfo** SQL_CB_DELETE für den Typ der SQL_CURSOR_ROLLBACK_BEHAVIOR Informationen zurückgegeben.  
   
- [2] der *' CompletionType '* Argument ist SQL_COMMIT und **SQLGetInfo** SQL_CB_CLOSE für den Informationstyp SQL_CURSOR_COMMIT_BEHAVIOR zurückgegeben oder *' CompletionType '*Argument ist SQL_ROLLBACK und **SQLGetInfo** SQL_CB_CLOSE für den Typ der SQL_CURSOR_ROLLBACK_BEHAVIOR Informationen zurückgegeben.  
+ [2] der *' CompletionType '* Argument ist SQL_COMMIT und **SQLGetInfo** SQL_CB_CLOSE für den Informationstyp SQL_CURSOR_COMMIT_BEHAVIOR zurückgegeben oder *' CompletionType '* Argument ist SQL_ROLLBACK und **SQLGetInfo** SQL_CB_CLOSE für den Typ der SQL_CURSOR_ROLLBACK_BEHAVIOR Informationen zurückgegeben.  
   
- [3] der *' CompletionType '* Argument ist SQL_COMMIT und **SQLGetInfo** SQL_CB_PRESERVE für den Informationstyp SQL_CURSOR_COMMIT_BEHAVIOR zurückgegeben oder *' CompletionType '*Argument ist SQL_ROLLBACK und **SQLGetInfo** SQL_CB_PRESERVE für den Typ der SQL_CURSOR_ROLLBACK_BEHAVIOR Informationen zurückgegeben.  
+ [3] der *' CompletionType '* Argument ist SQL_COMMIT und **SQLGetInfo** SQL_CB_PRESERVE für den Informationstyp SQL_CURSOR_COMMIT_BEHAVIOR zurückgegeben oder *' CompletionType '* Argument ist SQL_ROLLBACK und **SQLGetInfo** SQL_CB_PRESERVE für den Typ der SQL_CURSOR_ROLLBACK_BEHAVIOR Informationen zurückgegeben.  
   
 ## <a name="sqlexecdirect"></a>SQLExecDirect  
   

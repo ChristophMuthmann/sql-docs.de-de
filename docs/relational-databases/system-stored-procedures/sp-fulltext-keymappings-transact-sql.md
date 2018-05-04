@@ -26,18 +26,17 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 872f3c474a790bdf7cbfabb4f8adf36ca0339724
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7237d85373e0830ea35dc247220f042699c45f77
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  Gibt Zuordnungen zwischen Dokumentbezeichnern (DocIds) und Volltextschlüsselwerten zurück. Die DocId-Spalte enthält Werte für eine **"bigint"** ganze Zahl, die einen bestimmten Volltext-Schlüsselwert in einer volltextindizierten Tabelle zugeordnet. DocId-Werte, die eine Suchbedingung erfüllen, werden vom Volltextsuchmodul an das Datenbankmodul übergeben. Dort werden sie Volltextschlüsselwerten aus der abgefragten Basistabelle zugeordnet. Die Volltextschlüsselspalte ist ein eindeutiger Index, der in einer Spalte der Tabelle erforderlich ist.  
+  Gibt Zuordnungen zwischen Dokumentbezeichnern (DocIds) und Volltextschlüsselwerten zurück. Die DocId-Spalte enthält Werte für eine **"bigint"** ganze Zahl, die einen bestimmten Volltext-Schlüsselwert in einer volltextindizierten Tabelle zugeordnet. DocId-Werte, die eine Suchbedingung erfüllen, werden von der Volltext-Engine an die Datenbank-Engine übergeben. Dort werden sie Volltextschlüsselwerten aus der abgefragten Basistabelle zugeordnet. Die Volltextschlüsselspalte ist ein eindeutiger Index, der in einer Spalte der Tabelle erforderlich ist.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

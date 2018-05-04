@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 016105db76d618ed2753fc95dc5a7ee5d1288b14
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +85,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**compress_snapshot**|**true**|Die Momentaufnahme in einem alternativen Momentaufnahmeordner wird in das CAB-Format komprimiert. Die Momentaufnahme im Standard-Momentaufnahmeordner kann nicht komprimiert werden. Für das Ändern dieser Eigenschaft ist eine neue Momentaufnahme erforderlich.|  
 ||**false**|Standardmäßig wird die Momentaufnahme nicht komprimiert. Für das Ändern dieser Eigenschaft ist eine neue Momentaufnahme erforderlich.|  
 |**conflict_logging**|**publisher**|Die Konfliktdatensätze werden auf dem Verleger gespeichert.|  
-||**subscriber**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Nicht unterstützt für [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten*.*|  
+||**subscriber**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Nicht unterstützt für [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten *.*|  
 ||**both**|Die Konfliktdatensätze werden auf dem Verleger und auf dem Abonnenten gespeichert.|  
 |**conflict_retention**||Ein **Int** , die gibt der Beibehaltungsdauer in Tagen, für die Konflikte beibehalten werden. Festlegen von *Conflict_retention* auf **0** bedeutet, dass kein konfliktcleanup notwendig ist.|  
 |**description**||Beschreibung der Veröffentlichung.|  

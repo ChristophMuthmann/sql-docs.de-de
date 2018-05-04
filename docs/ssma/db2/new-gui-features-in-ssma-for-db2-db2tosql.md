@@ -2,7 +2,6 @@
 title: Neue GUI-Funktionen in SSMA für DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,9 +18,9 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0b2e816a22314ce0625420d18c186aa52c821ca5
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 951a4d95edd9158b385f819fc4662ea13eeddf63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

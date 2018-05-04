@@ -3,15 +3,12 @@ title: Treiber für Deskriptoren und Desktop-Datenbank | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], descriptors
 - Jet-based ODBC drivers [ODBC], descriptors
@@ -22,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3c1cf39e841e57e4ef836f042cea41240f7f7bfe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 62d827aecfb8b8fdf593291ce179f5c93d638dc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Deskriptoren und Desktop-Datenbanktreiber
 Ein Deskriptor ist eine Datenstruktur, die Informationen zum Spaltendaten oder dynamische Parameter enthält. **SQLGetDescField** können verwendet werden, um die unten aufgeführten unterstützten Deskriptoren abzurufen. Implementierung Parameter Deskriptoren (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor) werden nicht automatisch aufgefüllt, da **SQLDescribeParam** wird nicht unterstützt. Deskriptorfelder, die über Jet (z. B. SQL_DESC_BASE_TABLE_NAME) nicht verfügbar sind, werden ebenfalls nicht unterstützt.  

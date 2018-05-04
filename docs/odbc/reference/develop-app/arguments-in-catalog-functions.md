@@ -3,15 +3,12 @@ title: Argumente im Katalogfunktionen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments in catalog functions [ODBC]
 - catalog functions [ODBC], arguments
@@ -22,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f46b286a929d261b1cf1c608fefccd5f266b92b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1df1c7701b3e6c64e2acb103ad2b38fc4cbb99d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arguments-in-catalog-functions"></a>Argumente im Katalogfunktionen
 Alle Katalogfunktionen unterstützen Argumente, mit denen eine Anwendung den Bereich der zurückgegebenen Daten einschränken kann. Beispielsweise die ersten und zweiten Aufrufe **SQLTables** Zurückgeben von Resultsets mit den Informationen zu allen Tabellen während der dritte Aufruf gibt Informationen über die Orders-Tabelle zurück in den folgenden Code:  

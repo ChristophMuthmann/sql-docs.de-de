@@ -18,15 +18,15 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eee3ed0e00d25e255d1cf8de5cc08f0645cdd0dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6fd8bc663f3d302e7d0c00975c863b40c335946b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discover-events-data-columns"></a>Datenspalten für Ermittlungsereignisse
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Ermittlungsereignisse-Ereigniskategorie enthält die folgenden Ereignisklassen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Die Kategorie "Ermittlungsereignisse" besitzt die folgenden Ereignisklassen:  
   
 -   Discover Begin-Klasse  
   
@@ -66,11 +66,11 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Enthält die aktuelle Zeit des Ermittlungsereignisses (wenn verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Enthält die Zeit (falls verfügbar), zu der das Ermittlungsendereignis begonnen hat. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Duration|5|2|Enthält die ungefähre Zeit (in Millisekunden), die für das Ermittlungsereignis benötigt wurde.|  
+|Dauer|5|2|Enthält die ungefähre Zeit (in Millisekunden), die für das Ermittlungsereignis benötigt wurde.|  
 |CPUTime|6|2|Enthält die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
-|Schweregrad|22|1|Enthält den Schweregrad einer Ausnahme.|  
+|Severity|22|1|Enthält den Schweregrad einer Ausnahme.|  
 |Success|23|1|Enthält den Erfolg oder Fehler des Ermittlungsereignisses. Die Werte sind:<br /><br /> 0 = Fehler<br /><br /> 1 = Erfolg|  
-|Fehler|24|1|Enthält die Fehlernummer aller mit dem Ermittlungsereignis verbundenen Fehler.|  
+|Error|24|1|Enthält die Fehlernummer aller mit dem Ermittlungsereignis verbundenen Fehler.|  
 |ConnectionID|25|1|Enthält die mit dem Ermittlungsereignis verbundene eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Enthält den Namen der Datenbank, in der das Ermittlungsereignis aufgetreten ist.|  
 |NTUserName|32|8|Enthält den Windows-Benutzernamen, der dem Objektberechtigungsereignis zugeordnet ist.|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |ServerName|43|8|Enthält den Namen der Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , in der das Ermittlungsereignis aufgetreten ist.|  
 |RequestProperties|45|9|Enthält die Eigenschaften in der XMLA-Anforderung.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Ermittlungsereignisse (Ereigniskategorie)](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

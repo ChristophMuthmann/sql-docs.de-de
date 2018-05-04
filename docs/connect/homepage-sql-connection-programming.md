@@ -11,15 +11,14 @@ ms.suite: sql
 ms.custom: ''
 ms.technology:
 - drivers
-ms.topic: article
+ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.workload: Inactive
-ms.openlocfilehash: 886cf05cf5d52d4f4619047f43f1f78449441a9d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 234ce07b25a0d120e72d8972b8e7b05f32c88201
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Startseite für den Client für Microsoft SQL Server-Programmierung
 

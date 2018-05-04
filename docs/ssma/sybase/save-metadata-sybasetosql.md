@@ -8,10 +8,9 @@ ms.service: ''
 ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bd8e999697080f7f0daf1ff5cd89a673b87d7740
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: f87940bfd4778bb3518e7fafc9094c7f8e778bd0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-metadata--sybasetosql"></a>Speichern von Metadaten (SybaseToSQL)
 Die **speichern Metadaten** Dialogfeld aufgefordert, die Metadaten in das SSMA-Projekt zu laden, bevor Sie es speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden können, und Senden an andere Personen, z. B. der technische Support in Verbindung.  

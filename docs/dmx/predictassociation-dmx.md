@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09933a65f19ca025c8a681b068bf31c6fe0e9d7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3a3fd8d22cd601fc26b53af35a4d101ffcaea3e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,13 +56,13 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
   
  INCLUDE_STATISTICS gibt nur zurück, **$Probability** und **$AdjustedProbability**.  
   
- Wenn der numerische Parameter  *n*  angegeben wird, die **PredictAssociation** Funktion gibt die obersten n am wahrscheinlichsten Werte, die basierend auf der Wahrscheinlichkeit zurück:  
+ Wenn der numerische Parameter *n* angegeben wird, die **PredictAssociation** Funktion gibt die obersten n am wahrscheinlichsten Werte, die basierend auf der Wahrscheinlichkeit zurück:  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- Wenn Sie aufnehmen **$AdjustedProbability**, die Anweisung gibt die obersten  *n*  Werte auf Grundlage der **$AdjustedProbability**.  
+ Wenn Sie aufnehmen **$AdjustedProbability**, die Anweisung gibt die obersten *n* Werte auf Grundlage der **$AdjustedProbability**.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die **PredictAssociation** -Funktion zurückgibt, das die vier Produkte in der Adventure Works-Datenbank treten wahrscheinlich zusammen verkauft werden.  
@@ -91,8 +90,8 @@ SHAPE {
 
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

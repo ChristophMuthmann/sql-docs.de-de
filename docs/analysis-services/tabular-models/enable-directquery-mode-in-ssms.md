@@ -1,31 +1,30 @@
 ---
 title: Aktivieren des DirectQuery-Modus in SSMS | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 544725a89521eb86f61fcfd3194c3d56be9da606
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: c577b5af8c44ae6e5002e0e04a4c593512825fcd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Aktivieren des DirectQuery-Modus in SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Sie können die Datenzugriffseigenschaften eines tabellarischen Modells ändern, das bereits bereitgestellt wurde, und den DirectQuery-Modus aktivieren, bei dem Abfragen auf eine relationale Datenquelle im Back-End anstatt auf im Arbeitsspeicher zwischengespeicherte Daten angewendet werden.  
+  Sie können die Datenzugriffseigenschaften eines tabellarischen Modells ändern, das bereits bereitgestellt wurde, und den DirectQuery-Modus aktivieren, bei dem Abfragen auf eine relationale Datenquelle im Back-End anstatt auf im Arbeitsspeicher zwischengespeicherte Daten angewendet werden.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterscheiden sich die für die DirectQuery-Konfiguration erforderlichen Schritte je nach Kompatibilitätsgrad des Modells. Nachstehend finden Sie Schritte, die für alle Kompatibilitätsgrade funktionieren.  
   

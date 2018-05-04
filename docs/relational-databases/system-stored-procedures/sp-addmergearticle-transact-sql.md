@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ac83f7ffeb53b501090c7fe1e5f65e08eee07d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d61d5b674c5adb36c75e7af44edb0955ae0bbba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +106,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  Eine Beschreibung des Artikels. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
  [  **@column_tracking=** ] **"***Column_tracking***"**  
- Entspricht der Einstellung für die Nachverfolgung auf Spaltenebene. *Column_tracking* ist **nvarchar(10)**, hat den Standardwert "false". **"true"**spaltennachverfolgung aktiviert. **"false"** deaktiviert die spaltennachverfolgung und belässt die konflikterkennung auf Zeilenebene. Wenn die Tabelle bereits in anderen Mergereplikationen veröffentlicht ist, müssen Sie denselben Wert für die Spaltenprotokollierung verwenden, der von bereits bestehenden Artikeln für diese Tabelle verwendet wird. Dieser Parameter ist nur für Tabellenartikel spezifisch.  
+ Entspricht der Einstellung für die Nachverfolgung auf Spaltenebene. *Column_tracking* ist **nvarchar(10)**, hat den Standardwert "false". **"true"** spaltennachverfolgung aktiviert. **"false"** deaktiviert die spaltennachverfolgung und belässt die konflikterkennung auf Zeilenebene. Wenn die Tabelle bereits in anderen Mergereplikationen veröffentlicht ist, müssen Sie denselben Wert für die Spaltenprotokollierung verwenden, der von bereits bestehenden Artikeln für diese Tabelle verwendet wird. Dieser Parameter ist nur für Tabellenartikel spezifisch.  
   
 > [!NOTE]  
 >  Falls die Zeilennachverfolgung zur Konflikterkennung verwendet wird (Standardeinstellung), kann die Basistabelle maximal 1.024 Spalten enthalten. Die Spalten müssen jedoch im Artikel gefiltert werden, sodass maximal 246 Spalten veröffentlicht werden. Wenn Spaltennachverfolgung verwendet wird, kann die Basistabelle maximal 246 Spalten enthalten.  

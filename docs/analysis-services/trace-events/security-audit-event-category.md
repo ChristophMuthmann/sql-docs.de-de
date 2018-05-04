@@ -1,35 +1,33 @@
 ---
-title: "Sicherheitsüberwachung-Ereigniskategorie | Microsoft Docs"
-ms.custom: 
+title: Sicherheitsüberwachung-Ereigniskategorie | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 - event classes [Analysis Services], security audit
 - security events [Analysis Services]
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d78568fe6eda8384494fb1e1e064eed707065b38
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e4973e777105531b63fb5aacdae298e57f6f9e40
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-audit-event-category"></a>Sicherheitsüberwachung-Ereigniskategorie
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die Security Audit-Ereigniskategorie enthält die in der folgenden Tabelle beschriebenen Ereignisklassen.  
+  Die Security Audit-Ereigniskategorie enthält die in der folgenden Tabelle beschriebenen Ereignisklassen.  
   
 |Ereignisklasse|Ereignis-ID|Description|  
 |-----------------|--------------|-----------------|  

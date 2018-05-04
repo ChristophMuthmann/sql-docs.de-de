@@ -2,10 +2,8 @@
 title: Read-Methode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: drivers
-ms.service: ''
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,9 +21,9 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 910d566d60afa2e255e05647e429af505bd5b4fe
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 53e3f6c3b780d9d78697fb33dfea5574457a6b2c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

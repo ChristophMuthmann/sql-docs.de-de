@@ -1,11 +1,9 @@
 ---
 title: Filtern für Datensätze aktualisiert | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5ee09a3242a6b406b5a921cdc12ca35786a71453
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b8ee03c015f7fa63980f549c8d9e7bef2df51426
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filtering-for-updated-records"></a>Filtern nach aktualisierten Datensätzen
 Bevor Sie UpdateBatch aufrufen, können Sie Recordset-Filter-Eigenschaft, um nur die Datensätze anzuzeigen, die geändert wurden, seit dem Öffnen des Recordsets oder dem letzten Aufruf von UpdateBatch. Zu diesem Zweck legen Sie Filter auf AdFilterPendingRecords, um zu bestimmen, wie viele Datensätze aktualisiert werden, wie im Codebeispiel im nächsten Abschnitt gezeigt.  

@@ -1,11 +1,9 @@
 ---
 title: ADOX-Eigenschaft Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c61b2db361c7a0f8633c27c4ae584b7ab071c475
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f39cdeb89e1f50f70748a88693a27310f38bf4fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX-Eigenschaft Objekteigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  

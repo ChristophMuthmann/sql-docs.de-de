@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sys.dm_exec_query_statistics_xml
 - sys.dm_exec_query_statistics_xml_TSQL
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ccdee9906de3b86aa9c3db3d3d33225c1f05c63
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f52c0a1a39d3c8ab56241644e4c8e4d42c9d0af7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

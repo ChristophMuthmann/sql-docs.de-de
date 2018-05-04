@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac84fa85bdf5ebdac7bef787d81b864d9b12bad3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b09cd2b7faacbeb443afe5eab6283d29de052ea8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructing-sql-statements"></a>Erstellen von SQL­Anweisungen
 SQL-Anweisungen können in drei verschiedene Arten erstellt werden: während der Entwicklung zur Laufzeit oder direkt vom Benutzer eingegebenen hartcodiert.  

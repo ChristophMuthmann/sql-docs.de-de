@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetCursorName function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3c09c00a4fcd463c1c22bbfb7c1f347202876dc6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9c83e74c05ee8522a0f9b7adce7598247f72bacb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetcursorname-visual-foxpro-odbc-driver"></a>SQLGetCursorName (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

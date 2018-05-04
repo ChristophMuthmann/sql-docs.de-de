@@ -1,30 +1,32 @@
 ---
 title: Installieren von Distributed Replay | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 74011785d0185529e04610d55829e689d8dbec3a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-distributed-replay"></a>Installieren von Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Distributed Replay auf eine von drei Arten installieren:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Sie können Distributed Replay auf eine von drei Weisen installieren:  
   
 -   [Installieren von Distributed Replay über den Installations-Assistenten](#bkmk_wizard)  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/17/2018
 -   Nach der Installation muss der Controllerdienst, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller, ausgeführt werden, bevor Sie den Distributed Replay Client-Dienst auf den Clients starten.  
   
 > [!NOTE]  
->  Um die Distributed Replay-Funktionen zu entfernen oder zu ändern, verwenden Sie das Fenster **Programme und Funktionen** in der **Systemsteuerung**. Wählen Sie im **Programm deinstallieren oder ändern** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aus, und klicken Sie anschließend auf **Entfernen** , um den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten zu öffnen. Kontrollieren Sie auf der Seite **Funktionen auswählen** die Distributed Replay-Funktionen, die Sie entfernen möchten.  
+>  Um die Distributed Replay-Funktionen zu entfernen oder zu ändern, verwenden Sie das Fenster **Programme und Funktionen** in der **Systemsteuerung**. Wählen Sie im **Programm deinstallieren oder ändern** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aus, und klicken Sie anschließend auf **Entfernen**, um den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten zu öffnen. Kontrollieren Sie auf der Seite **Funktionen auswählen** die Distributed Replay-Funktionen, die Sie entfernen möchten.  
   
  **Voraussetzungen:**  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/17/2018
   
      \- - ODER -  
   
-     \<Freigeben von Funktionsverzeichnis > \Tools\\(benutzerdefinierte alternatives freigegebenes Funktionsverzeichnis)  
+     \<Freigabefeatureverzeichnis>\Tools\\(alternatives freigegebenes Featureverzeichnis, das vom Benutzer angegeben wird)  
   
 -   Auf einem 64-Bit-System:  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 01/17/2018
   
      \- - ODER -  
   
-     \<Freigeben von Funktionsverzeichnis (x86) > \Tools\\(benutzerdefinierte alternatives freigegebenes (x86) Funktionsverzeichnis)  
+     \<Freigabefeatureverzeichnis (x86)>\Tools\\(alternatives freigegebenes x86-Featureverzeichnis, das vom Benutzer angegeben wird)  
   
 #### <a name="to-install-distributed-replay-features"></a>So installieren Sie Distributed Replay-Funktionen  
   
@@ -119,7 +121,7 @@ ms.lasthandoff: 01/17/2018
   
     1.  Auf 32-Bit-Computern ist der Standardinstallationspfad **C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  Auf 64-Bit-Computern ist der Standardinstallationspfad **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  Auf 64-Bit-Computern ist der Standardinstallationspfad **C:\Programme (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**.  
   
 9. Wenn Sie fertig sind, klicken Sie auf **Weiter**.  
   
@@ -136,7 +138,7 @@ ms.lasthandoff: 01/17/2018
     > [!IMPORTANT]  
     >  Nachdem Sie Distributed Replay installiert haben, müssen Sie auf dem Controller und den Clientcomputern Firewallregeln erstellen und jedem Clientcomputer Berechtigungen für den Zielserver gewähren. Weitere Informationen finden Sie unter [Ausführen der Schritte nach der Installation](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-### <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+### <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Sie müssen über Administratorberechtigungen verfügen, um eine der Distributed Replay-Funktionen zu installieren. Nur bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung mit sysadmin-Berechtigungen können der sysadmin-Serverrolle des Testservers die Clientdienstkonten hinzugefügt werden. Weitere Informationen zu Sicherheitsüberlegungen für Distributed Replay finden Sie unter [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ##  <a name="bkmk_command_prompt"></a> Installieren von Distributed Replay von der Eingabeaufforderung  
@@ -220,11 +222,11 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Sie müssen beide Kennwörter in der Befehlszeile angeben, da Sie diese nicht in der Konfigurationsdatei konfigurieren können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay: Anforderungen](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Befehlszeilenoptionen des Verwaltung &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

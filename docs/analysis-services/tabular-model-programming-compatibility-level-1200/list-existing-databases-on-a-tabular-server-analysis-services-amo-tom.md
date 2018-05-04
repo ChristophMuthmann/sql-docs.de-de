@@ -1,30 +1,30 @@
 ---
 title: Listet die vorhandene Datenbanken auf einem tabellarischen Server (Analysis Services AMO-TOM) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab5eb4b8-6254-442d-a42e-2372c346d260
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3864da736ccdeca7ffa9d6c024748e5cd60b7a5a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ec4718f826815217b13c7b27acfd3b51ec148fe4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>Listet die vorhandene Datenbanken auf einem tabellarischen Server (Analysis Services AMO-TOM)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Wenn Sie haben eine **Server** Objekt, mit einer Analysis Services-Instanz verbunden, Sie können eine Iteration durch **Server.Databases** -Auflistung, um die Liste aller Datenbanken, die von der Anlaysis-Services-Instanz gehostet wird. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Wenn Sie haben eine **Server** Objekt, mit einer Analysis Services-Instanz verbunden, Sie können eine Iteration durch **Server.Databases** -Auflistung, um die Liste aller Datenbanken, die von der Anlaysis-Services-Instanz gehostet wird. 
 
 Die **Server.Databases** Auflistung enthält ein **Datenbank** Objekt für jede Datenbank auf dem Server, unabhängig vom Servermodus (mehrdimensional oder tabellarisch) oder Datenbanktyp (mehrdimensional, gehostet Tabellarische Pre-1200 oder tabellarischen 1200 oder höher). 
 

@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 492c67ad4e5580e7ecccaa4580afe024ebae8ec4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5426d05f577016a2a93f131a7eaca85abe6e4f21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>Argumente  
  [  **@objname =** ] **"***Objekt***"**  
- Der Name einer vorhandenen Tabelle, Sicht, benutzerdefinierten Funktion oder gespeicherter Prozedur in der aktuellen Datenbank. *Objekt* ist ein **nvarchar(776)**, hat keinen Standardwert. *Objekt* kann qualifiziert werden, mit dem Besitzer des vorhandenen Objekts, in der Form *existing_owner.Object***.*** Objekt* , wenn das Schema und der schemabesitzer den gleichen Namen haben.  
+ Der Name einer vorhandenen Tabelle, Sicht, benutzerdefinierten Funktion oder gespeicherter Prozedur in der aktuellen Datenbank. *Objekt* ist ein **nvarchar(776)**, hat keinen Standardwert. *Objekt* kann qualifiziert werden, mit dem Besitzer des vorhandenen Objekts, in der Form *existing_owner.Object ***.*** Objekt* , wenn das Schema und der schemabesitzer den gleichen Namen haben.  
   
  [  **@newowner=**] **"*** Besitzer* **"**  
  Der Name des Sicherheitskontos, das den neuen Besitzer des Objekts darstellt. *Besitzer* ist **Sysname**, hat keinen Standardwert. *Besitzer* muss ein gültiger Datenbankbenutzer, eine Serverrolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldename oder Windows-Gruppe mit Zugriff auf die aktuelle Datenbank. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  

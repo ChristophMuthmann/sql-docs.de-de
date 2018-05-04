@@ -1,11 +1,9 @@
 ---
 title: Anfügen und CreateParameter-Methoden (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e017bbe1ebae267a4a6df36d4562d23a39d8827
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c6113ebd87715c6de0baeae37ee707f82ae633b0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Anfügen und CreateParameter-Methoden (VC++-Beispiel)
 Dieses Beispiel verwendet die [Append](../../../ado/reference/ado-api/append-method-ado.md) und [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) Methoden zum Ausführen einer gespeicherten Prozedur mit einem Eingabeparameter.  

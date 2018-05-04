@@ -1,15 +1,14 @@
 ---
-title: "Tabellenmodellierung (Kompatibilitätsgrad 1200) | Microsoft Docs"
-ms.custom: 
+title: Tabellenmodellierung (Kompatibilitätsgrad 1200) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/10/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -19,16 +18,15 @@ keywords:
 - Lernprogramm
 - SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: 
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: d85d437ce17c04107d85cf444268eb26f1a460e8
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 1cc6b0fbd962b32b35a70d476f11f2107d1c6272
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Tabellenmodellierung (Kompatibilitätsgrad 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

@@ -1,34 +1,23 @@
 ---
 title: Dimension Attribute Properties Reference | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- properties [Analysis Services], attributes
-- attributes [Analysis Services], properties
-ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4b4667930214fff6b0c3d620e68a1ceaf0f22de7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>Dimensionsattributeigenschaftenverweis
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird anhand von zahlreichen Eigenschaften die Funktionsweise von Dimensionen und Dimensionsattributen festgelegt. In der folgenden Tabelle werden die einzelnen Attributeigenschaften aufgelistet und beschrieben.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird anhand von zahlreichen Eigenschaften die Funktionsweise von Dimensionen und Dimensionsattributen festgelegt. In der folgenden Tabelle werden die einzelnen Attributeigenschaften aufgelistet und beschrieben.  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  

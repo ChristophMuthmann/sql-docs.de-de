@@ -1,30 +1,29 @@
 ---
 title: Tables-Objekt (TMSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: befd3f17f034151924cc962eb5355bd7543ffddb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-object-tmsl"></a>Tables-Objekt (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definiert in einem Modell enthaltenen Tabellen an. Tabellen in einem Modell sind entweder gebunden, um Tabellen in einer externen Datenbank, aus der Daten importiert oder abgefragt werden, oder eine berechnete Tabelle aus einer DAX-Ausdruck erstellt. Innerhalb einer Tabelle, eine oder mehrere **Partition** Objekte beschreiben die Quelle der Daten.  Zwischen Tabellen eine **Beziehung** Objekt gibt an, die Kardinalität, Filter und andere Eigenschaften der Beziehung.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Definiert in einem Modell enthaltenen Tabellen an. Tabellen in einem Modell sind entweder gebunden, um Tabellen in einer externen Datenbank, aus der Daten importiert oder abgefragt werden, oder eine berechnete Tabelle aus einer DAX-Ausdruck erstellt. Innerhalb einer Tabelle, eine oder mehrere **Partition** Objekte beschreiben die Quelle der Daten.  Zwischen Tabellen eine **Beziehung** Objekt gibt an, die Kardinalität, Filter und andere Eigenschaften der Beziehung.  
   
 ## <a name="object-definition"></a>Objektdefinition  
  Alle Objekte verfügen über einen gemeinsamen Satz von Eigenschaften, einschließlich Name, Typ, Beschreibung, eine eigenschaftsauflistung und Anmerkungen. **Tabelle** Objekte verfügen außerdem über die folgenden Eigenschaften.  
@@ -46,7 +45,7 @@ TRUE, wenn die Tabelle als ausgeblendetes Element behandelt wird; andernfalls FA
  Stellt eine Sammlung von Ebenen dar, die einen logischen hierarchischen Drilldownpfad für Clientanwendungen bereitstellen. Es ist ein untergeordnetes Element eines Table-Objekts.  
   
 ## <a name="usage"></a>Verwendung  
- Table-Objekten dienen [Alter-Befehl &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Erstellen Befehl &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace-Befehl &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Befehl &#40; löschen TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Befehl &#40; aktualisieren TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), und [MergePartitions-Befehl &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ Table-Objekten dienen [Alter-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Create-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace-Befehl &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Delete-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Refresh-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), und [MergePartitions-Befehl &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  Beim Erstellen, ersetzen oder ändern ein Table-Objekt, geben Sie alle Lese-/ Schreibzugriff Eigenschaften der Objektdefinition. Eine Lese-/ Schreibzugriff-Eigenschaft nicht angegeben, gilt einen Löschvorgang.  
   
@@ -70,8 +69,8 @@ TRUE, wenn die Tabelle als ausgeblendetes Element behandelt wird; andernfalls FA
               "hierarchies": {  },  
 ```  
   
-## <a name="full-syntax"></a>Gesamte Syntax  
- Im folgenden ist die schemendarstellung eines Objekts Tabellen eines Modells. Zum Reduzieren der Größe dieser Definition sind Partitionsobjekte an anderer Stelle beschrieben. Finden Sie unter [Partitionen Object &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md).  
+## <a name="full-syntax"></a>Vollständige Syntax  
+ Im folgenden ist die schemendarstellung eines Objekts Tabellen eines Modells. Zum Reduzieren der Größe dieser Definition sind Partitionsobjekte an anderer Stelle beschrieben. Finden Sie unter [Partitionen Objekt &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md).  
   
 ```  
 "tables": {  

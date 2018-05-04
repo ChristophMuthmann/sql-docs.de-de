@@ -7,21 +7,16 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
-ms.component: samples
-ms.technology:
-- " database-engine "
-ms.topic: article
-author: BarbKess
-ms.author: barbkess
+ms.technology: samples
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-robots: noindex,nofollow
-ms.workload: Inactive
-ms.openlocfilehash: 68d66637cf8597efb4bac6dbc552d1989c89c1f3
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: be472ed5594a523497244c25264e16530e2a12ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wideworldimporters-data-generation"></a>"Wideworldimporters" Datengenerierungsplan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

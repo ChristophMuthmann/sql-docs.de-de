@@ -1,31 +1,23 @@
 ---
 title: Erstellen Sie eine BI-Semantikmodell-Verbindung mit einer tabellarischen Modelldatenbank | Microsoft Docs
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 9141a382cf30157849de3cb0d54bff882790b48d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, durch die eine Umleitung zu einer Datenbank für tabellarische Modelle erfolgt, die auf einer Analysis Services-Instanz außerhalb der SharePoint-Farm ausgeführt wird.  
+  Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, durch die eine Umleitung zu einer Datenbank für tabellarische Modelle erfolgt, die auf einer Analysis Services-Instanz außerhalb der SharePoint-Farm ausgeführt wird.  
   
  Nachdem Sie eine BI-Semantikmodellverbindung erstellt und SharePoint- und Analysis Services-Berechtigungen konfiguriert haben, kann diese Verbindung als Datenquelle für Excel- oder [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte verwendet werden.  
   

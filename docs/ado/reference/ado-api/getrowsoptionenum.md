@@ -1,11 +1,9 @@
 ---
 title: GetRowsOptionEnum | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a36b24c0a8af4ddbd459161f4370e0b0fa056a1b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b16eae5e67a3f04218a0e4c565ec93cc3fb6a700
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 Gibt an, wie viele Datensätze zum Abrufen von aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -2,27 +2,22 @@
 title: WideWorldImporters OLAP-Datenbank-Katalog – SQL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
-ms.component: samples
-ms.technology:
-- samples
+ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: BarbKess
-ms.author: barbkess
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-robots: noindex,nofollow
-ms.workload: On Demand
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 535c95aa19eaeb1654fe71803f57879bbc036939
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 7b4533ec0667bc59317ba213578db7301c15b241
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Datenbankkatalog WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

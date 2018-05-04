@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ad12131fe961f279bf0d670d91ab03900a8a6ad1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dabf58c70ac7c331f9d0180b3ee55add5cdc2621
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axisinfo-element-xmla"></a>AxisInfo-Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Stellt die Metadaten einer einzelnen Achse, die vom übergeordneten Element enthaltenen [AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Stellt die Metadaten einer einzelnen Achse dar, die im [AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md) -Element enthalten sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,11 +53,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|Keine|  
+|Standardwert|Keine|  
+|Kardinalität|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Attribute  
   
-|attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |Name|Erforderliches **String** -Attribut. Der Name der Achse.|  
   
@@ -77,6 +76,6 @@ ms.lasthandoff: 01/08/2018
  In einem **root** -Element, das das **MDDataSet** -Objekt verwendet, enthält ein **AxisInfo** -Element eine Auflistung von **HierarchyInfo** -Elementen, die in Kombination mit dem Wert des **name** -Attributs eine Definition einer einzelnen Achse darstellt, die im multidimensionalen Datensatz zurückgegeben wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

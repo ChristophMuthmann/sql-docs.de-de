@@ -1,11 +1,9 @@
 ---
 title: Suchen Sie die (VC++-Methodenbeispiel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c8277c4fb811be2d0ae61ded434643aeda835a6a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4ed34d6e09df280034b4e9f9e2e0ce201ff69cf3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-example-vc"></a>Suchen Sie die (VC++-Methodenbeispiel)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [suchen](../../../ado/reference/ado-api/find-method-ado.md) -Methode zum Suchen und die Anzahl der Business Titel in die **Pubs** Datenbank. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter eine ähnliche Funktionalität nicht unterstützt.  

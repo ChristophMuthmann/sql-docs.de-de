@@ -3,15 +3,12 @@ title: SQLBindCol mit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -21,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e3329d1f5990edae9805538d6e9c5e4c563b028
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d4ccd4607e16b244279e0910fe32047f19e2e6d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol verwenden
 Die Anwendung bindet Spalten durch Aufrufen von **SQLBindCol**. Diese Funktion wird jeweils eine Spalte gebunden. Mithilfe dieser Option gibt die Anwendung Folgendes an:  
@@ -41,7 +37,7 @@ Die Anwendung bindet Spalten durch Aufrufen von **SQLBindCol**. Diese Funktion w
   
  Der folgende Code wird z. B. Variablen Spalten Verkäufer und CustID bindet. Daten für die Spalten zurückgegeben werden, *Vertriebsmitarbeiter* und *CustID*. Da *Vertriebsmitarbeiter* ein Zeichenpuffer ist die Anwendung gibt der Bytelänge (11), damit der Treiber, ob die Daten abgeschnitten ermitteln kann. Die Bytelänge der zurückgegebenen Titel oder, ob er NULL ist, werden im zurückgegebenen *SalesPersonLenOrInd*.  
   
- Da *CustID* ist eine ganzzahlige Variable und weist fester Länge, besteht keine Notwendigkeit, geben Sie die Bytelänge; der Treiber davon aus, dass es **"sizeof" (**SQLUINTEGER**)**. Die Bytelänge der zurückgegebene Kunden-ID, Daten oder, ob er NULL ist, werden im zurückgegebenen *CustIDInd*. Beachten Sie, dass die Anwendung nur in der gibt an, ob das Gehalt NULL ist, interessiert ist, da die Bytelänge immer ist **"sizeof" (**SQLUINTEGER**)**.  
+ Da *CustID* ist eine ganzzahlige Variable und weist fester Länge, besteht keine Notwendigkeit, geben Sie die Bytelänge; der Treiber davon aus, dass es **"sizeof" (** SQLUINTEGER **)**. Die Bytelänge der zurückgegebene Kunden-ID, Daten oder, ob er NULL ist, werden im zurückgegebenen *CustIDInd*. Beachten Sie, dass die Anwendung nur in der gibt an, ob das Gehalt NULL ist, interessiert ist, da die Bytelänge immer ist **"sizeof" (** SQLUINTEGER **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  

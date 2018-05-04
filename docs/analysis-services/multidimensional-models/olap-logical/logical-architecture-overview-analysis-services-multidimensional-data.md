@@ -1,36 +1,23 @@
 ---
-title: "Übersicht über logische Architektur (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- cubes [Analysis Services], examples
-- cubes [Analysis Services], about cubes
-ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 
-author: Minewiskan
+title: Übersicht über logische Architektur (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dacdeff9764aaa11277118cb494900bf6f42e6aa
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4b4231e51818145a731c698848566d64562ba097
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionale und Data Mining-Modus** herkömmliches OLAP und Datamining unterstützt. **Tabellenmodus** tabellarische Modelle unterstützt. **Im integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als installiert wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, zum Laden und Abfragen von Excel oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenmodellen innerhalb einer Arbeitsmappe.  
+  Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionale und Data Mining-Modus** herkömmliches OLAP und Datamining unterstützt. **Tabellenmodus** tabellarische Modelle unterstützt. **Im integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als installiert wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, zum Laden und Abfragen von Excel oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenmodellen innerhalb einer Arbeitsmappe.  
   
  In diesem Thema wird die grundlegende Architektur von Analysis Services bei der Ausführung im mehrdimensionalen und Data Mining-Modus erläutert. Weitere Informationen zu anderen Modi finden Sie unter [Tabellenmodellierung ](../../../analysis-services/tabular-models/tabular-models-ssas.md) und [Vergleichen von tabellarischen und mehrdimensionalen Lösungen ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -128,7 +115,7 @@ Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch de
   
  In der vorangegangenen Tabelle weist jede Zeile die gleichen Werte für die **RouteKey**, **SourceKey**, und **TimeKey** Spalten, die angibt, dass diese Zeilen zur selben Cubezelle beitragen.  
   
- In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandtes Thema:**[Dimensionen &#40; Analysis Services – mehrdimensionale Daten &#41; ](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandtes Thema:**[Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
  Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandtes Thema:**[Dimensionsbeziehungen](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

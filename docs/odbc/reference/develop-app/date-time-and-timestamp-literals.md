@@ -3,15 +3,12 @@ title: Date, Time und Timestamp-Literale | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
@@ -19,17 +16,16 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9b9102d2c54c308304ea326d5a3a710a7703f275
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c41d78b848009083abef2595d8628bb8fa1c0b0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time und Timestamp-Literale
 Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet  
   
- **{***-Typ* **"** *Wert* **'}**   
+ **{***-Typ* **"** *Wert* **'}**  
   
  wobei *Literal vom Typ* ist einer der Werte in der folgenden Tabelle aufgeführt.  
   

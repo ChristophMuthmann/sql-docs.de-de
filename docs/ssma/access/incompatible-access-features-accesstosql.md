@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -38,12 +37,11 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d8582a0fcab82855466a041a6d185a062fe0ab16
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: e744ba8e8ae8927fc17c8e8c43cd288d02e82ca9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Inkompatible Zugriffsfeatures (AccessToSQL)
 Nicht alle Funktionen von Access-Datenbank sind kompatibel mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und Zugriff weisen verschiedene Sätze von reservierten Schlüsselwörtern. Probleme, z. B., wenn diese auf eine erfolgreiche Migration verhindern könnten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Verwenden Sie in der folgenden Tabelle, um weitere Informationen zu möglichen Migrationsprobleme und Verwendungsmöglichkeiten Informationen finden sie.  

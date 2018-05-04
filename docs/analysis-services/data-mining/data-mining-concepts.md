@@ -1,45 +1,23 @@
 ---
 title: Datamining-Konzepte | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Server Analysis Services, data mining
-- cleaning data
-- predictive analytics
-- learning algorithms
-- data mining [Analysis Services], concepts
-- inductive learning
-- data mining [Analysis Services], about data mining
-- mining models [Analysis Services]
-- data access [Analysis Services]
-- machine learning algorithms [Analysis Services]
-- mining models [Analysis Services], about data mining
-- SSAS, data mining
-- Analysis Services, data mining
-ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7a625cb7ec0aa187a825dbc02b742d82afa83065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-concepts"></a>Data Mining-Konzepte
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus großen Datensätzen. Data Mining nutzt die mathematische Analyse zur Aufdeckung von Mustern und Trends in Daten. Üblicherweise können diese Muster nicht durch das traditionelle Durchsuchen von Daten ermittelt werden, da die Beziehungen zu komplex sind oder zu viele Daten bestehen.  
+  Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus großen Datensätzen. Data Mining nutzt die mathematische Analyse zur Aufdeckung von Mustern und Trends in Daten. Üblicherweise können diese Muster nicht durch das traditionelle Durchsuchen von Daten ermittelt werden, da die Beziehungen zu komplex sind oder zu viele Daten bestehen.  
   
  Diese Muster und Trends können gesammelt und als *Data Mining-Modell*definiert werden. Miningmodelle können auf spezifische Szenarien angewendet werden, beispielsweise:  
   
@@ -156,7 +134,7 @@ Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus gro
   
  Bevor Sie ein Modell in einer Produktionsumgebung einsetzen, möchten Sie wahrscheinlich testen, wie gut das Modell ist. Ferner erstellt man üblicherweise beim Aufbau eines Modells mehrere Modelle mit unterschiedlichen Konfigurationen und testet alle Modelle, um herauszufinden, welches die besten Ergebnisse für das Problem und die Daten erzielt.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet Tools, die hilfreich bei der Trennung Ihrer Daten in Trainings- und Testdatasets sind. So können Sie die Leistungsfähigkeit aller Modelle an den gleichen Daten genau bewerten. Mit dem Trainings-Dataset wird das Modell generiert, während das Test-Dataset mithilfe von Vorhersageabfragen die Genauigkeit des Modells testet. Diese Partitionierung ist möglich, während der Erstellung des Miningmodells automatisch. Weitere Informationen finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bietet Tools, mit denen Sie der Trennung Ihrer Daten in Trainings- und testdatasets sind, damit Sie die Leistungsfähigkeit aller Modelle an die gleichen Daten genau bewerten können. Mit dem Trainings-Dataset wird das Modell generiert, während das Test-Dataset mithilfe von Vorhersageabfragen die Genauigkeit des Modells testet. Diese Partitionierung ist möglich, während der Erstellung des Miningmodells automatisch. Weitere Informationen finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
  Die von den Algorithmen ermittelten Trends und Muster können mit den Viewern im Data Mining-Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]analysiert werden. Weitere Informationen finden Sie unter [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md). Darüber hinaus können Sie testen, wie gut die Modelle Vorhersagen erstellen. Für diese Tasks stehen im Designer Tools wie das Prognosegütediagramm und die Klassifikationsmatrix zur Verfügung. Sie können eine statistische Technik mit dem Namen *Kreuzvalidierung* nutzen, um automatisch Teilmengen der Daten zu erstellen und das Modell gegen jede Teilmenge zu testen, um zu bestimmen, ob das Modell spezifisch für Ihre Daten ist oder verwendet werden kann, um Rückschlüsse auf die allgemeine Population zu ziehen. Weitere Informationen finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   

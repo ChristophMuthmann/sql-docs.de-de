@@ -1,27 +1,25 @@
 ---
 title: VBA-Funktionen in MDX und DAX | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 6356a6c841072490e10f9c32933606010ce0b9f9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 6dce57c7a8043a8d25b31b389e47763df261baa8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>VBA-Funktionen in MDX und DAX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -98,7 +96,7 @@ ms.lasthandoff: 02/01/2018
 |InStrRev|Nicht unterstützt||  
 |int|DAX, MDX||  
 |ZINSZ|Nur MDX||  
-|IKV|Nur MDX||  
+|IRR|Nur MDX||  
 |IsArray|Nur MDX||  
 |Nur IsDateMDX||  
 |IsEmpty|Nur MDX||  
@@ -125,7 +123,7 @@ ms.lasthandoff: 02/01/2018
 |MonthName|Nicht unterstützt||  
 |Meldung|Nicht unterstützt||  
 |jetzt|DAX, MDX||  
-|NPer]|Nur MDX||  
+|Zzr]|Nur MDX||  
 |NBW|Nur MDX||  
 |Oct|Nur MDX||  
 |Partition|Nur MDX||  
@@ -153,7 +151,7 @@ ms.lasthandoff: 02/01/2018
 |Str|Nur MDX||  
 |StrVgl|Nur MDX||  
 |StrKonv|Nur MDX||  
-|String]|Nur MDX||  
+|Zeichenfolge]|Nur MDX||  
 |StrReverse|Nicht unterstützt||  
 |Schalter|Nur MDX||  
 |DIA|Nur MDX||  

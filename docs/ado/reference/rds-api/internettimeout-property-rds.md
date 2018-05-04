@@ -1,11 +1,9 @@
 ---
 title: InternetTimeout-Eigenschaft (RDS) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3e9ddb4564a10b5672b9f6afbd31d8e36082079
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 401410dee3c7968c1547e3efa70fe61521b29d6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout-Eigenschaft (RDS)
 Gibt die Anzahl der Millisekunden, die gewartet wird, bevor eine Anforderung ein Timeout eintritt.  

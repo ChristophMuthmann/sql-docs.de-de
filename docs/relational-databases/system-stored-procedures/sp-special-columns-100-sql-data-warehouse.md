@@ -19,13 +19,12 @@ caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f63087431cfca9578d4af19c7a213a08806f97c8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 774465439764220d854358da6fce331dd463b1e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Datawarehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -62,16 +61,16 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  Der Name des Tabellenqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*qualifier.owner.name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [ @col_type=] '*Col_type*"  
- Ist der Spaltentyp. *Col_type* ist **Char (**1**)**, hat den Standardwert von r Typ R Gibt die optimale(n) Spalte(n) oder eine Gruppe von Spalten zurück, der durch Aufrufen der entsprechenden Werte die Spalte(n), können Sie für jede Zeile in der angegebenen die Tabelle eindeutig identifiziert werden. Bei einer Spalte kann es sich entweder um eine Pseudospalte handeln, die speziell zu diesem Zweck erstellt wurde, oder um die Spalte(n) eines eindeutigen Index für die Tabelle. Der Typ "V" gibt ggf. die Spalte(n) in der angegebenen Tabelle zurück, die automatisch von der Datenquelle aktualisiert werden, sobald ein Wert in der Zeile durch eine Transaktion aktualisiert wird.  
+ Ist der Spaltentyp. *Col_type* ist **Char (** 1 **)**, hat den Standardwert von r Typ R Gibt die optimale(n) Spalte(n) oder eine Gruppe von Spalten zurück, der durch Aufrufen der entsprechenden Werte die Spalte(n), können Sie für jede Zeile in der angegebenen die Tabelle eindeutig identifiziert werden. Bei einer Spalte kann es sich entweder um eine Pseudospalte handeln, die speziell zu diesem Zweck erstellt wurde, oder um die Spalte(n) eines eindeutigen Index für die Tabelle. Der Typ "V" gibt ggf. die Spalte(n) in der angegebenen Tabelle zurück, die automatisch von der Datenquelle aktualisiert werden, sobald ein Wert in der Zeile durch eine Transaktion aktualisiert wird.  
   
  [ @scope=] '*Bereich*"  
- Der mindestens erforderliche Bereich der ROWID. *Bereich* ist **Char (**1**)**, hat den Standardwert von t Bereich C gibt an, dass die ROWID nur gültig, wenn in dieser Zeile positioniert ist. Der Bereich "T" gibt an, dass die ROWID für die Transaktion gültig ist.  
+ Der mindestens erforderliche Bereich der ROWID. *Bereich* ist **Char (** 1 **)**, hat den Standardwert von t Bereich C gibt an, dass die ROWID nur gültig, wenn in dieser Zeile positioniert ist. Der Bereich "T" gibt an, dass die ROWID für die Transaktion gültig ist.  
   
  [ @nullable=] '*NULL-Werte zu*"  
- Gibt an, ob die speziellen Spalten einen NULL-Wert akzeptieren können. *NULL-Werte zulassen* ist **Char (**1**)**, hat den Standardwert + u O gibt spezielle Spalten, die keine null-Werte zulassen. "U" definiert Spalten, die teilweise NULL zulassen.  
+ Gibt an, ob die speziellen Spalten einen NULL-Wert akzeptieren können. *NULL-Werte zulassen* ist **Char (** 1 **)**, hat den Standardwert + u O gibt spezielle Spalten, die keine null-Werte zulassen. "U" definiert Spalten, die teilweise NULL zulassen.  
   
  [ @ODBCVer=] '*ODBCVer*'  
- Ist die ODBC-Version verwendet wird. *ODBCVer* ist **Int (**4**)**, Standardwert ist 2. Dieser gibt ODBC, Version 2.0, an. Weitere Informationen zu den Unterschieden zwischen ODBC, Version 2.0 und ODBC, Version 3.0 finden Sie unter der ODBC-SQLSpecialColumns-Spezifikation für ODBC, Version 3.0.  
+ Ist die ODBC-Version verwendet wird. *ODBCVer* ist **Int (** 4 **)**, Standardwert ist 2. Dieser gibt ODBC, Version 2.0, an. Weitere Informationen zu den Unterschieden zwischen ODBC, Version 2.0 und ODBC, Version 3.0 finden Sie unter der ODBC-SQLSpecialColumns-Spezifikation für ODBC, Version 3.0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -85,7 +84,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |DATA_TYPE|**smallint**|ODBC-SQL-Datentyp.|  
 |TYPE_NAME|**sysname**|-Daten der Datenquelle abhängiger Datentypname; beispielsweise **Char**, **Varchar**, **Money**, oder **Text**.|  
 |PRECISION|**Int**|Die Genauigkeit der Spalte bezüglich der Datenquelle. Dieses Feld gibt immer einen Wert zurück.|  
-|LENGTH|**Int**|Länge in Bytes erforderlich für den Datentyp in seiner binären Form in der Datenquelle, z. B. 10 für **Char (**10**)**, 4 für **Ganzzahl**, und 2 für **"smallint"** .|  
+|LENGTH|**Int**|Länge in Bytes erforderlich für den Datentyp in seiner binären Form in der Datenquelle, z. B. 10 für **Char (** 10 **)**, 4 für **Ganzzahl**, und 2 für **"smallint"** .|  
 |SCALE|**smallint**|Die Dezimalstellen der Spalte bezüglich der Datenquelle. NULL wird für Datentypen zurückgegeben, auf die Dezimalstellen nicht anwendbar sind.|  
 |PSEUDO_COLUMN|**smallint**|Gibt an, ob es sich bei der Spalte um eine Pseudospalte handelt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer 1 zurück:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

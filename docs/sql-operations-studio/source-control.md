@@ -9,16 +9,15 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 73fec13868004469b02f3117b9b8d70e1ec26ff3
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 58475a1c7bfb27f29c1e040de286c82d9c7a204f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Mithilfe der quellcodeverwaltung in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

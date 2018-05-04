@@ -1,11 +1,9 @@
 ---
 title: Requery-Methode | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9098ef1000efc4f84f217d1bf13a4d849fa666a8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 63c63ce0a4fd42b5cfe784793d76c68a5f23d083
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="requery-method"></a>Requery-Methode
 Aktualisiert die Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt durch erneutes Ausführen der Abfrage auf der das Objekt basiert.  

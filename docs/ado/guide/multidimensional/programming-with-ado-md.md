@@ -1,11 +1,9 @@
 ---
 title: Programmieren mit ADO MD | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 93b71f926a6a9e073ae1bbc46c9bb645f572f82b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 5aa8b55b5a473acd87e9d9db6d0127c88cdc6ad7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-with-ado-md"></a>Programmieren mit ADO MD
 Um ADO MD mit Ihrem Entwicklungstool verwenden, sollten Sie einen Verweis auf die ADO MD-Typbibliothek einrichten. Die Beschreibung der ADO MD-Bibliothek ist Microsoft ActiveX Data Objects-(mehrdimensionales)-Bibliothek. Der Dateiname der ADO MD-Bibliothek ist msadomd.dll sowie die Programm-ID (ProgID) ist "ADOMD". Weitere Informationen dazu, wie Verweise auf Bibliotheken herstellen finden Sie in der Dokumentation zu Ihrem Entwicklungstool.  

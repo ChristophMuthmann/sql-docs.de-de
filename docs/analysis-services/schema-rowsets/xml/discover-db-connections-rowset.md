@@ -20,15 +20,15 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a932cfa872e0cceed0b132f486349716ba4210b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e71d6bcc4a22e95ecb4283946c9ec9c26dd42d93
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverdbconnections-rowset"></a>DISCOVER_DB_CONNECTIONS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bietet Informationen ressourcenauslastung und Aktivität zu der zurzeit geöffneten Verbindungen vom Server in einer Datenbank an.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Stellt Informationen zur Ressourcenauslastung und Aktivität der zurzeit geöffneten Verbindungen vom Server in einer Datenbank bereit.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_DB_CONNECTIONS** -Rowset enthält die folgenden Spalten.  
@@ -63,6 +63,6 @@ ms.lasthandoff: 01/08/2018
 |CONNECTION_SPID|DBTYPE_I4|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

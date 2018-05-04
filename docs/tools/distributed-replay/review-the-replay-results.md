@@ -1,30 +1,30 @@
 ---
-title: "Überprüfen der Wiedergabeergebnisse | Microsoft Docs"
-ms.custom: 
+title: Überprüfen der Wiedergabeergebnisse | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 8bf4c08dee623e659e04e3be97f8e015daa57aa8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="review-the-replay-results"></a>Überprüfen der Wiedergabeergebnisse
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Nach der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion eine verteilte Wiedergabe abgeschlossen hat, die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnisdateien der Ablaufverfolgung auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay** -Option den **-o** -Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Nachdem die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion eine verteilte Wiedergabe abgeschlossen hat, kann die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnisdateien der Ablaufverfolgung auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay**-Option den **-o**-Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  Der Speicherort für die Ergebnisdateien der Ablaufverfolgung wird vom `<ResultDirectory>`-XML-Element in der Clientkonfigurationsdatei `DReplayClient.xml`, die sich auf jedem Client befindet, angegeben. Die Ablaufverfolgungsdateien im Clientergebnisverzeichnis werden bei jeder Wiedergabe überschrieben.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="column-descriptions-for-result-trace"></a>Beschreibungen der Spalten für das Ergebnis der Ablaufverfolgung  
  In der folgenden Tabelle werden die Spalten der Ergebnisdaten der Ablaufverfolgung beschrieben.  
   
-|Name der Datenspalte|Datentyp|Beschreibung|Column ID|  
+|Name der Datenspalte|Datentyp|Description|Column ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Der Name der Ereignisklasse.|1|  
 |EventSequence|**bigint**|Für Anbieterfehler sowie interne Fehler und Warnungen ist dies die Sequenz der Ereignisaufzeichnung, die dem Fehler bzw. der Warnung entspricht.<br /><br /> Für alle anderen Ereignisklassen ist dies die Sequenz des Ereignisses in den ursprünglichen Ablaufverfolgungsdaten.|2|  
@@ -82,10 +82,10 @@ ms.lasthandoff: 01/17/2018
 |ReplayHostName|**nvarchar**|Der Name des Computers, auf dem der Client während der Wiedergabe ausgeführt wird|16|  
 |ApplicationName|**nvarchar**|Der Name der Clientanwendung, die während der Aufzeichnung die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindung hergestellt hat.|17|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay: Anforderungen](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Befehlszeilenoptionen des Verwaltung &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

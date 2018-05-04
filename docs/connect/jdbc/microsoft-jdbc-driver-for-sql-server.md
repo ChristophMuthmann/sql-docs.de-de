@@ -3,12 +3,10 @@ title: Microsoft JDBC Driver für SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
@@ -16,9 +14,9 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96e2d0831c064a1da2f23b34befc38bf34ade6f2
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1e5a25cf3d51ff54e650de30b654887b3f949119
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

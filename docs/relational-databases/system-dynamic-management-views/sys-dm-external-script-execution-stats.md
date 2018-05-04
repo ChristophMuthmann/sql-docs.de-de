@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
@@ -25,12 +24,11 @@ caps.latest.revision: 5
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dde009d600a7b0213fba5cce1713852b87924659
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d3b8ff8bf463c7f03d370d681f0efbd86830e688
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e01d18edab653fd79a4b5122b8270d5b894feddd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 02a1a7e433c13c52db6c1e9112437470769c76be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="level-object-ado-md"></a>Ebenenobjekt (ADO MD)
 Enthält eine Menge von Elementen, von die jedes denselben Rang innerhalb einer Hierarchie besitzt.  

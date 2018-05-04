@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -26,12 +25,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: bf2b3d21aa2eac4bc982b75257f8c1e2d87ea46b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 364bf7fe910e5073130bef1a75d88bfa560dd9f9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX-Datendefinition - Erstellen von TEILCUBES
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +51,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Ein gültiger SELECT-Ausdruck in MDX (Multidimensional Expressions), der keine WITH-, NON EMPTY- oder HAVING-Klausel enthält und keine Dimensions- oder Zelleigenschaften anfordert.  
   
- Finden Sie unter [Anweisung &#40; auswählen MDX &#41; ](../mdx/mdx-data-manipulation-select.md) für eine ausführliche Erläuterung der Syntax für Select-Anweisungen und die **NON VISUAL** Klausel.  
+ Finden Sie unter [SELECT-Anweisung &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) für eine ausführliche Erläuterung der Syntax für Select-Anweisungen und die **NON VISUAL** Klausel.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Standardelemente in der Definition eines Teilcubes ausgeschlossen werden, ändern sich die Koordinaten entsprechend. Für Attribute, die aggregiert werden können, wird [All] zum Standardelement erklärt. Für Attribute, die nicht aggregiert werden können, wird ein im Teilcube vorhandenes Element zum Standardelement. In der folgenden Tabelle sind Beispiele für Kombinationen aus Teilcubes und Standardelementen aufgeführt.  
@@ -70,7 +68,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Sitzungsobjekte, die im Kontext eines Teilcubes erstellt wurden, werden gelöscht, wenn der Teilcube gelöscht wird.  
   
- Weitere Informationen zu Teilcubes finden Sie unter [Erstellen von Teilcubes in MDX &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ Weitere Informationen zu Teilcubes finden Sie unter [Erstellen von Teilcubes in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Teilcube erstellt, der den scheinbaren Cuberaum auf Elemente einschränkt, die gemeinsam mit dem Land Kanada vorhanden sind. Es verwendet dann die **Elemente** Funktion, um alle Elemente der Country von der Geography eine benutzerdefinierte Hierarchie zurückzugeben, wobei lediglich das Land Kanada zurückgegeben.  
@@ -146,9 +144,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  Die Spalte [All Products] und die Zeile [All Resellers] enthalten die Gesamtsummen für alle Elemente, nicht nur die Gesamtsummen der sichtbaren Elemente.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX-Skriptanweisungen &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE-Anweisung &#40; MDX &#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT-Anweisung &#40; MDX &#41;](../mdx/mdx-data-manipulation-select.md)  
+ [Schlüsselkonzepte in MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX-Skriptanweisungen &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [DROP SUBCUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [SELECT-Anweisung & #40; MDX & #41;](../mdx/mdx-data-manipulation-select.md)  
   
   

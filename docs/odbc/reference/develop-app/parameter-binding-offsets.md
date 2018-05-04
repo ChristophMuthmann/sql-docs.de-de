@@ -3,15 +3,12 @@ title: Offsets für die parameterbindung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offsets of parameters [ODBC]
 - binding offsets of parameters [ODBC]
@@ -20,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d5228c7ce920eb56b0b947784b3d5a7bb2d6266
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 63284508fe2614a84eecb890545bbce2f8e0147b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-binding-offsets"></a>Parameterbindung Offsets
 Einer Anwendung angegeben werden, dass ein Offset hinzugefügt wird, gebunden Parameter Puffer Adressen und den entsprechenden Längenindikator Puffer Adressen Wenn **SQLExecDirect** oder **SQLExecute** aufgerufen wird. Das Ergebnis dieser Ergänzungen bestimmt die Adressen, die bei diesen Vorgängen verwendet.  

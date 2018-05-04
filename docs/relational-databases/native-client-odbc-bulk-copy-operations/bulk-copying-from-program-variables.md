@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f00c8542691fcbdd66e5a35151161b3a901f439
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5e0bcb033e4e99bdba8dc7167d3823e103c9cfd9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bulk-copying-from-program-variables"></a>Massenkopieren aus Programmvariablen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,7 +90,7 @@ ms.lasthandoff: 04/16/2018
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht signiert haben **"tinyint"**ohne Vorzeichen **"smallint"**, oder ohne Vorzeichen **Int** Datentypen. Um den Verlust von Datenwerten zu vermeiden, beim Migrieren dieser Datentypen, erstellen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle mit dem nächstgrößeren ganzzahligen Datentyp. Um zu verhindern, dass Benutzer später Werte außerhalb des für den ursprünglichen Datentyp zulässigen Bereichs hinzufügen, wenden Sie eine Regel auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte an, mit der die zulässigen Werte entsprechend eingeschränkt werden:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht signiert haben **"tinyint"** ohne Vorzeichen **"smallint"**, oder ohne Vorzeichen **Int** Datentypen. Um den Verlust von Datenwerten zu vermeiden, beim Migrieren dieser Datentypen, erstellen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle mit dem nächstgrößeren ganzzahligen Datentyp. Um zu verhindern, dass Benutzer später Werte außerhalb des für den ursprünglichen Datentyp zulässigen Bereichs hinzufügen, wenden Sie eine Regel auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte an, mit der die zulässigen Werte entsprechend eingeschränkt werden:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  

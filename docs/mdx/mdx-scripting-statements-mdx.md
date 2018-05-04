@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 028df15dd74bac7bb994d0b36816074f320d0247
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: eebdfcd0b5352db1c261d42001463907ee6afebd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX-Skriptanweisungen (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,17 +37,17 @@ ms.lasthandoff: 01/08/2018
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Berechnen Sie die Anweisung &#40; MDX &#41;](../mdx/mdx-scripting-calculate.md)|Berechnet einen Teilcube, wobei optional die Lösungsreihenfolge der im Teilcube enthaltenen Dimensionen bestimmt wird.|  
-|[CASE-Anweisung &#40; MDX &#41;](../mdx/case-statement-mdx.md)|Ermöglicht die bedingte Rückgabe bestimmter Werte aus mehreren Vergleichen.|  
-|[EXISTING-Schlüsselwort &#40; MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|Erzwingt die Auswertung einer angegebenen Menge im aktuellen Kontext.|  
-|[FREEZE-Anweisung &#40; MDX &#41;](../mdx/mdx-scripting-freeze.md)|Fixiert die Zellenwerte eines angegebenen Teilcubes auf die aktuellen Werte.|  
-|[IF-Anweisung &#40; MDX &#41;](../mdx/mdx-scripting-if.md)|Führt eine Anweisung aus, wenn die Bedingung erfüllt ist.|  
-|[SCOPE-Anweisung &#40; MDX &#41;](../mdx/mdx-scripting-scope.md)|Beschränkt den Bereich angegebener MDX-Anweisungen auf einen angegebenen Teilcube.|  
+|[Berechnen Sie die Anweisung & #40; MDX & #41;](../mdx/mdx-scripting-calculate.md)|Berechnet einen Teilcube, wobei optional die Lösungsreihenfolge der im Teilcube enthaltenen Dimensionen bestimmt wird.|  
+|[CASE-Anweisung & #40; MDX & #41;](../mdx/case-statement-mdx.md)|Ermöglicht die bedingte Rückgabe bestimmter Werte aus mehreren Vergleichen.|  
+|[EXISTING-Schlüsselwort & #40; MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|Erzwingt die Auswertung einer angegebenen Menge im aktuellen Kontext.|  
+|[FREEZE-Anweisung & #40; MDX & #41;](../mdx/mdx-scripting-freeze.md)|Fixiert die Zellenwerte eines angegebenen Teilcubes auf die aktuellen Werte.|  
+|[IF-Anweisung & #40; MDX & #41;](../mdx/mdx-scripting-if.md)|Führt eine Anweisung aus, wenn die Bedingung erfüllt ist.|  
+|[SCOPE-Anweisung & #40; MDX & #41;](../mdx/mdx-scripting-scope.md)|Beschränkt den Bereich angegebener MDX-Anweisungen auf einen angegebenen Teilcube.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDX-Anweisungsreferenz &#40; MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
- [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX-Datenbearbeitungsanweisungen &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Grundlegendes zu MDX-Skripts &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDX-Anweisungsreferenz &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [MDX-Datenbearbeitungsanweisungen &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Grundlegendes zu MDX-Skripts & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

@@ -6,20 +6,17 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8ee49e767d8d0b92b1c8a6548b8870822460fa6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d6df50936da3d8b31ec3bc7ecd62212fa6987c4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---
@@ -221,9 +218,9 @@ Das folgende Beispiel enthält eine einfache Java-Anwendung, die eine Verbindung
     7. Klicken Sie unten auf "Erstellen".
     9. Klicken Sie noch im Azure-Portal klicken Sie auf der Registerkarte "Einstellungen" der Anwendung, und Öffnen der Registerkarte "Eigenschaften".
     10. Suchen Sie den Wert "Anwendungs-ID" (AKA Client-ID), und kopieren Sie sie zur Seite gedrängt, dies ist erforderlich später beim Konfigurieren Ihrer Anwendung (z. B. 1846943b-ad04-4808-aa13-4702d908b5c1). Sehen Sie die folgenden Momentaufnahme.
-    11. Suchen Sie den Wert "App-ID-URL", und kopieren Sie sie zur Seite gedrängt, dies ist die STS-URL.
-    12. Erstellen Sie einen Schlüssel im Abschnitt "Schlüssel" die Dauer des Schlüssels auswählen, füllen im Feld "Name" und speichern die Konfiguration (lassen das Feld "Wert" leer). Nach dem Speichern, muss das Feld "Wert" automatisch ausgefüllt, kopieren Sie den generierten Wert. Dies ist der Client geheimen Schlüssel.
-
+    11. Erstellen Sie einen Schlüssel im Abschnitt "Schlüssel" die Dauer des Schlüssels auswählen, füllen im Feld "Name" und speichern die Konfiguration (lassen das Feld "Wert" leer). Nach dem Speichern, muss das Feld "Wert" automatisch ausgefüllt, kopieren Sie den generierten Wert. Dies ist der Client geheimen Schlüssel.
+    12. Klicken Sie im linken Bereich auf Azure Active Directory. Finden Sie unter "App-Registrierungen" die Registerkarte "Endpunkte" ein. Kopieren Sie die URL unter "Oath-2.0-TOKENENDPUNKT", dies ist Ihre STS-URL.
+    
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Melden Sie sich mit Ihrem Azure SQL-Server-Benutzerdatenbank sowie einen Azure Active Directory-Administrator mithilfe einer T-SQL-Befehl bereitstellen Benutzer einer eigenständigen Datenbank für Ihre Anwendung Prinzipal. Finden Sie unter der [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse durch Verwenden von Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) Weitere ausführliche Informationen zum Erstellen einer Azure Active Directory-Administrator und Benutzer einer eigenständigen Datenbank.
 
@@ -254,7 +251,7 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 

@@ -2,16 +2,14 @@
 title: Vorbereiten von Access-Datenbanken für die Migration (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -31,12 +29,11 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.workload: On Demand
-ms.openlocfilehash: e427612a8d0dea7020b1d58bced56e7350110d4e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 1862e57551ccbc4a41c14c58b1fb0f9de43998d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Vorbereiten von Access-Datenbanken für die Migration (AccessToSQL)
 Vor dem Migrieren von Access-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], müssen Sie feststellen, welche Datenbanken zu migrieren, und stellen Sie sicher, dass diese Datenbanken für die Migration bereit sind.  

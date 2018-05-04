@@ -25,13 +25,12 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4b3a75f550772704ef29fbc7e99e9013d416a723
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: efefb3b57ad124afe2af77be8d5eb81b434d3f2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ ms.lasthandoff: 04/16/2018
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**GRANTOR**|**Nvarchar (**128**)**|Der Berechtigende|  
-|**EMPFÄNGER**|**Nvarchar (**128**)**|Der Berechtigte|  
-|**TABLE_CATALOG**|**Nvarchar (**128**)**|Tabellenqualifizierer|  
-|**TABLE_SCHEMA**|**Nvarchar (**128**)**|Der Name des Schemas, das die Tabelle enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**GRANTOR**|**Nvarchar (** 128 **)**|Der Berechtigende|  
+|**EMPFÄNGER**|**Nvarchar (** 128 **)**|Der Berechtigte|  
+|**TABLE_CATALOG**|**Nvarchar (** 128 **)**|Tabellenqualifizierer|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|Der Name des Schemas, das die Tabelle enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**TABLE_NAME**|**sysname**|Tabellenname.|  
-|**PRIVILEGE_TYPE**|**Varchar (**10**)**|Privilegientyp|  
-|**IS_GRANTABLE**|**Varchar (**3**)**|Gibt an, ob der Berechtigte anderen Benutzern Berechtigungen erteilen kann.|  
+|**PRIVILEGE_TYPE**|**Varchar (** 10 **)**|Privilegientyp|  
+|**IS_GRANTABLE**|**Varchar (** 3 **)**|Gibt an, ob der Berechtigte anderen Benutzern Berechtigungen erteilen kann.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Systemsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

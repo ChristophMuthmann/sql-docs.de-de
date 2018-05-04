@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +26,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9537b116415c9620b31ad98348bcea6aca7fefe2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identifizieren von Schlüsselspalten mithilfe von sql:key-Feldern (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,11 +50,11 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Erzeugen der entsprechenden Schachtelung, wenn \<SQL: Relationship > keine ausreichenden Informationen bereitstellt  
  Dieses Beispiel zeigt, wo **SQL: Key-Felder** muss angegeben werden.  
   
- Betrachten Sie folgendes Schema. Das Schema gibt eine hierarchische Beziehung zwischen der  **\<Reihenfolge >** und  **\<Kunden >** Elemente, in denen die  **\<Reihenfolge >**Element ist das übergeordnete Element und die  **\<Kunden >** -Element untergeordnet ist.  
+ Betrachten Sie folgendes Schema. Das Schema gibt eine hierarchische Beziehung zwischen der  **\<Reihenfolge >** und  **\<Kunden >** Elemente, in denen die  **\<Reihenfolge >** Element ist das übergeordnete Element und die  **\<Kunden >** -Element untergeordnet ist.  
   
  Die  **\<SQL: Relationship >** Tag wird verwendet, um die über-/ unterordnungsbeziehung geben. In diesem Tag wird CustomerID als übergeordneter Schlüssel identifiziert, der auf die untergeordnete CustomerID-Schlüsselspalte in der Sales.Customer-Tabelle verweist. Die Informationen im  **\<SQL: Relationship >** reicht nicht aus, um Zeilen in der übergeordneten Tabelle (Sales.SalesOrderHeader) eindeutig zu identifizieren. Aus diesem Grund, ohne die **SQL: Key-Felder** Anmerkung in die Hierarchie, die generiert wird, ist ungenau.  
   
- Mit **SQL: Key-Felder** auf angegebenen  **\<Reihenfolge >**eindeutig identifiziert die Anmerkung die Zeilen in der übergeordneten Tabelle (Sales.SalesOrderHeader-Tabelle) und die untergeordneten Elemente werden unten der übergeordnete Element.  
+ Mit **SQL: Key-Felder** auf angegebenen  **\<Reihenfolge >** eindeutig identifiziert die Anmerkung die Zeilen in der übergeordneten Tabelle (Sales.SalesOrderHeader-Tabelle) und die untergeordneten Elemente werden unten der übergeordnete Element.  
   
  Das ist das Schema:  
   

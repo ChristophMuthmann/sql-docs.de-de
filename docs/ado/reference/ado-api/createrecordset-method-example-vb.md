@@ -1,11 +1,9 @@
 ---
 title: CreateRecordset-Methode (Beispiel) (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f06b4b5d22f3e55b2f7296f44691cd922e487808
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9aaea6cd4e646b351c472159496eb8ca30ec8a50
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset-Methode (Beispiel) (VB)
 Sie erstellen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, und geben Sie die Informationen in der Spalte. Sie können dann Einfügen von Daten in der **Recordset** Objekt, und die zugrunde liegenden Rowset Puffer einfügungen.  

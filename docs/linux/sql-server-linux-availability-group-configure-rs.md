@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: ''
-ms.workload: Inactive
-ms.openlocfilehash: d43cf2b5ef15cf25898ffa6ff6645382e51844d2
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 2b566f27e227d21728030a160dd8fedbe29f92e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Konfigurieren einer SQL Server-Verfügbarkeitsgruppe für das Skalieren von Lesevorgängen unter Linux
 

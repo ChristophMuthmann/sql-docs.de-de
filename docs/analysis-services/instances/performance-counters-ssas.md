@@ -1,31 +1,23 @@
 ---
 title: Leistungsindikatoren (SSAS) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d440c3f6c663abc4da4a873a85a7173c1e150480
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Mit dem Systemmonitor können Sie die Leistung einer Microsoft SQL Server Analysis Services (SSAS)-Instanz mithilfe von Leistungsindikatoren überwachen.  
+  Mit dem Systemmonitor können Sie die Leistung einer Microsoft SQL Server Analysis Services (SSAS)-Instanz mithilfe von Leistungsindikatoren überwachen.  
   
  Der Systemmonitor ist ein MMC-Snap-In ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control), das die Verwendung von Ressourcen nachverfolgt. Sie können dieses MMC-Snap-In starten, indem Sie an der Eingabeaufforderung **PerfMon** eingeben oder in der Systemsteuerung auf **Verwaltung**und anschließend auf **Systemmonitor**klicken. Mithilfe des Systemmonitors können Sie die Leistung und Aktivität von Server und Prozessen mithilfe vordefinierter Objekte und Leistungsindikatoren nachverfolgen sowie Ereignisse mithilfe benutzerdefinierter Leistungsindikatoren überwachen. Der Systemmonitor erfasst Anzahlwerte anstelle von Daten zu den Ereignissen, z. B. die Speicherauslastung, die Anzahl der aktiven Transaktionen oder die CPU-Aktivität. Für bestimmte Leistungsindikatoren können auch Schwellenwerte festgelegt werden, um Warnungen zu generieren, durch die Operatoren benachrichtigt werden.  
   

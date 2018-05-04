@@ -1,11 +1,9 @@
 ---
 title: ADO-Objekte und Schnittstellen | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a9888255ff5560cf432b29850b1104f5470df9a6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 047e1a7a0cafee0b562edc5b3ec47f9f4dd3989d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO-Objekte und Schnittstellen
 Die Beziehungen zwischen diesen Objekten werden dargestellt, der [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md).  

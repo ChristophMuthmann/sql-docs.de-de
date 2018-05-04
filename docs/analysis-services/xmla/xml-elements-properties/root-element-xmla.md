@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 505b80b7a7e884dc9af76ae6a6f72447ff26d3d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-element-xmla"></a>root-Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Ein zurückgegebenes Ergebnis enthält die [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methode oder ein XML for Analysis (XMLA)-Befehl ausgeführt wird, mithilfe der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Enthält ein Ergebnis, das von der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) -Methode oder einem XMLA-Befehl (XML for Analysis), der über die [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) -Methode ausgeführt wird, zurückgegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,28 +55,28 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Finden Sie in der folgenden Tabelle aus.|  
-|Standardwert|InclusionThresholdSetting|  
-|Cardinality|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|Siehe Tabelle unten.|  
+|Standardwert|Keine|  
+|Kardinalität|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
   
 |Ancestor|Datentyp|  
 |--------------|---------------|  
-|[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md), [Olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
-|[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md), [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md), [Olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
+|[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)|[Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
+|[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md), [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md), [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Ergebnisse](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [zurückgeben](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|[results](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [return](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
+|Untergeordnete Elemente|Keine|  
   
-## <a name="remarks"></a>Remarks  
- Die **Root** -Element enthält die Informationen, die entweder die [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) -Element über einen einzelnen **Discover** -Methodenaufruf, oder in der [ ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) -Element über einen einzelnen XMLA-Befehl ausgeführt wird, über einen einzelnen **Execute** -Methodenaufruf.  
+## <a name="remarks"></a>Hinweise  
+ Das **root** -Element enthält die Informationen, die entweder im [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) -Element über einen einzelnen **Discover** -Methodenaufruf oder im [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) -Element über einen einzelnen XMLA-Befehl, der von einem einzelnen **Execute** -Methodenaufruf ausgeführt wurde, zurückgegeben wurden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

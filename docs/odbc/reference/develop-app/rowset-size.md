@@ -3,15 +3,12 @@ title: Rowsetgröße | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rowset size [ODBC]
 - cursors [ODBC], block
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 42870c60bfec0911b1a676b090a7d94bd5f42d1a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c0fa3d2feb8bcd3c4c342567e67f403edfb8029a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-size"></a>Rowsetgröße
 Welche Rowsetgröße verwendet, hängt von der Anwendung ab. Bildschirmbasierte Anwendungen führen Sie häufig eine der zwei Strategien. Die erste ist die Rowsetgröße festzulegen, der die Anzahl der Zeilen, die auf dem Bildschirm angezeigt. Wenn der Benutzer den Bildschirm Größe verkleinert wird, wechselt die Anwendung die Rowsetgröße. Das zweite ist, die Rowsetgröße auf einen höheren Wert ein, z. B. 100, festzulegen, die reduziert die Anzahl der Aufrufe an die Datenquelle. Die Anwendung lokal innerhalb des Rowsets möglichst verschiebt und neue Zeilen abruft, nur verwendet werden, wenn es außerhalb des Rowsets ein Bildlauf durchgeführt.  

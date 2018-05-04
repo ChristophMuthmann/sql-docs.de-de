@@ -1,28 +1,28 @@
 ---
 title: SSIS Scale Out-Master (SQL Server Integration Services) | Microsoft-Dokumentation
 ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b04134faf050c47ec11deb4699ed927f6f86027
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8a911987ac18b719b17aae04ae8d3cdd3062fce8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Master für horizontales Hochskalieren von Integration Services (SSIS)
 Der Scale Out-Master verwaltet das Scale Out-System über den SSISDB-Katalog und den Scale Out-Masterdienst. 
@@ -34,10 +34,10 @@ Der Scale Out-Masterdienst ist ein Windows-Dienst, über den die Kommunikation m
 ## <a name="scale-out-views-and-stored-procedures-in-ssisdb"></a>Scale Out-Ansichten und gespeicherte Prozeduren in SSISDB
 
 ### <a name="views"></a>Views:
--   [[catalog].[master_properties(../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
+-   [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
 -   [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md).
 
-####<a name="stored-procedures"></a>Gespeicherte Prozeduren:
+### <a name="stored-procedures"></a>Gespeicherte Prozeduren:
 
 -   Zum Verwalten von Scale Out-Workern:  
     -   [[catalog].[disable_worker_agent]](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)

@@ -1,30 +1,29 @@
 ---
 title: Model-Objekts (TMSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4bbc2865e6a6bd46f7111cc8c9656909e5855069
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-object-tmsl"></a>Model-Objekts (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definiert ein tabellarisches Modell. Es ist ein Modell pro Datenbank und nur eine Datenbank, die in einem Befehl angegeben werden kann. Ein Datenbankobjekt ist das übergeordnete Objekt.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Definiert ein tabellarisches Modell. Es ist ein Modell pro Datenbank und nur eine Datenbank, die in einem Befehl angegeben werden kann. Ein Datenbankobjekt ist das übergeordnete Objekt.  
   
  Modelldefinitionen sind zu groß für die gesamte Syntax in einem Thema zu reproduzieren. Aus diesem Grund kann eine partielle syntaxhervorhebung, mit die Hauptbestandteile unten mit Links zu untergeordneten Objekten gefunden werden.  
   
@@ -53,13 +52,13 @@ ms.lasthandoff: 01/08/2018
  Die Sortierreihenfolge. Finden Sie unter [globalisierungsszenarien für Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) für Weitere Informationen.  
   
  Tabellen  
- Die vollständige Auflistung der Tabellen im Modell, einschließlich der Partitionen, Spalten, Measures, KPIs und Anmerkungen. Finden Sie unter [Object &#40; Tabellen TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) für Details.  
+ Die vollständige Auflistung der Tabellen im Modell, einschließlich der Partitionen, Spalten, Measures, KPIs und Anmerkungen. Finden Sie unter [Tables-Objekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) für Details.  
   
  Beziehungen  
- Gibt die Beziehung zwischen jedem Tabellenpaar, einschließlich Eigenschaften, die filterrichtung und die Sicherheit festlegen. Finden Sie unter [Beziehungen Object &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) für Details.  
+ Gibt die Beziehung zwischen jedem Tabellenpaar, einschließlich Eigenschaften, die filterrichtung und die Sicherheit festlegen. Finden Sie unter [Beziehungen Objekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) für Details.  
   
  Datenquellen  
- Eine oder mehrere Verbindungen mit externen Datenbanken Daten für das Modell bereitstellt, oder zum pass-through-Abfragen. Finden Sie unter [DataSources Object &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) für Details.  
+ Eine oder mehrere Verbindungen mit externen Datenbanken Daten für das Modell bereitstellt, oder zum pass-through-Abfragen. Finden Sie unter [DataSources Objekt &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) für Details.  
   
  Rollen  
  Objekte, die Datenbankberechtigung, Benutzerkonten und optional von Sicherheitsfiltern in DAX, für die benutzerdefinierte Zugriffssteuerung zuordnen.  
@@ -70,7 +69,7 @@ ms.lasthandoff: 01/08/2018
  Beim Erstellen, ersetzen oder Ändern eines Model-Objekts geben Sie alle Lese-/ Schreibzugriff Eigenschaften der Objektdefinition. Eine Lese-/ Schreibzugriff-Eigenschaft nicht angegeben, gilt einen Löschvorgang.  
   
 ## <a name="partial-syntax"></a>Teilweise-Syntax  
- Da diese Objektdefinition so umfangreich ist, werden nur die erste Ebenen Eigenschaften aufgeführt. Finden Sie unter [Definitionen von Systemobjekten im tabellarischen Modell Scripting Language &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) eine Liste der untergeordneten Objekte.  
+ Da diese Objektdefinition so umfangreich ist, werden nur die erste Ebenen Eigenschaften aufgeführt. Finden Sie unter [Objektdefinitionen in Tabular Model Scripting Language &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) eine Liste der untergeordneten Objekte.  
   
 ```  
     "model": {  
@@ -95,7 +94,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

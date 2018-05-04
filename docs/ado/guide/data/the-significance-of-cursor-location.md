@@ -1,11 +1,9 @@
 ---
 title: Die Bedeutung der Cursorposition | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb82081d69a03cd7ab9b7a42cf5ed7fead811657
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 5699c8c7bc3ab1ed54d9411ff889e43e8cf334d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-significance-of-cursor-location"></a>Die Bedeutung der Cursorposition
 Jeder Cursor verwendet temporäre Ressourcen zum Speichern der Daten. Diese Ressourcen können Speicher, eine Auslagerungsdatei des Datenträgers, temporäre Datenträgerdateien oder sogar temporären Speicherplatz in der Datenbank sein. Der Cursor wird aufgerufen, eine *clientseitige* Cursor, wenn diese Ressourcen auf dem Clientcomputer gespeichert werden. Der Cursor wird aufgerufen, eine *serverseitige* Cursor, wenn diese Ressourcen auf dem Server gespeichert sind.  

@@ -1,11 +1,9 @@
 ---
 title: Cancel-(VC++-Methodenbeispiel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aa5a4ce6c77de6650512a11fe23584c231c349ef
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d62e3fc56d2fb89d45d0731fda12319e99d87d78
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cancel-method-example-vc"></a>Cancel-Methode (VC++-Beispiel)
 Dieses Beispiel verwendet die ["Abbrechen"](../../../ado/reference/ado-api/cancel-method-ado.md) Methode zum Abbrechen der Ausführung einer Befehls auf einen [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, wenn die Verbindung ausgelastet ist.  

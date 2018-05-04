@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c7fd67d6b49aef0c3977b544a114d42c22751af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0e703c80db732560a45db72d8f8c0bf2a2ce21fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Datentypen (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +50,15 @@ ms.lasthandoff: 04/16/2018
 |SRVDECIMALN|**decimal null**|**decimal**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVFLT4|**real**|**real**-Datentyp mit einer Länge von 4 Byte|  
 |SRVFLT8|**float**|**float**-Datentyp mit einer Länge von 8 Byte|  
-|SRVFLTN|**real** &#124; **float Null**|**real**- oder **float**-Datentyp, NULL-Werte sind zulässig.|  
+|SRVFLTN|**real** | **float null**|**real**- oder **float**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVIMAGE|**image**|**image**-Datentyp|  
 |SRVINT1|**tinyint**|**tinyint**-Datentyp mit einer Länge von einem Byte|  
 |SRVINT2|**smallint**|**smallint**-Datentyp mit einer Länge von 2 Byte|  
 |SRVINT4|**int**|**int**-Datentyp mit einer Länge von 4 Byte|  
-|SRVINTN|**"tinyint"** &#124; **"smallint"** &#124; **Int null**|**tinyint**-, **smallint**-, oder **int**-Datentyp, NULL-Werte sind zulässig.|  
+|SRVINTN|**tinyint** | **smallint** | **int null**|**tinyint**-, **smallint**-, oder **int**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVMONEY4|**smallmoney**|**smallmoney**-Datentyp mit einer Länge von 4 Byte|  
 |SRVMONEY|**money**|**money**-Datentyp mit einer Länge von 8 Byte|  
-|SRVMONEYN|**Money** &#124; **Smallmoney null**|**smallmoney**- oder **money**-Datentyp, NULL-Werte sind zulässig.|  
+|SRVMONEYN|**money** | **smallmoney null**|**smallmoney**- oder **money**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVNCHAR|**nchar**|**character**-Unicode-Datentyp|  
 |SRVNTEXT|**ntext**|**text**-Unicode-Datentyp|  
 |SRVNUMERIC|**numeric**|**numeric**-Datentyp|  

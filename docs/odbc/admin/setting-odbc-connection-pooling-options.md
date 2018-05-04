@@ -3,15 +3,12 @@ title: Festlegen von Optionen für ODBC-Verbindungspooling | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - ODBC data source administrator [ODBC], connection pooling options
@@ -21,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6a7c21b511f88b8f26d8cc4bdbff40c37c096dcb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: af8e9931c4026d578f226ec5e119815312c36a7a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Festlegen von Optionen für ODBC-Verbindungspooling
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für die einzelnen wiederhergestellt werden müssen. Können Sie die **Verbindungspooling** auf der Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld zum Aktivieren und Deaktivieren der Überwachung der Anwendungsleistung. Doppelklicken Sie auf eine Treibername den Timeoutzeitraum festlegen.  

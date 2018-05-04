@@ -7,20 +7,17 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
-ms.component: samples
-ms.technology: ''
-ms.topic: article
-author: BarbKess
-ms.author: barbkess
+ms.technology: samples
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.workload: On Demand
-ms.openlocfilehash: 94dce681ad5687545b28995a5479217950253a81
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 29a485cae76a13150cc6ca8dede7805a09630c0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-samples"></a>SQL-Beispiele
 

@@ -1,31 +1,23 @@
 ---
-title: "Konnte nicht aktualisiert werden Daten für eine Datenverbindung in der Arbeitsmappe | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 
-author: Minewiskan
+title: Konnte nicht aktualisiert werden Daten für eine Datenverbindung in der Arbeitsmappe | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c1961c883a5e38c56acf65def83272aa1e5adb8d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Excel Services gibt diesen Fehler für Excel-Arbeitsmappen zurück, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten enthalten, wenn es eine Verbindungsanforderung an einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server sendet und die Anforderung fehlschlägt.  
+  Excel Services gibt diesen Fehler für Excel-Arbeitsmappen zurück, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten enthalten, wenn es eine Verbindungsanforderung an einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server sendet und die Anforderung fehlschlägt.  
   
 ## <a name="details"></a>Details  
   
@@ -67,7 +59,7 @@ Excel Services gibt diesen Fehler für Excel-Arbeitsmappen zurück, die [!INCLUD
   
  Fügen Sie den Computer der gleichen Domäne wie der des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Servers hinzu, oder installieren Sie auf dem lokalen Computer einen Domänencontroller, um dieses Problem zu umgehen. Für die zweite Lösung, die Installation des Domänencontrollers, müssen Sie lokale Domänenkonten für alle Dienste und Benutzer erstellen. Sie müssen Dienstkonten und SharePoint-Berechtigungen für die Konten konfigurieren, die Sie definieren.  
   
- Die Installation eines Domänencontrollers auf Ihrem Computer ist nützlich, wenn die Zielsetzung darin besteht, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint in einem Offlinestatus zu verwenden. Ausführliche Anweisungen zur Offline-Verwendung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] finden Sie im Blogeintrag „Taking your [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server off the network“ (Herausnehmen Ihres PowerPivot-Servers aus dem Netzwerk) unter [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ Die Installation eines Domänencontrollers auf Ihrem Computer ist nützlich, wenn die Zielsetzung darin besteht, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint in einem Offlinestatus zu verwenden. Ausführliche Anweisungen zur Verwendung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] offline, finden Sie im Blogeintrag "dauert die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server aus dem Netzwerk" auf [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Szenario 4: Instabiler Server**  
   

@@ -24,13 +24,12 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f176d3f6be7f48920bee35ceae38977e6b947623
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ecbe398a303b7e4cb75fd0eeedc4e7951cfb4fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +53,10 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="arguments"></a>Argumente  
  [ **@procedure_name =** ] **'***name***'**  
- Der Name der Prozedur zur Rückgabe von Kataloginformationen. *Namen* ist **Nvarchar (**390**)**, hat den Standardwert %, womit alle Tabellen in der aktuellen Datenbank. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+ Der Name der Prozedur zur Rückgabe von Kataloginformationen. *Namen* ist **Nvarchar (** 390 **)**, hat den Standardwert %, womit alle Tabellen in der aktuellen Datenbank. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
  [  **@procedure_owner =**] **"***Besitzer***"**  
- Der Name des Besitzers der Prozedur. *Besitzer*ist **Nvarchar (**384**)**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
+ Der Name des Besitzers der Prozedur. *Besitzer*ist **Nvarchar (** 384 **)**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
   
  Wenn der aktuelle Benutzer eine Prozedur mit dem angegebenen Namen besitzt, werden Informationen zu dieser Prozedur zurückgegeben. Wenn *Besitzer*nicht angegeben wird und der aktuelle Benutzer besitzt eine Prozedur mit dem angegebenen Namen nicht **Sp_sproc_columns** sucht nach einer Prozedur mit dem angegebenen Namen, die dem Datenbankbesitzer gehört. Sofern die Prozedur vorhanden ist, werden Information zu deren Spalten zurückgegeben.  
   
@@ -65,7 +64,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
  Der Name des Prozedurqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*qualifier.owner.name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dieser Parameter dem Datenbanknamen. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [  **@column_name =**] **"***Column_name***"**  
- Eine einzelne Spalte, und wird verwendet, wenn nur eine Spalte mit Kataloginformationen gewünscht wird. *Column_name* ist **Nvarchar (**384**)**, hat den Standardwert NULL. Wenn *Column_name* wird weggelassen wird, werden alle Spalten zurückgegeben. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
+ Eine einzelne Spalte, und wird verwendet, wenn nur eine Spalte mit Kataloginformationen gewünscht wird. *Column_name* ist **Nvarchar (** 384 **)**, hat den Standardwert NULL. Wenn *Column_name* wird weggelassen wird, werden alle Spalten zurückgegeben. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
   
  [  **@ODBCVer =**] **"***ODBCVer***"**  
  Ist die Version von ODBC verwendet wird. *ODBCVer* ist **Int**, Standardwert 2 gibt ODBC, Version 2.0. Weitere Informationen zu den Unterschieden zwischen ODBC, Version 2.0 und ODBC, Version 3.0, finden Sie in der ODBC **SQLProcedureColumns** Spezifikation für ODBC, Version 3.0  
@@ -82,7 +81,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Der Name des Prozedurqualifizierers. Diese Spalte kann NULL enthalten.|  
 |**PROCEDURE_OWNER**|**sysname**|Der Name des Prozedurbesitzers. Diese Spalte gibt immer einen Wert zurück.|  
-|**PROCEDURE_NAME**|**Nvarchar (**134**)**|Der Name der Prozedur. Diese Spalte gibt immer einen Wert zurück.|  
+|**PROCEDURE_NAME**|**Nvarchar (** 134 **)**|Der Name der Prozedur. Diese Spalte gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Spaltenname für jede Spalte von der **TABLE_NAME** zurückgegeben. Diese Spalte gibt immer einen Wert zurück.|  
 |**COLUMN_TYPE**|**smallint**|Dieses Feld gibt immer einen Wert zurück:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|Ein ganzzahliger Code für einen ODBC-Datentyp. Wenn dieser Datentyp keinem ISO-Datentyp zugeordnet werden kann, lautet der Wert NULL. Den Namen des systemeigenen Datentyps wird zurückgegeben, der **TYPE_NAME** Spalte.|  
@@ -92,8 +91,8 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**SKALIERUNG**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
 |**BASIS**|**smallint**|Die Basis für die Darstellung numerischer Datentypen.|  
 |**NULL-WERTE ZULÄSST**|**smallint**|Gibt die NULL-Zulässigkeit an:<br /><br /> 1 = Datentyp mit NULL-Werten ist zulässig.<br /><br /> 0 = NULL-Werte sind nicht zulässig.|  
-|**"HINWEISE"**|**Varchar (**254**)**|Beschreibung der Prozedurspalte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
-|**COLUMN_DEF**|**Nvarchar (**4000**)**|Standardwert der Spalte|  
+|**"HINWEISE"**|**Varchar (** 254 **)**|Beschreibung der Prozedurspalte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
+|**COLUMN_DEF**|**Nvarchar (** 4000 **)**|Standardwert der Spalte|  
 |**SQL_DATA_TYPE**|**smallint**|Wert des SQL-Datentyps, wie in der **Typ** Feld des Deskriptors. Diese Spalte ist identisch mit der **DATA_TYPE** Spalte, mit Ausnahme der **"DateTime"** und ISO **Intervall** Datentypen. Diese Spalte gibt immer einen Wert zurück.|  
 |**SQL_DATETIME_SUB**|**smallint**|Die **"DateTime"** ISO **Intervall** subcode, wenn der Wert der **SQL_DATA_TYPE** ist **SQL_DATETIME** oder **SQL_INTERVAL**. Bei allen Datentypen außer **"DateTime"** und ISO **Intervall**, dieses Feld ist NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Maximale Länge in Bytes, der eine **Zeichen** oder **binäre** -Datentypspalte. Bei allen anderen Datentypen gibt diese Spalte einen NULL-Wert zurück.|  

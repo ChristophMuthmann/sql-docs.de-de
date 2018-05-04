@@ -9,16 +9,15 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c100ce441ae9bb2285df967c35f4083ca4802ad2
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 46726247dc8540e67611173f6692ce092bb5be33
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Verbinden [!INCLUDE[name-sos](../includes/name-sos-short.md)] auf dem SQL Server mithilfe der Windows-Authentifizierung – Kerberos 
 

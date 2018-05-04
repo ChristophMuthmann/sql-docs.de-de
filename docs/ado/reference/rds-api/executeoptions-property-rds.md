@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 398e5f911baf4ef63dcec790f046da3784983964
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 70477b9fe2da521c28e0ab21f970c7eaf2f63c72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions-Eigenschaft (RDS)
 Gibt an, ob asynchrone Ausführung aktiviert ist.  

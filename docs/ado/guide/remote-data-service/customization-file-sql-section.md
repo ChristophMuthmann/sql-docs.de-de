@@ -1,11 +1,9 @@
 ---
 title: SQL-Abschnitt der Anpassung | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6294ab601f527527cf69ca017e3643dfe98a1336
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 792168588c13af5007ff35b7af9004f3cc78d385
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customization-file-sql-section"></a>SQL-Abschnitt der Anpassung
 Die **Sql** Abschnitt kann eine neue SQL-Zeichenfolge, die die Client-Befehl angegebene Zeichenfolge ersetzt enthalten. Wenn Sie keine SQL-Zeichenfolge im Abschnitt vorhanden ist, wird der Abschnitt ignoriert.  

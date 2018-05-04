@@ -2,16 +2,14 @@
 title: Zuordnen von Quell- und Zieldatenbanken (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -28,12 +26,11 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77266085cf8a55322abf184fb18c5be26af95939
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ade8c301a8cb519c22413a4db9a236f58f5dd870
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Zuordnen von Quell- und Zieldatenbanken (AccessToSQL)
 Wenn Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, müssen Sie eine Zieldatenbank für die Migration angeben. Wenn Sie mehrere Access-Datenbanken haben können Sie sie mit mehreren zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbanken (oder Schemas) oder auf mehrere Schemas unter der verbundenen SQL Azure-Datenbank.  

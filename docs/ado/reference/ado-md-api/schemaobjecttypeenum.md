@@ -22,12 +22,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eea1ddb12ae180bdf0d8d2fd8c406f7cbaffe8c4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2be16bab2c552407cccfaa9fe3d88cd2e080da34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 Gibt den Typ des Objekts, das abgerufen werden die [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) Methode.  

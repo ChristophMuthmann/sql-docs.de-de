@@ -1,11 +1,9 @@
 ---
 title: Fehler (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 66503a0a42e9b7c88899b9d0008b464f04bab1dd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d34a1e8a51c3843c3df73aefa620bec1d7f43f95
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-ado"></a>Fehler (ADO)
 Jeder Vorgang im Zusammenhang mit ADO-Objekten kann eine oder mehrere Anbieterfehler generieren. Sobald ein Fehler auftritt, eine oder mehrere **Fehler** Objekte platziert werden, die der **Fehler** Auflistung von der **Verbindung** Objekt. Informationen zur Behandlung von Warnungen und Fehler in der ADO-Anwendung finden Sie unter [Fehlerbehandlung](../../../ado/guide/data/error-handling.md).  

@@ -1,11 +1,9 @@
 ---
 title: DeleteRecord-Methode (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 74a3a1dcbd909042ab52bb115cd7cd70c9dd3660
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ca7b2a425e24a115b8572f26ec7b2efb103ba9ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord-Methode (ADO)
 Löscht eine Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md).  
