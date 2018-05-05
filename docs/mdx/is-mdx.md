@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2851106b509cb3907b06b21adc0d08e850af4fdd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a4422a686a35799c210f81d5e60fa44ca3c5aeae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="is-mdx"></a>IS (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Expression1 IS ( Expression2 | NULL )
 ## <a name="return-value"></a>Rückgabewert  
  Ein boolescher Wert, der zurückgibt **"true"** , wenn beide Argumente für das gleiche Objekt verweisen, andernfalls **"false"**. Wenn die **NULL** Schlüsselwort angegeben ist, gibt der Operator **"true"** Wenn *Expression1* ist **null**ist, andernfalls **"false"**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Die **IS** -Operator wird häufig verwendet, um zu bestimmen, ob Tupeln und Elemente Idempotent sind, was bedeutet, dass sie genau gleich sind.  
   
 ## <a name="examples"></a>Beispiele  
@@ -75,7 +74,7 @@ Expression1 IS ( Expression2 | NULL )
   
  `[Adventure Works]`  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDX-Operatorreferenz &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

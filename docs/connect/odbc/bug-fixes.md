@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
@@ -19,12 +19,11 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: genemi
 manager: kenvh
-ms.workload: Active
-ms.openlocfilehash: 58da69ed6c4b7b046f8d1bc1ddf4e23b71b99a29
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 200e5796866527110bb1e57d35ac35a9229e3716
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Liste der behobenen Fehler
 

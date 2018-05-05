@@ -3,15 +3,12 @@ title: C-Datentypen | Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -22,12 +19,11 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 288ca6cbd5553b963131d34b8e63640518f70ef4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types"></a>C-Datentypen
 ODBC C-Datentypen angeben, den Datentyp der C-Puffer zum Speichern von Daten in der Anwendung verwendet wird.  
@@ -152,7 +148,7 @@ struct tagSQLGUID {
   
  [h] bei einigen Compilern möglicherweise nicht _int64 angegeben werden.  
   
- [i] _SQL_C_BOOKMARK ist in ODBC 3. veraltet*.x*.  
+ [i] _SQL_C_BOOKMARK ist in ODBC 3. veraltet *.x*.  
   
  [j] _SQL_C_SHORT SQL_C_LONG und SQL_C_TINYINT wurden in ODBC durch ersetzt mit und ohne Vorzeichen Typen: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG, und SQL_C_STINYINT und SQL_C_UTINYINT. Eine ODBC 3.*.x* Treiber, die mit ODBC 2. arbeiten sollten. *X* Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT, unterstützt, da bei der sie aufgerufen werden, der Treiber-Manager über den Treiber übergibt.  
   

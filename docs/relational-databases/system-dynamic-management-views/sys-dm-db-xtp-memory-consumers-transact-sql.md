@@ -26,18 +26,17 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d2cb462162ae8a34947631b52fc6c2b10222f640
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e2edb2149c92cd0325145af5396abc3063ae3b73
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Meldet die Arbeitsspeicherconsumer auf Datenbankebene im [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Datenbankmodul. Diese Sicht gibt eine Zeile für jeden Arbeitsspeicherconsumer zurück, den das Datenbankmodul verwendet. Verwenden Sie diese DMV, um anzuzeigen, wie der Arbeitsspeicher auf andere interne Objekte verteilt ist.  
+  Meldet die Arbeitsspeicherconsumer auf Datenbankebene in der [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Datenbank-Engine. Diese Sicht gibt eine Zeile für jeden Arbeitsspeicherconsumer zurück, den die Datenbank-Engine verwendet. Verwenden Sie diese DMV, um anzuzeigen, wie der Arbeitsspeicher auf andere interne Objekte verteilt ist.  
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   

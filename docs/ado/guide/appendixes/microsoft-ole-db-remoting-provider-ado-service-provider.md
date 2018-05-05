@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB-Anbieter für Remoting (ADO-Dienstanbieter) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f132bb8124afecea1b1f7fb519ecf64d1cfe88a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB-Remoting-Anbieter (Übersicht)
 Der Microsoft OLE DB-Anbieter für Remoting ermöglicht, einen lokalen Benutzer auf einem Clientcomputer aufzurufenden Datenanbieter auf einem Remotecomputer. Geben Sie die Parameter des Datenproviders für den Remotecomputer wie würden Sie einen lokalen Benutzer auf dem Remotecomputer. Geben Sie dann die Parameter, die vom Anbieter-Remoting verwendet wird, auf den Remotecomputer zuzugreifen. Sie können dann den Remotecomputer zugreifen, als wären Sie ein lokaler Benutzer.
@@ -56,7 +53,7 @@ Der Microsoft OLE DB-Anbieter für Remoting ermöglicht, einen lokalen Benutzer 
 |**DFMode**|Gibt den DataFactory-Modus. Eine Zeichenfolge, die die gewünschte Version eines gibt die [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt auf dem Server. Legen Sie diese Eigenschaft vor dem Öffnen einer Verbindung zum Anfordern einer bestimmten Version der **DataFactory**. Wenn die angeforderte Version nicht verfügbar ist, wird es versucht werden, verwenden Sie die vorherige Version. Wenn keine vorherigen Version vorhanden ist, tritt ein Fehler auf. Wenn **DFMode** kleiner als die verfügbare Version ist, wird eine Fehlermeldung angezeigt. Diese Eigenschaft ist schreibgeschützt, nachdem eine Verbindung hergestellt wird.<br /><br /> Die folgenden gültigen Zeichenfolgenwerte sind möglich:<br /><br /> -"25", Version 2.5 (Standard)<br />-"21", Version 2.1<br />-"20", Version 2.0<br />-"15", Version 1.5|
 |**Befehlseigenschaften**|Verweist auf Werte, die in der Zeichenfolge der (Rowset)-Befehlseigenschaften, die an den Server gesendet werden, durch den MS Remote-Anbieter hinzugefügt werden. Der Standardwert für diese Zeichenfolge wird Vt_empty.|
 |**Aktuelle DFMode**|Gibt die tatsächliche Anzahl von an das **DataFactory** auf dem Server. Überprüfen Sie diese Eigenschaft, um festzustellen, ob die Version im angefordert der **DFMode** Eigenschaft berücksichtigt wurde.<br /><br /> Die folgenden gültigen Long Integer-Werte sind möglich:<br /><br /> – 25 – Version 2.5 (Standard)<br />-21 – Version 2.1<br />– 20 – Version 2.0<br />– 15 – Version 1.5<br /><br /> Hinzufügen von "DFMode = 20;" zur Verbindungszeichenfolge bei Verwendung der **MSRemote** Anbieter kann die Leistung Ihres Servers verbessern, beim Aktualisieren von Daten. Mit dieser Einstellung wird die **RDSServer.DataFactory** Objekt auf dem Server verwendet einen Modus weniger ressourcenintensiv. Die folgenden Funktionen sind jedoch nicht in dieser Konfiguration verfügbar:<br /><br /> -Verwendung parametrisierter Abfragen.<br />-Abrufen-Parameter oder Spalte vor dem Aufruf der **Execute** Methode.<br />-Festlegen von **Transact Updates** auf **"true"**.<br />-Abrufen des Zeilenstatus.<br />-Aufrufen der **Resync** Methode.<br />-Aktualisieren (explizit oder automatisch) über die **Update Resync** Eigenschaft.<br />-Festlegen von **Befehl** oder **Recordset** Eigenschaften.<br />-Mithilfe von **AdCmdTableDirect**.|
-|**Ereignishandler**|Gibt den Namen einer serverseitige Anpassung Programm (oder der Handler), die die Funktionalität des erweitert die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), und alle Parameter, die vom Handler verwendete*,* getrennt durch Kommas ( ","). Ein **Zeichenfolge** Wert.|
+|**Ereignishandler**|Gibt den Namen einer serverseitige Anpassung Programm (oder der Handler), die die Funktionalität des erweitert die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), und alle Parameter, die vom Handler verwendete *,* getrennt durch Kommas ( ","). Ein **Zeichenfolge** Wert.|
 |**Internet-Zeitüberschreitung.**|Gibt die maximale Anzahl von Millisekunden zu warten, bis eine Anforderung zum und vom Server zu übertragen. (Die Standardeinstellung ist 5 Minuten.)|
 |**Remoteanbieter**|Gibt den Namen des Datenanbieters auf dem Remoteserver verwendet werden.|
 |**Remoteserver**|Gibt an, das Serverprotokoll Name und die Kommunikation, die von dieser Verbindung verwendet werden. Diese Eigenschaft ist identisch mit der [RDS. DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt [Server](../../../ado/reference/rds-api/server-property-rds.md) Eigenschaft.|

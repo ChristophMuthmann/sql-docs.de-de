@@ -24,12 +24,11 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c017d5b0e510147b668eeab458841ebcbf15de00
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 217350ed772c731d8a23e1a859e8dc95f02220a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +52,11 @@ sp_linkedservers
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Name des Verbindungsservers|  
-|**SRV_PROVIDERNAME**|**Nvarchar (**128**)**|Der Anzeigename des OLE DB-Anbieters, der den Zugriff auf den angegebenen Verbindungsserver verwaltet.|  
-|**SRV_PRODUCT**|**Nvarchar (**128**)**|Der Produktname des Verbindungsservers.|  
-|**SRV_DATASOURCE**|**Nvarchar (**4000**)**|Die Eigenschaft der OLE DB-Datenquelle für den angegebenen Verbindungsserver.|  
-|**SRV_PROVIDERSTRING**|**Nvarchar (**4000**)**|Die Zeichenfolgeneigenschaft des OLE DB-Anbieters für den angegebenen Verbindungsserver.|  
-|**SRV_LOCATION**|**Nvarchar (**4000**)**|Die Eigenschaft des OLE DB-Standorts für den angegebenen Verbindungsserver.|  
+|**SRV_PROVIDERNAME**|**Nvarchar (** 128 **)**|Der Anzeigename des OLE DB-Anbieters, der den Zugriff auf den angegebenen Verbindungsserver verwaltet.|  
+|**SRV_PRODUCT**|**Nvarchar (** 128 **)**|Der Produktname des Verbindungsservers.|  
+|**SRV_DATASOURCE**|**Nvarchar (** 4000 **)**|Die Eigenschaft der OLE DB-Datenquelle für den angegebenen Verbindungsserver.|  
+|**SRV_PROVIDERSTRING**|**Nvarchar (** 4000 **)**|Die Zeichenfolgeneigenschaft des OLE DB-Anbieters für den angegebenen Verbindungsserver.|  
+|**SRV_LOCATION**|**Nvarchar (** 4000 **)**|Die Eigenschaft des OLE DB-Standorts für den angegebenen Verbindungsserver.|  
 |**SRV_CAT**|**sysname**|Die Eigenschaft des OLE DB-Katalogs für den angegebenen Verbindungsserver.|  
   
 ## <a name="permissions"></a>Berechtigungen  

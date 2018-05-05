@@ -1,11 +1,9 @@
 ---
 title: FetchComplete-Ereignis (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f442f13a9958c1d407e386cdf427740339fad379
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 59c3adb6b0ad683b40dac2cf4547800bf7398067
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete-Ereignis (ADO)
 Die **FetchComplete** Ereignis wird aufgerufen, nachdem alle Datensätze in einer langen asynchronen Operation in abgerufen wurden die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

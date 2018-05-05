@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa56e9d1827b5a4335afb94fc8e69085e662009d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: da784f2af905aeeab914e4a2365978b1cdbec37c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transactions-odbc"></a>ODBC-Transaktionen
 Ein *Transaktion* ist eine Arbeitseinheit, die als einzelne, atomaren Vorgang erfolgt; bedeutet, dass der Vorgang erfolgreich ist oder ein Fehler auftritt, als Ganzes. Betrachten Sie z. B. Geld von einem Bankkonto auf einen anderen übertragen. Dies umfasst zwei Schritte: das Geld vom ersten Konto das Abbuchen und es in der zweiten einzahlen. Es ist wichtig, dass beide Schritte erfolgreich sind. Es ist nicht akzeptabel ein Schritt erfolgreich ausgeführt werden kann und die andere fehlschlägt. Eine Datenbank, die Transaktionen unterstützt kann dies zu garantieren.  

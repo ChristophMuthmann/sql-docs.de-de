@@ -1,11 +1,9 @@
 ---
 title: Properties-Auflistung (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ff2263878757708306f4eca0f2475cc77f7ac04a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: aec8c65a08d43accf92131e3e013ecb9727c7c73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-collection-ado"></a>Properties-Auflistung (ADO)
 Enthält alle der [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte für eine bestimmte Instanz eines Objekts.  

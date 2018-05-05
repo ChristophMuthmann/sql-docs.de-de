@@ -24,12 +24,11 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfcc4bb540bf11f8f1ca6d8e632185219145bf71
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 619be89ca2a11ab6c540ccf02c31a06c372c7dd1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
   
 ## <a name="arguments"></a>Argumente  
  [ **@class =**] **'***class***'**  
- Die Klasse der Kategorie. *Klasse* ist **varchar(8)**und hat keinen Standardwert und muss einen der folgenden Werte haben.  
+ Die Klasse der Kategorie. *Klasse* ist **varchar(8)** und hat keinen Standardwert und muss einen der folgenden Werte haben.  
   
 |Wert|Description|  
 |-----------|-----------------|  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
@@ -19,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e848b55e9219ea8bd4994efc7ca5d746d0d71be9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e2b9e21fe7bb4252149b7b6ef5cbb334756821f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-parameters"></a>Anweisungsparametern
 Ein *Parameter* ist eine Variable in einer SQL­Anweisung. Angenommen Sie, dass eine Parts-Tabelle Spalten PartID, Beschreibung und Price verfügt. Ein Teil ohne Parameter hinzufügen, müsste z. B. eine SQL-Anweisung erstellen:  

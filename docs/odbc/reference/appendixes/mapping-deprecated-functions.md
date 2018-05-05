@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
 - backward compatibility [ODBC], mapping deprecated functions
@@ -24,19 +24,18 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfa4d8cd2a21363e1b3aa0588ae4def8ed011005
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddde5411238efb7104931e05f34752ab6f52e014
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-deprecated-functions"></a>Zuordnung veraltete Funktionen
-In diesem Abschnitt wird beschrieben, wie veraltete Funktionen zugeordnet werden, indem die ODBC 3.*.x* Treiber-Manager zum Gewährleisten der Abwärtskompatibilität von ODBC 3.*.x* Treiber, die mit ODBC-2 verwendet werden. *X* Anwendungen. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung. Da jedes der ODBC-2. *x* Funktionen in der folgenden Liste wird die entsprechende ODBC 3. zugeordnet*.x* -Funktion bei Aufruf in einer ODBC 3.*.x* -Treiber verwenden, die ODBC 3.*.x*Treiber muss sich nicht in der ODBC 2. implementieren. *x* Funktionen.  
+In diesem Abschnitt wird beschrieben, wie veraltete Funktionen zugeordnet werden, indem die ODBC 3.*.x* Treiber-Manager zum Gewährleisten der Abwärtskompatibilität von ODBC 3.*.x* Treiber, die mit ODBC-2 verwendet werden. *X* Anwendungen. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung. Da jedes der ODBC-2. *x* Funktionen in der folgenden Liste wird die entsprechende ODBC 3. zugeordnet *.x* -Funktion bei Aufruf in einer ODBC 3.*.x* -Treiber verwenden, die ODBC 3.*.x*Treiber muss sich nicht in der ODBC 2. implementieren. *x* Funktionen.  
   
  Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber eine ODBC 3.*.x* und den Treiber unterstützt nicht die Funktion, die zugeordnet wird.  
   
- Die folgende Tabelle enthält alle doppelten Funktionen, die in ODBC 3. eingeführte*.x*.  
+ Die folgende Tabelle enthält alle doppelten Funktionen, die in ODBC 3. eingeführte *.x*.  
   
 |ODBC-2. *x* Funktion|ODBC 3.*.x* Funktion|  
 |-------------------------|-------------------------|  
@@ -58,7 +57,7 @@ In diesem Abschnitt wird beschrieben, wie veraltete Funktionen zugeordnet werden
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1], obwohl diese Funktion nicht, in ODBC 2. vorhanden war*.x*, es ist in den Open Group und ISO-Standards.  
+ [1], obwohl diese Funktion nicht, in ODBC 2. vorhanden war *.x*, es ist in den Open Group und ISO-Standards.  
   
  [2] Dies ist ein ODBC-1.0-Funktion.  
   

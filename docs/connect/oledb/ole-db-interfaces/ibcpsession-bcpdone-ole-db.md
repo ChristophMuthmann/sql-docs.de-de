@@ -21,12 +21,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0fd48f79a9c56f69d00eef7205e3904a1352f5e6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 857cde0abafb68b8957b277b469027bca4d75106
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
   
 HRESULT BCPDone(void);  
 ```  
@@ -55,7 +54,7 @@ HRESULT BCPDone(void);
   
  Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] muss vor dem Ausführen dieses Beispiels ausgeführt werden:  
   
-```  
+```sql  
 create table fltest(col1 int, col2 int, col3 image)  
 insert into fltest values (1, 1, 0x0FF)  
 insert into fltest values (2, 2, 0xF00)  
@@ -71,9 +70,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  **Bcp-Master... Fltest in outfile.dat - n -T -S** *Server*  
   
- Sie müssen beim Kompilieren dieses Beispiels msoledbsql.lib angeben.  
-  
-```  
+```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
 #define INITGUID  
 #define MAX_ROWS  100  

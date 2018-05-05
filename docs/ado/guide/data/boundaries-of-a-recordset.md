@@ -1,11 +1,9 @@
 ---
 title: Grenzen eines Recordsets | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da0eb328f331847d30a5e408369c77646d5a967e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 20373bc374d1f5f5b75522ede5255a376ab6f657
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="boundaries-of-a-recordset"></a>Grenzen eines Recordsets
 **Recordset** unterstützt die **BOF** und **EOF** Eigenschaften jeweils dem Anfang und Ende des Datasets abgrenzen. Sie können sich vorstellen **BOF** und **EOF** als "phantom" Datensätze, die am Anfang und Ende positioniert sind die **Recordset**. Zählen von **BOF** und **EOF**, unser Beispiel **Recordset** würde wie folgt aussehen:  
@@ -41,7 +38,7 @@ ms.lasthandoff: 04/18/2018
 |74|Longlife Tofu|10.0000|  
 |EOF|||  
   
- Wenn ein Cursor hinter dem letzten Datensatz bewegt **EOF** festgelegt ist, um **"true"**ist, andernfalls ist der Wert **"false"**. Auf ähnliche Weise, wenn der Cursor wird vor dem ersten Datensatz **BOF** festgelegt ist, um **"true"**ist, andernfalls der Wert ist **"false"**. Diese Eigenschaften werden häufig zum Aufzählen der Datensätze aus dem Dataset verwendet, wie im folgenden JScript-Codefragment veranschaulicht.  
+ Wenn ein Cursor hinter dem letzten Datensatz bewegt **EOF** festgelegt ist, um **"true"** ist, andernfalls ist der Wert **"false"**. Auf ähnliche Weise, wenn der Cursor wird vor dem ersten Datensatz **BOF** festgelegt ist, um **"true"** ist, andernfalls der Wert ist **"false"**. Diese Eigenschaften werden häufig zum Aufzählen der Datensätze aus dem Dataset verwendet, wie im folgenden JScript-Codefragment veranschaulicht.  
   
 ```  
 while (objRecordset.EOF != true)   

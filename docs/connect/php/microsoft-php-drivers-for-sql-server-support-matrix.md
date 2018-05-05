@@ -11,17 +11,16 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.workload: On Demand
-ms.openlocfilehash: 95b8e0ad1b69431e6f2266babd42f88ea2f4bfcc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 448a770c8b95f437c981eff2c4d6edcebb44d442
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP-Treiber für SQL Server-Supportmatrix
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

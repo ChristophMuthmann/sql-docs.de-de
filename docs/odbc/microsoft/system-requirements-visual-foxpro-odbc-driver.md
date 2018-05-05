@@ -3,15 +3,12 @@ title: Systemanforderungen (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], accessing Visual FoxPro data
 - Visual FoxPro data [ODBC], accessing
@@ -25,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d88a72ff8c871ecccf2f100e8b1472394492240e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c5bfa53ccd87aa1e690c62843a0f47b9a6da4585
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Systemanforderungen (Visual FoxPro-ODBC-Treiber)
 Geben Sie die Systemanforderungen für die Installation die Mindestversion des Betriebssystems und der Speicherplatz erforderlich, um den Treiber erfolgreich installieren. Nach der Installation des Treibers können Sie die Software bestimmte Anwendung auswählen, die Sie Zugriff auf Visual FoxPro-Daten verwenden möchten.  

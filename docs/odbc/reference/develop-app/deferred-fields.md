@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 47e9d94d3a3f6e39864d27fee1c82f8e69f24b37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f46136c5dd8058e19aec6d7550f86c9cb1fd675c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deferred-fields"></a>Zurückgestellten Felder
 Die Werte der *verzögert Felder* werden nicht verwendet werden, wenn sie festgelegt werden, aber der Treiber die Adressen mit den Variablen für eine verzögerte wirksam speichert. Für eine anwendungsparameterdeskriptor, verwendet der Treiber den Inhalt der Variablen zum Zeitpunkt des Aufrufs von **SQLExecDirect** oder **SQLExecute**. Für eine Anwendung Zeilendeskriptor verwendet der Treiber den Inhalt der Variablen zum Zeitpunkt des Abrufs.  

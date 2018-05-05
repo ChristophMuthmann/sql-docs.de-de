@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetData
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba5edc5dc4bfe9ea0deeb40cd5c96e14480ee27b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData-Funktion
 **Konformität**  
@@ -153,7 +152,7 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_BOUND. Wenn diese Option zurückgegeben wird, **SQLGetData** für gebundene Spalten kann aufgerufen werden, als auch ungebundene Spalten.  
   
- Es gibt zwei Ausnahmen von dieser Einschränkungen sowie einen Treiber Möglichkeit, diese zu lockern. Erstens **SQLGetData** sollte nie für einen Vorwärtscursor aufgerufen werden, wenn die Rowsetgröße größer als 1 ist. Zweitens, wenn ein Treiber Lesezeichen unterstützt, es muss immer unterstützen die Möglichkeit, rufen Sie **SQLGetData** für die Spalte 0, auch wenn dies nicht zulässt, dass aufrufen, **SQLGetData** für andere Spalten vor dem letzten gebundene Spalte. (Wenn eine Anwendung mit einer ODBC 2. funktioniert*.x* -Treiber **SQLGetData** wird erfolgreich ein Lesezeichen bei einem Aufruf mit zurückgeben *Col_or_Param_Num* gleich 0 nach einem Aufruf von **SQLFetch**, da **SQLFetch** zugeordnet ist, indem die ODBC 3.*.x* Treiber-Manager auf **SQLExtendedFetch** mit einem  *FetchOrientation* sql_fetch_next, und **SQLGetData** mit einem *Col_or_Param_Num* 0 zugeordnet, indem die ODBC 3.*.x* Treiber-Manager **SQLGetStmtOption** mit einem *fOption* von SQL_GET_BOOKMARK.)  
+ Es gibt zwei Ausnahmen von dieser Einschränkungen sowie einen Treiber Möglichkeit, diese zu lockern. Erstens **SQLGetData** sollte nie für einen Vorwärtscursor aufgerufen werden, wenn die Rowsetgröße größer als 1 ist. Zweitens, wenn ein Treiber Lesezeichen unterstützt, es muss immer unterstützen die Möglichkeit, rufen Sie **SQLGetData** für die Spalte 0, auch wenn dies nicht zulässt, dass aufrufen, **SQLGetData** für andere Spalten vor dem letzten gebundene Spalte. (Wenn eine Anwendung mit einer ODBC 2. funktioniert *.x* -Treiber **SQLGetData** wird erfolgreich ein Lesezeichen bei einem Aufruf mit zurückgeben *Col_or_Param_Num* gleich 0 nach einem Aufruf von **SQLFetch**, da **SQLFetch** zugeordnet ist, indem die ODBC 3.*.x* Treiber-Manager auf **SQLExtendedFetch** mit einem  *FetchOrientation* sql_fetch_next, und **SQLGetData** mit einem *Col_or_Param_Num* 0 zugeordnet, indem die ODBC 3.*.x* Treiber-Manager **SQLGetStmtOption** mit einem *fOption* von SQL_GET_BOOKMARK.)  
   
  **SQLGetData** kann nicht verwendet werden, um das Lesezeichen für eine Zeile durch Aufrufen von gerade eingefügten abrufen **SQLBulkOperations** mit der Option sql_add, da sich der Cursor nicht in der Zeile positioniert ist. Eine Anwendung kann das Lesezeichen für eine solche Zeile abrufen, indem binden Spalte 0 vor dem Aufruf **SQLBulkOperations** mit SQL_ADD, in diesem Fall **SQLBulkOperations** gibt das Lesezeichen in den gebundenen Puffer zurück. **SQLFetchScroll** kann dann mit SQL_FETCH_BOOKMARK positioniert den Cursor in dieser Zeile aufgerufen werden.  
   
