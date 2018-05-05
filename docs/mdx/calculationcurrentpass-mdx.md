@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24c3334682c381d3fe23c35435979a239aeafc94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8911892d61be71c0187637503372600b987ef571
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculationcurrentpass-mdx"></a>CalculationCurrentPass (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,8 +44,8 @@ CalculationCurrentPass()
  Die **CalculationCurrentPass** Funktion gibt den nullbasierten Index des Berechnungsdurchlaufs für den aktuellen Abfragekontext zurück. Durch die automatische rekursionsauflösung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], diese Funktion hat kaum noch praktischen nutzen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CalculationPassValue &#40; MDX &#41;](../mdx/calculationpassvalue-mdx.md)   
- [IIf &#40; MDX &#41;](../mdx/iif-mdx.md)   
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [CalculationPassValue & #40; MDX & #41;](../mdx/calculationpassvalue-mdx.md)   
+ [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

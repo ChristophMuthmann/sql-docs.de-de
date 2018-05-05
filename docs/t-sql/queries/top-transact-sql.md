@@ -2,7 +2,7 @@
 title: TOP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -28,11 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38b365674914575ab9bc25706fe5b9b3d0c012cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +235,7 @@ GO
 ###  <a name="DML"></a> Beschränken der von DELETE, INSERT oder UPDATE betroffenen Zeilen  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Verwenden von TOP, um die Anzahl der zu löschenden Zeilen einzuschränken  
- Wenn eine TOP (*n*)-Klausel wird zusammen mit DELETE verwendet, der Löschvorgang wird ausgeführt, auf eine nicht definierte Auswahl von *n* Zeilen. D. h. die DELETE-Anweisung wählt eine beliebige (*n*) Anzahl der Zeilen, die in der WHERE-Klausel definierten Kriterien erfüllen. Im folgenden Beispiel löscht `20` Zeilen mit Fälligkeitsdaten vor dem 1. Juli 2002 aus der `PurchaseOrderDetail`-Tabelle.  
+ Wenn eine TOP (*n*)-Klausel zusammen mit DELETE verwendet wird, wird der Löschvorgang für eine nicht definierte Auswahl von *n* Zeilen ausgeführt. Das heißt, die DELETE-Anweisung wählt eine beliebige Anzahl (*n*) von Zeilen aus, die die in der WHERE-Klausel definierten Kriterien erfüllen. Im folgenden Beispiel löscht `20` Zeilen mit Fälligkeitsdaten vor dem 1. Juli 2002 aus der `PurchaseOrderDetail`-Tabelle.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +301,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. Einschränken der Anzahl aktualisierter Zeilen mit TOP  
- Im folgenden Beispiel wird die TOP-Klausel zur Aktualisierung von Zeilen in einer Tabelle verwendet. Wenn eine TOP (*n*)-Klausel mit UPDATE verwendet wird, wird der Updatevorgang auf eine nicht definierte Anzahl von Zeilen durchgeführt. D. h. die UPDATE-Anweisung wählt eine beliebige (*n*) Anzahl der Zeilen, die in der WHERE-Klausel definierten Kriterien erfüllen. Im folgenden Beispiel werden 10 Kunden von einem Vertriebsmitarbeiter zu einem anderen zugewiesen.  
+ Im folgenden Beispiel wird die TOP-Klausel zur Aktualisierung von Zeilen in einer Tabelle verwendet. Wenn eine TOP (*n*)-Klausel zusammen mit UPDATE verwendet wird, wird der Updatevorgang für eine nicht definierte Anzahl von Zeilen ausgeführt. Das heißt, die UPDATE-Anweisung wählt eine beliebige Anzahl (*n*) von Zeilen aus, die die in der WHERE-Klausel definierten Kriterien erfüllen. Im folgenden Beispiel werden 10 Kunden von einem Vertriebsmitarbeiter zu einem anderen zugewiesen.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -342,9 +343,9 @@ FROM DimEmployee ORDER BY LastName;
   
  Ergebnis: 33 Zeilen werden zurückgegeben, da drei Mitarbeiter namens „Brown“ in der 31. Zeile vorhanden sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)   

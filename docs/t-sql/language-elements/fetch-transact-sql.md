@@ -1,16 +1,16 @@
 ---
 title: FETCH (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FETCH
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5102a72cd08af6627a8954fe12b4a696618cea1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,10 +73,10 @@ FETCH
  Gibt die letzte Zeile im Cursor zurück und macht sie zur aktuellen Zeile.  
   
  ABSOLUTE { *n*| @*nvar*}  
- Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile – ausgehend vom Anfang des Cursors – zurückgegeben. Die zurückgegebene Zeile wird zur aktuellen Zeile. Wenn *n* oder @*var* eine negative Zahl ist, wird die *n*-te Zeile – ausgehend von der letzten Zeile des Cursors – zurückgegeben. Die zurückgegebene Zeile wird zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 ist, werden keine Zeilen zurückgegeben. *n* muss eine ganzzahlige Konstante und @*nvar* vom Typ **smallint**, **tinyint** oder **int** sein.  
+ Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile – ausgehend vom Anfang des Cursors – zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* eine negative Zahl ist, wird die *n*-te Zeile – ausgehend von der letzten Zeile des Cursors – zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 (null) ist, werden keine Zeilen zurückgegeben. *n* muss eine Integerkonstante und @*nvar* muss vom Typ **smallint**, **tinyint** oder **int** sein.  
   
  RELATIVE { *n*| @*nvar*}  
- Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile nach der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird zur aktuellen Zeile. Wenn *n* oder @*nvar* eine negative Zahl ist, wird die *n*-te Zeile vor der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 ist, wird die aktuelle Zeile zurückgegeben. Wenn beim ersten Datenabruf vom Cursor FETCH RELATIVE auf *n* oder @*nvar* auf 0 oder auf eine negative Zahl festgelegt wird, werden keine Zeilen zurückgegeben. *n* muss eine ganzzahlige Konstante und @*nvar* vom Typ **smallint**, **tinyint** oder **int** sein.  
+ Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile nach der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* eine negative Zahl ist, wird die *n*-te Zeile vor der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 ist, wird die aktuelle Zeile zurückgegeben. Wenn beim ersten Datenabruf vom Cursor FETCH RELATIVE auf *n* oder @*nvar* auf 0 oder auf eine negative Zahl festgelegt wird, werden keine Zeilen zurückgegeben. *n* muss eine Integerkonstante und @*nvar* muss vom Typ **smallint**, **tinyint** oder **int** sein.  
   
  GLOBAL  
  Gibt an, dass *cursor_name* auf einen globalen Cursor verweist.  

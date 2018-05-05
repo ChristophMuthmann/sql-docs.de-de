@@ -1,11 +1,9 @@
 ---
 title: Filter- und RecordCount Eigenschaften (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3ef95acddadf87e941dfc0a8e388f251586d8e14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1462aea811bafb1b2d3dad0380488317beb33867
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter- und RecordCount Eigenschaften (VC++-Beispiel)
 Dieses Beispiel verwendet die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um ein neues öffnen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) auf Grundlage einer angegebenen Bedingung auf ein vorhandenes angewendet **Recordset**. Er verwendet die [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) Eigenschaft, um die Anzahl der Datensätze in den beiden anzeigen **Recordsets**. Die FilterField-Funktion ist erforderlich, damit dieses Verfahren ausführen.  

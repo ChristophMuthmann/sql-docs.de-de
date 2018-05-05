@@ -22,12 +22,11 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 331f4e7d67524bb6fc4d3af706f9a28ef9dabb95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb0c2586ba5ba25c7a5791e8f1ec9418f9079ec9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX-Anweisungsreferenz (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,11 +37,11 @@ ms.lasthandoff: 01/08/2018
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[MDX-Skriptanweisungen &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)|Enthält Informationen zu MDX-Skriptanweisungen, die den Abfragekontext, den Bereich und die Datenflusskontrolle innerhalb von MDX-Skripts verwalten.|  
-|[MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)|Enthält Informationen zu MDX-Datendefinitionsanweisungen, die mehrdimensionale Objekte erstellen, löschen und ändern.|  
-|[MDX-Datenbearbeitungsanweisungen &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Enthält Informationen zu MDX-Datenbearbeitungsanweisungen, die Daten aus mehrdimensionalen Objekten abrufen und ändern.|  
+|[MDX-Skriptanweisungen & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)|Enthält Informationen zu MDX-Skriptanweisungen, die den Abfragekontext, den Bereich und die Datenflusskontrolle innerhalb von MDX-Skripts verwalten.|  
+|[MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|Enthält Informationen zu MDX-Datendefinitionsanweisungen, die mehrdimensionale Objekte erstellen, löschen und ändern.|  
+|[MDX-Datenbearbeitungsanweisungen &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Enthält Informationen zu MDX-Datenbearbeitungsanweisungen, die Daten aus mehrdimensionalen Objekten abrufen und ändern.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDX-Sprachreferenz & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
   
   

@@ -1,34 +1,37 @@
 ---
 title: Erstellen eines Linkattributs (Master Data Services) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
 - creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6458bdf2ad8d973c106868ca1b9debcbc8027fa6
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: f48a6b30ef8492200eeb233c77ef7143f02039d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Erstellen eines Linkattributs (Master Data Services)
-  Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Linkattribut, wenn Sie möchten, dass Benutzer einen Link als Attributwert eingeben, z. B. http://www.contoso.com.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ein Linkattribut, wenn Sie möchten, dass Benutzer einen Link als Attributwert eingeben, z.B. http://www.contoso.com.  
   
 > [!NOTE]  
 >  Wenn Benutzer einen Wert für ein Linkattribut eingeben, muss die Zeichenfolge mit **http://** beginnen, oder ein Fehler wird angezeigt.  

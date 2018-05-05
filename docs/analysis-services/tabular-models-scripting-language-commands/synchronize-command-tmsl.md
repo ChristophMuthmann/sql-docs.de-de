@@ -1,27 +1,26 @@
 ---
 title: Synchronize-Befehl (TMSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b2bd9ea464b69e1b62ada91fbdee23f790080f86
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
-ms.translationtype: MT
+ms.openlocfilehash: f0da7b968a42ccb449f3b1d0fe556b724fee3aad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Synchronize-Befehl (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]

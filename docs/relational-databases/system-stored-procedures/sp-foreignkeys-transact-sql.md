@@ -24,12 +24,11 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d29ce02876d238ca67dec28b1e70396f1a7c9c96
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ca6bd786330a3149313c11991454b016f5ed04ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  Keine  
   
 ## <a name="result-sets"></a>Resultsets  
- Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Katalog***.*** Schema***.*** Tabelle*), die im Resultset dargestellt wird.  
+ Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Katalog ***.*** Schema ***.*** Tabelle*), die im Resultset dargestellt wird.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,37 +1,19 @@
 ---
 title: Entwerfen von Aggregationen (XMLA) | Microsoft Docs
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- statistical information [XML for Analysis]
-- batches [XML for Analysis]
-- aggregations [Analysis Services], XML for Analysis
-- XMLA, aggregations
-- queries [XMLA]
-- XML for Analysis, aggregations
-- iterative aggregation process [XMLA]
-ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f020d4b154ecfef556b13be45fced0fa6095f17e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Entwerfen von Aggregationen (XMLA)
   Aggregationsentwürfe werden den Partitionen einer bestimmten Measuregruppe zugeordnet, um sicherzustellen, dass die Partitionen beim Speichern von Aggregationen die gleiche Struktur verwenden. Verwenden einheitliche Speicherstruktur für Partitionen können Sie ganz einfach Partitionen definieren, die später zusammengeführt werden können mithilfe der [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) Befehl. Weitere Informationen zu Aggregationsentwürfen finden Sie unter [Aggregationen und Aggregationsentwürfe](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -74,7 +56,7 @@ ms.lasthandoff: 02/15/2018
  Beispielsweise bezieht sich die Zeichenfolge "011" auf eine Abfrage mit einer Dimension mit drei Attributen, von denen das zweite und dritte Attribut in der Abfrage enthalten sind.  
   
 > [!NOTE]  
->  Einige Attribute sind von der Berücksichtigung im Dataset ausgenommen. Weitere Informationen über ausgenommene Attribute finden Sie unter [Query-Element &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
+>  Einige Attribute sind von der Berücksichtigung im Dataset ausgenommen. Weitere Informationen über ausgenommene Attribute finden Sie unter [Abfrageelement &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
   
  Jede Dimension in der Measuregruppe, die einen Aggregationsentwurf enthält, wird durch einen *Dataset* -Wert im **Query** -Element dargestellt. Die Reihenfolge der *Dataset* -Werte muss der Reihenfolge der Dimensionen entsprechen, die in die Measuregruppe eingebunden sind.  
   
@@ -85,7 +67,7 @@ ms.lasthandoff: 02/15/2018
  Um Aggregationen iterativ entwerfen möchten, senden Sie mehrere **DesignAggregations** Befehle aus, um eine feinsteuerung des Entwurfsprozesses ermöglichen. Der Aggregationsentwurfs-Assistent verwendet ebenfalls diesen Ansatz, um eine Feinsteuerung des Entwurfsprozesses zu ermöglichen. Weitere Informationen finden Sie unter [Aggregation Design-Assistent F1-Hilfe](http://msdn.microsoft.com/library/39e23cf1-6405-4fb6-bc14-ba103314362d).  
   
 > [!NOTE]  
->  Eine explizite Sitzung ist erforderlich, damit Aggregationen iterativ entworfen werden können. Weitere Informationen zu expliziten Sitzungen finden Sie unter [Verwalten von Verbindungen und Sitzungen &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+>  Eine explizite Sitzung ist erforderlich, damit Aggregationen iterativ entworfen werden können. Weitere Informationen zu expliziten Sitzungen finden Sie unter [Verwalten von Verbindungen und Sitzungen &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
   
  Um den iterativen Prozess zu starten, senden Sie zunächst eine **DesignAggregations** Befehl mit den folgenden Informationen an:  
   
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="designing-aggregations-using-a-batch-process"></a>Entwerfen von Aggregationen mithilfe eines Batchprozesses  
  Außerdem können Sie Aggregationen in einem Batchprozess entwerfen, durch Senden einer einzelnes **DesignAggregations** Befehl, der die **Schritte**, **Zeit**, **Speicher** , und **Optimierung** Eigenschaftswerte auf dem der gesamte Entwurfsprozess abzielt und beschränkt. Wenn Sie Verwendungsbasierte Optimierung verwenden möchten, die zielabfragen, auf dem der Entwurfsprozess abzielt ist, auch in eingeschlossen werden soll die **Abfragen** Eigenschaft. Stellen Sie außerdem sicher, dass die **' materialisieren '** Eigenschaft auf "true", festgelegt ist, sodass der Entwurfsprozess die definierten Aggregationen im Aggregationsentwurf speichert, wenn der Befehl beendet wurde.  
   
- Sie können Aggregationen mithilfe eines Batchprozesses entweder in einer impliziten oder in einer expliziten Sitzung entwerfen. Weitere Informationen zu impliziten und expliziten Sitzungen finden Sie unter [Verwalten von Verbindungen und Sitzungen &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+ Sie können Aggregationen mithilfe eines Batchprozesses entweder in einer impliziten oder in einer expliziten Sitzung entwerfen. Weitere Informationen zu impliziten und expliziten Sitzungen finden Sie unter [Verwalten von Verbindungen und Sitzungen &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
   
 ## <a name="returning-design-statistics"></a>Zurückgeben von Entwurfsstatistiken  
  Wenn die **DesignAggregations** Befehl die Steuerung an die Clientanwendung zurückgegeben, der Befehl gibt ein Rowset, das eine einzelne Zeile, die die entwurfsstatistiken für den Befehl darstellt. Das Rowset enthält die in der folgenden Tabelle aufgeführten Spalten.  

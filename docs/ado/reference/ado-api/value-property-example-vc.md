@@ -1,11 +1,9 @@
 ---
 title: Value-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8802aac5f12a5bc1e5010f6cf13877b759371cac
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fc0d24719a6f781e587a63d676760cd07cc3c19c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-property-example-vc"></a>Wert-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt die [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft mit dem [Feld](../../../ado/reference/ado-api/field-object.md) und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte anzeigen und die Eigenschaftswerte für die ***Mitarbeiter*** Tabelle.  

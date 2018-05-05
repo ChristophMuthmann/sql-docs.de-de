@@ -3,15 +3,12 @@ title: SET BLOCKSIZE-Befehl | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - set blocksize command [ODBC]
 ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
@@ -19,12 +16,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ee5b55501d055d3bea09903a5486e88de3cdc993
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 85b9df4f40c68d68ea28a4bfad006105e4a98d7b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE-Befehl
 Gibt an, wie der Speicherplatz für die Speicherung von Memo-Felder verwendet wird.  

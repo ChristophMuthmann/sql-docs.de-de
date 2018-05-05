@@ -1,32 +1,23 @@
 ---
 title: Integrierte Elementeigenschaften (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- intrinsic member properties [MDX]
-ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2fc65884048df6a4f5083edd4451e60dad039910
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX-Elementeigenschaften - systeminternen Elementeigenschaften
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente, die in einer Abfrage, um zusätzliche Daten oder Metadaten für die Verwendung in eine benutzerdefinierte Anwendung zurückzugeben oder bei der Überprüfung des Modells oder Erstellung eingeschlossen werden können. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente verfügbar, die Sie in eine Abfrage einschließen können, um zusätzliche Daten oder Metadaten für eine benutzerdefinierte Anwendung zurückzugeben, oder um die Überprüfung oder Erstellung des Modells zu unterstützen. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
   
  Systeminterne Eigenschaften sind **ID**, **KEY**, **KEYx**und **NAME**und werden von jedem Element auf beliebigen Ebenen verfügbar gemacht. Sie können u.a. auch Positionsinformationen wie **LEVEL_NUMBER** oder **PARENT_UNIQUE_NAME**zurückgeben.  
   
@@ -213,15 +204,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Siehe auch  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
- [Untergeordnete Elemente &#40; MDX &#41;](../../../mdx/children-mdx.md)   
- [HIERARCHIZE &#40; MDX &#41;](../../../mdx/hierarchize-mdx.md)   
- [Count &#40;Menge&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
- [Filters &#40; MDX &#41;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40; MDX &#41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40; MDX &#41;](../../../mdx/drilldownlevel-mdx.md)   
- [Datenbankeigenschaften &#40; MDX &#41;](../../../mdx/properties-mdx.md)   
- [PrevMember &#40; MDX &#41;](../../../mdx/prevmember-mdx.md)   
- [Verwenden von Elementeigenschaften &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX-Funktionsreferenz &#40; MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Untergeordnete Elemente &#40;MDX&#41;](../../../mdx/children-mdx.md)   
+ [HIERARCHIZE & #40; MDX & #41;](../../../mdx/hierarchize-mdx.md)   
+ [Anzahl & #40; Set & #41; & #40; MDX & #41;](../../../mdx/count-set-mdx.md)   
+ [Filters & #40; MDX & #41;](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers & #40; MDX & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40; MDX & #41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Datenbankeigenschaften & #40; MDX & #41;](../../../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
+ [Verwenden von Elementeigenschaften & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

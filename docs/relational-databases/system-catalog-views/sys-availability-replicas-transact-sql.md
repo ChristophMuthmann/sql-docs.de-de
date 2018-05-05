@@ -27,12 +27,11 @@ caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b9aab963818f76e49e01a22bc50cb367a6f79d00
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 016a65e7606e43ec0eb567b7a4e17f07fd2d950f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysavailabilityreplicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren k
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Eindeutige ID des Replikats.|  
 |**group_id**|**uniqueidentifier**|Eindeutige ID der Verfügbarkeitsgruppe, zu der das Replikat gehört.|  
-|**replica_metadata_id**|**int**|ID für das lokale Metadatenobjekt für Verfügbarkeitsreplikate im Datenbankmodul.|  
+|**replica_metadata_id**|**int**|ID für das lokale Metadatenobjekt für Verfügbarkeitsreplikate in der Datenbank-Engine.|  
 |**replica_server_name**|**nvarchar(256)**|Entspricht dem Servernamen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, die dieses Replikat hostet, sowie bei einer nicht standardmäßigen Instanz dem Instanznamen.|  
 |**owner_sid**|**varbinary(85)**|Sicherheits-ID (SID), die bei dieser Serverinstanz für den externen Eigentümer dieses Verfügbarkeitsreplikats registriert ist.<br /><br /> NULL für nicht lokale Verfügbarkeitsreplikate.|  
 |**endpoint_url**|**nvarchar(128)**|Entspricht der Zeichenfolgendarstellung des vom Benutzer angegebenen Datenbankspiegelungs-Endpunkts, der von Verbindungen zwischen primären und sekundären Replikaten für die Datensynchronisierung verwendet wird. Informationen zur Syntax von Endpunkt-URLs finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).<br /><br /> NULL = Kommunikation mit dem WSFC-Failovercluster ist nicht möglich.<br /><br /> Um diesen Endpunkt zu ändern, verwenden Sie die ENDPOINT_URL-Option von [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  

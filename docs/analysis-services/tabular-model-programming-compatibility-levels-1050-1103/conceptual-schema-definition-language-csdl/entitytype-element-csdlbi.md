@@ -1,33 +1,31 @@
 ---
 title: EntityType-Element (CSDLBI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d154816ae6aa2d540961721a6a0a84e454085242
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType-Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Das **EntityType** -Element ist ein komplexer Typ, der die Struktur einer Entität auf hoher Ebene in einem Datenmodell darstellt, beispielsweise ein Kunde oder eine Bestellung. Die **Bi: EntityType** Element erweitert die Definition von [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) verwendet der [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+  Das **EntityType** -Element ist ein komplexer Typ, der die Struktur einer Entität auf hoher Ebene in einem Datenmodell darstellt, beispielsweise ein Kunde oder eine Bestellung. Die **Bi: EntityType** Element erweitert die Definition von [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) verwendet der [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
   
  Ein EntityType-Element muss für jede der Entitäten angegeben werden, die im Datenmodell enthalten sind. Die Unterelemente von EntityType beschreiben die Spalten und Measures in der Tabelle. Beziehungen von Tabellen sind in **EntityContainer**enthalten.  
   
@@ -37,11 +35,11 @@ Das **EntityType** -Element ist ein komplexer Typ, der die Struktur einer Entit�
 |Name|Ist erforderlich|Beschreibung|  
 |----------|-----------------|-----------------|  
 |Inhalt|Nein|Eine Zeichenfolge, die die möglichen Datentypen einer Spalte enthält. Der Wert wird vom Wert für den DimensionAttributeTypeEnumType im Datenmodell abgeleitet.<br /><br /> Wenn DimensionAttributeTypeEnumType den Wert "ExtendedType" aufweist, wird der Wert von Contents aus dem ExtendedType-Element von DimensionAttribute abgeleitet. Der Client muss nicht auf diese Werte reagieren.|  
-|DefaultDetails|Nein|Eine Liste mit Eigenschaftsverweisen, die den Spaltensatz in der Tabelle darstellen.<br /><br /> Finden Sie unter [DefaultDetails-Element &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
-|DefaultImage|Nein|Ein Verweis auf eine Spalte, die das Bild für die Illustration der Entität enthält.<br /><br /> In mehrdimensionalen Modellen entspricht dieses Element einem binären Attribut im Dimensionsattribut. Wenn dieses Attribut vorhanden ist, muss das Element genau ein MemberRef-Element enthalten.<br /><br /> Finden Sie unter [MemberRef-Element &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DefaultMeasure|Nein|Ein Verweis auf ein Measure in der Entität, das als Standardwert für Berechnungen bezüglich der Entität verwendet werden soll. Fehlt die Angabe, ist SUM der Standardwert.<br /><br /> Finden Sie unter [MemberRef-Element &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DisplayKey|Nein|Eine Liste mit Verweisen auf Spalten oder Rollenenden, die einen starken Bezeichner bilden, der eine Entitätsinstanz eindeutig identifizieren kann.<br /><br /> Finden Sie unter [DisplayKey-Element &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
-|Hierarchy|Nein|Eine Liste der Hierarchien im Modell.<br /><br /> Finden Sie unter [Hierarchy-Element &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
+|DefaultDetails|Nein|Eine Liste mit Eigenschaftsverweisen, die den Spaltensatz in der Tabelle darstellen.<br /><br /> Finden Sie unter [DefaultDetails-Element & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
+|DefaultImage|Nein|Ein Verweis auf eine Spalte, die das Bild für die Illustration der Entität enthält.<br /><br /> In mehrdimensionalen Modellen entspricht dieses Element einem binären Attribut im Dimensionsattribut. Wenn dieses Attribut vorhanden ist, muss das Element genau ein MemberRef-Element enthalten.<br /><br /> Finden Sie unter [MemberRef-Element & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DefaultMeasure|Nein|Ein Verweis auf ein Measure in der Entität, das als Standardwert für Berechnungen bezüglich der Entität verwendet werden soll. Fehlt die Angabe, ist SUM der Standardwert.<br /><br /> Finden Sie unter [MemberRef-Element & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DisplayKey|Nein|Eine Liste mit Verweisen auf Spalten oder Rollenenden, die einen starken Bezeichner bilden, der eine Entitätsinstanz eindeutig identifizieren kann.<br /><br /> Finden Sie unter [DisplayKey-Element & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
+|Hierarchy|Nein|Eine Liste der Hierarchien im Modell.<br /><br /> Finden Sie unter [Hierarchy-Element & #40; CSDLBI & #41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
 |ReferenceName|Ja|Ein Bezeichner, der verwendet werden kann, um in einer DAX (Data Analysis Expressions)-Abfrage auf diese Entität zu verweisen.<br /><br /> Wenn dieses Attribut nicht angegeben wird, wird der vollqualifizierte Feldname der Entität verwendet.|  
 |SortMembers|Nein|Eine Liste von Eigenschaften, nach denen sortiert werden kann. Das SortDirections-Attribut gibt an, ob die Sortierreihenfolge aufsteigend oder absteigend ist.|  
   

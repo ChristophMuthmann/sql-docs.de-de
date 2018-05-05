@@ -1,11 +1,9 @@
 ---
 title: Verschieben der (VC++-Methodenbeispiel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 98bdad7cb290685cc9fccdf6f87f7214c75a5f96
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8c8e79dce97a46b216a50094b3e87fe944d0185e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-method-example-vc"></a>Move-Methode (VC++-Beispiel)
 Dieses Beispiel verwendet die [verschieben](../../../ado/reference/ado-api/move-method-ado.md) Methode, um den Datensatzzeiger zu positionieren, basierend auf Benutzereingaben.  

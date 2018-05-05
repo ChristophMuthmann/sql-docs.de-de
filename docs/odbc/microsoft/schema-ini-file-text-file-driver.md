@@ -3,15 +3,12 @@ title: Datei "Schema.ini" (Text-Datei-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
@@ -20,12 +17,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 602582886c1eb02e34bad9127e5ab1e55a22a86b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 604dccbbb139cd72f8952fdd604a55d1d9af11c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schemaini-file-text-file-driver"></a>Datei "Schema.ini" (Text-Datei-Treiber)
 Wenn der Text-Treiber verwendet wird, wird das Format der Textdatei mit einer Schema-Informationsdatei bestimmt. Die Schemadatei für die Informationen ist immer mit dem Namen "Schema.ini" und im selben Verzeichnis wie die Textdatenquelle immer beibehalten. Die Schemadatei für die Informationen enthält die IISAM mit Informationen über das allgemeine Format der Datei, den Spaltennamen und Datentypinformationen und mehrere andere Datenmerkmale. Datei "Schema.ini" ist immer erforderlich, für den Zugriff auf Daten fester Länge. Sie sollten die Datei "Schema.ini" verwenden, wenn Ihre Texttabelle enthält, DateTime, Währung oder Dezimaldaten oder jedes Mal, wenn Sie mehr Kontrolle über die Behandlung der Daten in der Tabelle werden soll.  

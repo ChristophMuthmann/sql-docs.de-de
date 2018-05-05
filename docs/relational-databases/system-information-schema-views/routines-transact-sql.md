@@ -25,13 +25,12 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: caf1f7cc37ab428b4f5c0ec1c57fdb0fbed4b214
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 294a1ebedc6b647534107b0580b3a8b8d11c86d9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,55 +44,55 @@ ms.lasthandoff: 04/16/2018
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|SPECIFIC_CATALOG|**Nvarchar (**128**)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**Nvarchar (**128**)**|Spezifischer Name des Schemas.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
-|SPECIFIC_NAME|**Nvarchar (**128**)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_NAME.|  
-|ROUTINE_CATALOG|**Nvarchar (**128**)**|Katalogname der Funktion.|  
-|ROUTINE_SCHEMA|**Nvarchar (**128**)**|Name des Schemas, das diese Funktion enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
-|ROUTINE_NAME|**Nvarchar (**128**)**|Name der Funktion.|  
-|ROUTINE_TYPE|**Nvarchar (**20**)**|Gibt PROCEDURE für gespeicherte Prozeduren und FUNCTION für Funktionen zurück.|  
-|MODULE_CATALOG|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|MODULE_SCHEMA|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|MODULE_NAME|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|UDT_CATALOG|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|UDT_SCHEMA|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|UDT_NAME|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|DATA_TYPE|**Nvarchar (**128**)**|Datentyp des Rückgabewerts der Funktion. Gibt **Tabelle** Wenn eine Funktion mit Tabellenrückgabe.|  
+|SPECIFIC_CATALOG|**Nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_CATALOG.|  
+|SPECIFIC_SCHEMA|**Nvarchar (** 128 **)**|Spezifischer Name des Schemas.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|SPECIFIC_NAME|**Nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_NAME.|  
+|ROUTINE_CATALOG|**Nvarchar (** 128 **)**|Katalogname der Funktion.|  
+|ROUTINE_SCHEMA|**Nvarchar (** 128 **)**|Name des Schemas, das diese Funktion enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|ROUTINE_NAME|**Nvarchar (** 128 **)**|Name der Funktion.|  
+|ROUTINE_TYPE|**Nvarchar (** 20 **)**|Gibt PROCEDURE für gespeicherte Prozeduren und FUNCTION für Funktionen zurück.|  
+|MODULE_CATALOG|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|MODULE_SCHEMA|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|MODULE_NAME|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|UDT_CATALOG|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|UDT_SCHEMA|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|UDT_NAME|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|DATA_TYPE|**Nvarchar (** 128 **)**|Datentyp des Rückgabewerts der Funktion. Gibt **Tabelle** Wenn eine Funktion mit Tabellenrückgabe.|  
 |CHARACTER_MAXIMUM_LENGTH|**int**|Maximale Länge in Zeichen, wenn der Rückgabetyp ein Zeichentyp ist.<br /><br /> -1 für **Xml** und Typ mit umfangreichen Werten.|  
 |CHARACTER_OCTET_LENGTH|**int**|Maximale Länge in Bytes, wenn der Rückgabetyp ein Zeichentyp ist.<br /><br /> -1 für **Xml** und Typ mit umfangreichen Werten.|  
-|COLLATION_CATALOG|**Nvarchar (**128**)**|Gibt immer NULL zurück.|  
-|COLLATION_SCHEMA|**Nvarchar (**128**)**|Gibt immer NULL zurück.|  
-|COLLATION_NAME|**Nvarchar (**128**)**|Sortierungsname des Rückgabewerts. Für Nicht-Zeichentypen wird NULL zurückgegeben.|  
-|CHARACTER_SET_CATALOG|**Nvarchar (**128**)**|Gibt immer NULL zurück.|  
-|CHARACTER_SET_SCHEMA|**Nvarchar (**128**)**|Gibt immer NULL zurück.|  
-|CHARACTER_SET_NAME|**Nvarchar (**128**)**|Name des Zeichensatzes des Rückgabewerts. Für Nicht-Zeichentypen wird NULL zurückgegeben.|  
+|COLLATION_CATALOG|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
+|COLLATION_SCHEMA|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
+|COLLATION_NAME|**Nvarchar (** 128 **)**|Sortierungsname des Rückgabewerts. Für Nicht-Zeichentypen wird NULL zurückgegeben.|  
+|CHARACTER_SET_CATALOG|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
+|CHARACTER_SET_SCHEMA|**Nvarchar (** 128 **)**|Gibt immer NULL zurück.|  
+|CHARACTER_SET_NAME|**Nvarchar (** 128 **)**|Name des Zeichensatzes des Rückgabewerts. Für Nicht-Zeichentypen wird NULL zurückgegeben.|  
 |NUMERIC_PRECISION|**smallint**|Numerische Genauigkeit des Rückgabewerts. Für nicht-numerische Typen wird NULL zurückgegeben.|  
 |NUMERIC_PRECISION_RADIX|**smallint**|Numerische Basis der Genauigkeit des Rückgabewerts. Für nicht-numerische Typen wird NULL zurückgegeben.|  
 |NUMERIC_SCALE|**smallint**|Dezimalstellen des Rückgabewerts. Für nicht-numerische Typen wird NULL zurückgegeben.|  
 |DATETIME_PRECISION|**smallint**|Fraktionale Genauigkeit von einer Sekunde, wenn der Rückgabewert vom Typ **"DateTime"**. Andernfalls wird NULL zurückgegeben.|  
-|INTERVAL_TYPE|**Nvarchar (**30**)**|NULL. Zur künftigen Verwendung reserviert.|  
+|INTERVAL_TYPE|**Nvarchar (** 30 **)**|NULL. Zur künftigen Verwendung reserviert.|  
 |INTERVAL_PRECISION|**smallint**|NULL. Zur künftigen Verwendung reserviert.|  
-|TYPE_UDT_CATALOG|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|TYPE_UDT_SCHEMA|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|TYPE_UDT_NAME|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|SCOPE_CATALOG|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|SCOPE_SCHEMA|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|SCOPE_NAME|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
+|TYPE_UDT_CATALOG|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|TYPE_UDT_SCHEMA|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|TYPE_UDT_NAME|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|SCOPE_CATALOG|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|SCOPE_SCHEMA|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|SCOPE_NAME|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Zur künftigen Verwendung reserviert.|  
-|DTD_IDENTIFIER|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|ROUTINE_BODY|**Nvarchar (**30**)**|Gibt SQL für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion und EXTERNAL für eine extern geschriebene Funktion zurück.<br /><br /> Funktionen sind immer SQL.|  
-|ROUTINE_DEFINITION|**Nvarchar (**4000**)**|Gibt die ersten 4000 Zeichen des Definitionstexts der Funktion oder gespeicherten Prozedur zurück, wenn die Funktion oder gespeicherte Prozedur nicht verschlüsselt ist. Andernfalls wird NULL zurückgegeben.<br /><br /> Um sicherzustellen, dass Sie die vollständige Definition erhalten, Fragen Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) -Funktion oder der Definition-Spalte in der [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt.|  
-|EXTERNAL_NAME|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|EXTERNAL_LANGUAGE|**Nvarchar (**30**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|PARAMETER_STYLE|**Nvarchar (**30**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|IS_DETERMINISTIC|**Nvarchar (**10**)**|Gibt YES zurück, wenn die Routine deterministisch ist.<br /><br /> Gibt NO zurück, wenn die Routine nicht deterministisch ist.<br /><br /> Für gespeicherte Prozeduren wird immer NO zurückgegeben.|  
-|SQL_DATA_ACCESS|**Nvarchar (**30**)**|Gibt einen der folgenden Werte zurück:<br /><br /> NONE = Die Funktion enthält keine SQL-Anweisungen.<br /><br /> CONTAINS = Die Funktion enthält möglicherweise SQL-Anweisungen.<br /><br /> READS = Die Funktion liest möglicherweise SQL-Daten.<br /><br /> MODIFIES = Die Funktion ändert möglicherweise SQL-Daten.<br /><br /> Gibt für alle Funktionen READS und für alle gespeicherten Prozeduren MODIFIES zurück.|  
-|IS_NULL_CALL|**Nvarchar (**10**)**|Zeigt an, ob die Routine aufgerufen wird, wenn eines der Argumente NULL ist.|  
-|SQL_PATH|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
-|SCHEMA_LEVEL_ROUTINE|**Nvarchar (**10**)**|Gibt YES zurück, wenn es sich um eine Funktion auf Schemaebene handelt, oder NO, wenn es keine Funktion auf Schemaebene ist.<br /><br /> Es wird immer YES zurückgegeben.|  
+|DTD_IDENTIFIER|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|ROUTINE_BODY|**Nvarchar (** 30 **)**|Gibt SQL für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion und EXTERNAL für eine extern geschriebene Funktion zurück.<br /><br /> Funktionen sind immer SQL.|  
+|ROUTINE_DEFINITION|**Nvarchar (** 4000 **)**|Gibt die ersten 4000 Zeichen des Definitionstexts der Funktion oder gespeicherten Prozedur zurück, wenn die Funktion oder gespeicherte Prozedur nicht verschlüsselt ist. Andernfalls wird NULL zurückgegeben.<br /><br /> Um sicherzustellen, dass Sie die vollständige Definition erhalten, Fragen Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) -Funktion oder der Definition-Spalte in der [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt.|  
+|EXTERNAL_NAME|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|EXTERNAL_LANGUAGE|**Nvarchar (** 30 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|PARAMETER_STYLE|**Nvarchar (** 30 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|IS_DETERMINISTIC|**Nvarchar (** 10 **)**|Gibt YES zurück, wenn die Routine deterministisch ist.<br /><br /> Gibt NO zurück, wenn die Routine nicht deterministisch ist.<br /><br /> Für gespeicherte Prozeduren wird immer NO zurückgegeben.|  
+|SQL_DATA_ACCESS|**Nvarchar (** 30 **)**|Gibt einen der folgenden Werte zurück:<br /><br /> NONE = Die Funktion enthält keine SQL-Anweisungen.<br /><br /> CONTAINS = Die Funktion enthält möglicherweise SQL-Anweisungen.<br /><br /> READS = Die Funktion liest möglicherweise SQL-Daten.<br /><br /> MODIFIES = Die Funktion ändert möglicherweise SQL-Daten.<br /><br /> Gibt für alle Funktionen READS und für alle gespeicherten Prozeduren MODIFIES zurück.|  
+|IS_NULL_CALL|**Nvarchar (** 10 **)**|Zeigt an, ob die Routine aufgerufen wird, wenn eines der Argumente NULL ist.|  
+|SQL_PATH|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  
+|SCHEMA_LEVEL_ROUTINE|**Nvarchar (** 10 **)**|Gibt YES zurück, wenn es sich um eine Funktion auf Schemaebene handelt, oder NO, wenn es keine Funktion auf Schemaebene ist.<br /><br /> Es wird immer YES zurückgegeben.|  
 |MAX_DYNAMIC_RESULT_SETS|**smallint**|Maximale Anzahl der dynamischen Resultsets, die durch die Routine zurückgegeben werden.<br /><br /> Gibt bei Funktionen 0 zurück.|  
-|IS_USER_DEFINED_CAST|**Nvarchar (**10**)**|Gibt YES zurück, wenn es sich um eine benutzerdefinierte Typumwandlungsfunktion handelt, oder NO, wenn es keine benutzerdefinierte Typumwandlungsfunktion ist.<br /><br /> Es wird immer NO zurückgegeben.|  
-|IS_IMPLICITLY_INVOCABLE|**Nvarchar (**10**)**|Gibt YES zurück, wenn die Routine implizit aufgerufen werden kann, und NO, wenn die Funktion nicht implizit aufgerufen werden kann.<br /><br /> Es wird immer NO zurückgegeben.|  
+|IS_USER_DEFINED_CAST|**Nvarchar (** 10 **)**|Gibt YES zurück, wenn es sich um eine benutzerdefinierte Typumwandlungsfunktion handelt, oder NO, wenn es keine benutzerdefinierte Typumwandlungsfunktion ist.<br /><br /> Es wird immer NO zurückgegeben.|  
+|IS_IMPLICITLY_INVOCABLE|**Nvarchar (** 10 **)**|Gibt YES zurück, wenn die Routine implizit aufgerufen werden kann, und NO, wenn die Funktion nicht implizit aufgerufen werden kann.<br /><br /> Es wird immer NO zurückgegeben.|  
 |CREATED|**datetime**|Zeitpunkt, zu dem die Routine erstellt wurde.|  
 |LAST_ALTERED|**datetime**|Zeitpunkt der letzten Änderung der Funktion.|  
   

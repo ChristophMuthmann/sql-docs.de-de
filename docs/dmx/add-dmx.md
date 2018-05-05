@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1fffcda76eba3c0e58c3cc632a14d8701eac0db2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4ee954a44fd6a656f295c3b4fac216a212e6be82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-add-dmx"></a>+ (Addition) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +46,12 @@ Numeric_Expression + Numeric_Expression
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert, der den Datentyp des Parameters aufweist, der in der Rangfolge höher eingestuft ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Beide Ausdrücke müssen denselben Datentyp haben, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren. Hat ein Ausdruck als Ergebnis den Wert NULL, gibt der Operator das Ergebnis des anderen Ausdrucks zurück.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Arithmetische Operatoren &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operatoren &#40; DMX &#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Arithmetische Operatoren &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operatoren &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

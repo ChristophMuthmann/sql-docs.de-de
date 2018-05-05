@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9b45b45da18ea7c9047609ffb47bc5a698e43a21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79d7b9ce37017f9744dc3e2684457fbba5a4b13a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-mdx"></a>Bezeichner (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
     -   Der Unterstrich (_).  
   
-3.  Der Bezeichner darf kein reserviertes MDX-Schlüsselwort sein. Für reservierte Schlüsselwörter erfolgt in MDX keine Unterscheidung nach Groß-/Kleinschreibung. Weitere Informationen finden Sie unter [reservierte Schlüsselwörter &#40; MDX-Syntax &#41; ](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  Der Bezeichner darf kein reserviertes MDX-Schlüsselwort sein. Für reservierte Schlüsselwörter erfolgt in MDX keine Unterscheidung nach Groß-/Kleinschreibung. Weitere Informationen finden Sie unter [reservierte Schlüsselwörter &#40;MDX-Syntax&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Eingebettete Leerzeichen oder Sonderzeichen sind nicht zulässig.  
   
@@ -141,8 +140,8 @@ ms.lasthandoff: 01/08/2018
  Außerdem ist im vorherigen Beispiel der Bezeichner Measures begrenzt, um zu zeigen, wie mehrere Bezeichner begrenzt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [Grundlegendes zu MDX-Abfrage &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX-Syntaxelemente &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX-Sprachreferenz & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [Grundlegendes zu MDX-Abfrage & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

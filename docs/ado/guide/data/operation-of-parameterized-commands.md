@@ -1,11 +1,9 @@
 ---
 title: Von parametrisierten Befehlen | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70049127949ecc4f0e5931339b951620b58784ce
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ce4d9977628e4024539a2e3e9fe8950513100620
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Von parametrisierten Befehlen
 Bei Verwendung mit einem großen untergeordneten **Recordset**, insbesondere auf die Größe des übergeordneten Elements verglichene **Recordset**, aber nur ein paar untergeordnete Kapitel zugreifen müssen Sie finden es vielleicht eine effizientere Verwendung eine parametrisierte Befehle.  
@@ -42,7 +39,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Die über- und untergeordneten Tabellen haben einen Spaltennamen im Allgemeinen, Cust_id*.* Die *untergeordnete-Befehl* hat ein "?" Platzhalter, auf die die RELATE-Klausel verweist (d. h. "... PARAMETER 0").  
+ Die über- und untergeordneten Tabellen haben einen Spaltennamen im Allgemeinen, Cust_id *.* Die *untergeordnete-Befehl* hat ein "?" Platzhalter, auf die die RELATE-Klausel verweist (d. h. "... PARAMETER 0").  
   
 > [!NOTE]
 >  Die PARAMETER-Klausel bezieht sich ausschließlich auf die Shape-Befehlssyntax. Es ist nicht verknüpft mit entweder dem ADO [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt oder die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung.  

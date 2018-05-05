@@ -23,15 +23,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e37841617289eaa71af4d7c2c091459f32a745b6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9f43f69d2695c9b73b45e152273a679ad8b17fe2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die einzelnen Spalten aller Datamining-Modellen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dieses Rowset wird auf den aktuellen Katalog eingeschränkt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Beschreibt die einzelnen Spalten aller Datamining-Modellen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dieses Rowset wird auf den aktuellen Katalog eingeschränkt.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DMSCHEMA_MINING_COLUMNS** Rowset enthält die folgenden Spalten.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 |**MODEL_CATALOG**|**DBTYPE_WSTR**|Der Katalogname. Wird mit dem Namen der Datenbank aufgefüllt, von der das Modell ein Element ist.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**|Der nicht gekennzeichnete Schemaname. Diese Spalte wird nicht von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **NULL**.|  
 |**MODEL_NAME**|**DBTYPE_WSTR**|Der Miningmodellname. Diese Spalte enthält den Namen des Miningmodells, dem eine Spalte zugeordnet ist. Sie ist niemals leer.|  
-|**SPALTENNAME**|**DBTYPE_WSTR**|Name der Spalte.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Name der Spalte.|  
 |**COLUMN_GUID**|**DBTYPE_GUID**|Der Spalten-GUID Diese Spalte wird nicht von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **NULL**.|  
 |**COLUMN_PROPID**|**DBTYPE_UI4**|Die Spalteneigenschaften-ID. Diese Spalte wird nicht von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **NULL**.|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**|Die Ordnungsposition der Spalte. Spalten werden beginnend mit 1 nummeriert. Diese Spalte enthält **NULL** Wenn kein stabiler Ordinalwert für die Spalte vorhanden ist.|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |**SORTIERUNGSNAME**|**DBTYPE_WSTR**|Der Sortierungsname. Diese Spalte wird nicht von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **NULL**.|  
 |**DOMAIN_CATALOG**|**DBTYPE_WSTR**|Der Name des Katalogs, in dem die Domäne definiert ist. Diese Spalte wird nicht von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **NULL**.|  
 |**DOMAIN_SCHEMA**|**DBTYPE_WSTR**|Nicht gekennzeichneter Name des Schemas, in dem das Objekt definiert ist. Diese Spalte wird nicht von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **NULL**.|  
-|**DOMÄNENNAME**|**DBTYPE_WSTR**|der Domänenname. Diese Spalte wird nicht von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **NULL**.|  
+|**DOMÄNENNAME**|**DBTYPE_WSTR**|Der Domänenname. Diese Spalte wird nicht von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **NULL**.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|Eine benutzerfreundliche Beschreibung der Spalte in dieser Spalte wird nicht von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; er enthält immer **NULL**.|  
 |**DISTRIBUTION_FLAG**|**DBTYPE_WSTR**|Eine Beschreibung der statistischen Verteilung der Spalte. Diese Spalte enthält einen der folgenden Werte:<br /><br /> "**NORMAL**"<br /><br /> "**LOG_NORMAL**"<br /><br /> "**UNIFORM**"|  
 |**INHALTSTYP**|**DBTYPE_WSTR**|Eine Beschreibung des Spalteninhalts. Diese Spalte enthält einen der folgenden Werte:<br /><br /> "**SCHLÜSSEL**"<br /><br /> "**DISKRETE**"<br /><br /> "**FORTLAUFEND**"<br /><br /> "**DISCRETIZED (**[Argumente]**)**"<br /><br /> "**ORDERED**"<br /><br /> "**SCHLÜSSELZEIT**"<br /><br /> "**ZYKLISCH**"<br /><br /> "**WAHRSCHEINLICHKEIT**"<br /><br /> "**VARIANZ**"<br /><br /> "**STDEV**"<br /><br /> "**UNTERSTÜTZUNG**"<br /><br /> "**PROBABILITY_VARIANCE**"<br /><br /> "**PROBABILITY_STDEV**"<br /><br /> **"KEY SEQUENCE**"|  
@@ -88,9 +88,9 @@ ms.lasthandoff: 01/08/2018
 |**MODEL_CATALOG**|**DBTYPE_WSTR**|Optional.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**|Optional.|  
 |**MODEL_NAME**|**DBTYPE_WSTR**|Optional.|  
-|**SPALTENNAME**|**DBTYPE_WSTR**|Optional.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining Schema Rowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Datamining-Schemarowsets](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

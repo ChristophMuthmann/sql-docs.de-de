@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -33,12 +32,11 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5beddb30dcf9948c2e11d0ad3110e21d485b14cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 603b0d66a4a8b7f406708442f18e9c98c4414b26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architektur der CLR-Integration - gehostete CLR-Umgebung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/16/2018
  Bei der Ausführung von Benutzercode in der CLR-gehosteten Umgebung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (CLR-Integration genannt), gelten die folgenden Entwurfsziele:  
   
 ###### <a name="reliability-safety"></a>Zuverlässigkeit (Sicherheit)  
- Vom Benutzercode sollten keine Vorgänge ausgeführt werden dürfen, die die Integrität des Prozesses des Datenbankmoduls gefährden, z. B. die Anzeige eines Meldungsfelds, in dem eine Benutzerantwort verlangt wird, oder in dem der Prozess beendet wird. Benutzercode sollte nicht in der Lage sein, Arbeitsspeicherpuffer des Datenbankmoduls oder interne Datenstrukturen zu überschreiben.  
+ Vom Benutzercode sollten keine Vorgänge ausgeführt werden dürfen, die die Integrität des Prozesses der Datenbank-Engine gefährden, z. B. die Anzeige eines Meldungsfelds, in dem eine Benutzerantwort verlangt wird, oder in dem der Prozess beendet wird. Benutzercode sollte nicht in der Lage sein, Arbeitsspeicherpuffer der Datenbank-Engine oder interne Datenstrukturen zu überschreiben.  
   
 ###### <a name="scalability"></a>Skalierbarkeit  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und CLR verwenden unterschiedliche interne Modelle für Planung und Speicherverwaltung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt ein kooperatives, nicht präemptives Threadingmodell, in dem die Threads freiwillig die Ausführung in regelmäßigen Abständen oder beim Warten auf Sperren oder Eingaben/Ausgaben unterbrechen. Die CLR unterstützt ein präemptives Threadingmodell. Wenn die Threadinggrundelemente des Betriebssystems direkt von Benutzercode aufgerufen werden können, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, ist keine einwandfreie Integration in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Taskplaner möglich, und die Skalierbarkeit des Systems kann beeinträchtigt werden. Die CLR macht keinen Unterschied zwischen virtuellem und physischem Arbeitsspeicher, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet physischen Arbeitsspeicher jedoch direkt und muss physischen Arbeitsspeicher innerhalb eines konfigurierbaren Grenzwerts verwenden.  
@@ -107,7 +105,7 @@ ms.lasthandoff: 04/16/2018
  Anhand dieser Attribute kann der Host eine Liste mit Hostschutzattributen festlegen, wie das SharedState-Attribut, die in der gehosteten Umgebung nicht zugelassen werden. In diesem Fall weist die CLR Versuche des Benutzercodes zurück, APIs aufzurufen, die mit nicht zugelassenen Hostschutzattributen aus der Liste versehen sind. Weitere Informationen finden Sie unter [Hostschutzattribute und Programmieren von CLR-Integration](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Zusammenarbeit von SQL Server und der CLR  
- In diesem Abschnitt wird besprochen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Modelle für Threading, Planung, Synchronisierung und Arbeitsspeicherverwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der CLR integriert. Genauer wird in diesem Abschnitt auf die Integration im Hinblick auf Skalierbarkeit, Zuverlässigkeit und Sicherheit eingegangen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agiert im Grunde als Betriebssystem für die CLR, wenn sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehostet wird. Die CLR ruft von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Threading, Planung, Synchronisierung und Speicherverwaltung implementierte Routinen auf niedriger Ebene auf. Diese sind dieselben Grundelemente, die vom übrigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Modul verwendet werden. Dieser Ansatz bietet mehrere Vorteile für Skalierbarkeit, Zuverlässigkeit und Sicherheit.  
+ In diesem Abschnitt wird besprochen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Modelle für Threading, Planung, Synchronisierung und Arbeitsspeicherverwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der CLR integriert. Genauer wird in diesem Abschnitt auf die Integration im Hinblick auf Skalierbarkeit, Zuverlässigkeit und Sicherheit eingegangen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agiert im Grunde als Betriebssystem für die CLR, wenn sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehostet wird. Die CLR ruft von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Threading, Planung, Synchronisierung und Speicherverwaltung implementierte Routinen auf niedriger Ebene auf. Diese sind dieselben Grundelemente, die von der übrigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine verwendet werden. Dieser Ansatz bietet mehrere Vorteile für Skalierbarkeit, Zuverlässigkeit und Sicherheit.  
   
 ###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Skalierbarkeit: Allgemeines Threading, Planung und Synchronisierung  
  CLR ruft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-APIs zur Erstellung von Threads auf, sowohl für ausgeführten Benutzercode als auch zur eigenen internen Verwendung. Um zwischen mehreren Threads zu synchronisieren, ruft die CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Synchronisierungsobjekte auf. Dadurch kann das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeitplanungsmodul andere Aufgaben planen, wenn ein Thread auf ein Synchronisierungsobjekt wartet. Wenn die CLR beispielsweise die Garbage Collection initiiert, warten alle zugehörigen Threads auf die Fertigstellung der Garbage Collection. Da das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeitplanungsmodul die CLR-Threads und die Synchronisierungsobjekte, auf die sie warten, kennt, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Threads planen, die andere Datenbankaufgaben ausführen, bei denen die CLR nicht benötigt wird. Ferner kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dadurch Deadlocks erkennen, an denen von CLR-Synchronisierungsobjekten benötigte Sperren beteiligt sind, und traditionelle Techniken zur Entfernung von Deadlocks einsetzen.  

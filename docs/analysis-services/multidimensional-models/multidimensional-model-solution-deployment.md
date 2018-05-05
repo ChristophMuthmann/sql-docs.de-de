@@ -1,35 +1,23 @@
 ---
-title: "Mehrdimensionale Modelllösungsbereitstellung | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Mehrdimensionale Modelllösungsbereitstellung | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services deployments, planning
-- deploying [Analysis Services]
-- deploying [Analysis Services], planning
-ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fb17843b2c01de1a99bff2d37b22eaa07783c8a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4b8f66bcf6715040ab572f0884c12b343a3dc6b0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Mehrdimensionale Modelllösungsbereitstellung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Nachdem Sie die Entwicklung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts abgeschlossen haben, können Sie die Datenbank auf einem Analysis Services-Server bereitstellen. Analysis Services bietet sechs mögliche Bereitstellungsmethoden, die zum Umlagern der Datenbank auf einen Test- oder Produktionsserver verwendet werden können. Die Methoden werden nach ihren Vorteilen aufgelistet: AMO-Automatisierung, XMLA, Bereitstellungs-Assistent, Bereitstellungshilfsprogramm, Synchronisations-Assistent sowie Sicherung und Wiederherstellung.  
+  Nachdem Sie die Entwicklung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts abgeschlossen haben, können Sie die Datenbank auf einem Analysis Services-Server bereitstellen. Analysis Services bietet sechs mögliche Bereitstellungsmethoden, die zum Umlagern der Datenbank auf einen Test- oder Produktionsserver verwendet werden können. Die Methoden werden nach ihren Vorteilen aufgelistet: AMO-Automatisierung, XMLA, Bereitstellungs-Assistent, Bereitstellungshilfsprogramm, Synchronisations-Assistent sowie Sicherung und Wiederherstellung.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -43,7 +31,7 @@ Nachdem Sie die Entwicklung eines [!INCLUDE[ssASnoversion](../../includes/ssasno
   
 |Methode|Description|Link|  
 |------------|-----------------|----------|  
-|**Analysis Management Objects (AMO)-Automatisierung**|AMO stellt eine programmgesteuerte Schnittstelle für den vollständigen Befehlssatz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereit, einschließlich Befehlen zur Bereitstellung von Projektmappen. Die AMO-Automatisierung bietet die flexibelste Möglichkeit zur Bereitstellung von Projektmappen, impliziert jedoch gleichzeitig einen gewissen Programmieraufwand.  Ein wichtiger Vorteil bei der Verwendung von AMO besteht darin, dass der SQL Server-Agent mit der AMO-Anwendung zum Ausführen einer Bereitstellung nach einem festgelegten Zeitplan verwendet werden kann.|[Entwickeln mit Analysis Management Objects &#40; AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**Analysis Management Objects (AMO)-Automatisierung**|AMO stellt eine programmgesteuerte Schnittstelle für den vollständigen Befehlssatz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereit, einschließlich Befehlen zur Bereitstellung von Projektmappen. Die AMO-Automatisierung bietet die flexibelste Möglichkeit zur Bereitstellung von Projektmappen, impliziert jedoch gleichzeitig einen gewissen Programmieraufwand.  Ein wichtiger Vorteil bei der Verwendung von AMO besteht darin, dass der SQL Server-Agent mit der AMO-Anwendung zum Ausführen einer Bereitstellung nach einem festgelegten Zeitplan verwendet werden kann.|[Entwickeln mit Analysis Management Objects & #40; AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um ein XMLA-Skript der Metadaten einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zu erstellen, und führen Sie dieses Skript dann auf einem anderen Server aus, um die ursprüngliche Datenbank erneut zu erstellen. XMLA-Skripts können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einfach erstellt werden, indem Sie den Bereitstellungsprozess definieren, anschließend codieren und in einem XMLA-Skript speichern. Nachdem Sie das XMLA-Skript in einer Datei gespeichert haben, können Sie das Skript einfach gemäß einem Zeitplan ausführen oder das Skript in eine Anwendung einbetten, die eine direkte Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]herstellt.<br /><br /> Sie können auch XMLA-Skripts auf einer vordefinierten Basis mithilfe des SQL Server-Agents ausführen, aber dabei bieten Ihnen XMLA-Skripts nicht dieselbe Flexibilität wie AMO. AMO stellt eine größere Bandbreite an Funktionalität bereit, indem es das gesamte Spektrum von Verwaltungsbefehlen hostet.|[Bereitstellen von Modelllösungen mit XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**Bereitstellungs-Assistent**|Verwenden Sie den Bereitstellungs-Assistenten, um mithilfe der durch ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt generierten XML-Ausgabedateien die Metadaten des Projekts auf einem Zielserver bereitzustellen. Mit dem Bereitstellungs-Assistenten können Sie die Bereitstellung direkt in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datei ausführen, die während der Projekterstellung im Ausgabeverzeichnis erstellt wurde.<br /><br /> Der Hauptvorteil bei der Verwendung des Bereitstellungs-Assistenten von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] besteht in der Benutzerfreundlichkeit. Genauso wie ein XMLA-Skript zur späteren Verwendung in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]gespeichert werden kann, können Skripts des Bereitstellungs-Assistenten gespeichert werden. Der Bereitstellungs-Assistent kann sowohl interaktiv als auch mit dem Bereitstellungshilfsprogramm über die Eingabeaufforderung ausgeführt werden.|[Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**Bereitstellungshilfsprogramm**|Mit dem Bereitstellungshilfsprogramm kann das Analysis Services-Bereitstellungsmodul über die Eingabeaufforderung gestartet werden.|[Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  
@@ -58,10 +46,10 @@ Nachdem Sie die Entwicklung eines [!INCLUDE[ssASnoversion](../../includes/ssasno
 |Welche Hardware- und Softwareressourcen sind für diese Projektmappe erforderlich?|[Anforderungen und Überlegungen zur Bereitstellung von Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Wie sollen verbundene Objekte außerhalb des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektbereichs, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete, Berichte oder relationale Datenbankschemas, bereitgestellt werden?||  
 |Wie werden die Daten in der bereitgestellten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank geladen und aktualisiert?<br /><br /> Wie werden die Metadaten (z.B. Berechnungen) in der bereitgestellten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank aktualisiert?|[Bereitstellungsmethoden](#bkmk_meth) in diesem Thema.|  
-|Sollen Benutzer über das Internet auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zugreifen können?|[Konfigurieren der HTTP-Zugriff auf Analysis Services auf Internetinformationsdienste (IIS) &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
+|Sollen Benutzer über das Internet auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zugreifen können?|[Konfigurieren der HTTP-Zugriff auf Analysis Services auf Internetinformationsdienste (IIS) & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |Soll ein kontinuierlicher Abfragezugriff auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten möglich sein?|[Anforderungen und Überlegungen zur Bereitstellung von Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Sollen Objekte mithilfe von verknüpften Objekten oder Remotepartitionen in einer verteilten Umgebung bereitgestellt werden?|[Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md), [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) und [Verknüpfte Measuregruppen](../../analysis-services/multidimensional-models/linked-measure-groups.md).|  
-|Wie sollen die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten gesichert werden?|[Autorisieren des Zugriffs auf Objekte und Vorgänge &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|Wie sollen die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten gesichert werden?|[Autorisieren des Zugriffs auf Objekte und Vorgänge & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> Verwandte Aufgaben  
  [Anforderungen und Überlegungen zur Bereitstellung von Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)  
