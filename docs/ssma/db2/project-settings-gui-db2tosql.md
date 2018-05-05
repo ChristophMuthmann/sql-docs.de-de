@@ -2,16 +2,14 @@
 title: Projekteinstellungen (GUI) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +18,11 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2fd489432a58cc9fa112b511456d473f69205735
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6c8b6a1457777b026f7fc3e6f48e9bafa5a4438f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-gui-db2tosql"></a>Projekteinstellungen (GUI) (DB2ToSQL)
 Die GUI-projekteinstellungen können Sie konfigurieren die Darstellung von Daten auf die **Daten** Registerkarte und, ob nach der Konvertierung den Assessment-Bericht angezeigt werden oder nicht.  

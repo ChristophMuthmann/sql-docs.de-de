@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +21,11 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 695442f30d62a651521dc5b90027a4d43daa7dde
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0634a1b6cd117b82d31324e58590d9217f402528
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +59,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  [  **@destination_db=** ] **"***Destination_db***"**  
  Der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert **%**.  
   
- [  **@found=** ] **"***gefunden***"**Ausgabe  
+ [  **@found=** ] **"***gefunden***"** Ausgabe  
  Ein Flag zur Angabe zurückgegebener Zeilen. *gefunden*ist **Int** und ein OUTPUT-Parameter mit dem Standardwert 23456.  
   
  **1** gibt an, die Veröffentlichung gefunden wurde.  
