@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -22,9 +21,9 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 04e8724521a9441a05b2d103df72ef15804016ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5cc67b000b231146c9544ea7ef1bc1e2a3b6b667
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

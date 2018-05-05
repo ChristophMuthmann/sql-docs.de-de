@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: smo
 ms.reviewer: ''
 ms.suite: sql
@@ -21,13 +20,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 514c1dd7bf0bd2d3e8708368391d61bc39c0ed62
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b4f3ccecad68cbe70fb46cc7a73497c20eca58ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tracing-and-replaying-events"></a>Verfolgen und Wiedergeben von Ereignissen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

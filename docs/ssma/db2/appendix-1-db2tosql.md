@@ -2,7 +2,6 @@
 title: Anhang - 1 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,9 +18,9 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 38a0f497b44f1914ff904fd54d7bea433e6de5c7
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 69752dfd2ced7946b2fb6470bc3780df286cc3f8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

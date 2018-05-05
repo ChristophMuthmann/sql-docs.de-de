@@ -2,7 +2,6 @@
 title: Projekteinstellungen (GUI) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,9 +18,9 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c91924598444a60cbf4e0040e210653aeb153ced
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 89e28906e9dbe52cbd4e607e2b4a542812e49f15
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

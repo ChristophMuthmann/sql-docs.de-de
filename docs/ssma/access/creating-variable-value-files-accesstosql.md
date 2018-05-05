@@ -2,7 +2,6 @@
 title: Erstellen von Variablenwert-Dateien (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
@@ -19,9 +18,9 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f9436c530275cc55a4906204ddce3c960fa562cf
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 44c317d773df9027f5c485f417941544ff17c6d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

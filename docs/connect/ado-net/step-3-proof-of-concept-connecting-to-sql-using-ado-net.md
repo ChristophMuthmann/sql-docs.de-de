@@ -3,13 +3,11 @@ title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mith
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado-net
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
@@ -17,9 +15,9 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31c30cd37e9408528a415986da9ba4b73fb73aae
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: f75fdbb497fc596f572f6e91684a528f344b0c26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

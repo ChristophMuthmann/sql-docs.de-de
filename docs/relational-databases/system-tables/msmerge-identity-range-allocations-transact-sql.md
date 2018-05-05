@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-tables
 ms.reviewer: ''
 ms.suite: sql
@@ -26,9 +25,9 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 2f2a57c9122106d49dbb225a61482209cef907f3
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 9a7d2e628f8bd70b5e71b294b64674214dd2a0f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

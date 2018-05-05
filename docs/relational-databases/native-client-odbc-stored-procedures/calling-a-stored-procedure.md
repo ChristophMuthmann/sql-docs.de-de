@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b1dfc08ad0ff42c5a7e5409d729b6f62a4f4d36
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b06c46a9043c13b60d65117b3418b807107f3764
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-a-stored-procedure"></a>Aufrufen von gespeicherten Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
  Die ODBC CALL-Escapesequenz für das Aufrufen einer Prozedur lautet wie folgt:  
   
- {[**? =**]**Aufruf ***Procedure_name*[([*Parameter*] [**, **[*Parameter *]]...)]}  
+ {[**? =**]**Aufruf ***Procedure_name*[([*Parameter*] [**, **[* Parameter *]]...)]}  
   
  wobei *Procedure_name* gibt den Namen einer Prozedur und *Parameter* gibt einen Prozedurparameter an. Benannte Parameter werden nur in Anweisungen mit ODBC CALL-Escapesequenz unterstützt.  
   

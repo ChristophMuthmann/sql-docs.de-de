@@ -2,7 +2,6 @@
 title: Referenz zur Benutzeroberfläche (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
@@ -22,9 +21,9 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 7f42247711dfd1174ddbbfab7d9e3219f818b54a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 42a81d87eb391621f837a04025ec093fac6f3b73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

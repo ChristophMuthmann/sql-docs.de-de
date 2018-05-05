@@ -2,7 +2,6 @@
 title: Zugriff auf Lager Schemas (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
@@ -46,9 +45,9 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 14f1195cd492eaf4b6b426d7e440cd85164d6858
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: db3476f35a5388d127d34ebb183364e0f63184f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---
