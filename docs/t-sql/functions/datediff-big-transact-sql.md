@@ -84,7 +84,7 @@ Weitere Informationen finden Sie unter *startdate*.
 Gibt die Anzahl (große ganze Zahl mit Vorzeichen) der angegebenen datepart-Begrenzungen zurück, die zwischen den angegebenen Werten für „startdate“ und „enddate“ überschritten wurden.
 -   Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben den gleichen Wert zurück.  
   
-Wenn der Rückgabewert außerhalb des Bereichs für **int** liegt (–9.223.372.036.854.775.808 bis +9.223.372.036.854.775.807), wird ein Fehler zurückgegeben. Der maximale Unterschied zwischen *startdate* und *enddate* beträgt für **millisecond** 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden. Für **second** beträgt der maximale Unterschied 68 Jahre.
+Wenn der Rückgabewert außerhalb des Bereichs für **int** liegt (–9.223.372.036.854.775.808 bis +9.223.372.036.854.775.807), wird ein Fehler zurückgegeben. Der maximale Unterschied zwischen *startdate* und *enddate* wird bereits für **millisecond** nicht durch die Größe des Rückgabewerts begrenzt, sondern durch die Spanne die von datetime abgedeckt wird.
   
 Wenn *startdate* und *enddate* jeweils nur einen Uhrzeitwert zugeordnet ist und *datepart* kein Zeit-*datepart* ist, wird 0 (null) zurückgegeben.
   
